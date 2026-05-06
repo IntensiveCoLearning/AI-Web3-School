@@ -64,18 +64,18 @@ more information
 ✅ = Done ⭕️ = Missed ❌ = Failed
 
 <!-- START_COMMIT_TABLE -->
-| Name |  |
-| ------------- |  |
-
+| Name | 5.18 | 5.19 | 5.20 | 5.21 | 5.22 | 5.23 | 5.24 | 5.25 | 5.26 | 5.27 | 5.28 | 5.29 | 5.30 | 5.31 | 6.01 | 6.02 | 6.03 | 6.04 | 6.05 | 6.06 | 6.07 | 6.08 | 6.09 | 6.10 | 6.11 | 6.12 | 6.13 | 6.14 |
+| ------------- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 <!-- END_COMMIT_TABLE -->
+
 
 <!-- STATISTICALDATA_START -->
 ## Statistics
 
 - Total Participants: 0
 - Completed Participants: 0
-- Completed Users:
-- Perfect Attendance Users:
+- Completed Users: 
+- Perfect Attendance Users: 
 - Failed Participants: 0
 - Failed Rate: 0.00%
 <!-- STATISTICALDATA_END -->
