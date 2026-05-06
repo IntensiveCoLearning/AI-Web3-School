@@ -31,7 +31,7 @@ The first cohort will follow a structure of **Bootcamp + Hackathon + Handbook + 
 
 Official links:
 
-[**Website](https://aiweb3.school/) · [X / Twitter](https://x.com/aiweb3school) · [Telegram Community](https://t.me/aiweb3school)**
+[Website](https://aiweb3.school/) · [X / Twitter](https://x.com/aiweb3school) · [Telegram Community](https://t.me/aiweb3school)
 ## Keywords
 
 AI, Web3, AI x Web3
@@ -59,9 +59,9 @@ We do not expect everyone to be strong from day one. What we care about most is 
 - Email: nanakodesyo@gmail.com
 ## Organizations
 
-  [LXDAO](https://lxdao.io/) <img alt="organization-logo" height="60px" width="60px" src="https://web3logo.info/detail/LXDAO/1" />
+  [LXDAO](https://lxdao.io/) <img alt="organization-logo" height="60px" width="60px" src="https://cdn.lxdao.io/bafkreiay6vxsvv3ksxr75lzzt3iqy3zja3o2epuxh47ivs24p2xs3awexm.png" />
 
-  [ETHPanda](https://ethpanda.org/) <img alt="organization-logo" height="60px" width="60px" src="https://web3logo.info/detail/ETHPanda/969" />
+  [ETHPanda](https://ethpanda.org/) <img alt="organization-logo" height="60px" width="60px" src="https://cdn.lxdao.io/10aed40b-4786-4c2b-aaaa-b7d8a119c00e.png" />
 
 
 ## Leave Rules
@@ -107,6 +107,16 @@ If some of these technical terms still feel unfamiliar, that is completely fine.
 
 
 ## Study Rewards
+
+## What you will get
+
+By completing the program, you will leave with three concrete things:
+
+- A real entry point into the AI × Web3 intersection — not just “I have heard of this concept,” but a complete path through foundations, direction selection, hands-on tasks, and Hackathon submission. You will learn to distinguish shallow concept mixing from directions where AI and Web3 truly need each other.
+- A project starting point that can keep moving: a proposal, demo, repo, README, video, testnet record, or other verifiable material. We care not only about ideas, but whether you can push a problem forward.
+- A learning and contribution record that is easier for others to see. Your task records, credits, skill tags, project proposal, Demo / MVP, and repo can gradually be reflected in your Web3 Career Build (WCB) profile. Web3 Career Build (WCB) is a builder profile platform where your learning records, skills, and project outputs are visible to ecosystems, projects, and hiring teams. https://web3career.build/en
+It is not just application information — it can become a builder profile that ecosystems, projects, and hiring teams can actually review. After the program, we will pay particular attention to participants who consistently check in, maintain clear skill records, and produce projects, and when appropriate, help connect them to ecosystem opportunities, internships, jobs, or project follow-up where appropriate.
+
 
 ## What you will get
 
