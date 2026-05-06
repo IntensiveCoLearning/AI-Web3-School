@@ -1,4 +1,4 @@
-# Your Intensive Co-learning Name
+# AI x Web3 School
 
 ## Introduction
 
@@ -14,20 +14,20 @@ Target Audience placeholder
 
 ## Registration Period
 
-- Registration Start Date: 
-- Registration End Date: 
+- Registration Start Date: 2026-05-06
+- Registration End Date: 2026-05-17
 
 ## Study Duration
 
-- Study Start Date: 
-- Study End Date: 
+- Study Start Date: 2026-05-18
+- Study End Date: 2026-06-14
 
 ## Initiator
 
-- Name: 
-- GitHub ID: 
-- Telegram: 
-- Email: 
+- Name: nanako
+- GitHub ID: nanakodesuu
+- Telegram: nanakodesu
+- Email: nanakodesyo@gmail.com
 
 ## Organizations
 
