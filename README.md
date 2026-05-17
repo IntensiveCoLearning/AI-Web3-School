@@ -793,7 +793,7 @@ more information
 | [Link-990](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Link-990.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [SelinaAnn](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SelinaAnn.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yuhangxian235](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yuhangxian235.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [oliver917-boop](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/oliver917-boop.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [oliver917-boop](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/oliver917-boop.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Eugenius1227](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Eugenius1227.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nnecec](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/nnecec.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [hututu0413z-hub](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hututu0413z-hub.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1207,6 +1207,7 @@ more information
 | [vanadiumricard-cell](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vanadiumricard-cell.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cainiao0924](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cainiao0924.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
