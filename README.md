@@ -330,7 +330,7 @@ more information
 | [YangLuChen-D](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/YangLuChen-D.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Free-EntropyMXZ](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Free-EntropyMXZ.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Bill306](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Bill306.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [ytianspob](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ytianspob.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [ytianspob](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ytianspob.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [DrakenZeng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/DrakenZeng.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [karolinawalborn-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/karolinawalborn-stack.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JintolChan](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JintolChan.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1207,6 +1207,7 @@ more information
 | [vanadiumricard-cell](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vanadiumricard-cell.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cainiao0924](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cainiao0924.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
