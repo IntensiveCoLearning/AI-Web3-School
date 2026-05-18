@@ -322,7 +322,7 @@ more information
 | [Crimson798](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Crimson798.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zac119-cxq](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zac119-cxq.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [rosieluox2223-spec](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/rosieluox2223-spec.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Qsa3Ger](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Qsa3Ger.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Qsa3Ger](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Qsa3Ger.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Terence2026](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Terence2026.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [mooncake-17](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/mooncake-17.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [CookiePsychology](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CookiePsychology.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1207,6 +1207,7 @@ more information
 | [vanadiumricard-cell](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vanadiumricard-cell.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cainiao0924](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cainiao0924.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
