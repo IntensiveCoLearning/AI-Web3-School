@@ -257,7 +257,7 @@ more information
 | [Oluwapelumi-Odetoyinbo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Oluwapelumi-Odetoyinbo.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [marsmu1213](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/marsmu1213.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [smoolintch](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/smoolintch.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [vergissxie](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vergissxie.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [vergissxie](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vergissxie.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [pearl517](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/pearl517.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Yagami-c](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Yagami-c.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [quachmanhtruont-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/quachmanhtruont-cpu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -623,7 +623,7 @@ more information
 | [Jiani-star](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Jiani-star.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [guoxy69-lgtm](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/guoxy69-lgtm.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JessieWangJieqi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JessieWangJieqi.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [jenny-52hz](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jenny-52hz.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [jenny-52hz](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jenny-52hz.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Qian-1026](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Qian-1026.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [luna-670](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/luna-670.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [qiutudou66](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/qiutudou66.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
