@@ -17,7 +17,7 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
-一些的网站的链接：
+一些有用的网站的链接：
 
 1.  课程主页：[https://web3career.build/zh/programs/AI-Web3-School?tab=learning](https://web3career.build/zh/programs/AI-Web3-School?tab=learning)
     
