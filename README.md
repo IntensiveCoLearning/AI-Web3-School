@@ -471,7 +471,7 @@ more information
 | [ytydh99](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ytydh99.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [averywexler](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/averywexler.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [dream-zyy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dream-zyy.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [czxzazsbb](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/czxzazsbb.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [czxzazsbb](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/czxzazsbb.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [huochewang-9331](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/huochewang-9331.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [321335801-cloud](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/321335801-cloud.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JingyuSui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JingyuSui.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
