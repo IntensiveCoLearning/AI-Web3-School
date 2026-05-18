@@ -852,7 +852,7 @@ more information
 | [vmn30](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vmn30.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zheng051499](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zheng051499.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [summercyy1994](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/summercyy1994.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [zhanghao888-cyber](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zhanghao888-cyber.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [zhanghao888-cyber](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zhanghao888-cyber.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Lyn333](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Lyn333.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [1316069495zt](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/1316069495zt.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [a00012025](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/a00012025.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
