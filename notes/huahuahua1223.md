@@ -17,25 +17,26 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
-\# 今天的反思：Agent 不再只是写代码，开始替我跟平台对话了
+# Agent 不再只是写代码，开始替我跟平台对话了
 
-今天有个挺奇怪的感觉：Agent 第一次跨过了「帮我写代码」的边界，开始\*\*帮我跟学习平台直接对话\*\*。
+今天有个挺奇怪的感觉：Agent 第一次跨过了「帮我写代码」的边界，开始**帮我跟学习平台直接对话**。
 
-起因是想知道自己 Week 1 到底提交了多少任务、还差什么。一开始打算去 WCB 网页一个个数，但翻 Learning Agent 启动 Prompt 时看到第 7 节写着「WCB Agent API 与 secrets」，附了一个 `https://web3career.build/llms.txt`[——平台居然把](https://web3career.build/llms.txt`——平台居然把) API 用 `llms.txt` 格式直接吐给 Agent 看。我让 Claude Code 用 curl 拉了一下，里面写得清清楚楚`POST /api/agent/call`，所有 procedure 走一个入口，body 是 `{ procedure, input }`，tRPC 风格。
+起因是想知道自己 Week 1 到底提交了多少任务、还差什么。一开始打算去 WCB 网页一个个数，但翻 Learning Agent 启动 Prompt 时看到第 7 节写着「WCB Agent API 与 secrets」，附了一个 `https://web3career.build/llms.txt`——平台居然把 API 用 `llms.txt` 格式直接吐给 Agent 看。我让 Claude Code 用 curl 拉了一下，里面写得清清楚楚`POST /api/agent/call`，所有 procedure 走一个入口，body 是 `{ procedure, input }`，tRPC 风格。
 
-然后就是连环动作：在 WCB 创建 Secret API Key、用 macOS Keychain 存（不放 `.env`，怕 commit 漏出去）、让 Claude Code 用 keychain 现取 Key 调 API。第一次跑 `users.getProfile` 返回了我自己的所有信息，那一刻才意识到——\*\*这跟过去用 ChatGPT 的体验完全不同\*\*。它不是在帮我「生成内容」，是在用我的身份\*\*真的访问平台数据\*\*。
+然后就是连环动作：在 WCB 创建 Secret API Key、用 macOS Keychain 存（不放 `.env`，怕 commit 漏出去）、让 Claude Code 用 keychain 现取 Key 调 API。第一次跑 `users.getProfile` 返回了我自己的所有信息，那一刻才意识到——**这跟过去用 ChatGPT 的体验完全不同**。它不是在帮我「生成内容」，是在用我的身份**真的访问平台数据**。
 
 接着拉了 Week 1 的全部 38 个任务进度，发现 16 个已提交，22 个未交（其中有些是直播回放、有些是综合任务）。这份报告我自己手动整理至少要半小时，Agent 一分钟拼好。下一步想试试用 `tasks.submitEvidence` 直接通过 API 提交综合任务，连网页都不用开。
 
-这件事让我对「Agent + Web3」的想象具体了很多。\*\*Web3 讲的「身份」「权限」「可验证」，本质上就是给 Agent 一个能合法行动的边界\*\*——WCB 给我一把 Secret Key，限定它只能以「我」的身份做我有权限做的事，删 Key 就立刻失效。这跟 Web3 钱包给 dApp 授权的逻辑是一样的，只是这里授权的不是签名而是 API 调用。
+这件事让我对「Agent + Web3」的想象具体了很多。**Web3 讲的「身份」「权限」「可验证」，本质上就是给 Agent 一个能合法行动的边界**——WCB 给我一把 Secret Key，限定它只能以「我」的身份做我有权限做的事，删 Key 就立刻失效。这跟 Web3 钱包给 dApp 授权的逻辑是一样的，只是这里授权的不是签名而是 API 调用。
 
-顺便今天也把昨天合约可读化助手的几个边界补完了：Etherscan V1 弃用切到 V2、中国大陆不能直连 LLM 所以接了智增增中转 + 美团 LongCat 免费模型、Vercel 上线了 <[https://week1-contract-reader.vercel.app/>。这些工程细节本身没什么浪漫，但凑在一起的感觉是——\*\*我开始有「让](https://week1-contract-reader.vercel.app/>。这些工程细节本身没什么浪漫，但凑在一起的感觉是——**我开始有「让) Agent 在多个平台和工具之间真的把事做完」的能力\*\*了。
+顺便今天也把昨天合约可读化助手的几个边界补完了：Etherscan V1 弃用切到 V2、中国大陆不能直连 LLM 所以接了智增增中转 + 美团 LongCat 免费模型、Vercel 上线了 <https://week1-contract-reader.vercel.app/> 。这些工程细节本身没什么浪漫，但凑在一起的感觉是——**我开始有「让** [](https://week1-contract-reader.vercel.app/%3E%E3%80%82%E8%BF%99%E4%BA%9B%E5%B7%A5%E7%A8%8B%E7%BB%86%E8%8A%82%E6%9C%AC%E8%BA%AB%E6%B2%A1%E4%BB%80%E4%B9%88%E6%B5%AA%E6%BC%AB%EF%BC%8C%E4%BD%86%E5%87%91%E5%9C%A8%E4%B8%80%E8%B5%B7%E7%9A%84%E6%84%9F%E8%A7%89%E6%98%AF%E2%80%94%E2%80%94**%E6%88%91%E5%BC%80%E5%A7%8B%E6%9C%89%E3%80%8C%E8%AE%A9)**Agent 在多个平台和工具之间真的把事做完」的能力**了。
 
-这一周下来最大的认知更新：\*\*Agent 的价值不是会不会聊天，是它能不能在拿到合适的 Key 和工具后，把一件事跨平台地推到底\*\*。
+这一周下来最大的认知更新：**Agent 的价值不是会不会聊天，是它能不能在拿到合适的 Key 和工具后，把一件事跨平台地推到底**。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 # 了解 Hermes Agent 和不同类型的 Agent
