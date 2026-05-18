@@ -479,7 +479,7 @@ more information
 | [xiqing21](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xiqing21.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xiaohong320](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xiaohong320.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [DukeDeng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/DukeDeng.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [ZqJiu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ZqJiu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [ZqJiu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ZqJiu.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [HACAI-0000](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/HACAI-0000.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ky4niT3](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ky4niT3.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nobodyhi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/nobodyhi.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1212,6 +1212,7 @@ more information
 | [CharlieChan-hi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CharlieChan-hi.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
