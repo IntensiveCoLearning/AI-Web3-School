@@ -385,7 +385,7 @@ more information
 | [Fengqinnn](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Fengqinnn.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [azolonev-debug](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/azolonev-debug.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [toby528](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/toby528.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [tuk-a1](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tuk-a1.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [tuk-a1](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tuk-a1.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [tobaizhizhi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tobaizhizhi.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [WENDY1233211991](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/WENDY1233211991.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [siyueqiu47-hash](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/siyueqiu47-hash.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
