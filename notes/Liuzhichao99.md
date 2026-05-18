@@ -1,7 +1,6 @@
 ---
-timezone: UTC+8
+span
 ---
-
 # Theo
 
 **GitHub ID:** Liuzhichao99
@@ -16,5 +15,16 @@ AI x Web3 School
 
 <!-- Content_START -->
 
+使用智谱AI作为API Token，
+安装了hermes agent.
 
-<!-- Content_END -->
+2026-5-18目前智谱平台注册送不少token.送的token如下：
+
+![ai2000token.png](../assets/Liuzhichao99/智谱ai注册送2000万token.png)
+
+![token.png](../assets/Liuzhichao99/智谱送的token.png)
+
+![image.png](../assets/Liuzhichao99/hermesagenttelegram.png)
+
+
+span
