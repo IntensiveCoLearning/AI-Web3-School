@@ -15,8 +15,15 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+今天參考任務詳情，在ChatGpt和Gemini搭建了agent。並且已經能幫我完成任務。  
+其中一個實例：[https://chatgpt.com/share/6a0ac7a5-2ec0-83ec-85df-be13928cf643](https://chatgpt.com/share/6a0ac7a5-2ec0-83ec-85df-be13928cf643)
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 【今日打卡】
 
 -   创建了github repo [https://github.com/ouou721/ai-web3-school.git](https://github.com/ouou721/ai-web3-school.git)
