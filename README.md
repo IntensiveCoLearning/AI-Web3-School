@@ -424,7 +424,7 @@ more information
 | [Claire51129](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Claire51129.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [hslslsl](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hslslsl.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [potatoMa](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/potatoMa.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [beilqilwjz-cell](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/beilqilwjz-cell.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [beilqilwjz-cell](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/beilqilwjz-cell.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Nikoheihei](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Nikoheihei.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [coinboards-agent](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/coinboards-agent.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [1zrj](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/1zrj.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1214,6 +1214,7 @@ more information
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [10yu7ian](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/10yu7ian.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
