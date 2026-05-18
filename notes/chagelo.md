@@ -104,10 +104,5 @@ AI x Web3 School
 -   预告线下活动"以太坊之下"—— 10 城市巡回 Meetup（6 月起）
     
 -   最后约 40 分钟为学员破冰自我介绍，背景涵盖在校生、设计师、大数据、全栈工程师、产品经理等
-    
-
-# agent deploy
-
-![slock-web3-2026-05-18.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/chagelo/images/2026-05-18-1779103548713-slock-web3-2026-05-18.png)
 <!-- DAILY_CHECKIN_2026-05-18_END -->
 <!-- Content_END -->
