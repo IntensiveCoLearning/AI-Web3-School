@@ -307,7 +307,7 @@ more information
 | [juitungchang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/juitungchang.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [TNT567](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/TNT567.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Zeni910](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Zeni910.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [karrysmith78-art](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/karrysmith78-art.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [karrysmith78-art](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/karrysmith78-art.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [hanksfanAI](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hanksfanAI.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [0xchangfeng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/0xchangfeng.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ykayy444](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ykayy444.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
