@@ -234,7 +234,7 @@ more information
 | [zylg-create](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zylg-create.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yaohui1998-netizen](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yaohui1998-netizen.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Moc01](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Moc01.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Silence-dream](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Silence-dream.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Silence-dream](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Silence-dream.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [LuozyCS](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LuozyCS.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wen1541632883-ui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wen1541632883-ui.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [0xE1337](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/0xE1337.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
