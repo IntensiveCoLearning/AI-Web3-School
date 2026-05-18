@@ -91,6 +91,8 @@ Learning Agent 初始化 — 搭建学习仓库、制定学习计划。
 
 **今日学习内容**: 初始化 AI × Web3 School 学习环境，创建 GitHub 学习仓库，制定三阶段学习计划（Foundation → Bridge → Frontier），确认 Handbook 学习路径。
 
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/tiyadegure/images/2026-05-18-1779112529763-image.png)
+
 **收获与思考**: Handbook 的四层结构很清晰，AI × Web3 Bridge 是核心交叉区域。作为产品研究方向，需要重点理解 Agent 如何与链上系统交互。
 
 **明日计划**: 开始阅读 Handbook AI 基础第一章 — LLM（大语言模型）。
