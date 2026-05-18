@@ -17,6 +17,6 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
-GitHub CLI、EOA\\
+GitHub CLI、EOA
 <!-- DAILY_CHECKIN_2026-05-18_END -->
 <!-- Content_END -->
