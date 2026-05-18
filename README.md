@@ -951,7 +951,7 @@ more information
 | [christine-zhu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/christine-zhu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yifengingit](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yifengingit.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zhangchengcheng1220](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zhangchengcheng1220.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [bbainthug](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/bbainthug.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [bbainthug](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/bbainthug.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ftrding](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ftrding.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Sylusia](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Sylusia.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Tongandduier](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Tongandduier.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1212,7 +1212,9 @@ more information
 | [CharlieChan-hi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CharlieChan-hi.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [10yu7ian](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/10yu7ian.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
