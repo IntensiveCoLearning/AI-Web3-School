@@ -868,7 +868,7 @@ more information
 | [dersteppenwolfruowen-316](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dersteppenwolfruowen-316.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [liwwtj](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/liwwtj.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [violetzhs](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/violetzhs.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [CyberWei922](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CyberWei922.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [CyberWei922](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CyberWei922.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nesazzz](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/nesazzz.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [bjf521zxc](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/bjf521zxc.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [patrick-star-10](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/patrick-star-10.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
