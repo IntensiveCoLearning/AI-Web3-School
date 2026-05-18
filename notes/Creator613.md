@@ -15,6 +15,10 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Creator613/images/2026-05-18-1779123046156-image.png)
 
-
+Today I officially began to learn AI X Web3.
+<!-- DAILY_CHECKIN_2026-05-19_END -->
 <!-- Content_END -->
