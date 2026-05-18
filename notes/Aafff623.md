@@ -15,6 +15,68 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-18
+<!-- DAILY_CHECKIN_2026-05-18_START -->
+## repo:  
 
+github 该天笔记记录: [https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-18](https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-18)  
 
+## 详情内容
+
+# **2026-05-18**
+
+> Week 1 · Day 2 · 周一
+
+## **今天做了什么**
+
+-   完成 AI 基础模块全部 11 节预习笔记（LLM → Prompt → Context → RAG → Agent → Frameworks → Vibe-Coding → MCP → Evaluation → Fine-tuning → Inference），含批注和实践文件
+    
+-   搭建项目三层规范架构（GUIDE.md + CLAUDE.md + steering.md），统一 Claude Code 和 Kiro 的协作规范
+    
+-   配置 Learning Agent 角色，将 AI Web3 School 官方启动 Prompt 写入项目约束
+    
+-   整理 memory 系统，沉淀批注风格规范和预习状态
+    
+-   创建 idea/ 目录，沉淀实验性构思
+    
+-   安装 skill-creator，将原型提炼为正式 SKILL.md 格式
+    
+-   创建 reference/ 目录（case/ + eval/），为后续 skill 迭代做准备
+    
+
+## **产出与检验**
+
+> 实际产出（笔记 / 代码 / 截图 / Tx Hash / commit）+ 怎么证明做完了。 涉及的预习概念直接引用 `pre_study/.../README.md`，不在这里重复展开。
+
+| 产出 | 链接 |
+| --- | --- |
+| AI 基础 11 节笔记 + 实践文件 | pre_study/ai-fundamentals/ |
+| 项目规范架构 | GUIDE.md + CLAUDE.md + steering.md |
+| Memory 系统 | memory/ |
+| Idea 目录 | idea/ — skills/ + reference/ |
+| Git commits | 13 个 study/docs commit 已 push |
+
+## **收获 / 卡点**
+
+> 今天真实的感受：学到什么、卡在哪、想到什么疑问。一两条就够。
+
+-   批注风格迭代了两轮才定型——从散文式到精炼技术总结，核心是"给未来的自己写备忘"而不是"写读后感"
+    
+-   Context 管理比想象中重要：模型看到什么直接决定输出质量，放错东西比不放更危险
+    
+-   RAG 的核心在检索端不在生成端——检索错了，后面全白搭
+    
+-   11 节 AI 基础读下来，最大的收获是建立了一套判断框架：模型是推理层不是真相源、prompt 是建议不是安全边界、eval 是唯一能证明"变好了"的手段
+    
+-   开始意识到 workflow 里有很多重复模式可以抽象成 skill/slash command
+    
+
+## **明天打算**
+
+> 短短一行。
+
+-   推进 Web3 基础部分预习（Cryptography、Wallet、Smart Contract...）
+    
+-   整理 idea/ 目录，把 workflow 中可复用的模式沉淀成 skill
+<!-- DAILY_CHECKIN_2026-05-18_END -->
 <!-- Content_END -->
