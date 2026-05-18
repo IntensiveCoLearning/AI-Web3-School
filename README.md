@@ -990,7 +990,7 @@ more information
 | [vstralcn](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vstralcn.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Chic7777](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Chic7777.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [felixfisher](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/felixfisher.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [SnowQiao](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SnowQiao.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [SnowQiao](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SnowQiao.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [FrankFitzgeraldGu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/FrankFitzgeraldGu.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yindengdeng5-art](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yindengdeng5-art.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yushubo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yushubo.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1212,6 +1212,7 @@ more information
 | [CharlieChan-hi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CharlieChan-hi.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
