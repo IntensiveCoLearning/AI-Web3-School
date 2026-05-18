@@ -378,7 +378,7 @@ more information
 | [heimaonisha](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/heimaonisha.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jiezi77706](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jiezi77706.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [claire0613](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/claire0613.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [ACodingChuan](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ACodingChuan.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [ACodingChuan](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ACodingChuan.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [LierMi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LierMi.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [aikingdom68](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/aikingdom68.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lechemo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lechemo.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1213,6 +1213,7 @@ more information
 | [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
