@@ -17,11 +17,9 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
-![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/ybk-1/images/2026-05-18-1779096458082-image.png)
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/ybk-1/images/2026-05-18-1779097067324-image.png)
 
-今天做了一个最小的可以验证的最小实践 （模型是ds v4 flash， 链上数据是etherscan）
-
-下面是结果部分：
+已经完成最小可验证的实践
 
 ```json
 {
@@ -72,17 +70,5 @@ AI x Web3 School
   ]
 }
 ```
-
--   通过Etherscan 确认链上交易记录
-    
--   不确定性包括无法确定发送方发起此交易的真实目的（测试、空投领取、治理投票、或恶意调用等）
-    
-    -   后续可能可以再用LLM分析账号的所有交易记录？
-        
-    -   看看有没有能做到的项目？
-        
--   无法确定Method ID 0x043bc855对应的具体函数名称和功能。
-    
--   无法确定合约地址0x1f2f10d1c40777ae1da742455c65828ff36df387的归属和用途。
 <!-- DAILY_CHECKIN_2026-05-18_END -->
 <!-- Content_END -->
