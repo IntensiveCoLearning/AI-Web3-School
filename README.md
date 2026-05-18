@@ -659,7 +659,7 @@ more information
 | [Ezekie363](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ezekie363.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Linling-June](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Linling-June.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Wenqing950519](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Wenqing950519.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [zphsswl](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zphsswl.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [zphsswl](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zphsswl.md) | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [liman1000000-lang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/liman1000000-lang.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [My-Legal-AI-Journey](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/My-Legal-AI-Journey.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [linyutang92](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/linyutang92.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1207,6 +1207,7 @@ more information
 | [vanadiumricard-cell](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vanadiumricard-cell.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cainiao0924](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cainiao0924.md) |   | | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
