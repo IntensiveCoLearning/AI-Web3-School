@@ -53,6 +53,7 @@ Day 2 完成总览
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
 
+
 1\. AI × Web3 School 环境搭建
 
 \- 创建了 GitHub repo: add-cmd/ai-web3-school-cohort-0
