@@ -15,8 +15,21 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+### 关键配置项
+
+| 配置项 | 说明 | 推荐值 |
+| --- | --- | --- |
+| tools | 工具白名单 | 审查类用 Read, Grep；执行类用 Read, Write, Edit |
+| disabledTools | 禁用工具 | 审查任务禁用 Write, Edit |
+| model | 模型选择 | 简单任务用 haiku；复杂分析用 sonnet/opus |
+| description | 功能描述 | 明确说明何时触发该 Agent |
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 ## 支付系统：从Web2到Web3
 
 **Web2支付（银行转账）**
