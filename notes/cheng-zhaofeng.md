@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+今天在 Draken 老师的分享之下安装了 hermes，成功走上了人生正轨！
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 学习了如何安装hermes，参加了直播和co-learing  
 了解了 AI + Web3 的所有方向：AI 支付，量化机器人等
 <!-- DAILY_CHECKIN_2026-05-18_END -->
