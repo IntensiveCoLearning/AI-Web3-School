@@ -15,8 +15,23 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+![Screenshot 2026-05-19 at 15.37.24.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-19-1779191101442-Screenshot_2026-05-19_at_15.37.24.png)
+
+今天主要是在部署Hermes Agent，遇到一些网络问题，不过借助gemini解决了。以及目前已经准备好了TG bot，下一步是接LLM的API。  
+  
+主要参考内容  
+官方deployment：  
+[https://hermes-agent.nousresearch.com/docs/](https://hermes-agent.nousresearch.com/docs/)
+
+X博主分享：  
+[https://x.com/eternityspring/status/2041735065865220416?s=46](https://x.com/eternityspring/status/2041735065865220416?s=46)
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 -   **你是带着什么问题来的？**
     
     > 我想解决的核心问题是：了解自己现阶段（至少这3个月）在web3/AI想要深入的方向。
