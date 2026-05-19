@@ -15,8 +15,29 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+今天的主題是 Hermes Agent 安裝。
+
+因為看到直播裡很多夥伴卡在環境設定，就順手做了一份 Windows WSL2 + macOS 的完整安裝教程，在課程進行中同步解答問題。
+
+課堂上也有聊到 harness engineering 的概念。我的理解是：LLM 是一批能力很強的馬，但沒有東西約束，能力再強也無法為你所用。Harness engineering 的框架相當於韁繩——讓馬發揮出該有的實力，真正為你所用。Hermes Agent 就是一個把這套框架做得很完整的實作。
+
+踩過的坑（給還在卡關的夥伴）：
+
+-   Ubuntu apt 預設的 Node.js 版本太舊，要改用 NodeSource 20.x
+    
+-   Discord Bot 需要手動開 Send Messages + Read Message History 權限
+    
+-   `hermes --version` 輸出的版本號會跟教程不一樣，不代表裝錯了
+    
+
+教程已經開源：[github.com/USDHGwang/hermes-install-guide](https://github.com/USDHGwang/hermes-install-guide)
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 ### 過去的痛點：自學的局限
 
 -   在參加這次課程之前，我主要是靠**盲目自學**。
