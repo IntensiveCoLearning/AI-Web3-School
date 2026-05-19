@@ -629,7 +629,7 @@ more information
 | [qiutudou66](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/qiutudou66.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [newfish-cmyk](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/newfish-cmyk.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [vitalebob](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/vitalebob.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Song042](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Song042.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Song042](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Song042.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xinxin1204](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xinxin1204.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sidarth16](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sidarth16.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JackCC703](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JackCC703.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
