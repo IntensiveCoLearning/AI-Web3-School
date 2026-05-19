@@ -1158,7 +1158,7 @@ more information
 | [Shrimer06](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Shrimer06.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [KALISTA-77](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/KALISTA-77.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Chuan81](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Chuan81.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [HeliosLz](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/HeliosLz.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [HeliosLz](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/HeliosLz.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [liwnldutng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/liwnldutng.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [SArreic](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SArreic.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wanfeng1512](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wanfeng1512.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
