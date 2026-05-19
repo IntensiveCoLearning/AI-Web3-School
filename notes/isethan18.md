@@ -15,8 +15,28 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+### Day 2（5月20日）：Web3 基础设施与测试网通关
+
+-   **今日目标**：把 Web3 的链上概念吃透，为 AI 代理（Agent）准备好“手和脚”。
+    
+-   **具体做什么**：
+    
+    1.  **理论学习**：弄清 EOA 钱包（如 MetaMask）、私钥、公钥、签名（Signature）的本质。理解为什么 AI 自动交易需要签名，以及 Gas 费的构成。
+        
+    2.  **动手实践**：生成一个**专门用于测试的全新钱包**（切勿使用存有资产的私钥！）。配置好测试网（如 Sepolia 或 Arbitrum Sepolia），去寻找 Faucet（水龙头）领取测试币，并手动完成一笔转账。
+        
+-   **参考材料**：
+    
+    -   _基础概念_：《Mastering Ethereum》（以太坊 master 教程）关于账户和交易的章节。
+        
+    -   _实用工具_：Chainlist (用于添加测试网)、Google 搜索 `Sepolia Faucet` 领水指南。
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 * * *
 
 ### Day 1（5月19日）：AI 核心概念与 Prompts 高阶实战
