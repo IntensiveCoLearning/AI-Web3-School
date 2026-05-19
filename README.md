@@ -750,7 +750,7 @@ more information
 | [lml152](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lml152.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Mars-1129](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Mars-1129.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sherryxiao0](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sherryxiao0.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [tiyadegure](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tiyadegure.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [tiyadegure](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tiyadegure.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [shun12306](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shun12306.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yolanda000](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yolanda000.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zblingling](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zblingling.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1227,6 +1227,7 @@ more information
 | [joy12315](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/joy12315.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Eliana-web07](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Eliana-web07.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
