@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+裝完hermes 用ollama裝
+
+去ai web3 school那個網站讀了llm
+
+embedding: code 轉向量 看語意接近不接近
+
+hallucination: 幻覺 外部校驗
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 \--7:00--
 
 windows 子系統是wsl 跟虛擬機、docker 兩回事
