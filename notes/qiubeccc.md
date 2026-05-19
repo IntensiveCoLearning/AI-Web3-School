@@ -43,6 +43,7 @@ AI x Web3 School
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
 
+
 今日学习内容：
 
 1\. 完成了个人学习仓库的初始化（GitHub repo + 仓库结构 + 学习计划）
