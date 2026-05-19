@@ -728,7 +728,7 @@ more information
 | [wenruo-eianun](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wenruo-eianun.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [erlingerwu0925](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/erlingerwu0925.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Miachen111](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Miachen111.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [llllmj0116](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/llllmj0116.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [llllmj0116](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/llllmj0116.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [gomerx9](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gomerx9.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xiayangcai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xiayangcai.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [LeeGuiqing](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LeeGuiqing.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
