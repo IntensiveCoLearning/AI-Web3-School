@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+# Hermes 直播 + 同学的 install guide：对 Agent 的新一层认知
+
+昨晚 draken 老师讲完「Hermes 从 0 到 1」之后，我又翻了一遍 @0xUSDHG 同学整理的 \[Hermes 安装指南\](https://github.com/USDHGwang/hermes-install-guide)。两份内容叠在一起读，对 Agent 的理解突然清晰了——**直播给的是「为什么」，guide 给的是「怎么装才不踩坑」**。这一晚我没动手装，只是从头读到尾把流程顺了一遍，但这个「多读一遍」给我的认知更新比直播本身还多。
+
+5/18 我对 Hermes 的理解是「长期运行的个人自动化助手」——那是听 Cohort 介绍后形成的标签，离落地很远。昨晚直播补了一层「为什么是 Hermes」：本地或 VPS 长期运行、skills 沉淀、Telegram/CLI 入口、跨会话状态。再读同学的 install guide，补的是另一层——「Hermes 落到本机长什么样」：Homebrew 装 Python 3.11`curl install.sh | bash` 拉 Nous Research 的 hermes-agent`hermes setup` 选 NVIDIA NIM provider、TUI 提示符 `❯`。**直播让我知道它存在并值得装，guide 让我知道装它需要付出什么**。
+
+让我特别有感触的是「同学的 guide」补齐了官方教程不教的事。直播是概念地图——Hermes 是什么、能干什么、Web3 场景为什么适合。guide 是一份**摩擦清单**：Apple Silicon 需不需要装 Rosetta、NVIDIA NIM 40 RPM 怎么申请、HTTP 410 模型下架怎么换、Python PATH 要手动设、Discord Bot 的 Message Content Intent 必须开。这些是「踩过坑的人才能写的细节」，比任何 LLM 拼凑的 install 文档都准。学习 Agent 的最佳路径其实是：**官方讲哲学 + 学过的人讲摩擦**。少了任何一层都不够——只听哲学会觉得「概念漂亮但不知道怎么动手」，只看摩擦清单会觉得「步骤清楚但不知道为什么要这样做」。
+
+最后想说一个特别诚实的观察：guide 我从头读到尾了，但**没动手装**。以前我会觉得「读完就懂了」，今天意识到——读懂 install 步骤和真的让 Agent 进自己电脑是两回事。读懂只是「在脑子里建了模型」，装一遍才是「在系统里建了进程」。我把实装推到了明天，但这个延迟本身让我看到一件事：**对 Agent 真正的判断，要在它真正占着我电脑的端口、消耗着我申请的 key、回复着我发的消息之后才能给**。在那之前我所有的「理解」都是文档级别的，是「Agent 的概念」，不是「Agent 的我」。
+
+这次最大的认知更新其实有点反直觉——直播 + guide 都读完之后，我发现自己离「真懂 Hermes」还差一步「动手装」。Agent 这种东西的理解曲线，从文档跳到实装之间有个绝对绕不过去的台阶。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 # Agent 不再只是写代码，开始替我跟平台对话了
 
 今天有个挺奇怪的感觉：Agent 第一次跨过了「帮我写代码」的边界，开始**帮我跟学习平台直接对话**。
@@ -36,6 +52,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
