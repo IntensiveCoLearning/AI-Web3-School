@@ -723,7 +723,7 @@ more information
 | [VigorQuant](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/VigorQuant.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Domino-R](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Domino-R.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ycl-2004](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ycl-2004.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [WilliamXDao](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/WilliamXDao.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [WilliamXDao](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/WilliamXDao.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Magicianhax](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Magicianhax.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wenruo-eianun](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wenruo-eianun.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [erlingerwu0925](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/erlingerwu0925.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
