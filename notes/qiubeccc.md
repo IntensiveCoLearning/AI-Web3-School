@@ -15,8 +15,34 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+今日学习内容：
+
+1.  阅读 Handbook Prompt 章节 — 系统学习了 Prompt 工程核心原则（结构化、CoT、Few-shot、鲁棒性）
+    
+2.  多模型实操对比 — 在豆包、DeepSeek、Kimi、ChatGPT、Gemini 上测试同一 prompt 任务的表现差异
+    
+
+心得：
+
+1.  Prompt 本质是"帮模型缩小可能性空间"，结构化的角色+任务+格式+约束框架在各模型上通用度高
+    
+2.  没有"最好的模型"——不同模型对不同 prompt 策略的敏感度差异显著，需要按场景针对性调整
+    
+3.  Chain-of-Thought 在复杂推理任务上效果显著，DeepSeek 和 ChatGPT 表现最突出
+    
+
+明日计划：
+
+1.  继续 Handbook 下一章：Context（了解模型"看到"上下文的机制）
+    
+2.  回顾并提交今日打卡链接 \`
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 今日学习内容：
 
 1\. 完成了个人学习仓库的初始化（GitHub repo + 仓库结构 + 学习计划）
