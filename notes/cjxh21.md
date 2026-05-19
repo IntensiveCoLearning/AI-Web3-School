@@ -15,8 +15,83 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+````markdown
+# Daily Note - 2026-05-19
+
+## 今日状态
+
+> 昨天（05-18）已完成 Web3 实操全流程 + 打卡 ✅  
+> 今日任务：整理实验记录 → 打卡 05-19
+
+## 已完成工作汇总
+
+### 🔗 链上信息（RPC 验证通过）
+| 项目 | 内容 |
+|------|------|
+| 钱包地址 | `0xe1977cb25536a9af1434007d37847dbfb20866bc` |
+| 网络 | Sepolia (chainId: 0xaa36a7) |
+| 合约地址 | `0xd1707e2f46216d1ffc1e1ddc11af69f7695200a8` |
+| 部署交易哈希 | `0x2e0add7dcd32b2052f713e8367f582b65560e9e8224616bc0d6d9fcc3d08934a` |
+| 部署区块 | 10874891 |
+| 部署时间 | 2026-05-18 16:23 UTC (北京时间 5/19 00:23) |
+| Gas Used | 434,940 |
+| 合约状态 | ✅ 链上代码验证通过 |
+| 总交易数 | 3 笔（部署 + 写入操作） |
+
+### 📝 合约内容
+```solidity
+contract HelloWeb3 {
+    string private message;
+    
+    constructor() { message = "Hello Web3!"; }
+    function getMessage() public view returns (string memory)   // 读，不花 Gas
+    function setMessage(string memory _newMessage) public        // 写，花 Gas
+}
+```
+
+### 💡 关键体会
+- **Nonce = 0**：这是该钱包的第一笔交易（nonce 从 0 开始计数）
+- **Contract creation**：交易 `to` 为空 = 合约部署，receipt 自动生成 contractAddress
+- **读 vs 写**：`getMessage()` 通过 `eth_call` 不消耗 Gas；`setMessage()` 需要签名并支付 Gas
+- **Agent 辅助角色**：合约代码由 AI 生成 → 人工复核 → MetaMask 确认 → 链上执行 → Explorer 验证
+
+## Check-in Draft
+
+```
+📅 2026-05-19 | Day 2 | AI × Web3 School - Week 1
+
+✅ 已完成实操：
+- MetaMask (Edge) 创建测试钱包
+- Sepolia 测试网领取测试 ETH
+- 部署 HelloWeb3 合约，含读写操作
+- 链上验证合约代码和执行结果
+
+📊 链上数据：
+- 钱包: 0xe1977...b20866bc
+- 合约: 0xd1707e...95200a8 (Sepolia)
+- 部署交易: 0x2e0add...8934a
+- 区块: 10874891 | Gas: 434,940 | ✅ Success
+- 共 3 笔交易（部署 + 写入操作）
+
+📖 已读 Handbook：
+- Network / Cryptography / Wallet（笔记在 daily/2026-05-18.md）
+
+🔗 Repo: github.com/cjxh21/ai-web3-school-cohort-0
+```
+
+## Links
+- 合约代码: https://github.com/cjxh21/ai-web3-school-cohort-0/experiments/HelloWeb3.sol
+- 部署交易: https://sepolia.etherscan.io/tx/0x2e0add7dcd32b2052f713e8367f582b65560e9e8224616bc0d6d9fcc3d08934a
+- 合约地址: https://sepolia.etherscan.io/address/0xd1707e2f46216d1ffc1e1ddc11af69f7695200a8
+- WCB Learning: https://web3career.build/zh/programs/AI-Web3-School?tab=learning
+````
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 ## 📖 Web3 基础 - 知识笔记
 
 ### 1\. Network（网络）
