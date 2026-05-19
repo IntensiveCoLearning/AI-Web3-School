@@ -15,8 +15,17 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+今日忙，今日水，今日不做深入学习了。
+
+今天参加了AI Agent 入门，大概学习了一下Hermes 的部署与配置。  
+其实今天还使用了opencode 进行开发，cli 并没有那么难上手，至少配置方法比Hermes 简单。
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 先从[官网](https://aiweb3.school/)的内容开始学起吧
 
 今日主要学习 ai 基础
