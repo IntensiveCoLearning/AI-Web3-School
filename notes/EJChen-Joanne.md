@@ -15,8 +15,49 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+### 將AIxWeb3School HandBook內容加入學習bot的學習資源，並產生一[每日重點整理](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/handbook.md)。
+
+### 完成設定Telegram Learning Bot: /goal 、/notes指令，回傳每日學習目標及重點整理。
+
+### \[分享會\] **探索AI Agent的新世界地圖**
+
+分享人：Draken老師
+
+-   **AI的進化：**問答模式 ChatGPT -> 任務執行 Agent
+    
+-   **AI常用類型**
+    
+
+1.  聊天型AI: 常用的ChatGPT、Gemini、Claude
+    
+
+2\. AI IDE: Cursor，AI的開發工具
+
+3\. CLI型: agents living in terminal
+
+4\. 模型平台
+
+5\. Hermes Agent/OpenClaw
+
+-   **Hermes Agent**
+    
+
+\* Def: Agents' assitance
+
+\* Pros: multi-models, Cron Scheduling, Gateway channels, long-term memory and iterated learning by itself.
+
+\* Why Hermes Agent?
+
+\- Easy for beginner
+
+\- 長期記憶能力、學習閉環
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 1.  創建個人學習Github Repo，並讓Claude Code產生本週的[學習計劃表](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/week1.md)
     
 2.  **\[分享會\] AI時代，Web3開發者所需的能力**
