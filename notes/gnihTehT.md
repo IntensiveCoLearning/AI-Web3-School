@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+**笔记 | AI Agent 入门：Hermes 从 0 到 1**
+
+今天学习了Hermes，总体来说和我在用的openclaw差不多，打算还是和龙虾一样部署在旧手机上。
+
+在此之前，先使用openclaw进行辅助学习
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 ### **笔记 | AI 时代，Web3 开发者需要具备的基础知识和架构能力**
 
 ### 一、与传统支付的区别
