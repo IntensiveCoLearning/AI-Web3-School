@@ -15,8 +15,32 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+Day 2 (Cohort) · 概念扎根 + WCB 批量补交
+
+今晚通过 Claude Code 跟 Learning Agent 走了 4 轮 Q&A，修了 3 个智能合约领域的关键认知错误：
+
+1\. "EVM 基于智能合约" 是反的——智能合约跑在 EVM 上，EVM 是执行环境
+
+2\. EOA vs EVM 是比错对象（一个账户类型 vs 一个虚拟机），正确对比是 EOA vs 合约账户
+
+3\. "合约账户没私钥所以不安全" 拆开看：作为应用 vs 作为智能钱包，后者反而比 EOA 弹性更好
+
+意外收获：今晚 Q&A 直接命中了 Week 1 进阶任务 #14（30 分），加上前面 0518 钱包实操和今天 setup 工作，一晚上批量补交了 5 个 task / 90 分。本周累计 8 task / 150 分。
+
+工程层面：把 WCB Agent API 接进了 Learning Agent，以后每晚自动拉真实任务列表对齐计划，不再凭 Handbook 拍脑袋排进度。也踩了一次 API key 泄漏的真实坑——Agent 拒绝使用聊天里的 key，引导我走 revoke + env var 流程，这成了 #9 Learning Agent Setup 任务里 human-in-loop 案例的素材。
+
+明天 Day 3：5.20 Web3 运行原理 live + 部署一个最小智能合约（#13, 30 分）。
+
+🔗 笔记 [https://github.com/berylinureye/ai-web3-school-cohort-0/blob/main/daily/2026-05-19.md](https://github.com/berylinureye/ai-web3-school-cohort-0/blob/main/daily/2026-05-19.md)
+
+🔗 EOA/智能账户/多签 对比 [https://github.com/berylinureye/ai-web3-school-cohort-0/blob/main/tasks/week1-account-permissions-comparison.md](https://github.com/berylinureye/ai-web3-school-cohort-0/blob/main/tasks/week1-account-permissions-comparison.md)
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 ## 今天做了什么
 
 -   整理并上传了桌面的 Web3 学习笔记到 GitHub 仓库 `ai-web3-school-cohort-0`
