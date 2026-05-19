@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+![3054dd988c54ed99c9f666f26a330f46.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Addie-zhu/images/2026-05-19-1779204393778-3054dd988c54ed99c9f666f26a330f46.png)
+
+今天课听下来整体还是听不懂，但根据draken老师的操作理解了一些控制微信的运行逻辑，感觉实操还是有些困难，在寻求大家的帮助的时候建议我用codex去辅助安装，然后现在39分，我依旧卡在第一步
+
+![6a6af26277d0eaecf3a7ec752d7eb6c3.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Addie-zhu/images/2026-05-19-1779205619333-6a6af26277d0eaecf3a7ec752d7eb6c3.png)
+
+今晚又是鏖战··
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 昨天开始零基础跟进ai，第一步就卡了四小时，给电脑建立vpn（只有手机有）到凌晨2点还没搞定，七点起来安装的时候又说本地C++有问题，寻求淘宝帮助终于在上午搞定！开始登录理解ai，从资料中理解最最简单的内容（如图）
 
 ![ec38efac80e98306e3a85aa421bb2c8b.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Addie-zhu/images/2026-05-18-1779116840316-ec38efac80e98306e3a85aa421bb2c8b.jpg)
