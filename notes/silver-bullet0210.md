@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+![1000013759.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-19-1779198699248-1000013759.jpg)
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 | DAY1 |
 | --Web3 支付系统对比 |
 |   |
