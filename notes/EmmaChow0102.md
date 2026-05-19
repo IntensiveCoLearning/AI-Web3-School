@@ -15,8 +15,23 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+Hermes Agent 记忆，技能，流程
+
+-   quick setup
+    
+
+装完问AI如何接入，并在微信上生成学习计划，当成小助手进行安排
+
+-   codex，ClaudeCode
+    
+-   可执行，危险指令需要授权
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 **【Part1】**
 
 AI与人的工作流关系：人设计方案，AI细化并执行，自我验证输出
