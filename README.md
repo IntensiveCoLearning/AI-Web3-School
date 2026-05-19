@@ -161,7 +161,7 @@ more information
 | [xiaopiao009](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xiaopiao009.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Lemonadeccc](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Lemonadeccc.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wawa-state](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wawa-state.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Camilla0619](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Camilla0619.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Camilla0619](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Camilla0619.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [simanwang828](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/simanwang828.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [phoogaaa](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/phoogaaa.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [resurrection-i](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/resurrection-i.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
