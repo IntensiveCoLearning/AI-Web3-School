@@ -17,20 +17,25 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
-**Day 2** · 2026.5.19  
-  
-**Plan**  
-  
+**Day 2** · 2026.5.19
+
+**Plan**
+
 \- 学习 Handbook  
 \- 20:00 Hermes 从 0 到 1 讲座  
 \- 看 AI 下乡回放  
-\- 做 AI idea / 做 portfolio  
-  
+\- 做 AI idea / 做 portfolio
+
+* * *
+
+我发现Hermes还是不太好用，也可能我没设置好，它没我想象的那样流畅，比如：我问它今天应该学什么，我期待他能根据课程大纲回答我，它返回的却是今天晚上八点有一个分享会，xxxx，sadge...
+
 _Step by step._
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
