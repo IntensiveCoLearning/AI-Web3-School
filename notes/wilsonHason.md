@@ -15,8 +15,25 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+-   实时参加AI Agent 入门 —— Hermes 从 0 到 1 √
+    
+-   每日打卡 √
+    
+
+课程笔记：
+
+待看回放补充
+
+今日目标：用codex安装并部署hermes √
+
+![A60ABFE61D428903B7498B7A3775AE19.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/wilsonHason/images/2026-05-19-1779204022602-A60ABFE61D428903B7498B7A3775AE19.png)
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 -   回看17日开营回访 √
     
 -   实时观看18日co-learning √
