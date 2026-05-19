@@ -1027,7 +1027,7 @@ more information
 | [Cao150702](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Cao150702.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [mayuxaing](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/mayuxaing.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JadeLight7](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JadeLight7.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [henanshifandaxue](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/henanshifandaxue.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [henanshifandaxue](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/henanshifandaxue.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [thaliachan-dev](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/thaliachan-dev.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Welight2525](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Welight2525.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zw2512671014-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zw2512671014-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1225,6 +1225,7 @@ more information
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [shao-bei](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shao-bei.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
