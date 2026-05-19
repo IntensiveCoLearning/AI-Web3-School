@@ -15,6 +15,46 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+````markdown
+# Daily Note - 2026-05-20
+
+## 今日学习
+
+### ✅ Week 1 全部交付物完成
+
+| 交付物 | 文件 |
+|-------|------|
+| Learning Agent + GitHub Repo | 本仓库 |
+| Handbook 笔记（Network/Cryptography/Wallet） | daily/2026-05-18.md |
+| Web3 实操：MetaMask + 测试网 + 合约部署 | experiments/HelloWeb3.sol |
+| 可交互 Quiz | experiments/week1-quiz.html |
+| 最小交叉实验 | experiments/cross-experiment.md |
+| 基础概念串讲 | courses/week1-concepts.md |
+| 链上合约 | 0xd1707e2f46216d1ffc1e1ddc11af69f7695200a8 (Sepolia) |
+
+### 📖 AI × Web3 Bridge 预习
+
+**Chain-aware Context（链感知上下文）**
+- 模型不能凭记忆判断链上事实，必须从工具和索引层读取
+- 上下文包：chain id → 用户地址/余额 → 合约ABI → 交易历史 → citation
+
+**Web3 Tool Use（Web3 工具调用）**
+- 读写分离：读取和发送交易必须是不同工具、不同权限
+- 越接近链上执行，越需要 simulation → policy → 人工确认
+- Agent 不应直接拥有"任意合约写入"能力
+
+### 🔗 链上数据
+- 钱包: 0xe1977c...b20866bc
+- 合约: 0xd1707e...95200a8 (Sepolia)
+- 部署交易: 0x2e0add...8934a | Block 10,874,891 | ✅
+
+### 🔗 Repo
+- github.com/cjxh21/ai-web3-school-cohort-0
+````
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 ````markdown
