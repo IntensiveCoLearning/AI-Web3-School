@@ -815,7 +815,7 @@ more information
 | [Amber-DD](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Amber-DD.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [qiwihui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/qiwihui.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [3241557202-sys](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/3241557202-sys.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Manuel-dev01](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Manuel-dev01.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Manuel-dev01](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Manuel-dev01.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JChang0934](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JChang0934.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yoghurt-agent](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yoghurt-agent.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [june-in-exile](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/june-in-exile.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
