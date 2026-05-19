@@ -606,7 +606,7 @@ more information
 | [HutnerOakley](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/HutnerOakley.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wh149](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wh149.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JessicaLin2000](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JessicaLin2000.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [yuna4905](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yuna4905.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [yuna4905](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yuna4905.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [BareerahBenjamin](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/BareerahBenjamin.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cheng-gs](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cheng-gs.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ki4uki](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ki4uki.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1227,6 +1227,7 @@ more information
 | [joy12315](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/joy12315.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Eliana-web07](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Eliana-web07.md) | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
