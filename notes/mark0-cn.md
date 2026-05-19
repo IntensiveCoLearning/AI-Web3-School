@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+[https://www.notion.so/Hermes-Agent-Loop-365e1810ba1781b1a7c6d105eaf41d11](https://www.notion.so/Hermes-Agent-Loop-365e1810ba1781b1a7c6d105eaf41d11)
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 为什么需要 RAG
 
 \- LLM 训练知识会过期，context window 也装不下所有文档和历史
