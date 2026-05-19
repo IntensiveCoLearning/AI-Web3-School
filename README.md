@@ -483,7 +483,7 @@ more information
 | [HACAI-0000](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/HACAI-0000.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ky4niT3](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ky4niT3.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nobodyhi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/nobodyhi.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [big-dudu-mosty](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/big-dudu-mosty.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [big-dudu-mosty](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/big-dudu-mosty.md) | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Connor532](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Connor532.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [hhh835](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hhh835.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ershisihuasheng2003](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ershisihuasheng2003.md) | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1224,6 +1224,7 @@ more information
 | [Havensky-stack](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Havensky-stack.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jhhgbf6cgp-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jhhgbf6cgp-cpu.md) | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
