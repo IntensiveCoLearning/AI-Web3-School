@@ -19,7 +19,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 今日學習：深讀 Handbook Agent 模組（Tool Use / Planning / State / Reflection / Multi-Agent）+ 預習 Hermes Agent 架構
 
-GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-19.md
+GitHub 筆記：[https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-19.md](https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-19.md)
 
 Agent 核心技術組件：
 
@@ -40,6 +40,7 @@ Hermes Agent 預習：Skills 可復用高層指令集 / Long-term Memory 跨 ses
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 今日學習：深讀 AI x Web3 School Handbook 模組 A（LLM / Prompt / Context / Agent）+ 模組 B（Wallet / Smart Contract / Account Abstraction）
 
