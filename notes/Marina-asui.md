@@ -15,8 +15,82 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+# 今日完成
+
+### ✅ 1. 搭建 Learning Agent
+
+-   选择工具：Hermes Agent（Learning Agent 提示词引导）
+    
+-   Agent 辅助内容：初始化 GitHub 仓库、制定学习计划、生成每日笔记模板、解析以太坊交易结构、指引 PoW 提交流程
+    
+-   人工确认步骤：敲定仓库名称与公开权限、核对每次提交推送内容、人工复核并优化代码释义
+    
+-   输出修正点：Agent 生成的 ERC-20 转账交易输入数据讲解过于简略，手动补充函数选择器`0xa9059cbb`及参数完整拆解
+    
+
+### ✅ 2. 创建个人 GitHub 学习仓库
+
+-   仓库地址：[https://github.com/Marina-asui/ai-web3-school-cohort-0](https://github.com/Marina-asui/ai-web3-school-cohort-0)
+    
+-   仓库目录：[README.md](http://README.md)、[profile.md](http://profile.md)、[learning-plan.md](http://learning-plan.md)、daily/、tasks/、experiments/、handbook-feedback/、hackathon/、submissions/、templates/
+    
+-   README 内容：AI×Web3 学习项目介绍、手册链接、WCB 课程链接、隐私须知、全目录说明
+    
+-   借助 Learning Agent 完成初始化，跟随指引完成 GitHub CLI 登录与仓库创建，所有文件写入均本人手动确认
+    
+
+### ✅ 5. 完成 PoW 提交测试
+
+-   提交路径：Learning 页面→课程任务→任务详情→提交证明
+    
+-   提交格式：公开 GitHub 仓库链接 + 文字学习总结
+    
+-   审核规则：提交后进入待审核状态，审核人员核验内容完整性与链接有效性
+    
+-   已顺利完成测试证明提交
+    
+
+* * *
+
+# AI 概念理解
+
+表格
+
+| 概念 | 我的理解 |
+| --- | --- |
+| LLM | 依托上下文概率生成文本，擅长语义理解与内容创作，缺乏精准记忆与严谨运算能力 |
+| Prompt | 向大模型下达的指令，决定输出走向，模型易出现幻觉编造内容，必须人工核验 |
+| Workflow | 固定流程化任务链路，模型仅作为执行节点，流程稳定易调试、可控性强 |
+| Agent | 可自主规划任务、灵活调用工具、持续维护运行状态，自由度高同时存在执行风险 |
+| Tool Use | 赋予模型实操能力，通过标准化指令调用外部工具，实现从文本输出到实际操作转变 |
+| Guardrails | 设定输入输出校验规则，拦截违规内容与危险操作，筑牢使用安全边界 |
+| Human-in-the-loop | 核心关键操作保留人工审核确认，尤其链上签名、资产转账、合约部署等高风险行为 |
+
+* * *
+
+# Web3 概念理解
+
+表格
+
+| 概念 | 我的理解 |
+| --- | --- |
+| Account | 链上存有余额与随机数的状态账户，外部账户由私钥管控，合约账户由链上代码管控 |
+| Wallet | 私钥管理工具，不等同于链上账户，掌握私钥即拥有账户全部控制权 |
+| Private Key | 256 位随机加密密钥，用于交易签名，一旦泄露账户资产存在全部丢失风险，严禁外泄 |
+| Signature | 私钥签署的交易授权凭证，区别于普通账号登录，每一笔链上交易都为独立授权行为 |
+| Transaction | 包含发送方、接收方、金额、数据、燃料费等信息的链上状态变更请求，需签名且消耗燃料 |
+| Gas | EVM 虚拟机运算资源计费机制，规避恶意恶意脚本运行，同时激励区块验证节点 |
+| Smart Contract | 部署在区块链上的可执行代码，运行数据公开透明，部署后无法随意篡改 |
+| Testnet | 专供开发调试的测试区块链，测试代币无实际价值，所有链上实操优先在测试网完成 |
+
+* * *
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 co-working 260518
 
 ## 一、核心工具与基础概念说明
