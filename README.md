@@ -1227,7 +1227,9 @@ more information
 | [joy12315](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/joy12315.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Eliana-web07](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Eliana-web07.md) | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [paranoiaws](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/paranoiaws.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [prospect-faith](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/prospect-faith.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
