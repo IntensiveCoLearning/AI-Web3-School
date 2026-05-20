@@ -25,11 +25,12 @@ Week 1 complete.
 
 \- Hermes workshop notes+subs
 
-🔗 github.com/cjxh21/ai-web3-school-cohort-0
+🔗 [github.com/cjxh21/ai-web3-school-cohort-0](http://github.com/cjxh21/ai-web3-school-cohort-0)
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 ````markdown
@@ -126,6 +127,7 @@ Week 1 complete.
 
 
 
+
 ````markdown
 # Daily Note - 2026-05-19
 
@@ -200,6 +202,7 @@ contract HelloWeb3 {
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
