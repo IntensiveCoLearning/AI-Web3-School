@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+![8ea165da574308ceb2b5da1cbeee40b2.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vanadiumricard-cell/images/2026-05-20-1779289671833-8ea165da574308ceb2b5da1cbeee40b2.jpg)
+
+讲了web3的整体宏观的运行流程，比昨天的老师讲的更宏观，可惜没有仔细整理，今天时间一直在跟Hermes斗争，搭建一个工作流反而搭建塌了，没有达成昨天的目标，气死我了，明天继续延续昨天目标
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 ![641306ec4490e14b6c9cabd8b5ee527c.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vanadiumricard-cell/images/2026-05-19-1779200416860-641306ec4490e14b6c9cabd8b5ee527c.jpg)
 
 ##成功安装Hermes
@@ -28,6 +36,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 \# 📖 Web3 初步认识：支付逻辑与底层架构学习笔记
 
