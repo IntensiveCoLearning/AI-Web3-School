@@ -17,17 +17,19 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
-打卡任务 开营仪式回放
+打卡任务 看开营仪式回放
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 2
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 第一天
