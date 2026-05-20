@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+AI Agent 的本质进化与核心机制
+
+AI 从“告诉我怎么做”（问答交互）向“直接帮我做”（任务执行）。AI Agent 的核心运行机制包含四个闭环步骤：理解目标、调用工具（终端命令、文件读写等）、观察结果、出错时自动修正。区别于聊天型 AI（ChatGPT、DeepSeek）和编辑器 AI 助手（Cursor、Copilot），终端型 Agent（如 Claude Code、Codex、Hermes）能够直接进入项目目录，读取修改代码、运行测试、修复 Bug，扮演“住在命令行里的自动化工程师”角色。
+
+Hermes Agent 的定位与核心能力
+
+Hermes 属于通用 Agent 系统，被定位为“AI 的基础基建”，而非单一用途工具。它的六大核心能力包括：多模型支持（灵活接入 GPT、Opus 等）、工具调用（文件、搜索、终端）、Cron 定时任务（自动监控/摘要）、Memory 记忆（记住偏好与工作习惯）、Gateway 消息网关（直接接入 Telegram 等）、Skills 技能（沉淀固定任务流程）。演示中我了解到了自动重试机制（API 失败后自动 retry）、终端交互命令，还有与 Telegram bot 的集成通过 @mention 触发任务。下一步我的想法是试用 Hermes Agent 完成一个具体开发任务可以是配置 Telegram bot 作为消息网关，让它自动读取项目目录、执行一个脚本并返回结果。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 今日看昨天的回放
 
 有了AI还需要学基础吗？人负责设计方案、评估合理性、验收结果；AI协助编写、检查和测试。基础不足就无法判断AI输出的质量。
