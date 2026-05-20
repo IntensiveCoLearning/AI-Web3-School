@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+![dd70bb171412dad2f309381de3c079e5.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-05-20-1779281698513-dd70bb171412dad2f309381de3c079e5.jpg)
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 安装并使用Hermes
 <!-- DAILY_CHECKIN_2026-05-18_END -->
 <!-- Content_END -->
