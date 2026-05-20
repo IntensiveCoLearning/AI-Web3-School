@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+Wk1 Task1: Download Claude Desktop
+
+Claude Code 、模型【GPT5.5】免费API链接[https://freemodel.dev/invite/FRE-3ec50e93](https://freemodel.dev/invite/FRE-3ec50e93)
+
+Claude Code笔记集
+
+[https://code.claude.com/docs/zh-CN/desktop](https://code.claude.com/docs/zh-CN/desktop)
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 这是一份为你定制的 Week 1 学习计划。计划从周二开始，已将你提供的全部内容按天拆解，并融合了“先判断基础、再补短板、最后做交叉实验”的思路。
 
 \### 📅 学习计划概览：Week 1 (周二 - 周一)
