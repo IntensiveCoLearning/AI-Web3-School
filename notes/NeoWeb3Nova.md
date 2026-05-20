@@ -15,8 +15,37 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+> 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
+> 
+> 关键收获：
+> 
+> 1.  完整跑通了「助记词 → 私钥 → 地址 → 签名 → 交易 → Gas → 确认 → 验证」链路
+>     
+> 2.  通过 Remix 完成最小合约部署，理解了读取调用与写入调用的 Gas 差异
+>     
+> 3.  启动模块 C 设计：AI 生成 → 人工复核 → 钱包确认 → 链上执行的最小流程
+>     
+> 
+> 今日进度：
+> 
+> -   ✅ Learning Agent + GitHub repo 已就绪（Day 1–2 完成）  
+>     
+> -   ✅ 模块 B：测试网钱包、交易、合约部署已完成  
+>     
+> -   🔄 模块 C：最小交叉实验设计启动  
+>     
+>     ![屏幕截图 2026-05-20 225206.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-20-1779288788350-_____2026-05-20_225206.png)
+> 
+> 学习笔记：[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-20.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-20.md)
+> 
+> [#AIWeb3School](#AIWeb3School) [#Web3Basics](#Web3Basics) [#Day3](#Day3)
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 > 今日完成 Week 1 完整任务拆解，正式启动 Web3 测试网实践模块。
 > 
 > 关键收获：
@@ -55,6 +84,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 ```
