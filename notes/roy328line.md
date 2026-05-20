@@ -15,8 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+今日學習：Frameworks 模組深讀（LangChain / LangGraph / OpenAI Agents SDK / Hermes）+ Hermes 安裝實作
+
+主要收穫：
+
+-   框架選擇第一原則：先理解工作流，再決定用不用框架。框架是系統邊界的表達，不是智能本身
+    
+-   \- Hermes 讓我重新思考「框架複雜度 vs 模型能力」的取捨——模型本身工具調用夠穩定，就可以少一層框架抽象
+    
+-   \- 安裝 Hermes 心得：建議用虛擬環境隔離依賴；function schema 格式需嚴格對應；prompt 格式要按官方模板
+    
+
+明日計劃：繼續完善 Hermes 測試，準備測試網錢包實作（MetaMask + Sepolia 測試幣）
+
+GitHub 筆記：https://github.com/IntensiveCoLearning/AI-Web3-School/pull/29
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 今日學習：深讀 Handbook Agent 模組（Tool Use / Planning / State / Reflection / Multi-Agent）+ 預習 Hermes Agent 架構
 
 GitHub 筆記：[https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-19.md](https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-19.md)
@@ -40,6 +59,7 @@ Hermes Agent 預習：Skills 可復用高層指令集 / Long-term Memory 跨 ses
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 今日學習：深讀 AI x Web3 School Handbook 模組 A（LLM / Prompt / Context / Agent）+ 模組 B（Wallet / Smart Contract / Account Abstraction）
