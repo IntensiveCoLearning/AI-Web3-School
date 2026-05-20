@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+意识到似乎不需要学太深入，感觉transformer深入学习后较难理解。于是转向完成课程目标，完成了课程模块A中的任务[一二三](https://github.com/JadeLight7/aiweb3/tree/main/demos)，最近在投简历，后几天计划复习一下区块链知识，准备可能的面试。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 \# Transformer 学习笔记
 
 Transformer 可以理解成一种"让语言里的每个词都能主动去和其他词交流"的系统，它是现在几乎所有大模型（比如 OpenAI 的 GPT、Anthropic 的 Claude、Google 的 Gemini、DeepSeek 的 DeepSeek）的底层核心。它之所以革命性，是因为它第一次真正解决了"长文本理解"和"大规模并行训练"这两个问题。
@@ -86,6 +92,7 @@ Transformer 还有一个特别重要的地方：它是\*\*并行的\*\*。以前
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 # Day 1 — LLM 自主学习笔记
 
