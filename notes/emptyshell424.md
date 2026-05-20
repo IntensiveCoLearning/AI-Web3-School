@@ -15,8 +15,26 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+```
+**Day 3** · 2026.5.20
+**Plan**
+- 上手新版 Antigravity（反重力）
+- 学习 Handbook
+- 做 AI idea / 做 portfolio
+- 配置更聪明的 Hermes，优化设置
+- 将时区修复指南发到同学群
+- 17:00 Web3 运行原理讲座
+- 19:00 Co-learning｜任务推进与答疑
+
+*Step by step.*
+```
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 **Day 2** · 2026.5.19
 
 **Plan**
@@ -35,6 +53,7 @@ _Step by step._
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
