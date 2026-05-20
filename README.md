@@ -840,7 +840,7 @@ more information
 | [yiguangchao](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yiguangchao.md) | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [cylim](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/cylim.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sangelege](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sangelege.md) | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [dongshujun4994](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dongshujun4994.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [dongshujun4994](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dongshujun4994.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ranjinran854-ui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ranjinran854-ui.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [csiejimmyliu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/csiejimmyliu.md) | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [625853188](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/625853188.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1231,6 +1231,7 @@ more information
 | [zyh523](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zyh523.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
