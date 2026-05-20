@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+### What is a Large Language Model? 影片觀看
+
+LLM是模型判斷下一個生成的文字是甚麼，藉由大量的文章資料訓練調整超級多的參數，讓下一個生成的文字越來越順暢合理
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 因為我是AI和Web3兩者的初學者，所以我今天先了解模塊A的核心知識點
 
 ### 一、 大模型基礎與控制參數
