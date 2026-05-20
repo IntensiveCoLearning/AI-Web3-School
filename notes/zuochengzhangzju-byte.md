@@ -22,6 +22,13 @@ I continued studying Web3 wallet security and the full check-in workflow between
 I also tested how verifiable learning records work in this program. The learning note is written into a public GitHub record, the co-learning site reads that record as the check-in proof, and WCB can then refresh the daily check-in status. This makes the learning process auditable: the content, date, GitHub identity, and platform status can all be reviewed later. For future AI agent wallet flows, this reinforces the need for transaction simulation, explicit human confirmation, and logs before any on-chain action is executed.
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+I studied Web3 wallet security, especially private key and seed phrase protection, phishing link detection, approval risks, and safer operational patterns such as hardware wallets, multisig accounts, and transaction simulation.
+
+The most useful takeaway is that wallet safety is not only about storing the seed phrase securely. Before connecting a wallet, signing a message, or granting token approvals, I need to verify the domain, contract address, approval scope, token amount, and expected asset changes. I will also regularly review and revoke unnecessary approvals to reduce risk from malicious dApps or phishing pages.
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
