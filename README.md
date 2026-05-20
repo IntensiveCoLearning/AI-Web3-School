@@ -624,7 +624,7 @@ more information
 | [guoxy69-lgtm](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/guoxy69-lgtm.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JessieWangJieqi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JessieWangJieqi.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [jenny-52hz](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jenny-52hz.md) | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Qian-1026](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Qian-1026.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
+| [Qian-1026](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Qian-1026.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [luna-670](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/luna-670.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [qiutudou66](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/qiutudou66.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [newfish-cmyk](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/newfish-cmyk.md) | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
