@@ -15,8 +15,22 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+今天我继续从零学习 AI x Web3，重点补了 Web3 和 AI 的基础共同语言，并开始设计第一个只读 Agent 工作流。
+
+Web3 方面，我学习了钱包地址、私钥/助记词、签名、交易哈希、区块浏览器、智能合约、approve、Token、稳定币、NFT、跨链、区块链记账、节点、PoW 和 PoS。我的理解是：钱包地址可以公开，但私钥和助记词绝对不能泄露；签名不一定是转账，也可能是登录、授权或合约交互；交易哈希像交易单号；智能合约是链上的自动程序；approve 是授权某个合约使用某种 Token 的一定额度。
+
+AI 方面，我学习了 LLM、Prompt、Context、RAG 和 Agent。LLM 更像语言助手，擅长解释、总结和规划，但它的输出只是候选答案，不是最终事实。Prompt 不是咒语，而是任务说明书；Context 是 AI 当前能看到的现场资料；RAG 像开卷考试，先检索资料再回答；Agent 是 LLM 加工具和流程。
+
+今天的实践产出有两个：第一，创建了一个可复用的 Web3 解释类 Prompt 模板；第二，创建了一个只读交易解释 Agent 工作流实验文档。这个 Agent 的目标是帮助新手理解公开链上信息，但不替用户签名、授权、转账或做投资判断。
+
+今天最大的收获是：AI x Web3 的关键不是让 AI 直接控制钱包，而是让 AI 在清晰安全边界内帮助人理解信息、识别风险、整理决策依据。下一步我会继续练习 Prompt 对比，并学习如何读一笔真实的区块浏览器交易页面。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 今天我正式从零开始学习 AI x Web3。虽然昨天已经建立了学习仓库和每日打卡文件，但实际学习是今天才开始，所以我先把目标放得很小：理解 AI x Web3 到底在学什么，以及最基础的安全边界。
 
 今天我学习了四个入门概念：钱包、签名、交易哈希，以及为什么 AI 不能要求用户提供私钥或助记词。我的理解是：钱包不是普通意义上的“装钱工具”，更像是 Web3 世界里的身份和钥匙；签名代表我确认某个操作；交易哈希像一笔链上交易的快递单号，可以用来查询交易记录；私钥和助记词则是钱包的最高权限，任何人或 AI 都不应该要求我提供。
@@ -28,6 +42,7 @@ timezone: UTC+8
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 今天成功安装了vscode，并安装了codex插件以及claude code插件，并且让codex帮我“请作为我的 AI × Web3 School Learning Agent，先阅读启动 Prompt：[https://aiweb3.school/learning-agent.zh.txt，并结合](https://aiweb3.school/learning-agent.zh.txt，并结合) Handbook：[https://aiweb3.school/zh/handbook/，帮我初始化个人学习计划、GitHub](https://aiweb3.school/zh/handbook/，帮我初始化个人学习计划、GitHub) 学习仓库、每日打卡草稿和 Handbook feedback 流程。”
 
