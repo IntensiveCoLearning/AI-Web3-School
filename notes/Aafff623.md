@@ -15,8 +15,117 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+Github 直达地址: [https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-20](https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-20)
+
+# **2026-05-20**
+
+> Week 1 · Day 4 · 周三
+
+## **今天做了什么**
+
+-   完成全部 42 节预习笔记 + 实践文件（AI 11 + Web3 10 + AI×Web3 15 + Frontier 6）
+    
+
+## **产出与检验**
+
+> 实际产出（笔记 / 代码 / 截图 / Tx Hash / commit）+ 怎么证明做完了。 涉及的预习概念直接引用 `pre_study/.../README.md`，不在这里重复展开。
+
+| 产出 | 状态 | 链接 |
+| --- | --- | --- |
+| AI×Web3 · Chain-aware-Context 笔记 | ✅ | pre_study/ai-web3-bridge/Chain-aware-Context/README.md |
+| 交易上下文包练习 | ✅ | practice-tx-context-pack.md |
+| AI×Web3 · Web3-Tool-Use 笔记 | ✅ | pre_study/ai-web3-bridge/Web3-Tool-Use/README.md |
+| Agent Web3 工具集练习 | ✅ | practice-agent-web3-toolkit.md |
+| AI×Web3 · Agent-Workflow 笔记 | ✅ | pre_study/ai-web3-bridge/Agent-Workflow/README.md |
+| Swap 工作流设计练习 | ✅ | practice-swap-workflow-design.md |
+| AI×Web3 · Agent-Wallet 笔记 | ✅ | pre_study/ai-web3-bridge/Agent-Wallet/README.md |
+| 受限支付钱包练习 | ✅ | practice-restricted-payment-wallet.md |
+| AI×Web3 · Machine-Payment 笔记 | ✅ | pre_study/ai-web3-bridge/Machine-Payment/README.md |
+| Agent API 支付流程练习 | ✅ | practice-agent-api-payment-flow.md |
+| AI×Web3 · Settlement-and-Escrow 笔记 | ✅ | pre_study/ai-web3-bridge/Settlement-and-Escrow/README.md |
+| 报告 Escrow 流程练习 | ✅ | practice-report-escrow-flow.md |
+| AI×Web3 · Agent-Identity 笔记 | ✅ | pre_study/ai-web3-bridge/Agent-Identity/README.md |
+| Agent Profile 设计练习 | ✅ | practice-agent-profile-design.md |
+| AI×Web3 · Agent-Trust-and-Reputation 笔记 | ✅ | pre_study/ai-web3-bridge/Agent-Trust-and-Reputation/README.md |
+| Agent 声誉记录练习 | ✅ | practice-agent-reputation-record.md |
+| AI×Web3 · AI-Oracle 笔记 | ✅ | pre_study/ai-web3-bridge/AI-Oracle/README.md |
+| 任务完成判断 Oracle 练习 | ✅ | practice-task-completion-oracle.md |
+| AI×Web3 · Verifiable-AI 笔记 | ✅ | pre_study/ai-web3-bridge/Verifiable-AI/README.md |
+| AI 风险评分验证方案练习 | ✅ | practice-verifiable-ai-design.md |
+| AI×Web3 · AI-Security 笔记 | ✅ | pre_study/ai-web3-bridge/AI-Security/README.md |
+| Prompt Injection 防护练习 | ✅ | practice-prompt-injection-defense.md |
+| AI×Web3 · AI-Privacy 笔记 | ✅ | pre_study/ai-web3-bridge/AI-Privacy/README.md |
+| Agent 数据流图练习 | ✅ | practice-agent-data-flow.md |
+| AI×Web3 · AI-Sovereignty 笔记 | ✅ | pre_study/ai-web3-bridge/AI-Sovereignty/README.md |
+| Agent 主权检查表练习 | ✅ | practice-agent-sovereignty-checklist.md |
+| AI×Web3 · Governance-AI 笔记 | ✅ | pre_study/ai-web3-bridge/Governance-AI/README.md |
+| 治理提案摘要模板练习 | ✅ | practice-proposal-summary-template.md |
+| AI×Web3 · Decentralized-AI 笔记 | ✅ | pre_study/ai-web3-bridge/Decentralized-AI/README.md |
+| 开放推理网络规格练习 | ✅ | practice-open-inference-network.md |
+| Frontier · Agentic-Commerce 笔记 | ✅ | pre_study/frontier/Agentic-Commerce/README.md |
+| Agent API 购买流程练习 | ✅ | practice-agent-api-purchase-flow.md |
+| Frontier · Dev-Tooling 笔记 | ✅ | pre_study/frontier/Dev-Tooling/README.md |
+| 合约阅读+测试建议练习 | ✅ | practice-contract-reading-test.md |
+| Frontier · Wallet-and-Permission 笔记 | ✅ | pre_study/frontier/Wallet-and-Permission/README.md |
+| AI 换币助手权限策略练习 | ✅ | practice-ai-swap-permission-policy.md |
+| Frontier · AI-Security 笔记 | ✅ | pre_study/frontier/AI-Security/README.md |
+| 恶意文档+权限隔离练习 | ✅ | practice-malicious-doc-defense.md |
+| Frontier · Governance 笔记 | ✅ | pre_study/frontier/Governance/README.md |
+| 来源保真治理摘要练习 | ✅ | practice-source-preserving-summary.md |
+| Frontier · Open-Track 笔记 | ✅ | pre_study/frontier/Open-Track/README.md |
+| 开放赛道项目规格练习 | ✅ | practice-open-track-project-spec.md |
+
+## **今日直播笔记**
+
+> 来源：Week 1 直播课 — Web3 核心原理
+
+### **钱包、私钥与个人主权**
+
+-   钱包 ≠ 资产存储。资产在链上账本里，钱包只管**密钥管理 + 签名 + 链上数据读取**
+    
+-   私钥 → 助记词 → 地址，三层关系：私钥是控制核心，助记词是可读备份（可派生多账户），地址是公钥算出来的公开标识
+    
+-   私钥 = 个人主权起点。随机生成就能拥有链上身份，不依赖任何平台审批
+    
+-   安全红线：不截图、不存网盘、不发送、不复制到不可信环境。剪贴板也不安全（恶意软件可读取/替换地址）。区块链只认签名不认人
+    
+
+### **交易的本质**
+
+-   交易 ≠ 转账，是"我授权网络执行某件事"的数据
+    
+-   组成：To（目标地址）、Amount、Gas Fee、Nonce（防重放序号）、Signature（授权证明）
+    
+-   完整路径：Wallet 签名 → RPC/Node 传播 → Mempool 排队 → Builder 排序 → Validator 出块 → Block 可查询
+    
+-   本质是：身份 → 授权 → 传播 → 排序 → 执行 → 确认
+    
+
+### **区块链网络的三问**
+
+用户点 Confirm 后，系统回答三个问题：
+
+| 问题 | 答案 |
+| --- | --- |
+| 你是谁？ | 私钥、助记词、地址、签名 |
+| 你要做什么？ | 交易内容、Gas、Nonce、合约调用 |
+| 为什么大家相信结果？ | 节点传播、验证者出块、finality、合约状态 |
+
+## **收获 / 卡点**
+
+-   预习阶段 42/42 全部收工，知识框架搭完了。接下来要从"知道"转向"动手做"，Week 2 重点是选定 Hackathon 方向
+    
+
+## **明天打算**
+
+-   Week 2 开始，交叉方向深入 + 确定 Hackathon 项目方向
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 Github repo 直达地址: [https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-19](https://github.com/Aafff623/web3career-study-track/tree/master/daily-log/week-1/2026-05-19)
 
 # **2026-05-19**
@@ -70,6 +179,7 @@ Github repo 直达地址: [https://github.com/Aafff623/web3career-study-track/tr
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 ## 直达 repo:
 
