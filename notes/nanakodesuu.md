@@ -17,11 +17,12 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
-哟！我来水笔记喽！
+哟！我来打卡啦～～又是水卡的一天！
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 昨天忘记打卡了！
 <!-- DAILY_CHECKIN_2026-05-19_END -->
