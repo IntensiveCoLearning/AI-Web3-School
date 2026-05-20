@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+请个假，明天补
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 了解web3的一些流程，但没做过开发，希望以后借助ai了解开发
 
 ## 第一条：Web3 不是“新概念集合”，而是更严格的系统工程
