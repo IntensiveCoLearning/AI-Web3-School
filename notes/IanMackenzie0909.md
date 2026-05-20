@@ -48,9 +48,10 @@ Web3 的前端仍然很像傳統 Web2，但後端一部分會變成：
 -   合約漏洞可能直接造成資產損失
     
 
-  
 所以 Web3 不是比較潮的 Web2，而是**一種把所有權、信任與資產邏輯重新設計的架構**。
 
-有興趣的話可以看一下我整理的 Notion Page: [Web3 開發概述](https://rainy-cry-c97.notion.site/Web3-3667c68bd87f81969166c839f3cfa0d2)
+有興趣的朋友可以看一下我整理的 Notion Page: [Web3 開發概述](https://rainy-cry-c97.notion.site/Web3-3667c68bd87f81969166c839f3cfa0d2)
+
+English version: [Web3 Development Overview](https://rainy-cry-c97.notion.site/Web3-Development-Overview-3667c68bd87f81ee8db5d3369f0f8e24)
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 <!-- Content_END -->
