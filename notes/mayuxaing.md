@@ -15,8 +15,190 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+## Planner 阶段要产出什么
+
+Planner 的目标不是写代码，而是把项目讲清楚。它应该产出或准备产出：
+
+```text
+.apm/spec.md
+.apm/plan.md
+AGENTS.md
+.apm/tracker.md
+.apm/bus/
+```
+
+这些文件的作用：
+
+| 文件 | 作用 |
+| --- | --- |
+| .apm/spec.md | 项目目标、需求边界、约束、架构决策 |
+| .apm/plan.md | 阶段计划、任务拆分、依赖关系 |
+| AGENTS.md | 所有 AI Worker 必须遵守的执行规则 |
+| .apm/tracker.md | 当前进度、任务状态、审查结果 |
+| .apm/bus/ | Manager 和 Worker 之间传递任务与报告 |
+
+如果 Planner 没有先问清楚需求，就直接开始写代码，说明用法不对。
+
+## Manager 阶段怎么用
+
+Manager 负责协调，不是默认亲自写代码。
+
+它应该做这些事：
+
+-   读取 Spec、Plan 和 Tracker；
+    
+-   判断当前应该做哪个任务；
+    
+-   判断任务是否能并行；
+    
+-   给 Worker 写清楚任务提示词；
+    
+-   检查 Worker 的报告；
+    
+-   更新 Tracker；
+    
+-   必要时要求 Worker 返工。
+    
+
+Manager 派工时，任务应该足够具体。例如：
+
+```text
+你是情报源适配器 Worker。
+
+目标：实现 NVD CVE 和 CISA KEV 两个数据源的最小采集链路。
+
+要求：
+- 只修改采集模块相关文件。
+- 每个数据源都实现独立 Connector。
+- Connector 输出统一 Raw Intelligence 结构。
+- 实现限速、重试、错误记录和来源标记。
+- 补充测试或可重复的验证命令。
+- 完成后写明修改文件、验证结果、遗留问题。
+```
+
+## Worker 阶段怎么用
+
+Worker 只做一个明确任务，不重新规划整个项目。
+
+任务多时可以有多个 Worker，但每个 Worker 仍然只负责一个清晰边界内的任务。并行的前提是写入范围不冲突，例如采集器、数据模型、API、前端、部署文档可以拆开；如果两个任务都会改同一批核心文件，应由 Manager 顺序派发或明确文件归属。
+
+推荐早期控制在 3 到 5 个 Worker。Worker 太少会拖慢进度，Worker 太多会增加审查成本和文件冲突。
+
+Worker 应该做：
+
+-   阅读 Manager 给的任务；
+    
+-   只修改任务范围内的文件；
+    
+-   运行必要测试；
+    
+-   记录验证结果；
+    
+-   写任务报告。
+    
+
+Worker 不应该做：
+
+-   擅自扩大范围；
+    
+-   重写整体架构；
+    
+-   修改无关模块；
+    
+-   跳过验证；
+    
+-   不写完成报告。
+    
+
+## 一个完整循环示例
+
+```text
+1. 在项目根目录运行 apm init。
+2. 确认项目里生成 .apm/、.codex/apm-guides/、.agents/skills/。
+3. 在 Codex 中使用 $apm-1-initiate-planner，让 Planner 收集上下文并生成规划文档。
+4. 用户确认 Planner 产出的 Spec、Plan 和 Rules。
+5. 新开 Manager 会话，使用 $apm-2-initiate-manager。
+6. Manager 派发任务。
+7. 新开 Worker 会话，使用 $apm-3-initiate-worker。
+8. Worker 使用 $apm-4-check-tasks 读取任务，执行代码修改和验证。
+9. Worker 完成后写报告。
+10. Manager 使用 $apm-5-check-reports 审查报告。
+11. Manager 接受后更新进度，再派发下一个任务。
+12. 阶段完成后归档、总结或继续下一阶段。
+```
+
+## 终端命令
+
+查看版本：
+
+```bash
+apm --version
+```
+
+查看当前项目状态：
+
+```bash
+apm status
+```
+
+初始化当前项目：
+
+```bash
+apm init
+```
+
+更新 APM：
+
+```bash
+apm update
+```
+
+添加 assistant：
+
+```bash
+apm add
+```
+
+归档当前会话：
+
+```bash
+apm archive --name vehicle-threat-intel-mvp
+```
+
+查看归档：
+
+```bash
+apm archive --list
+```
+
+## 快速记忆
+
+```text
+终端 apm init：安装/初始化项目结构。
+Codex $apm-1：启动 Planner，问清楚项目，生成 Spec 和 Plan。
+Codex $apm-2：启动 Manager，派任务、审报告、维护进度。
+Codex $apm-3：启动 Worker，做一个具体任务，跑验证，写报告。
+```
+
+当前 Codex 推荐这样起手：
+
+```text
+$apm-1-initiate-planner <项目背景>
+```
+
+最终原则：
+
+```text
+APM 适合管复杂项目，不适合替代日常小改动。
+先规划，再派工，再执行，再审查。
+```
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 本文里的 APM 指 **Agentic Project Management**，仓库是：
 
 ```text
