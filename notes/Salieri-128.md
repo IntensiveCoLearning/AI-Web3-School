@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今天系统学习了 Handbook 中的 Vibe Coding、MCP、Evaluation、Fine-tuning 和 Inference 五个章节。最大的收获是，我开始从工程化视角理解 AI：不仅关注模型能力本身，也开始理解 AI 如何协作开发、连接工具、被评估、被微调，以及如何在真实产品里稳定运行。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 今天我继续系统学习了 AI 相关内容，重点梳理了 LLM、Prompt、Context、RAG、Workflow、Agent、Tool Use、Framework 这些核心概念之间的关系。相比之前只会单独记术语，今天更大的进步是开始把它们理解成一个完整系统：LLM 负责生成，Prompt 定义任务，Context 决定可见信息，RAG 提供外部知识，Tool Use 连接外部能力，Workflow 约束执行流程，Agent 负责围绕目标进行多步行动，而 Framework 则把这些模块组织起来。
 
 今天我还完成了两个任务：一个是解释 AI 概念的内容，另一个是 AI 可交互 demo 的任务。在这个过程中，我让 AI 生成了一个解释 RAG 过程的 demo，并借此初步了解了 Streamlit 这个工具。这个实践让我对 RAG 的理解不再只是“先检索再生成”的定义，而是开始真正理解它为什么重要，以及它在实际产品里的作用。
@@ -31,6 +37,7 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 今天我完成了 AI × Web3 School 里一次很关键的“从会用 Agent 到会调 Agent”的练习。内容上，我阅读了 Handbook 的 `LLMPromptContextAgent` 四个部分，也参加了 `AI Agent 入门 —— Hermes 从 0 到 1` 直播，把理论和实际工具使用串了起来。
 
 今天最重要的实践是把微信里的 Hermes Agent 调通，并继续排查它在 WCB 学习任务读取上的问题。我发现它虽然拿到了 WCB 的 API key，但不能稳定读出任务，最后定位并验证了对我这个账号更可靠的读取路径`users.getProfile -> events.listForLearner -> tasks.listForLearnerByIds`，然后把这条路径存进了 memory。
@@ -44,6 +51,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 今天主要完成了 Hermes Agent 的配置：接入了 Codex，测试后决定先使用更稳定的 `gpt-5.4` 作为当前模型，同时把 Hermes 接入了微信，方便后续直接在微信里继续学习和记录。除此之外，我也开始阅读 Handbook 的 `LLM` 部分，初步建立对大模型能力边界的认识。今天最大的收获是，先把 Agent 工作流搭好，本身就是学习基础设施的一部分。
