@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+# task3存在的问题
+
+昨天没调完，存在跨域问题，今天让agent进行了修复，现在测试已经ok
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 # Task3
 
 针对taks3今天用hermes做了一个交互转账的demo，整体按照spec进行开发。
@@ -60,6 +68,7 @@ ok，按照开发计划开始开发吧
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 之前已经在用claude code写代码，分析代码库了，
 
