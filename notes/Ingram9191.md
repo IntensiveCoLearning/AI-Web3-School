@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+建立新錢包並補足相關Web3知識
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 今天嘗試建立agent幫助學習 不然太慢了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 因系统原因，补交打卡笔记内容，此条内容为系统自动触发。
 
@@ -30,6 +37,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 今天比較忙
