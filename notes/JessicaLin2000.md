@@ -25,7 +25,7 @@ AI 驱动的链上分析工具：把链上公开的 “看不懂的数字” 翻
 
 今天最大的收获，是打破了 “AI+Web3 就是炒币工具” 的刻板印象。原来它的核心是用 AI 解决 Web3 里 “看不懂、不敢操作、不安全” 的痛点。作为小白，我发现不用一开始就写代码，先从 “会用这些工具” 开始就好 —— 比如用链上分析工具看自己关注的项目，理解资金流向；或者用 AI Agent 帮我整理链上操作的安全规则。同时也意识到，这类工具的核心是 “安全”，比如给 AI 钱包设限额、用工具看懂链上骗局，比盲目跟风更重要。
 
-四、明日学习计划
+明日计划
 
 实操：打开 Arkham 的官网，试着用它查一个知名项目的链上数据，看看能不能看懂资金流向。
 
@@ -39,6 +39,7 @@ AI 驱动的链上分析工具：把链上公开的 “看不懂的数字” 翻
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 ![9e624133935ce03186dcc4b827531082.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/JessicaLin2000/images/2026-05-20-1779292119144-9e624133935ce03186dcc4b827531082.jpg)![badd5a011b01a19645bbe496cfb6119b.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/JessicaLin2000/images/2026-05-20-1779292122489-badd5a011b01a19645bbe496cfb6119b.jpg)
 
 今天上了coleraning课，了解到了openclaw,hermes都只是工具，可以不装采用人工做笔记的方式。但是我觉得还是装了比较好，目前再装hermes有点卡在这个验证码的部分
@@ -50,6 +51,7 @@ AI 驱动的链上分析工具：把链上公开的 “看不懂的数字” 翻
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 AI工具生态图谱有
 
 聊天型AI，AI编程助手，终端型AI比如open claw，codex，claude code等等，模型平台，通用agent AI
@@ -57,6 +59,7 @@ AI工具生态图谱有
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
