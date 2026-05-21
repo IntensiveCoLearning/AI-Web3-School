@@ -873,7 +873,7 @@ more information
 | [bjf521zxc](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/bjf521zxc.md) | ⭕️ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 | [patrick-star-10](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/patrick-star-10.md) | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Luminooooliang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Luminooooliang.md) | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
-| [muki-fr](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/muki-fr.md) | ⭕️ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
+| [muki-fr](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/muki-fr.md) | ⭕️ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Max-wht](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Max-wht.md) | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [adrianpunk](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/adrianpunk.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Owaee](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Owaee.md) | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
