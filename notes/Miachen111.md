@@ -15,8 +15,52 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+llm rag實作
+
+rag 開書考試 找資料給llm回答 有相關資料 回答更準確
+
+文檔怎麼切
+
+讀文件 切小塊
+
+fixed chunking 切的頭跟尾留著 通順
+
+hierarchical chunking
+
+semantic chunking
+
+llm parsing 有結構的切
+
+token embedding(詞轉高維空間向量)=詞嵌入
+
+每個token都是一個向量
+
+向量運算
+
+語言模型理解詞之間的關係 語言之間的關係
+
+向量資料庫 vector database
+
+retrieval檢索 用cos 相似度算
+
+增強 augment 參考了資料準確回答不瞎掰
+
+fine tuning 特定領域訓練微調 調教他 動到原本的權重 會忘掉原本會的東西
+
+Prompt engineering 提升輸出 提示詞作優化
+
+rag 不動大腦 只外接資料庫
+
+gemini 底層rag 丟檔案給他讀=外接資料庫
+
+上下文窗口 文件大也能承受 語言模型增強 rag被替代
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 助記詞丟了 私鑰全丟
 
 資產不在錢包 實際上帳本跟數據在區塊鏈上
@@ -47,6 +91,7 @@ PoS ETH 偽隨機
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 裝完hermes 用ollama裝
 
 去ai web3 school那個網站讀了llm
@@ -58,6 +103,7 @@ hallucination: 幻覺 外部校驗
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 \--7:00--
