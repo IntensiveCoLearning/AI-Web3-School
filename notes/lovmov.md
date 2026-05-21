@@ -25,6 +25,7 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 ![PixPin_2026-05-19_20-01-07.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lovmov/images/2026-05-19-1779197671834-PixPin_2026-05-19_20-01-07.jpg)
 
 1.  目前部署了VSCode + OpenCode
@@ -34,6 +35,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 ![PixPin_2026-05-18_20-09-53.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lovmov/images/2026-05-18-1779119785103-PixPin_2026-05-18_20-09-53.jpg)
