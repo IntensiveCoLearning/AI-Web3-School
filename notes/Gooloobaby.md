@@ -17,17 +17,19 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
-今天学习了AI的系统课程，了解了LLM的工作原理，同时还了解了Context Engineering，同时根据今天的讲座，我觉得除了学习知识，要尽快地尝试或者选择产品方向，找一个方向进行学习更有针对性，当然基础的通用只是要打牢
+今天学习了AI的系统课程，了解了LLM的工作原理，同时还了解了Context Engineering，同时根据今天的讲座，我觉得除了学习知识，要尽快地尝试或者选择产品方向，找一个方向进行学习更有针对性，当然基础的通用只是要打牢。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 先打卡
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -42,11 +44,13 @@ AI x Web3 School
 
 
 
+
 今天，花了很长时间把Hermes下载了。明天开始将模型接入就可以让Hermes帮我规划学习了。已经搞明白了Hermes其实就是学习助手（对于训练营来说）。具体coding我还是打算放到CodeX上。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
