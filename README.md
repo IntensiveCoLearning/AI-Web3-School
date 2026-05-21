@@ -632,7 +632,7 @@ more information
 | [Song042](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Song042.md) | ⭕️ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xinxin1204](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xinxin1204.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sidarth16](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sidarth16.md) | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | |
-| [JackCC703](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JackCC703.md) | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | |
+| [JackCC703](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JackCC703.md) | ✅ | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [2001ccy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/2001ccy.md) | ⭕️ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 | [0xxoo-eth](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/0xxoo-eth.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [beetroot42](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/beetroot42.md) | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
