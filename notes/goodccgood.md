@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+晚上跟着elon老师了解了合约以及ai和web3如何具体操作实践的方面，对于钱包安全这块可以自己尝试动手做个小插件
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 下午初步复习了web3的一些理念，共学营的友友提出的问题重新对web3的底层有了新的理解
 
 晚上colearning swen老师的对于ai，web2，web3的思考以及一些价值观对我十分有启发hhh，明天继续研究hermes
@@ -25,6 +31,7 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 结合之前了解的manus，到后来的cc，还有codex，再到部署小龙虾和现在的harmess，每一次技术的进步，带来我对ai不一样的视野
 
 关于首周的行动计划，我希望能先脚踏实地完成环境配置，并争取稳妥地拿到基础积分。接下来，我会尝试通过 Telegram 或者lark接入 Harmers Agent 学习助手，按照官网提供的助记词模板认真完成初始化；同时，我也会授权助手检查本地 Git 环境，建立一个专属的 GitHub 仓库，用来记录后续的打卡与思考。同时思考此次配置对于日常生活中的应用，以及之前所学过的知识的融合
@@ -32,6 +39,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
