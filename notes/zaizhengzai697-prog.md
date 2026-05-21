@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+理清Prompt、Workflow、Agent的边界：Prompt由人决策，仅单次问答；Workflow是固定预设流程，模型为流程节点；Agent可自主规划、动态调用工具、管理状态，三者失控风险与可调试性差异明显。
+
+了解AI Coding工具价值与局限：Claude Code、Codex CLI、Cursor可快速生成样板代码、解析陌生库、搭建原型，但代码审查、测试设计、架构决策无法被替代。
+
+明确AI输出必须验证的原因：存在事实编造、引用造假、推理漂移、执行越权问题，关键信息需外部核实、分段校验。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 今日学习了LLM大模型基础核心知识点，梳理总结如下：
 
 1. LLM基本工作原理
