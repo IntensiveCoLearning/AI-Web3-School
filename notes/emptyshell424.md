@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+### day4 浑浑噩噩的一天，明天恢复
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 ```
 **Day 3** · 2026.5.20
 **Plan**
@@ -34,6 +40,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 **Day 2** · 2026.5.19
 
@@ -53,6 +60,7 @@ _Step by step._
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
