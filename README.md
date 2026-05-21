@@ -1162,7 +1162,7 @@ more information
 | [liwnldutng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/liwnldutng.md) | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 | [SArreic](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SArreic.md) | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wanfeng1512](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wanfeng1512.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [lbrsy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lbrsy.md) | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | |
+| [lbrsy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lbrsy.md) | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zehouzhang0-lang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zehouzhang0-lang.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [leafjava](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/leafjava.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [AxonKitty](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/AxonKitty.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
