@@ -15,8 +15,40 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+一、NLM（Neural Language Model，神經語言模型）
+
+用神經網路學習語言的統計規律，能預測文字序列的機率。早期代表包含 RNN、LSTM，可理解上下文但規模有限。
+
+* * *
+
+二、LLM（Large Language Model，大型語言模型）
+
+NLM 的進化形態，特點是「大」——參數量龐大（十億至兆級）、訓練資料海量，具備推理、寫作、程式生成等強大能力。代表模型有 GPT-4、Claude、Gemini。
+
+* * *
+
+三、NLP（Natural Language Processing，自然語言處理）
+
+AI 的一個研究領域，目標是讓電腦能理解、處理和生成人類語言。主要任務涵蓋文本分類、情感分析、機器翻譯、問答系統、文本生成等。
+
+* * *
+
+四、三者關係
+
+**包含關係：** NLP ⊃ NLM ⊃ LLM
+
+-   NLP 是**目標領域**，定義「要做什麼」
+    
+-   NLM 是實現 NLP 的**技術工具**，定義「怎麼做到」
+    
+-   LLM 是 NLM 的**大規模進化形態**，是當前頂點
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 **prompt**是我們對模型的輸入，而其中可以分成**Instruction**(告訴模型規則的部分)與**Few-shot**(也就是範例)。
 
 **Prompt Injection**則是一種攻擊的手法，讓模型忽略其本身的規則去洩漏訊息或調用某些工具，
@@ -30,6 +62,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 今天看了幾個概念
 
@@ -46,6 +79,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 今日進度
