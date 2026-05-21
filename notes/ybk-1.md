@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/ybk-1/images/2026-05-21-1779376029547-image.png)
+
+今天完成了一个ai交互的一个demo
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 ````markdown
 # Daily Note / 每日打卡 — 2026-05-20
 
@@ -88,6 +96,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 # Daily Note / 每日打卡 — 2026-05-19
 
@@ -220,6 +229,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/ybk-1/images/2026-05-18-1779097067324-image.png)
