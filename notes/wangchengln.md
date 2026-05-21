@@ -15,8 +15,74 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+### **🎯 今日目标**
+
+用 Solidity 写一个能接收并存储"AI 结论"的合约。
+
+### **📖 理论（1小时）**
+
+学习 Solidity 智能合约开发，构建几个基础项目以理解其核心原理。
+
+重点概念：`mapping`、`event`、`only owner`、`string` 存储
+
+### **🛠️ 实操（2小时）**
+
+```
+mkdir ai-oracle-demo && cd ai-oracle-demo
+npx hardhat init
+```
+
+编写合约 `AIDataStore.sol`：
+
+```
+solidity
+```
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.20;
+
+contract AIDataStore {
+    address public owner;
+    string public latestAIResult;
+    uint256 public updatedAt;
+
+    event ResultUpdated(string result, uint256 timestamp);
+
+    constructor() {
+        owner = msg.sender;
+    }
+
+    modifier onlyOwner() {
+        require(msg.sender == owner, "Not owner");
+        _;
+    }
+
+    function updateResult(string memory _result) public onlyOwner {
+        latestAIResult = _result;
+        updatedAt = block.timestamp;
+        emit ResultUpdated(_result, block.timestamp);
+    }
+
+    function getResult() public view returns (string memory, uint256) {
+        return (latestAIResult, updatedAt);
+    }
+}
+```
+
+```
+npx hardhat compile
+npx hardhat test  # 跑通默认测试
+```
+
+**产出**：合约编译通过，ABI 文件生成 ✅
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 # **Web3 入门实践总结笔记**
 
 * * *
@@ -369,6 +435,7 @@ text
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 # **Web3基础知识串联理解**
 
@@ -901,6 +968,7 @@ text
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 # **Web2 vs Web3 交易支付区别**
