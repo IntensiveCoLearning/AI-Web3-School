@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+**今日完成：** 我继续了顺延后的 Day 2，阅读 Handbook 并整理了 6 个 AI 基础概念的学习摘要，开始把它们转成可提交的 T1 内容。
+
+**遇到的挑战：** LLM、prompt、workflow、agent 这些词很容易混在一起，所以我改用“它负责什么 / 不负责什么”来区分。
+
+**明天继续：** 把今天的概念摘要整理成 `submissions/` 里的 T1 提交草稿，然后进入 Web3 基础部分。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 **Day 1 | AI × Web3 School Bootcamp 启动**
 
 **今日完成：**
