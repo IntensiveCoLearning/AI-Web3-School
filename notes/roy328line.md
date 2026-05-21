@@ -44,37 +44,23 @@ GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 今日學習：Frameworks 模組深讀（LangChain / LangGraph / OpenAI Agents SDK / Hermes）+ Hermes 安裝實作
 
-GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-20.md
+主要收穫：
 
-## Frameworks 模組核心整理
-
-**框架選擇第一原則**：先理解工作流，再決定用不用框架。框架是系統邊界的表達，不是智能本身。
-
-**LangChain**：組件庫，適合快速接合模型能力與外部系統。警惕「抽象太早」——流程不清就套 chain 和 agent，後期排查困難。
-
-**LangGraph**：狀態機架構，適合多輪工具調用、重試、人工確認、分支、長期運行的場景。判斷標準：只要開始關心「任務走到哪一步、是否可恢復、失敗後從哪繼續」，就應考慮 graph/state machine。
-
-**OpenAI Agents SDK**：組織 Agent 工具、handoff、guardrails 和 tracing 的工程框架。關鍵仍是邊界：SDK 幫你執行流程，但你必須定義哪些工具可用、哪些需要確認、什麼算失敗。
-
-**Hermes**：更適合理解為「面向工具調用和結構化輸出的模型/agent 生態」而非通用框架。核心提醒：模型本身的 tool calling 和 JSON mode 穩定性，會影響系統設計成本。工具調用能力弱的模型，再好的框架也要補大量 guard。
-
-## Hermes 安裝實作心得
-
-今日嘗試安裝並跑通 Hermes 環境，幾個關鍵心得：
-
-**環境依賴坑**：安裝前要確認 Python 版本和依賴兼容性。Hermes 對環境版本有要求，建議先用虛擬環境（venv 或 conda）隔離，避免污染系統環境。
-
-**Tool Calling 測試**：跑第一個 tool calling 範例時，注意 function schema 格式需要嚴格對應。Hermes 模型在 JSON 輸出方面相當穩定，但 prompt 格式要按官方模板，不能隨意修改。
-
-**與框架的差異感知**：Hermes 相比直接調用 API，多出了結構化的工具調用格式和更穩定的 JSON 輸出。實際使用中感受到：選擇「在模型層解決工具調用穩定性」還是「在框架層補 guard」是兩種不同的系統設計哲學。
-
-**個人發想**：Hermes 的設計讓我重新思考「框架複雜度 vs 模型能力」的取捨——如果模型本身夠穩定（工具調用格式一致、JSON 輸出可預測），就可以少一層框架抽象，減少系統複雜度和調試成本。這對 AI x Web3 場景尤其重要：鏈上操作不可逆，任何解析失敗都可能造成資產風險。
+-   框架選擇第一原則：先理解工作流，再決定用不用框架。框架是系統邊界的表達，不是智能本身
+    
+-   \- Hermes 讓我重新思考「框架複雜度 vs 模型能力」的取捨——模型本身工具調用夠穩定，就可以少一層框架抽象
+    
+-   \- 安裝 Hermes 心得：建議用虛擬環境隔離依賴；function schema 格式需嚴格對應；prompt 格式要按官方模板
+    
 
 明日計劃：繼續完善 Hermes 測試，準備測試網錢包實作（MetaMask + Sepolia 測試幣）
+
+GitHub 筆記：https://github.com/IntensiveCoLearning/AI-Web3-School/pull/29
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 今日學習：深讀 Handbook Agent 模組（Tool Use / Planning / State / Reflection / Multi-Agent）+ 預習 Hermes Agent 架構
 
 GitHub 筆記：[https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-19.md](https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-19.md)
@@ -98,6 +84,7 @@ Hermes Agent 預習：Skills 可復用高層指令集 / Long-term Memory 跨 ses
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 今日學習：深讀 AI x Web3 School Handbook 模組 A（LLM / Prompt / Context / Agent）+ 模組 B（Wallet / Smart Contract / Account Abstraction）
