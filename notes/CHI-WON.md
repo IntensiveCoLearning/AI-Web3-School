@@ -15,8 +15,44 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今日学习：Phase 1 AI 基础全通关 🎉
+
+今天一口气完成了 Handbook AI 基础部分剩余的全部章节（9 章），加上之前两天完成的 LLM 和 Prompt，Phase 1 正式收官。
+
+建立了从「模型怎么理解指令」到「推理服务怎么部署」的完整心智模型：
+
+上午 — 核心 pipeline（Context + RAG + Agent）
+
+\- Context 是信息治理不是文本拼接——每段信息必须分层标注信任级别
+
+\- RAG 的可靠性取决于证据链（版本 metadata + filter + citation），不取决于向量库
+
+\- Agent 是被约束的执行循环，最危险的设计 = 模糊目标 + 广泛工具 + 长期记忆 + 大额资产
+
+下午 — 工程化（MCP + Frameworks + Vibe Coding）
+
+\- MCP 把工具连接标准化，但权限和审计仍由系统实现
+
+\- 框架先理解工作流再选，简单链路保持简单，框架要能退出
+
+\- Vibe Coding 有效公式：任务要小 + 上下文要准 + 验证要硬
+
+晚上 — 质量闭环（Evaluation + Fine-tuning + Inference）
+
+\- 不能被测量的行为就不能被稳定改进——先有 eval 再谈优化
+
+\- Fine-tuning 改行为分布不补实时知识——prompt 搞不定才微调
+
+\- 推理是在延迟/成本/质量/隐私之间取平衡，链上动作必须可审计
+
+贯穿全文的安全红线：AI 负责推理，Web3 负责结算，每一层都不能越界。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 今日学习：Context + RAG + Agent 三合一
 
 今天把 Handbook AI 基础部分三个核心概念串联学习：上下文（Context）、检索增强生成（RAG）、智能体（Agent）。这三者是自然的 pipeline——Knowledge Base → RAG（检索+引用）→ Context（分层放置）→ Agent（读状态+调工具+验证）。
@@ -35,6 +71,7 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 📖 今日学习：Handbook Prompt 章节（最小路径）
 
 \> 学了 Instruction 四段写法（任务目标/可用输入/禁止行为/输出格式）和 Structured Output 的设计原则（输出变成可机器校验的字段，不做散文解析）。核心认知：Prompt 是软约束，真正的安全边界由 code 层的 schema 校验 + guard 规则 + human approval 承担。
@@ -46,6 +83,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
