@@ -1093,7 +1093,7 @@ more information
 | [Miraitowa325](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Miraitowa325.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [HongfeiRichardZhang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/HongfeiRichardZhang.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [BrKDDD](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/BrKDDD.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [xiaoloouyan-hue](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xiaoloouyan-hue.md) | ⭕️ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | | | | |
+| [xiaoloouyan-hue](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xiaoloouyan-hue.md) | ⭕️ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [hwish39-byte](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hwish39-byte.md) | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ahyang98](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ahyang98.md) | ⭕️ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 | [16651427](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/16651427.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1232,6 +1232,7 @@ more information
 | [goodperson888](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goodperson888.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
