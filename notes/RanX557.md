@@ -28,10 +28,13 @@ AI x Web3 School
 但是我没想到的是关于数据库的方案，搜索之后朋友推荐了Drizzle ORM+Neon 以及PostgreSQL
 
 这些推荐的我还得后期学习吧，时刻保持空杯心态。
+
+非常简单的看了密码学，密码学一定要提到图灵，慢慢学吧。向各位佬学习。感谢。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 今天主要学习了关于ai名词的基础概念
@@ -60,11 +63,13 @@ LLM large language model全称 大语言模型
 
 
 
+
 今天完成了Hermes的配置，将我的推特用户画像和使用习惯喂给了Hermes，让它完成自我基础诊断，并绘制和整理 AI 核心概念的 MindMap，根据我目前的学习阶段和经验配置了最适合我的学习方法和路径。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
