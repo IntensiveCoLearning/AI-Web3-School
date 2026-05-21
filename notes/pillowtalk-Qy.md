@@ -15,8 +15,25 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+今天我整理了 2026-05-20 Web3 运行原理分享会笔记，从第一性原理复盘了一笔交易如何从钱包签名开始，经过 RPC、mempool、builder、validator、出块和确认，最终成为链上状态。
+
+最大的收获是：Web3 不是几个孤立概念，而是一条从私钥到 finality 的完整系统链路。钱包负责控制签名，交易表达用户意图，gas 定价链上资源，RPC 连接用户和网络，智能合约承载公开规则，协议升级则依赖技术实现和社会共识共同完成。
+
+今日笔记：
+
+[**https://github.com/pillowtalk-Qy/ai-web3-school-cohort-0/blob/main/notes/classes/2026-05-20-web3-operating-principles-sharing.md**](https://github.com/pillowtalk-Qy/ai-web3-school-cohort-0/blob/main/notes/classes/2026-05-20-web3-operating-principles-sharing.md)  
+  
+Today I organized the 2026-05-20 Web3 operating principles sharing note. The session reviewed how a transaction starts from wallet signing, moves through RPC, mempools, builders, validators, block production, and confirmation, and finally becomes onchain state.
+
+The biggest takeaway is that Web3 is not a set of isolated concepts. It is a full system path from private key to finality. Wallets control signatures, transactions express user intent, gas prices shared resources, RPC connects users to the network, smart contracts carry public rules, and protocol upgrades depend on both technical implementation and social consensus.
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
 今天我继续维护 AI x Web3 School Cohort 0 学习仓库，并整理部署了两份学习资料：ZK trading system fireside chat 笔记，以及 2026-05-19 晚间课程《AI 工具科普 + Hermes Agent 安装与配置分享会》的课程笔记。
 
 ZK 笔记让我看到，zk 交易系统的难点不只是证明速度，而是证明生成、见证数据传输、排序、预言机、数据可用性、成本结构和用户生态之间的系统协同。
@@ -40,6 +57,8 @@ Another important takeaway is that the direction of Qy Knowledge Hub became clea
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
 
 
 今天我初始化了 AI x Web3 School Cohort 0 学习仓库，并把它搭成了一个结构化学习系统。

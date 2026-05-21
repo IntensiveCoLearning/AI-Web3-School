@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+用Claude code处理脏活
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/CheungComet/images/2026-05-20-1779291053280-image.png)
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 cat > daily/[2026-05-20.md](http://2026-05-20.md) << 'EOF'
 
 \# Daily Note — 2026-05-20

@@ -15,8 +15,75 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今天完成了两个方向的学习和产出。
+
+第一，我把 Week 1 的 AI 可交互学习产物重新定位为 AI Concept Coach，不是做一个普通聊天框，而是做一个 AI 概念复述训练器。它的流程是：用户输入一个 AI 概念困惑，工具调用 glm-5.1 生成结构化解释、自测问题和笔记草稿；然后用户必须用自己的话复述，工具再对复述进行评分和反馈，帮助学习者从“看懂”走到“能讲清楚”。这个工具已经通过本地 Node 后端接入阿里云百炼 / DashScope 的 glm-5.1，API key 不进入前端或公开仓库。
+
+第二，今天参加 / 跟进了「AI 下乡计划｜AI 在 Web3 的应用」分享。我对今天内容的核心理解是：AI + Web3 的重点不只是发币，而是经济基础设施。当 AI agent 从回答问题走向执行任务，它会需要账户、支付、权限、验证和风险控制。安全在 Web3 里不是附加功能，而是基础设施的一部分。
+
+我尤其关注「智能钱包和安全助手」这个方向。现在的钱包、安全扫描、交易模拟、风险标签等工具可以降低一部分风险，但还不能完全解决用户安全问题。因为很多风险发生在具体上下文里：用户是否真的理解签名内容、授权是否过大、dApp 是否可疑、交易是否符合用户真实意图。AI 在这里可能有很大空间：帮助解释交易意图、识别异常模式、生成签名前问题、提示风险和辅助用户复盘。但边界也很清楚：AI 可以解释、比较、预警和提问，不能替用户完成签名、转账、授权或合约写入。
+
+今日产出：
+
+-   demos/ai-concept-coach/
+    
+-   submissions/[2026-05-21-ai-concept-coach.md](http://2026-05-21-ai-concept-coach.md)
+    
+-   notes/[2026-05-21-ai-web3-applications-and-security.md](http://2026-05-21-ai-web3-applications-and-security.md)
+    
+-   hackathon/[ideas.md](http://ideas.md)
+    
+
+Repo:  
+[https://github.com/yangyuwen-bri/aiweb3-learning-journal](https://github.com/yangyuwen-bri/aiweb3-learning-journal)
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+今天参加 / 跟进了 Week 1 的「Web3 运行原理」分享，并完成了 Sepolia 测试网实操。
+
+课程部分主要复习了钱包、私钥和个人主权、交易与签名、区块链网络运行、智能合约、协议升级和 Web3 边界。我目前的理解是：Web3 运行原理不是单独理解钱包或合约，而是要把「私钥控制账户 -> 签名表达意图 -> 交易广播到网络 -> 节点验证和共识 -> 区块浏览器验证结果」串成一条完整链路。
+
+实操部分：
+
+1\. 切换 / 使用 Ethereum Sepolia testnet。
+
+2\. 通过 Google Cloud Web3 Faucet 领取 0.05 Sepolia ETH。
+
+3\. 在 Sepolia 区块浏览器确认 faucet 入账交易成功。
+
+4\. 从 MetaMask 的 Account 1 主动发送 0.005 Sepolia ETH 到另一个测试账号 testTWO。
+
+5\. 在区块浏览器中找到主动发送交易结果，并记录 transaction hash、status、block、Gas 和交易费用。
+
+主动发送交易记录：
+
+Transaction hash: 0xa9974b63b7bc3299545cfdd60e3282aff0deaa37e1a0cd7fac2c62ce6576655a
+
+Status: Success
+
+Block: 10886306
+
+Value: 0.005 ETH
+
+Transaction fee: 0.00005251673091 ETH
+
+Gas price: 2.50079671 Gwei
+
+通过这次练习，我完成了「切换到指定测试网 / 领取测试币 / 主动发送一笔测试交易 / 在区块浏览器中找到交易结果 / 记录交易哈希、状态、Gas、区块高度」这一组任务。本次操作仅发生在 Sepolia testnet，不涉及真实主网资金。
+
+Repo:
+
+[https://github.com/yangyuwen-bri/aiweb3-learning-journal](https://github.com/yangyuwen-bri/aiweb3-learning-journal)
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
 今天围绕 Week 1 的 AI Agent / Hermes 主题，整理了自己对 prompt、workflow 和 agent 的初步理解，并把它和我的 AI x Web3 School 学习仓库连接起来。
 
 今日完成：
@@ -53,6 +120,8 @@ Demo:
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
 
 
 今天完成了 Week 1 任务 2：创建个人 GitHub repo 作为 AI × Web3 School 学习工作区。

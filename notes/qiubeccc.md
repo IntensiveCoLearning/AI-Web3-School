@@ -15,8 +15,32 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+今日学习内容：
+
+1.  阅读 Handbook Context 章节 — 学习模型上下文的核心原理（Context Window、Context Engineering、Memory、Knowledge Base）
+    
+2.  理解 AI x Web3 场景下 context 分层设计（指令层→任务层→事实层→知识层→记忆层）
+    
+
+心得：
+
+1.  Context 不是简单的长文本拼接，而是一套信息治理问题——要区分来源、时效、权限和可信度
+    
+2.  Memory 不能替代实时授权，用户过去允许的动作不代表现在仍然允许
+    
+3.  好的 context 设计是让模型在正确的信息层级里工作，而不是塞满 context window
+    
+
+明日计划：
+
+1.  继续 Handbook 下一章节
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 今日学习内容：
 
 1.  阅读 Handbook Prompt 章节 — 系统学习了 Prompt 工程核心原则（结构化、CoT、Few-shot、鲁棒性）
@@ -42,6 +66,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 

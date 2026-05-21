@@ -15,8 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+1.  阅读handbook中context和rag章节
+    
+2.  完成llm最小实践。设计交易解释器，实现拉链上交易->格式化输出->通过llm用自然语言解释
+    
+3.  完成context最小实践。编写context.md，5个维度分析approve场景（实时查 / 缓存 / 用户确认 / 可信度 / 模型禁区）
+    
+4.  完成rag最小实践。选择OpenZeppelin 设计rag问答，三类测试全部通过：
+    
+
+-   文档中有的 → 命中 90 chunks，Top 5 排序
+    
+-   文档中没有的 → 拒答
+    
+-   版本依赖的 → 提示 0.8.20+
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 1.  阅读handbook中的llm，prompt章节
     
 2.  使用claude code写erc20合约+foundry测试，根据hermes提供审阅清单判断ai编写的合约代码质量
@@ -27,6 +46,7 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 1.  完成claude code安装并接入ds api，尝试vibe coding
     
 2.  与ai头脑风暴黑客松idea
@@ -34,6 +54,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 1.  完成前置准备：自我介绍、课程工具准备、创建github repo等。

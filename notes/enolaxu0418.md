@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+| 方向 | 解决什么问题 | 主案例 | 核心原理 |
+| --- | --- | --- | --- |
+| 1. 去中心化 AI 基础设施 | 算力、存储、模型服务如何组织与激励 | Bittensor | Subnet 定义任务 → Miner 提供服务 → Validator 评估质量 → 链上共识 → Token 奖励优质供给 |
+| 2. AI Agent + 钱包 | AI 如何获得链上执行能力 | Coinbase AgentKit | LLM 拆解任务 → AgentKit 选 action → 钱包签名广播 → 链上结果返回 |
+| 3. AI 链上分析工具 | 公开的链上数据如何变成可理解的情报 | Arkham | 地址聚类 → 实体归因 → 资金流追踪 → 生成画像和告警 |
+| 4. 智能钱包 & 安全助手 | 普通用户如何安全签名、防钓鱼 | Blockaid | 扫描域名/合约 → 模拟交易 → 匹配恶意模式 → 钱包拦截或警告 |
+| 5. 交易所/DeFi 风控 | 机构如何发现异常交易和系统性风险 | Chainalysis | 采集多链数据 → 实体归因 + 风险分类 → KYT 实时监控 → 告警处置 |
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 ### 关键配置项
 
 | 配置项 | 说明 | 推荐值 |
@@ -29,6 +41,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 ## 支付系统：从Web2到Web3
 

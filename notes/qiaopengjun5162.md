@@ -15,8 +15,31 @@ Web3 开发者 Python Go  Rust  Solidity
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+2026-05-21 (Day 4) — MCP & Vibe Coding 学习  
+  
+**今日学习内容：**  
+  
+\- Handbook: MCP (Model Context Protocol) — Agent 与工具的标准通信协议  
+\- Handbook: Vibe Coding — 方向/约束/验收 由人负责，Agent 负责生成/修改/执行  
+  
+**笔记摘要：**  
+  
+\- MCP 三层架构：Host - Client - Server，支持文件系统、数据库、API 等工具调用  
+\- Vibe Coding 要点：任务要小、上下文要准、验证要硬  
+\- 已完成实践：用户意图 → AI 规划 → 工具执行 → 链上验证 (Solana Devnet SPL Token)  
+  
+**明日计划：**  
+  
+\- AI 可交互学习产物  
+\- AI × Web3 最小交叉流程图  
+\- 20:00 参加直播 | AI 下乡计划 | AI 在 Web3 的应用
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 **2026-05-19 (Day 2) — RAG, Agent & Frameworks**
 
 **Handbook 学习：**
@@ -68,6 +91,7 @@ Vibe Coding 不是"把需求丢给 AI 等代码"，而是人负责方向/约束/
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 2026-05-18 (Day 1) — LLM, Prompt, Context & AI Tool Practice  

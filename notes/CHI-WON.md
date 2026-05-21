@@ -15,8 +15,26 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+今日学习：Context + RAG + Agent 三合一
+
+今天把 Handbook AI 基础部分三个核心概念串联学习：上下文（Context）、检索增强生成（RAG）、智能体（Agent）。这三者是自然的 pipeline——Knowledge Base → RAG（检索+引用）→ Context（分层放置）→ Agent（读状态+调工具+验证）。
+
+核心收获：
+
+1\. Context 不是文本拼接，是信息治理。系统指令、链上事实、用户意图、外部网页必须分层标注信任级别，混在同一层就是灾难
+
+2\. RAG 的核心不是向量库，是证据链。chunk 必须带版本元数据，retriever 不能只靠向量相似度，输出必须可追溯到具体文档段落
+
+3\. Agent 是被约束的执行循环，不是自主权。模糊目标 + 广泛工具 + 长期记忆 + 大额资产 = 最危险的设计
+
+4\. 三个安全红线：自我反思不能替代外部校验、Memory 不能替代实时授权、Planning 不是执行许可
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 📖 今日学习：Handbook Prompt 章节（最小路径）
 
 \> 学了 Instruction 四段写法（任务目标/可用输入/禁止行为/输出格式）和 Structured Output 的设计原则（输出变成可机器校验的字段，不做散文解析）。核心认知：Prompt 是软约束，真正的安全边界由 code 层的 schema 校验 + guard 规则 + human approval 承担。
@@ -28,6 +46,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 📝 打卡草稿：

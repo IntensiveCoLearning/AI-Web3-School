@@ -15,8 +15,23 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+1.观看**AI 在 Web3 的应用，了解AI在web3可以有哪些应用，在使用的时候应该注意什么**  
+**2.运用ai辅助安装wsl2环境，研究api**
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+1.观看**AI 时代，Web3 开发者需要具备的基础知识和架构能力回放**  
+**2.了解Natural Language Processing and Large Language Models，以及transformer的原理**
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
 了解大语言模型
 
 -   **核心机制：预测下一个词**大型语言模型本质上是一个复杂的数学函数。当你和聊天机器人对话时，它并没有像人类一样思考，而是在根据你输入的上下文，通过概率计算来预测最可能出现的“下一个词”。通过不断循环这个预测过程，就生成了完整的回答。为了让回答显得更自然，模型有时会随机选择概率稍低的词。

@@ -16,13 +16,20 @@ AI agent
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+![{8D104B07-5C11-4342-8F69-07B6887A79D6}.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/sunyuchenyaobo/images/2026-05-21-1779359792748-_8D104B07-5C11-4342-8F69-07B6887A79D6_.png)
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 今天在youtube上学习了chase ai的cladue code＋obstian的工作流，搭建了一个ai第二大脑系统
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 ![{D186D30A-BCB6-48C4-A741-F29909A2261E}.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/sunyuchenyaobo/images/2026-05-19-1779171379995-_D186D30A-BCB6-48C4-A741-F29909A2261E_.png)
 
@@ -31,6 +38,7 @@ AI agent
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 

@@ -15,8 +15,91 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+> 今日推进模块 C 最小交叉实验原型，同时确认模块 B 链上实践完成度。
+
+> 关键收获：
+
+> 1.  把「AI 生成 → 人工复核 → 钱包确认 → 链上执行」从概念变成可描述流程
+>     
+
+> 2.  明确了 Agent 权限边界：提案权 vs 签名权分离
+>     
+
+> 3.  整理了 Week 1 前半程的概念地图和卡点清单，准备明日 Co-learning 同步
+>     
+
+> 今日进度：
+
+> -   ✅ Learning Agent + GitHub repo 已就绪（Day 1–2 完成）
+>     
+
+> -   ✅ / 🔄 模块 B：测试网钱包、交易、合约部署（Day 3-4 完成）
+>     
+
+> -   🔄 模块 C：最小交叉实验原型推进中
+>     
+
+使用AI agent快速落地了一个交叉实现：  
+❯ 以“用户点击投票按钮”为例，完整链路通常是：
+
+前端读取钱包地址和当前网络。  
+前端根据 ABI 编码 vote(proposalId) 调用数据。  
+钱包展示交易信息，让用户确认签名。  
+交易被广播到 RPC 节点。  
+验证者把交易打包进区块。  
+EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert。  
+前端监听交易回执，更新页面状态。  
+索引器读取 event，更新历史记录或看板。  
+根据上面的需求，开发一个webui页面来演示整个流程，要可以完全展示，比如需要钱包，需要在测试网上完整测试。
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372404071-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372431929-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372447514-image.png)![屏幕截图 2026-05-21 220556.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-21-1779372749427-_____2026-05-21_220556.png)
+
+> 学习笔记：[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-21.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-21.md)
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+
+
+> 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
+> 
+> 关键收获：
+> 
+> 1.  完整跑通了「助记词 → 私钥 → 地址 → 签名 → 交易 → Gas → 确认 → 验证」链路
+>     
+> 2.  通过 Remix 完成最小合约部署，理解了读取调用与写入调用的 Gas 差异
+>     
+> 3.  启动模块 C 设计：AI 生成 → 人工复核 → 钱包确认 → 链上执行的最小流程
+>     
+> 
+> 今日进度：
+> 
+> -   ✅ Learning Agent + GitHub repo 已就绪（Day 1–2 完成）  
+>     
+> -   ✅ 模块 B：测试网钱包、交易、合约部署已完成  
+>     
+> -   🔄 模块 C：最小交叉实验设计启动  
+>     
+>     ![屏幕截图 2026-05-20 225206.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-20-1779288788350-_____2026-05-20_225206.png)
+> 
+> 学习笔记：[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-20.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-20.md)
+> 
+> [#AIWeb3School](#AIWeb3School) [#Web3Basics](#Web3Basics) [#Day3](#Day3)
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+
+
+
 > 今日完成 Week 1 完整任务拆解，正式启动 Web3 测试网实践模块。
 > 
 > 关键收获：
@@ -55,6 +138,12 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
 
 
 ```

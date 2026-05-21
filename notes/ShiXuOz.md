@@ -15,8 +15,124 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+## 学习Hermes
+
+> 先贴一个自认为讲的不错的视频：[https://www.bilibili.com/video/BV17xo9BsEnx](https://www.bilibili.com/video/BV17xo9BsEnx)
+
+Nous Research 开源的 **Hermes Agent** 在 **AI** 领域引发了广泛关注。它核心的换代优势（区别于 **Aider** 或 **OpenHands** 等纯编码工具）就在于其主打的“闭环自循环学习（Closed-Loop Self-Correction Learning）”。
+
+必须明确的是：**这种“自循环学习”并不是在后台去实时微调（Fine-tuning）或重训大语言模型（LLM）的模型权重（Weights），而是通过一个高度工程化的外部框架，让 AI 具备了“越用越聪明”的持续演进能力。**
+
+它的自循环学习主要通过以下 **四个核心维度** 构成闭环：
+
+* * *
+
+## 1\. 自动技能生成与提炼（Autonomous Skill Creation）
+
+这是 **Hermes** 最具革命性的地方。在传统的 **Agent** 架构中，**AI** 能调用的工具（Tools）都是程序员提前写好的。而在 **Hermes** 的自循环中：
+
+-   **经验固化为技能：** 当用户给出一个复杂任务，**Hermes** 通过调用原生工具、执行终端命令（Terminal Commands）或编写临时脚本成功解决后，它会主动复盘（Reflection）这个成功的解决路径。
+    
+-   **代码化沉淀：** 它会把这个成功路径“重构”并封装成一段符合标准（兼容 `agentskills.io` 规范）的、可复用的 **Python** 函数，并存入本地的 `~/.hermes/skills/` 目录。
+    
+-   **技能自我演进：** 随着后续的使用，如果发现该技能有 **Bug** 或效率不高，它会在调用过程中对这段代码进行局部修改和重构，实现技能的自循环迭代。
+    
+
+## 2\. 记忆的动态固化与“主动提醒”（Agent-Curated Memory & Nudges）
+
+普通的聊天机器人（Chatbot）拥有的是“长对话历史（Long Context History）”或简单的 **RAG**（检索增强生成）检索，随着对话变长，**Token** 会膨胀甚至导致长文本失忆（Lost in the Middle）。**Hermes** 引入了主动记忆管理：
+
+-   **分层记忆模型（Layered Memory Model）：** 利用 **Honcho** 引擎，它将记忆分为情景记忆（Episodic Memory，具体某天说了什么）、知识记忆（Knowledge Memory）和用户画像（User Profile，你的工作习惯、偏好）。
+    
+-   **异步总结与裁剪（Asynchronous Summarization & Pruning）：** 在后台，它会定期运行 **LLM** 进程，对过往的对话轨迹（Trajectories）进行压缩、提炼和打标签，利用 **SQLite** 的 **FTS5**（全文本搜索）进行多会话检索（Cross-Session Retrieval）。
+    
+-   **自我提醒（Periodic Nudges）：** **Agent** 会在闲时主动“审视”这些记忆，提醒自己哪些是重要噪音需要过滤，哪些是核心用户习惯（比如：“用户最近三次都要求把输出格式化为 **Markdown** 表格，应更新至核心行为准则”）。
+    
+
+## 3\. 动态人格校准（Soul File Calibration）
+
+**Hermes** 内部有一个被称为 **Soul File**（灵魂文件/核心配置文件）的机制，定义了 **AI** 的身份、价值观、边界和失败处理模式。
+
+-   **隐式学习（Implicit Learning）：** 比如你写代码或写报告时，它给出的初稿经常被你手动删掉某一部分，或者你不断纠正它的口吻，自循环系统会捕捉到这些修正信号。
+    
+-   **配置倒逼（Configuration Reverse-Engineering）：** 它会把这些用户的显式修正和隐式偏好，逆向写入更新到它的 **Soul File** 或 `user.md` 中。下次启动新会话（New Session）时，它无需重复训练，就能直接以最契合你习惯的姿态运行。
+    
+
+## 4\. 离线长任务与学术级的 RL 轨迹生成
+
+**Hermes** 支持完全独立于你本地电脑的运行模式（可部署在 **VPS** 或 **Serverless** 架构上，支持通过 **Telegram**/**Discord** 交互）。
+
+-   **无人值守迭代（Autonomous Execution）：** 配合内置的 **Cron**（定时任务）调度器，它可以在你睡觉时自主执行网络调研、跑测试（Testing）、写分析报告，并在失败中自己看日志（Logs）纠错，产生完整的执行轨迹。
+    
+-   **反哺模型训练（RL Loop）：** 在更高级的研究场景中，**Hermes** 运行过程中积累的这些高质量“纠错与成功执行轨迹”，可以通过内置的 **Tinker-Atropos** 强化学习流水线（基于 **GRPO** 算法和 **LoRA** 适配器），用来训练和微调下一代真正具象化工具调用（Tool-Calling）能力的基座 **LLM**。
+    
+
+* * *
+
+**Hermes** 能够实现“自我进化”，其底层的本质是**将“运行时的软件工程能力（Runtime Software Engineering）”与“长短期记忆网络化（Layered Memory Architecture）”进行深度结合**。
+
+它没有去动模型的参数权重（**Weights**），而是通过以下一套严密的**工程闭环（Engineering Loop）**，把自己变成了一个能够自我重构的动态系统。以下是它实现自我进化的底层技术链路：
+
+* * *
+
+## 1\. 技能进化：从“生成代码”到“沉淀为本地 API”
+
+普通 **Agent** 每次遇到新任务，都是重新写一段代码并用解释器（**Interpreter**）执行，执行完就扔掉了。**Hermes** 的自进化核心在于“工具固化”：
+
+-   **动态合成（Dynamic Synthesis）：** 当你让 **Hermes** 处理一个复杂任务（例如：批量清洗某种特殊格式的 **Excel** 并自动上传到特定系统），它首先利用基座模型探索并编写解决脚本。
+    
+-   **成功轨迹捕获（Success Trajectory Capture）：** 一旦该脚本运行成功（通过了终端的 **Exit Code 0** 或验证测试），**Hermes** 的核心调度器会触发复盘机制。
+    
+-   **接口化抽象（API Abstraction）：** 它会调用 **LLM** 将这段零散的代码重构为标准、健壮、带有完整类型提示（**Type Hints**）和文档字符串（**Docstrings**）的 **Python** 函数。
+    
+-   **动态加载（Dynamic Loading）：** 重新封装后的函数被写入本地的固化技能库（符合 `agentskills.io` 规范）。下一次你再提到类似需求时，**Hermes** 在系统初始化阶段会通过 Python 的 `importlib` **动态加载这些新生成的技能**，它直接拥有了定制版的 **Tool-Calling**（工具调用）能力。
+    
+
+## 2\. 状态进化：利用感知与反思机制（Perception & Reflection）
+
+**Hermes** 内部运行着一个“双层监控循环”，就像人类在大脑中开辟了一个“反思区”：
+
+```
+[用户指令] ──> [执行引擎 (Worker)] ──> 产生运行日志 (Logs/Errors)
+                      │
+                      ▼
+             [反思引擎 (Critic)] ──> 发现缺陷 ──> 动态修改代码/配置
+```
+
+-   **环境反馈（Environment Feedback）：** 当它调用的工具报错（比如网络超时、参数不匹配），它的 **Critic**（反思引擎）会捕获 **Traceback**（错误堆栈信息）。
+    
+-   **自我修补（Self-Debugging）：** 它不会向用户报错摆烂，而是将错误信息作为输入再次喂给模型，触发自我修复逻辑。
+    
+-   **经验沉淀：** 如果某个错误发生了好几次才被修好，它会把这个“避坑指南”总结成一条规则，追加到自己的环境配置文件（如 `user.md` 或行为准则 **Guidelines**）中。
+    
+
+## 3\. 记忆进化：基于向量与图的异步垃圾回收（Asynchronous Garbage Collection）
+
+普通的 **AI** 越聊越笨，是因为历史上下文（**Context**）里充斥着大量的无用对话和代码垃圾。**Hermes** 能够通过异步记忆清理保持敏锐：
+
+-   **Honcho 记忆网关：** 采用类似操作系统的虚拟内存管理。长期记忆、中期任务线和短期对话被严格隔开。
+    
+-   **异步图压缩（Asynchronous Graph Compression）：** 当系统判定用户处于闲置状态（**Idle**）时，后台会启动一个轻量级的 **Cron**（定时任务）。它会扫描对话数据库，把几百行冗长的调试对话压缩成一行结构化的知识（例如：_“用户服务器的_ **_WSL_** _代理端口是 7890”_），并将其写入基于 **SQLite** 的 **FTS5** 搜索引擎和向量数据库（**Vector DB**）。
+    
+-   **记忆淘汰机制：** 过滤掉执行过程中的临时噪音，只保留最终正确的逻辑和用户的个性化偏好。
+    
+
+## 4\. 终极自进化：合成数据反哺训练（Synthetic Data & Distillation）
+
+在更高级的研究或企业级部署中，**Hermes** 的自我进化会走向物理层的闭环——**从“行为进化”走向“大脑进化”**：
+
+-   **高质量轨迹收集（Trajectory Collection）：** **Hermes** 在本地自我纠错、编写技能、成功执行任务的全过程，都会被记录为完美的 `Thought -> Action -> Observation -> Reflection` 链条。
+    
+-   **拒绝采样与过滤（Rejection Sampling）：** 过滤掉失败的尝试，保留那些从错误走向成功的“人类难以手工编写的高难度提示词对（**Prompt-Response Pairs**）”。
+    
+-   **强化学习反哺：** 这些数据是训练 **Tool-Calling** 和 **Reasoning**（推理能力）极其珍贵的语料。通过结合 **Tinker-Atropos** 流水线，利用 **GRPO**（群体相对策略优化）算法或 **LoRA** 适配器，可以直接拿来对基座大模型进行微调，让模型的原生推理和工具调用能力在下一代版本中发生质的飞跃。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 ## AI时代让自学更简单了！
 
 > 多了解运行原理，找到自己喜欢及想要发展的方向。
@@ -104,6 +220,7 @@ Web3 安全通常可以划分为以下四个核心维度：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 上午自学内容，信息来源：[https://aiweb3.school/zh/handbook/ai/rag/](https://aiweb3.school/zh/handbook/ai/rag/)
 

@@ -15,8 +15,28 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+-   **AI 与 Web3 结合方向**：
+    
+    -   **Web3 赋能 AI**：AI 模型算力和数据集中易受政策文化影响，Web3 可将其像区块链节点一样分散到世界各地，摆脱中心化限制。如 Btensor 项目，以算力质押代替金融质押，让个人或组织提供算力和服务，通过网关分流，由验证者节点打分并给予代币奖励，但目前分布式节点处理速度慢、效果差。
+        
+    -   **AI 赋能 Web3**：AI 可用于 Web3 钱包操作、链上数据分析、安全审计等。如 Coinbase agent Kit 让 agent 拥有链上钱包操作权利，Acumen 项目对链上数据进行行为分析，AI 能扫描识别交易对象和 code data 判断交易风险。
+        
+-   **AI 合约安全审计**：推荐 EVM bench 产品，可对模型审计能力进行测试，还分享了团队设计合约审计案例知识库进行模拟攻击得出安全审计报告的经验。
+    
+-   **AI 分析与传统量化模型**：两者可结合，不能互相替代，传统量化模型输出更稳定、反应更快，AI 分析可调整量化模型参数。
+    
+-   **AI 加钱包意图**：让 AI 拥有自主获取信息和支付能力，解决量化操作中获取信息按使用次数收费的问题，目前相关平台未出现颠覆性产品。
+    
+-   **稳定币与 AI 结合**：可尝试语义化操作将稳定币支付与 AI 结合，但目前效果不佳，还可考虑让中转站支持稳定币支付。
+    
+-   **独立开发者方向**：推荐开发 AI 钱包安全助手小应用，结合商业 agent 能力开发技能和工具。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 -   **Web3 运行原理概述**：
     
     -   **整体流程**：从点击钱包转账的 confirm 按钮开始，涉及身份认证、授权、传播、排序、执行、确认等过程，涵盖钱包私钥、个人主权、交易签名、区块链网络运行、智能合约及协议升级等内容。
@@ -97,6 +117,7 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 今天完成了 Week 1 Web3 向任务：整理 Web3 基础概念卡片。
 
 Proof-of-Work:
@@ -112,6 +133,7 @@ Proof-of-Work:
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 今天完成了 AI Web3 School 个人 learning agent 初始化并配置好了Hermes agnet：确认了我的画像是 AI 新手、Web3 有基础、会 vibe coding，目标是在 Hackathon 中做出 AI + Web3 全栈 demo。我已经建立了本地学习仓库结构，包括 profile、learning plan、daily notes、tasks、experiments、handbook-feedback、hackathon 和 submissions。  

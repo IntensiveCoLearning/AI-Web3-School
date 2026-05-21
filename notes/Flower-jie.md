@@ -15,8 +15,166 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+# **第四天学习笔记（AI × Web3 深度融合）**
+
+**日期：2026年5月21日**
+
+* * *
+
+## **一、AI 与 Web3 结合的前沿方向**
+
+### **1\. 去中心化 AI 网络**
+
+-   **问题**：当前大模型训练和推理被少数中心化公司控制，存在数据隐私、审查、单点故障风险。
+    
+-   **解决方案**：构建**去中心化计算网络**，利用全球闲置 GPU 资源进行模型训练/推理。
+    
+-   **代表项目**：
+    
+    -   **Bittensor (TAO)**：激励矿工提供算力与模型，子网可构建不同 AI 任务。
+        
+    -   **Render Network (RNDR)**：分布式 GPU 渲染，正扩展至 AI 推理。
+        
+    -   **Akash Network (AKT)**：去中心化云服务，已支持 GPU 租赁。
+        
+-   **意义**：AI 商品化，降低门槛，实现抗审查的智能服务。
+    
+
+### **2\. 链上 AI 智能体（On-chain Agent）**
+
+-   **概念**：智能体的核心逻辑和状态存储在区块链上，行动通过交易执行。
+    
+-   **与普通智能体区别**：
+    
+    -   透明、不可篡改。
+        
+    -   可使用智能合约托管资金，自主支付 gas。
+        
+    -   可被多用户共享或组合。
+        
+-   **示例**：一个链上交易机器人，用户存入代币后，Agent 根据算法自动执行 DEX 交易，利润自动分红。
+    
+-   **技术挑战**：链上存储成本高，需用**压缩模型**或**零知识证明**验证链下计算。
+    
+
+### **3\. AI 预言机（AI Oracle）**
+
+-   **传统预言机**（如 Chainlink）将链下数据（如价格）传输到链上。
+    
+-   **AI 预言机**：将 AI 模型的**输出结果**（如图像分类、情感分析、预测）带上链，供智能合约使用。
+    
+-   **应用场景**：
+    
+    -   预测市场（AI 预测体育比赛结果）。
+        
+    -   保险理赔（AI 验证事故照片）。
+        
+    -   动态 NFT（根据 AI 分析变化）。
+        
+-   **可信问题**：需要验证模型计算是否被篡改，可通过**可信执行环境（TEE）** 或**零知识证明**解决。
+    
+
+* * *
+
+## **二、构建 AI × Web3 应用的完整技术栈**
+
+| 层级 | 技术组件 | 示例工具/协议 |
+| --- | --- | --- |
+| 链上交互 | 智能合约、账户抽象、L2 | Solidity, EIP-4337, Arbitrum, Optimism |
+| AI 计算 | LLM 推理、机器学习模型 | OpenAI API, Llama.cpp, Hugging Face |
+| 去中心化计算 | GPU 算力市场、分布式训练 | Bittensor, Akash, Render |
+| 数据索引 | 区块链数据查询、子图 | The Graph, Etherscan API, Dune Analytics |
+| AI 预言机 | 模型结果上链、验证 | Chainlink Functions, Oraichain |
+| 智能体框架 | Agent 编排、工具调用、记忆 | LangChain, AutoGPT, Eliza (AI 框架) |
+| 身份与支付 | 去中心化身份、稳定币、钱包 | ENS, World ID, USDC, MetaMask |
+
+* * *
+
+## **三、从 0 到 1：搭建一个简单 AI × Web3 示例**
+
+### **场景：链上情绪分析机器人**
+
+-   **功能**：用户输入任意文本，合约返回情绪分数（0-100）并记录在链上。
+    
+-   **简化架构**：
+    
+    1.  前端或客户端调用 OpenAI API 分析情绪，获得分数。
+        
+    2.  用户签名并将分数作为参数调用智能合约的 `recordSentiment` 函数。
+        
+    3.  合约存储分数及对应的文本哈希（保护隐私）。
+        
+    4.  任何人可查询地址的历史情绪记录。
+        
+
+### **智能合约示例（Solidity 片段）**
+
+solidity
+
+```
+contract SentimentRecorder {
+    struct Entry {
+        uint256 timestamp;
+        uint8 score;      // 0-100
+        bytes32 textHash;
+    }
+    mapping(address => Entry[]) public history;
+
+    function record(uint8 score, string calldata text) external {
+        require(score <= 100, "Score out of range");
+        bytes32 textHash = keccak256(bytes(text));
+        history[msg.sender].push(Entry(block.timestamp, score, textHash));
+    }
+}
+```
+
+### **前端集成注意点**
+
+-   使用 `ethers.js` 调用合约。
+    
+-   文本发送前先计算哈希，链上不暴露原文。
+    
+-   可搭配 The Graph 索引事件做数据可视化。
+    
+
+* * *
+
+## **四、以太坊进阶：MEV、隐私与合规**
+
+### **1\. 最大可提取价值（MEV）**
+
+-   **定义**：矿工/验证者通过重组、插入、审查交易获得的额外利润。
+    
+-   **常见 MEV**：套利、清算、三明治攻击。
+    
+-   **对 AI 的启发**：AI 智能体可自动搜索链上 MEV 机会，构建高频交易机器人。
+    
+-   **防护**：使用隐私内存池（如 Flashbots Protect）或使用抗 MEV 的 DEX（如 CowSwap）。
+    
+
+### **2\. 链上隐私技术**
+
+-   **零知识证明（ZKP）**：证明某一事实（如“余额 > 100”）而不透露具体数值。
+    
+-   **隐私交易**：Tornado Cash（已制裁）、Railgun、Aztec（已停运）。
+    
+-   **AI 与隐私结合**：使用 ZK-ML（零知识机器学习）验证模型推理结果，同时保护输入数据隐私。
+    
+
+### **3\. 监管合规趋势**
+
+-   **链上 KYC/AML**：Circle（USDC）已对部分地址冻结；TRM Labs 等提供链上分析。
+    
+-   **AI 辅助合规**：用 AI 模型实时监控交易模式，识别洗钱或高危地址。
+    
+-   **去中心化身份（DID）**：提供可验证凭证，平衡隐私与合规
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 # **第三天学习笔记（进阶扩展）**
 
 **日期：2026年5月20日**
@@ -197,6 +355,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 # **第二天学习笔记（扩展篇）**
 
@@ -382,6 +541,7 @@ contract SimpleStorage {
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 

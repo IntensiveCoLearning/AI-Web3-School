@@ -15,13 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今日完成：
+
+✅ 复习 Web3 基础（Network、Cryptography、Wallet、Smart Contract）
+
+✅ 阅读 AI×Web3 Bridge（Agent Wallet、Machine Payment、Settlement & Escrow、Web3 Tool Use）
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 今天主要观看了Hermes Agent分享，收获满满
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 ```
 今日完成：
@@ -40,6 +51,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 今天观看了开营仪式的视频

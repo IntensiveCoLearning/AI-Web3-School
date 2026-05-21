@@ -15,8 +15,47 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今天終於可以部署hermes AI，作為一個編程小白，我有點小激動。之後再來更新一下set up的結果。
+
+* * *
+
+經過了幾個小時的set up 我的AI agent終於可以動起來了！簡單紀錄一下我遇到的困難：
+
+1）硬件問題：因為我真的十分擔心安全性的問題，於是我用我的舊電腦（2015年）去安裝Hermes Agent。因為電腦太舊的緣故，原本想安裝的Docker（一個類似Container的軟件）並不支援，於是我只好把電腦reset，由0開始。
+
+2）地區限制：我原本選擇的是OpenAI做我的provider，中國地區用不到只好選擇其他AI provider。開始是選擇Zai的model，發現要收費，最後在openrouter找到免費的模型，完美解決問題！！！！
+
+一頓操作下來，我發現安裝其實是蠻直觀的，新手如我也順利完成安裝（只是有其他issue令我的安裝過程不太順暢QQ）期待明天的真實使用！！
+
+今天除了安裝AI agent之外，也回看了不同老師的分享，收穫滿滿！如果之後有精力，會繼續看handbook的 concepts。
+
+下圖是Hermes Agent動起來的screenshot：
+
+![Screen Shot 2026-05-21 at 9.31.38 PM.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/deerjane-bjj/images/2026-05-21-1779371356311-Screen_Shot_2026-05-21_at_9.31.38_PM.png)
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+今日目標是要做3樣東西：
+
+1）根據ChatGPT提供的Study Plan，在Github建立Repo，並將Day1、2的筆記錄入。  
+2）看昨天的分享並Set up AI agent  
+3）繼續學習handbook 關於AI 方向的concepts
+
+鑑於今天是在有點事耽誤了，目前只做了第一樣，馬上會做第二項。第三項估計要明天才可以繼續。Keep Going！
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+
 Day2
 
 My note is saved in Google docs: [https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX\_dfMbQRMUDxJcWA0k/edit?usp=sharing](https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX_dfMbQRMUDxJcWA0k/edit?usp=sharing)
@@ -26,6 +65,10 @@ Basically I just read the handbook and clarify the ideas of different AI concept
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
 
 
 

@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+今日推进了 V7 回测/实盘复刻路线：把 runner 补齐到能表达 score>=86、OI 8-16、price 5-10、breadth veto 等核心门控，并新增/规划 V7 Live 只读跑分诊断面板来暴露候选、过滤原因和 parity gaps。
+
+同时明确了关键结论：实盘要尽量复刻回测收益，必须先在回测实验室重跑并校准策略口径，再用 live/paper-shadow 量化实时 ticker、pool context、滑点和成交差异。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 今天的笔记（2026-05-19）记录了一次**非常理智、克制且防守至上**的研究闭环。
 
 核心逻辑是：**全面冻结内部老代码的挖掘，锁死风险闸门，在外部宏观环境转弱时果断切入观察（WAIT）状态。**

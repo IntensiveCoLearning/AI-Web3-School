@@ -15,8 +15,23 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+-   参加实时课程 √
+    
+-   参加co-learning √
+    
+
+课程心得：待补充
+
+昨天部署的是hermes3b聊天工具，不是部署到本地的hermes agent，重新用codex部署hermes agent
+
+![A60ABFE61D428903B7498B7A3775AE19.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/wilsonHason/images/2026-05-20-1779287150830-A60ABFE61D428903B7498B7A3775AE19.png)
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 -   实时参加AI Agent 入门 —— Hermes 从 0 到 1 √
     
 -   每日打卡 √
@@ -33,6 +48,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 -   回看17日开营回访 √
     

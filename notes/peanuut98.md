@@ -15,8 +15,40 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+Day 3 · 2026-05-20 · @peanuut98
+
+今日学习：
+
+\- Handbook: Wallet — 终于把「钱包不是装币的口袋，而是私钥管理工具 + 签名入口」这句话读懂了。地址、助记词、派生路径之间的关系也串起来了一点。
+
+\- 实操：装了 MetaMask，创建了一个全新钱包（助记词抄在纸上、没存电子设备），切到 Sepolia 测试网，领了一点测试 ETH，发了一笔自转账，再到 Sepolia Etherscan 上把昨天学的 6 个字段重新读了一遍 — 概念第一次有了「手感」。
+
+\- 产出：daily/[2026-05-20.md](http://2026-05-20.md) 已 commit 到学习仓库。
+
+最大的认知变化：
+
+\- 钱包 ≠ 账户。一组助记词可以派生出无数个地址，MetaMask 只是这条派生链路的 UI。
+
+卡点：
+
+\- 派生路径（m/44'/60'/0'/0/0 这种）每一段到底代表什么，还需要再读一遍。
+
+明日：
+
+\- Wallet 续 — Seed phrase / Keystore / 派生路径的细节。
+
+\- 想搞清楚：为什么同一组助记词，在 MetaMask 和 Rabby 里能恢复出同一组地址（背后是 BIP39 + BIP44 这套标准在起作用）。
+
+🔗 [https://github.com/peanuut98/ai-web3-school-cohort-0/blob/main/daily/2026-05-20.md](https://github.com/peanuut98/ai-web3-school-cohort-0/blob/main/daily/2026-05-20.md)
+
+\`\`\`
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 Day 2 · 2026-05-19 · @peanuut98
 
 今日学习：
@@ -42,6 +74,7 @@ Day 2 · 2026-05-19 · @peanuut98
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 Day 1 · 2026-05-18 · @peanuut98

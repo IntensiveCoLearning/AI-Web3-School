@@ -15,8 +15,160 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+老师晚上好，今天依旧很晚hahha，我看了Draked老师的回放+John老师的x教程，自己顺了一遍安装的流程并增加了细节，整个流程没有作完，因为最后是AI 模型服务商的选择，我在想是否搞一个付费的，可能要到24点之后了，我先提交已完成的流程笔记，最后有证明图片，Ubuntu窗口的用户名就是我报名的名字Amber
+
+# Windows 安装 WSL + Ubuntu + 开发环境 + Hermes Agent 完整教程
+
+## 一、安装 WSL（Linux 子系统）
+
+1.  键盘同时按下 **Windows 键 + X**（Windows 键在键盘左下角，带窗口图标）
+    
+2.  屏幕左下角弹出菜单，点击 **Windows PowerShell (管理员)(A)**
+    
+3.  在窗口输入命令，系统自动开始下载 WSL（适用于 Linux 的 Windows 子系统）：
+    
+    powershell
+    
+    ```
+    wsl --install
+    ```
+    
+4.  下载成功后，**重启电脑**
+    
+5.  重启后，再次以管理员身份打开 PowerShell，检查 WSL 状态：
+    
+    powershell
+    
+    ```
+    wsl --list --verbose
+    ```
+    
+    ✅ 需看到结果：`Ubuntu-22.04 Running 2`（VERSION 必须为 2）
+    
+6.  查看官方支持的 Linux 版本列表：
+    
+    powershell
+    
+    ```
+    wsl --list --online
+    ```
+    
+7.  安装 Ubuntu-22.04（确认列表存在后执行）：
+    
+    powershell
+    
+    ```
+    wsl --install -d Ubuntu-22.04
+    ```
+    
+    等待进度条完成即可
+    
+
+* * *
+
+## 二、Ubuntu 初始化配置
+
+8.  在 Windows 开始菜单中找到 **Ubuntu** 并打开
+    
+9.  按照提示设置 Ubuntu 账户用户名和密码（密码输入时不显示，正常输入即可）
+    
+
+* * *
+
+## 三、Ubuntu 安装 Python 3.11
+
+10.  打开 Ubuntu 终端，依次执行以下命令（**Ubuntu 中右键 = 粘贴，Ctrl+V 无效**）：
+     
+     bash
+     
+     运行
+     
+     ```
+     sudo add-apt-repository ppa:deadsnakes/ppa -y
+     sudo apt update
+     sudo apt install python3.11 python3.11-venv python3.11-dev -y
+     ```
+     
+
+* * *
+
+## 四、Ubuntu 安装 Node.js
+
+11.  依次执行以下命令安装 Node.js 20 版本：
+     
+     bash
+     
+     运行
+     
+     ```
+     curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+     sudo apt install -y nodejs
+     ```
+     
+12.  验证安装是否成功（执行后显示版本号即为成功）：
+     
+     bash
+     
+     运行
+     
+     ```
+     node -v
+     npm -v
+     ```
+     
+
+* * *
+
+## 五、Ubuntu 安装 Hermes Agent
+
+13.  执行一键安装命令：
+     
+     bash
+     
+     运行
+     
+     ```
+     curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+     ```
+     
+14.  安装完成后，刷新环境配置：
+     
+     bash
+     
+     运行
+     
+     ```
+     source ~/.bashrc
+     ```
+     
+15.  验证安装（执行后显示版本号即为成功）：
+     
+     bash
+     
+     运行
+     
+     ```
+     hermes --version
+     ```
+     
+
+* * *
+
+### 小提示
+
+-   所有 Ubuntu 内的粘贴操作，**直接用鼠标右键**
+    
+-   执行命令时若提示输入密码，输入你设置的 Ubuntu 密码即可（密码不显示，输完回车）
+    
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Amber-DD/images/2026-05-20-1779292163691-image.png)
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 老师们好，由于本职工作周一周二最忙所以这两天有点掉队今天主要学习的是AI的基础知识
 
 **LLM（大语言模型）**  

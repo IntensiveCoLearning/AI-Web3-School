@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+On the third day of my AI × Web3 study, I stepped out of abstract theoretical learning and dived into hands‑on practice, gradually building my personal on‑chain identity and understanding the real value of Web3 from an individual perspective.
+
+Today I created and operated a decentralized crypto wallet independently for the first time. I carefully backed up my seed phrase and kept my private key strictly confidential, truly realizing that my wallet is my exclusive digital identity in the Web3 world. Unlike Web2 accounts controlled by centralized platforms, every permission, asset and behavioral record here belongs entirely to myself. I practiced switching public chains, checking gas fees, and learning about Layer‑2 scaling solutions. These small but practical operations gave me a strong sense of autonomy that I have never experienced in traditional internet usage.
+
+I also completed the full process of on‑chain interaction today: connecting DApps, authorizing signatures, broadcasting transactions, waiting for block confirmation, and checking permanent on‑chain records afterward. It impressed me deeply that every single action is traceable, immutable and permanently stored on the blockchain. Unlike ordinary online behaviors that only generate traffic for platforms, my real participation here can be accumulated as my personal on‑chain credentials and digital resume in the long run.
+
+Combining AI with Web3, I began to plan my personal application logic. AI helps me sort out massive on‑chain data, simplify complex contract operations, and automate repetitive tasks efficiently. Meanwhile, Web3 provides ownership confirmation and credible storage for all my learning records, interactions and creative outputs. My efforts will no longer be fleeting behaviors, but tangible personal digital assets that can be accumulated continuously.
+
+In addition, I learned real‑world Web3 security risks today, such as phishing contracts, malicious authorization and private‑key leakage. I realized that digital security is the bottom line of my on‑chain identity, and I must stay cautious in every future operation.
+
+The biggest gain today is that I transformed from a passive observer of Web3 concepts to an active practitioner. I no longer treat Web3 as a distant industry buzzword, but as a practical skill reserve for my future development. Moving forward, I will keep practicing more on‑chain operations, build my stable on‑chain identity step by step, and turn my daily learning into long‑term personal value accumulation.
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 On the second day of my study, I completely abandoned the stereotyped impression of Web3 as "virtual and speculative". I systematically consolidated foundational knowledge including the underlying architecture of blockchain, decentralized identity systems, on‑chain right‑confirmation logic, and core features of the value‑based internet, completing a full shift from traditional Web2 internet thinking to Web3 value‑internet thinking.
 
 I clearly grasped the essential differences between Web2 and Web3. In the Web2 era, all user data, account information and behavioral records are controlled by centralized platforms. Users cannot independently manage their personal data; their activities only generate traffic rather than personal value, with no permanent, traceable or verifiable credentials for all operations. Relying on distributed blockchain ledgers, Web3 builds an underlying network that is open, transparent, decentralized, tamper‑proof and permanently recordable, returning ownership of data, account control rights and value attribution rights to individual users.
@@ -32,6 +48,7 @@ Combined with the learning system of this bootcamp, I clarified my future study 
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 Today marks my first official day joining AI × Web3 School, a co‑learning and hands‑on practice program jointly initiated by LXDAO and ETHPanda. After going through the program overview and core introduction, I have built a clear and in‑depth understanding of what this journey will bring.
 

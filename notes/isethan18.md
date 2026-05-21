@@ -15,8 +15,30 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+### Day 3（5月21日）：AI Coding 与环境初始化（Cursor / Windsurf）
+
+-   **今日目标**：搭建好你的 Vibe Coding 环境，让 AI 成为你的主力副驾驶。
+    
+-   **具体做什么**：
+    
+    1.  **工具配置**：下载并配置 **Cursor** 或 **Windsurf** 编译器。将你前两天准备好的 AI API Key（或直接使用内置 AI）配置好。
+        
+    2.  **环境初始化**：使用 AI 引导，在本地初始化一个基本的开发环境（Node.js 或 Python），安装 Web3 交互的基础库（如 `ethers.js`、`viem` 或 `web3.py`）。
+        
+    3.  **初试 Vibe Coding**：用纯自然语言命令 AI：“帮我写一个脚本，连接到 Sepolia 测试网，并打印出我 Day 2 钱包的测试币余额。” 观察它写出的代码并运行。
+        
+-   **参考材料**：
+    
+    -   _工具文档_：Cursor 官方文档中的 `@symbols` 和 `Composer` 功能使用指南。
+        
+    -   _库文档_：`ethers.js` 或 `viem` 的 Quick Start 极简入门。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 ### **Day 3（2026-05-21）：AI Coding 与环境初始化（Cursor / Windsurf）**
 
 **今日目标**：搭建 Vibe Coding 环境，让 AI 成为主力副驾驶。
@@ -40,6 +62,7 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 ### Day 2（5月20日）：Web3 基础设施与测试网通关
 
 -   **今日目标**：把 Web3 的链上概念吃透，为 AI 代理（Agent）准备好“手和脚”。
@@ -59,6 +82,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 * * *

@@ -15,8 +15,52 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+### 学习了LLM  
+示例：  
+0x8f3a2b91c7d4e6f0a9b8c1d2e3f4567890abcdef1234567890abcdef98765432  
+Method:swapExactTokensForTokens  
+approve(spender, amount)
+
+解释：到底授权了什么、风险在哪里、哪些是事实、哪些只是 AI 猜测，以及你签名前必须检查什么  
+1.用户正在把 USDT 兑换成 ETH
+
+2.用户正在授权某个合约可以动用你的 USDT  
+3.专业交易解释器一定会区分
+
+| 链上行为 | 用户能看懂的解释 |
+| --- | --- |
+| transfer | 转账 |
+| swap | 兑换 |
+| stake | 质押 |
+| mint | 铸造 NFT |
+| bridge | 跨链 |
+| addLiquidity | 加流动性 |
+| permit | 签名授权 |
+| multicall | 批量操作 |
+
+| 地址类型 | 含义 |
+| --- | --- |
+| 用户钱包 | 发起人 |
+| DEX 合约 | 交易所 |
+| Router | 路由合约 |
+| Spender | 被授权方 |
+| LP Pool | 流动池 |
+| 黑名单地址 | 风险地址 |
+
+| 信息 | 来源 |
+| --- | --- |
+| 转账金额 | 链上 |
+| 调用函数 | 链上 |
+| 合约地址 | 链上 |
+| gas fee | 链上 |
+| Token 合约 | 链上 |
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 按照课程内容学习HuggingFace系统理解 LLM 工作原理:
 
 晕了，光是在GoogleColab就遇到了很多问题，第一步vscode里安装Googlecolab,用codex做了个陪学计划，建了文件夹，所以直接就在vscode里打开了新文件，我的理解是，colab是云端跑代码的，vscode是本地跑代码的，如果本地已经有了虚拟python就不需要colab笔记本，这对小白来说，几个软件就要搞半天了
@@ -26,6 +70,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 其实今天在课程过程中我一直在操作Hermesagent的本地部署，因为我有两台电脑，我想要在这两台电脑上的tg里bot都使用上Hermesagent，所以我本身一开始进行的操作是
 

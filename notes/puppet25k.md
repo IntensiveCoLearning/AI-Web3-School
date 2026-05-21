@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
+
+2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
+
+3\. 了解了去中心化 AI 基础设施生态：Bittensor (TAO)、Render Network、Akash
+
+4\. 学习了 Coinbase AgentKit / MoonPay Agents / Privy Agentic Wallets 等 Agent 钱包方案
+
+5\. 了解了 AI 链上分析工具（Nansen）—— 从"写查询"变成"提问题"
+
+6\. 核心认知：AI + Web3 的价值不是给 AI 套 token，而是让软件主体进入可授权、可结算、可审计的经济系统
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 \### 目前的状态
 
 1\. 成功将 Hermes Agent 和 OpenClaw 部署在云服务器并稳定运行
@@ -71,11 +87,13 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 \# 2026.5.18

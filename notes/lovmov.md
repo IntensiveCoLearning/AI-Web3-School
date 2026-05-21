@@ -15,8 +15,17 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+![PixPin_2026-05-21_10-20-26.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lovmov/images/2026-05-21-1779331565605-PixPin_2026-05-21_10-20-26.jpg)
+
+在云服务器上由于有各种安全限制，安装过程有些源连接不上，虽然Hermes Agent安装完成，但有很多bug，后续看看境外的云服务器是否也有这些问题。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
 ![PixPin_2026-05-19_20-01-07.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lovmov/images/2026-05-19-1779197671834-PixPin_2026-05-19_20-01-07.jpg)
 
 1.  目前部署了VSCode + OpenCode
@@ -26,6 +35,8 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
 
 ![PixPin_2026-05-18_20-09-53.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lovmov/images/2026-05-18-1779119785103-PixPin_2026-05-18_20-09-53.jpg)
 

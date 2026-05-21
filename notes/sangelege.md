@@ -15,8 +15,28 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+私钥、助记词、地址:三者关系
+
+私钥(Private Key)能直接授权账户操作。谁能用对应私钥签名，谁就能控制账户，
+
+助记词(Seed Phrase)私钥体系的可读备份;通过派生路径可生成多个账户，
+
+地址(Address)由公钥计算得到的公开账户标识，可以理解为收款地址;公开但会被关联分析。
+
+助记词可以分出多个私钥账户
+
+私钥一定不能泄露，泄露了什么都没了
+
+区块链发送方流程：首先自己要先创建钱包，有了钱包就有了私钥，也有钱包地址。然后就可以自己弄准备的交易信息。在把通过地址 交易信息和私钥进行数字签名。接着就可以把地址+消息和签名发送到区块链网络上。
+
+接收方RPC节点的接收流程：收到原始交易信息的消息 还有 声称的发送地址 ，还有携带的签名。然后RPC接收方节点就通过算法和接收到的信息 计算出签署者是谁。计算出的地址和发送方地址完全匹配，通过了密码学的校验。可以写入区块。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/sangelege/images/2026-05-19-1779201560215-image.png)
 
 认真做 agent，但不是从「调 prompt」或「接 API」这个角度入手 — 而是从 harness engineering 这个 lens：  

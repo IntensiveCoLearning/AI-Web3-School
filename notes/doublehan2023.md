@@ -15,8 +15,29 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+# Day 3
+
+-   Learned Transformer by reading Hugging Face LLM Course Chapter 1
+    
+-   Learned Minimind Transformer Architecture
+    
+-   Created Web3 knowledge flash card
+    
+-   Created Transformer knowledge document
+    
+
+## Next:
+
+-   Create a test wallet and make a test transaction
+    
+-   Learn the intersection of AI and Web3
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 # Day 2:
 
 ## Started my Week 1 journey with Web3 foundations. Here's what I did today:
@@ -39,6 +60,7 @@ Read Handbook chapters (Network → Cryptography → Wallet → Smart Contract),
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 # Day 1:
 

@@ -15,8 +15,80 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+````markdown
+# Daily Note / 每日打卡 — 2026-05-20
+
+## Today's Plan / 今日计划
+
+- [x] 策划最小可交互 AI 学习产物
+- [x] 设计 tx-explain CLI 架构
+- [x] 编写 tx-explain.py 主体代码
+- [ ] 运行 --test 验证（API key 失效，待解决）
+- [ ] 更新 README
+
+## Learning Log / 学习记录
+
+### What I learned / 学到了什么
+
+今天策划并动手做了一个新实验：**Tx-Explain CLI** — 一个交互式交易问答学习工具。
+
+**核心思路**：在前两次实验（tx-interpreter 单次分析、tx-risk-summary 结构化风险判断）的基础上，增加「对话式追问」功能。用户输入一条交易哈希，AI 先给风险摘要，然后用户能像聊天一样不断追问：「这个 approve 是什么意思？」「gas 费合理吗？」「这个合约安全吗？」。
+
+**架构设计**：
+
+```
+用户输入 tx_hash
+  → 链上数据获取（复用已有 rpc 函数）
+  → 首次分析：LLM 输出结构化风险摘要（复用 risk-summary prompt + schema）
+  → 问答循环：
+      → 携带交易上下文 + 历史对话 → 发给 LLM
+      → 以教学方式回答
+      → 支持 exit / new / help 命令
+```
+
+**关键技术决策**：
+- **Context window 管理**：只保留最近 5 轮问答历史，避免 token 溢出
+- **首次分析 vs 问答**：首次分析用 `response_format: json_object` 保证结构化输出；问答模式用自由文本，让 LLM 可以用自然语言教学
+- **QA 模式 system prompt**：在原有风险分析 prompt 基础上，加了「教学」指令——解释专业术语、用例子和比喻帮助理解
+
+**与前面实验的关系**：
+
+| 实验 | 核心能力 | 新增 |
+|------|---------|------|
+| tx-interpreter | 单次交易解释 | - |
+| tx-risk-summary | 结构化风险判断 + schema 校验 | code 层校验 |
+| tx-explain (今天) | 交互式问答学习 | context 管理 + 对话循环 |
+
+### Questions / 疑问与卡点
+
+- **API key 失效**：运行 `--test` 时遇到 401，当前 Silicon Flow API key 需要更新
+- **QA 模式的 prompt 需要迭代**：首次写的 QA prompt 效果如何，需要在 API key 恢复后实测验证
+- **context window 裁剪策略**：MAX_HISTORY=5 是否合理，需要实测后调整
+
+## Daily Check-in / 打卡
+
+- [ ] 已提交 WCB 打卡
+- [ ] 打卡链接：
+
+## Tomorrow's Preview / 明日计划
+
+- [ ] 解决 API key 问题，运行 --test 验证
+- [ ] 实测一条真实交易哈希的完整交互流程
+- [ ] 更新 README.md
+- [ ] 如果时间充裕，迭代 prompt 质量
+
+## Stats
+
+- 学习时长：1.5h
+- 完成度：策划 + 编码完成，待验证
+````
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 # Daily Note / 每日打卡 — 2026-05-19
 
 ## Today’s Plan / 今日计划
@@ -148,6 +220,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/ybk-1/images/2026-05-18-1779097067324-image.png)
 

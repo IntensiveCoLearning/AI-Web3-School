@@ -15,8 +15,14 @@ y
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+提示词注入打过来了，在一定的信息源上动手让agent解除到这里信息，即可让agent自动构建恶意转账，信任层要到代码层面
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 我靠
 
 我agent连着两天提醒我打卡失败，我还没点进去仔细留意  

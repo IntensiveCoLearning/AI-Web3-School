@@ -15,8 +15,21 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今天任务：  
+①在[https://aiweb3.school/zh/handbook/ai/](https://aiweb3.school/zh/handbook/ai) 网站上复习AI的概念
+
+②琢磨我的hermes和tg为什么连不上。找了很多帖子，也借助AI工具，步骤都大致一样，我这边也照着做了，并且也确认了hermes的config.yaml和.env文件，该添加的配置我都是添加了，但是我这边就是不通....不抛弃不放弃，明天继续看看
+
+③今天大部分时间都在忙工作上的事情。然后今天在使用codex辅助编程的时候，觉得codex太喜欢过度设计了。比如，在优化业务流程时，它会增加非必要的数据结构，然后会把流程拉的很长。
+
+④参加线上的分享会
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 两个任务：学习web3基础概念；本地部署hermes。  
 **Web3基础概念**
 
@@ -168,6 +181,7 @@ https://github.com/NousResearch/hermes-agent/blob/main/README.zh-CN.md
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 主要在自己本地部署hermes。但是遇到一些问题，现在卡在网络上，下载hermes到约99%就会失败，目前正在排查（放弃使用http clone，改为使用ssh了，不知道会不会成功）。后面也会把整个部署过程记录，上传到打卡点。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/sl-tech-design/images/2026-05-19-1779196495368-image.png)
@@ -175,6 +189,7 @@ https://github.com/NousResearch/hermes-agent/blob/main/README.zh-CN.md
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 学习一些有关AI基础概念：  

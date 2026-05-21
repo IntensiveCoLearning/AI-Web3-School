@@ -15,8 +15,81 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+今天没有太多时间看东西，就查了一些名词。
+
+# [RPC](https://aiweb3.school/zh/handbook/web3/indexing/#rpc)
+
+RPC 是应用和节点交互的接口，用来读取链状态、查询日志、估算 gas 和发送交易。
+
+```
+你的钱包/MetaMask/dApp  ← →  RPC  ← →  区块链节点
+                                    ↑
+                              "帮我查一下这个地址的余额"
+                              "帮我估算一下这笔 gas"
+                              "帮我把这笔交易广播出去"
+```
+
+# Slashing
+
+罚没
+
+```
+正常情况：
+  你被选中做记录 → 好好记 → 其他人检查没问题 → 下周继续
+
+被 Slashing 的情况：
+  ❌ 你同一轮提议了两个不同的区块（搞分裂）
+  ❌ 你明明没被选中，却假装被选中到处发假记录
+  ❌ 你离线太久不工作（某些链会罚）
+
+处罚：
+  ⚔️ 系统砍掉你一部分质押金（最高砍到全部！）
+  🚫 你可能被踢出验证者队伍
+```
+
+# MEV
+
+MEV = **Maximal Extractable Value**（最大可提取价值）  
+**MEV 就是：你能通过**重新排列交易顺序**赚到的额外钱。**  
+**经典例子：三明治攻击**
+
+```
+你看到一个交易在 mempool 里：
+  「小明的交易：用 100 USDC 买 1 ETH」
+
+如果你有权力调整顺序，你可以这样做：
+  
+  ① 你先买（价格推高）     ← 你的交易
+  ② 小明买（在高价买入）   ← 小明的交易（被坑）
+  ③ 你再卖掉（赚差价）     ← 你的交易
+
+  💰 你赚了小明多付的那部分差价
+```
+
+# L2
+
+Layer 2 通常把大量交易放到主网之外执行，再把结果或证明提交回主网。对用户来说，L2 常见优势是费用更低、确认更快；但也多了桥、提现等待、排序器和跨链状态同步等复杂性。
+
+产品设计时不能只写“支持 Ethereum”。
+
+## 怎么写
+
+如果支持多个 L2，需要清楚展示当前网络、资产在哪条链、桥接需要多久、合约地址是否不同。
+
+## [Rollup](https://aiweb3.school/zh/handbook/web3/network/#rollup)
+
+**难度：高级。** Rollup 是主流 L2 扩展路线，把执行搬到链下或 L2，再把数据和结果提交到 L1。
+
+常见 rollup 类型包括 optimistic rollup 和 zero-knowledge rollup。它们在证明方式、提现延迟、数据可用性、开发体验和生态工具上都有差异。
+
+对 builder 来说，先抓住一个判断：Rollup 降低了单笔交易成本，但没有消除链上系统复杂度。你仍然要处理跨链资产、RPC、浏览器、合约地址、桥接风险和用户确认。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 🎓 AI × Web3 School — Phase 1 Day 3: Prompt
 
 📖 读完了 Prompt 章节：
@@ -41,6 +114,7 @@ AI x Web3 School
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 🎓 AI × Web3 School — Phase 1 Day 3: Tool Workflow Insights
 
 📖 Did not read Prompt chapter today (deferred) — instead explored practical AI tool workflows from the community:
@@ -64,6 +138,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 # [一个链上 Agent 的基本工作流](https://aiweb3.school/zh/ai-agents/#%E4%B8%80%E4%B8%AA%E9%93%BE%E4%B8%8A-agent-%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%B7%A5%E4%BD%9C%E6%B5%81)

@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+function Calling的流程可以分为：
+
+1.  **LLM/AIGC大模型思考：** 用户输入问题，AI Agent中的核心LLM/AIGC大模型先对问题进行分析思考。
+    
+2.  **Function Calling行动：** 如果问到了股票涨跌问题，则需要LLM/AIGC大模型分析出需要调用的Function以及要传入的参数。
+    
+3.  **Function Calling响应：**Function运行后返回输出结果，LLM/AIGC大模型再将答案整理成自然语言回复给用户。
+    
+4.  **流程的循环迭代：**除了一次性将输出结果发送给用户，我们还可以设置循环迭代的Function Calling过程，让LLM/AIGC大模型带着回答和问题进行多次思考，多次调用Function，使得输出结果完善。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 一个主流AI Agent系统中通常包含：
 
 -   **感知（Perception）模块**：获取外部环境信息，接收多模态输入（文本、图像、传感器数据），例如GPT-4o可端到端处理视觉与语音。
@@ -30,6 +44,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 今天在本机安装了hermes， 接入deepseek，渠道段使用了tg，
 
@@ -52,6 +67,7 @@ Function Calling的流程可以分为：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 对照着[LLM API 调用入门](https://www.youtube.com/watch?v=mnJJPltybBM)（视频）：边看边跟着写 API 调用

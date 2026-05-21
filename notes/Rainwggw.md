@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+1.  大致了解了AI相关的名词概念，使用AI整理了名词解释文档；
+    
+2.  参加了下午的讲座以及晚上的Co-learning。在Co-learning中听Swen老师的讲述受益良多。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 1.  完成了Claude Code的部署，使用CC Switch接入了质谱的模型，消耗了一些新用户注册免费赠送的token；
     
 2.  参加了今日的线上活动AI Agent 入门 —— Hermes 从 0 到 1，但并没有什么值得记录的收获；
@@ -26,6 +34,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 1.  完成了社群中的自我介绍；
     

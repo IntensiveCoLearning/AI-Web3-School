@@ -15,8 +15,37 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+# **我开始意识到自己"先做后读"的节奏可能是对的**
+
+今天读了 Handbook 里的 AI > Agent 和 Bridge > Web3 Tool Use 两节,没动代码——这是这周第三个没有代码产出的"输入型日子"了。一开始有点焦虑("是不是又水了一天"),读着读着反而觉得这种节奏不该被否定。
+
+回想这一周自己跟 Agent 的关系是怎么推进的:
+
+-   5/18:看了 Cohort 介绍,把 Hermes、Claude Code、Cowork 三类 Agent 在脑子里贴了标签
+    
+-   5/19:让 Claude Code 拿我 WCB Secret Key 去调 `users.getProfile`,第一次有"Agent 在用我的身份办事"的体感
+    
+-   5/20:看了 draken 老师的 Hermes 直播 + 同学的 install guide,然后……没装
+    
+-   5/21:今天打开 Handbook 的 Agent 章节,反而读得比之前任何一次都细
+    
+
+我以为"今天才认真读 Handbook"是落后的表现,但今天读的时候有个特别明显的感觉:**章节里讲的那些抽象概念(工具调用、ReAct 循环、多步执行),不再是文档上的术语了,而是上周我让 Claude Code 跑 curl→jq→git 流水线时已经体验过的东西**。读"Agent 把任务拆成 reasoning + action + observation"这一句的时候,我立刻能对上 5/19 那次让 Claude 调 WCB API 的过程——它先想了一下我问的是什么、再决定调哪个 procedure、看到返回再决定下一步。
+
+这让我意识到一件事:我之前对学习顺序的默认假设是错的。我以为应该"先读理论再实操",但实际效果更好的顺序好像是"**先用粗糙的体感把概念走过一遍,再回头读理论把体感命名清楚**"。Handbook 的 Agent 章节如果我 5/18 第一天就读,大概率会觉得"挺有道理但有点抽象";今天再读,每一个抽象概念都能在脑子里找到对应的实操记忆,理解就变成了"命名"而不是"建模"。
+
+Bridge > Web3 Tool Use 那节也是一样。5/19 我做了「受限 Web3 助手设计」,自己把 Agent 行动按风险分了四层(信息/分析/模拟/签名)。今天读 Handbook 里讲 Agent 调 RPC / 钱包 / 合约的部分,有种"哦原来我那次画的那张图,在 Handbook 的话语体系里叫这个名字"的对照感。如果先读 Handbook 再设计,可能直接套用文档里的术语就交差了;先自己摸过一遍再读,反而能看出"自己摸的版本"跟"权威版本"之间的差异,有种"两份地图相互校对"的踏实感。
+
+所以今天的"没有代码产出"我决定不算焦虑账。一周下来,**有动手日,有读书日,这两种日子的轮替本身就是学习节奏**。把读到的东西沉进昨天动过手的体感里,比再多写一个 demo 还重要。
+
+明天 5/22 是 Week 1 Review Meeting,要把这周所有打卡过一遍。装 Hermes 也安排在明天——延迟了三天,但我现在反而更确定"装它之前先把 Handbook 那一章 + 同学的 install guide + 直播都读过一遍"是个对的顺序。Agent 这种东西,在它真的进我电脑之前,提前把概念地图建好,装的时候才知道每一步在做什么。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 # Hermes 直播 + 同学的 install guide：对 Agent 的新一层认知
 
 昨晚 draken 老师讲完「Hermes 从 0 到 1」之后，我又翻了一遍 @0xUSDHG 同学整理的 \[Hermes 安装指南\](https://github.com/USDHGwang/hermes-install-guide)。两份内容叠在一起读，对 Agent 的理解突然清晰了——**直播给的是「为什么」，guide 给的是「怎么装才不踩坑」**。这一晚我没动手装，只是从头读到尾把流程顺了一遍，但这个「多读一遍」给我的认知更新比直播本身还多。
@@ -32,6 +61,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 # Agent 不再只是写代码，开始替我跟平台对话了
 
@@ -52,6 +82,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 

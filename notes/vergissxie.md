@@ -15,8 +15,427 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+````markdown
+# Week 1 进阶主题：Agent Workflow、Web3 工程化、模型适配与链上执行
+
+## 学习目标
+
+这份笔记把 Week 1 的进阶内容分成 A-E 五个板块，目标是把 AI agent、Web3 工程化、模型适配、以太坊执行环境和最小交叉实验串起来。
+
+一句话概括：
+
+> AI × Web3 的关键不是“让 AI 帮你生成内容”，而是让 AI 在可观测、可回滚、可确认的边界内协助完成真实任务。
+
+## 总览思维导图
+
+```mermaid
+mindmap
+  root((Week 1 进阶 A-E))
+    A Agent workflow 与 ETH skills
+      Skills
+      Tools
+      State
+      Logs
+      Human confirmation
+    B Web3 工程化与链上执行
+      Hardhat
+      Foundry
+      viem
+      wagmi
+      OpenZeppelin
+      Testnet feedback chain
+    C AI 进阶
+      Prompt
+      Fine-tuning
+      LoRA
+      PEFT
+      Unsloth
+      Evaluation
+    D Web3 进阶
+      Blocks
+      Consensus
+      EVM
+      Gas
+      Protocol layer
+      Execution layer
+    E 最小交叉实验
+      AI 生成
+      人工复核
+      钱包确认
+      链上执行
+      日志
+      回滚策略
+```
+
+## A. Agent Workflow 与 ETH Skills
+
+### 1. 核心理解
+
+Agent 系统与 skills 的关系，可以理解为“执行系统”和“可复用作业手册”的关系。
+
+单个 prompt 主要让模型回答问题；workflow 把步骤固定下来；agent 则可以围绕目标进行多轮组织、状态管理、工具调用和日志记录。skills 的价值在于把一类重复任务的步骤、边界、输出格式和安全规则固化下来，让 agent 不必每次从零理解任务。
+
+对 ETH skills 来说，一个好 skill 不是“让 AI 自动转账”，而是让 AI 稳定完成某一类低风险、可检查的 Ethereum 任务，例如：
+
+- 解释交易回执
+- 分析钱包提示
+- 生成测试网交互脚手架
+- 检查合约 ABI 与前端调用是否匹配
+- 总结某个地址的公开链上行为
+
+### 2. Prompt、Workflow、Agent + Skills 对比
+
+| 方式 | 决策方式 | 状态管理 | 工具调用 | 适合任务 | 风险 |
+| --- | --- | --- | --- | --- | --- |
+| 纯提示词 | 人决定，模型回答 | 无或很弱 | 通常没有 | 一次性解释、总结、改写 | 容易遗漏上下文 |
+| AI coding 工具 / workflow | 流程预定义 | 有限 | 可调用文件、命令、测试 | 固定步骤开发、文档整理、demo 生成 | 流程错会重复地产生错结果 |
+| Agent + skills | 模型参与规划，skills 限定套路 | 较强 | 动态调用 | 多轮任务、跨工具协作、长期维护 | 需要日志、权限和人工确认 |
+
+### 3. 为什么越接近执行越需要 guardrails
+
+从“回答问题”到“执行动作”，风险会快速上升。
+
+| 层级 | 示例 | 需要的控制 |
+| --- | --- | --- |
+| 生成内容 | 总结一篇文档 | 人工阅读和事实核查 |
+| 修改文件 | 生成 demo 或更新 README | git diff、测试、提交记录 |
+| 调用工具 | 查询链上交易、运行脚本 | 工具参数检查、日志记录 |
+| 发起链上动作 | 授权、转账、合约写入 | 钱包确认、限额、测试网优先 |
+| 管理资金权限 | 多签、session key、自动化策略 | 多重审批、回滚计划、权限隔离 |
+
+关键结论：
+
+> 越接近资产、权限和不可逆操作，越不能只依赖模型判断。
+
+### 4. ETH Skill 设计草案
+
+```yaml
+name: eth-transaction-reviewer
+purpose: Help review Ethereum transaction details before human wallet confirmation.
+inputs:
+  - chain name
+  - contract address
+  - function name
+  - calldata or ABI
+  - estimated gas
+  - wallet prompt screenshot or text
+outputs:
+  - action summary
+  - risk checklist
+  - human confirmation questions
+  - explorer links after broadcast
+boundaries:
+  - never request private keys or seed phrases
+  - never sign transactions
+  - never auto-submit mainnet transactions
+  - require human confirmation for approvals, transfers, and contract writes
+reliable_for:
+  - explaining transaction intent
+  - checking visible parameters
+  - producing a review checklist
+not_reliable_for:
+  - guaranteeing contract safety
+  - proving absence of hidden risk
+  - replacing wallet or hardware signer confirmation
+```
+
+### 5. 进阶挑战
+
+同一个任务分别用三种方式完成，例如“解释一笔测试网交易并生成复盘”：
+
+| 方式 | 做法 | 观察点 |
+| --- | --- | --- |
+| 纯提示词 | 粘贴交易信息，让模型解释 | 输出质量依赖输入完整度 |
+| Workflow | 固定步骤：查 hash、读回执、提取字段、生成总结 | 可重复、可调试，但路径固定 |
+| Agent + ETH skill | agent 根据 hash 调工具、读回执、按 skill 输出风险清单 | 更灵活，但必须限制工具和权限 |
+
+记录时要回答：
+
+- 哪种方式最快？
+- 哪种方式最稳定？
+- 哪种方式最容易审计？
+- 哪些步骤必须人工确认？
+- 哪些错误能回滚，哪些不能？
+
+## B. Web3 工程化与链上执行
+
+### 1. 核心理解
+
+基础链上交互只是入口。真正困难的是权限设计、错误恢复和风险控制。
+
+当任务从“测试网读数据”升级到“主网写合约”“代币授权”“多签资产管理”时，执行边界会立刻升级。你需要把测试网、区块浏览器、钱包提示、交易哈希、Gas、合约地址和交易回执串成一条完整反馈链。
+
+### 2. 链上反馈链
+
+```mermaid
+flowchart LR
+    A["本地代码或前端交互"] --> B["钱包提示"]
+    B --> C{"人工确认？"}
+    C -->|否| D["中止并记录原因"]
+    C -->|是| E["广播交易"]
+    E --> F["交易哈希"]
+    F --> G["区块浏览器"]
+    G --> H["交易回执"]
+    H --> I{"成功？"}
+    I -->|是| J["记录合约地址、事件、Gas"]
+    I -->|否| K["分析 revert / gas / 参数错误"]
+    K --> L["修复后回到测试网"]
+```
+
+### 3. 工具选择
+
+| 工具 | 适合什么 | 学习重点 |
+| --- | --- | --- |
+| Hardhat | 最小合约开发、测试、部署、调试 | 项目结构、脚本、测试、部署流程 |
+| Foundry | 快速 Solidity 测试、脚本、链上查询 | `forge`、`cast`、`anvil` |
+| viem | TypeScript 低层链上交互 | client、transport、read/write contract |
+| wagmi | 前端钱包连接与 React hooks | wallet connect、账户状态、交易交互 |
+| OpenZeppelin Contracts | 安全合约复用 | 权限、token、升级、安全组件 |
+
+### 4. 工程化底线
+
+- 私钥和 RPC key 不进仓库
+- 先本地链，再测试网，再考虑主网
+- 合约地址、交易 hash、测试记录必须写入 repo
+- 钱包提示和交易回执要能互相对应
+- 失败交易也要记录原因，因为失败本身是学习材料
+
+### 5. 进阶挑战
+
+选择 Hardhat 或 Foundry 完成一个最小合约：
+
+1. 写一个最小合约，例如 `Counter` 或 `MessageBoard`
+2. 编写测试
+3. 部署到本地链
+4. 部署到测试网
+5. 记录合约地址、交易 hash、Gas、测试结果
+6. 在 `demos/` 中写复盘
+
+如果已有前端能力，再用 viem / wagmi 做一个最小交互页：
+
+- 连接钱包
+- 读取链上状态
+- 发起一次测试网写入
+- 明确标注哪些步骤必须人工确认
+
+## C. AI 进阶：模型适配、微调与可控性
+
+### 1. 核心理解
+
+微调通常不是从零训练模型，而是在已有模型上做能力适配、风格调整或任务对齐。
+
+如果 prompt 能解决问题，先不要微调。微调适合解决“模型反复需要以稳定风格或固定任务模式输出”的问题，不适合解决实时知识、权限控制、工具执行和事实核查问题。
+
+### 2. Prompt 与模型适配的边界
+
+| 方案 | 适合解决 | 不适合解决 |
+| --- | --- | --- |
+| 改 prompt | 输出格式、任务说明、少量样例、短期实验 | 模型底层能力不足、风格长期不稳定 |
+| RAG | 需要引用外部资料、知识经常变化 | 需要改变模型行为习惯 |
+| LoRA / PEFT | 特定风格、领域表达、任务模式适配 | 实时知识更新、强安全保证 |
+| 全量微调 | 深度能力适配 | 小团队低成本快速试错 |
+
+### 3. LoRA / PEFT 的意义
+
+LoRA 和 PEFT 的重点是降低微调门槛。它们通常只训练少量额外参数，而不是更新整个模型，因此更省显存、更容易保存和切换。
+
+但门槛降低不代表风险消失。微调最容易出问题的地方是：
+
+- 数据质量差
+- 训练集和真实任务不匹配
+- 没有评估集
+- 过拟合
+- 只看主观效果，不做对照实验
+
+### 4. 本地模型、微调模型、托管模型对比
+
+| 类型 | 成本 | 可控性 | 效果 | 维护复杂度 |
+| --- | --- | --- | --- | --- |
+| 托管模型 | 按 API 付费 | 中等 | 通常强 | 低 |
+| 本地模型 | 硬件成本 | 高 | 取决于模型和设备 | 中高 |
+| 微调模型 | 数据和训练成本 | 高 | 对特定任务可能更稳 | 高 |
+
+### 5. 进阶挑战
+
+选择一个微调方法，例如 LoRA / PEFT，写一页说明：
+
+- 它适合解决什么问题？
+- 不适合解决什么问题？
+- 需要什么数据？
+- 如何评估？
+- 如何判断“只改 prompt”已经不够？
+
+再输出一个短对比：
+
+| 对比项 | 只改 prompt | 模型适配 |
+| --- | --- | --- |
+| 启动成本 | 低 | 中高 |
+| 迭代速度 | 快 | 慢 |
+| 稳定风格 | 一般 | 更强 |
+| 新知识接入 | 需要上下文或 RAG | 不适合频繁更新 |
+| 风险 | 提示词脆弱 | 数据污染和过拟合 |
+
+## D. Web3 进阶：区块链底层、协议与执行环境
+
+### 1. 核心理解
+
+区块链不是一个普通数据库，EVM 也不是普通后端运行时。
+
+要把协议层、执行层、账户层和应用层分开看：
+
+| 层级 | 解决什么问题 | 例子 |
+| --- | --- | --- |
+| 协议层 | 网络规则、共识、安全假设 | PoS、区块、最终性 |
+| 执行层 | 如何执行交易并改变状态 | EVM、Gas、交易回执 |
+| 账户层 | 谁能发起动作，权限如何表达 | EOA、智能账户、多签 |
+| 应用层 | 用户实际交互和业务逻辑 | dApp、钱包、前端 |
+
+把这些层混成一个平面，就容易误以为“链上调用 = 普通 API 请求”。这是危险的。
+
+### 2. 区块、共识、EVM、Gas 分别解决什么
+
+| 概念 | 解决的问题 |
+| --- | --- |
+| 区块 | 把一批交易打包成可验证的状态更新单位 |
+| 共识 | 决定谁来确认状态，如何降低分叉和作恶风险 |
+| EVM | 为智能合约提供统一、确定性的执行环境 |
+| Gas | 给计算和存储定价，同时限制无成本滥用 |
+
+### 3. 链上执行不是普通后端调用
+
+| 对比 | 普通后端 | 链上执行 |
+| --- | --- | --- |
+| 状态可见性 | 通常由服务端控制 | 公开可验证 |
+| 执行成本 | 基础设施成本由服务方承担 | 用户或调用方支付 Gas |
+| 失败处理 | 可重试、可补偿、可改库 | 失败也可能消耗 Gas |
+| 权限控制 | 服务端鉴权 | 私钥签名、合约权限、多签 |
+| 升级方式 | 服务器发版 | 合约升级受权限和架构限制 |
+
+### 4. 进阶挑战
+
+写一段说明，解释：
+
+- 区块如何承载交易
+- 共识如何确认状态
+- EVM 如何执行合约
+- Gas 为什么既是费用也是执行约束
+
+再结合测试网体验，说明为什么链上执行不能简单理解成“普通后端调用”。
+
+## E. 最小交叉实验升级
+
+### 1. 核心 workflow
+
+```mermaid
+flowchart TD
+    A["用户提出目标"] --> B["AI 生成方案或代码"]
+    B --> C["人工复核"]
+    C --> D{"通过复核？"}
+    D -->|否| E["修改 prompt / 代码 / 参数"]
+    E --> B
+    D -->|是| F["测试网执行"]
+    F --> G["记录日志：输入、输出、hash、错误"]
+    G --> H{"测试网结果通过？"}
+    H -->|否| I["定位失败点并回滚到安全状态"]
+    I --> B
+    H -->|是| J["钱包提示"]
+    J --> K{"人工确认签名？"}
+    K -->|否| L["中止，不广播交易"]
+    K -->|是| M["链上执行"]
+    M --> N["交易回执和区块浏览器复核"]
+    N --> O["写入 repo 复盘"]
+```
+
+### 2. 失败点与回滚策略
+
+| 阶段 | 失败点 | 回滚或处理 |
+| --- | --- | --- |
+| AI 生成 | 代码错误、参数错、误解目标 | 人工复核、测试、重新生成 |
+| 测试网执行 | 合约 revert、Gas 不足、网络错误 | 保留日志，修复后重跑 |
+| 钱包确认 | 用户看不懂提示、授权范围过大 | 中止交易，解释风险 |
+| 链上执行 | 已广播但失败 | 记录回执和失败原因 |
+| 主网动作 | 不可逆、资金风险 | 事前限额、多签、人工确认 |
+
+### 3. 纯人工、AI 辅助、更自动化流程对比
+
+| 方式 | 优点 | 风险 | 适合阶段 |
+| --- | --- | --- | --- |
+| 纯人工 | 控制感强，风险可理解 | 慢，容易漏记录 | 初学概念、关键资金操作 |
+| AI 辅助 | 快速生成解释、代码和复盘 | 需要人工审查 | 学习、demo、测试网 |
+| 更自动化流程 | 可重复、可规模化 | 需要强 guardrails | 低风险固定任务 |
+
+### 4. 受限 Web3 助手设计
+
+可以做的事情：
+
+- 文档问答
+- 交易解释
+- 合约 ABI 说明
+- 测试网交互脚手架
+- 交易回执复盘
+- 风险检查清单
+
+不能自动执行的高风险动作：
+
+- 读取、保存或要求用户提供私钥 / 助记词
+- 自动签名
+- 自动主网转账
+- 自动无限授权
+- 自动部署高权限合约
+- 自动绕过钱包确认
+
+### 5. AI × Web3 安全执行序列
+
+```mermaid
+sequenceDiagram
+  participant U as User
+  participant A as AI Agent
+  participant R as Repo
+  participant T as Testnet
+  participant W as Wallet
+  participant E as Explorer
+
+  U->>A: Provide goal and constraints
+  A->>R: Generate notes, code, or scripts
+  U->>R: Review diff and tests
+  R->>T: Run testnet interaction
+  T-->>R: Return tx hash and receipt
+  A->>U: Explain result and risks
+  U->>W: Confirm only after review
+  W->>T: Broadcast signed transaction
+  T-->>E: Publish transaction data
+  E-->>R: Evidence for logs and review
+```
+
+## 参考资料
+
+- [OpenClaw repository](https://github.com/openclaw/openclaw)
+- [OpenClaw Skills docs](https://openclawcn.com/en/docs/agent/skills/)
+- [Hermes Agent docs](https://hermes-agent.app/en/docs)
+- [Hermes Agent repository](https://github.com/nousresearch/hermes-agent)
+- [OpenAI Agents SDK: Agents](https://openai.github.io/openai-agents-python/agents/)
+- [OpenAI Agents SDK: Handoffs](https://openai.github.io/openai-agents-python/handoffs/)
+- [OpenAI Agents SDK: Tracing](https://openai.github.io/openai-agents-python/tracing/)
+- [Hardhat](https://hardhat.org/)
+- [Foundry Getting Started](https://getfoundry.sh/introduction/getting-started/)
+- [viem Getting Started](https://viem.sh/docs/getting-started)
+- [wagmi docs](https://docs.wagmi.com/wagmi)
+- [OpenZeppelin Docs](https://docs.openzeppelin.com/)
+- [Hugging Face Transformers Fine-tuning](https://huggingface.co/docs/transformers/training)
+- [Hugging Face PEFT LoRA](https://huggingface.co/docs/peft/developer_guides/lora)
+- [Unsloth Docs](https://docs.unsloth.ai/)
+- [Ethereum Blocks](https://ethereum.org/en/developers/docs/blocks/)
+- [Ethereum Proof of Stake](https://ethereum.org/en/developers/docs/consensus-mechanisms/pos/)
+- [Ethereum EVM](https://ethereum.org/en/developers/docs/evm/)
+- [Ethereum Gas and Fees](https://ethereum.org/en/developers/docs/gas/)
+````
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 ````markdown
 # Week 1 模块 B：Web3 基础，账户、钱包、签名与链上执行
 
@@ -340,6 +759,7 @@ AI-native Account 的核心不是“让 AI 拿到钥匙”，而是“让 AI 在
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 ````markdown
 # Week 1 模块 A：AI 基础，从 LLM 到 Agent Workflow

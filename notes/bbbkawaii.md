@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+学习了 gas 机制，L1 和 L2 的关系，以及和 AI agent 的联系
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 学习了区块链浏览器、钱包、信任机制、支付生命周期相关的概念
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 笔记：Web3 资产控制的核心在于“私钥—算法—签名”的链条。私钥本质上是一串随机数，对于普通开发者而言，可以将 ECDSA 或 EDDSA 等签名算法视为一个“黑盒”，但必须深刻理解其输入输出。
 
