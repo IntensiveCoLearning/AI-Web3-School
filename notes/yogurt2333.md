@@ -15,8 +15,26 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+🧭 2026 核心趋势 Agents with Wallets — Agent 自己管钱自己花
+
+📦 项目全景表 基础设施层 / 钱包支付层 / 应用层，每个都有简介
+
+🔥 Base 链生态 目前 Agent 项目最活跃的 L2
+
+🎯 AdventureX 方向建议 3 个具体方向，标明了你和哥们的分工
+
+⚠️ 冷水/批判 安全风险、Agent 智能本质、入口依赖 Web2 等问题
+
+🔗 参考链接 今天提到的文章/视频链接全汇总
+
+🐸 今天吃了好吃的牛蛙 是第一次吃
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 Web3 底层原理
 
 **交易生命周期：** 本机签名 → RPC 广播 → 内存池排队（gas高优先）→ Builder打包 → 验证者共识 → 上链 → 12min Safe → 18min Finalized
@@ -41,6 +59,7 @@ Web3 底层原理
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
+
 \## 📋 5月19日学习总结
 
 \### ✅ 已完成
@@ -62,6 +81,7 @@ Web3 底层原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 📅 今天（Day 1）我干了什么
