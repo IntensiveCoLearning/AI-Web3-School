@@ -513,6 +513,7 @@ AI x Web3 School
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 # 📋 Day 1 结构化整理版（索引 + 分层重构）
 
 > 整理时间：2026-05-21  
@@ -1112,6 +1113,7 @@ Memory 包含
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 今日学习：2026年05月20日16:43:42，最小实践还没做，留在周六去搞
 
 # LLM
@@ -1575,6 +1577,7 @@ Context 分层之后，系统才更容易做三件事：
 
 
 
+
 不得不说，AI做的任务比自己做的任务列表好多了
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Aaroninggg/images/2026-05-19-1779178251564-image.png)
@@ -1582,6 +1585,7 @@ Context 分层之后，系统才更容易做三件事：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
