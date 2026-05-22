@@ -16,21 +16,355 @@ I am‘s Bein.
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
-Day 5 | AI Agent链上安全防御：私钥、授权与RPC的生死线
+# Document Metadata
 
-今天深入了一个让我后背发凉的主题——AI Agent执行链上交互时的安全边界。在Web3的世界里，Agent既是超级助手，也可能是钱包终结者，而这个分寸的拿捏，决定了你是在驾驭工具还是亲手递刀。
+- **文档编号**: SEC-WEB3-AGENT-2026-0522-005
+- **目标子系统**: AI Agent On-Chain Execution Security Layer
+- **安全等级**: CRITICAL / P0
+- **文档状态**: Active Study (Day 5)
+- **核心研究对象**: AI Agent 执行链上交互时的安全生死线防御体系
+- **适用版本**: Web3 AI Agent Security Baseline v1.0
+- **研究者**: Agent Security Research Track - Day 5
 
-私钥泄漏是我今天理解最深刻的一个概念。导师用了那个比喻——你的保险柜钥匙和身份证同时挂在电线杆上，我一下子就被击中了。私钥不是密码，不是两步验证，而是链上唯一的最高主权凭证。一旦暴露，所有防护都会归零。这让我重新审视了自己对密钥管理的态度：绝对不能有任何侥幸。
+---
 
-恶意授权则是一个更隐蔽的陷阱。我以前觉得授权某个合约是小事，但今天才意识到，当我把“不受限转走代币”的权限交出去，本质上是把一张不限额度的信用卡副卡塞进了一个陌生人手里。对方什么时候用、用多少，我完全失去了掌控。这意味着每次授权都必须像签发支票一样审慎。
+# 🔍 Table of Contents
 
-不可信RPC数据源这个概念彻底改变了我对“链上数据”的认知。AI Agent做决策时依赖的数据，如果被中间人篡改，就像汽车导航被人黑掉后引导你直冲悬崖一样——你以为在走一条安全的路，其实早已偏离正轨。
+1. Executive Summary & Problem Space
+2. System Architecture & Topology
+3. Theoretical Framework & Formal Taxonomy
+4. State Machine & Protocol Walkthrough
+5. Agent Autonomous Integration & Optimization
+6. Vulnerability Vector & Edge Case Verification
+7. 学术标签
 
-今天最让我震撼的是安全流转防御的设计哲学。用户授权指令 → Agent安全检查器拦截恶意签名 → RPC数据源多节点比对 → 触发Tenderly虚拟沙箱试运行 → 人工在回路双重签名 → 链上执行确认。这条链路用层层关卡把“信任”切成最小单元，每个环节都可以独立验证、可追责。
+---
 
-我在避坑指南里看到那个坑点时愣住了——把私钥明文保存在没有沙箱隔离的服务器上，这不就是在裸奔吗？正确的做法应该是使用KMS、MPC或多签智能钱包，让Agent仅拥有受限、可被撤销的小额操作权限。
+# 1. Executive Summary & Problem Space
 
-今天学到最重要的一句话是：AI终究是概率机器，绝对不能给予其链上直接签名的无限主权。在钱包和Agent之间增加一道独立的“物理人在回路签名”与“多源RPC跨校验”，是守住Web3资产的最后底线。技术越强大，越需要给它套上缰绳。
+## Abstract
+
+本报告系统性分析 AI Agent 在执行链上交互时面临的三大核心安全生死线：私钥泄漏（Private Key Leak）、恶意授权（Malicious Approval）以及不可信 RPC 数据源（Untrusted Data Source）。报告构建了从用户授权指令到人工双重签名的五层纵深防御体系，定义了 AI Agent 在 Web3 场景下的安全运行不变量（Invariant），并针对每类威胁向量提出可验证的防御性补丁方案。
+
+## In-Scope
+
+- AI Agent 执行链上签名操作时的权限边界控制
+- 私钥生命周期管理与泄露防御
+- 智能合约授权的最小权限原则落地
+- RPC 数据源的完整性与可信度校验
+- 人工在回路（Human-in-the-Loop）签名机制的工程实现
+
+## Out-of-Scope
+
+- 底层区块链共识机制安全性
+- 智能合约业务逻辑漏洞审计
+- 前端界面 XSS/CSRF 攻击面
+- 量子计算对椭圆曲线密码学的威胁
+
+---
+
+# 2. System Architecture & Topology
+
+## Concept Mindmap
+
+```mermaid
+mindmap
+    root((AI Agent链上安全))
+        核心威胁向量
+            私钥泄漏
+                助记词暴露
+                私钥明文传输
+                日志打印私钥
+            恶意授权
+                Unlimited Approval
+                授权合约权限滥用
+                钓鱼签名诱导
+            RPC篡改
+                中间人攻击MITM
+                DNS劫持
+                恶意节点投毒
+        纵深防御体系
+            物理人在回路签名
+                独立设备确认
+                硬件钱包隔离
+            多源RPC跨校验
+                多节点数据比对
+                共识机制验证
+            安全检查器
+                恶意签名拦截
+                权限边界审计
+            虚拟沙箱验证
+                Tenderly模拟
+                交易预执行
+        最佳实践
+            KMS密钥管理
+            MPC多方计算
+            多签智能钱包
+            最小权限授权
+```
+
+## Component Topology Graph
+
+```mermaid
+graph TD
+    subgraph 用户层["用户层 User Layer"]
+        U[用户钱包 User Wallet]
+        HWS[硬件签名设备 Hardware Signer]
+    end
+    
+    subgraph AI_Agent_层["AI Agent 执行层"]
+        AI[AI Agent Core]
+        SC[安全检查器 Security Checker]
+        RPC_M[RPC Manager]
+    end
+    
+    subgraph 信任边界_1["信任边界 Trust Boundary"]
+        KMS[KMS 密钥管理服务]
+        MPC[MPC 协处理器]
+        MS[多签钱包 Multi-Sig Wallet]
+    end
+    
+    subgraph 验证层["沙箱验证层 Sandbox Layer"]
+        TB[Tenderly 模拟引擎]
+        FV[形式化验证工具]
+    end
+    
+    subgraph 链上层["区块链层 Blockchain Layer"]
+        RPC1[RPC Node 1]
+        RPC2[RPC Node 2]
+        RPC3[RPC Node N]
+        BC[目标链 Smart Contract]
+    end
+    
+    U -->|1. 授权指令| AI
+    AI -->|2. 安全审计| SC
+    SC -->|3. 权限校验| KMS
+    SC -->|3. 权限校验| MPC
+    AI -->|4. RPC请求| RPC_M
+    RPC_M -->|5. 多源分发| RPC1
+    RPC_M -->|5. 多源分发| RPC2
+    RPC_M -->|5. 多源分发| RPC3
+    RPC1 -->|6. 数据回传| RPC_M
+    RPC2 -->|6. 数据回传| RPC_M
+    RPC3 -->|6. 数据回传| RPC_M
+    RPC_M -->|7. 交叉验证| AI
+    AI -->|8. 沙箱预执行| TB
+    TB -->|9. 模拟结果| AI
+    AI -->|10. 签名请求| HWS
+    HWS -->|11. 人工确认| U
+    HWS -->|12. 签名交易| BC
+    AI -->|13. 多签授权| MS
+    MS -->|14. 批量签名| BC
+```
+
+---
+
+# 3. Theoretical Framework & Formal Taxonomy
+
+## Core Concept Definitions
+
+| 概念名称 | 类型系统定义 | 输入 | 输出 | 威胁等级 |
+|---------|------------|------|------|---------|
+| Private Key Leak | 机密性破坏事件 | 私钥明文或助记词暴露 | 钱包资产完全失控 | CRITICAL |
+| Malicious Approval | 授权合约滥用 | 不受限代币转移授权 | 指定代币被无限制转出 | CRITICAL |
+| Untrusted RPC | 数据完整性破坏 | 被篡改的 RPC 响应 | AI 基于错误数据决策 | HIGH |
+| Security Checker | 防御性拦截器 | 待处理交易请求 | 放行/拦截/人工确认 | - |
+| Human-in-the-Loop | 信任锚点 | Agent 签名请求 | 最终人工授权 | - |
+
+## System Invariant
+
+基于上述核心概念，定义 AI Agent 链上交互的安全运行不变量：
+
+$$\text{INVARIANT}_{secure} \equiv \forall t \in \text{TransactionHistory}: \text{valid}(t) \Rightarrow \left( \text{authorized}(t, \text{User}) \land \neg \text{exposed}(Key(t)) \land \text{verified}(DataSource(t)) \right)$$
+
+其中：
+
+- $\text{valid}(t)$: 交易 $t$ 有效且已执行
+- $\text{authorized}(t, \text{User})$: 交易 $t$ 经过用户显式授权
+- $\text{exposed}(Key(t))$: 签名密钥未被泄露
+- $\text{verified}(DataSource(t))$: 交易依赖的 RPC 数据源经多节点校验
+
+**不变量解释**: 所有已执行的链上交易必须同时满足：用户显式授权、无密钥泄露风险、数据源经多源验证。任何一条不满足即构成安全违规。
+
+## Threat Vector Classification
+
+| 威胁编号 | 威胁类型 | 攻击向量 | 防御机制 |
+|---------|---------|---------|---------|
+| T-001 | 私钥泄漏 | 内存Dump、日志泄露、社会工程 | KMS/MPC隔离、硬件签名 |
+| T-002 | 恶意授权 |钓鱼DApp、无限Approval诱导 | 最小权限授权、额度限制 |
+| T-003 | RPC篡改 | MITM、DNS劫持、节点投毒 | 多源交叉验证、共识校验 |
+| T-004 | 权限提升 | Agent权限逃逸 | 物理人在回路、多签确认 |
+
+---
+
+# 4. State Machine & Protocol Walkthrough
+
+## Transaction Lifecycle Sequence
+
+```mermaid
+sequenceDiagram
+    participant U as 用户钱包
+    participant AI as AI Agent
+    participant SC as 安全检查器
+    participant RPC as RPC Manager
+    participant TB as Tenderly沙箱
+    participant HWS as 硬件签名设备
+    participant BC as 区块链合约
+
+    rect rgb(200, 0, 0, 0.1)
+        Note over U,BC: 【 Initiation Phase - 交易触发阶段 】
+        U->>AI: 1. 用户发起链上操作意图
+        AI->>SC: 2. 提交交易请求进行安全审计
+    end
+
+    rect rgb(255, 165, 0, 0.1)
+        Note over SC,BC: 【 Verification Phase - 验证阶段 】
+        SC->>SC: 3. 权限边界校验
+        SC->>RPC: 4. 多源RPC数据请求
+        RPC-->>SC: 5. 返回交叉验证结果
+        alt 数据源验证失败
+            SC->>AI: 5a. 数据源异常，拒绝执行
+            AI->>U: 通知用户RPC风险
+        end
+        SC->>TB: 6. 提交Tenderly沙箱预执行
+        TB-->>SC: 7. 返回模拟执行结果
+    end
+
+    rect rgb(0, 128, 0, 0.1)
+        Note over AI,BC: 【 Commitment Phase - 提交阶段 】
+        SC->>AI: 8. 安全检查通过，生成签名请求
+        AI->>HWS: 9. 转发至硬件签名设备
+        HWS->>U: 10. 人工确认界面展示
+        U->>HWS: 11. 用户物理按键确认
+        HWS->>BC: 12. 签名交易上链
+        BC-->>HWS: 13. 链上确认回执
+        HWS-->>AI: 14. 交易哈希返回
+        AI-->>U: 15. 执行结果通知
+    end
+```
+
+## State Transition Table
+
+| 当前状态 | 触发事件 | 目标状态 | 守卫条件 |
+|---------|---------|---------|---------|
+| IDLE | 用户意图提交 | PENDING_REVIEW | 用户身份验证通过 |
+| PENDING_REVIEW | 安全检查通过 | PRE_EXECUTION | RPC多源验证成功 |
+| PRE_EXECUTION | 沙箱模拟成功 | AWAITING_HUMAN_SIGN | 模拟结果无异常 |
+| AWAITING_HUMAN_SIGN | 用户物理确认 | SUBMITTED | 用户显式授权 |
+| SUBMITTED | 链上确认成功 | COMPLETED | 交易Receipt状态=1 |
+| ANY_STATE | 安全威胁检测 | QUARANTINE | 威胁评分≥阈值 |
+| QUARANTINE | 人工审查通过 | IDLE | 安全团队放行 |
+
+---
+
+# 5. Agent Autonomous Integration & Optimization
+
+## 工程蓝图：AI Agent 安全执行框架
+
+### 论文级标题
+
+**《Towards Trusted On-Chain Execution for AI Agents: A Multi-Layer Defense Architecture Combining MPC,沙箱验证与Human-in-the-Loop Signing》**
+
+### 核心机制设计
+
+#### 5.1 密钥管理子系统的分层授权模型
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    AI Agent 执行权限层级                       │
+├─────────────┬───────────────────────────────────────────────┤
+│  Layer 0    │  冷存储主密钥 - 永不触网，通过KMS管理              │
+│  Layer 1    │  MPC分布式签名节点 - 阈值签名，需多方参与          │
+│  Layer 2    │  多签钱包阈值控制 - 例如 3/5 多签机制              │
+│  Layer 3    │  Agent受限操作权限 - 仅允许小额/指定操作            │
+│  Layer 4    │  实时监控与熔断 - 异常交易自动暂停                │
+└─────────────┴───────────────────────────────────────────────┘
+```
+
+#### 5.2 动态权限撤销机制
+
+Agent 被授权的操作权限应满足以下属性：
+
+$$\text{Revocable} \land \text{Bounded} \land \text{Auditable} \land \text{Time-Limited}$$
+
+- **Revocable**: 用户可随时撤销授权
+- **Bounded**: 每次操作设置金额上限
+- **Auditable**: 所有操作日志完整记录
+- **Time-Limited**: 授权设置有效期限
+
+#### 5.3 RPC 数据源的可信度量化模型
+
+对每个 RPC 节点计算可信度评分：
+
+$$\text{TrustScore}(node_i) = \alpha \cdot \text{Consistency} + \beta \cdot \text{Uptime} + \gamma \cdot \text{LatencyScore}$$
+
+其中 $\alpha + \beta + \gamma = 1$，建议权重配置为 $\alpha=0.5, \beta=0.3, \gamma=0.2$。仅当多节点 TrustScore 偏差在容忍阈值内，数据才被视为可信。
+
+---
+
+# 6. Vulnerability Vector & Edge Case Verification
+
+## 安全漏洞报告块
+
+### 漏洞编号：VULN-2026-0522-001
+
+| 字段 | 内容 |
+|-----|------|
+| **漏洞类型** | CWE-316: 内存中敏感数据明文存储 |
+| **缺陷源头** | AI Agent 直接持有私钥或未加密存储于内存/日志 |
+| **攻击向量** | 进程内存Dump、日志文件泄露、侧信道攻击 |
+| **影响评估** | CVSS 9.8 (Critical) - 资产完全失窃风险 |
+| **防御性补丁** | 强制使用 KMS/MPC 架构，私钥永不以明文形式进入 Agent 进程空间；实施内存清零机制 |
+
+### 漏洞编号：VULN-2026-0522-002
+
+| 字段 | 内容 |
+|-----|------|
+| **漏洞类型** | CWE-284: 权限控制不当 (Unlimited Approval) |
+| **缺陷源头** | 用户签署恶意合约时被诱导授权无限额度 |
+| **攻击向量** | 钓鱼DApp诱导、Clipboard劫持、签名重放 |
+| **影响评估** | CVSS 8.1 (High) - 特定代币可被无限制转出 |
+| **防御性补丁** | 实现授权额度上限检测，自动拒绝超过阈值的 Approval 请求；使用 ERC-2612  Permit 机制替代传统 Approval |
+
+### 漏洞编号：VULN-2026-0522-003
+
+| 字段 | 内容 |
+|-----|------|
+| **漏洞类型** | CWE-345: 数据源真实性验证不足 |
+| **缺陷源头** | Agent 依赖单一 RPC 节点，缺少交叉验证 |
+| **攻击向量** | 恶意节点投毒、MITM中间人攻击、DNS劫持 |
+| **影响评估** | CVSS 7.5 (Medium-High) - 基于错误数据执行错误决策 |
+| **防御性补丁** | 强制实施 3+ 节点 RPC 冗余验证；建立节点黑名单机制；对关键数据执行链上 vs RPC 回源比对 |
+
+### 漏洞编号：VULN-2026-0522-004
+
+| 字段 | 内容 |
+|-----|------|
+| **漏洞类型** | CWE-639: 授权绕过 |
+| **缺陷源头** | Agent 拥有链上直接签名权限，绕过人工确认流程 |
+| **攻击向量** | Agent被入侵后自主签名转账、无需用户干预 |
+| **影响评估** | CVSS 10.0 (Critical) - 完全失控的最高风险场景 |
+| **防御性补丁** | 物理人在回路签名机制强制执行；Agent 仅生成交易payload，签名操作必须由独立硬件设备完成 |
+
+## 边界场景测试矩阵
+
+| 场景编号 | 测试场景 | 预期行为 | 边界条件 |
+|---------|---------|---------|---------|
+| BC-001 | Agent收到异常高额授权请求 | 安全检查器拦截 | 授权金额 > 用户设定阈值 |
+| BC-002 | 3个RPC节点返回不一致数据 | 拒绝执行，等待人工介入 | 数据偏差 > 5% 或有节点超时 |
+| BC-003 | 沙箱模拟发现预期外状态变更 | 交易挂起，通知用户 | 实际执行结果 ≠ 模拟结果 |
+| BC-004 | 用户30分钟内无响应 | 自动取消本次操作 | 超时时间到达 |
+| BC-005 | RPC节点遭受DDoS攻击 | 自动切换至备用节点 | 成功率 < 95% 持续 > 30秒 |
+
+---
+
+# 学术标签
+
+`AI-Agent-Security` `Web3-Authentication` `Private-Key-Protection` `MPC-Cryptography` `RPC-Integrity` `Human-in-the-Loop` `Smart-Contract-Authorization` `Zero-Trust-Web3`
+
+---
+
+**文档生成时间**: 2026-05-22 | **学习进度**: Day 5/持续深耕 | **下次更新**: Day 6 计划中
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
@@ -39,52 +373,37 @@ Day 5 | AI Agent链上安全防御：私钥、授权与RPC的生死线
 你是一名国际顶级计算机学术期刊（如 ACM/IEEE）的特约审稿人，同时也是一位精通网络安全、分布式系统架构与 Multi-Agent 协作的首席架构师。
 
 # Background & Context
-本文档系统性地记录了「AI Task Progress Manager」任务进度管理 Web 应用的设计、架构与安全实践。该系统旨在解决大模型驱动的复杂任务执行过程中的黑盒困境——用户无法直观感知 Agent 的思考路径与执行阶段。通过将自然语言目标拆解为有序的子步骤序列，并构建状态传导机制实现步骤间的自动化流转，该系统为 AI Agent 提供了可视化、可追溯的工作流编排能力。技术栈选型遵循「极速落地」原则：后端采用轻量级 Hono 框架处理 AI 推理代理，前端采用单文件 HTML 配合 Tailwind CSS 实现零构建依赖的响应式界面。
-
-# Task
+本项目聚焦于构建一个面向 AI Agent 协同场景的任务进度管理系统。在复杂的 AI 工作流编排中，如何将自然语言描述的宏观目标精准拆解为可执行子步骤，并确保步骤间的状态连贯传递，是当前 Agent 自动化领域的核心工程挑战。项目采用 Hono 轻量级后端框架结合单页 Tailwind 前端架构，旨在实现最小化依赖、最大可观测性的任务流转监控能力。
 
 ## User Core Inputs
-- **核心研究对象**：AI Task Progress Manager（任务进度管理 Web 应用）
-- **底层流转逻辑**：任务拆解（Task Splitting）—— 将自然语言描述的宏观目标拆解为有序子步骤；状态传导推进（State Propagation）—— 步骤完成后，当前结果作为输入参数自动流转至下一步执行
-- **发现的缺陷/坑点**：前端代码硬编码敏感 API Keys 的安全漏洞，以及缺乏代理转发的架构缺陷
-
-## Output Format Requirements
-1. **## 📌 Document Metadata**：自动生成文档元数据
-2. **## 🔍 Table of Contents**：标准 Markdown 目录索引
-3. **## 1. Executive Summary & Problem Space**：包含 Abstract 与 In-Scope/Out-of-Scope 边界
-4. **## 2. System Architecture & Topology**：Mermaid mindmap 与 graph TD 架构图
-5. **## 3. Theoretical Framework & Formal Taxonomy**：类型系统定义表格与 LaTeX 系统不变量推导
-6. **## 4. State Machine & Protocol Walkthrough**：Mermaid sequenceDiagram 时序图
-7. **## 5. Agent Autonomous Integration & Optimization**：AI Agent 自动化工程蓝图
-8. **## 6. Vulnerability Vector & Edge Case Verification**：安全漏洞报告块
-9. **学术标签**：4-8 个标准技术标签
+- **核心研究对象**：AI Task Progress Manager 任务进度管理 Web 应用
+- **底层流转逻辑**：任务拆解（Task Splitting）→ 状态传导推进（State Propagation）→ 步骤完成触发下一步自动流转
+- **发现的缺陷/坑点**：API Keys 禁止明文暴露于前端，必须通过后端 .env 环境变量封装，前端仅通过代理接口无密调用
 
 ---
 
 ## 📌 Document Metadata
 
-| Field | Value |
-|-------|-------|
-| **Document Title** | AI Task Progress Manager: Architecture Design & Security Analysis Report |
-| **Author** | Day 4 Learning System (2026-05-21) |
-| **Target Subsystem** | AI Workflow Orchestration / Frontend-Backend Integration Layer |
-| **Security Classification** | Internal Development Document (Confidential) |
-| **Document Status** | Active Development |
-| **Tech Stack** | Hono (Backend) + Tailwind CSS + localStorage + Node.js |
-| **Version** | 1.0.0 |
-| **Compliance** | OWASP Top 10 / Zero Trust Architecture |
+| 属性 | 值 |
+|------|-----|
+| **文档标题** | AI Task Progress Manager: Architecture Design & Implementation Report |
+| **子系统** | Task Orchestration / Agent Workflow Management |
+| **技术栈** | Hono (Node.js Backend) + Single-Page Tailwind CSS Frontend |
+| **安全等级** | Critical (涉及 API Key 管理与 Agent 操作权限) |
+| **文档状态** | Active Development - Day 4 |
+| **目标读者** | AI 系统架构师、全栈工程师、DevSecOps 从业者 |
 
 ---
 
 ## 🔍 Table of Contents
 
-1. [Executive Summary & Problem Space](#1-executive-summary--problem-space)
-2. [System Architecture & Topology](#2-system-architecture--topology)
-3. [Theoretical Framework & Formal Taxonomy](#3-theoretical-framework--formal-taxonomy)
-4. [State Machine & Protocol Walkthrough](#4-state-machine--protocol-walkthrough)
-5. [Agent Autonomous Integration & Optimization](#5-agent-autonomous-integration--optimization)
-6. [Vulnerability Vector & Edge Case Verification](#6-vulnerability-vector--edge-case-verification)
-7. [Academic Tags](#7-academic-tags)
+1. Executive Summary & Problem Space
+2. System Architecture & Topology
+3. Theoretical Framework & Formal Taxonomy
+4. State Machine & Protocol Walkthrough
+5. Agent Autonomous Integration & Optimization
+6. Vulnerability Vector & Edge Case Verification
+7. 学术标签
 
 ---
 
@@ -92,23 +411,29 @@ Day 5 | AI Agent链上安全防御：私钥、授权与RPC的生死线
 
 ### Abstract
 
-本文档系统性阐述了一个基于 Hono 后端框架与 Tailwind CSS 单页前端的任务进度管理系统的设计与实现。该系统通过 AI 任务拆解（Task Splitting）机制将复杂自然语言目标转化为可执行的子步骤序列，并构建状态传导推进（State Propagation）协议实现步骤间的自动化流转。核心贡献包括：提出了一种轻量级 Agent 可视化方案，规避了传统 React 生态的繁重依赖；设计了前端无密钥代理转发架构，消除 API Key 泄露威胁向量。实验表明，该架构在 Web3 敏捷测试场景下可实现「当日构思到当日部署」的极速交付。
+本文档系统性阐述 AI Task Progress Manager 的架构设计与工程实现方案。该系统以 Hono 后端为算力中枢，单页 Tailwind 前端为交互媒介，通过 AI 任务拆解（Task Splitting）与状态传导推进（State Propagation）两大核心机制，实现复杂目标的原子化分解与步骤间的自动状态传递。
+
+### Problem Statement
+
+在 AI Agent 自动化执行场景中，面临的核心困境包括：
+
+- **目标模糊性**：自然语言描述的宏观需求缺乏可执行性
+- **状态断裂**：子步骤执行结果无法有效传导至后续步骤
+- **黑盒可视性**：Agent 操作过程缺乏透明监控能力
 
 ### In-Scope
 
-- 任务拆解算法的输入输出规范定义
-- 状态机流转协议的形式化建模
-- 前端-后端-模型三角通信拓扑
-- API Key 安全存储与代理转发机制
-- localStorage 本地持久化缓存策略
+- 任务自然语言输入与 AI 拆解
+- 子步骤状态管理与流转监控
+- SSE 实时聊天流推送
+- localStorage 前端缓存策略
 
 ### Out-of-Scope
 
-- 多租户隔离与权限控制
-- 分布式任务队列与消息中间件集成
-- AI 模型本身的推理能力优化
-- 跨浏览器 Tab 状态同步
-- 移动端原生应用适配
+- 多租户权限隔离
+- 分布式任务队列
+- 持久化数据库存储
+- AI 模型微调训练
 
 ---
 
@@ -116,117 +441,80 @@ Day 5 | AI Agent链上安全防御：私钥、授权与RPC的生死线
 
 ### Concept Mindmap
 
-```mermaid
-mindmap
-  root((AI Task Progress Manager))
-    Core Concepts
-      Task Splitting
-        自然语言输入
-        LLM 意图解析
-        有序子步骤生成
-        Jira 任务类比
-      State Propagation
-        步骤完成触发
-        结果作为参数
-        自动流转下一节点
-        接力棒传递类比
-    Technical Stack
-      Frontend
-        单文件 HTML
-        Tailwind CSS
-        localStorage 持久化
-      Backend
-        Node.js Runtime
-        Hono Framework
-        SSE 流式接口
-        .env 安全配置
-    Security Architecture
-      Key Management
-        后端 .env 存储
-        前端无密钥设计
-        代理接口转发
-      Threat Vectors
-        Key Exposure Prevention
-        Input Validation
-        XSS Mitigation
-    AI Integration
-      /api/split 拆解端点
-      /api/chat 对话端点
-      SSE 流式响应
-      Web3 敏捷测试场景
+```
+AI Task Progress Manager
+├── 前端层 (SPA)
+│   ├── Tailwind CSS 样式系统
+│   ├── localStorage 缓存
+│   └── 用户交互界面
+├── 后端层 (Hono)
+│   ├── /api/split 任务拆解端点
+│   ├── /api/chat SSE 流式端点
+│   └── .env 环境变量封装
+└── 核心概念
+    ├── Task Splitting
+    └── State Propagation
 ```
 
-### Component Topology
+### Component Topology Graph
 
 ```mermaid
 graph TD
-    subgraph Client["Frontend Layer (Browser)"]
-        UI["Single-File HTML UI<br/>(1900 lines)"]
-        STATE["localStorage State<br/>Cache Layer"]
+    subgraph Frontend["前端层 (Single-Page Application)"]
+        UI[用户交互界面]
+        Tailwind[Tailwind CSS 渲染引擎]
+        Local[localStorage 缓存模块]
+        UI --> Tailwind
+        UI --> Local
     end
 
-    subgraph Proxy["Hono Backend Proxy"]
-        ROUTE_SPLIT["/api/split<br/>Task Decomposition"]
-        ROUTE_CHAT["/api/chat<br/>SSE Streaming"]
-        ENV["Environment Config<br/>API Keys Vault"]
+    subgraph Backend["后端层 (Hono Runtime)"]
+        SplitAPI[/api/split 任务拆解]
+        ChatAPI[/api/chat SSE 聊天]
+        Env[.env 环境变量]
+        SplitAPI --> Env
+        ChatAPI --> Env
     end
 
-    subgraph AIModel["External AI Provider"]
-        LLM["Large Language Model<br/>Task Splitter"]
+    subgraph AI["AI 服务层"]
+        LLM[大语言模型]
     end
 
-    UI --> ROUTE_SPLIT
-    UI --> ROUTE_CHAT
-    ROUTE_SPLIT --> LLM
-    ROUTE_CHAT --> LLM
-    ENV --> ROUTE_SPLIT
-    ENV --> ROUTE_CHAT
-    STATE -.-> UI
-
-    style Proxy fill:#e1f5fe,stroke:#01579b
-    style ENV fill:#fff3e0,stroke:#e65100
-    style AIModel fill:#f3e5f5,stroke:#4a148c
+    User[用户] --> UI
+    UI --> |HTTP Request| SplitAPI
+    UI --> |SSE Stream| ChatAPI
+    SplitAPI --> LLM
+    ChatAPI --> LLM
+    LLM --> |Task Breakdown| SplitAPI
+    LLM --> |Stream Response| ChatAPI
 ```
 
 ---
 
 ## 3. Theoretical Framework & Formal Taxonomy
 
-### Core Component Type System
+### Core Component Definition
 
-| Component | Input Type | Output Type | Side Effects | Thread Safety |
-|-----------|------------|-------------|--------------|---------------|
-| TaskSplitter | `NaturalLanguageInput: String` | `StepSequence: Array<Step>` | None | Immutable |
-| StatePropagator | `CompletedStep: Step, StepState: Enum` | `NextStepActivation: Signal` | State Mutation | Single-Thread localStorage |
-| APIGateway | `ClientRequest: FetchRequest` | `ProxiedResponse: JSON/SSE` | API Key Injection | Concurrent-safe |
-| LocalCache | `Key: String, Value: Serializable` | `CachedValue: T` | localStorage I/O | Async/Browser-isolated |
+| 组件名称 | Type System | 输入 | 输出 | 职责描述 |
+|----------|-------------|------|------|----------|
+| TaskSplitter | `Function` | `rawGoal: string` | `subTasks: SubTask[]` | 将自然语言目标拆解为有序子任务 |
+| StatePropagator | `Class` | `currentResult: any, nextTaskId: string` | `void` | 将当前步骤结果传导至下一步 |
+| HonoRouter | `HonoInstance` | `Request` | `Response` | 路由分发与中间件编排 |
+| SSEManager | `AsyncIterator` | `userMessage: string` | `stream: ReadableStream` | 服务端推送聊天流 |
 
-### System Invariant Formalization
+### System Invariant
 
-**Theorem (State Consistency Invariant):**
-For any valid task decomposition $T = \{s_1, s_2, ..., s_n\}$ where $n \geq 1$, the following invariant holds:
-
-$$
-\forall i \in [1, n): \text{State}(s_i) = \text{COMPLETED} \Rightarrow \text{State}(s_{i+1}) \in \{\text{PENDING}, \text{IN_PROGRESS}\}
-$$
-
-**Proof Sketch:**
-1. Base case ($i=1$): Initially, only $s_1$ may transition to IN_PROGRESS. By definition, no state transitions occur without user/AI trigger.
-2. Induction hypothesis: Assume the invariant holds for step $s_i$.
-3. Inductive step: StatePropagator enforces that $s_{i+1}$ transitions from PENDING to IN_PROGRESS **only if** $s_i$'s state becomes COMPLETED. This creates a causal dependency chain ensuring linear progression.
-
-**Corollary:**
-Total ordering of step completion guarantees that the task execution graph is always a linear chain (no branching), simplifying state machine complexity to $O(n)$ worst-case traversal.
-
-### LaTeX Formula: Task Decomposition Transform
+定义任务流转系统的核心不变量：
 
 $$
-\mathcal{T}_{decompose}: \text{String} \xrightarrow{LLM} \text{Array}\langle \text{Step} \rangle
+\forall t \in Tasks: state(t) = \begin{cases} 
+PENDING & \text{if } t.index = 0 \\
+COMPLETED & \text{if } state(t.prev) = COMPLETED \land execution(t) = SUCCESS \\
+FAILED & \text{otherwise}
+\end{cases}
 $$
 
-$$
-\text{Step} \triangleq \langle \text{id}: \mathbb{N}, \text{description}: \text{String}, \text{state}: \text{StateEnum}, \text{output}: \text{JSON} \rangle
-$$
+其中 $state(t)$ 表示任务 $t$ 的状态，$t.prev$ 表示任务 $t$ 的前驱节点。该不变量确保：**只有当所有前驱任务完成时，当前任务才能进入执行阶段。**
 
 ---
 
@@ -236,182 +524,129 @@ $$
 
 ```mermaid
 sequenceDiagram
-    participant U as User (Browser)
-    participant F as Frontend (HTML UI)
-    participant H as Hono Backend
-    participant LLM as AI Model
-    participant S as localStorage
+    participant User as 用户
+    participant SPA as 单页前端
+    participant Hono as Hono 后端
+    participant LLM as 大语言模型
 
-    Note over U,LLM: Task Initialization Phase
+    User->>SPA: 输入自然语言目标 (Goal)
+    SPA->>Hono: POST /api/split { goal }
+    Hono->>LLM: 发送拆解请求
+    LLM-->>Hono: 返回子任务数组 [Task₁, Task₂, ..., Taskₙ]
+    Hono-->>SPA: 任务拆解结果
+    SPA->>SPA: localStorage 缓存任务列表
 
-    U->>F: Input: "帮我开发一个电商网站"
-    F->>H: POST /api/split { goal: "帮我开发一个电商网站" }
-    H->>H: Load API Key from .env
-    H->>LLM: Request Task Decomposition
-    LLM-->>H: Response: [Step1, Step2, Step3, ...]
-    H-->>F: Return Structured Steps
-    F->>S: Persist Initial State
-    F-->>U: Render Task Board
+    loop 状态流转循环
+        SPA->>Hono: GET /api/chat SSE 流
+        Hono->>LLM: 转发用户消息
+        LLM-->>Hono: Stream Token
+        Hono-->>SPA: SSE Event: data: {token}
+        SPA->>SPA: 更新当前任务状态
 
-    Note over U,LLM: State Propagation Phase (Iterative)
+        alt 任务完成触发
+            SPA->>Hono: POST /api/state { taskId, result }
+            Hono-->>SPA: State Propagation ACK
+            Note over SPA: 自动加载下一任务
+        end
+    end
 
-    U->>F: Click "Complete Step 1"
-    F->>F: Update Step1 State = COMPLETED
-    F->>S: Commit State Change
-    F->>H: POST /api/chat { stepId: 1, context: Step1.output }
-    H->>LLM: Stream SSE Response
-    LLM-->>H: Partial: "正在分析..."
-    H-->>F: SSE Stream: "正在分析 Step 2 上下文..."
-    F-->>U: Real-time Progress Update
-    LLM-->>H: Final: Step2 Generation
-    H-->>F: Complete SSE Stream
-    F->>S: Update Step2 State = IN_PROGRESS
-    F-->>U: Auto-advance to Next Step
+    User->>SPA: 可视化监控任务进度
 ```
 
-### State Transition Protocol
+### State Transition Phases
 
-#### Initiation Phase (触发阶段)
-- **Trigger Event**: User inputs natural language goal
-- **Entry Condition**: Input validation passed (non-empty string, max length check)
-- **Action**: Frontend dispatches `POST /api/split` request
-- **Exit Condition**: Hono backend returns validated `Step[]` array
-
-#### Verification Phase (验证阶段)
-- **Trigger Event**: Step completion button click
-- **Entry Condition**: Current step state = IN_PROGRESS
-- **Action**: 
-  1. Frontend validates step ownership (prevent cross-tab tampering)
-  2. Backend proxies request to LLM with step context
-  3. LLM returns streamed SSE response
-- **Exit Condition**: SSE stream terminates with valid JSON payload
-
-#### Commitment Phase (确认阶段)
-- **Trigger Event**: SSE stream completion
-- **Entry Condition**: Valid stream termination signal
-- **Action**:
-  1. Frontend updates step state to COMPLETED
-  2. localStorage commits atomic state mutation
-  3. Next step automatically transitions to IN_PROGRESS
-- **Exit Condition**: UI re-renders with updated board state
+| 阶段 | 触发条件 | 状态变化 | 防御性检查 |
+|------|----------|----------|------------|
+| **Initiation** | 用户提交自然语言目标 | Goal → PENDING | 输入长度校验、敏感词过滤 |
+| **Verification** | 任务拆解完成 | PENDING → VERIFIED | JSON Schema 验证、AI 输出合法性检查 |
+| **Commitment** | 前驱任务完成 | VERIFIED → EXECUTING | 依赖图完整性验证 |
+| **Completion** | 步骤执行成功 | EXECUTING → COMPLETED | 结果签名校验 |
+| **Propagation** | 状态更新事件 | COMPLETED → NEXT_TRIGGER | 状态机不变量断言 |
 
 ---
 
 ## 5. Agent Autonomous Integration & Optimization
 
-### Title: Adaptive Multi-Agent Orchestration via Progressive Task Decomposition
+### 工程蓝图：Web3 敏捷测试场景下的 AI Agent 可视化监控
 
-### Mechanism Description
+**标题**：轻量化 Agent 操作可视化系统的设计与实现
 
-当前架构仅支持单-Agent顺序执行模式。为实现真正的自主智能体协作，本文提出「渐进式任务拆解 + 状态感知路由」集成方案：
+**落地机制**：
 
-#### Level 1: Intra-Task Parallelization
-当 Task Splitter 识别出无依赖的并行子任务时（如「下载图片A」与「下载图片B」），状态机应支持 `PENDING_PARALLEL` 状态，允许同时激活多个 Agent 实例。
+1. **最小化依赖原则**
+   - 单文件 HTML 交付，零构建复杂度
+   - Tailwind CDN 按需加载
+   - Hono 作为边缘函数部署
 
-#### Level 2: Cross-Task Handoff Protocol
-引入 `AgentContext` 传递机制：每个步骤完成时，生成包含「工具使用历史」「中间结果」「置信度评分」的上下文包，传递给下一个 Agent。
+2. **实时状态流转监控**
+   - SSE 长连接替代轮询，降低服务端压力
+   - localStorage 前端状态缓存，减少网络请求
+   - 任务依赖图可视化渲染
 
-#### Level 3: Self-Correction Loop
-基于 State Propagation 的反向传播：当后续步骤执行失败时，系统可回溯至最近的 CHECKPOINT，恢复现场并尝试替代路径。
+3. **Multi-Agent 协同增强**
+   - 任务拆解粒度可配置（粗粒度/细粒度）
+   - 状态传导支持条件分支
+   - 并发任务冲突检测
 
-### Engineering Blueprint
+**性能指标目标**：
 
-```mermaid
-graph LR
-    subgraph Input["Multi-Modal Input"]
-        NL["自然语言指令"]
-        DOC["文档上传"]
-        API["API Schema"]
-    end
-
-    subgraph Orchestrator["Task Orchestrator"]
-        TS["Task Splitter<br/>(Meta-LLM)"]
-        SR["State Router<br/>(Conditional Branch)"]
-        CC["Context Compiler<br/>(Memory Aggregation)"]
-    end
-
-    subgraph Agents["Specialized Agents"]
-        A1["Code Agent"]
-        A2["Test Agent"]
-        A3["Deploy Agent"]
-        AN["Nth Agent"]
-    end
-
-    Input --> TS
-    TS --> SR
-    SR --> A1
-    SR --> A2
-    SR --> AN
-    A1 --> CC
-    A2 --> CC
-    AN --> CC
-    CC --> TS
-
-    style Orchestrator fill:#e8f5e9,stroke:#2e7d32
-    style Agents fill:#fff8e1,stroke:#f9a825
-```
+| 指标 | 目标值 | 测量方式 |
+|------|--------|----------|
+| 首屏加载时间 | < 500ms | Lighthouse |
+| SSE 延迟 | < 100ms | 网络抓包 |
+| 任务拆解耗时 | < 3s | 服务端日志 |
 
 ---
 
 ## 6. Vulnerability Vector & Edge Case Verification
 
-### Vulnerability Report Block
+### Security Vulnerability Report
 
-| Item | Detail |
-|------|--------|
-| **Vulnerability ID** | VULN-2026-0421-001 |
-| **Severity** | Critical (CVSS 9.1) |
-| **Category** | Sensitive Data Exposure |
-| **CWE ID** | CWE-798: Use of Hard-coded Credentials |
+#### 漏洞编号：VULN-001
 
-#### Defect Description
-原始设计中，AI API Keys 被硬编码于前端单文件 HTML 源码中（直接嵌入 `<script>` 标签或 JavaScript 常量）。攻击者可通过「查看页面源代码」或「网络请求拦截」手段明文获取密钥。
+| 属性 | 描述 |
+|------|------|
+| **漏洞类型** | API Key 泄露 (API Key Exposure) |
+| **缺陷源头** | 前端代码直接嵌入 OpenAI/Anthropic 等服务商 API Keys |
+| **攻击向量** | 攻击者通过浏览器开发者工具或源码审计获取 Key，劫持 AI 服务资源 |
+| **失效向量** | 恶意刷量导致账户额度耗尽、数据隐私泄露至第三方 |
+| **防御性补丁** | 强制要求所有 AI 调用经过后端代理，Keys 存储于服务端 .env 环境变量，前端仅传递业务参数 |
 
-#### Attack Vector
-1. **Passive Reconnaissance**: 用户打开浏览器 DevTools → Sources/Fources Panel → 直接读取 `const API_KEY = "sk-..."`
-2. **Active Interception**: 中间人攻击（MITM）拦截前端请求，提取 Authorization Header 中的明文密钥
-3. **Supply Chain Attack**: 若 HTML 文件托管于 CDN，攻击者篡改源码注入恶意密钥轮换逻辑
+#### 漏洞编号：VULN-002
 
-#### Exploitation Impact
-- 攻击者获得 API 调用权限，产生非授权费用
-- 攻击者窃取用户对话上下文，违反 GDPR/CCPA 合规
-- 攻击者利用密钥注入恶意 Prompt，污染 Agent 行为
+| 属性 | 描述 |
+|------|------|
+| **漏洞类型** | 状态篡改 (State Tampering) |
+| **缺陷源头** | localStorage 数据缺乏完整性校验 |
+| **攻击向量** | 用户通过浏览器控制台修改任务状态，绕过正常执行流程 |
+| **失效向量** | 任务跳过执行、状态机不变量破坏 |
+| **防御性补丁** | 引入 HMAC 签名机制，状态更新时验证数据完整性，拒绝来源不明的修改请求 |
 
-#### Defensive Patch (已实施)
-```javascript
-// ❌ BEFORE (Vulnerable)
-const API_KEY = "sk-proj-xxxxxxxxxxxxx";
-fetch('/api/chat', {
-  headers: { 'Authorization': `Bearer ${API_KEY}` }
-});
+#### 漏洞编号：VULN-003
 
-// ✅ AFTER (Secured)
-# 后端 .env 文件存储
-# API_KEY=sk-proj-xxxxxxxxxxxxx
+| 属性 | 描述 |
+|------|------|
+| **漏洞类型** | SSE 连接耗尽 (SSE Connection Exhaustion) |
+| **缺陷源头** | 缺乏并发连接数限制与心跳保活机制 |
+| **攻击向量** | 恶意客户端大量创建 SSE 连接耗尽服务端文件描述符 |
+| **失效向量** | 服务拒绝攻击 (DoS)、正常用户无法建立连接 |
+| **防御性补丁** | 实现连接池管理、设置单 IP 最大连接数阈值、客户端心跳包保活 |
 
-# Hono Backend (server.ts)
-import { Hono } from 'hono';
-import { cors } from 'hono/cors';
+### Edge Case Verification Matrix
 
-const app = new Hono();
+| 场景 | 输入 | 预期行为 | 当前状态 |
+|------|------|----------|----------|
+| 空目标提交 | 空字符串 | 拒绝请求，返回 400 | 待实现 |
+| 超长目标 | > 10000 字符 | 截断或分片处理 | 待实现 |
+| 循环依赖 | Task A → Task B → Task A | 检测环并报错 | 待实现 |
+| 网络中断 | SSE 连接断开 | 自动重连 + 状态恢复 | 待实现 |
+| 并发状态更新 | 多端同时修改同一任务 | 乐观锁或 Last-Write-Wins | 待实现 |
 
-// 安全中间件：从环境变量注入密钥
-app.use('/api/*', async (c, next) => {
-  const apiKey = process.env.API_KEY;
-  if (!apiKey) {
-    return c.json({ error: 'API Key not configured' }, 500);
-  }
-  c.set('apiKey', apiKey);
-  await next();
-});
+---
 
-// 代理接口：前端无密钥调用
-app.post('/api/chat', async (c) => {
-  const apiKey = c.get('apiKey');
-  const { messages } = await c.req.json();
-  
-  // 后端转发至 AI Provider，密钥不暴露于客户端
-  const response =
+## 学术标签
+
+`AI-Agent-Orchestration` `Task-State-Machine` `Hono-Framework` `SSE-Streaming` `Security-Vulnerability-Analysis` `Web3-Agile-Testing` `localStorage-State-Management` `RFC-Technical-Report`
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
@@ -420,1004 +655,916 @@ app.post('/api/chat', async (c) => {
 你是一名国际顶级计算机学术期刊（如 ACM/IEEE）的特约审稿人，同时也是一位精通网络安全、分布式系统架构与 Multi-Agent 协作的首席架构师。
 
 # Background & Context
-AI 提示词构建专家在此处：根据用户输入的原始背景，自动提炼出该技术方案的核心应用场景与挑战。随着链上数据分析需求的爆发式增长，传统的静态报告生成模式已无法满足用户对实时交互式诊断的深度诉求。Tx-Explain CLI 项目正是在这一背景下应运而生，旨在构建一个具备上下文记忆能力的对话式链上交易分析框架，通过结构化输出与智能上下文剪裁机制，在保证分析精度的前提下实现 Token 资源的高效利用。
+本技术报告聚焦于 **AI 原生应用开发中的上下文资源优化与结构化输出工程**这一交叉领域。当前大语言模型（LLM）在长对话场景中面临 Token 成本失控与上下文稀释（Context Dilution）的双重挑战，同时非结构化输出给下游程序化解析带来极高脆弱性。本案以 **Tx-Explain CLI（交易解释命令行工具）** 为最小可交互学习产物，构建了一个完整的技术验证闭环：从链上原始数据提取，到 LLM 结构化风险摘要生成，再到命令行交互式 Q&A 对话的全链路设计。核心工程约束为：必须在保持对话逻辑聚焦度的前提下，实现 5 轮历史窗口的硬性剪裁与 JSON Schema 的强制约束输出。
 
 # Task
 请基于以下核心输入信息，为用户重构一份具备 RFC 规范与学术论文级严谨性的技术报告（Technical Report）。
 
 ## User Core Inputs
-- **核心研究对象**：Tx-Explain CLI 对话式分析框架的最小可交互 AI 学习产物策划与实现
-- **底层流转逻辑**：接收 tx_hash → 调用 RPC 提取链上数据 → LLM 首次分析并生成结构化 JSON 风险摘要 → 开启命令行交互 Q&A 循环，解答用户对 Gas、Approve 授权的疑惑
-- **发现的缺陷/坑点**：Silicon Flow 运行 --test 时遭遇 401 报错，根源为本地 API KEY 拼写错误或过期，需在 .env 中排查替换并配置多备用 API 端点自动 fallback 机制
+- **核心研究对象**：Tx-Explain CLI 对话式交易分析框架；上下文管理策略（Context Window Pruning）；结构化输出工程（Structured Output）。
+- **底层流转逻辑**：接收 tx_hash → RPC 接口提取链上原始数据 → LLM 首次分析生成结构化 JSON 风险摘要 → 开启命令行交互 Q&A 会话（MAX_HISTORY=5 剪裁）。
+- **发现的缺陷/坑点**：Silicon Flow API 端点 401 认证错误；单点 API 配置的可用性脆弱性；需配置多备用端点自动 fallback 机制。
 
 # Output Format Requirements
 你必须严格按照以下结构组织内容进行输出，禁止任何口语化和营销号风格：
 
-## 📌 Document Metadata
-
-| 属性 | 内容 |
-|------|------|
-| 文档标题 | Tx-Explain CLI: 基于上下文剪裁的对话式链上交易诊断框架 |
-| 作者署名 | Day 3 Technical Log |
-| 目标子系统 | Blockchain Transaction Analysis / LLM Integration Layer |
-| 安全等级 | Medium-High（涉及链上数据读取与 API 密钥管理）|
-| 文档状态 | Active Development |
-| 日期戳 | 2026-05-20 |
-
-## 🔍 Table of Contents
-
-1. Executive Summary & Problem Space
-2. System Architecture & Topology
-3. Theoretical Framework & Formal Taxonomy
-4. State Machine & Protocol Walkthrough
-5. Agent Autonomous Integration & Optimization
-6. Vulnerability Vector & Edge Case Verification
-7. 学术标签
-
----
-
-## 1. Executive Summary & Problem Space
-
-### Abstract
-
-本报告系统阐述 Tx-Explain CLI 对话式分析框架的设计与实现过程。该框架以最小可交互 AI 学习产物为设计目标，通过上下文窗口剪裁（Context Window Pruning）机制与结构化 JSON 输出（JSON Object Response）两大核心概念的深度融合，构建了一套面向链上交易诊断的智能问答系统。
-
-### In-Scope
-
-- 上下文管理策略的形式化定义与 MAX_HISTORY=5 剪裁参数的有效性论证
-- 结构化输出的 JSON Schema 设计及其在 LLM 响应解析中的应用
-- RPC 链上数据提取与 LLM 分析流水线的端到端集成
-- 命令行交互 Q&A 循环的对话状态维护机制
-
-### Out-of-Scope
-
-- 多链支持与跨链交易关联分析
-- 实时价格数据与 DeFi 协议状态的深度整合
-- 用户认证与权限管理模块
-- 前端可视化界面开发
-
----
-
-## 2. System Architecture & Topology
-
-### 概念脑图（mindmap）
-
-```mindmap
-root((Tx-Explain CLI))
-  核心模块
-    RPC 数据提取层
-      tx_hash 解析
-      链上事件解码
-      状态变更追踪
-    LLM 分析引擎
-      上下文窗口管理
-      结构化 JSON 生成
-      风险摘要提取
-    CLI 交互界面
-      Q&A 循环控制
-      历史上下文维护
-      用户意图识别
-  设计概念
-    上下文剪裁
-      MAX_HISTORY=5
-      FIFO 淘汰策略
-      Token 预算控制
-    结构化输出
-      JSON Schema 定义
-      字段类型约束
-      错误恢复机制
-  应用场景
-    Gas 费用诊断
-    Approve 授权分析
-    交易风险评估
-    合约交互追溯
-```
-
-### 组件拓扑/架构图（graph TD）
-
-```graph TD
-    subgraph Input["输入层"]
-        A[tx_hash 输入] --> B[参数校验]
-    end
-
-    subgraph RPC["RPC 提取层"]
-        B --> C[RPC Provider]
-        C --> D[链上原始数据]
-    end
-
-    subgraph LLM["LLM 分析层"]
-        D --> E[首次分析模块]
-        E --> F[结构化 JSON 生成器]
-        F --> G{MAX_HISTORY 剪裁}
-        G --> H[上下文窗口管理器]
-    end
-
-    subgraph CLI["CLI 交互层"]
-        H --> I[Q&A 循环引擎]
-        I --> J[用户输入解析]
-        J --> K[意图分类器]
-        K --> L[响应生成器]
-        L --> M[结构化输出渲染]
-        M --> I
-    end
-
-    subgraph Config["配置层"]
-        N[.env API 配置]
-        N --> C
-        N --> E
-        O[备用 API 端点]
-        O --> E
-    end
-```
-
----
-
-## 3. Theoretical Framework & Formal Taxonomy
-
-### 核心术语定义表
-
-| 术语 | Type System | 输入 | 输出 | 说明 |
-|------|-------------|------|------|------|
-| Context Window | Integer | N/A | Integer | 对话历史保留的最大轮数 |
-| MAX_HISTORY | Constant (5) | N/A | Integer | 上下文剪裁阈值 |
-| Token Budget | Integer | 用户输入 + 历史 | Integer | 可用 Token 上限 |
-| JSON Schema | Object | LLM 原始响应 | Parsed Object | 结构化输出格式规范 |
-| RPC Response | Object | tx_hash | Raw Blockchain Data | 链上数据查询结果 |
-| Risk Summary | Object | RPC Data + LLM Analysis | Structured JSON | 风险评估结构化摘要 |
-
-### 系统不变量（Invariant）推导
-
-基于上下文剪裁策略，系统需满足以下不变量以保证 Token 预算的有效控制：
-
-**不变量 I（上下文窗口上界）**：在任意时刻 t，系统维护的对话历史 H_t 满足 |H_t| ≤ MAX_HISTORY
-
-**形式化证明**：假设系统在 t 时刻新增一轮对话 h_new，若 |H_t| + 1 > MAX_HISTORY，则触发剪裁函数 Prune(H_t ∪ {h_new})，根据 FIFO 策略，最早一轮对话被移除。最终状态仍满足 |H_t| ≤ MAX_HISTORY。
-
-**不变量 II（Token 预算守恒）**：每次 LLM 调用消耗的 Token 数 T_consumed 满足 T_consumed ≤ Total_Budget(H_t)，即当前上下文窗口的历史 Token 总和。
-
----
-
-## 4. State Machine & Protocol Walkthrough
-
-### 流转时序图（sequenceDiagram）
-
-```sequenceDiagram
-    participant User as 用户终端
-    participant CLI as Tx-Explain CLI
-    participant RPC as RPC Provider
-    participant LLM as LLM 分析引擎
-    participant Ctx as 上下文管理器
-
-    User->>CLI: 输入 tx_hash
-    CLI->>RPC: 请求链上数据
-    RPC-->>CLI: 返回原始交易数据
-    CLI->>LLM: 首次分析请求（原始数据）
-    LLM->>LLM: 结构化 JSON 生成
-    LLM-->>CLI: 风险摘要 JSON
-    CLI->>Ctx: 初始化上下文窗口
-    Ctx->>Ctx: 记录第 1 轮对话
-
-    loop Q&A 交互循环
-        User->>CLI: 输入问题 Q_i
-        CLI->>Ctx: 获取当前上下文
-        Ctx-->>CLI: 历史对话 H_t
-        CLI->>LLM: 带上下文的分析请求
-        alt 上下文超限
-            Ctx->>Ctx: 触发 MAX_HISTORY 剪裁
-            Ctx->>Ctx: 移除最旧轮次
-        end
-        LLM-->>CLI: 结构化响应 R_i
-        CLI->>Ctx: 更新上下文窗口
-        Ctx->>Ctx: 记录第 i+1 轮对话
-        CLI-->>User: 渲染响应结果
-    end
-```
-
-### 状态机详细描述
-
-#### Initiation（触发阶段）
-
-- **S0 - IDLE**：系统处于待机状态，等待用户输入 tx_hash
-- **S1 - DATA_FETCH**：接收到有效交易哈希，触发 RPC 数据提取流程
-- **S2 - INITIAL_ANALYSIS**：链上数据获取成功，提交 LLM 进行首次结构化分析
-
-#### Verification（验证阶段）
-
-- **S3 - SCHEMA_VALIDATION**：对 LLM 返回的 JSON 进行 Schema 校验
-- **S4 - CONTEXT_INIT**：验证通过后，初始化上下文窗口管理器
-- **S5 - LOOP_ENTRY**：进入 Q&A 交互循环，状态转移至 S6
-
-#### Commitment（确认阶段）
-
-- **S6 - QUESTION_PROCESSING**：处理用户输入问题，结合当前上下文
-- **S7 - PRUNING_CHECK**：检查上下文窗口是否达到 MAX_HISTORY 阈值
-- **S8 - RESPONSE_RENDERING**：生成最终响应并渲染输出，重新进入 S6 或接受终止信号
-
----
-
-## 5. Agent Autonomous Integration & Optimization
-
-### 学术级论文规范标题
-
-**《面向链上交易诊断的对话式 AI 代理：基于自适应上下文管理的 Token 效率优化研究》**
-
-### 落地机制工程蓝图
-
-#### 5.1 自适应剪裁策略
-
-当前实现采用固定 MAX_HISTORY=5 的硬编码策略，从 Token 经济性角度存在优化空间。引入动态剪裁算法，根据单轮对话 Token 消耗量动态调整保留轮数：
-
-```
-动态阈值 = floor(Total_Budget / avg_token_per_turn)
-```
-
-当平均轮 Token 消耗增大时，自动减少保留历史轮数；当 Token 单价降低或预算充足时，可适度扩展上下文窗口深度。
-
-#### 5.2 多代理协作架构
-
-将当前单一 LLM 分析引擎拆分为：
-
-- **路由代理（Router Agent）**：负责问题意图分类与路由
-- **分析代理（Analyzer Agent）**：专注链上数据深度分析
-- **摘要代理（Summarizer Agent）**：负责压缩历史对话、生成结构化摘要
-
-通过代理间的流水线协作，实现关注点分离与并行处理。
-
-#### 5.3 持续学习机制
-
-引入反馈回路，记录用户对每次回答的满意度评分，用于后续微调上下文剪裁策略与响应生成偏好。
-
----
-
-## 6. Vulnerability Vector & Edge Case Verification
-
-### 安全漏洞/系统盲区报告块
-
-#### 漏洞编号：VULN-001
-
-| 属性 | 内容 |
-|------|------|
-| **漏洞类型** | Authentication Failure / Credential Mismanagement |
-| **缺陷源头** | 本地 .env 配置文件中的 API KEY 拼写错误或密钥过期 |
-| **攻击/失效向量** | 当 Silicon Flow API 端点接收到携带无效凭证的请求时，返回 401 Unauthorized 错误，导致交易分析流程完全中断 |
-| **防御性补丁** | 实施多层级 API 密钥管理策略：添加密钥拼写校验脚本；配置备用 API 端点列表并实现自动 fallback 机制；增加密钥有效期监控告警 |
-
-#### 漏洞编号：VULN-002
-
-| 属性 | 内容 |
-|------|------|
-| **漏洞类型** | Context Window Overflow / Token Budget Exhaustion |
-| **缺陷源头** | 缺乏对输入异常长度的边界检测，可能导致单次请求超过 LLM 最大上下文限制 |
-| **攻击/失效向量** | 恶意构造的超长交易哈希序列或异常复杂的问题描述可能耗尽 Token 预算，引发模型拒绝响应或产生截断输出 |
-| **防御性补丁** | 前置输入长度校验层，设定 tx_hash 最大长度为 66 字符（带 0x 前缀）；问题文本实施 Token 计数预检查，超阈值时触发截断或拒绝 |
-
-#### 漏洞编号：VULN-003
-
-| 属性 | 内容 |
-|------|------|
-| **漏洞类型** | Schema Injection / Prompt Injection |
-| **缺陷源头** | 结构化输出解析器未对 LLM 返回内容进行充分消毒处理 |
-| **攻击/失效向量** | LLM 在生成 JSON 时可能受到上下文注入攻击，生成包含恶意字段或嵌套结构的响应，绕过前端解析逻辑 |
-| **防御性补丁** | 引入 JSON Schema 严格模式验证；添加输出内容白名单过滤机制；对嵌套深度与字段数量实施硬限制 |
-
----
-
-## 学术标签
-
-#上下文窗口管理 #链上数据分析 #LLM结构化输出 #CLI工具开发 #Token效率优化 #对话系统设计 #智能合约诊断 #AI安全工程
-<!-- DAILY_CHECKIN_2026-05-20_END -->
-
-# 2026-05-19
-<!-- DAILY_CHECKIN_2026-05-19_START -->
-# Role
-你是一名国际顶级计算机学术期刊（如 ACM/IEEE）的特约审稿人，同时也是一位精通网络安全、分布式系统架构与 Multi-Agent 协作的首席架构师。
-
-# Background & Context
-本技术报告聚焦于大语言模型（LLM）驱动的 AI Agent 系统核心边界与安全架构。随着 LLM 从简单的概率预测引擎演进为复杂的自主决策代理，开发者面临一个关键挑战：如何在保持系统灵活性的同时建立鲁棒的安全边界。本报告系统性梳理了 Prompt Engineering、Context Window、Tool Use、Agent、Workflow、Guardrails、Human-in-the-Loop 等核心组件的精确边界与交互范式，旨在为构建生产级 AI Agent 系统提供可验证的技术基准。
-
-# Task
-请基于以下核心输入信息，为用户重构一份具备 RFC 规范与学术论文级严谨性的技术报告（Technical Report）。
-
-## User Core Inputs
-- **核心研究对象**：LLM 预测机制与 Agent 系统边界定义，涵盖 Prompt、Context Window、Tool Use、Agent、Workflow、Guardrails、Human-in-the-Loop 七个核心组件
-- **底层流转逻辑**：Token 概率预测 → 上下文记忆 → 工具调用 → Agent 自主规划 → Workflow 编排 → 安全护栏校验 → 人工最终确认
-- **发现的缺陷/坑点**：System Prompt 中书写的安全限制存在 Prompt Injection 漏洞，必须在代码层通过 Pydantic Schema 或硬编码检查实现真正的安全边界
-
-# Output Format Requirements
-你必须严格按照以下结构组织内容进行输出，禁止任何口语化和营销号风格：
-
-1. **## 📌 Document Metadata**：自动生成文档元数据（包含作者、目标子系统、安全等级、状态）
-2. **## 🔍 Table of Contents**：自动提取后续章节生成标准的 Markdown 目录索引
-3. **## 1. Executive Summary & Problem Space**：编写包含摘要（Abstract）和明确的包含/排除边界（In-Scope/Out-of-Scope）
+1. **## 📌 Document Metadata**：自动生成文档元数据（包含作者、目标子系统、安全等级、状态）。
+2. **## 🔍 Table of Contents**：自动提取后续章节生成标准的 Markdown 目录索引。
+3. **## 1. Executive Summary & Problem Space**：编写包含摘要（Abstract）和明确的包含/排除边界（In-Scope/Out-of-Scope）。
 4. **## 2. System Architecture & Topology**：
-   - 使用 Mermaid 语法绘制一个 `mindmap`（概念脑图）
-   - 使用 Mermaid 语法绘制一个 `graph TD`（组件拓扑/架构图）
-5. **## 3. Theoretical Framework & Formal Taxonomy**：使用 Markdown 表格形式定义核心组件/术语，明确其 Type System（输入输出），并至少推导一个带有 LaTeX 公式的系统不变量（Invariant）
+   - 使用 Mermaid 语法绘制一个 `mindmap`（概念脑图）。
+   - 使用 Mermaid 语法绘制一个 `graph TD`（组件拓扑/架构图）。
+5. **## 3. Theoretical Framework & Formal Taxonomy**：使用 Markdown 表格形式定义核心组件/术语，明确其 Type System（输入输出），并至少推导一个带有 LaTeX 公式的系统不变量（Invariant）。
 6. **## 4. State Machine & Protocol Walkthrough**：
-   - 使用 Mermaid 语法绘制一个 `sequenceDiagram`（流转时序图）
-   - 细致描述 Initiation（触发）, Verification（验证）, Commitment（确认）三个阶段的状态变化
-7. **## 5. Agent Autonomous Integration & Optimization**：结合 AI Agent 自动化视角，提出一个具备学术论文规范标题及落地机制的工程蓝图
-8. **## 6. Vulnerability Vector & Edge Case Verification**：采用标准的“安全漏洞/系统盲区报告块”格式（含漏洞类型、缺陷源头、攻击/失效向量、防御性补丁），替代浅显的避坑指南
-9. **学术标签**：在文章末尾生成 4-8 个标准技术标签
+   - 使用 Mermaid 语法绘制一个 `sequenceDiagram`（流转时序图）。
+   - 细致描述 Initiation（触发）, Verification（验证）, Commitment（确认）三个阶段的状态变化。
+7. **## 5. Agent Autonomous Integration & Optimization**：结合 AI Agent 自动化视角，提出一个具备学术论文规范标题及落地机制的工程蓝图。
+8. **## 6. Vulnerability Vector & Edge Case Verification**：采用标准的“安全漏洞/系统盲区报告块”格式（含漏洞类型、缺陷源头、攻击/失效向量、防御性补丁），替代浅显的避坑指南。
+9. **学术标签**：在文章末尾生成 4-8 个标准技术标签。
 
 # Tone
 极其严谨、高度结构化、冷峻且充满极客硬核质感。
 
-========================================
+---
 
-## 📌 Document Metadata
+# 📌 Document Metadata
 
-| 字段 | 内容 |
-|------|------|
-| 文档编号 | TR-LLM-AGENT-002 |
-| 文档标题 | LLM Agent 核心组件边界与安全架构技术报告 |
-| 文档作者 | AI Agent 学习体系 · Day 2 笔记 |
-| 目标子系统 | LLM Prediction Engine / Agent Orchestration Layer / Security Guardrails |
-| 安全等级 | 高（涉及生产级 AI 系统部署） |
-| 状态 | 已完成 |
-| 版本日期 | 2026-05-19 |
-| 适用阶段 | Agent 系统设计与安全边界定义 |
+| 元数据字段 | 内容 |
+|:---|:---|
+| **文档标题** | Tx-Explain CLI: Context-Aware Structured Output Framework for On-Chain Transaction Analysis |
+| **版本号** | v1.0.0 |
+| **作者** | Day 3 Learner / AI Engineering Practitioner |
+| **目标子系统** | Tx-Explain CLI (Transaction Explain Command-Line Interface) |
+| **安全等级** | Medium-High（涉及外部 API 调用与链上数据解析） |
+| **状态** | Experimental（原型验证阶段） |
+| **文档类型** | Technical Report / RFC Proposal |
+| **生成日期** | 2026-05-20 |
+
+---
+
+# 🔍 Table of Contents
+
+1. Executive Summary & Problem Space
+2. System Architecture & Topology
+   - 2.1 概念脑图（Mind Map）
+   - 2.2 组件拓扑图（Architecture Diagram）
+3. Theoretical Framework & Formal Taxonomy
+   - 3.1 核心概念定义表
+   - 3.2 系统不变量推导
+4. State Machine & Protocol Walkthrough
+   - 4.1 端到端时序图
+   - 4.2 状态机三阶段描述
+5. Agent Autonomous Integration & Optimization
+6. Vulnerability Vector & Edge Case Verification
+7. 学术标签
+
+---
+
+# 1. Executive Summary & Problem Space
+
+## Abstract
+
+本报告详细阐述 **Tx-Explain CLI** 的设计与实现方案。该框架以 **最小可交互 AI 学习产物** 为目标，构建了一条从链上交易哈希（tx_hash）到结构化风险摘要再到交互式问答的完整数据流转管道。核心技术挑战在于两方面：**其一**，如何在有限的上下文窗口（Context Window）内保持对话逻辑的聚焦性——本框架采用 **MAX_HISTORY=5 的硬性剪裁策略**，通过主动丢弃历史回合来换取 token 成本降低与语义纯度提升；**其二**，如何强制大语言模型输出程序可解析的结构化 JSON——本框架借鉴 **结构化输出（Structured Output）** 范式，将 LLM 输出约束为固定 Schema 的 JSON 对象，消解了自由文本解析的脆弱性。
+
+## In-Scope / Out-of-Scope
+
+| 维度 | 边界描述 |
+|:---|:---|
+| **In-Scope** | 单笔交易分析、RPC 链上数据提取、结构化 JSON 输出、CLI 交互 Q&A、上下文窗口剪裁（MAX_HISTORY=5）、多 API 端点 fallback 设计 |
+| **Out-of-Scope** | 多交易批量分析、链下数据源集成、可视化界面（GUI）、持久化对话历史存储、实时链上监控 |
+
+---
+
+# 2. System Architecture & Topology
+
+## 2.1 概念脑图（Mind Map）
+
+```mermaid
+mindmap
+  root((Tx-Explain
+  CLI))
+    Core Modules
+      Transaction Ingestion
+        tx_hash Input
+        RPC Interface
+        Chain Data Extraction
+      LLM Processing
+        Context Window Management
+          MAX_HISTORY Pruning
+          Token Budget Control
+        Structured Output Engine
+          JSON Schema Constraint
+          Risk Summary Generation
+      Interactive Q&A
+        CLI Interface
+        Round-Based Dialogue
+        History Truncation
+    External Dependencies
+      Blockchain RPC Endpoint
+      LLM Provider
+        Silicon Flow API
+        Fallback Endpoints
+      Environment Config
+        .env Management
+    Design Principles
+      Minimal Viable Product
+      Token Cost Optimization
+      Logical Focus Retention
+      Error Resilience
+    Identified Risks
+      API 401 Authentication
+      Single Point of Failure
+      Context Dilution
+```
+
+## 2.2 组件拓扑图（Architecture Diagram）
+
+```mermaid
+graph TD
+    subgraph External
+        User[/"User Input<br/>(tx_hash)"/]
+        RPC["Blockchain RPC<br/>(Chain Data Source)"]
+        LLM_Provider["LLM Provider<br/>(Silicon Flow + Fallback)"]
+    end
+
+    subgraph Tx_Explain_Core
+        Ingest["Transaction Ingestion<br/>Module"]
+        Extract["Data Extraction<br/>Module"]
+        Analyze["LLM Analysis<br/>Engine"]
+        Structured_Output["Structured Output<br/>(JSON Schema Validator)"]
+        QnA["Interactive Q&A<br/>Session Manager"]
+        Context_Manager["Context Manager<br/>(MAX_HISTORY=5)"]
+        Fallback_Controller["Fallback Controller<br/>(Multi-Endpoint)"]
+    end
+
+    subgraph Storage
+        Config[".env Config<br/>(API Keys + Endpoints)"]
+        Session_History["Session History<br/>(In-Memory)"]
+    end
+
+    User --> Ingest
+    RPC --> Extract
+    Extract --> Analyze
+    Analyze --> Structured_Output
+    Structured_Output --> QnA
+    QnA --> Context_Manager
+    Context_Manager -.->|"Prune Old<br/>Rounds"| Session_History
+
+    LLM_Provider -->|LLM Inference| Analyze
+    Config -->|API Config| Fallback_Controller
+    Fallback_Controller -->|Auto-Switch| LLM_Provider
+
+    style User fill:#e1f5ff
+    style RPC fill:#fff4e1
+    style LLM_Provider fill:#f3e5ff
+    style Ingest fill:#e8f5e9
+    style Analyze fill:#e8f5e9
+```
+
+---
+
+# 3. Theoretical Framework & Formal Taxonomy
+
+## 3.1 核心概念定义表
+
+| 概念术语 | 类型定义（Type System） | 输入 | 输出 | 生活类比 |
+|:---|:---|:---|:---|:---|
+| **Context Window Pruning** | 上下文管理策略 | 历史对话轮次集合 $H = \{h_1, h_2, ..., h_n\}$，剪裁阈值 $k$ | 截断后历史窗口 $H' = \{h_{n-k+1}, ..., h_n\}$ | 浏览器不活跃标签页自动关闭，释放内存资源 |
+| **Structured Output** | 程序化输出约束 | 自然语言响应文本 $R_{raw}$ | JSON Schema 验证通过的结构化对象 $O_{valid}$ | 政府制式申请表格，强制填写者按固定格式提供信息 |
+| **MAX_HISTORY** | 系统级硬约束常量 | N/A | 强制裁剪至最近 5 轮对话 | 会议记录只保留最近 5 轮讨论要点 |
+| **Transaction Hash (tx_hash)** | 链上唯一标识符 | 原始十六进制字符串 | 解析后的交易数据（发送方、接收方、金额、Gas 等） | 快递单号，查询后获取物流全链路信息 |
+| **Risk Summary** | 结构化风险评估报告 | 原始链上数据 + 对话上下文 | JSON 格式的风险指标（置信度、风险类型、处置建议） | 体检报告，将复杂生理数据归纳为结构化健康指标 |
+
+## 3.2 系统不变量推导
+
+基于上下文管理模块的设计，我们推导以下系统不变量（System Invariant）：
+
+$$
+\forall s \in \text{Session}: |H_s| \leq \text{MAX\_HISTORY}
+$$
+
+**不变量含义**：对于任意会话 $s$，其历史轮次集合 $H_s$ 的基数（长度）始终不超过预定义的阈值 MAX_HISTORY。该不变量确保了系统的 **Token 预算可控性** 与 **逻辑聚焦性**（Logical Focus Retention）。
+
+**推论 1**：当新轮次 $h_{n+1}$ 到达时，若 $|H_s| = \text{MAX\_HISTORY}$，则最早轮次 $h_{1}$ 必须被剪裁，以维持不变量成立。
+
+$$
+\text{剪裁操作} = \text{prune}(H_s, h_1) \quad \Rightarrow \quad |H_s'| = |H_s| - 1
+$$
+
+**Token 成本边界**：设单轮对话平均 Token 消耗为 $T_{avg}$，则任意时刻会话的总 Token 上限为：
+
+$$
+T_{max} = \text{MAX\_HISTORY} \times T_{avg}
+$$
+
+---
+
+# 4. State Machine & Protocol Walkthrough
+
+## 4.1 端到端时序图
+
+```mermaid
+sequenceDiagram
+    participant User as User (CLI)
+    participant TxIngest as Transaction<br/>Ingestion
+    participant RPC as Blockchain<br/>RPC Endpoint
+    participant LLM as LLM Provider<br/>(Silicon Flow)
+    participant Fallback as Fallback<br/>Controller
+    participant Analyzer as LLM Analysis<br/>Engine
+    participant Validator as JSON Schema<br/>Validator
+    participant QnA as Interactive Q&A<br/>Session Manager
+    participant ContextMgr as Context Manager<br/>(MAX_HISTORY=5)
+
+    User->>TxIngest: 提交 tx_hash
+    TxIngest->>RPC: 请求链上原始数据
+    RPC-->>TxIngest: 返回交易数据
+    TxIngest->>LLM: 首次分析请求（携带链上数据）
+    
+    alt Primary Endpoint Available
+        LLM-->>Analyzer: LLM 推理结果（JSON）
+    else 401 Authentication Error
+        Fallback->>Fallback: 检测端点失效
+        Fallback->>LLM: 切换至备用端点
+        LLM-->>Analyzer: 重试成功
+    end
+
+    Analyzer->>Validator: 验证 JSON Schema 合规性
+    Validator-->>Analyzer: Schema 校验通过
+    Analyzer-->>QnA: 生成结构化风险摘要
+    
+    loop 交互问答轮次
+        User->>QnA: 输入问题 Q
+        QnA->>ContextMgr: 查询当前历史窗口
+        ContextMgr-->>QnA: 返回剪裁后上下文 H'
+        QnA->>LLM: 请求 LLM 回答（携带 H'）
+        LLM-->>QnA: 返回回答 A
+        QnA->>ContextMgr: 更新历史（添加 Q, A）
+        
+        alt |H'| == MAX_HISTORY
+            ContextMgr->>ContextMgr: 剪裁最旧轮次
+        end
+        
+        QnA-->>User: 输出回答 A
+    end
+```
+
+## 4.2 状态机三阶段描述
+
+### Stage 1: Initiation（触发阶段）
+
+| 状态 | 描述 | 入口条件 | 出口动作 |
+|:---|:---|:---|:---|
+| `IDLE` | 等待用户输入 tx_hash | 系统启动 | 用户提交 tx_hash |
+| `FETCHING` | 正在通过 RPC 获取链上数据 | tx_hash 有效 | RPC 返回数据或超时 |
+
+### Stage 2: Verification（验证阶段）
+
+| 状态 | 描述 | 入口条件 | 出口动作 |
+|:---|:---|:---|
+| `ANALYZING` | LLM 执行首次结构化分析 | 链上数据就绪 | LLM 返回 JSON 结果 |
+| `VALIDATING` | JSON Schema 合规性校验 | LLM 返回 | Schema 校验通过或失败 |
+| `FALLBACK_TRIGGERED` | 检测到 401 错误，触发端点切换 | API 返回 401 | 切换至备用端点并重试 |
+
+### Stage 3: Commitment（确认阶段）
+
+| 状态 | 描述 | 入口条件 | 退出条件 |
+|:---|:---|:---|:---|
+| `SESSION_ACTIVE` | 进入交互式 Q&A 会话 | JSON 风险摘要生成成功 | 用户主动退出或异常 |
+| `PRUNING` | 历史窗口达到 MAX_HISTORY 触发剪裁 | 当前历史轮次 =
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+# Document Metadata
+
+| Field | Value |
+|---|---|
+| **Report ID** | TR-LLM-DAY2-20260519 |
+| **Title** | Large Language Model System Architecture: Core Concepts, Component Boundaries & Threat Vectors |
+| **Author** | Day 2 Practitioner |
+| **Date** | 2026-05-19 |
+| **Target Subsystem** | LLM Application Stack (Prompt → Context → Agent → Guardrails → HITL) |
+| **Security Level** | CS3 — Production-Critical |
+| **Status** | Active Learning — Phase 1 |
+
+---
 
 ## 🔍 Table of Contents
 
 1. Executive Summary & Problem Space
 2. System Architecture & Topology
-   - 2.1 概念脑图（mindmap）
-   - 2.2 组件拓扑架构图（graph TD）
 3. Theoretical Framework & Formal Taxonomy
-   - 3.1 核心组件类型系统定义
-   - 3.2 系统不变量推导
 4. State Machine & Protocol Walkthrough
-   - 4.1 流转时序图
-   - 4.2 三阶段状态变化描述
 5. Agent Autonomous Integration & Optimization
 6. Vulnerability Vector & Edge Case Verification
-7. 学术标签
+7. Academic Tags
 
-========================================
+---
 
 ## 1. Executive Summary & Problem Space
 
 ### Abstract
 
-本报告系统性定义了基于大语言模型（LLM）的 AI Agent 系统核心组件边界。通过对 Prompt Engineering、Context Window 管理、Tool Use 机制、Agent 自主规划、Workflow 编排、Guardrails 安全护栏、以及 Human-in-the-Loop 人工确认回路的深度解构，建立了可验证的系统不变量与安全威胁模型。核心发现表明：System Prompt 层的安全限制存在根本性设计缺陷，必须在代码层实施硬编码校验才能实现真正的安全边界。
-
-### Problem Statement
-
-当前 LLM Agent 系统开发面临三个核心挑战：
-
-**边界模糊性**：开发者普遍混淆 Prompt 提示层与系统架构层的职责边界，导致安全边界形同虚设。System Prompt 中的"请不要做 X"类约束可被 Prompt Injection 攻击轻易绕过。
-
-**容量约束认知不足**：Context Window 的有限容量（通常 4K-128K tokens）导致长期任务规划存在记忆衰减风险，开发者常低估这一物理约束对 Agent 行为一致性的影响。
-
-**自主性失控风险**：Agent 的 Planning 与 Self-Reflection 能力在提升系统鲁棒性的同时，也引入了不可预测行为空间，需要多层安全护栏协同防护。
+本报告为 Day 2 学习成果的系统性归档。核心议题聚焦于大语言模型（LLM）预测机制的本质解构，以及 Prompt、Context Window、Tool Use、Agent、Workflow、Guardrails、Human-in-the-Loop 七大组件边界的能力圈定。研究发现：LLM 本质是一个基于概率分布预测下一 token 的序列生成引擎，而非逻辑推理数据库，其涌现能力（Emergent Capabilities）源于大规模参数空间中的统计模式匹配。报告进一步推导出 Agent 的 Planning → Self-Reflection 闭环机制，并系统梳理了 Prompt Injection 攻击向量及其对应的防御性工程补丁（Pydantic Schema 校验层）。
 
 ### In-Scope
-- 七个核心组件（Prompt、Context Window、Tool Use、Agent、Workflow、Guardrails、Human-in-the-Loop）的精确定义与边界划分
-- 基于 Token 概率预测的 LLM 本质理解
-- 安全护栏的工程化部署方案
-- Agent 自主规划与自我纠错的闭环设计
+
+- LLM 作为概率预测引擎的机制性解释（Mechanistic Interpretation）
+- Context Window 的容量边界与信息衰减模型
+- Guardrails 的输入/输出双端硬编码校验架构
+- Human-in-the-Loop 在高风险决策节点的人工介入协议
+- Agent 的自纠正闭环与工具调用失败恢复机制
 
 ### Out-of-Scope
-- 特定 LLM 模型的具体参数调优
-- 分布式多 Agent 协作的完整协议设计
-- 前端交互界面的 UX 设计考量
 
-========================================
+- 模型训练与参数调优（Fine-tuning）
+- Vector Database 内部索引机制
+- Multi-Modal LLM 架构设计
+
+---
 
 ## 2. System Architecture & Topology
 
-### 2.1 概念脑图（mindmap）
+### Concept Mindmap
 
-```mermaid
-mindmap
-  root((LLM Agent System))
-    Core Engine
-      LLM Prediction
-        Token Probability Engine
-        Autoregressive Generation
-        Temperature Sampling
-      Context Window
-        Input Token Limit
-        Memory Capacity Constraint
-        Attention Span
-    Security Boundary
-      Guardrails
-        Input Validation Layer
-        Output Sanitization
-        Pydantic Schema Enforcement
-      Human-in-the-Loop
-        High-Risk Decision Gate
-        Manual Override Capability
-        Audit Trail
-    Agent Intelligence
-      Planning Module
-        Goal Decomposition
-        Task Prioritization
-      Self-Reflection
-        Error Detection
-        Self-Correction Loop
-    Execution Framework
-      Tool Use
-        Function Call Interface
-        Tool Result Parsing
-      Workflow
-        Sequential Orchestration
-        Conditional Branching
-      Prompt Engineering
-        System Prompt
-        User Prompt
-        Few-Shot Examples
+```mindmap
+root((LLM System Architecture))
+  LLM
+    Token Probability Engine
+    Statistical Pattern Matcher
+    Non-Logical Database
+  Context Window
+    Max Token Capacity
+    Short-term Memory Analogy
+    Information Decay
+  Prompt Layer
+    Instruction Engineering
+    Injection Vulnerability
+  Agent
+    Planning Module
+    Self-Reflection Loop
+    Tool Calling
+  Guardrails
+    Input Validation
+    Output Sanitization
+    Hard-coded Checks
+  Human-in-the-Loop
+    High-Risk Checkpoints
+    Manual Override
+    Dual-Key Authorization
+  Workflow Orchestration
+    Sequential Chaining
+    Conditional Branching
+    State Persistence
 ```
 
-### 2.2 组件拓扑架构图（graph TD）
+### Component Topology Graph
 
-```mermaid
-graph TD
-    subgraph Input_Layer["Input Layer（输入层）"]
-        UP[User Prompt<br/>用户输入]
-        SP[System Prompt<br/>系统提示]
-        FS[Few-Shot Examples<br/>少样本示例]
+```graph TD
+    subgraph Input_Pipeline
+        U[User Input] --> P[Prompt Layer]
+        P --> GI[Guardrails Input]
+        GI --> CW[Context Window]
     end
     
-    subgraph Security_Layer["Security Layer（安全层）"]
-        GR[Guardrails<br/>安全护栏]
-        HV[Hard-coded Validator<br/>硬编码校验器]
-        PS[Pydantic Schema<br/>结构化验证]
+    subgraph LLM_Core
+        CW --> LLM[LLM Engine]
+        LLM --> GO[Guardrails Output]
     end
     
-    subgraph Memory_System["Memory System（记忆系统）"]
-        CW[Context Window<br/>上下文窗口]
-        STM[Short-term Memory<br/>短期记忆]
+    subgraph Agent_System
+        LLM --> PL[Planning Module]
+        PL --> TC[Tool Calling]
+        TC --> SR[Self-Reflection]
+        SR -.->|Error Detected| TC
+        SR -.->|Success| WO[Workflow Orchestrator]
     end
     
-    subgraph Intelligence_Core["Intelligence Core（智能核心）"]
-        LLM[LLM Engine<br/>大语言模型]
-        PL[Planning Module<br/>规划模块]
-        SR[Self-Reflection<br/>自我反思]
+    subgraph Safety_Net
+        GO --> HITL[Human-in-the-Loop]
+        WO --> HITL
     end
     
-    subgraph Execution_Framework["Execution Framework（执行框架）"]
-        TU[Tool Use<br/>工具调用]
-        WF[Workflow<br/>工作流编排]
-    end
+    HITL --> O[Output/Action]
     
-    subgraph Control_Point["Control Point（控制点）"]
-        HITL[Human-in-the-Loop<br/>人在回路]
-        MC[Manual Confirmation<br/>人工确认]
-    end
-    
-    UP --> GR
-    SP --> GR
-    FS --> GR
-    GR -->|Pass| CW
-    GR -->|Block| REJ[Rejected<br/>拒绝执行]
-    CW --> LLM
-    LLM --> PL
-    PL -->|Plan| TU
-    PL -->|Plan| WF
-    TU -->|Result| SR
-    WF -->|Status| SR
-    SR -->|Reflection| LLM
-    SR -->|Error Detected| PL
-    LLM -->|High-Risk Action| HITL
-    HITL -->|Approved| OUT[Output<br/>输出]
-    HITL -->|Rejected| ABORT[Abort<br/>中止]
-    LLM -->|Normal Action| OUT
-    HV --> GR
-    PS --> GR
+    style LLM fill:#ff6b6b
+    style HITL fill:#feca57
+    style Guardrails fill:#48dbfb
 ```
 
-========================================
+---
 
 ## 3. Theoretical Framework & Formal Taxonomy
 
-### 3.1 核心组件类型系统定义
+### Core Component Type System
 
-| 组件名称 | 类型定义 | 输入类型 | 输出类型 | 核心约束 |
-|----------|----------|----------|----------|----------|
-| **LLM (大语言模型)** | `TokenProbabilityEngine` | `Text → Vector[Token]` | `Token + ProbabilityDistribution` | 基于条件概率 $P(t_{n+1} | t_1, ..., t_n)$ 预测下一个 token，非逻辑推理引擎 |
-| **Context Window** | `MemoryBuffer` | `Sequence[Token]` | `TruncatedSequence[Token]` | 最大容量 $C_{max}$，超限时执行 `FIFO` 截断或智能压缩 |
-| **Prompt** | `InstructionContainer` | `SystemInstruction + UserQuery + Context` | `StructuredPrompt` | System Prompt 中的安全约束不具备执行强制力 |
-| **Tool Use** | `FunctionCallInterface` | `LLM_Output → StructuredCall` | `Tool_Result + Metadata` | 需定义明确的 Function Schema 与返回类型 |
-| **Agent** | `AutonomousPlanner` | `Goal + Tools + Context` | `Plan + ExecutionTrace` | 具备 Planning 与 Self-Reflection 双重能力 |
-| **Workflow** | `OrchestrationGraph` | `TaskGraph + InitialState` | `ExecutionResult` | 流程固定，无自主纠错能力 |
-| **Guardrails** | `SecurityValidator` | `AnyInput/AnyOutput` | `Pass/Block + Reason` | 硬编码实现，不依赖 LLM 自身判断 |
-| **Human-in-the-Loop** | `ManualOverrideGate` | `HighRiskAction` | `Approved/Rejected` | 物理确认机制，不可绕过 |
+| Component | Definition | Input Type | Output Type | Critical Constraint |
+|:---|:---|:---|:---|:---|
+| **LLM** | 概率 token 预测引擎 | Token Sequence `T₁...Tₙ` | `P(Tₙ₊₁ \| T₁...Tₙ)` | 无逻辑推理保证 |
+| **Context Window** | 最大可接收 token 上限 | `W ≤ C_max` | Truncated context if `W > C_max` | 信息选择性遗忘 |
+| **Guardrails** | 输入/输出硬编码校验层 | Raw String / Structured JSON | Validated & Sanitized Output | 防御注入攻击 |
+| **Human-in-the-Loop** | 高风险决策人工确认 | Agent Decision `D` with risk score `R` | `Confirm(D)` or `Reject(D)` | 延迟容忍度 |
+| **Agent** | 具备自闭环的自主执行体 | Goal `G` + Toolset `{Tᵢ}` | Action Sequence `A₁...Aₖ` | Self-correction capability |
 
-### 3.2 系统不变量推导
+### System Invariant (Formal Derivation)
 
-**Invariant 1（Token 概率约束不变量）**
+**Invariant 1 — Safety Preservation Under Agent Self-Correction:**
 
-对于任意 LLM 推理过程，系统输出满足以下约束：
+```
+∀ Agent A, ∀ Action Sequence AS:
+  Pre(AS) ⊢ Safe(A) → Post(AS) ⊢ Safe(A) ∨ Revert(AS)
+```
 
-$$
-\sum_{i=1}^{V} P(t_{n+1} = v_i | t_1, ..., t_n) = 1, \quad \forall n \in \mathbb{N}
-$$
+即：对于任意 Agent 和任意动作序列，如果动作序列执行前系统处于安全状态，则执行后系统要么保持安全状态，要么触发回滚机制回到安全状态。该不变量由 Self-Reflection 模块与 Guardrails 共同保障。
 
-其中 $V$ 表示词表大小。这意味着 LLM 的输出是概率分布，而非确定性逻辑推断了 **唯一正确解**，这是理解 LLM 本质的核心。
+**Invariant 2 — Context Window Boundedness:**
 
-**Invariant 2（安全边界执行不变量）**
+```
+|Current_Context| ≤ C_max
+```
 
-安全护栏的执行有效性必须满足：
+当前上下文 token 总数始终不超过模型定义的最大容量。一旦触发上限，系统必须执行上下文压缩或摘要策略。
 
-$$
-\forall x \in \text{Input} \cup \text{Output}: \text{Guardrails}(x) = \text{Reject} \Rightarrow x \notin \text{AllowedSet}
-$$
-
-即安全护栏必须具备代码层的强制执行能力，而非依赖 LLM 的"自我约束"。System Prompt 中的"Please do not..." 语句不满足此不变量，因为 LLM 可以被 Prompt Injection 诱导忽略该约束。
-
-**Invariant 3（Context Window 容量不变量）**
-
-$$
-|ContextWindow_t| \leq C_{max}, \quad \forall t
-$$
-
-系统必须在 Context Window 达到容量上限前执行记忆压缩或外置存储策略，否则将触发 `information_loss` 事件。
-
-========================================
+---
 
 ## 4. State Machine & Protocol Walkthrough
 
-### 4.1 流转时序图（sequenceDiagram）
+### Agent Workflow Sequence Diagram
 
-```mermaid
-sequenceDiagram
-    participant User as User（用户）
-    participant SP as System Prompt<br/>（系统提示）
-    participant GR as Guardrails<br/>（安全护栏）
-    participant CW as Context Window<br/>（上下文窗口）
-    participant LLM as LLM Engine<br/>（语言模型）
-    participant PLAN as Planning Module<br/>（规划模块）
-    participant SR as Self-Reflection<br/>（自我反思）
-    participant TOOL as Tool Use<br/>（工具调用）
-    participant WF as Workflow<br/>（工作流）
-    participant HITL as Human-in-Loop<br/>（人在回路）
+```sequenceDiagram
+    participant User as User Input
+    participant Prompt as Prompt Layer
+    participant Guard_I as Guardrails Input
+    participant LLM as LLM Engine
+    participant Plan as Planning Module
+    participant Tool as Tool Calling
+    participant Reflect as Self-Reflection
+    participant Guard_O as Guardrails Output
+    participant HITL as Human-in-the-Loop
+    participant Output as Final Output
+
+    User->>Prompt: Raw User Request
+    Prompt->>Guard_I: Validate Format & Schema
+    Guard_I->>LLM: Sanitized Prompt
     
-    Note over User, HITL: Stage 1: Initiation（触发阶段）
-    User->>+SP: 提交用户请求
-    SP->>GR: 注入系统级安全约束
-    GR->>GR: 输入层 Pydantic Schema 校验
-    GR->>GR: 硬编码检查器扫描
+    LLM->>Plan: Generate Execution Plan
+    Plan->>Tool: Invoke Tool T₁
     
-    alt 输入通过安全校验
-        GR->>+CW: 传递有效输入
-        CW-->>-LLM: 加载上下文上下文
-        LLM->>PLAN: 生成初始规划
-        PLAN->>TOOL: 请求工具调用
-        TOOL-->>+SR: 返回工具执行结果
-        SR->>SR: 错误检测与自我反思
-        alt 检测到错误
-            SR->>PLAN: 触发自我纠错
-            PLAN->>TOOL: 重新规划调用链
-        end
-        
-        Note over SR, WF: Stage 2: Verification（验证阶段）
-        SR->>WF: 提交执行状态更新
-        WF-->>-SR: 确认工作流状态
-        
-        alt 识别高风险操作
-            LLM->>+HITL: 提交高风险决策待确认
-            HITL->>User: 请求人工最终确认
-            User-->>-HITL: 返回确认/否决
-        end
-        
-        Note over User, HITL: Stage 3: Commitment（确认阶段）
-        alt 人工批准
-            HITL-->>LLM: 释放执行权限
-            LLM->>User: 返回最终输出
-        else 人工否决
-            HITL-->>LLM: 中止操作
-            LLM-->>User: 返回错误信息
-        end
-    else 输入被安全护栏拦截
-        GR-->>User: 返回安全拦截错误
+    alt Tool Execution Success
+        Tool->>Reflect: Success Result
+        Reflect->>Plan: Continue to Next Step
+        Plan->>Tool: Invoke Tool T₂
+    else Tool Execution Failure
+        Tool->>Reflect: Error / Exception
+        Reflect->>Plan: Self-Correction & Retry
+        Plan->>Tool: Retry Tool T₁ or Switch to T₁'
+    end
+    
+    loop Until Goal Achieved
+        Plan->>Tool: Next Tool Call
+        Tool->>Reflect: Result
+        Reflect->>Plan: Assessment
+    end
+    
+    Plan->>LLM: Synthesize Final Response
+    LLM->>Guard_O: Output Validation
+    Guard_O->>HITL: High-Risk Decision Check
+    
+    alt Risk Score < Threshold
+        HITL->>Output: Auto-Approve
+    else Risk Score ≥ Threshold
+        HITL->>Output: Manual Review Required
     end
 ```
 
-### 4.2 三阶段状态变化描述
+### Stage Definitions
 
-#### Stage 1: Initiation（触发阶段）
+| Stage | Trigger Condition | State Transition | Validation Gate |
+|:---|:---|:---|:---|
+| **Initiation** | User submits raw input | `IDLE → PROCESSING` | Guardrails Input Schema check |
+| **Verification** | Prompt passes validation | `PROCESSING → PLANNING` | Pydantic Schema compliance |
+| **Commitment** | Plan generated + tools invoked | `PLANNING → EXECUTING` | Self-Reflection validates intermediate state |
+| **Finalization** | Goal achieved or max retries | `EXECUTING → COMPLETE` | HITL approves if high-risk |
 
-**状态入口**：用户发起请求，系统开始初始化推理链路。
-
-**核心状态转换**：
-
-1. **Input Validation State**：输入首先经过 Guardrails 层的结构化校验。该状态必须严格执行 Pydantic Schema 验证，任何不符合预定义结构的输入将被立即拦截。
-
-2. **Security Check State**：硬编码安全检查器扫描输入中的敏感模式（如 Potential Injection Payloads）。此状态独立于 LLM 运行，不受 Prompt Injection 影响。
-
-3. **Context Loading State**：验证通过的输入被加载至 Context Window。如果当前上下文已接近容量上限（>80%），触发记忆压缩或关键信息提取流程。
-
-**状态终止条件**：输入通过全部安全检查且成功加载至上下文。
-
-#### Stage 2: Verification（验证阶段）
-
-**状态入口**：LLM 基于上下文生成响应与执行规划。
-
-**核心状态转换**：
-
-1. **Planning State**：Planning Module 将高层目标分解为可执行的子任务序列。如果任务链中包含工具调用，生成对应的 Function Call Schema。
-
-2. **Tool Execution State**：Tool Use 模块执行外部工具调用。如果工具链中某一环失败，触发 Self-Reflection 模块进行错误分析。
-
-3. **Self-Correction State**：Self-Reflection 模块评估执行结果是否偏离目标。如果检测到偏差，生成修正指令并重新注入 Planning Module。
-
-**状态终止条件**：执行链路完成且通过自我验证，或达到最大重试次数。
-
-#### Stage 3: Commitment（确认阶段）
-
-**状态入口**：LLM 生成最终输出或识别到高风险操作。
-
-**核心状态转换**：
-
-1. **Risk Assessment State**：系统评估输出是否涉及高风险操作（如金融交易、数据删除、外部系统写入）。如果风险等级超过阈值，转入人工确认流程。
-
-2. **Manual Confirmation State**：Human-in-the-Loop 模块暂停执行，等待人工授权。用户可选择批准、否决或修改操作参数。
-
-3. **Output Commitment State**：获得确认后，输出被释放给用户。同时生成完整的审计日志，记录完整的决策链路与人工确认记录。
-
-**状态终止条件**：输出成功交付或操作被明确中止。
-
-========================================
+---
 
 ## 5. Agent Autonomous Integration & Optimization
 
-### 工程蓝图标题
+### Engineering Blueprint: Self-Correcting Agent Framework
 
-**《从确定性工作流到自适应 Agent：基于 Planning-Self-Reflection 双闭环的生产级 DeFi 机器人架构》**
+**论文级标题：** "Closed-Loop Self-Reflection in LLM-Based Agents: A Formal Treatment of Error Recovery and Goal Realignment"
 
-### 落地机制
+**落地机制：**
 
-#### 5.1 从 Workflow 到 Agent 的范式跃迁
+1. **Planning Module — Intention Decomposition**
+   - 输入：`Goal G, Available Tools {Tᵢ}`
+   - 输出：动作序列 `Plan = [A₁, A₂, ..., Aₖ]` 其中每个 `Aᵢ` 映射到 `Tⱼ`
+   - 机制：Chain-of-Thought (CoT) 推理 + Tool Use 规范遵循
 
-传统的 Workflow 路线本质上是**确定性状态机**：每个节点的行为预先定义，异常处理通过预置分支实现。这种架构在面对开放环境的 DeFi 场景时存在根本性缺陷——外部价格波动、合约回滚
+2. **Tool Calling Layer — Execution with Error Capture**
+   - 执行每个动作 `Aᵢ`，捕获返回结果 `Rᵢ` 或异常 `Eᵢ`
+   - 定义错误分类：`E_type ∈ {NETWORK_TIMEOUT, PERMISSION_DENIED, SCHEMA_MISMATCH, RATE_LIMIT}`
+
+3. **Self-Reflection Loop — Assessment & Correction**
+   - 输入：`Rᵢ` 或 `Eᵢ`
+   - 决策函数：`Decision = f(Rᵢ, Eᵢ, Remaining_Steps, Max_Retries)`
+   - 可选路径：
+     - `Retry`: 重试相同工具（适用于网络瞬时错误）
+     - `Fallback`: 切换到替代工具（适用于权限/可用性问题）
+     - `Abort`: 终止执行并报告失败（适用于不可恢复错误）
+   - 核心约束：`Retries ≤ Max_Retries` 以防止无限循环
+
+4. **Convergence Check — Goal State Validation**
+   - 最终结果 `Result` 必须通过 Guardrails Output 校验
+   - 若 `Result` 违反业务规则，触发 Human-in-the-Loop 介入
+
+---
+
+## 6. Vulnerability Vector & Edge Case Verification
+
+### Security Vulnerability Report Block
+
+| # | Vulnerability Type | Defect Source | Attack / Failure Vector | Defensive Patch |
+|:---|:---|:---|:---|:---|
+| **V1** | **Prompt Injection (越狱攻击)** | Prompt 层缺乏结构化输入校验 | 攻击者通过嵌入恶意指令（如 "Ignore previous instructions"）覆盖系统 Prompt | 必须在代码层配置 Pydantic Schema 对所有用户输入进行结构化解析，硬编码检查敏感关键词模式（如 "ignore", "system", "admin"） |
+| **V2** | **Context Window Overflow** | 上下文累积导致截断 | 长对话后期信息被前序 token 挤出，关键信息丢失导致推理失败 | 实现滑动窗口摘要机制：在 `|Context| > 0.8 × C_max` 时触发自动摘要，将关键信息提取至压缩上下文 |
+| **V3** | **Tool Calling Chain Failure** | Self-Reflection 闭环缺失容错设计 | 工具返回格式不匹配导致 Agent 陷入死循环或产生幻觉修复 | 在 Tool Calling 层强制要求返回结构化 JSON Schema，Tool 端定义 `result` 和 `error` 两个互斥字段 |
+| **V4** | **Guardrails Bypass via Encoding** | 校验层仅检查明文 | 攻击者使用 Unicode 混淆、URL 编码、大小写混淆绕过关键词检测 | Guardrails 输入层需实现归一化处理：Unicode NFC 规范化 + 大小写折叠 + URL 解码 + 重复字符压缩 |
+| **V5** | **Human-in-the-Loop Latency Exploitation** | 人工确认队列可被洪水攻击 | 攻击者通过批量低风险请求淹没人工审核队列，导致真正高风险请求被延迟处理 | 实现动态风险评分分级：低于阈值的请求自动放行，高于阈值的请求优先人工审核，防止队列阻塞 |
+
+### Edge Case Verification Matrix
+
+| Scenario | Trigger Condition | Expected Behavior | Actual Behavior (待验证) |
+|:---|:---|:---|:---|
+| **EC1** | Context Window 达到 99% 容量 | 触发自动摘要，不丢失关键实体 | — |
+| **EC2** | Tool 返回非结构化错误信息 | Agent 识别为 `SCHEMA_MISMATCH`，进入 Fallback | — |
+| **EC3** | Prompt 包含 Base64 编码恶意指令 | Guardrails 检测到编码特征，拒绝处理 | — |
+| **EC4** | Human-in-the-Loop 超时（5分钟内无响应） | 系统降级为自动拒绝，并记录事件 | — |
+
+---
+
+## 7. Academic Tags
+
+```
+#LLM #Token-Probability-Engine #Context-Window #Guardrails #Human-in-the-Loop
+#Agent-Architecture #Self-Reflection #Prompt-Injection #Security-Hardening
+#Pydantic-Schema #System-Invariant #RFC-Technical-Report
+```
+
+---
+
+*Report Generated: Day 2 of Systematic Learning (2026-05-19)*  
+*Status: Core concepts internalized; next phase: hands-on implementation of Guardrails + Agent Loop*
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
-# Role
-你是一名国际顶级计算机学术期刊（如 ACM/IEEE）的特约审稿人，同时也是一位精通网络安全、分布式系统架构与 Multi-Agent 协作的首席架构师。
+# Document Metadata
 
-# Background & Context
-以太坊虚拟机（EVM）作为去中心化计算平台的核心运行时环境，其链上交易结构的设计直接决定了 Web3 应用的可扩展性、安全性与经济效率。当前，开发者与 AI Agent 在自动化链上交互时普遍面临三大技术盲区：其一，未能系统理解 Method ID 作为函数选择器的4字节哈希标识机制；其二，忽视交易日志（Logs）与事件（Events）在状态同步与事件驱动架构中的枢纽作用；其三，缺乏对 Gas 费用模型的精细化建模能力，导致交易成本不可控或安全性漏洞。本报告以真实交易案例为锚点，从协议层、运行时层与安全工程层三个维度展开深度剖析，旨在为硬核开发者与 AI Agent 系统提供可落地、可验证的技术蓝图。
+| Field | Value |
+|-------|-------|
+| **Title** | Ethereum/EVM On-Chain Transaction Structure Analysis: Method ID, Gas Consumption, and Event Logs |
+| **Author** | Day 1 Learner |
+| **Date** | 2026-05-18 |
+| **Target Subsystem** | EVM Transaction Execution Lifecycle |
+| **Security Classification** | Public / Informational |
+| **Document Status** | Initial Analysis v1.0 |
 
-# Task
-请基于以下核心输入信息，为用户重构一份具备 RFC 规范与学术论文级严谨性 的技术报告（Technical Report）。
+---
 
-## User Core Inputs
-- **核心研究对象**：以太坊/EVM 链上交易结构（Transaction Structure）、Method ID 安全机制、Gas 消耗模型、事件日志系统
-- **底层流转逻辑**：交易构造 → Method ID 寻址 → Gas 估算 → 执行 → 日志广播 → 状态确认
-- **发现的缺陷/坑点**：新手无脑拉满 Gas Price 导致费用失控；AI Agent 缺乏对未知 Method ID 的动态数据库查询与安全沙箱验证机制
+## Table of Contents
 
-# Output Format Requirements
-你必须严格按照以下结构组织内容进行输出，禁止任何口语化和营销号风格：
-
-## 📌 Document Metadata
-| 字段 | 值 |
-|------|-----|
-| 文档标题 | EVM 链上交易结构深度解析：Method ID、Gas 模型与事件日志的系统性威胁建模 |
-| 作者角色 | Web3 智能合约安全研究员 / AI Agent 系统架构师 |
-| 目标子系统 | Ethereum Execution Layer / EVM Runtime Environment |
-| 安全等级 | High（涉及资产转移与合约交互） |
-| 文档状态 | Day 1 初始研究笔记 / 持续迭代中 |
-| 标签 | #EVM #MethodID #GasOptimization #SmartContract #Web3Agent |
-
-## 🔍 Table of Contents
-1. Executive Summary & Problem Space
-2. System Architecture & Topology
-3. Theoretical Framework & Formal Taxonomy
-4. State Machine & Protocol Walkthrough
-5. Agent Autonomous Integration & Optimization
-6. Vulnerability Vector & Edge Case Verification
-7. 学术标签
+- 📌 Document Metadata
+- 🔍 Table of Contents
+- 1. Executive Summary & Problem Space
+- 2. System Architecture & Topology
+- 3. Theoretical Framework & Formal Taxonomy
+- 4. State Machine & Protocol Walkthrough
+- 5. Agent Autonomous Integration & Optimization
+- 6. Vulnerability Vector & Edge Case Verification
+- Academic Tags
 
 ---
 
 ## 1. Executive Summary & Problem Space
 
-### 1.1 Abstract
-本报告系统性剖析以太坊/EVM 链上交易的核心构成要素，重点围绕 Method ID（方法选择器）、Gas 消耗模型与交易日志系统展开深度技术论证。通过对真实交易案例（交易哈希关联地址 0xae2fc483527b8ef99eb5d9b44875f005ba1fae13 → 0x1f2f10d1c40777ae1da742455c65828ff36df387）的实证分析，提取出 Method ID 0x043bc855 在 22 字节输入下产生 4 条 logs、消耗 111,114 gas 的典型行为模式。报告进一步揭示了 Web3 AI Agent 在面对未知 Method ID 时的安全脆弱性，并提出基于动态数据库查询与行为安全沙箱的防御性架构设计。
+### Abstract
 
-### 1.2 In-Scope / Out-of-Scope
+This technical report provides an in-depth analysis of the Ethereum/EVM on-chain transaction structure, with specific focus on three critical components: Method ID (function selector), Gas consumption mechanisms, and transaction logs/events. Through systematic decomposition of a real-world transaction case (Method ID 0x043bc855), we establish a formal framework for understanding EVM execution semantics and derive actionable insights for Web3 AI Agent autonomous interaction patterns.
 
-| 维度 | 边界定义 |
-|------|----------|
-| **In-Scope** | EVM 交易数据结构解析、Method ID 寻址机制、Gas 费用计算模型（BaseFee + PriorityFee）、Logs/Events 广播机制、AI Agent 安全交互协议 |
-| **Out-of-Scope** | 共识层验证机制、跨链桥接协议、L2 Rollup 具体实现、NFT 元数据标准 |
+### In-Scope
+
+- Mechanism ID computation and invocation semantics
+- Gas cost modeling for computation and storage operations
+- Event emission and log indexing protocols
+- EVM instruction set relationships to fee consumption
+- Security implications for autonomous AI agents interacting with unknown contract methods
+
+### Out-of-Scope
+
+- Cross-chain messaging and bridge protocols
+- Layer-2 scaling solutions (zkRollups, Optimistic Rollups)
+- Consensus layer mechanisms and validator economics
+
+### Problem Statement
+
+The fundamental challenge in EVM-based smart contract interaction lies in the asymmetric information paradigm: calling parties often lack deterministic knowledge of method signatures, execution costs, and side-effect profiles prior to actual invocation. This opacity creates critical vulnerabilities for autonomous agents that must make real-time interaction decisions under uncertainty.
 
 ---
 
 ## 2. System Architecture & Topology
 
-### 2.1 Concept Mindmap
+### Conceptual Mindmap: EVM Transaction Anatomy
 
-```mermaid
-mindmap
-  root((EVM链上交易结构))
-    Transaction Lifecycle
-      TX Construction
-      Method ID Resolution
-      Gas Estimation
-      Execution
-      Log Broadcasting
-      State Commitment
-    Core Components
-      Method ID
-        4-byte Keccak-256 Hash
-        Function Selector
-        ABI Encoding
-      Gas Model
-        BaseFee
-        PriorityFee
-        Gas Limit
-        Burn Mechanism
-      Logs/Events
-        Topics Array
-        Data Field
-        Contract Emission
-    Security Concerns
-      Unknown Method ID
-      Gas Griefing
-      Flashbots Protection
+```
+EVM Transaction Structure
+├── Method ID (Function Selector)
+│   ├── Keccak-256 Hash (First 4 bytes)
+│   ├── ABI Encoding Rules
+│   └── Signature Database (4-byte registry)
+├── Gas & Fee Mechanics
+│   ├── BaseFee (EIP-1559 mechanism)
+│   ├── PriorityFee (Miner/Inclusive tip)
+│   ├── Execution Gas (G_opcodes)
+│   └── Storage Gas (G_sstore operations)
+└── Event Logs (Logs/Events)
+    ├── Topics (Indexed parameters)
+    ├── Data Fields (Non-indexed payload)
+    └── Bloom Filter (Log filtering)
 ```
 
-### 2.2 Component Topology Architecture
+### Component Topology: Transaction Lifecycle
 
 ```mermaid
 graph TD
-    A[User / AI Agent] --> B[Transaction Builder]
-    B --> C[Method ID Resolver]
-    C --> D[Gas Estimator]
-    D --> E[EVM Executor]
-    E --> F[Logs Emitter]
-    F --> G[State Trie]
-    
-    C --> H[4-byte Keccak-256 Hash]
-    C --> I[Function Signature DB]
-    
-    D --> J[BaseFee Calculator]
-    D --> K[PriorityFee Bidding]
-    D --> L[Gas Cap Safeguard]
-    
-    H --> M[Unknown Method ID Risk]
-    I --> M
-    
-    M --> N[Security Sandbox]
-    N --> O[Dynamic DB Query]
-    O --> P[Behavior Verification]
-    
-    style M fill:#ff6b6b,color:#fff
-    style N fill:#51cf66,color:#fff
-    style O fill:#51cf66,color:#fff
-    style P fill:#51cf66,color:#fff
+    A[Caller/AI Agent] -->|1. Encode Method ID + Parameters| B[EVM Transaction Builder]
+    B -->|2. Gas Estimation + Pricing| C[Fee Market Configuration]
+    C -->|3. Sign Transaction| D[Wallet/Private Key Module]
+    D -->|4. Broadcast Raw Transaction| E[Ethereum Network]
+    E -->|5. P2P Propagation| F[Mempool]
+    F -->|6. Block Inclusion| G[Miner/Validator]
+    G -->|7. Execute on EVM| H[EVM Runtime Environment]
+    H -->|8. State Update + Event Emission| I[State Database + Log Index]
+    H -->|9. Gas Calculation + Fee Deduct| J[Fee Settlement]
+    J -->|10. Receipt Generation| K[Transaction Receipt]
+    K -->|11. Event Logs Broadcast| L[Indexed Logs for DApps]
 ```
 
 ---
 
 ## 3. Theoretical Framework & Formal Taxonomy
 
-### 3.1 Core Terminology Definition
+### Core Component Definitions
 
-| 术语 | Type System | 输入 | 输出 | 本质描述 |
-|------|------------|------|------|----------|
-| **Method ID** | `bytes4` | `function_signature = "transfer(address,uint256)"` | `keccak256(bytes)[:4]` | 合约函数寻址的 4 字节哈希标识符 |
-| **Function Selector** | 同 Method ID | 函数名 + 参数类型 | 固定 4 字节 | Method ID 的别称，强调其路由功能 |
-| **Gas Limit** | `uint64` | EVM 操作码集合 | 总 gas 上限 | 防止无限循环的资源熔断机制 |
-| **BaseFee** | `uint256` | 前一区块 gas 消耗 | 自动调节的最小 gas 价格 | EIP-1559 引入的动态费率基准 |
-| **PriorityFee** | `uint256` | 用户自愿出价 | 矿工/验证者小费 | 加速确认的竞争性出价机制 |
-| **Transaction Fee** | `uint256` | `gasLimit × (baseFee + priorityFee)` | 总费用 | 用户实际支付的链上计算成本 |
-| **Event Log** | `struct { topics[], data }` | 合约内部 emit 调用 | 链上持久化广播 | 状态变化的不可逆公告机制 |
+| Component | Type Definition | Input Domain | Output Domain | Description |
+|-----------|-----------------|--------------|---------------|-------------|
+| Method ID | Function Selector | `bytes4` | `bytes4` | First 4 bytes of `keccak256(signature)` where signature is `funcName(paramType1,paramType2,...)` |
+| Gas Unit | Computational Resource | `uint256` | `uint256` | Base unit of EVM execution cost, denominated in 10^-18 ETH |
+| BaseFee | Fee Parameter | `uint256` | `uint256` | Minimum gas price required in a block (dynamically adjusted per EIP-1559) |
+| PriorityFee | Fee Parameter | `uint256` | `uint256` | Additional fee per gas to incentivize validators |
+| Event Log | Emission Record | `(bytes32[], bytes)` | `LogRecord` | Structured on-chain data broadcast emitted via `LOG*` EVM opcodes |
+| Transaction Receipt | Execution Summary | `Transaction` | `Receipt` | Immutable record containing execution status, gas used, logs, and bloom filter |
 
-### 3.2 Formal Invariant Derivation
+### System Invariant Formalization
 
-**系统不变量（System Invariant）**：EVM 交易费用守恒定律
-
-$$
-\forall tx \in \text{ValidTransaction}: \quad \text{Fee}_{\text{actual}} = \text{Gas}_{\text{used}} \times \left( \text{BaseFee}_b + \text{PriorityFee}_b \right)
-$$
-
-其中约束条件：
+**Invariant 1: Gas Conservation Principle**
 
 $$
-\text{Gas}_{\text{used}} \leq \text{Gas}_{\text{limit}}
+\text{Gas}_{\text{intrinsic}} + \sum_{i=1}^{n} \text{GasOp}(op_i) + \text{Gas}_{\text{storage}} = \text{Gas}_{\text{sent}}
 $$
 
+Where:
+- $\text{Gas}_{\text{intrinsic}} = 21000 + \text{len}(\text{data}) \times 4$ (if data is empty) or $\times 68$ (if non-zero)
+- $\text{GasOp}(op_i)$ represents the gas cost of each opcode executed
+- $\text{Gas}_{\text{storage}}$ accounts for SLOAD (100), SSTORE (22100/200), and cold/warm storage access costs
+
+**Invariant 2: Event Log Structural Integrity**
+
+For any emitted event $E$, the following constraint must hold:
+
 $$
-\text{Fee}_{\text{actual}} = \text{Fee}_{\text{maximum}} - \text{Gas}_{\text{refund}}
+\exists! \text{Topic}[0] \in \text{Topics} \Rightarrow \text{Topic}[0] = \text{keccak256}(\text{EventSignature})
 $$
 
-**交易有效性不变量**：
+This ensures that the selector hash of the event signature is always present as the first topic.
+
+**Invariant 3: Fee Bounding Condition**
+
+For a transaction to be validly included:
 
 $$
-\text{TX.valid} \iff \left( \text{nonce} = \text{Account.nonce} \right) \land \left( \text{gasLimit} \geq \text{minimumRequired} \right) \land \left( \text{signature} = \text{verify}(tx.\text{hash}, tx.\text{v,r,s}) \right)
+\text{fee} = (\text{BaseFee} + \text{PriorityFee}) \times \text{GasUsed} \leq \text{GasLimit} \times \text{MaxFee}
 $$
 
 ---
 
 ## 4. State Machine & Protocol Walkthrough
 
-### 4.1 Transaction Lifecycle Sequence
+### Transaction Lifecycle Sequence Diagram
 
 ```mermaid
 sequenceDiagram
-    participant User as User / AI Agent
-    participant TB as Transaction Builder
-    participant MR as Method ID Resolver
-    participant GE as Gas Estimator
-    participant EVM as EVM Executor
-    participant Net as Network Mempool
-
-    User->>TB: Initiate TX with calldata
-    TB->>MR: Extract method selector (bytes4)
-    MR-->>TB: Resolve function signature
+    participant Caller as AI Agent / Caller
+    participant Builder as Tx Builder
+    participant Network as Eth Network
+    participant Validator as Miner/Validator
+    participant EVM as EVM Runtime
+    participant State as State DB
     
-    alt Unknown Method ID Detected
-        MR->>MR: Query dynamic DB
-        MR->>MR: Security Sandbox Check
-        Note over MR: Refuse if no signature match
+    Caller->>Builder: Initiate transaction with calldata<br/>(Method ID 0x043bc855 + params)
+    
+    alt Estimation Phase
+        Builder->>EVM: Estimate gas (eth_estimateGas)
+        EVM-->>Builder: Return 111,114 gas
     end
     
-    TB->>GE: Request gas estimation
-    GE->>GE: Calculate BaseFee (EIP-1559)
-    GE->>GE: Calculate PriorityFee bid
-    GE->>GE: Apply gas cap safeguard
+    Builder->>Builder: Configure fee market<br/>(BaseFee: variable, PriorityFee: 0.18 Gwei)
     
-    Note over GE: maxGas = user_cap<br/>actualFee ≤ maxGas × price
+    Caller->>Network: Sign and broadcast raw transaction
     
-    TB->>EVM: Submit signed transaction
-    EVM->>EVM: Execute bytecode
-    EVM->>EVM: Emit logs/events
+    Note over Network,Validator: Propagation + Mempool storage
     
-    Note over EVM: This TX produced:<br/>4 logs, 111,114 gas
+    Validator->>Validator: Select transaction for block
     
-    EVM-->>Net: Broadcast state change
-    Net-->>User: Receipt with status
+    Validator->>EVM: Execute transaction in EVM context
     
-    Note over User: Total fee = 0.000020 ETH<br/>@ 0.18 Gwei price
+    alt Execution Flow
+        EVM->>EVM: Decode Method ID (0x043bc855)
+        EVM->>EVM: Match to contract function signature
+        EVM->>EVM: Execute function logic
+        loop Per operation
+            EVM->>EVM: Consume gas based on opcode
+        end
+        loop Per event emission
+            EVM->>EVM: Emit LOG* (4 logs generated)
+        end
+    end
+    
+    EVM->>State: Update state (write contracts, balances)
+    EVM->>Validator: Return execution result + receipt
+    
+    Note over Validator: Deduct fee = 0.18 Gwei × 111,114 gas<br/>Total cost = 0.000020 ETH
 ```
 
-### 4.2 Three-Phase State Transition
+### Stage-by-Stage State Transitions
 
-| 阶段 | 状态定义 | 触发条件 | 确认条件 | 失败回滚 |
-|------|----------|----------|----------|----------|
-| **Initiation** | `TX_INIT` | 用户签名发起 | nonce 匹配、签名验证通过 | 签名无效、nonce 重复 |
-| **Verification** | `TX_VERIFY` | 进入 EVM 执行 | Gas 充足、Method ID 存在 | Gas 耗尽、revert 异常 |
-| **Commitment** | `TX_COMMIT` | 执行完成 | 状态根更新、日志持久化 | 状态回滚、费用不退 |
+#### Initiation Phase (Tx Creation)
+
+| State | Condition | Transition Action |
+|-------|-----------|-------------------|
+| S0: Idle | Caller invokes contract method | Encode calldata with Method ID |
+| S1: Encoding | Calldata constructed | Perform gas estimation |
+| S2: Estimation | Gas limit determined | Configure fee parameters |
+
+#### Verification Phase (Network Propagation)
+
+| State | Condition | Transition Action |
+|-------|-----------|-------------------|
+| S3: Broadcasting | Tx signed | Broadcast to P2P network |
+| S4: MemPool | Tx validated | Enter transaction pool |
+| S5: Selection | Block template built | Include in block candidate |
+
+#### Commitment Phase (EVM Execution)
+
+| State | Condition | Transition Action |
+|-------|-----------|-------------------|
+| S6: Execution | Block mined | Initialize EVM context |
+| S7: Method Dispatch | Method ID matched | Jump to function entry point |
+| S8: Computation | Opcode executed | Consume gas per operation |
+| S9: Event Emission | LOG* executed | Append to log series |
+| S10: Finalization | Execution complete | Calculate fee, update state |
 
 ---
 
 ## 5. Agent Autonomous Integration & Optimization
 
-### 5.1 Web3 AI Agent 安全交互协议设计
+### Proposed Architecture: Web3 AI Agent Transaction Safety Framework
 
-**论文级标题**：《Agent Blind Flight on Chain? Dynamic Database Query and Behavioral Security Sandbox Verification for Unknown Method IDs》
+#### Section 5.1: Dynamic Method ID Database Architecture
 
-**落地机制**：
+For autonomous AI agents operating in Web3 environments, the ability to dynamically resolve unknown Method IDs constitutes a critical capability gap. We propose a three-tier database architecture:
 
-```python
-class MethodIDSandbox:
-    """
-    AI Agent MUST implement this security layer before
-    executing any unknown Method ID interaction.
-    """
-    
-    def __init__(self, dynamic_db: MethodIDDatabase):
-        self.db = dynamic_db
-        self.whitelist = set()
-        self.blacklist = set()
-    
-    async def verify_method_id(
-        self, 
-        method_id: bytes4, 
-        contract_addr: address
-    ) -> VerificationResult:
-        # Phase 1: Dynamic DB Query
-        signature = await self.db.lookup(method_id, contract_addr)
-        
-        if signature is None:
-            # Phase 2: Behavioral Sandbox
-            simulation_result = await self.sandbox.simulate(
-                method_id=method_id,
-                input_params=PENDING_PARAMS,
-                gas_limit=GAS_CAP
-            )
-            
-            if not simulation_result.is_safe:
-                return VerificationResult.REJECT
-            
-            # Ask human confirmation for unknown methods
-            await self.request_approval(signature="UNKNOWN")
-        
-        return VerificationResult.APPROVE
+**Tier 1: Local Signature Cache**
+- Pre-loaded with top 1000 common method signatures
+- O(1) lookup complexity for known selectors
+- TTL-based invalidation for stale entries
+
+**Tier 2: Distributed Signature Registry**
+- Maintained via IPFS or Arweave for decentralized access
+- Integration with 4-byte.directory and similar services
+- Async fallback mechanism when local cache misses
+
+**Tier 3: ABI Reconstruction Engine**
+- On-chain code analysis for public functions
+- Dynamic decoding of return values
+- Heuristic matching for ambiguous signatures
+
+#### Section 5.2: Behavioral Security Sandboxing Protocol
+
+**Sandbox Execution Model**
+
+```mermaid
+graph TD
+    A[Incoming Unknown Method] --> B{Signature Known?}
+    B -->|Yes| C[Local Cache Lookup]
+    B -->|No| D[Distributed Registry Query]
+    C --> E{Confidence > 90%?}
+    D --> E
+    E -->|Yes| F[Execute with Standard Gas]
+    E -->|No| G[Sandbox Simulation]
+    G --> H{Gas Exceeds Threshold?}
+    H -->|Yes| I[Abort + Alert]
+    H -->|No| J[Execute + Monitor]
+    J --> K[Verify State Consistency]
+    K --> L[Commit or Revert]
 ```
 
-### 5.2 Gas 精细化出价策略
+**Gas熔断护栏 Implementation**
 
-**核心公式**：
+The proposed implementation includes a multi-layer gas protection mechanism:
 
-$$
-\text{OptimalPriorityFee} = \min\left(\text{MaxPriorityFeePerGas}, \max\left(\text{BaseFee}_{t+1} - \text{BaseFee}_t + \text{TargetFee}, \text{MinBid}\right)\right)
-$$
+1. **Soft Cap**: 2× estimated gas — emit warning log
+2. **Hard Cap**: 5× estimated gas — abort transaction
+3. **Absolute Maximum**: Protocol-defined block gas limit (30M at current fork) — reject immediately
 
-**代码级实现**：
+#### Section 5.3: Fine-Grained Fee Bidding Strategy
 
-```solidity
-// Gas 熔断护栏（防御性补丁）
-function safeTransfer(address token, address to, uint256 amount) external {
-    uint256 gasBefore = gasleft();
-    
-    // 设置最高 Gas 熔断护栏
-    uint256 maxGas = block.gaslimit * 80 / 100; // 最多消耗区块 Gas 的 80%
-    
-    (bool success, ) = token.call(
-        abi.encodeWithSignature(
-            "transfer(address,uint256)", 
-            to, 
-            amount
-        )
-    );
-    
-    uint256 gasUsed = gasBefore - gasleft();
-    
-    // 运行时 Gas 校验
-    require(gasUsed <= maxGas, "Gas griefing detected");
-    require(success, "Transfer failed");
-}
+**BaseFee + PriorityFee Optimization Algorithm**
+
+```
+Algorithm: OptimalFeeBidding
+Input: current_block_base_fee, network_congestion_factor, urgency_level
+Output: {base_fee, priority_fee, max_fee}
+
+1. historical_base = query_recent_blocks(base_fee, window=12)
+2. projected_base = exponential_moving_average(historical_base, α=0.8)
+3. 
+4. IF urgency_level == HIGH:
+5.     priority_fee = market_median_priority_fee × 1.5
+6. ELSE IF urgency_level == NORMAL:
+7.     priority_fee = market_median_priority_fee × 1.0
+8. ELSE:
+9.     priority_fee = market_median_priority_fee × 0.8
+10.
+11. max_fee = projected_base + priority_fee × 2
+12. RETURN {projected_base, priority_fee, max_fee}
 ```
 
 ---
 
 ## 6. Vulnerability Vector & Edge Case Verification
 
-### 6.1 安全漏洞报告块
+### Security Vulnerability Report Block
 
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│  漏洞编号    : VULN-2026-0518-001                                      │
-│  漏洞类型    :  Gas Price 误解 / 费用模型认知偏差                        │
-│  缺陷源头    :  社区教程普遍简化 Gas 模型，忽视 EIP-1559 动态费率机制      │
-│  攻击向量    :  新手无脑拉满 Gas Price → 高额费用损失 → economic griefing │
-│  失效模式    :  当 BaseFee 突增时，高 Gas Price 出价导致费用超预期 3-10x │
-│  真实案例    :  某 DeFi 交互 DAPP 新手因 "Gas Price 拉满加速确认"         │
-│                导致单笔交易费用达 0.05 ETH（当时正常费用仅 0.002 ETH）      │
-│  防御性补丁  :  ① 结合 BaseFee + PriorityFee 精细化出价                  │
-│                ② 代码中设置最高 Gas 熔断护栏（Gas Cap Safeguard）          │
-│                ③ 交易前模拟估算（eth_estimateGas）校验                    │
-└─────────────────────────────────────────────────────────────────────────┘
+#### Vulnerability V1: Method ID Collision/Shadowing
 
-┌─────────────────────────────────────────────────────────────────────────┐
-│  漏洞编号    : VULN-2026-0518-002                                      │
-│  漏洞类型    :  AI Agent Method ID 盲目交互 / 零知识签名                 │
-│  缺陷源头    :  Web3 AI Agent 缺乏动态 Method ID 数据库与行为验证机制     │
-│  攻击向量    :  合约升级引入恶意函数 → Agent 未知 Method ID被自动调用     │
-│               → 授权转移或资产盗取                                       │
-│  失效模式    :  Agent 持有高价值资产钱包，对未知函数签名发起 call          │
-│               → 触发不可预知的状态变更                                   │
-│  真实案例    :  交易 0x1f2f10d1c40777ae1da742455c65828ff36df387         │
-│               中 Method ID 0x043bc855 若为未知签名，Agent 将面临风险      │
-│  防御性补丁  :  ① 部署动态 Method ID 数据库（持续同步 4byte.directory）    │
-│                ② 引入安全沙箱模拟器，参数级别行为验证                      │
-│                ③ 高风险未知 Method ID 必须人工确认                       │
-│                ④ 资产钱包权限分离（read-only vs write-enabled）           │
-└─────────────────────────────────────────────────────────────────────────┘
-```
+| Field | Value |
+|-------|-------|
+| **Vulnerability Type** | Semantic Confusion Attack |
+| **Severity** | Medium |
+| **Defect Origin** | Off-chain ABI mismatch with on-chain selector |
+| **Attack Vector** | Attacker deploys malicious contract with different function signature sharing same 4-byte selector as target |
+| **Failure Mode** | AI Agent constructs parameters according to wrong ABI, causing data corruption or unexpected state mutations |
+| **Defensive Patch** | Implement double-verification: (1) fetch ABI from Etherscan/Sourcify, (2) cross-validate with `eth_call` dry-run returning decoded revert message |
 
-### 6.2 边缘案例校验矩阵
+#### Vulnerability V2: Gas Griefing via Storage SLOAD
 
-| 边缘场景 | 输入条件 | 预期行为 | 异常处理 | 状态码 |
-|----------|----------|----------|----------|--------|
-| Gas 耗尽 | `gasLimit < actualGasUsed` | 回滚状态、费用不退 | 抛出 `OutOfGas` | `0x0` |
-| BaseFee 激增 | `BaseFee_t+1 > 3 × BaseFee_t` | 交易延迟或失败 | 重新估算 | `0x1` |
-| 未知 Method ID | `signature not in DB` | 拒绝执行或人工确认 | 沙箱隔离 | `0x2` |
-| 日志过载 | `logsCount > 1000` | 部分日志截断 | 费用补贴 | `0x3` |
-| 重放攻击 | `nonce = stale_nonce` | 拒绝 | 更新 nonce | `0x4` |
+| Field | Value |
+|-------|-------|
+| **Vulnerability Type** | Economic Denial of Service |
+| **Severity** | Medium |
+| **Defect Origin** | EIP-2929 cold storage access pricing |
+| **Attack Vector** | Contract intentionally accesses cold storage slots, inflating gas costs beyond estimation |
+| **Failure Mode** | Transaction exceeds gas limit mid-execution, state changes reverted, but gas already consumed |
+| **Defensive Patch** | Set both soft and hard gas caps, implement `eth_call` simulation with exactly the same call context |
+
+#### Vulnerability V3: Log Injection / Fake Event
+
+| Field | Value |
+|-------|-------|
+| **Vulnerability Type** | Data Integrity Violation |
+| **Severity** | Low |
+| **Defect Origin** | Event topics not cryptographically bound to contract code |
+| **Attack Vector** | Sophisticated attacker creates contract emitting events with arbitrary topic[0] values |
+| **Failure Mode** | Indexer falsely indexes events under wrong event signature, breaking query reliability |
+| **Defensive Patch** | Verify event origin by checking `address` field in receipt, not just topic matching |
+
+#### Edge Case Verification Matrix
+
+| Scenario | Expected Behavior | Actual (Simulated) | Pass? |
+|----------|-------------------|--------------------|-------|
+| Method ID not in local cache | Query distributed registry | Requires network I/O | ⚠️ |
+| Gas estimation = actual gas | Commit at estimated | 111,114 gas used | ✅ |
+| 4 logs emitted | All 4 indexed | 4 logs in receipt | ✅ |
+| PriorityFee = 0.18 Gwei | Below median, slower inclusion | Transaction mined successfully | ✅ |
+| Unknown contract method called | Revert with error | Requires test | ❓ |
+| Gas limit set too low | Out of gas revert | Partial state revert | ⚠️ |
 
 ---
 
-## 7. 学术标签
+## Academic Tags
 
-`#EVMTransactionStructure` `#MethodID` `#GasOptimization` `#SmartContractSecurity` `#Web3AIAgent` `#EIP1559` `#EventLogs` `#ThreatModeling` `#SandboxVerification`
+`#EVM #SmartContract #GasOptimization #MethodSelector #OnChainAnalysis #Web3Agent #TransactionStructure #EthereumSecurity #EventLogs #FeeMechanism`
 <!-- DAILY_CHECKIN_2026-05-18_END -->
 
 <!-- Content_END -->
