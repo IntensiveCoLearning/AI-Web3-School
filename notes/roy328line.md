@@ -15,6 +15,39 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+\--
+
+學習日誌 · 2026-05-22（Day 6）
+
+\## 今日學習主題
+
+直播：Co-learning｜任務推進與答疑（Week 1，5/22 19:00）
+
+直播：例會分享｜上麥分享學習感受或信息觀察（Week 1，5/22 20:00）
+
+\## Week 1 整體複習｜核心脈絡整理
+
+本週學習的核心主軸是：用不可靠的推理引擎（AI）驅動不可逆的執行系統（Web3）——這是整個課程的核心設計張力。
+
+**AI 基礎脈絡（Day 1–5 整合）**：LLM 是概率生成引擎，Hallucination 在 Web3 裡不是答錯是做錯。Prompt 是軟約束，系統安全需要代碼層 allowlist + 人工確認。Context 五層結構，不可信內容需與指令層隔離。Agent 是受約束的執行循環，最危險設計：模糊目標 + 廣泛工具 + 大額資產並存。Frameworks 選擇第一原則：先理解工作流。
+
+**Web3 基礎脈絡**：Wallet 三類動作（連接/簽名/交易）風險截然不同。ABI 告訴你能調用什麼，不保證調用是否安全。ERC-4337 Session Key = AI Agent 上鏈的安全關鍵基礎（最小權限原則）。
+
+\## AI × Web3 交叉設計原則
+
+1. AI 解釋 ≠ AI 授權；AI 建議 ≠ AI 執行
+2. 2. 每個執行動作需要可追溯的確認記錄
+   3. 3. Simulation + Structured Output + Session Key + Human-in-the-loop + Audit Log 是解法組合
+     
+      4. \## 個人學習感受
+     
+      5. Week 1 最大收穫是建立了判斷框架：任何 AI 輸出進入 Web3 執行層之前，都需要一道人工確認節點。AI 降低了操作門檻，但不能降低安全標準。框架選擇和模型選擇是兩個不同維度——工具調用夠穩定的模型可以減少框架層的 guard，對鏈上場景系統設計成本影響很大。
+     
+      6. GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-22.md
+     
+      7. <!-- DAILY_CHECKIN_2026-05-22_END -->
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 \-–
