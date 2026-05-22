@@ -46,14 +46,35 @@ Day 4 | AI × Web3 School
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
-今日复习tc老师的web课程，并学习wsl2研究hermes具体的使用方法，有时间接着看handbook的ai部分知识。
+Day 3 | AI × Web3 School
+
+今日完成：
+
+从 OpenCode 切换到 Hermes，验证 WSL2 + DeepSeek 正常运行，确认后续用 Hermes 学习
+学习 Hermes 微信接入架构（iLink Bot API 中转方案）
+复习 TC 老师课程《AI时代：Web3开发者需要更扎实的基础知识与架构能力》
+系统梳理了 Web2 支付模型（银行转账→数据库字段变更）和 Web3 支付模型（去中心化信任→交易不可逆）
+理解了交易生命周期（构造→签名→广播）及 Gas / Nonce 等关键概念
+建立了 Web3 ≠ 新世界，而是更严格分布式系统的认知
+感受：TC 老师的课程从 Web2 支付模型切入引入 Web3，对比清晰。最深的感触是 Web2 和 Web3 的资金流转本质都是"数字变化"（数据库字段 vs 链上状态转移），但信任模型和容错空间的差异天差地别。
+
+下一步：参加 Bruce 老师《Web3 运行原理》课程，继续学习 Web3 基础知识。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
-今日将handbook中ai部分学完，然后开始web3部分的学习，并回顾昨晚tc老师的课
+Day 2 | AI × Web3 School
+
+今日完成：
+
+搭建 WSL2 环境，在 WSL2 上安装 Hermes Agent 框架
+复习 TC 老师 Web3 课程（进行中，未全部完成）
+参加 20:00 Draken 老师 AI 线上课，学习 AI 基础知识和 Hermes 安装演示
+感受：环境搭建比预期花时间，但 Hermes 装好后对后续 Agent 学习很有帮助。Web3 课程内容需要分几天消化。
+
+下一步：继续复习 TC 老师 Web3 课程（用 OpenCode Agent 辅助），研究 WSL2 环境下 Hermes 的具体用法，有空继续读 Handbook AI 章节。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
@@ -61,6 +82,14 @@ Day 4 | AI × Web3 School
 
 
 
-今日准备了协作工具zoom，LLM准备了cc、codex、ds 4.0pro。web3刚开始接触，还在学习
+Day 1 | AI × Web3 School
+
+今日完成：
+
+初始化个人学习仓库，结构包含 daily/tasks/experiments/handbook-feedback/hackathon/submissions
+阅读 Handbook — AI 基础：LLM、Prompt、Context 三章
+结合近期 Agent 开发经验做笔记，建立了"模型是大脑，工具是手脚"的整体认知
+学习策略确认：AI 为主攻方向，Web3 为扩展了解
+下一步：继续阅读 AI 基础章节（RAG / Agent / Frameworks / MCP）
 <!-- DAILY_CHECKIN_2026-05-18_END -->
 <!-- Content_END -->
