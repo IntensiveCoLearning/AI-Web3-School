@@ -15,8 +15,16 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今天用cursor辅助装了wsl和ubuntu，电脑小白装了两天才装起
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/10yu7ian/images/2026-05-22-1779464043928-image.png)
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 今天参加的是「AI 下乡计划」线上活动，主题是 AI 在 Web3 的应用。整场听下来最核心的一个观点我理解是：**AI + Web3 的重点不是“发一个 AI 项目”，而是当 AI Agent 从回答问题走向执行任务时，Web3 可以为它提供身份、支付、结算、审计和风控这套经济基础设施。**
 
 课件里把两者分工讲得很清楚：AI 负责理解与决策，Web3 负责身份、支付、结算和审计。合在一起就是面向 Agent 的经济系统。
@@ -41,6 +49,7 @@ timezone: UTC+8
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 ### **1\. 资产自托管：如何提高安全性、降低管理私钥的复杂度？**
 
@@ -130,11 +139,13 @@ timezone: UTC+8
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 今天的目标是配置 Hermes。看文档发现这个工具在 Windows 下支持不太成熟，推荐用 Linux 环境，所以需要先装 WSL 和 Ubuntu。我先把 WSL 装好了，Ubuntu 还没装完，还卡在下载中。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
