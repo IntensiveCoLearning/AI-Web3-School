@@ -15,8 +15,26 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今天读了 Handbook 的 RAG 章节。之前我就了解过RAG的工作流程，以前对 RAG 的理解就是"接个向量库让模型查资料"，但是对每个步骤的详细工作都不太了解，比如embedding如何操作等等。今天主要对这些内容比较深刻：
+
+\- Chunking 不能按固定字数切，要按结构切（标题、API、函数说明），
+
+不然模型拿到函数名却拿不到限制条件
+
+\- Vector DB 不光存向量，还要存元数据（版本、来源、可信等级），
+
+不然旧文档和第三方博客会混进来
+
+\- Citation 不是装饰，是答案能不能被验证的底线。
+
+没有来源的 RAG ≈ 换了个包装的幻觉
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 今日学习内容：
 
 1.  阅读 Handbook Context 章节 — 学习模型上下文的核心原理（Context Window、Context Engineering、Memory、Knowledge Base）
@@ -40,6 +58,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 今日学习内容：
 
@@ -66,6 +85,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
