@@ -15,8 +15,38 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
++📚 AI × Web3 School Day 5 — 检索增强生成（RAG）
+
++
+
++💡 3 个核心理解：
+
++1. RAG 的可靠性取决于证据链而非向量库——检索结果只是候选证据，需要看来源、版本、时效和适用范围
+
++2. Chunking 不能按固定字数切，技术文档应按标题/API/函数/审计记录的结构切分，并保留 metadata
+
++3. Citation 不是装饰——答案里的关键判断必须能追溯到具体文档段落，找不到证据就该拒答而非补全
+
++
+
++🎯 最大收获：RAG 的核心不是让回答更长，而是让回答有来源、有版本、有边界。没有 citation 的 RAG 只是把幻觉从模型内部搬到了检索系统里。
+
++
+
++❓ 链上数据（区块、交易、事件）怎么变成可检索的 chunk？索引层元数据该存哪些字段来支持 metadata filter？
+
++
+
++🔗 [https://github.com/Joea529/ai-web3-school-cohort-0](https://github.com/Joea529/ai-web3-school-cohort-0)
+
++📖 [https://aiweb3.school/zh/handbook/](https://aiweb3.school/zh/handbook/)
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 📚 AI × Web3 School Day 4 — 上下文（Context）
 
 💡 3 个核心理解：
@@ -39,6 +69,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 📚 AI × Web3 School Day 2 — 提示词（Prompt）
 
@@ -65,6 +96,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 2 — 提示词（Prompt）
 
 💡 对照手册学完 4 个知识节点：
@@ -88,6 +120,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
