@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今天没怎么学习，明天开始有周末时间做学习和机器人
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 今天抽空在学ai的东西
 
 问了ai关于hermes的机制，包括经验沉淀的原理，怎么使用以及建自己的数据库分开主题
@@ -32,6 +38,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 1.we3钱包的交易原理，身份到授权到传播到排序到执行和确认
 
@@ -50,11 +57,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 今天在让codex自动把aiweb3 school的平台api接进我的hermes里面，看下来还是不太会用，我的面板是配置面板，聊天还得进tg机器人。再研究研究
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
