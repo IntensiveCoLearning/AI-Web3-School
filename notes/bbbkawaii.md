@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+了解了ERC-20、ERC-721 与 ERC-1155 协议的商业精髓
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 了解了区块浏览器和测试网，包括以太坊目前最常用的两个主流测试网
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 学习了 gas 机制，L1 和 L2 的关系，以及和 AI agent 的联系
 <!-- DAILY_CHECKIN_2026-05-20_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 学习了区块链浏览器、钱包、信任机制、支付生命周期相关的概念
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
