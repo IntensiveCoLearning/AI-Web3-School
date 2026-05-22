@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今天了解到obsidian和subagent，明后天会重点学习下。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 # task3存在的问题
 
 昨天没调完，存在跨域问题，今天让agent进行了修复，现在测试已经ok
@@ -24,6 +30,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 # Task3
 
@@ -68,6 +75,7 @@ ok，按照开发计划开始开发吧
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 之前已经在用claude code写代码，分析代码库了，
