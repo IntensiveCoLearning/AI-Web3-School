@@ -15,13 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+今天补了  
+**「AI 下乡计划」24 小时让 Agent 上工！**  
+**打算自己也着手做一个，之前也想做来着但一直没做，可能是我没有事先跟ai理清产品需求。**
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 昨天忘记打卡了
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 \# Day 1 Check-in
 
