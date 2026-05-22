@@ -15,8 +15,44 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+> 【AI × Web3 School 打卡 Day 5 | Week 1 收官】
+> 
+> 今日参加 Week 1 收官 Co-learning，同步模块 B/C 进度，完成 Week 1 整体复盘。
+> 
+> Week 1 关键收获：
+> 
+> 1.  建立了 AI × Web3 共同语言：从 buzzword 到可描述的任务链
+>     
+> 2.  完成了 Base Sepolia 测试网 USDC 转账，理解了 Gas、Faucet、区块浏览器
+>     
+> 3.  明确了 Agent 权限边界：提案权 vs 签名权分离是安全设计的底线
+>     
+> 4.  用 Hermes Agent 搭建了每日学习笔记 + 自动同步 GitHub 的工具链
+>     
+> 
+> Week 1 遗留与下一步：
+> 
+> -   🔄 合约部署记录待补齐（模块 B）
+>     
+>     ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-22-1779459544556-image.png)
+> -   🔄 模块 C 最小交叉实验原型待转为可运行流程
+>     
+>     ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-22-1779459776206-image.png)
+> -   🎯 Week 2 方向初筛：Agentic Commerce / AI Security
+>     
+> 
+> 学习笔记：[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-22.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/main/daily/2026-05-22.md)
+> 
+> #AIWeb3School #Web3Basics #Week1Done #Day5
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-22-1779459536428-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/NeoWeb3Nova/images/2026-05-22-1779459787246-image.png)
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 > 今日推进模块 C 最小交叉实验原型，同时确认模块 B 链上实践完成度。
 
 > 关键收获：
@@ -69,6 +105,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -97,6 +134,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -142,6 +180,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
