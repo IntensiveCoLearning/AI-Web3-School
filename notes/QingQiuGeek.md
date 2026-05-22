@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+打卡，今天投了简历
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 \[x参考\](https://x.com/virtuals\_io/status/2031042423288426979)  
   
 \## 核心观点  
@@ -209,6 +215,7 @@ AI 时代会出现大量新“商家”：
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 今天学习了solidity
 
@@ -473,6 +480,7 @@ address addr = address(token);
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 今天学了the graph。
 
 \[官网\]([https://thegraph.com/docs/en/subgraphs/quick-start/](https://thegraph.com/docs/en/subgraphs/quick-start/))
@@ -524,6 +532,7 @@ publish 后：别人也能把它当正式网络服务来用
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
