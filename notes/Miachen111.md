@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+LLM 一次回答问题，通常只是在生成文本。Agent 更进一步：它可以拆任务、查资料、调用 API、写代码、生成操作草稿、等待反馈再继续下一步。
+
+Tool Use
+
+Agent 从“会回答”变成“能做事”
+
+今天在vscode裝了個gemini agent
+
+之前的hermes agent 應該也屬於這個
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 llm rag實作
 
 rag 開書考試 找資料給llm回答 有相關資料 回答更準確
@@ -61,6 +75,7 @@ gemini 底層rag 丟檔案給他讀=外接資料庫
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 助記詞丟了 私鑰全丟
 
 資產不在錢包 實際上帳本跟數據在區塊鏈上
@@ -92,6 +107,7 @@ PoS ETH 偽隨機
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 裝完hermes 用ollama裝
 
 去ai web3 school那個網站讀了llm
@@ -103,6 +119,7 @@ hallucination: 幻覺 外部校驗
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
