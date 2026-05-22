@@ -4,7 +4,7 @@ timezone: UTC+8
 
 # yuannnn
 
-**GitHub ID:** mawenyuan854-blip
+**GitHub ID:** Yuannnauy
 
 **Telegram:** @Yuan_022
 
