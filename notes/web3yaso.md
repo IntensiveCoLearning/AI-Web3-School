@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+观看老师的分享：**AI 下乡计划｜AI 在 Web3 的应用**
+
+[https://x.com/AgentEconCN/status/2057711778466083149](https://x.com/AgentEconCN/status/2057711778466083149)
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 今日完成：
 
 ✅ 复习 Web3 基础（Network、Cryptography、Wallet、Smart Contract）
@@ -27,11 +35,13 @@ AI x Web3 School
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 今天主要观看了Hermes Agent分享，收获满满
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 ```
@@ -51,6 +61,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
