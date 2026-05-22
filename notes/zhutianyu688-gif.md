@@ -15,8 +15,34 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+5.22（不是在水笔记，今天重新思索了一下）
+
+重新梳理了钱包，网络，节点，rpc，共识机制等概念
+
+如果以快递站举例，钱包像是你发起的一个上门取件或者是你的一个寄包裹请求，这个钱包里面有你填写的地址，身份信息。
+
+节点可以看作是上门取件的快递小哥，他来找你要收款码，也就是验证寄快递的人的身份，同时要求你支付金额，相当于验证你的gas费是否充足
+
+网络可以理解为整个快递站的运行系统，统筹调度，可以看到你的包裹的位置等等
+
+rpc理解为你连接各个快递站的接口，就像一家快递公司有很多个站点，你从app里就可以看不同站点的联系方式，地址等等，总之是一个连接点
+
+共识机制需要从实际情况web3理解
+
+以比特币网络，共识机制是pow,proof of work 工作量的证明，节点找到工作量最大的，给他广播出去，然后大家去验证，验证成功这个区块就被上联
+
+当然这个共识机制与实际的快递公司不同的点在于，快递公司是由老板的，规则是老板说的算，老板发工资
+
+而web3网络虽然有原生住民和开发者，但是后的运行是靠所有人的努力
+
+理解可能不够准确。。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 ![截屏2026-05-20 17.03.19.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/zhutianyu688-gif/images/2026-05-21-1779378792797-__2026-05-20_17.03.19.png)
 
 今天比较忙，先提几个问题，周末解决
@@ -32,6 +58,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 ![截屏2026-05-20 17.03.19.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/zhutianyu688-gif/images/2026-05-20-1779277180808-__2026-05-20_17.03.19.png)
 
@@ -52,6 +79,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 ![截屏2026-05-19 23.49.16.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/zhutianyu688-gif/images/2026-05-19-1779205838582-__2026-05-19_23.49.16.png)
 
 第一次深入了解了web3和web2的区别，虽然并未完全理解，至少通过与web2对比，把web3的支付系统了解清楚了，**Web2 里，银行是最终裁判。Web3 里，区块链状态是最终裁判。**后面我将搞懂关于一笔稳定币支付交易的生命周期。
@@ -59,6 +87,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
