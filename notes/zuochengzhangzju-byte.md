@@ -29,4 +29,38 @@ AI x Web3 School
 - Simulation as Safe Layer：交易确认前先模拟执行，预览资产变化，比依赖用户读懂签名更可靠
 - 对 AI Agent 意义：程序化解析 simulation 结果，自动判断风险，不盲目执行
 <!-- DAILY_CHECKIN_2026-05-20_END -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+## ZK 隐私基础设施 + Synthesis 黑客松获奖项目分析
+
+### 核心收获
+
+1. **MCP 一行接入模式**：`npm install -g @zkproofport-ai/mcp@latest` → Agent 一行调用获得 ZK 能力。暴露意图（prove identity），不暴露技术细节。做项目必须做到这个精简程度。
+
+2. **Railgun ≠ 混合器**：四层隐私保护（UTXO 模型 + 交互噪声 + Broadcaster 代发 + 匿名集体量），不纯粹靠体量。混合器只有体量一面墙，Railgun 有四面墙。
+
+3. **ZK 身份分层**：World ID（人格证明）→ Semaphore（群组成员证明）→ ZKProofport（属性证明）。Agent Payment 需要属性证明。
+
+### ZK 隐私仓库速查
+
+| 仓库 | 功能 | 成熟度 |
+|------|------|--------|
+| semaphore-protocol/semaphore | 通用 ZK 隐私层，匿名群组成员证明 | ✅ 生产级 |
+| worldcoin/world-id-protocol | 全球级匿名人格证明 | ✅ 生产级 |
+| ScopeLift/stealth-address-erc | ERC-5564 隐身地址 + ERC-6538 注册表 | ✅ EIP Final |
+| zkproofport/proofport-ai | Agent 原生 ZK 证明（TEE + ERC-8004） | ⚠️ 早期 |
+| Railgun | DeFi 隐私基础设施，0zk 地址 | ✅ 生产级 |
+
+### 隐私支付架构模式
+
+Stealth Address（断联收款人）→ Railgun 屏蔽池（断联发送人）→ ZK 忠诚度证明（断联消费习惯）
+
+### Synthesis 黑客松获奖项目（与 Agentic Commerce 相关）
+
+- **Maiat Protocol**：Agent 信用局，ERC-8004 + ERC-8183 + Wadjet ML
+- **Nastar Protocol**：链上 Agent 雇佣市场，16 稳定币托管 + AI 仲裁
+- **SynthPact**：机器间自主签约，Uniswap V3 + ERC-8004
+- **Agora**：Agent 隐私支付，Stealth Address + Railgun + ZK 忠诚度
+- **Inchy**：自给自足 Agent 经济，闭环 swap fee → LLM → 更好推荐
+<!-- DAILY_CHECKIN_2026-05-22_END -->
 <!-- Content_END -->
