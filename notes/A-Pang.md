@@ -15,14 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+erc721代币详解：  
+[https://x.com/Pang26989586/status/2057820218366533700?s=20](https://x.com/Pang26989586/status/2057820218366533700?s=20)
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 发布erc20代币相关：approve race condition 授权竞态攻击 讲解  
 [https://x.com/pang26989586/status/2057470923213873255?s=46](https://x.com/pang26989586/status/2057470923213873255?s=46)
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 1、学些erc20代币合约细节  
 1）查询类方法  
@@ -73,6 +81,7 @@ event Transfer(address indexed from, address indexed to, uint256 value); event A
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 1、hermes对接wx bot ，试用wechat 聊天  
 2、完成web3相关知识学习，整理内容并发布推特帖子  
 [https://x.com/Pang26989586/status/2056659742425288980?s=20](https://x.com/Pang26989586/status/2056659742425288980?s=20)  
@@ -81,6 +90,7 @@ event Transfer(address indexed from, address indexed to, uint256 value); event A
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
