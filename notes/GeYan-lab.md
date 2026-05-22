@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+在Co-learning中我从同伴进展中获得参考如何拆解当前任务、如何整理 proof、如何把问题转成下一步行动
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 ## AI 在 Web3 落地四大核心支柱
 
 ### 1\. 智能体经济与 M2M 微支付
@@ -69,6 +75,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 Web3 的本质是一个“全球共享状态机
 
