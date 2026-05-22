@@ -19,15 +19,12 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 ![ScreenShot_2026-05-22_201818_080.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/oliver917-boop/images/2026-05-22-1779454420450-ScreenShot_2026-05-22_201818_080.png)
 
-今天收听了周例会
-
-![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/oliver917-boop/images/2026-05-22-1779454445970-image.png)
-
-学分任务触发了自动审核，但实际并未违反相关规定，同时任务已失效，排行榜已无意义，后续将不会再完成学分任务
+今天收听了co-learning和周例会
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 ![ScreenShot_2026-05-21_205012_074.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/oliver917-boop/images/2026-05-21-1779368216889-ScreenShot_2026-05-21_205012_074.png)
 
@@ -36,6 +33,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 ![微信图片_20260520193205_66_11.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/oliver917-boop/images/2026-05-20-1779277249707-_____20260520193205_66_11.png)
@@ -54,6 +52,7 @@ AI x Web3 School
 
 
 
+
 ![ScreenShot_2026-05-19_200306_640.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/oliver917-boop/images/2026-05-19-1779195702479-ScreenShot_2026-05-19_200306_640.png)
 
 今天的分享会主要讲了Hermes Agent的搭建过程，给予agent一些管理员权限确实不太让人放心，不过agent会提示是否需要授权危险的指令，老师建议选取每次都授权，后续需要查询一些安全性的知识
@@ -61,6 +60,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
