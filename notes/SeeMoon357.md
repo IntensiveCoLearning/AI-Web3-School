@@ -15,8 +15,19 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+-   co-learning
+    
+-   分享会
+    
+
+今天搞AI\*Web3比较少，更多时间放在X的信息了
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 -   参加AI下乡计划
     
 
@@ -25,6 +36,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 -   参加布老师的Web3运行原理；
     
@@ -35,6 +47,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 -   钱包与抽象X推文大纲
     
 -   参加Hermes部署讲座。准备部署一个Hermes。
@@ -42,6 +55,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
