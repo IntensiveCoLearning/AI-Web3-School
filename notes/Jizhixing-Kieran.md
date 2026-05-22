@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+为Agent增加了撤回回滚、日历编辑功能
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 ## 今日成果：
 
 1.  思考科研方向，已经有了初步的想法
@@ -28,6 +34,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 ````markdown
 ## 一、核心概念
@@ -137,6 +144,7 @@ EOA (私钥控制)
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 # 拒绝纸上谈兵，用费曼技巧复盘我的个人 Agent 开发之路
