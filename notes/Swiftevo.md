@@ -15,13 +15,522 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+學習總結 — Retrieval 與 RAG Architecture
+
+今天你已經正式進入：
+
+AI Retrieval Systems
+
+這是整個 Agent / RAG / AI-native database 的核心。
+
+你今天其實學到的不是單一技術。
+
+而是：
+
+AI 怎樣「找到」知識
+
+\---
+
+1\. Chunking
+
+你理解：
+
+Chunking = 把大型資料切成可 retrieval 的語意單位
+
+不是：
+
+人工剪貼文字
+
+而是：
+
+為 semantic retrieval 準備資料單位
+
+\---
+
+你也理解：
+
+對 Spark 來說：
+
+Structured Chunking 最適合
+
+例如：
+
+summary
+
+evidence
+
+funding
+
+reviewer notes
+
+分開。
+
+\---
+
+超重要理解：
+
+好 schema = 好 chunking
+
+而：
+
+好 chunking = 好 retrieval
+
+\---
+
+2\. Embeddings
+
+你理解：
+
+Embedding = 把語意轉成向量位置
+
+不是：
+
+字面 matching
+
+而是：
+
+meaning representation
+
+\---
+
+你也理解：
+
+意思接近：
+
+會在 vector space 靠近。
+
+例如：
+
+aging research
+
+與：
+
+longevity science
+
+\---
+
+超重要理解：
+
+Embedding 不是 AI 真正理解
+
+而是：
+
+statistical semantic compression
+
+\---
+
+3\. Dense vs Sparse Retrieval
+
+這是今天最大核心之一。
+
+\---
+
+Sparse Retrieval
+
+重視：
+
+keyword / exact terms
+
+例如：
+
+BM25
+
+Elasticsearch
+
+SQL search
+
+\---
+
+優點：
+
+精準
+
+可解釋
+
+成本低
+
+缺點：
+
+不懂語意
+
+\---
+
+Dense Retrieval
+
+重視：
+
+semantic similarity
+
+即：
+
+embeddings
+
+vector search
+
+\---
+
+優點：
+
+理解意思
+
+適合自然語言 retrieval
+
+缺點：
+
+有時太 semantic
+
+不穩定
+
+可能 drift
+
+\---
+
+真正 production system：
+
+通常：
+
+Hybrid Retrieval
+
+即：
+
+Sparse + Dense + Metadata
+
+一起。
+
+\---
+
+4\. Metadata 的重要性
+
+你開始理解：
+
+真正 production retrieval：
+
+不是：
+
+純 vector search
+
+而是：
+
+metadata-rich retrieval
+
+例如：
+
+round
+
+category
+
+evidence type
+
+GitHub presence
+
+funding history
+
+\---
+
+這對 Spark 特別重要。
+
+因為：
+
+你的資料：
+
+本身非常 structured。
+
+\---
+
+5\. Retrieval 真正本質
+
+今天最重要理解之一：
+
+RAG 不是 AI 記住 database
+
+而是：
+
+AI 動態 retrieval database
+
+\---
+
+即：
+
+query
+
+→ retrieve chunks
+
+→ inject context
+
+→ generate answer
+
+\---
+
+6\. Spark System 的真正演化方向
+
+你現在已經開始看見：
+
+未來 Spark：
+
+不是：
+
+普通 database
+
+而是：
+
+AI-native knowledge infrastructure
+
+\---
+
+可能包括：
+
+\---
+
+Canonical Archive
+
+raw history。
+
+\---
+
+Chunk Layer
+
+semantic units。
+
+\---
+
+Embedding Layer
+
+meaning representation。
+
+\---
+
+Retrieval Layer
+
+semantic search。
+
+\---
+
+Analysis Layer
+
+reviewer outputs。
+
+\---
+
+Memory Layer
+
+persistent understanding。
+
+\---
+
+Agent Layer
+
+workflow + tools + actions。
+
+\---
+
+7\. 你今天真正進步的地方
+
+你開始：
+
+用 retrieval 視角看 database
+
+這非常重要。
+
+因為：
+
+未來 AI systems：
+
+很多時：
+
+模型不是核心
+
+而是：
+
+retrieval quality
+
+\---
+
+你已經開始從：
+
+「如何問 AI」
+
+進入：
+
+「如何讓 AI 找到正確知識」
+
+這是完全不同層次。
+
+\---
+
+下一步（你下一個最適合學的）
+
+你現在最適合下一步：
+
+Retrieval Theory & Retrieval Architecture
+
+即：
+
+\---
+
+1\. Retrieval 到底怎樣判斷「相關」？
+
+例如：
+
+cosine similarity
+
+nearest neighbor search
+
+reranking
+
+relevance scoring
+
+\---
+
+2\. Retrieval Pipeline
+
+真正 retrieval：
+
+不是：
+
+search → answer
+
+而是：
+
+query understanding
+
+→ metadata filtering
+
+→ sparse retrieval
+
+→ dense retrieval
+
+→ reranking
+
+→ context assembly
+
+→ answer
+
+\---
+
+3\. Reranking 是甚麼？
+
+這是 production RAG 核心之一。
+
+因為：
+
+retrieval 第一次找的結果：
+
+通常不夠準。
+
+所以：
+
+需要第二層：
+
+relevance judge
+
+\---
+
+4\. Top-K Problem
+
+例如：
+
+retrieve top 5?
+
+top 20?
+
+top 50?
+
+太少：
+
+miss context。
+
+太多：
+
+token explosion。
+
+\---
+
+5\. Long Context vs Retrieval
+
+現在 AI 世界最大爭論之一。
+
+\---
+
+一派認為：
+
+超長 context window 就夠。
+
+不需要複雜 RAG。
+
+\---
+
+另一派認為：
+
+retrieval 永遠重要。
+
+因為：
+
+context 太貴
+
+long context attention 不穩
+
+memory organization 更重要
+
+\---
+
+6\. Hallucination 與 Retrieval
+
+retrieval：
+
+真的能降低 hallucination？
+
+還是：
+
+只會 retrieval hallucination？
+
+這也是重要爭論。
+
+\---
+
+7\. AI-native Database Design
+
+你之後會開始理解：
+
+未來 database：
+
+不只是：
+
+storage
+
+而是：
+
+retrieval-oriented architecture
+
+這跟傳統 database mindset 完全不同。
+
+\---
+
+最後一句（今天真正核心）
+
+傳統 database：
+
+保存資料
+
+\---
+
+AI-native database：
+
+讓 AI 能找到、理解、重組知識
+
+這是你現在真正開始進入的世界。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 # 學習總結 — AI × Web3 Learning Journey
 
@@ -432,6 +941,7 @@ workflow + tools + actions。
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -526,6 +1036,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
