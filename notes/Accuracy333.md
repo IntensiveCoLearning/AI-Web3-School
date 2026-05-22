@@ -15,8 +15,30 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+![屏幕截图 2026-05-22 204758.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Accuracy333/images/2026-05-22-1779454088506-_____2026-05-22_204758.png)
+
+```
+文件路径C:\Users\Accuracy\WorkBuddy\2026-05-22-task-7\gas-interactive-learning.html# 2026-05-22 工作记录
+
+## Gas / 合约执行交互学习产物
+
+生成了一个完整的 HTML 交互学习文件：`gas-interactive-learning.html`
+
+包含四个模块：
+1. **Gas 费用模拟器** — 可拖动滑块调整 Gas limit / 消耗 / Base fee / Priority fee / ETH 价格，实时计算费用构成
+2. **操作码 Gas 表** — 10 种常见 EVM 操作码（ADD/MUL/SLOAD/SSTORE/MLOAD/MSTORE/CALL/LOG2/CREATE/KECCAK256），点击查看详细说明
+3. **逐步执行演示** — 模拟 `add(uint a, uint b)` 函数的 EVM 执行过程，逐步查看操作码、EVM 栈变化和 Gas 递减
+4. **EIP-1559 机制** — 可调节网络拥堵程度，实时看到 Base fee 变化、ETH 燃烧量和矿工收益分配
+
+文件路径：`C:\Users\Accuracy\WorkBuddy\2026-05-22-task-7\gas-interactive-learning.html`
+```
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 Web3/以太坊核心原理
 
 一、账户体系：助记词、私钥、公钥与地址
@@ -170,6 +192,7 @@ Web3是密码学、经济学、社会学三门学科的交叉：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 ````
 ### 一、AI时代基础知识的重要性
