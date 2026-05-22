@@ -34,10 +34,13 @@ AI x Web3 School
 
 文件路径：`C:\Users\Accuracy\WorkBuddy\2026-05-22-task-7\gas-interactive-learning.html`
 ```
+
+file:///C:/Users/Accuracy/WorkBuddy/2026-05-22-task-7/gas-interactive-learning.html
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 Web3/以太坊核心原理
 
@@ -192,6 +195,7 @@ Web3是密码学、经济学、社会学三门学科的交叉：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 ````
