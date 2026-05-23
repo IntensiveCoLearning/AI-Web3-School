@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+今日主要是補听了之前的分享，包括Web3 的运行原理和Web3下乡计划。前者的分享者Bruce 老师在结束分享时提供了几个问题（附截图），值得好好思考一下，因为我也很认同老师所说的Web3 并不是只有技术本身，还是由密码学、经济学和社会学三种学科交集的中心。我的专业是社会学，难怪会被Web3这个大概念吸引。但他蕴含的底层逻辑和核心思想还是需要深刻的思考和认识。除此之外，老师也简介了Web3的一些基本概念和运行，这部分也加深我的认识，特别是节点等。不过因为我也使用过Web3产品（例如钱包、defi、domain等等），所以有一定的理解。
+
+第二个分享是Web3下乡计划，这个我有点难过，因为recording的质量很差，声音很小，有起码一半时间并没有声音。所以我也没有浪费时间继续听下去。有点遗憾。
+
+最后我会做一些handbook里面的最小实践，因为我一直都不知道如何开始，直到我的朋友提点我一下，说可以用Codex 。于是我下载了Codex，有点小激动。想不到有机会玩一下vibe coding。Let‘s see！
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天去了例會，裡面的小夥伴都很厲害！！特別是Luvia，她只有大一而已，真的後生可畏！！我也要好好加油！！另外一樣有趣的事情，就是大家都有不同程度的焦慮，果然焦慮都是亞洲人的標配啊。。。
 
 今天沒有真實使用到Hermes Agent，這個要留到明天才可以用了。今天就只看了handbook的內容，重點還是focus在AI方面。可能我也了解一下Obsidian怎麼用去打造屬於我的知識庫吧！
@@ -26,6 +36,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 今天終於可以部署hermes AI，作為一個編程小白，我有點小激動。之後再來更新一下set up的結果。
 
@@ -52,6 +63,7 @@ AI x Web3 School
 
 
 
+
 今日目標是要做3樣東西：
 
 1）根據ChatGPT提供的Study Plan，在Github建立Repo，並將Day1、2的筆記錄入。  
@@ -68,6 +80,7 @@ AI x Web3 School
 
 
 
+
 Day2
 
 My note is saved in Google docs: [https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX\_dfMbQRMUDxJcWA0k/edit?usp=sharing](https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX_dfMbQRMUDxJcWA0k/edit?usp=sharing)
@@ -77,6 +90,7 @@ Basically I just read the handbook and clarify the ideas of different AI concept
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
