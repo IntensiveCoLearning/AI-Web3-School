@@ -14,6 +14,290 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+# AI Agent Web3 安全边界分析报告
+## 第一周：Web3 安全底线 | Day 6 打卡记录
+
+---
+
+## 目录（Table of Contents）
+
+- [1. 摘要与问题空间](#1-摘要与问题空间)
+- [2. 安全威胁形式分类](#2-安全威胁形式分类)
+- [3. 系统架构与风险拓扑](#3-系统架构与风险拓扑)
+- [4. AI Agent 失败场景映射](#4-ai-agent-失败场景映射)
+- [5. 防御策略与安全不变量](#5-防御策略与安全不变量)
+- [6. 学术标签](#6-学术标签)
+
+---
+
+## 1. 摘要与问题空间
+
+### 1.1 摘要（Abstract）
+
+本报告系统梳理了 AI Agent 在执行 Web3 操作时面临的五大安全边界风险。通过对私钥泄露（private key leakage）、钓鱼攻击（phishing）、错误地址（incorrect address）、恶意授权（malicious approval）、合约漏洞（smart contract vulnerability）五类威胁的形式化分析，建立了从威胁向量到 Agent 失败场景的完整映射关系。研究的核心贡献在于为 AI Builder 提供了一套可验证的安全边界检查框架（Security Boundary Checklist），明确界定 Agent 在链上操作中的权限边界与不可逾越红线。
+
+### 1.2 包含与排除边界（In-Scope / Out-of-Scope）
+
+| 边界类型 | 包含范围 | 排除范围 |
+|---------|---------|---------|
+| **In-Scope** | 钱包安全风险、交易验证边界、智能合约交互风险、数据源可信度、授权权限管理 | 特定 DApp 业务逻辑漏洞、共识层攻击、MEV 套利策略 |
+| **Agent Context** | LLM prompt injection、上下文污染、工具调用误判 | 模型训练数据泄露、模型蒸馏攻击 |
+| **System Boundary** | Agent 可控操作空间、用户确认机制设计 | 底层区块链网络层防护、节点基础设施安全 |
+
+---
+
+## 2. 安全威胁形式分类
+
+### 2.1 核心威胁类型系统（Formal Taxonomy）
+
+| 威胁类型（Threat Type） | 缺陷源头（Root Cause） | 攻击向量（Attack Vector） | 影响等级（Severity） |
+|----------------------|---------------------|------------------------|-------------------|
+| **私钥泄露** | 密钥管理不当、环境变量暴露、日志输出敏感信息 | 恶意脚本注入、社会工程学钓鱼、GitHub 公开仓库扫描 | 🔴 致命（Critical） |
+| **钓鱼攻击** | 用户缺乏安全意识、Agent 缺乏来源验证能力 | 伪造签名请求、诱骗性交易确认、假冒 DApp 界面 | 🟠 高危（High） |
+| **错误地址** | 人类输入错误、Agent 地址校验缺失 | 资金永久丢失、错误转账不可逆 | 🔴 致命（Critical） |
+| **恶意授权** | 用户过度授权、Agent 自动审批风险 | 无限代币授权（infinite approval）、授权后被盗 | 🟠 高危（High） |
+| **合约漏洞** | 未经验证的外部合约、缺乏审计 | 重入攻击（reentrancy）、闪电贷（flash loan）、重放攻击 | 🟡 中危（Medium） |
+| **不可信数据源** | 使用未经验证的 RPC 或数据源 | 价格预言机操纵、数据污染、决策误导 | 🟠 高危（High） |
+
+### 2.2 类型系统约束（Type System）
+
+```
+type AgentAction = 
+  | "read_only"        // 只读操作，无需用户确认
+  | "user_confirm"     // 需要 human-in-the-loop 确认
+  | "forbidden"        // 禁止自动执行
+
+type RiskLevel = "critical" | "high" | "medium" | "low"
+
+type SecurityCheck = {
+  address_format: boolean,
+  rpc_source: TrustedSource,
+  contract_audit: AuditStatus,
+  approval_scope: LimitedApproval,
+  signature_purpose: string
+}
+```
+
+---
+
+## 3. 系统架构与风险拓扑
+
+### 3.1 概念脑图：AI Agent Web3 安全边界
+
+```mermaid
+mindmap
+  root((AI Agent
+        Web3 安全))
+    威胁向量
+      私钥泄露
+      钓鱼攻击
+      错误地址
+      恶意授权
+      合约漏洞
+      数据源污染
+    Agent 权限边界
+      只读操作
+      用户确认操作
+      禁止自动执行
+    防御机制
+      地址格式校验
+      来源可信度检查
+      授权范围限制
+      合约审计验证
+    失败场景
+      资金永久损失
+      未授权交易
+      权限过度开放
+      错误决策执行
+```
+
+### 3.2 系统组件拓扑图
+
+```mermaid
+graph TD
+    subgraph User["用户层"]
+        U[用户 Wallet]
+        UC[用户确认流程]
+    end
+    
+    subgraph Agent["Agent 执行层"]
+        LLM[LLM 推理引擎]
+        TOOL[工具调用模块]
+        SEC[安全检查模块]
+        CTX[上下文管理器]
+    end
+    
+    subgraph Web3["Web3 网络层"]
+        RPC[RPC Provider]
+        CHAIN[链上合约]
+        PROXY[代理/预言机]
+    end
+    
+    subgraph Threats["威胁向量"]
+        PHISH[钓鱼攻击]
+        MAL_APP[恶意授权]
+        BAD_ADDR[错误地址]
+        KEY_LEAK[私钥泄露]
+        EXPLOIT[合约漏洞]
+    end
+    
+    U -->|钱包签名| LLM
+    LLM -->|推理决策| TOOL
+    TOOL -->|工具调用| SEC
+    SEC -->|安全校验| Web3
+    
+    CTX -->|上下文注入| LLM
+    PROXY -->|数据供给| LLM
+    
+    PHISH -.->|伪造请求| U
+    MAL_APP -.->|授权陷阱| TOOL
+    BAD_ADDR -.->|地址错误| TOOL
+    KEY_LEAK -.->|密钥暴露| U
+    EXPLOIT -.->|合约风险| CHAIN
+    
+    SEC -->|阻止危险操作| TOOL
+    SEC -->|强制用户确认| UC
+```
+
+---
+
+## 4. AI Agent 失败场景映射
+
+### 4.1 威胁到失败场景的完整映射表
+
+| 威胁类型 | 失败场景描述 | 触发条件 | 后果严重性 |
+|---------|------------|---------|-----------|
+| **私钥泄露** | Agent 在日志或响应中暴露私钥，导致资产被转移 | 调试日志输出密钥、未使用环境变量隔离 | 资产清零，不可逆 |
+| **钓鱼攻击** | Agent 被诱导生成钓鱼站点的签名请求，用户误确认 | 伪造的 DApp 域名、Prompt Injection 注入恶意指令 | 授权转移资产 |
+| **错误地址** | Agent 将用户意图的错误地址作为交易目标，无法撤回 | 缺少 EVM 地址格式校验、复制粘贴错误 | 资金永久丢失 |
+| **恶意授权** | Agent 自动审批了恶意合约的无限代币授权 | 缺少授权金额限制、用户未理解授权范围 | 授权后持续被盗 |
+| **合约漏洞** | Agent 调用了存在漏洞的合约，导致资产被套取 | 未验证合约安全性、依赖不可信数据源 | DeFi 资产损失 |
+| **不可信数据源** | Agent 基于污染数据做出错误交易决策 | 使用未知 RPC、使用未验证预言机 | 错误套利/ swap |
+
+### 4.2 Agent 操作权限矩阵
+
+| 操作类型 | 示例场景 | 权限级别 | 是否需要用户确认 |
+|---------|---------|---------|----------------|
+| 读取余额（read balance） | 查询钱包 ERC-20 代币余额 | `read_only` | ❌ |
+| 模拟交易（simulate transaction） | 调用 RPC 模拟交易执行 | `read_only` | ❌ |
+| 估算 Gas（estimate gas） | 预估交易燃料费用 | `read_only` | ❌ |
+| 请求签名（request signature） | 构造签名消息请求 | `user_confirm` | ✅ **强制确认** |
+| 提交交易（submit transaction） | 广播签名交易到链上 | `user_confirm` | ✅ **强制确认** |
+| 自动授权（auto approval） | 批准代币转账权限 | `forbidden` | 🚫 **禁止自动执行** |
+| 调用未经审计合约 | 执行新部署的合约方法 | `forbidden` | 🚫 **禁止执行** |
+
+---
+
+## 5. 防御策略与安全不变量
+
+### 5.1 安全不变量（Security Invariants）
+
+$$ \forall action \in AgentActions, requiresConfirmation(action) \implies \neg autoExecute(action) $$
+
+> **不变量说明**：所有需要用户确认的操作，Agent 不得自动执行。
+
+$$ \forall contract \in CallTarget, hasAudit(contract) \lor isWhitelisted(contract) $$
+
+> **不变量说明**：所有调用的合约必须经过审计或已在白名单中。
+
+$$ \forall address \in TransactionTarget, isValidEVMFormat(address) \land isChecksummed(address) $$
+
+> **不变量说明**：所有交易目标地址必须符合 EVM 格式并经过校验和验证。
+
+### 5.2 多层防御架构（Defense-in-Depth）
+
+```mermaid
+sequenceDiagram
+    participant U as 用户
+    participant AG as Agent 推理引擎
+    participant SEC as 安全检查模块
+    participant RPC as RPC Provider
+    participant CHAIN as 链上合约
+    
+    Note over U,CHAIN: Layer 1: 用户层防护
+    U->>AG: 发起 Web3 操作请求
+    AG->>SEC: 请求安全检查
+    
+    Note over U,CHAIN: Layer 2: 地址验证
+    SEC->>SEC: 校验 EVM 地址格式
+    alt 地址格式无效
+        SEC-->>AG: 拒绝操作，返回错误
+    end
+    
+    Note over U,CHAIN: Layer 3: 来源验证
+    SEC->>SEC: 验证 RPC 可信度
+    SEC->>SEC: 检查合约审计状态
+    alt 来源不可信或合约未审计
+        SEC-->>U: 警告用户，强制确认
+    end
+    
+    Note over U,CHAIN: Layer 4: 授权范围检查
+    SEC->>SEC: 检查授权金额是否有限
+    alt 无限授权请求
+        SEC-->>U: 拒绝并提示风险
+    end
+    
+    Note over U,CHAIN: Layer 5: 用户确认流程
+    SEC-->>U: 请求签名确认
+    U->>U: 确认签名意图
+    U-->>SEC: 用户已确认
+    
+    Note over U,CHAIN: Layer 6: 链上执行
+    SEC->>RPC: 提交交易
+    RPC->>CHAIN: 广播交易
+    CHAIN-->>RPC: 交易回执
+    RPC-->>SEC: 返回结果
+    SEC-->>AG: 操作完成
+```
+
+### 5.3 AI Agent 安全检查 Checklist
+
+- [ ] **地址格式校验**：目标地址是否符合 EVM 标准格式（0x 开头，40 位十六进制）
+- [ ] **RPC 来源验证**：使用的 RPC Provider 是否为已知可信来源（Infura、Alchemy、QuickNode 等）
+- [ ] **合约审计状态**：调用目标合约是否经过知名审计机构审计（如 OpenZeppelin、Trail of Bits、Certik）
+- [ ] **授权范围限制**：授权请求是否限定了具体金额，而非无限授权
+- [ ] **签名目的说明**：签名请求是否明确说明了操作目的和影响范围
+- [ ] **用户确认机制**：所有写操作是否经过 human-in-the-loop 确认
+- [ ] **敏感信息隔离**：私钥、seed phrase 是否与环境变量隔离，绝不出现在日志或响应中
+- [ ] **数据源可信度**：价格预言机、链上数据来源是否经过验证
+
+---
+
+## 6. 学术标签
+
+```
+# Web3Security #AIAgent #SmartContractSecurity #WalletPermission 
+# SecurityBoundary #HumanInTheLoop #ThreatModel #AgentToolUse
+```
+
+---
+
+## 学习沉淀索引
+
+| 类型 | 文件路径 | 说明 |
+|-----|---------|-----|
+| Daily Note | `daily/2026-05-23.md` | 今日完整学习记录 |
+| Content Draft | `content/draft-agent-web3-risks.md` | 《AI Agent 做 Web3 操作时最危险的 5 个边界》草稿 |
+| Security Checklist | `experiments/security-checklist.md` | 可复用安全边界检查表 |
+| Handbook Feedback | `handbook-feedback/security-missing-examples.md` | 建议 Handbook 增加安全实践示例 |
+
+---
+
+## 关键术语（双语）
+
+- 私钥泄露（Private Key Leakage）
+- 钓鱼攻击（Phishing Attack）
+- 恶意授权（Malicious Approval）
+- 合约漏洞（Smart Contract Vulnerability）
+- 无限授权（Infinite Approval）
+- 人在回路（Human-in-the-Loop）
+- 安全边界（Security Boundary）
+- EVM 地址格式（EVM Address Format）
+- 预言机（Oracle）
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 # AI Agent 链上交互安全防御机制
