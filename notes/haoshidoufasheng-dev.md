@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/haoshidoufasheng-dev/images/2026-05-23-1779549460539-image.png)
+
+分享关于web行业的相关内容，回答评论问题关于黑客松等等
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/haoshidoufasheng-dev/images/2026-05-22-1779448523466-image.png)
 
 听老师分享关于ai相关的知识，以及往后学习安排
@@ -25,6 +33,7 @@ AI x Web3 School
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/haoshidoufasheng-dev/images/2026-05-21-1779378123882-image.png)
 
 今天的学习讲述web3与ai相结合的相关知识
@@ -32,6 +41,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 今日学习内容主要围绕 Web3 底层基础展开，从钱包、交易到节点与智能合约，逐渐开始理解区块链网络真正是如何运行的。相比之前只停留在“会操作钱包”和“会进行转账”的阶段，今天更多是从底层逻辑去理解整个链上交互流程。
@@ -69,11 +79,13 @@ AI x Web3 School
 
 
 
+
 今天耽误了直播的前半部分，只听了后半部分，大概学习了一下Hermes 的部署与配置，还没有看完，明天将这两天学习内容补上
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
