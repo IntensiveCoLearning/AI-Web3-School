@@ -15,8 +15,94 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+或许会有老师对在旧手机部署agent废物利用感兴趣？
+
+今天又部署配置好了Hermes，都拉入了discord server，就我个人而言discord比telegram要好用一些，而且分栏分起来更舒适，我的server是建立了几个Agent的私人工作聊天区和一个协作区，但是我不打算在给他们完全调教好之前让他们自己互相艾特，一是怕烧很多token，二是怕把东西改坏掉
+
+## Hermes Agent on Termux 部署笔记
+
+### 安装
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+```
+
+### 修复 Discord 依赖
+
+```bash
+cd ~/.hermes/hermes-agent
+source venv/bin/activate
+pip install "discord.py>=2.0"
+```
+
+### 设置代理（必须，否则无法连接 Discord）
+
+```bash
+export https_proxy=http://127.0.0.1:7890
+export http_proxy=http://127.0.0.1:7890
+```
+
+### 启动
+
+```bash
+hermes          # CLI 聊天
+hermes gateway  # 启动 Discord Bot
+```
+
+### 防止后台被杀
+
+```bash
+termux-wake-lock
+tmux new -s hermes
+hermes gateway
+# Ctrl+B 然后 D 退出 tmux 保持后台运行
+```
+
+### Discord 开发者后台必须开启
+
+-   Bot 页面 → Privileged Gateway Intents 开启三个 Intent
+    
+-   OAuth2 → 勾选 `bot` + `applications.commands`
+    
+-   Bot Permissions → Send Messages、Read Message History 等
+    
+
+### 配置文件位置
+
+-   API Keys：`~/.hermes/.env`
+    
+-   配置：`~/.hermes/config.yaml`
+    
+-   日志：`~/.hermes/logs/gateway.log`
+    
+
+### 常用命令
+
+```bash
+hermes setup           # 重新配置
+hermes gateway restart # 重启 Bot
+hermes model           # 切换模型
+hermes doctor          # 检查问题
+```
+
+### 注意事项
+
+-   每次重开 Termux 需要重新设置代理环境变量
+    
+-   建议把代理写入 `~/.bashrc` 永久生效：
+    
+
+```bash
+echo 'export https_proxy=http://127.0.0.1:7890' >> ~/.bashrc
+echo 'export http_proxy=http://127.0.0.1:7890' >> ~/.bashrc
+```
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 ### OpenClaw 接入 Discord 完整流程 🦞
 
 * * *
@@ -114,6 +200,7 @@ cd ~/openclaw && node scripts/run-node.mjs gateway
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 ### **笔记 | AI 下乡计划｜AI 在 Web3 的应用**
 
 如果AI只是聊天，Web3不是必需品，但当AI开始租算力、买数据、调用APl、发起交易、管理资产、和其他agent协作时，它就需要一个能被授权、能付款、能记录、能追责的经济层。
@@ -135,6 +222,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -194,6 +282,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 
 
+
 **笔记 | AI Agent 入门：Hermes 从 0 到 1**
 
 今天学习了Hermes，总体来说和我在用的openclaw差不多，打算还是和龙虾一样部署在旧手机上。
@@ -207,6 +296,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
