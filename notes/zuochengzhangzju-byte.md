@@ -41,4 +41,41 @@ The most useful takeaway is that wallet safety is not only about storing the see
 
 学习了如何用hermes控制管理github，体验感受了自动化流程
 <!-- DAILY_CHECKIN_2026-05-19_END -->
+
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+## 今日学习：ZK 身份验证与 API 计费
+
+### 1. Semaphore & Railgun 的 ZK 身份机制
+- Semaphore 用身份承诺 + Merkle 树 + nullifier 实现匿名群组成员证明
+- 核心流程：用户生成 ZK 证明"我是群组成员"→ 链上验证 → nullifier 防双花
+- ZK 不是消除身份，而是把"服务器知道你是谁"变成"数学证明你有资格但没人知道你是谁"
+
+### 2. ZK 认证下的余额/积分展示问题
+- 链上数据（ERC20/721 余额）公开可读，无需签名即可查询
+- Off-chain 私有数据（API 额度、算力 token）需要 nullifier 做伪匿名账户 ID
+- 分层架构：ZK 验证一次 → 建立 web2 session → 日常 web2 体验 → 链上操作时再签名
+- ZK 是门禁，不是整栋楼
+
+### 3. ZK API Usage Credits（Vitalik + PSE 团队）
+- 论文：ethresear.ch/t/zk-api-usage-credits-llms-and-beyond/24104
+- 核心问题：存一次钱，匿名调用几千次 API，服务商保证收款防刷，用户保证请求不可关联
+- 关键机制：
+  - RLN（Rate-Limit Nullifier）绑定匿名与财务质押，双花暴露密钥并罚没
+  - 退款票据累积：预扣 C_max，实际花费少则退款，ZK 电路验证退款总额
+  - 同态加密升级：Pedersen Commitment / 格加密，电路复杂度恒定
+  - Dual Staking：D（RLN 质押，数学罚没）+ S（策略质押，烧毁不归服务商），消除诬陷激励
+
+### 4. Ethernaut — 以太坊安全闯关学习
+- OpenZeppelin 开发的 Web3 wargame / CTF
+- 网址：ethernaut.openzeppelin.com
+- 每关一个智能合约漏洞，从攻击者角度学习安全
+- 覆盖：重入攻击、整数溢出、delegatecall 注入、链上随机数问题等
+
+### 5. Sepolia 测试网部署
+- MetaMask 内置 Sepolia，需开启 Show test networks
+- 水龙头：Alchemy / Infura / Google Cloud（免费注册即可）
+- Hardhat 部署：配置 networks.sepolia + 私钥（.env 管理）
+- Ethernaut 只需 MetaMask + 测试 ETH + 浏览器控制台即可开始
+<!-- DAILY_CHECKIN_2026-05-23_END -->
 <!-- Content_END -->
