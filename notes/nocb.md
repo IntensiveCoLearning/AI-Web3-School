@@ -15,8 +15,37 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+## 链感知上下文（Chain-aware Context）
+
+核心是把链上事实变成模型可读、可引用、可验证的上下文
+
+核心原则：
+
+-   链上状态有时间性，同一地址的余额会随区块变化；
+    
+-   上下文必须带来源（合约地址、区块号、交易哈希等），确保可追溯；
+    
+-   必须区分“事实”和“解释”——工具负责返回事实，模型负责解释，不应把模型猜测当作事实。
+    
+
+1\. On-chain Data（链上数据）
+
+2\. Contract Docs（合约文档）
+
+3\. ABI / Event
+
+4\. Transaction History（交易历史）
+
+5\. Explorer Context（浏览器上下文）
+
+6\. Indexing Context（索引上下文）
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 看了一下 《**AI模型与预言机的交汇》，还有** [**The Convergence of Blockchain and AI**](https://chain.link/article/blockchain-and-ai)
 
 感觉chainlink 想做的事情：
@@ -32,6 +61,7 @@ AI 负责智能 Blockchain 负责信任与价值结算
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 **AI Oracle** 这个是我比较感兴趣的方向，
 
@@ -78,6 +108,7 @@ AI 负责智能 Blockchain 负责信任与价值结算
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 AI基础过了一遍 ，自己比较缺的部分 评估：
