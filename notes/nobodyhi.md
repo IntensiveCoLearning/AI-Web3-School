@@ -15,13 +15,270 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+\## Getting Started with the Claude API
+
+\### 1. **Installation & Setup**
+
+\`\`\`bash
+
+pip install anthropic
+
+\`\`\`
+
+Set your API key:
+
+\`\`\`python
+
+import anthropic
+
+import os
+
+client = anthropic.Anthropic(
+
+api\_key=os.environ.get("ANTHROPIC\_API\_KEY") # Or set directly
+
+)
+
+\`\`\`
+
+\### 2. **Basic Message Creation**
+
+\`\`\`python
+
+response = client.messages.create(
+
+model="claude-3-5-sonnet-20241022",
+
+max\_tokens=1024,
+
+messages=\[
+
+{"role": "user", "content": "Hello, Claude! Explain quantum computing briefly."}
+
+\]
+
+)
+
+print(response.content\[0\].text)
+
+\`\`\`
+
+\### 3. **System Prompts**
+
+\`\`\`python
+
+response = client.messages.create(
+
+model="claude-3-5-sonnet-20241022",
+
+max\_tokens=1024,
+
+system="You are a physics professor who explains concepts with simple analogies.",
+
+messages=\[
+
+{"role": "user", "content": "Explain quantum computing briefly."}
+
+\]
+
+)
+
+\`\`\`
+
+\### 4. **Multi-turn Conversations**
+
+\`\`\`python
+
+messages = \[
+
+{"role": "user", "content": "What's the capital of France?"},
+
+{"role": "assistant", "content": "The capital of France is Paris."},
+
+{"role": "user", "content": "What's its population?"}
+
+\]
+
+response = client.messages.create(
+
+model="claude-3-5-sonnet-20241022",
+
+max\_tokens=1024,
+
+messages=messages
+
+)
+
+\`\`\`
+
+\### 5. **Streaming Responses**
+
+\`\`\`python
+
+with [client.messages.stream](http://client.messages.stream)(
+
+model="claude-3-5-sonnet-20241022",
+
+max\_tokens=1024,
+
+messages=\[{"role": "user", "content": "Write a short poem about AI"}\]
+
+) as stream:
+
+for text in stream.text\_stream:
+
+print(text, end="", flush=True)
+
+\`\`\`
+
+\## Advanced Features
+
+\### Vision Capabilities
+
+\`\`\`python
+
+import base64
+
+with open("image.jpg", "rb") as img\_file:
+
+image\_data = base64.b64encode(img\_[file.read](http://file.read)()).decode("utf-8")
+
+response = client.messages.create(
+
+model="claude-3-5-sonnet-20241022",
+
+max\_tokens=1024,
+
+messages=\[{
+
+"role": "user",
+
+"content": \[
+
+{
+
+"type": "image",
+
+"source": {
+
+"type": "base64",
+
+"media\_type": "image/jpeg",
+
+"data": image\_data
+
+}
+
+},
+
+{
+
+"type": "text",
+
+"text": "Describe this image in detail."
+
+}
+
+\]
+
+}\]
+
+)
+
+\`\`\`
+
+\### Tool Use (Function Calling)
+
+\`\`\`python
+
+tools = \[
+
+{
+
+"name": "get\_weather",
+
+"description": "Get weather for a location",
+
+"input\_schema": {
+
+"type": "object",
+
+"properties": {
+
+"location": {"type": "string", "description": "City and state"},
+
+"unit": {"type": "string", "enum": \["celsius", "fahrenheit"\]}
+
+},
+
+"required": \["location"\]
+
+}
+
+}
+
+\]
+
+response = client.messages.create(
+
+model="claude-3-5-sonnet-20241022",
+
+max\_tokens=1024,
+
+tools=tools,
+
+messages=\[{"role": "user", "content": "What's the weather in San Francisco?"}\]
+
+)
+
+\`\`\`
+
+\## Best Practices
+
+1\. **Error Handling**
+
+\`\`\`python
+
+from anthropic import APIError, RateLimitError
+
+try:
+
+response = client.messages.create(...)
+
+except RateLimitError:
+
+\# Implement exponential backoff
+
+pass
+
+except APIError as e:
+
+print(f"API error: {e}")
+
+\`\`\`
+
+2\. **Token Management** - Monitor `response.usage.input_tokens` and `output_tokens`
+
+3\. **Model Selection** - Choose based on needs:
+
+\- Claude 3.5 Sonnet: Best balance of speed/capability
+
+\- Claude 3 Opus: Most capable for complex tasks
+
+\- Claude 3 Haiku: Fastest, most cost-effective
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 web3
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 ## **1\. Getting Started with the OpenAI API**
 
@@ -169,6 +426,7 @@ vector = response.data[0].embedding
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 While LLMs are an impressive achievement, their output is only statistically plausible and not the result of a reasoning process.  
