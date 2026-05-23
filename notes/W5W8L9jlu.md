@@ -15,8 +15,72 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+````markdown
+# Daily Note - 2026-05-23
+
+## Today / 今日
+
+- Course or Handbook page: https://aiweb3.school/zh/handbook/
+- WCB Learning item: https://web3career.build/zh/programs/AI-Web3-School?tab=learning
+- Time spent: 1-2 hours planned
+
+## Minimum Path / 最小路径
+
+- 完成 AI x Web3 School 个人公开学习仓库初始化。
+- 确认学习画像：AI 新手、Web3 新手、能独立开发，目标方向为开发。
+- 设置每日学习节奏：中文为主，英文为辅；每天 1-2 小时。
+
+## Recommended Path / 推荐路径
+
+- 将学习材料沉淀为可公开索引的 proof-of-work 仓库。
+- 建立 daily notes、tasks、experiments、handbook feedback、hackathon 和 submissions 目录。
+- 设置早晚学习提醒，用于规划任务和晚间复盘。
+
+## Challenge Path / 挑战路径
+
+- 后续把每日问题沉淀为 Handbook feedback，并把技术探索记录到 `experiments/`。
+- 为 Hackathon 项目逐步积累问题、假设、原型和 demo 记录。
+
+## Notes / 笔记
+
+- Public repo 不能提交 secret、API key、助记词、私钥、验证码、内部会议链接或他人个人数据。
+- Learning Agent 可以帮助生成打卡草稿和维护仓库，但正式提交到 WCB / 打卡平台前需要确认提交内容。
+- English summary: Initialized a public proof-of-work repository for AI x Web3 School and set up the first learning workflow.
+
+## Questions / 问题
+
+- 今天 WCB Learning 页面中的具体打卡入口和任务要求需要在浏览器中确认。
+
+## Handbook Feedback Candidate / Handbook 反馈候选
+
+- Page:
+- Issue:
+- Suggestion:
+- Source:
+
+## Check-in Draft / 打卡草稿
+
+```text
+今天我完成了 AI x Web3 School 个人学习仓库初始化，建立了 README、学习画像、学习计划、daily note 模板、task note 模板，以及 daily、tasks、experiments、handbook-feedback、hackathon、submissions 等目录。
+
+我确认了自己的学习画像：AI 新手、Web3 新手、能独立开发，当前目标方向是开发，每天计划投入 1-2 小时。后续输出会以中文为主、英文为辅，保证学习过程可以公开复盘和索引。
+
+下一步我会根据 WCB Learning 页面确认当天课程和任务，把学习记录写入 daily note，并把学习中的问题整理为 Handbook feedback。
+
+English summary: I initialized my AI x Web3 School public learning repository and set up a lightweight proof-of-work workflow for daily notes, tasks, experiments, feedback, and future hackathon work.
+```
+
+## Submission Record / 提交记录
+
+- Pending: waiting for WCB / check-in platform submission confirmation.
+````
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 **RAG：先查资料，再回答**
 
 RAG 就是让 AI 不要上来就瞎答，先去资料库里搜一搜，再结合搜到的内容回答。
@@ -93,6 +157,7 @@ Skill：封装好的技能包
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 -   **AI 工具发展与功能变化**：
     
     -   **早期印象**：最初体验时，AI 像智能化搜索引擎，是问答式交互，对检索结果做优化，类似聊天助手。
@@ -146,6 +211,7 @@ Skill：封装好的技能包
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 -   **Web3 基础认知** ：
