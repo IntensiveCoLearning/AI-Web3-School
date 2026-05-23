@@ -15,8 +15,26 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+學習日誌 · 2026-05-23（Day 7）
+
+今日學習：Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path（直播）+ Agent Wallet 模組深讀
+
+Open Agentic Economy 核心：AI Agent 作為獨立經濟參與者的生態，能自主發現服務、協商任務、完成支付、留下可驗證記錄。
+
+ERC-8004/8183 方向：鏈上 Agent 如何發現和調用去中心化服務的標準探索。Builder Path 四個維度：身份（誰授權 Agent？）、權限（能做什麼？）、支付（費用如何結算？）、記錄（行為如何被審計？）。
+
+Agent Wallet 第一性原理：控制權不能交給一個概率系統。Agent 只能拿到可驗證、可限制、可撤銷的行動空間。六層防禦：Policy → Session Key → Guard → Simulation → Human Check → Revocation。
+
+關鍵洞察：Open Agentic Economy 不是讓 Agent 更自由，而是讓 Agent 的自由被規則包起來。Builder 機會在於做「可信任的 Agent 基礎設施」。
+
+GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-23.md
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 學習日誌 · 2026-05-22（Day 6）
 
 今日學習：Co-learning 任務推進 + 例會分享 + Week 1 整體複習
@@ -34,6 +52,7 @@ GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 \-–
 
@@ -84,6 +103,7 @@ GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/
 
 
 
+
 今日學習：Frameworks 模組深讀（LangChain / LangGraph / OpenAI Agents SDK / Hermes）+ Hermes 安裝實作
 
 主要收穫：
@@ -102,6 +122,7 @@ GitHub 筆記：https://github.com/IntensiveCoLearning/AI-Web3-School/pull/29
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -130,6 +151,7 @@ Hermes Agent 預習：Skills 可復用高層指令集 / Long-term Memory 跨 ses
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
