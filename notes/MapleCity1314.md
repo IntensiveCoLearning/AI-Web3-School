@@ -15,13 +15,30 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+V7-Live 正式注册为独立版本，avoid-breadth-chase (reject breadth 0.7474-0.8193) 从 paper-shadow 提升为生产级入口过滤
+
+\- Master Route Charter 建立，双线分离：Line A = 现金流保稳，Line B = 高风险冲刺
+
+\- 硬约束 R1-R7 生效：禁止纯文档任务、禁止重开已耗尽alpha、WAIT后停止session
+
+\- DD 双层结构：研究层硬线22%，实盘层 sleeve pause 15% / halt 20%
+
+\- 资金范围：80-150u，3x杠杆，1.5%风险，19个固定标的
+
+\- 下一步：优先解决Step 1阻塞（per-symbol滑点配置/FIO与LAB排除方案），然后推进Step 4实盘风控参数
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天拉肚子了 休息一天T\_T
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 今日推进了 V7 回测/实盘复刻路线：把 runner 补齐到能表达 score>=86、OI 8-16、price 5-10、breadth veto 等核心门控，并新增/规划 V7 Live 只读跑分诊断面板来暴露候选、过滤原因和 parity gaps。
 
@@ -30,6 +47,7 @@ AI x Web3 School
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 今天的笔记（2026-05-19）记录了一次**非常理智、克制且防守至上**的研究闭环。
