@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+1.  回放今日分享會課程。
+    
+2.  整理好本週學到的AI、Web3知識點。
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 1.  復盤本週間課程及概念學習，準備週末可以補上本週尚缺內容：AI、Web3的知識解釋集錦、確定AI學習助手workflow
     
 2.  參與同學筆記分享會和確立本次參與共學主要目標：本身Web3開發經驗，缺少AI Agent的實操和應用，先不以必須產出兩項技術交互的項目，我認為AI可以幫上我在每天非常多的Web3訊息內（訂閱的news、關注的），打造客製化的訊息流
@@ -24,6 +32,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 1.  智能合約複習、錢包知識學習。缺少AI輔助解釋交易內容、可視化簽名的步驟。
     
@@ -34,6 +43,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 1.  將handbook內容製作[學習卡](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/terms.json)，並加入至learning bot的功能，可以在聊天機器人中做隨機的test。
@@ -48,6 +58,7 @@ Web3 = Cryptography + Economics + Social Consensus
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -94,6 +105,7 @@ Web3 = Cryptography + Economics + Social Consensus
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
