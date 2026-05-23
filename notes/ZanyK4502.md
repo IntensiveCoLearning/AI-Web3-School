@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+深夜学习打个卡先
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 # 前置任务 **创建课程 GitHub repo**
 
 GitHub repo: [https://github.com/ZanyK4502/ai-web3-school-cohort-0](https://github.com/ZanyK4502/ai-web3-school-cohort-0)
@@ -133,6 +139,7 @@ AI / Agent 主要辅助完成任务理解、合约交互说明生成、资料查
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 在学习，等下补笔记
 
 好忙好忙，在忙着做项目
@@ -140,6 +147,7 @@ AI / Agent 主要辅助完成任务理解、合约交互说明生成、资料查
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -154,11 +162,13 @@ AI / Agent 主要辅助完成任务理解、合约交互说明生成、资料查
 
 
 
+
 今天偷懒了嘿嘿，其实我已经把任务做完了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -691,6 +701,7 @@ Bug 修复列表
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
