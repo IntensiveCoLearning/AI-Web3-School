@@ -15,6 +15,35 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+\--
+
+學習日誌 · 2026-05-23（Day 7）
+
+\## 今日學習主題
+
+直播：Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path（Week 1，5/23 09:30）
+
+深讀 Handbook：Agent Wallet 模組 + Account Abstraction 模組
+
+\## Open Agentic Economy｜核心整理
+
+Open Agentic Economy 指 AI Agent 作為獨立經濟參與者的生態——Agent 能自主發現服務、協商任務、完成支付、留下可驗證記錄。
+
+ERC-8004/ERC-8183 方向：鏈上環境下 Agent 如何發現和調用去中心化服務的標準探索。Builder Path 四個核心維度：身份（誰可以授權 Agent？）、權限（Agent 能做什麼？）、支付（服務費如何結算？）、記錄（行為如何被審計？）。
+
+\## Agent Wallet 核心整理
+
+第一性原理：控制權不能交給一個概率系統。Agent 只能拿到可驗證、可限制、可撤銷的行動空間。
+
+六層防禦架構：Policy（白名單規則）→ Session Key（臨時有限授權）→ Guard（確定性攔截）→ Simulation（交易預演）→ Human Check（分層確認）→ Revocation（隨時撤銷）。
+
+關鍵洞察：Open Agentic Economy 的核心不是讓 Agent 更自由，而是讓 Agent 的自由被規則包起來。Builder 的機會在於做「可信任的 Agent 基礎設施」——規則清楚、撤銷方便、記錄透明。
+
+GitHub 筆記：https://github.com/roy328line/ai-web3-school-cohort-0/blob/main/daily/2026-05-23.md
+
+<!-- DAILY_CHECKIN_2026-05-23_END -->
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 學習日誌 · 2026-05-22（Day 6）
