@@ -15,8 +15,438 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+\# AI x Ethereum 分享议题总结
+
+\## 1. 基本信息
+
+\- **主题**：AI x Ethereum: Why Ethereum for AI means Ethereum for Humans
+
+\- **分享方**：课件中显示为 Ethereum Foundation
+
+\- **分享者**：课件中显示为 Sophia Dew / X @sodofi\_
+
+\- **核心方向**：AI Agent 与 Ethereum 的结合，以及 Ethereum 为什么可能成为机器经济中的结算、身份、信誉与协作基础设施。
+
+\---
+
+\## 2. 会议整体议程
+
+根据图片中的课件内容，本次分享主要围绕以下议题展开：
+
+1\. AI x Ethereum 的大背景
+
+2\. 什么是 Ethereum
+
+3\. 为什么 Ethereum 的特性对 AI 很重要
+
+4\. AI Agent 与 Ethereum 的真实应用案例
+
+\---
+
+\## 3. 核心观点总结
+
+本次分享的核心观点可以概括为：
+
+\> AI Agent 会成为新的经济参与者，但它们无法很好地使用传统的人类金融、身份和法律基础设施。因此，需要一个开放、中立、可验证、可结算、可治理的公共网络。分享者认为 Ethereum 可以承担这个角色。
+
+换成人话理解：
+
+\> 未来的 AI Agent 可能不只是聊天工具，而是可以代表人类或组织去付款、签约、验证身份、建立信誉、调用服务。Ethereum 被认为可以成为这些机器协作行为的底层公共账本和协调层。
+
+\---
+
+\## 4. AI 与 Ethereum：两种技术正在汇合
+
+课件中将 AI 和 Ethereum 描述为两种正在汇合的技术：
+
+\### 4.1 AI
+
+AI 被描述为：
+
+\- 一种新的经济参与者
+
+\- 未来可以独立完成任务、调用服务、参与交易和协作
+
+也就是说，AI Agent 不只是“回答问题”，而是可能逐渐变成一个能够执行经济行为的主体。
+
+\### 4.2 Ethereum
+
+Ethereum 被描述为：
+
+\- 价值和承诺的协调层
+
+\- 可以承载支付、身份、信誉、协议和治理
+
+也就是说，Ethereum 不只是一个“发币平台”，而是一个公开、可验证、可结算的协作基础设施。
+
+\---
+
+\## 5. 为什么现在重要
+
+课件中提到：
+
+\- ERC-8004 在 Ethereum mainnet 上线
+
+\- OpenClaw 等 Agent 相关项目同期出现
+
+这说明 AI Agent 与链上基础设施的结合正在从概念讨论进入实际实验阶段。
+
+其中，ERC-8004 / EIP-8004 被用于解决 AI Agent 的身份、信誉和验证问题。
+
+\---
+
+\## 6. 为什么 AI Agent 和人类不同
+
+课件中提到，AI Agent 不能直接使用人类现有的很多基础设施，例如：
+
+\- 不能安全地使用密码
+
+\- 不能开银行账户
+
+\- 不能等待几天完成结算
+
+\- 不能依赖法院或法律合同
+
+\- 不能通过人类渠道建立信誉
+
+\### 人话解释
+
+传统互联网和金融系统主要是为人设计的。
+
+人可以记密码、开户、签合同、找法院维权、通过社交关系建立信誉。
+
+但是 AI Agent 是机器，它们需要的是：
+
+\- 自动化的身份系统
+
+\- 自动化的支付系统
+
+\- 可验证的信誉系统
+
+\- 可执行的协议规则
+
+\- 更快的结算方式
+
+这就是为什么 Ethereum 这类开放网络会被认为适合 AI Agent。
+
+\---
+
+\## 7. Ethereum 的核心定位：中立协调层
+
+课件中的核心 thesis 是：
+
+\> Ethereum is the decentralized settlement and coordination backbone for machines in the machine economy, with humans at the center.
+
+可以理解为：
+
+\> Ethereum 是机器经济中的去中心化结算与协调骨干网络，但人类仍然处在中心位置。
+
+也就是说，分享者并不是主张“机器完全取代人类”，而是强调：
+
+\- 机器可以在 Ethereum 上大规模协作
+
+\- 人类仍然保留控制权、所有权和治理权
+
+\- 规则公开透明，可以被人类审查和治理
+
+\---
+
+\## 8. Ethereum 为什么适合作为 AI Agent 的中立层
+
+课件中提到，Ethereum 可以成为一个 Neutral Layer，即中立层。
+
+这个中立层可以让 Agent：
+
+1\. 结算价值
+
+Agent 可以在链上完成支付和价值转移。
+
+2\. 建立身份、信誉和协议
+
+Agent 的身份、历史行为、信誉记录可以被公开验证。
+
+3\. 接受人类治理
+
+规则可以被检查、讨论和治理，而不是完全封闭在某个平台内部。
+
+\### 人话理解
+
+如果未来 Agent 之间要合作，它们需要知道：
+
+\- 对方是谁
+
+\- 对方是否可信
+
+\- 对方是否完成过任务
+
+\- 对方是否真的付款
+
+\- 协议规则是否公开
+
+\- 出问题时谁可以修改规则
+
+Ethereum 提供的是一个公开、可验证、可组合的基础环境。
+
+\---
+
+\## 9. 设计原则：CROPS
+
+课件中提出了几个设计原则，缩写为 CROPS：
+
+\### 9.1 Censorship Resistance：抗审查
+
+AI Agent 的协作网络不应该轻易被单一平台、公司或国家中断。
+
+\### 9.2 Open Source and Free：开源与自由
+
+基础协议应该尽可能开放，让更多开发者可以参与建设和审查。
+
+\### 9.3 Privacy：隐私
+
+Agent 的交易、身份和行为不应完全暴露，未来需要隐私支付和隐私验证能力。
+
+\### 9.4 Security：安全
+
+Agent 如果要处理资产、数据和协议，就必须有足够强的安全机制。
+
+\---
+
+\## 10. EIP / ERC-8004：Agent 的身份与信任标准
+
+课件中重点提到：
+
+\> EIP 8004 - Identity and Trust for Agents
+
+它被描述为一个为 AI Agent 提供可验证身份和信誉的标准。
+
+课件中提到它包含三个 registry：
+
+1\. Identity Registry
+
+用于记录 Agent 的身份。
+
+2\. Reputation Registry
+
+用于记录 Agent 的信誉。
+
+3\. Validation Registry
+
+用于记录 Agent 的验证信息。
+
+\### 人话理解
+
+可以把 ERC-8004 理解成给 AI Agent 准备的一套链上“身份与信用系统”。
+
+类似于：
+
+\- Agent 的身份证
+
+\- Agent 的信用记录
+
+\- Agent 的任务验证记录
+
+\- Agent 的可信度证明
+
+这样其他 Agent、用户或应用就可以判断：
+
+\- 这个 Agent 是谁
+
+\- 它过去有没有完成任务
+
+\- 它是否可信
+
+\- 它是否通过某种验证
+
+\---
+
+\## 11. x402 Payments：机器到机器支付
+
+课件中提到 x402 Payments，主要用于 Machine to Machine Payments，即机器到机器支付。
+
+它的核心思想是：
+
+\- 复兴 HTTP 402 “Payment Required” 状态码
+
+\- 让 API 和 Agent 可以声明价格
+
+\- 让 Agent 在链上完成支付证明
+
+\- 让服务调用和付款流程自动化
+
+\### 人话理解
+
+未来 Agent 调用某个 API 或购买某个服务时，可能不需要人类手动订阅、绑定银行卡、填表付款。
+
+它可以：
+
+1\. 请求某个服务
+
+2\. 看到这个服务需要付款
+
+3\. 自动完成链上支付
+
+4\. 把支付证明发给服务方
+
+5\. 获得服务结果
+
+这就是“机器到机器支付”的一个典型场景。
+
+\---
+
+\## 12. Deep Funding：AI Agent 分配公共物品资金
+
+课件中还展示了一个真实案例：
+
+\> Deep Funding - A Live Example
+
+该案例被描述为：
+
+\> Ethereum Foundation 试点使用 AI Agents 分配公共物品资金。
+
+\### 人话理解
+
+公共物品资金分配通常很复杂，因为需要判断：
+
+\- 哪些项目更重要
+
+\- 哪些项目依赖关系更强
+
+\- 哪些贡献更值得资助
+
+\- 如何减少人为偏见
+
+\- 如何提高资金分配效率
+
+AI Agent 可以辅助分析项目之间的依赖关系和贡献权重，从而帮助进行公共物品资金分配。
+
+\---
+
+\## 13. 未来发展方向
+
+课件中的 “What’s Coming” 提到后续方向包括：
+
+1\. ERC-8004 Validation Registry
+
+基于 TEE 的验证机制。
+
+2\. Expanded Private Payment Infrastructure
+
+扩展隐私支付基础设施。
+
+3\. Automated Negotiation Between Agents via Smart Contracts
+
+Agent 之间通过智能合约进行自动谈判。
+
+4\. More Integration with AI Frameworks and Enterprise Tools
+
+与 AI 框架和企业工具进行更多集成。
+
+5\. Deeper University Research Partnerships
+
+与大学开展更深入的研究合作。
+
+\---
+
+\## 14. 与我在会议中提出的问题的关系
+
+我在会议聊天中提到的观点是：
+
+\> 我相信未来 Agent 可以帮助我们完成转账。我们不需要依赖中心化银行，也不用担心私钥泄露，一切都可以由 Agent 处理。
+
+这个问题正好对应本次分享的核心方向。
+
+但需要注意的是：
+
+\> Agent 帮人转账，并不意味着私钥风险天然消失。
+
+更现实的方向可能是：
+
+\- 智能合约钱包
+
+\- 账户抽象
+
+\- 多签机制
+
+\- 限额授权
+
+\- 会话密钥
+
+\- TEE 验证
+
+\- 权限隔离
+
+\- 可撤销授权
+
+\- 自动化风控
+
+也就是说，未来不是简单地把私钥交给 Agent，而是让 Agent 在用户授权的安全边界内执行任务。
+
+\---
+
+\## 15. 我的理解总结
+
+这场分享可以帮助我建立一个重要认知：
+
+AI x Web3 不是简单地把 AI 和区块链两个概念拼在一起。
+
+真正有价值的问题是：
+
+\> 当 AI Agent 具备行动能力之后，它们如何拥有身份、建立信誉、完成支付、执行协议、接受验证，并在人类可控的规则下参与经济活动？
+
+Ethereum 在这里的价值，不只是“去中心化”，而是提供了一套公开、中立、可验证、可组合的协作基础设施。
+
+\---
+
+\## 16. 可继续研究的关键词
+
+后续可以继续学习以下关键词：
+
+\- AI Agent
+
+\- Ethereum
+
+\- ERC-8004
+
+\- EIP-8004
+
+\- Agent Identity
+
+\- Agent Reputation
+
+\- Agent Validation
+
+\- x402 Payments
+
+\- Machine to Machine Payments
+
+\- Account Abstraction
+
+\- Smart Contract Wallet
+
+\- TEE Verification
+
+\- Public Goods Funding
+
+\- Deep Funding
+
+\- OpenClaw
+
+\- AI x Web3
+
+\- Agent Economy
+
+\---
+
+\## 17. 一句话总结
+
+\> 这场分享的核心是：AI Agent 未来会成为新的经济参与者，而 Ethereum 可能成为它们进行身份验证、信誉建立、价值结算和协议协作的中立基础设施；但最终目标不是让机器脱离人类，而是让机器在公开、可验证、可治理的环境中为人类服务。
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 # Microsoft AI Agents for Beginners
 
 > 微软官方出品的 AI Agent 入门课程，10+ 节课，65k+ stars。从概念到代码，覆盖 Agent 设计的完整知识体系。  
@@ -512,6 +942,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 # 📋 Day 1 结构化整理版（索引 + 分层重构）
@@ -1114,6 +1545,7 @@ Memory 包含
 
 
 
+
 今日学习：2026年05月20日16:43:42，最小实践还没做，留在周六去搞
 
 # LLM
@@ -1578,6 +2010,7 @@ Context 分层之后，系统才更容易做三件事：
 
 
 
+
 不得不说，AI做的任务比自己做的任务列表好多了
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Aaroninggg/images/2026-05-19-1779178251564-image.png)
@@ -1585,6 +2018,7 @@ Context 分层之后，系统才更容易做三件事：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
