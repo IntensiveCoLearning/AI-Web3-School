@@ -15,8 +15,31 @@ Web3 开发者 Python Go  Rust  Solidity
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+2026-05-23 (Day 6) — Web3 基础：密码学 → 钱包 → 智能合约 → 开发栈  
+  
+**今日学习内容：**  
+\- AI 基础 11 章全部完成，今天扫 Web3 基础  
+\- 密码学 — 哈希函数、非对称加密、数字签名  
+\- 钱包 — 身份与签名入口，授权确认机制  
+\- 智能合约 — 链上规则部署、调用、可验证执行  
+\- 开发栈 — Foundry/Hardhat、前端 SDK、RPC 节点  
+  
+**笔记摘要：**  
+\- AI×Web3 四层架构：AI 做建议和编排 → 钱包做授权确认 → 合约做可验证执行 → 监控记录结果  
+\- 密码学原语是 Agent 签名授权和链上验证的底层基础  
+\- Agent 场景下钱包的 Session Key、限额、时间范围是关键设计点  
+\- 开发栈提供 Agent 调用链上状态的工具基础设施（RPC、索引、SDK）  
+  
+**明日计划：**  
+\- 继续 Web3 基础：账户抽象 / DeFi / Oracle 等  
+\- 目标进入 Bridge 层（Chain-aware Context、Agent Wallet）
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 026-05-22 (Day 5) — Evaluation, Fine-tuning, Inference & PoW Pack  
   
 **今日学习内容：**  
@@ -38,6 +61,7 @@ Web3 开发者 Python Go  Rust  Solidity
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 2026-05-21 (Day 4) — MCP & Vibe Coding 学习  
   
@@ -61,6 +85,7 @@ Web3 开发者 Python Go  Rust  Solidity
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 **2026-05-19 (Day 2) — RAG, Agent & Frameworks**
@@ -114,6 +139,7 @@ Vibe Coding 不是"把需求丢给 AI 等代码"，而是人负责方向/约束/
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
