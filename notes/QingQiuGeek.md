@@ -15,13 +15,99 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+Gas 是 EVM 执行操作的单位。每条指令消耗固定的 gas，具体可以看\[以太坊 操作码\](https://ethereum.org/zh/developers/docs/evm/opcodes/)，gas 优化目标是减少交易所需的总 gas，提高用户体验并降低成本。  
+  
+\*\*区块链数据存储位置有三种：storage（存储，也就是磁盘）、memory（内存，临时的）、calldata（只读数据）\*\*  
+  
+\## 常见优化技巧  
+  
+\### 减少对 storage 操作  
+  
+\- 首次读取 \`storage\` 需 2100 gas（后续是热读取需 100 gas），而读取 \`memory\` 仅 3 gas。推荐多次访问同一存储数据时，将其缓存到 \`memory\` 以减少 SLOAD 次数。  
+  
+\- 首次初始化写入 \`storage\` 的成本高达 20,000 gas，修改 \`storage\` 中已有的存储值成本是 2,900 - 5,000；\`storage\`成本远高于\`memory\`，所以能用 \`memory\` 就不要用 \`storage\`。  
+  
+!\[\](image.png)  
+  
+示例：  
+  
+\`\`\`c  
+// 公共状态变量，存储在storage中  
+uint256 public totalScore;  
+  
+// ❌ 非优化写法  
+function updateScore(uint256\[\] memory scores) public {  
+for (uint256 i = 0; i < scores.length; i++) {  
+// 每一轮循环都在读写storage  
+totalScore += scores\[i\];  
+}  
+}  
+  
+// ✅ 优化写法  
+function updateScore(uint256\[\] memory scores) public {  
+// 1. 仅读取一次storage到内存 (SLOAD)  
+uint256 tempScore = totalScore;  
+for (uint256 i = 0; i < scores.length; i++) {  
+// 2. 在内存中操作 (MLOAD/MSTORE)，每次仅需 3 Gas  
+tempScore += scores\[i\];  
+}  
+// 3. 将最终结果写回storage (SSTORE)，仅需一次写存储  
+totalScore = tempScore;  
+}  
+\`\`\`  
+  
+\### 使用位压缩（Bit Packing）  
+  
+EVM 存储是以 32 字节（256 位）为基本单位的。定义一个 uint256 会占满一整个插槽；定义一个 uint8，它只需要 1 字节，但如果不进行压缩，剩下的 31 字节就会被浪费掉。位压缩的目的就是通过多个连续小尺寸变量，让它们在物理上存储在同一个插槽内。  
+  
+示例：  
+  
+\`\`\`c  
+struct Packed {  
+//占1字节  
+uint8 a;  
+//占3字节  
+uint24 b;  
+}  
+\`\`\`  
+  
+\### 循环优化  
+  
+减少不必要的运算，如 \`array.length\` 缓存到变量中定义在循环外，而非每次都在循环中反复定义。  
+  
+示例：  
+  
+\`\`\`c  
+// ❌ 非优化  
+for (uint256 i = 0; i < arr.length; i++) {  
+uint256 len = arr.length;  
+...  
+}  
+// ✅ 优化  
+uint256 len = arr.length;  
+for (uint i = 0; i < len; ++i) {  
+...  
+}  
+\`\`\`  
+  
+\### 函数可见性选择  
+  
+\`external\` 比 \`public\` 更节省 gas，适用于仅被外部调用的函数。  
+  
+由于 public 函数既可以被外部调用，也可以被合约内部函数调用。为了兼容内部调用，Solidity 编译器通常会将 calldata 中的参数\*\*拷贝到内存（Memory）\*\*中，这样就会消耗 gas。
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 打卡，今天投了简历
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 \[x参考\](https://x.com/virtuals\_io/status/2031042423288426979)  
   
@@ -215,6 +301,7 @@ AI 时代会出现大量新“商家”：
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 今天学习了solidity
@@ -481,6 +568,7 @@ address addr = address(token);
 
 
 
+
 今天学了the graph。
 
 \[官网\]([https://thegraph.com/docs/en/subgraphs/quick-start/](https://thegraph.com/docs/en/subgraphs/quick-start/))
@@ -532,6 +620,7 @@ publish 后：别人也能把它当正式网络服务来用
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
