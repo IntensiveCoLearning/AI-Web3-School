@@ -17,11 +17,11 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
-# 2026-05-23 殘酷共學打卡｜跟 Claude 深挖 Agent 記憶架構
+# 跟 Claude 深挖 Agent 記憶架構
 
 ## **起點：一個看起來很無聊的問題**
 
-今天從一個工程問題開始：**claude.ai 那邊累積的對話和記憶，能不能搬到 Claude Code？**
+今天從一個工程問題開始：[**claude.ai**](http://claude.ai) **那邊累積的對話和記憶，能不能搬到 Claude Code？**
 
 表面答案：沒有一鍵遷移，要手動 export → 解析 → 寫進 local memory。
 
@@ -191,7 +191,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 | 9 | 跨 session self-correction |
 | 10 | 外部 AI 建議形式化緩衝 |
 | 11 | Reflections（user 私有聲音）隔離保護 |
-| 12 | "Still true in 3 months" 寫入篩子 |
+| 12 | “Still true in 3 months” 寫入篩子 |
 | 13 | Vault 結構優化 |
 
 實際做下來會發現很多需求是耦合的（#3 跟 #9 強耦合、#5 是 #6 的前置、#8a + #8b 一起做才有意義）。
@@ -250,6 +250,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 今天做了什麼：
 
 1\. Learning Agent 初始化
@@ -295,6 +296,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 今天做了什麼
 
 發布 obsidian-knowledge-vault
@@ -314,6 +316,7 @@ repo 7 個 commit，今天從空目錄推到完整 README + prompt + annotated o
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -389,6 +392,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 
 
+
 今天的主題是 Hermes Agent 安裝。
 
 因為看到直播裡很多夥伴卡在環境設定，就順手做了一份 Windows WSL2 + macOS 的完整安裝教程，在課程進行中同步解答問題。
@@ -409,6 +413,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
