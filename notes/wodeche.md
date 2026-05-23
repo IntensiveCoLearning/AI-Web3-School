@@ -15,8 +15,44 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+Token:
+
+Token 是模型处理文本的基本单位，和英文单词、汉字、符号没有直接关系，是 tokenizer 切分后的片段,OpenAI
+
+文档里写，对于常见的英文文本，一个token大约四个字符，100个token大约是75个单词，对于中文，大约是两个中文字，有时候也是一个中文字  
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/wodeche/images/2026-05-23-1779540420223-image.png)
+
+Embedding
+
+Embedding 是把文本、代码或其他对象映射成向量，用来衡量语义上是否接近
+
+Hallucination
+
+指模型生成了看起来合理，但不真实或无法验证达到内容，也就是幻觉。处理幻觉需要把模型输出接到外部校验。
+
+Prompt
+
+告诉模型，任务是什么，哪些信息可以使用，应该输出什么格式
+
+instruction
+
+给模型的规则，包含任务目标、可用输入、禁止行为、输出格式和失败格式
+
+prompt injection
+
+攻击者通过用户输入网页、文档等内容，让模型忽略原始规则，泄露信息或者调用危险工具
+
+最小实践
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/wodeche/images/2026-05-23-1779546265707-image.png)
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/wodeche/images/2026-05-21-1779376991528-image.png)
 
 成功配置好Hermes 学习小助手
@@ -24,6 +60,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 观看了今日 Bruce 分享的 Web3 运行原理留下如下思考题
 
@@ -63,6 +100,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 今天参加了 Draken老师的分享，成功安装好了hermas agent，正式开启了 AI 之旅
 
 ![ScreenShot_2026-05-19_222001_156.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/wodeche/images/2026-05-19-1779200411348-ScreenShot_2026-05-19_222001_156.png)
@@ -70,6 +108,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
