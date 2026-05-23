@@ -15,8 +15,33 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+今日学习
+
+用 Excalidraw 画了一张从 用户发起任务 到 链上执行验证 的完整流程图，把 Week 1 学的 LLM、Prompt、Context、RAG、Agent、钱包、合约串成了一条链路。
+
+**完整流程：**  
+用户自然语言输入 →
+
+Prompt 组装（需求 + 格式 + 边界约束）→
+
+LLM 推理/判断 → 按需 RAG 检索 Knowledge Base（结果回流 LLM）→
+
+Evaluation 自检 →
+
+输出执行方案 →
+
+🔴 人工复核（红线①）→ 🔴 钱包签名 MetaMask（红线②）→
+
+RPC 广播 → mempool →
+
+验证者打包上链 → EVM 执行 → 区块浏览器验证
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 Day 5 打卡｜概念卡片整理：AI 6 个 + Web3 8 个  
   
 前两天把 Handbook 四章读完了，今天没读新东西，把读过的概念用自己的话整理成了卡片，方便以后翻。  
@@ -40,6 +65,7 @@ ERC-4337 是新东西，看了 UserOperation → Bundler → EntryPoint → Paym
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 # **今日学习的内容**
 
@@ -165,6 +191,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 ## 单笔交易流转流程
 
 钱包签名→节点网络传播→内存池排队→构建者排序→验证者打包出块→区块上链可查询
@@ -214,6 +241,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 今日的学习笔记作结
 
 ```markdown
@@ -246,6 +274,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
