@@ -15,13 +15,42 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+Day 6/30 - AI x Web3 School
+
+1\. W1 Task 3：Etherscan 区块链浏览器实战 ✅
+
+\- 查了 USDT 合约地址
+
+\- Total Supply：970亿 USDT
+
+\- Holders：14,007,382
+
+\- 理解 ERC-20 Token 标准（FT/NFT）
+
+2\. W1 Task 4：Foundry v1.7.1 安装完成 ✅
+
+\- forge --version 验证通过
+
+\- 下一步：部署合约到 Sepolia 测试网
+
+明日计划：
+
+\- 部署合约到 Sepolia
+
+\- 获取 Sepolia RPC
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 天完成了 W1 前三节核心概念学习：1. 区块链浏览器 Etherscan - 理解了址/交易/区块结构，可查询任意公开地址余额和历史；2. 钱包与账户类型 - EOA（私钥控制）、智能合约账户（代码控制）、多签钱包（多人签名）三者的权限差异；3. 智能合约 - 部署在链上的程序，代码即规则，执行即清算，无私钥。明天计划：领取 Sepolia 测试币，部署最小合约，完成 W1 测试任务。
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 ✅ 今天学了什么：  
 1\. RAG 检索增强生成 — AI 先从知识库检索相关内容，再基于真实内容回答，  
@@ -37,6 +66,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 今日学习内容
@@ -90,6 +120,7 @@ Web3 基础 — 密码学 / 钱包 / 智能合约
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
