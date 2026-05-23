@@ -15,8 +15,31 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+## **Day 6 | AI × Web3 School**
+
+### **今日完成**
+
+-   参加纯英文分享会（现场跟听较吃力，计划后续看回放补上）
+    
+-   参加 LXDAO 202期周会（S16季度会议）
+    
+
+### **今日未安排新内容学习**
+
+今日主要以参与社区活动为主，未进行 Handbook 技术内容的学习。计划明天继续学习 Handbook 的 AI 部分。
+
+### **下一步**
+
+-   观看英文分享会回放，补上遗漏内容
+    
+-   明天继续学习 Handbook 的 AI 部分
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 Day 5 | AI × Web3 School
 
 今日完成：
@@ -52,6 +75,7 @@ Day 5 | AI × Web3 School
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 Day 4 | AI × Web3 School
 
 今日完成：
@@ -82,6 +106,7 @@ Day 4 | AI × Web3 School
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 今日复习tc老师的web课程，并学习wsl2研究hermes具体的使用方法，有时间接着看handbook的ai部分知识。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -90,11 +115,13 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日将handbook中ai部分学完，然后开始web3部分的学习，并回顾昨晚tc老师的课
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
