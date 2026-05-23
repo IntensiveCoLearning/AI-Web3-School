@@ -15,8 +15,36 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+今天参加了 **Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path** 直播分享。因为英文听力压力比较大，会后我补充查阅了 ERC-8004、ERC-8183 相关资料，重点理解 Agent 在开放经济中的身份、信任、任务执行和结算机制。
+
+今天的主要收获是：  
+
+ERC-8004 更偏向解决 **Trustless Agents** 的发现、声誉和验证问题；ERC-8183 更偏向 **Agentic Commerce**，通过任务托管、评估者证明和结算机制，让 Agent 之间或人与 Agent 之间的商业协作更可验证。
+
+结合 Hackathon 项目，我完成并同步了 **AgentScoope Wallet v0.3**：从早期应用层限制，推进到基于 **Sepolia Safe + Zodiac Roles Modifier** 的受限执行钱包实验。当前版本已经可以演示：
+
+\- Safe Owner 不把主私钥交给 Agent
+
+\- Agent 只作为受限 role member 执行
+
+\- 仅允许白名单 USDC transfer
+
+\- 支持额度内执行
+
+\- 支持超额拒绝
+
+\- 支持非白名单拒绝
+
+\- 支持撤销角色后拒绝
+
+\- 每次执行/拒绝都生成结构化审计日志
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今天我参加了 Week 1 例会，听取了同学们的学习方法分享和主持人推荐的优秀笔记示例。最大的感受是，公开记录学习过程、持续输出 Proof-of-Work，是 AI × Web3 School 中非常重要的一部分。
 
 白天我继续研究 Hackathon 项目 AgentScoope Wallet，重点探索 Safe Wallet 的模块机制和合约实现。在尝试把项目中的白名单 Policy 迁移到 Safe Module Guard 时，发现 Sepolia 测试网上的 Safe 版本仍是 1.4.1，而 setModuleGuard 是 Safe 1.5.0 才支持的功能，因此当前无法直接使用 Module Guard 实现这部分逻辑。
@@ -26,6 +54,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 今天参加了「AI 下乡计划｜AI 在 Web3 的应用」的视频课程。
 
@@ -44,6 +73,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 今天观看了「Web3 运行原理」X 直播课程，重新温故了一遍 Web3 的基础概念和运行原理，也有了新的理解。布老师提到 Web3 是密码学、经济学、社会学三门学科的交集：密码学提供可验证的账户、签名和共识基础；经济学解释 Token、Gas 和激励机制；社会学对应协作、治理和信任关系的重构。
@@ -73,6 +103,7 @@ AI x Web3 School
 
 
 
+
 今天我回看了「AI Agent 入门 —— Hermes 从 0 到 1」。
 
 1\. 从视频中了解到配置微信作为 Hermes 消息网关的步骤和方法；之前自己安装 Hermes 时主要使用的是 Telegram。
@@ -88,6 +119,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
