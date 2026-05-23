@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+回顾复习和笔记整理
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 今日在回看视频
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 今日成果：
 
@@ -38,6 +45,7 @@ AI的输出并非事实结果，AI有幻觉。
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 
 
+
 今天学习了模块B的Web3的知识。
 
 首先，发现了一些之前并未察觉的概念模糊，比如账户和钱包是不等同的。
@@ -51,6 +59,7 @@ AI的输出并非事实结果，AI有幻觉。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
