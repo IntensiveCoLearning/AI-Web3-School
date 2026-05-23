@@ -15,13 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+【日期】2026-05-23 【今日完成】
+
+-   法规文档自动化解析需求的思考：技术选型与架构决策笔记（daily/2026-05-23.md）
+    
+-   核心：混合架构（确定性遍历 + 按需 RAG）、平台 vs 本地、agent skill、langchain等
+    
+
+【仓库链接】[ai-web3-school-cohort-0/daily/](https://github.com/Susie-beep/ai-web3-school-cohort-0/blob/master/daily/2026-05-23.md)[2026-05-23.md](http://2026-05-23.md) [at master · Susie-beep/ai-web3-school-cohort-0](https://github.com/Susie-beep/ai-web3-school-cohort-0/blob/master/daily/2026-05-23.md)
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 研究了下Agent API，为什么只能查任务不能替我打卡
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 【日期】2026-05-19 【今日完成】
 
@@ -46,6 +60,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 【日期】2026-05-18 【今日完成】
