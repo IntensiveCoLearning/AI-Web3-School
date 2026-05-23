@@ -15,8 +15,412 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+```
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gas / 合约执行交互学习</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:13px;color:#1a1a1a;background:#f5f5f0;padding:24px}
+h1{font-size:18px;font-weight:500;margin-bottom:4px;color:#1a1a1a}
+.subtitle{font-size:13px;color:#666;margin-bottom:20px}
+.card{background:#fff;border:0.5px solid rgba(0,0,0,0.12);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem}
+.section-title{font-size:14px;font-weight:500;margin-bottom:12px;color:#1a1a1a}
+.tab-bar{display:flex;gap:6px;margin-bottom:1rem;border-bottom:0.5px solid rgba(0,0,0,0.1);padding-bottom:8px}
+.tab{padding:5px 14px;border-radius:6px;cursor:pointer;font-size:13px;border:0.5px solid transparent;color:#666;transition:all 0.15s}
+.tab.active{background:#E6F1FB;color:#185FA5;border-color:#B5D4F4;font-weight:500}
+.tab:hover:not(.active){background:#f5f5f0}
+.panel{display:none}.panel.active{display:block}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}
+@media(max-width:600px){.metrics{grid-template-columns:repeat(2,1fr)}}
+.metric{background:#f5f5f0;border-radius:8px;padding:12px;text-align:center}
+.metric-label{font-size:12px;color:#666;margin-bottom:4px}
+.metric-value{font-size:20px;font-weight:500;color:#1a1a1a}
+.metric-value.danger{color:#A32D2D}
+.metric-value.success{color:#3B6D11}
+.metric-value.info{color:#185FA5}
+.slider-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.slider-row label{width:140px;font-size:13px;color:#555;flex-shrink:0}
+.slider-row input[type=range]{flex:1;accent-color:#378ADD}
+.slider-row .val{width:90px;text-align:right;font-size:13px;color:#1a1a1a;font-weight:500}
+.gas-bar-wrap{margin:1rem 0}
+.gas-bar-label{display:flex;justify-content:space-between;font-size:12px;color:#666;margin-bottom:4px}
+.gas-bar-bg{height:10px;background:#e8e8e4;border-radius:5px;overflow:hidden}
+.gas-bar-fill{height:100%;border-radius:5px;transition:width 0.3s,background 0.3s;background:#378ADD}
+.gas-bar-fill.warn{background:#EF9F27}
+.gas-bar-fill.over{background:#E24B4A}
+.opcode-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(max-width:500px){.opcode-grid{grid-template-columns:1fr}}
+.op-card{background:#f5f5f0;border-radius:8px;padding:10px 12px;cursor:pointer;border:0.5px solid transparent;transition:border-color 0.15s}
+.op-card:hover{border-color:rgba(0,0,0,0.2)}
+.op-card.selected{border-color:#378ADD;background:#E6F1FB}
+.op-name{font-weight:500;font-size:13px;margin-bottom:2px}
+.op-gas{font-size:12px;color:#666}
+.op-detail{background:#f5f5f0;border-radius:8px;padding:12px;margin-top:10px;font-size:13px;line-height:1.7;color:#333}
+.evm-stack{display:flex;flex-direction:column;gap:4px;min-height:120px}
+.stack-item{background:#E6F1FB;border:0.5px solid #B5D4F4;border-radius:6px;padding:4px 10px;font-family:"SF Mono","Fira Code",monospace;font-size:12px;color:#185FA5;animation:slideIn 0.25s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.exec-log{font-family:"SF Mono","Fira Code",monospace;font-size:12px;line-height:1.8;max-height:180px;overflow-y:auto;background:#f5f5f0;border-radius:8px;padding:10px}
+.log-line{margin-bottom:2px}
+.log-op{color:#185FA5;font-weight:500}
+.log-gas{color:#A32D2D}
+.log-ok{color:#3B6D11}
+.step-btns{display:flex;gap:8px;margin-bottom:12px}
+button{padding:6px 16px;border-radius:6px;border:0.5px solid rgba(0,0,0,0.18);background:#fff;font-size:13px;cursor:pointer;transition:background 0.15s}
+button:hover:not(:disabled){background:#f0f0ec}
+button:disabled{opacity:0.45;cursor:default}
+.cost-row{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:0.5px solid rgba(0,0,0,0.08)}
+.cost-row:last-child{border-bottom:none}
+.cost-name{flex:1;font-size:13px;color:#333}
+.cost-num{font-size:13px;font-weight:500;color:#185FA5;width:80px;text-align:right}
+.cost-bar-bg{flex:2;height:6px;background:#e8e8e4;border-radius:3px;overflow:hidden}
+.cost-bar-fill{height:100%;border-radius:3px;background:#378ADD;transition:width 0.3s}
+.info-box{background:#E6F1FB;border:0.5px solid #B5D4F4;border-radius:8px;padding:10px 12px;font-size:13px;color:#185FA5;margin-top:10px;line-height:1.6}
+.exec-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:500px){.exec-grid{grid-template-columns:1fr}}
+.col-label{font-size:12px;color:#666;margin-bottom:6px}
+</style>
+</head>
+<body>
+
+<h1>Gas / 合约执行交互学习</h1>
+<p class="subtitle">Ethereum EVM Gas 机制全解 — 费用模拟 · 操作码查询 · 逐步执行 · EIP-1559</p>
+
+<div class="tab-bar">
+  <div class="tab active" onclick="switchTab('sim')">Gas 费用模拟</div>
+  <div class="tab" onclick="switchTab('opcode')">操作码 Gas 表</div>
+  <div class="tab" onclick="switchTab('exec')">逐步执行演示</div>
+  <div class="tab" onclick="switchTab('eip1559')">EIP-1559 机制</div>
+</div>
+
+<!-- ========== Tab 1: Gas 模拟器 ========== -->
+<div id="panel-sim" class="panel active">
+  <div class="card">
+    <div class="section-title">交易 Gas 费用模拟器</div>
+    <div class="slider-row">
+      <label>Gas limit</label>
+      <input type="range" min="21000" max="500000" step="1000" value="100000" id="sl-limit" oninput="updateSim()">
+      <span class="val" id="v-limit">100,000</span>
+    </div>
+    <div class="slider-row">
+      <label>Gas 实际消耗</label>
+      <input type="range" min="21000" max="500000" step="1000" value="65000" id="sl-used" oninput="updateSim()">
+      <span class="val" id="v-used">65,000</span>
+    </div>
+    <div class="slider-row">
+      <label>Base fee (Gwei)</label>
+      <input type="range" min="1" max="300" step="1" value="20" id="sl-base" oninput="updateSim()">
+      <span class="val" id="v-base">20 Gwei</span>
+    </div>
+    <div class="slider-row">
+      <label>Priority fee (Gwei)</label>
+      <input type="range" min="0" max="50" step="1" value="2" id="sl-prio" oninput="updateSim()">
+      <span class="val" id="v-prio">2 Gwei</span>
+    </div>
+    <div class="slider-row">
+      <label>ETH 价格 (USD)</label>
+      <input type="range" min="500" max="10000" step="100" value="3500" id="sl-eth" oninput="updateSim()">
+      <span class="val" id="v-eth">$3,500</span>
+    </div>
+  </div>
+
+  <div class="metrics">
+    <div class="metric"><div class="metric-label">实际费用 (ETH)</div><div class="metric-value info" id="m-eth">0.0000</div></div>
+    <div class="metric"><div class="metric-label">实际费用 (USD)</div><div class="metric-value" id="m-usd">$0.00</div></div>
+    <div class="metric"><div class="metric-label">燃烧 Base fee (ETH)</div><div class="metric-value danger" id="m-burn">0.0000</div></div>
+    <div class="metric"><div class="metric-label">矿工小费 (ETH)</div><div class="metric-value success" id="m-tip">0.0000</div></div>
+  </div>
+
+  <div class="gas-bar-wrap">
+    <div class="gas-bar-label"><span>Gas 使用率</span><span id="bar-pct">0%</span></div>
+    <div class="gas-bar-bg"><div class="gas-bar-fill" id="gas-fill" style="width:0%"></div></div>
+  </div>
+  <div class="info-box" id="sim-tip">调整上方滑块来探索 Gas 费用的构成原理。</div>
+
+  <div style="margin-top:16px;font-size:12px;color:#888;line-height:1.8">
+    <b>公式说明：</b><br>
+    实际费用 = (Base fee + Priority fee) × Gas 实际消耗<br>
+    燃烧金额 = Base fee × Gas 实际消耗（由协议销毁）<br>
+    矿工收益 = Priority fee × Gas 实际消耗<br>
+    未使用的 Gas（limit − used）全额退还给发送者
+  </div>
+</div>
+
+<!-- ========== Tab 2: 操作码 ========== -->
+<div id="panel-opcode" class="panel">
+  <div class="section-title">EVM 操作码 Gas 消耗查询</div>
+  <p style="font-size:12px;color:#888;margin-bottom:12px">点击任意操作码查看详细说明与成本原理</p>
+  <div class="opcode-grid" id="op-grid"></div>
+  <div class="op-detail" id="op-detail">点击任意操作码查看详细说明。</div>
+
+  <div style="margin-top:16px;font-size:12px;color:#888;line-height:1.8">
+    <b>成本等级参考：</b><br>
+    算术/内存读写 ≈ 3–6 Gas（极廉价）&nbsp;|&nbsp;
+    哈希/事件 ≈ 30–1500 Gas（中等）&nbsp;|&nbsp;
+    跨合约调用 ≈ 2600 Gas（较贵）&nbsp;|&nbsp;
+    Storage 读写 ≈ 2100–20000 Gas（最昂贵）
+  </div>
+</div>
+
+<!-- ========== Tab 3: 逐步执行 ========== -->
+<div id="panel-exec" class="panel">
+  <div class="section-title">合约逐步执行演示</div>
+  <div style="margin-bottom:10px;font-size:13px;color:#555">
+    示例合约：<code style="background:#f5f5f0;padding:2px 8px;border-radius:4px;font-size:12px">function add(uint a, uint b) public pure returns (uint)</code>
+    &nbsp;— 调用时传入 a=10, b=20
+  </div>
+  <div class="step-btns">
+    <button onclick="execStep()" id="btn-step">下一步 &#8594;</button>
+    <button onclick="execReset()">重置</button>
+  </div>
+  <div class="exec-grid">
+    <div>
+      <div class="col-label">EVM 栈（栈顶在上）</div>
+      <div class="evm-stack" id="evm-stack"><div style="color:#aaa;font-size:12px">栈空</div></div>
+    </div>
+    <div>
+      <div class="col-label">执行日志</div>
+      <div class="exec-log" id="exec-log">等待开始执行...</div>
+    </div>
+  </div>
+  <div class="metrics" style="grid-template-columns:repeat(3,1fr);margin-top:12px">
+    <div class="metric"><div class="metric-label">剩余 Gas</div><div class="metric-value info" id="ex-gas">30,000</div></div>
+    <div class="metric"><div class="metric-label">当前步骤</div><div class="metric-value" id="ex-step">0 / 6</div></div>
+    <div class="metric"><div class="metric-label">状态</div><div class="metric-value success" id="ex-status">就绪</div></div>
+  </div>
+
+  <div style="margin-top:16px;font-size:12px;color:#888;line-height:1.8">
+    <b>EVM 执行模型要点：</b><br>
+    EVM 是基于栈的虚拟机，每条指令弹出若干栈顶值、执行操作、将结果压回栈。<br>
+    函数参数通过 calldata 传入，局部变量存于 memory（临时），状态变量存于 storage（永久）。<br>
+    每执行一条指令都会消耗对应 Gas；Gas 耗尽时抛出 out-of-gas 异常，所有状态回滚。
+  </div>
+</div>
+
+<!-- ========== Tab 4: EIP-1559 ========== -->
+<div id="panel-eip1559" class="panel">
+  <div class="section-title">EIP-1559 Gas 定价机制</div>
+  <div style="margin-bottom:12px">
+    <div style="font-size:13px;color:#555;margin-bottom:8px">模拟网络拥堵程度（0 = 空闲，100 = 极度拥堵）</div>
+    <input type="range" min="0" max="100" value="50" id="sl-congestion" oninput="updateEip()" style="width:100%;accent-color:#378ADD">
+    <div style="display:flex;justify-content:space-between;font-size:11px;color:#aaa;margin-top:2px">
+      <span>空闲</span><span>正常</span><span>拥堵</span>
+    </div>
+  </div>
+  <div id="eip-costs"></div>
+  <div class="info-box" id="eip-info"></div>
+  <div style="margin-top:14px;font-size:13px;color:#555;font-weight:500;margin-bottom:8px">ETH 流向分配（以 21000 Gas 转账为例）</div>
+  <div id="eip-breakdown"></div>
+
+  <div style="margin-top:16px;font-size:12px;color:#888;line-height:1.8">
+    <b>EIP-1559 核心机制：</b><br>
+    1. Base fee 由协议自动算法调整，目标区块使用率为 50%<br>
+    2. 区块使用率 &gt; 50% → Base fee 最多上涨 12.5%；&lt; 50% → 最多下降 12.5%<br>
+    3. Base fee 全部销毁（通缩）；Priority fee（小费）归矿工/验证者<br>
+    4. 用户设置 maxFeePerGas = 愿意支付的最高 Gas 价格，超出部分退还
+  </div>
+</div>
+
+<script>
+function switchTab(id) {
+  var ids = ['sim','opcode','exec','eip1559'];
+  document.querySelectorAll('.tab').forEach(function(t,i){ t.classList.toggle('active', ids[i]===id); });
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+  document.getElementById('panel-'+id).classList.add('active');
+}
+
+function fmtN(n){ return Math.round(n).toLocaleString('zh-CN'); }
+
+function updateSim() {
+  var lim = +document.getElementById('sl-limit').value;
+  var used = Math.min(+document.getElementById('sl-used').value, lim);
+  var base = +document.getElementById('sl-base').value;
+  var prio = +document.getElementById('sl-prio').value;
+  var eth = +document.getElementById('sl-eth').value;
+
+  document.getElementById('v-limit').textContent = fmtN(lim);
+  document.getElementById('v-used').textContent = fmtN(used);
+  document.getElementById('v-base').textContent = base + ' Gwei';
+  document.getElementById('v-prio').textContent = prio + ' Gwei';
+  document.getElementById('v-eth').textContent = '$' + fmtN(eth);
+
+  var totalEth = (base + prio) * used / 1e9;
+  var burnEth = base * used / 1e9;
+  var tipEth = prio * used / 1e9;
+  var totalUsd = totalEth * eth;
+
+  document.getElementById('m-eth').textContent = totalEth.toFixed(6);
+  document.getElementById('m-usd').textContent = '$' + totalUsd.toFixed(2);
+  document.getElementById('m-burn').textContent = burnEth.toFixed(6);
+  document.getElementById('m-tip').textContent = tipEth.toFixed(6);
+
+  var pct = Math.round(used / lim * 100);
+  document.getElementById('bar-pct').textContent = pct + '%';
+  var fill = document.getElementById('gas-fill');
+  fill.style.width = pct + '%';
+  fill.className = 'gas-bar-fill' + (pct > 90 ? ' over' : pct > 70 ? ' warn' : '');
+
+  var tip = '';
+  if (pct > 95) tip = '使用率接近上限，说明这是一笔计算密集型合约调用，容易触发 out-of-gas 风险，建议提高 limit 或优化合约。';
+  else if (pct > 70) tip = 'Gas 使用率偏高，建议在合约中预留至少 20% 余量以应对动态执行路径。';
+  else if (pct < 30) tip = 'Gas limit 设置偏保守，实际上很宽裕。可以适当降低 limit，减少发送前锁定的 ETH。';
+  else tip = 'Gas 使用率合理（' + pct + '%）。未使用的 ' + fmtN(lim - used) + ' 单位 Gas 将在交易完成后退还给发送者。';
+  document.getElementById('sim-tip').textContent = tip;
+  document.getElementById('sl-used').max = lim;
+}
+
+var opcodes = [
+  {name:'ADD',     gas:3,     cat:'算术', desc:'两个栈顶数相加，结果压栈。最基础的 EVM 指令之一，成本固定为 3 Gas。EVM 中所有整数均为 256 位无符号整数。', color:'#185FA5'},
+  {name:'MUL',     gas:5,     cat:'算术', desc:'乘法运算，成本 5 Gas。EVM 中所有算术均按字（256-bit）操作，溢出自动截断，不抛出异常。', color:'#185FA5'},
+  {name:'SLOAD',   gas:2100,  cat:'存储', desc:'从 storage 读取一个槽（cold access，EIP-2929）。若同一交易中已读过该槽（warm），仅需 100 Gas。Storage 是合约中最昂贵的资源。', color:'#A32D2D'},
+  {name:'SSTORE',  gas:20000, cat:'存储', desc:'写入新值到 storage 槽（cold write）。修改已有非零值为非零值 = 2900 Gas；写入零值可触发 Gas 退款。是合约中最昂贵的操作。', color:'#A32D2D'},
+  {name:'MLOAD',   gas:3,     cat:'内存', desc:'从 memory（临时内存）读取 32 字节，基础 3 Gas。Memory 按需扩展，访问超出已分配范围时会产生内存扩展费用（按 word 计费）。', color:'#3B6D11'},
+  {name:'MSTORE',  gas:3,     cat:'内存', desc:'向 memory 写入 32 字节，基础 3 Gas + 内存扩展费。Memory 在函数调用结束后自动释放，不收取持久成本。', color:'#3B6D11'},
+  {name:'CALL',    gas:2600,  cat:'调用', desc:'调用另一个合约（cold address）。携带 ETH 时额外 +9000 Gas；若目标账户不存在则 +25000 Gas（创建账户费）。', color:'#854F0B'},
+  {name:'LOG2',    gas:1500,  cat:'日志', desc:'发出含 2 个 topic 的事件日志。费用 = 375 + 2×375（topic）+ 数据字节×8。日志永久写入链但合约无法读取。', color:'#3C3489'},
+  {name:'CREATE',  gas:32000, cat:'部署', desc:'部署一个新合约，基础 32000 Gas + initcode 字节费（200 Gas/字节）+ 内存费。CREATE2 费用相同但加入 hash 计算。', color:'#993C1D'},
+  {name:'KECCAK256',gas:30,   cat:'加密', desc:'基础 30 Gas + 6 Gas/word（每 32 字节）。Solidity mapping 键哈希、事件签名、CREATE2 地址计算等均依赖此指令。', color:'#0F6E56'},
+];
+
+function renderOpcodes() {
+  var g = document.getElementById('op-grid');
+  g.innerHTML = opcodes.map(function(op, i) {
+    var barW = Math.min(100, Math.log10(op.gas+1) / Math.log10(32001) * 100).toFixed(1);
+    return '<div class="op-card" id="opc-'+i+'" onclick="selectOp('+i+')">'
+      + '<div class="op-name" style="color:'+op.color+'">'+op.name+' <span style="font-size:11px;color:#aaa">['+op.cat+']</span></div>'
+      + '<div class="op-gas">'+op.gas.toLocaleString()+' Gas</div>'
+      + '<div class="cost-bar-bg" style="margin-top:4px"><div class="cost-bar-fill" style="width:'+barW+'%;background:'+op.color+'"></div></div>'
+      + '</div>';
+  }).join('');
+}
+
+function selectOp(i) {
+  document.querySelectorAll('.op-card').forEach(function(c){ c.classList.remove('selected'); });
+  document.getElementById('opc-'+i).classList.add('selected');
+  var op = opcodes[i];
+  document.getElementById('op-detail').innerHTML =
+    '<b style="color:'+op.color+'">'+op.name+'</b>'
+    + ' &nbsp;|&nbsp; 类别：'+op.cat
+    + ' &nbsp;|&nbsp; 消耗：<b>'+op.gas.toLocaleString()+' Gas</b>'
+    + '<br><br>'+op.desc;
+}
+
+var execSteps = [
+  {op:'PUSH1 0x0a', desc:'将参数 a=10 (0x0a) 压栈', gasUse:3, stack:['0x0a']},
+  {op:'PUSH1 0x14', desc:'将参数 b=20 (0x14) 压栈', gasUse:3, stack:['0x14','0x0a']},
+  {op:'ADD',        desc:'弹出两值相加 10+20=30，结果压栈', gasUse:3, stack:['0x1e']},
+  {op:'DUP1',       desc:'复制栈顶值（备份返回值用）', gasUse:3, stack:['0x1e','0x1e']},
+  {op:'MSTORE',     desc:'弹出地址 0 和值，将 30 写入 memory[0]', gasUse:6, stack:[]},
+  {op:'RETURN',     desc:'返回 memory[0..31]，函数执行完成', gasUse:0, stack:[]},
+];
+var execState = {step:0, gas:30000, log:[]};
+
+function renderExec() {
+  var s = execState;
+  document.getElementById('ex-gas').textContent = s.gas.toLocaleString();
+  document.getElementById('ex-step').textContent = s.step + ' / ' + execSteps.length;
+  var done = s.step >= execSteps.length;
+  document.getElementById('btn-step').disabled = done;
+  document.getElementById('ex-status').textContent = done ? '已完成' : (s.step > 0 ? '执行中' : '就绪');
+  document.getElementById('ex-status').className = 'metric-value ' + (done ? 'success' : s.step > 0 ? 'info' : 'success');
+  var stackEl = document.getElementById('evm-stack');
+  var cur = s.step > 0 ? execSteps[s.step-1] : null;
+  if (cur && cur.stack.length > 0) {
+    stackEl.innerHTML = cur.stack.map(function(v){ return '<div class="stack-item">'+v+'</div>'; }).join('');
+  } else if (s.step === 0) {
+    stackEl.innerHTML = '<div style="color:#aaa;font-size:12px">栈空</div>';
+  } else {
+    stackEl.innerHTML = '<div style="color:#aaa;font-size:12px">栈已清空（值已消耗）</div>';
+  }
+  var logEl = document.getElementById('exec-log');
+  logEl.innerHTML = s.log.join('') || '等待开始执行...';
+  logEl.scrollTop = 9999;
+}
+
+function execStep() {
+  var i = execState.step;
+  if (i >= execSteps.length) return;
+  var st = execSteps[i];
+  execState.gas -= st.gasUse;
+  execState.step++;
+  execState.log.push(
+    '<div class="log-line"><span class="log-op">'+st.op+'</span>'
+    + ' — '+st.desc
+    + (st.gasUse > 0 ? ' <span class="log-gas">(-'+st.gasUse+' Gas)</span>' : ' <span style="color:#aaa">(free)</span>')
+    + '</div>'
+  );
+  if (execState.step === execSteps.length) {
+    execState.log.push('<div class="log-line log-ok">执行成功。返回值：30 (0x1e)，总消耗：18 Gas</div>');
+  }
+  renderExec();
+}
+
+function execReset() {
+  execState = {step:0, gas:30000, log:[]};
+  renderExec();
+}
+
+function updateEip() {
+  var cong = +document.getElementById('sl-congestion').value;
+  var baseFee = Math.round(5 + cong * 2.9);
+  var maxFee = Math.round(baseFee * 1.5 + 2);
+  var prio = 2;
+  var gas = 21000;
+  var burnEth = (baseFee * gas / 1e9).toFixed(8);
+  var tipEth = (prio * gas / 1e9).toFixed(8);
+
+  var items = [
+    {name:'Base fee（由协议算法设定）',  val:baseFee, max:300,  color:'#E24B4A'},
+    {name:'Priority fee（用户小费）',   val:prio,    max:50,   color:'#3B6D11'},
+    {name:'建议 maxFeePerGas 上限',    val:maxFee,  max:450,  color:'#185FA5'},
+  ];
+  document.getElementById('eip-costs').innerHTML = items.map(function(it) {
+    var w = Math.min(100, it.val / it.max * 100).toFixed(1);
+    return '<div class="cost-row">'
+      + '<span class="cost-name">'+it.name+'</span>'
+      + '<div class="cost-bar-bg"><div class="cost-bar-fill" style="width:'+w+'%;background:'+it.color+'"></div></div>'
+      + '<span class="cost-num" style="color:'+it.color+'">'+it.val+' Gwei</span>'
+      + '</div>';
+  }).join('');
+
+  var breakdown = [
+    {name:'燃烧销毁（Base fee × 21000 Gas）', val:burnEth+' ETH', color:'#A32D2D'},
+    {name:'矿工/验证者收益（Priority fee × Gas）', val:tipEth+' ETH', color:'#3B6D11'},
+  ];
+  document.getElementById('eip-breakdown').innerHTML = breakdown.map(function(b) {
+    return '<div class="cost-row">'
+      + '<span class="cost-name" style="color:'+b.color+'">'+b.name+'</span>'
+      + '<span class="cost-num" style="color:'+b.color+'">'+b.val+'</span>'
+      + '</div>';
+  }).join('');
+
+  var trend = '';
+  if (cong > 60) trend = '当前网络拥堵（'+cong+'%），Base fee 将在下一区块继续上涨（每块最多 +12.5%）。建议设置更高的 maxFeePerGas 以保证上链。';
+  else if (cong < 40) trend = '网络相对空闲（'+cong+'%），Base fee 正在下降。此时是低成本发送交易的好时机，无需设置过高 maxFee。';
+  else trend = '网络负载适中（'+cong+'%），Base fee 在目标区块容量附近波动，可按当前 Base fee 的 1.5 倍设置 maxFeePerGas。';
+  document.getElementById('eip-info').textContent = trend;
+}
+
+renderOpcodes();
+updateSim();
+updateEip();
+renderExec();
+</script>
+</body>
+</html>
+```
+
+对gas合约交易的模拟学习界面
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 ![屏幕截图 2026-05-22 204758.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Accuracy333/images/2026-05-22-1779454088506-_____2026-05-22_204758.png)
 
 ```
@@ -40,6 +444,7 @@ file:///C:/Users/Accuracy/WorkBuddy/2026-05-22-task-7/gas-interactive-learning.h
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 Web3/以太坊核心原理
@@ -195,6 +600,7 @@ Web3是密码学、经济学、社会学三门学科的交叉：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
