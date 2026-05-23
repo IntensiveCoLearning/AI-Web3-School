@@ -76,6 +76,7 @@ AI x Web3 School
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 今天主要参加了 AI x Web3 School 的 Co-learning。
 
 今天我主要做了下面几个事情。
@@ -97,6 +98,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 今天的会议让我大概想到了之后黑客松做的项目方向，我打算做一个浏览器插件 关于智能钱包和安全助手。
@@ -149,6 +151,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -949,6 +952,7 @@ DAO 想实现：
 
 
 
+
 这节课主要将了hermes agent的安装过程。但是我已经在昨天安装完了，并配置了智谱Ai的api。但是在晚上十点swen老师分享了john老师的NVIDIA NIM 免费api的接入方法，感觉让我拥有了无限的token，可以尝试多agent做东西了，不再担心token不够花钱的问题，可以不再焦虑的使用hermes agent。
 
 我打算这样子
@@ -986,6 +990,7 @@ Messaging Gateway → 先選 Skip，之後可再設定
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
