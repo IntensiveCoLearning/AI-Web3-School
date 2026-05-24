@@ -15,8 +15,31 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+**github vibe coding** 把 AI 生成的改动放回版本控制、issue、PR 和 review 流程里，而不是只看一次聊天输出。
+
+GitHub 和 `gh` CLI 是 AI Coding 工作流里的协作边界。Agent 可以帮你看 issue、生成 branch、读 PR diff、写提交信息、整理 review，但版本控制仍然是人类审查的关键线。
+
+一个实用原则：**让 Agent 多做局部 patch，少做不可追踪的大改动。**
+
+每次改动后至少看：
+
+-   `git diff`
+    
+-   修改文件列表
+    
+-   测试结果
+    
+-   是否包含不该提交的密钥、日志、构建产物
+    
+
+最近在練習這個 剛好學到
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 LLM 一次回答问题，通常只是在生成文本。Agent 更进一步：它可以拆任务、查资料、调用 API、写代码、生成操作草稿、等待反馈再继续下一步。
 
 Tool Use
@@ -30,6 +53,7 @@ Agent 从“会回答”变成“能做事”
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 llm rag實作
 
@@ -76,6 +100,7 @@ gemini 底層rag 丟檔案給他讀=外接資料庫
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 助記詞丟了 私鑰全丟
 
 資產不在錢包 實際上帳本跟數據在區塊鏈上
@@ -108,6 +133,7 @@ PoS ETH 偽隨機
 
 
 
+
 裝完hermes 用ollama裝
 
 去ai web3 school那個網站讀了llm
@@ -119,6 +145,7 @@ hallucination: 幻覺 外部校驗
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
