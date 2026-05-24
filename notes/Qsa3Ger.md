@@ -15,8 +15,82 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+0521AI 在 Web3 的应用
+
+[AI \* Web3](#framework)
+
+file:///C:/Users/asus/xwechat\_files/wxid\_kqu1cs7z4ff622\_5e2b/msg/file/2026-05/AI\_Web3\_五大方向经典项目\_教学.html
+
+方向1：
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps1.jpg)
+
+Bittensor:把AI算力服务器的使用去中心化
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps2.jpg)
+
+子网不上链，验证者打分后分发质押币（上链）
+
+缺点：节点分散，相对中心化服务器速度上无法保证，需要更多数据集训练。
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps3.jpg)
+
+方向2：
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps4.jpg)
+
+授权Agent进行一定的链上支付动作
+
+应用：量化操作，合约监控。目前AI自主支付场景少。
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps5.jpg)
+
+方向3：
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps6.jpg)![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps7.jpg)
+
+分析每个地址的链上操作和地址转账，反隐私性？自己跑跑量化策略
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps8.jpg)
+
+方向4：
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps9.jpg)
+
+通过自然语义去确保安全性，规避陷阱合约
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps10.jpg)![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps11.jpg)
+
+方向5：跟交易所相关
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps12.jpg)
+
+QA：
+
+1.Agent与合约审计相关产品：
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps13.jpg)
+
+测试模型审计能力
+
+![](file:///C:\Users\asus\AppData\Local\Temp\ksohtml7980\wps14.jpg)
+
+[2.AI](http://2.AI)自主支付操作的面向：目前一些信息网站识别到是AI进行获取信息时会收取一定费用
+
+3.稳定币adoption，语义话交易操作（建立在稳定币经济属性上）
+
+4.中转站 token
+
+5.区块链链上意图门槛高：把USDT转化成ETH帮我做执行
+
+6.降低门槛，金融方面
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 0520Web3运行原理
 
 1\. 助记词、私钥privatekey、公钥Publickey、钱包地址Address
@@ -183,6 +257,7 @@ D. 信息差异下无公平，只能在信息平等的局部组织内达成。
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
+
 260519
 
 已在tg部署hermes\*^ ^\*
@@ -202,6 +277,7 @@ D. 信息差异下无公平，只能在信息平等的局部组织内达成。
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 0518 AI时代，Web3开发者需要更扎实的基础知识与架构能力
@@ -279,6 +355,7 @@ Signature+message IP=验证（without private key）
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
