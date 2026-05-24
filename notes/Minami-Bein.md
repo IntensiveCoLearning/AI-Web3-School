@@ -14,6 +14,366 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+# AI x Web3 School 第一周复盘报告
+## Week 1 Technical Report — Day 7
+
+---
+
+## 目录
+
+- [1. 执行摘要与问题空间](#1-执行摘要与问题空间)
+- [2. 系统架构与拓扑](#2-系统架构与拓扑)
+- [3. 理论框架与概念分类](#3-理论框架与概念分类)
+- [4. 核心组件功能矩阵](#4-核心组件功能矩阵)
+- [5. Agent 自主执行与优化](#5-agent-自主执行与优化)
+- [6. 安全边界与漏洞验证](#6-安全边界与漏洞验证)
+- [7. 第一周学习闭环总结](#7-第一周学习闭环总结)
+- [8. Handbook Feedback 候选问题](#8-handbook-feedback-候选问题)
+- [9. 下周重点与路线图](#9-下周重点与路线图)
+
+---
+
+## 1. 执行摘要与问题空间
+
+### 摘要
+
+本报告为 **AI x Web3 School 第一周复盘报告（Day 7）**，聚焦于构建 AI Builder 的 Web3 基础直觉。核心目标是通过 7 天系统化学习，建立对去中心化网络、钱包身份、签名机制、交易执行与智能合约五大核心模块的深度理解，并将其与 AI Agent 执行框架进行概念映射。
+
+### In-Scope / Out-of-Scope
+
+| 维度 | 包含 | 排除 |
+|------|------|------|
+| 领域覆盖 | Blockchain Network、Cryptography、Wallet、Smart Contract、Security | DeFi 协议、NFT 发行、DAO 治理机制 |
+| 技术栈 | 钱包签名、链上交易、智能合约概念 | Solidity 编码、链上数据解析实战 |
+| Agent 能力 | Web3 概念映射、权限边界意识 | 生产级 Agent 实现、MCP 协议集成 |
+| 安全边界 | 基础风险识别框架 | 复杂攻击向量、合约审计方法论 |
+
+---
+
+## 2. 系统架构与拓扑
+
+### 概念脑图：AI Agent × Web3 核心组件关联
+
+```mermaid
+mindmap
+  root((AI x Web3 基础架构))
+    Web3 基础设施层
+      区块链网络
+        分布式账本
+        共识机制
+        状态同步
+      密码学基础
+        哈希函数 Hash
+        非对称加密
+        数字签名
+    身份与权限层
+      钱包 Wallet
+        公钥 Public Key
+        私钥 Private Key
+        智能账户 Smart Account
+      签名机制 Signature
+        消息签名
+        交易签名
+        授权签名
+    执行与状态层
+      交易 Transaction
+        发起 Initiation
+        广播 Broadcasting
+        确认 Confirmation
+        执行 Execution
+      智能合约 Smart Contract
+        状态 State
+        函数 Function
+        事件 Event
+        Gas 费用
+    AI Agent 控制层
+      观察 Observe
+        链上数据读取
+        上下文构建
+      决策 Decide
+        Prompt 指令解析
+        工具选择
+      执行 Act
+        签名请求
+        交易提交
+      验证 Verify
+        结果校验
+        状态确认
+      报告 Report
+        操作日志
+        可验证记录
+```
+
+### 系统拓扑：Web3 操作闭环
+
+```mermaid
+graph TD
+    subgraph "用户层"
+        U[用户 User]
+    end
+    
+    subgraph "AI Agent 层"
+        AG[AI Agent]
+        CT[Context 构建]
+        PK[Prompt 处理]
+        TW[Tool 调用]
+    end
+    
+    subgraph "钱包层"
+        WA[钱包 Wallet]
+        PK_P[公钥 Public Key]
+        SK_P[私钥 Private Key]
+    end
+    
+    subgraph "链上层"
+        BC[区块链网络]
+        TX[交易 Transaction]
+        SC[智能合约 Smart Contract]
+    end
+    
+    U -->|1. 任务描述| AG
+    AG -->|2. 构建上下文| CT
+    CT -->|3. 解析指令| PK
+    PK -->|4. 读取链上数据| BC
+    BC -->|5. 返回状态| PK
+    PK -->|6. 请求签名| WA
+    WA -->|7. 用户确认签名| U
+    U -->|8. 签名授权| WA
+    WA -->|9. 签名数据| AG
+    AG -->|10. 提交交易| BC
+    BC -->|11. 执行合约| SC
+    SC -->|12. 状态更新| BC
+    BC -->|13. 交易回执| AG
+    AG -->|14. 验证结果| TW
+    TW -->|15. 报告用户| U
+    
+    style U fill:#e1f5fe
+    style AG fill:#fff3e0
+    style WA fill:#f3e5f5
+    style BC fill:#e8f5e8
+```
+
+---
+
+## 3. 理论框架与概念分类
+
+### 核心术语表（第一周）
+
+| 术语 | 中文 | 英文缩写 | 定义 | AI Agent 映射 |
+|------|------|----------|------|---------------|
+| 哈希函数 | 哈希 | Hash | 将任意长度数据映射为固定长度摘要的单向函数 | 消息完整性校验 |
+| 公钥 | 公钥 | Public Key | 非对称加密中公开的密钥部分，用于验证签名 | 地址生成基础 |
+| 私钥 | 私钥 | Private Key | 非对称加密中保密的密钥部分，用于签署消息 | Agent 禁止访问 |
+| 数字签名 | 签名 | Signature | 使用私钥对消息摘要进行加密生成的证明 | 用户授权凭证 |
+| 钱包 | 钱包 | Wallet | 管理公私钥对、提供签名功能的软件或硬件 | Agent 交互边界 |
+| 交易 | 交易 | Transaction | 改变区块链状态的签名数据包 | Agent 执行单元 |
+| 智能合约 | 智能合约 | Smart Contract | 部署在链上的自动执行代码 | Agent 调用的服务 |
+| 账户抽象 | 账户抽象 | AA | 将 EOAs 抽象为合约账户的技术，允许自定义逻辑 | Agent Wallet 基础 |
+| Gas | Gas | Gas | 执行操作消耗的计算资源单位 | 执行成本计量 |
+
+### 类型系统定义
+
+**Transaction Type:**
+```
+Transaction {
+  from: Address (20 bytes)
+  to: Address (20 bytes)
+  value: Wei (uint256)
+  data: bytes
+  gasLimit: uint64
+  maxFeePerGas: uint256
+  signature: Signature (65 bytes)
+}
+```
+
+**Wallet Permission Model:**
+```
+Permission {
+  read: boolean
+  simulate: boolean
+  estimateGas: boolean
+  requestSignature: boolean (always requires user confirmation)
+  submitTransaction: boolean (always requires user confirmation)
+}
+```
+
+---
+
+## 4. 核心组件功能矩阵
+
+### Web3 组件 × Agent 交互矩阵
+
+| 组件 | 读取（Read） | 模拟（Simulate） | 估算（Estimate） | 签名（Sign） | 提交（Submit） |
+|------|-------------|-----------------|------------------|--------------|---------------|
+| Blockchain Network | ✅ 自动 | ✅ 自动 | ✅ 自动 | ❌ 禁止 | ❌ 禁止 |
+| Wallet / Signature | ✅ 自动 | ✅ 自动 | ✅ 自动 | ⚠️ 用户确认 | ⚠️ 用户确认 |
+| Smart Contract | ✅ 自动 | ✅ 自动 | ✅ 自动 | ❌ 禁止 | ⚠️ 用户确认 |
+| Transaction | ✅ 自动 | ✅ 自动 | ✅ 自动 | ❌ 禁止 | ⚠️ 用户确认 |
+
+**约束条件：**
+$$\forall action \in \{Sign, Submit\}, Agent(action) \rightarrow UserConfirmation$$
+所有签名和提交操作必须经过用户确认，Agent 无法绕过。
+
+### Agent Workflow 状态机
+
+```mermaid
+stateDiagram-v2
+    [*] --> Observe: 任务触发
+    Observe --> Decide: 数据读取完成
+    Decide --> Act: 工具选择完毕
+    Act --> Verify: 操作执行
+    Verify --> Report: 结果校验通过
+    Verify --> Decide: 校验失败，重试
+    Report --> [*]: 报告完成
+    
+    Act --> RequestSignature: 需要签名
+    RequestSignature --> UserConfirm: 用户授权
+    UserConfirm --> Act: 签名获取
+    RequestSignature --> UserDeny: 用户拒绝
+    UserDeny --> Report: 操作中止
+```
+
+---
+
+## 5. Agent 自主执行与优化
+
+### Web3 Agent 权限边界原则
+
+**核心原则：Human-in-the-Loop（人在回路）**
+
+1. **只读操作**：自动执行，无需确认
+   - 读取链上数据（余额、交易历史、合约状态）
+   - 估算 Gas 费用
+   - 模拟交易结果
+
+2. **签名操作**：必须用户确认
+   - 消息签名
+   - 交易签名
+   - 授权签名（Approve）
+
+3. **执行操作**：必须用户确认
+   - 提交交易
+   - 调用合约写入函数
+   - 管理资产转移
+
+### 概念图：Wallet、Signature、Transaction、Smart Contract 与 AI Agent 的连接
+
+```mermaid
+graph LR
+    subgraph "身份层 Identity"
+        W[Wallet<br/>钱包]
+        PK[Public Key<br/>公钥]
+        SK[Private Key<br/>私钥]
+    end
+    
+    subgraph "授权层 Authorization"
+        S[Signature<br/>签名]
+        MSG[Message<br/>消息]
+        V[Verification<br/>验证]
+    end
+    
+    subgraph "执行层 Execution"
+        TX[Transaction<br/>交易]
+        BC[Blockchain<br/>区块链]
+        SC[Smart Contract<br/>智能合约]
+    end
+    
+    subgraph "Agent 层"
+        AG[AI Agent<br/>智能体]
+        CT[Context<br/>上下文]
+        HL[Human Loop<br/>人工确认]
+    end
+    
+    W --> PK
+    W --> SK
+    PK -->|地址生成| AG
+    SK -->|签名| S
+    AG -->|构建| MSG
+    MSG -->|签署| S
+    S -->|验证| V
+    V -->|通过| TX
+    TX -->|提交| BC
+    BC -->|执行| SC
+    SC -->|状态更新| BC
+    AG -->|读取| BC
+    AG -->|请求| S
+    S -->|需要| HL
+    HL -->|授权| S
+    
+    style W fill:#f3e5f5
+    style SK fill:#ffcdd2
+    style S fill:#fff9c4
+    style TX fill:#e1f5fe
+    style AG fill:#e8f5e8
+    style HL fill:#ffe0b2
+```
+
+**连接逻辑说明：**
+
+| 连接路径 | 功能 | 权限要求 |
+|---------|------|---------|
+| Wallet → Public Key → Agent | 生成链上身份标识 | 无需确认 |
+| Agent → Message → Signature | 构建待签名数据 | 生成消息无需确认 |
+| Signature → Human Loop | 获取签名授权 | 必须用户确认 |
+| Signature → Verification → Transaction | 验证通过生成交易 | 自动执行 |
+| Transaction → Blockchain → Smart Contract | 提交链上执行 | 用户确认后执行 |
+| Agent ← Blockchain | 读取执行结果 | 无需确认 |
+
+---
+
+## 6. 安全边界与漏洞验证
+
+### 第一周安全风险识别矩阵
+
+| 风险类型 | 威胁描述 | 攻击/失效向量 | Agent 映射场景 | 防御策略 |
+|---------|---------|---------------|---------------|---------|
+| 私钥泄露 | 私钥被未授权方获取 | 恶意软件、钓鱼网站、社交工程 | Agent 获取私钥后自动执行高危操作 | Agent 永远不访问私钥，只请求签名 |
+| 签名钓鱼 | 用户被诱导签署恶意消息 | 伪装 DApp、钓鱼邮件、签名请求欺骗 | Agent 请求签名时展示信息不完整 | 展示完整消息内容，要求用户核对地址 |
+| 恶意授权 | 用户被诱导 Approve 高额代币 | 钓鱼 DApp、恶意合约 | Agent 帮助用户授权时未验证合约安全性 | 授权前展示合约功能分析，限制授权额度 |
+| 错误地址 | 资产发送到错误地址 | 复制粘贴错误、地址格式错误 | Agent 提交交易前未校验地址格式 | 实现地址格式校验，提示用户核对 |
+| 数据源不可信 | 读取的链上数据被污染 | RPC 节点被攻击、数据源被篡改 | Agent 基于错误数据做决策 | 多数据源交叉验证，关键操作前刷新数据 |
+| 合约漏洞 | 调用存在漏洞的智能合约 | 未审计合约、遗留漏洞 | Agent 执行合约函数时触发未知后果 | 保持合约审计意识，不执行未确认的合约操作 |
+
+### 安全边界不变量
+
+**核心不变量：**
+$$\forall operation \in \{Sign, Submit\}, Agent \rightarrow requiresUserConfirmation(operation)$$
+
+**验证条件：**
+$$\forall tx \in TransactionPool, tx.signature \neq null \rightarrow tx.origin \in ApprovedAddresses$$
+
+---
+
+## 7. 第一周学习闭环总结
+
+### 我学到了什么
+
+- **区块链网络基础**：理解了分布式账本、共识机制与状态同步的运作原理，掌握了从用户操作到链上状态变化的完整路径。
+- **密码学基础**：深入理解了哈希（Hash）、公钥（Public Key）、私钥（Private Key）与数字签名（Signature）之间的数学关系与安全假设。
+- **钱包与身份**：认识到钱包不仅是"登录按钮"，而是用户链上身份、资产所有权与权限边界的核心载体。账户抽象（Account Abstraction）为 Agent Wallet 提供了技术基础。
+- **智能合约概念**：理解了状态（State）、函数（Function）、事件（Event）与 Gas 费用的概念框架，建立了"链上规则"的认知模型。
+- **安全底线**：识别了私钥泄露、签名钓鱼、恶意授权、错误地址、合约漏洞与数据源不可信六大风险，并将其映射到 AI Agent 操作场景。
+
+### 我实践了什么
+
+- 绘制了"用户操作 → 发起交易 → 网络确认 → 状态变化"的完整路径图
+- 编写了"AI Agent 绝不能绕过用户确认的操作清单"
+- 整理了智能合约核心概念双语术语表
+- 输出了《AI Agent 做 Web3 操作时最危险的 5 个边界》内容草稿
+- 构建了第一周核心概念的概念图，将 wallet、signature、transaction、smart contract 与 AI agent 进行系统化连接
+
+### 公开 Proof-of-Work
+
+| 类型 | 产出 | 位置 |
+|------|------|------|
+| Daily Notes | 7 篇每日学习笔记 | `daily/YYYY-MM-DD.md` |
+| Content Drafts | 2 篇技术内容草稿 | `content/` |
+| Term Glossary | 双语术语表 | `handbook-terms.md` |
+|
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 # AI Agent Web3 安全边界分析报告
@@ -1946,6 +2306,5 @@ $$
 
 **报告生成时间**：2026-
 <!-- DAILY_CHECKIN_2026-05-18_END -->
-
 
 <!-- Content_END -->
