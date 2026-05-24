@@ -15,8 +15,91 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+### **密码学（Cryptography）**
+
+1.  深入学习 Handbook 密码学章节，掌握了 5 个核心概念
+    
+2.  **私钥（Private Key）** — 账户控制权本身，绝不截图/上传/粘贴/发给 AI
+    
+3.  **公钥（Public Key）** — 可公开分享，用于验证签名但不能反推私钥
+    
+4.  **地址（Address）** — 不是身份，只是一个可验证控制关系的标识
+    
+5.  **签名（Signature）** — 不是登录弹窗，是对消息/交易的授权证明
+    
+6.  **哈希（Hash）** — 固定长度指纹，用于验证数据一致性，不可逆
+    
+7.  理解了从密码学到区块链的逻辑链路：私钥→公钥→地址→签名→交易→区块→区块链
+    
+8.  建立了密码学的产品直觉：私钥=控制权，公钥=可验证，签名=授权行为
+    
+9.  学习计划进度更新：密码学 ✅ → 下一站 **钱包（Wallet）** 🎯
+    
+
+### **第一周学习总结（5/18 - 5/24）**
+
+**Web3 基础：**
+
+-   Week 1 完成了 **Web3 运行原理 + 密码学** 两大基础模块
+    
+-   Web3 核心框架：密码学 + 经济学 + 社会学三角认知
+    
+-   从交易到出块链路：Wallet → RPC → Mempool → Builder → Validator → Block
+    
+-   密码学 5 大核心概念：私钥、公钥、地址、签名、哈希
+    
+-   密码学建立了「不信任人，信任数学」的 Web3 信任模型
+    
+
+**AI Agent：**
+
+-   AI Agent 核心运行机制：理解目标 → 调用工具 → 检查结果 → 修正执行
+    
+-   聊天机器人 vs AI Agent 的本质区别：回答 vs 做事
+    
+-   AI Agent 一旦开始做事，就会引出账户、支付、授权和追责问题
+    
+
+**AI × Web3 Bridge：**
+
+-   AI + Web3 的核心价值：不是给 AI 套 token，而是让软件主体进入可授权、可结算、可审计的经济系统
+    
+-   ERC-8004：Agent 可验证身份与信誉（Identity / Reputation / Validation 三大注册表）
+    
+-   X402：机器对机器支付，复兴 HTTP 402 状态码
+    
+-   Deep Funding：AI Agent 参与公共物品资金分配
+    
+-   AI 链上分析工具（Nansen）— 从「写查询」变成「提问题」
+    
+
+**工具与基建：**
+
+-   Obsidian 本地知识库搭建 —— 个人素材+方法论+经历喂给 AI，输出才是自己的
+    
+-   笔记结构化整理法：索引+分层重构，强调可检索性和可复用性
+    
+-   Hermes Agent 从部署到稳定运行，飞书连接和日历定时通知配置完成
+    
+
+**下周目标：**
+
+1.  继续 Handbook Web3 基础学习 — 下一站 **钱包（Wallet）**
+    
+2.  5/25 Co-Learning + Week 2 AI×Web3 交叉实践课
+    
+3.  了解 MCP、RAG 等进阶概念
+    
+4.  了解 Ethereum 生态的更多应用场景
+    
+5.  了解资产自托管和私钥管理实践
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 ### **Open Agentic Economy**
 
 1.  参加了 Sophia ([Z.AI](http://Z.AI)) 的 "Open Agentic Economy" 分享会
@@ -39,6 +122,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 \### Co-Learning
 
@@ -84,6 +168,7 @@ AI x Web3 School
 
 
 
+
 1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
 
 2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
@@ -99,6 +184,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -161,11 +247,13 @@ AI x Web3 School
 
 
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
