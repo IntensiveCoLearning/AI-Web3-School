@@ -15,8 +15,498 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+**From ERC-8004 / ERC-8183 → Builder Path**
+
+**Agentic Economy Builder Notes**
+
+一份給 Web3 / AI Agent Builder 的實戰路徑筆記
+
+從「AI Agent 身份層」到「Agent Commerce Layer」的完整理解。
+
+**1\. 先理解這兩個 ERC 在解決什麼問題**
+
+**ERC-8004 = Agent Identity Layer**
+
+ERC-8004 是 AI Agent 的：
+
+-   Identity（身份）
+    
+-   Reputation（聲譽）
+    
+-   Validation（驗證）
+    
+
+它讓 AI Agent 可以：
+
+-   被發現（Discovery）
+    
+-   被驗證（Trust）
+    
+-   被記錄歷史（Reputation）
+    
+-   跨平台建立可信身份
+    
+
+可以理解為：
+
+ERC-8004 = AI Agent Passport + Resume
+
+核心概念：
+
+| 模組 | 功能 |
+| Identity Registry | Agent 身份註冊 |
+| Reputation Registry | 工作歷史 / 評價 |
+| Validation Registry | 驗證與 Proof |
+
+**ERC-8183 = Agent Commerce Layer**
+
+ERC-8183 是：
+
+AI Agent 的工作協議（Job Protocol）
+
+它定義：
+
+-   如何建立工作
+    
+-   如何 escrow
+    
+-   如何提交結果
+    
+-   如何驗證
+    
+-   如何付款
+    
+
+核心角色：
+
+| Role | 說明 |
+| Client | 發需求 |
+| Provider | 做工作 |
+| Evaluator | 驗證結果 |
+
+工作流程：
+
+Create Job
+
+→ Fund Escrow
+
+→ Submit Deliverable
+
+→ Evaluate
+
+→ Release Payment / Refund
+
+**2\. ERC-8004 + ERC-8183 的關係**
+
+可以這樣理解：
+
+ERC-8004 = 誰在工作
+
+ERC-8183 = 工作如何進行
+
+更完整：
+
+8004 → Identity + Trust
+
+8183 → Commerce + Settlement
+
+兩者形成：
+
+Agent Economy Stack
+
+**3\. 更大的 Agent Stack**
+
+目前 Agent Economy 正在形成一個完整協議層：
+
+A2A / MCP
+
+↓
+
+ERC-8004
+
+↓
+
+ERC-8183
+
+↓
+
+x402 Payments
+
+↓
+
+Stablecoins / USDC
+
+**各層含義**
+
+| Layer | 功能 |
+| A2A / MCP | Agent communication |
+| ERC-8004 | Identity + Reputation |
+| ERC-8183 | Job lifecycle |
+| x402 | HTTP payment layer |
+| USDC | Settlement |
+
+**4\. Builder 應該如何切入？**
+
+這是最重要部分。
+
+**Path 1 — Agent Identity Builder**
+
+適合：
+
+-   Web3 Designer
+    
+-   Frontend
+    
+-   Social Product Builder
+    
+
+你可以做：
+
+**① Agent Profile UI**
+
+類似：
+
+LinkedIn for AI Agents
+
+功能：
+
+-   Agent 卡片
+    
+-   Reputation dashboard
+    
+-   Verification badge
+    
+-   Skill graph
+    
+
+技術：
+
+Next.js
+
+wagmi
+
+viem
+
+Base / Ethereum
+
+**② Agent Reputation Explorer**
+
+類似：
+
+Etherscan + GitHub profile
+
+可視化：
+
+-   Job history
+    
+-   Completion rate
+    
+-   Validator score
+    
+-   Stake level
+    
+
+**③ Agent Discovery Marketplace**
+
+像：
+
+Upwork for Agents
+
+但：
+
+Fully Onchain
+
+**Path 2 — ERC-8183 Commerce Builder**
+
+這條是目前最有機會的。
+
+你可以做：
+
+**① AI Agent Freelance Market**
+
+例如：
+
+Design Agent
+
+Coding Agent
+
+Research Agent
+
+使用 ERC-8183：
+
+createJob()
+
+fund()
+
+submit()
+
+complete()
+
+**② Autonomous Workflow System**
+
+例如：
+
+Agent A → Research
+
+Agent B → Design
+
+Agent C → Post to Social
+
+全部：
+
+Autonomous settlement
+
+**③ AI Service Protocol**
+
+例如：
+
+Prompt marketplace
+
+AI automation
+
+Content generation
+
+每個服務：
+
+ERC-8183 Job
+
+**5\. Builder 最應該學的技術**
+
+**Core Stack**
+
+Solidity
+
+ERC Standards
+
+EVM
+
+**Frontend**
+
+Next.js
+
+TypeScript
+
+Tailwind
+
+wagmi
+
+viem
+
+**AI Layer**
+
+LangChain
+
+CrewAI
+
+AutoGen
+
+OpenAI API
+
+Claude API
+
+**Agent Framework**
+
+目前最值得看：
+
+| Framework | 原因 |
+| CrewAI | 多 Agent workflow |
+| AutoGen | Agent collaboration |
+| ElizaOS | Web3 AI Agent |
+| Virtuals | Agent token ecosystem |
+
+**6\. 現在真正的機會在哪？**
+
+目前真正缺的不是：
+
+底層協議
+
+而是：
+
+Agent UX
+
+**最大機會：**
+
+**① Agent Interface**
+
+現在 Agent UX 很爛。
+
+誰能做：
+
+Notion 級 Agent UI
+
+誰就有機會。
+
+**② Reputation Visualization**
+
+Agent economy 最核心：
+
+Trust
+
+而 Trust 必須被：
+
+可視化
+
+**③ Agent Commerce UX**
+
+現在大多數：
+
+只有 contract
+
+沒有：
+
+Product experience
+
+**7\. Web3 Designer 最適合切入點**
+
+你目前做視覺 / UI：
+
+非常適合切：
+
+Agent Economy Design Layer
+
+尤其：
+
+-   Reputation UI
+    
+-   Agent Dashboard
+    
+-   Agent Marketplace
+    
+-   Job Flow UX
+    
+-   Agent Identity System
+    
+
+這些現在幾乎沒人做好。
+
+**8\. 推薦 Builder Roadmap**
+
+**Phase 1 — 理解協議**
+
+先讀：
+
+-   ERC-8004
+    
+-   ERC-8183
+    
+-   A2A
+    
+-   MCP
+    
+
+**Phase 2 — 做 UI Clone**
+
+建議做：
+
+**① Agent Profile**
+
+Twitter + LinkedIn + ENS
+
+**② Job Dashboard**
+
+Upwork for AI Agents
+
+**③ Reputation Explorer**
+
+Etherscan for Agents
+
+**Phase 3 — 接智能合約**
+
+學：
+
+viem
+
+wagmi
+
+ethers
+
+**Phase 4 — 加入 AI Workflow**
+
+接：
+
+CrewAI
+
+AutoGen
+
+LangChain
+
+**9\. 最值得關注的生態**
+
+**值得追：**
+
+-   Virtuals Protocol
+    
+-   Ethereum Foundation
+    
+-   Arc
+    
+-   Coinbase
+    
+-   Cloudflare
+    
+
+**10\. 一句話理解整個方向**
+
+ERC-8004 解決：
+
+“這個 Agent 是誰？”
+
+ERC-8183 解決：
+
+“這個 Agent 如何工作與收款？”
+
+而未來真正的戰場：
+
+是 Agent UX。
+
+**11\. 建議你立即開始做的作品集**
+
+如果你想進 Web3 / Agent Economy：
+
+最推薦做：
+
+**Portfolio Project**
+
+**「Onchain Agent Marketplace」**
+
+包含：
+
+-   Agent profile
+    
+-   Reputation system
+    
+-   Job flow
+    
+-   Escrow status
+    
+-   Validator system
+    
+-   Payment settlement
+    
+-   AI workflow visualization
+    
+
+這會非常有未來感。
+
+**延伸閱讀**
+
+-   [ERC-8004 Official Site](https://8004.org/?utm_source=chatgpt.com)
+    
+-   [Arc Agentic Economy Docs](https://docs.arc.io/build/agentic-economy?utm_source=chatgpt.com)
+    
+-   [ERC-8183 Job Tutorial](https://docs.arc.network/arc/tutorials/create-your-first-erc-8183-job?utm_source=chatgpt.com)
+    
+-   [ACP / ERC-8183 Hook Implementation](https://www.ufxproject.com/acp?utm_source=chatgpt.com)
+    
+
+**Sources**
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 \- **一、AI入门与课程介绍**
 
 \- 课程目的：科普AI名词，帮助小白理解AI技术
@@ -127,6 +617,7 @@ API密钥应用与AI在量化交易中的角色讨论
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 ### Web3 核心要点笔记
 
 **1\. 核心演变：从“平台拥有”到“用户拥有”**
@@ -161,6 +652,7 @@ API密钥应用与AI在量化交易中的角色讨论
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 在AI时代，开发者需掌握的基础知识和架构能力尤为重要，即使借助AI，评估方案合理性及代码质量仍是开发者职责。以构建支付系统为例，AI参与设计、评估与代码验收，虽能提升效率与质量，最终决策需由人类把控。讨论了Web 3与Web 2的关系，强调两者非完全分离，许多Web 3项目融合了Web 2技术。安全设计与持续审计对所有项目至关重要，钱包技术分类与私钥管理被重点提及，确保交易安全。强调AI虽可放大开发者能力，最终设计与决策应由人类掌控，凸显AI在协作中的辅助角色及基础能力的重要性。
@@ -244,6 +736,7 @@ API密钥应用与AI在量化交易中的角色讨论
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
