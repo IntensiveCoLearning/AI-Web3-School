@@ -458,7 +458,7 @@ more information
 | [f234f234](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/f234f234.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [buroanusn](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/buroanusn.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | |
 | [Zyuhui008](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Zyuhui008.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | |
-| [RicardoXu2](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/RicardoXu2.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | |
+| [RicardoXu2](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/RicardoXu2.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | |
 | [jishukuangzi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jishukuangzi.md) | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | |
 | [goku9906](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/goku9906.md) | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | |
 | [Lililiu-6](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Lililiu-6.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1210,7 +1210,7 @@ more information
 | [zhangbobo123](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zhangbobo123.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | |
 | [FuShengV5](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/FuShengV5.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | |
 | [CharlieChan-hi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CharlieChan-hi.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | | |
+| [lei612](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lei612.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | |
 | [lusora-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lusora-ai.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [10yu7ian](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/10yu7ian.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | |
 | [888myqueen888-maker](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/888myqueen888-maker.md) | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | |
@@ -1233,6 +1233,7 @@ more information
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
