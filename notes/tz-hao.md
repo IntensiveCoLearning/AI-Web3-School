@@ -15,8 +15,14 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+今天学习了一下web3xai有一些大概的总结：从 Agent Workflow 的 human-in-the-loop，到 Escrow 的多签仲裁，到 Sovereignty 的一键 kill switch，到 Governance AI 的「AI 不替你做投票建议」——**自动化程度越高，撤回机制必须越强**。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 上午听了一下直播，感觉还是有点蒙  
   
 **学习了Machine Payment（机器支付）**  
@@ -38,6 +44,7 @@ timezone: UTC+8
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 **1\. Web3 Tool Use（学完）**  
 \- 工具分层：只读（RPC/Contract Read）↔️ 写交易（Contract Write/Wallet）必须硬分离  
 \- 写交易前 7 步检查链：chain id → 合约地址 → ABI → value → gas → simulation → policy+确认  
@@ -53,6 +60,7 @@ timezone: UTC+8
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 核心收获：  
 1\. Web3 工具必须**读写分离**——读链和写链是不同工具、不同权限，不能混在一个"万能 RPC"里  
 2\. 写交易前需要完整的 7 步检查链：chain id → 合约 → ABI → value → gas → simulation → policy  
@@ -65,6 +73,7 @@ timezone: UTC+8
 
 
 
+
 今天听了一下web3的课，这些概念都懂算是巩固一下基础了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -74,11 +83,13 @@ timezone: UTC+8
 
 
 
+
 今天终于把hermes弄好，也学习了一些ai的知识
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
