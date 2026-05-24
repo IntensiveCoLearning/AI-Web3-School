@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+今天主要学习和了解web3的相关文档和知识。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 今日学习总结：  
   
 今天参加了两场活动：  
@@ -60,6 +66,7 @@ AI x Web3 School
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 今天完成了两部分学习：  
   
 一、AI 基础概念深化  
@@ -99,6 +106,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 # 2026-05-21 每日学习笔记
@@ -162,6 +170,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -268,6 +277,7 @@ AI x Web3 School
 
 
 
+
 今日学习总结：  
 今天系统阅读了 AI 基础文档，对已有知识进行了梳理和补充：  
 已熟悉的概念（复习巩固）：
@@ -294,6 +304,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
