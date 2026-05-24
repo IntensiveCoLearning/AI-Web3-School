@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+-   RPC Tool 用来读取链状态、查询区块、估算 gas、获取日志或广播交易。
+    
+-   Contract Read 是调用合约 view / pure 函数，不改变链上状态。
+    
+-   Wallet Tool 负责连接账户、请求签名、生成交易、管理授权和返回用户确认结果。
+    
+-   DeFi Tool 把 swap、借贷、授权、仓位查询、清算风险等能力封装给 Agent。
+    
+-   Tool Log 是 Agent 行为可审计的基础。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 -   **私钥是控制权**：丢失私钥通常意味着失去控制权，泄漏私钥意味着别人获得控制权。
     
 -   **签名是授权证据**：签名内容必须能被人读懂，不能只展示一串难懂数据。
@@ -33,6 +47,7 @@ AI x Web3 School
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 -   参加co-learning √
     
 -   参加课程 √
@@ -47,6 +62,7 @@ Signature：对某段具体消息或交易内容的授权证明
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 -   参加当天课程培训 √
@@ -68,6 +84,7 @@ instruction 是给模型的任务规则
 
 
 
+
 -   参加实时课程 √
     
 -   参加co-learning √
@@ -82,6 +99,7 @@ instruction 是给模型的任务规则
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -102,6 +120,7 @@ instruction 是给模型的任务规则
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
