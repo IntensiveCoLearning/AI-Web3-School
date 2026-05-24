@@ -15,8 +15,30 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+Memory
+
+memory 是跨请求保留的消息，比如用户偏好，历史任务等，是Agent 在多次交互中持久化存储的信息，可以跨对话保留，不受context window限制，可以无限大，但需要检索机制将其转化为 context，类似档案库
+
+memory 的风险是可能会放松高风险行为的确认
+
+Context
+
+context 是单次交互中，直接给LLM的所有信息，包括用户提示词、系统提示词、工具输出，以及一部分Memory中的相关信息，类似当前的工作台面
+
+Knowledge Base
+
+s是系统可以检索的外部知识库，比如文档、论坛讨论、FAQ，适合解决模型知识过期的问题。是需要维护的，像一个专业化、结构化的外部记忆。Memory记录关于这用户/对话的事情、Knowledge base 记录关于这个世界/领域的客观事实。就像图书馆，存储公共知识。  
+  
+RAG 检索增强生成
+
+RAG 的作用是：当用户提出问题时，系统先从知识库里找相关材料，再让模型基于这些材料回答。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 Token:
 
 Token 是模型处理文本的基本单位，和英文单词、汉字、符号没有直接关系，是 tokenizer 切分后的片段,OpenAI
@@ -53,6 +75,7 @@ prompt injection
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/wodeche/images/2026-05-21-1779376991528-image.png)
 
 成功配置好Hermes 学习小助手
@@ -60,6 +83,7 @@ prompt injection
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 观看了今日 Bruce 分享的 Web3 运行原理留下如下思考题
@@ -101,6 +125,7 @@ prompt injection
 
 
 
+
 今天参加了 Draken老师的分享，成功安装好了hermas agent，正式开启了 AI 之旅
 
 ![ScreenShot_2026-05-19_222001_156.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/wodeche/images/2026-05-19-1779200411348-ScreenShot_2026-05-19_222001_156.png)
@@ -108,6 +133,7 @@ prompt injection
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
