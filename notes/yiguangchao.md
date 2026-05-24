@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+1.  Week 1 全周复盘
+    
+2.  有明确项目目标后，再去学习 AI、区块链、智能合约、钱包交互、链上数据解析等知识，效率会更高，也更容易形成可展示的作品。后续参加黑客松或进行 AI + Web3 项目开发时，也可以围绕这些方向展开。
+    
+3.  总体来看，AI + Web3 仍处于发展阶段，很多产品体验还不够成熟，但方向具有较大潜力。未来如果能够将 AI Agent、钱包操作、链上安全分析和去中心化激励机制结合起来，可能会出现更具实用价值的新型应用。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 会看了5.20号 AI x Web3 School - Web3 的运行原理
 
 完成了三个任务
@@ -24,6 +34,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 今天主要完成了 AI 基础、Context Engineering、RAG、Agent 与 Agent Wallet 相关内容的学习。上午重点学习了 Embedding、Transformer、Attention、Context Window 与 Context Engineering 的区别，进一步理解了模型如何将文本转化为向量，并通过上下文管理提升回答质量。RAG 部分重点梳理了文档切分、metadata、section\_path、向量检索和 Top-K 召回等流程，认识到检索增强不是简单塞资料，而是要通过结构化信息让模型拿到更准确、可信的内容。
 
@@ -36,6 +47,7 @@ Agent 部分学习了 Plan、Reflection、Multi-Agent 等架构，也了解了 L
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 \## 一、普通人其实并不在意 Web3、隐私、去中心化
@@ -290,11 +302,13 @@ AI 自动完成。
 
 
 
+
 AI agent 入门
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
