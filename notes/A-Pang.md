@@ -15,8 +15,30 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+整理evm处理dapp调用
+
+-   EVM 通过交易 data 字段的前 4 字节（函数选择器）识别要调用的方法
+    
+-   函数选择器 = keccak256(函数签名) 的前 4 个字节
+    
+-   ABI 是合约的“接口说明书”，描述函数、参数类型、返回值、stateMutability
+    
+-   ABI 以 JSON 格式存在，部署合约时会生成 ABI 文件
+    
+-   前端调用合约必须依赖 ABI（ethers.js / wagmi / web3.js 都基于 ABI 工作）
+    
+-   stateMutability 决定了交易是否需要 gas、是否能发 ETH
+    
+-   常见 ABI 类型：function、event、error 
+    
+-   ERC20、ERC721 的标准方法都是通过 ABI 定义并暴露的
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 erc721代币详解：  
 [https://x.com/Pang26989586/status/2057820218366533700?s=20](https://x.com/Pang26989586/status/2057820218366533700?s=20)
 <!-- DAILY_CHECKIN_2026-05-22_END -->
@@ -24,12 +46,14 @@ erc721代币详解：
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 发布erc20代币相关：approve race condition 授权竞态攻击 讲解  
 [https://x.com/pang26989586/status/2057470923213873255?s=46](https://x.com/pang26989586/status/2057470923213873255?s=46)
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 1、学些erc20代币合约细节  
@@ -82,6 +106,7 @@ event Transfer(address indexed from, address indexed to, uint256 value); event A
 
 
 
+
 1、hermes对接wx bot ，试用wechat 聊天  
 2、完成web3相关知识学习，整理内容并发布推特帖子  
 [https://x.com/Pang26989586/status/2056659742425288980?s=20](https://x.com/Pang26989586/status/2056659742425288980?s=20)  
@@ -90,6 +115,7 @@ event Transfer(address indexed from, address indexed to, uint256 value); event A
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
