@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+[https://github.com/Eeeeye/ai-web3-school-cohort-0/tree/master/experiments/tx-lifecycle](https://github.com/Eeeeye/ai-web3-school-cohort-0/tree/master/experiments/tx-lifecycle)
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 # AI 基础 — Handbook 速通笔记
 
 > 来源：[https://aiweb3.school/zh/handbook/](https://aiweb3.school/zh/handbook/) · 共 11 节，按推荐阅读顺序排列
@@ -276,6 +282,7 @@ LLM (能力底座)
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 +## Today's Focus
 
 +
@@ -383,6 +390,7 @@ LLM (能力底座)
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 # Web3 运行原理
 
 > Bruce 老师主讲 · 底层架构与机制拆解
@@ -484,6 +492,7 @@ LLM (能力底座)
 
 
 
+
 # AI Agent 核心概念
 
 ## 1\. AI Agent 的核心运作机制
@@ -540,11 +549,13 @@ LLM (能力底座)
 
 
 
+
 因系统原因，补交打卡笔记内容，此条内容为系统自动触发。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
