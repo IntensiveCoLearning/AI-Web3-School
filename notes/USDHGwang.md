@@ -15,8 +15,161 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+```
+# Vault for Agents, Not Self-Review — 一個 PKM Reframe 紀錄
+```
+
+`## TL;DR`
+
+`主流 PKM (Personal Knowledge Management) 工具如 Obsidian、Notion 預設「人會回頭讀筆記」。`
+
+`但對 forward research 型工作者（Agent / Web3 等快迭代領域），這個假設失效。`
+
+`我的 vault 用了一段時間後意識到：**我幾乎不回頭讀，卻仍在維護**——直到 reframe 為「**vault 是給 Agent 讀的，不是給自己 review 的**」，整個設計重心才對位。`
+
+`本文記下 reframe 後幾個 design choices。`
+
+`---`
+
+`## 問題：主流 PKM 對快迭代領域工作者失效`
+
+`主流框架共通假設：`
+
+`- 寫筆記 → 未來會 review → 知識複利`
+
+`對應實踐：每日筆記、週 review、Zettelkasten 鏈接網。`
+
+`但快迭代領域的真實工作 pattern：`
+
+`- forward research 為主、不回頭`
+
+`- 領域知識本身快速 outdated`
+
+`- context switching 頻繁、舊脈絡常被覆蓋`
+
+`- 「累積感」≠ 實際使用`
+
+`這時你會發現：花時間 maintain vault，但 ROI 模糊。`
+
+`## Reframe：Knowledge vs Memory`
+
+`兩種容易混淆但本質不同：`
+
+`| | 知識 | 記憶 |`
+
+`|---|---|---|`
+
+`| 用途 | 累積、未來查、擴充 | Agent 啟動 brief、行為規則 |`
+
+`| 讀者 | Agent + 偶爾自己 | Agent |`
+
+`| 變動頻率 | 慢、累積 | 幾乎不變 |`
+
+`| 位置 | Vault | Agent 私有區 |`
+
+`→ Vault 放知識，Agent 私有區放記憶。混了 vault 會被 agent 雜訊污染。`
+
+`## Design: Vault as Agent-Readable Filesystem`
+
+`採用 LYT (Linking Your Thinking) 的 Maps of Content 概念，調整成 agent-readable：`
+
+`**讀取路徑**：`
+
+Top MOC (current state)  
+└→ Project MOC (per main line)  
+└→ Atomic concept notes  
+└→ Source / Raw
+
+```
+Agent 進 vault 從 top MOC 開始，**不全 grep**。比 pure Zettelkasten「hop card to card」效率高一個量級。
+```
+
+`**三軸正交**（混淆是設計常見錯誤）：`
+
+`- 邏輯層級 (reading-oriented)`
+
+`- 物理結構 (writing-oriented)`
+
+`- 生命週期 status (state-oriented)`
+
+`一個檔同時被三軸定位。`
+
+`## Design: Lifecycle Closure`
+
+`Long-running work 有自然轉換（完成 / 取消 / 被吸收 / 暫停 / 載體變換）。`
+
+`**問題**：轉換不被顯式記下 → agent 帶過時世界觀回答 → bias 累積。`
+
+`驗證 case：某個 project 被 absorbed 進另一個但沒收官紀錄 → 之後 agent 仍當獨立 project 處理。`
+
+`**Rule**：agent 偵測到下列訊號之一，主動 ask 收官狀態：`
+
+`1. 同領域但架構不同的新東西出現`
+
+`2. 長時間沒提某 work line`
+
+`3. Deadline 過了 user 沒主動 mention 結果`
+
+`4. User 自己宣告 pivot`
+
+`這跟「寫入篩子（X 在 3 個月後還 true 嗎？）」是鏡像——**filter 守入口、closure 守出口，一起跑才完整**。`
+
+`## 方法論: Pre-mortem 取代 Defer`
+
+`對「目前看不到痛點的 feature」標準做法是 defer until pain。但這意味著被失敗 surprise。`
+
+`替代：**Pre-mortem** — 列失敗模式、設計訊號 detector、定升級 trigger。`
+
+`差別：`
+
+`- Defer = passive，等訊號`
+
+`- Pre-mortem = **active 設計 detector**`
+
+`兩者都不立即動，但 pre-mortem 不會被 surprise。`
+
+`## 開放問題（沒解的，希望聽 cohort 意見）`
+
+`1. **Multi-agent memory federation**：兩個 agent 各自私有 memory + 共享 markdown filesystem，協議怎麼設計？Cross-Pointer Pattern (各自 MEMORY.md 互指對方位置) 是候選但未實作`
+
+`2. **MOC 維護成本 vs ROI**：MOC 要定期更新才不 stale，但這需要紀律。多久 review 一次？`
+
+`3. **Vault → Agent 讀取的 mid-session trigger**：啟動讀 OK，工作中何時主動翻？`
+
+`## Takeaway`
+
+`如果你在 Agent / Web3 領域常 context switching、不常回顧筆記、感覺 vault 沒派上用場——**可能不是你的問題，是框架不對位**。`
+
+`考慮 reframe：**vault 不是給未來自己 review 的，是給未來的 agent 讀的**。`
+
+`設計重心會變：`
+
+`- 從「我會不會回頭看」→「agent 會不會找到」`
+
+`- 從「美觀 review」→「machine-parseable」`
+
+`- 從「Daily Notes」→「MOC navigation」`
+
+`- 從「Defer pain」→「Pre-mortem signals」`
+
+`不一定適用所有人，但**對 forward research 型工作者可能比 second brain 更務實**。`
+
+`## 限制聲明`
+
+`- 本文紀錄個人一次 design session 的結論，未長期驗證`
+
+`- 「Agent 讀 vault」實踐效果取決於 vault 持續累積（input quality > system design）`
+
+`- Multi-agent / Hermes 整合具體機制是 anchor，未實作`
+
+`- 多數 rule 仰賴 agent 紀律執行，非 enforced`
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 # 跟 Claude 深挖 Agent 記憶架構
 
 ## **起點：一個看起來很無聊的問題**
@@ -251,6 +404,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 今天做了什麼：
 
 1\. Learning Agent 初始化
@@ -297,6 +451,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 
 
 
+
 今天做了什麼
 
 發布 obsidian-knowledge-vault
@@ -316,6 +471,7 @@ repo 7 個 commit，今天從空目錄推到完整 README + prompt + annotated o
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -393,6 +549,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 
 
+
 今天的主題是 Hermes Agent 安裝。
 
 因為看到直播裡很多夥伴卡在環境設定，就順手做了一份 Windows WSL2 + macOS 的完整安裝教程，在課程進行中同步解答問題。
@@ -413,6 +570,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
