@@ -15,8 +15,75 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+```
+# Day 7 打卡草稿
+
+**日期**: 2026-05-24
+
+---
+
+## 今日学习内容
+
+### Agent 实践：DAO 提案研究 Agent
+
+设计了一个只读版 DAO 提案研究 Agent：
+- 5 个只读工具（读提案、搜讨论、提取论点、检测风险、检查完整性）
+- 用 Tool Use 6 问定义每个工具的输入/权限/副作用/重试策略
+- 外置 State 记录 10 个字段，失败后可恢复
+- 停止条件覆盖：提案不存在、讨论缺失、高危风险、信息不足、用户拒绝
+- 输出结构化 JSON：来源 + 正反理由 + 证据强度 + 不确定性 + 风险 + 检查清单
+- 权限升级版：用户授权 → simulation → 二次确认 → 生成交易草稿
+
+### Frameworks 实践：Raw API vs DSPy 对比
+
+同一「文档问答 + 工具调用」任务，两种方式实现并四维对比：
+- Raw API 胜在"易读"和"易定位错误"
+- DSPy 框架胜在"易加工具"和"易写回归测试"
+- 框架的核心收益是测试纪律——自动跑了边界测试（提案 #999）
+- 框架的代价是依赖膨胀（DSPy→LiteLLM→botocore）
+
+另学到了 DSPy 的基本模式：Signature → Module → test_cases
+
+---
+
+## 今日产出
+
+| 文件 | 说明 |
+|------|------|
+| `experiments/week1-agent-dao-research.md` | Agent 实践规格 |
+| `experiments/week1-frameworks-compare.md` | Frameworks 对比报告 |
+| `experiments/week1-frameworks/raw_api.py` | Raw API 版本 |
+| `experiments/week1-frameworks/framework.py` | DSPy 版本 |
+| `logs/day7-agent-frameworks-qa.md` | 学习日志 |
+| `prompts/day7-agent-frameworks-prompts.md` | Prompt 记录 |
+
+---
+
+## 进度
+
+| 篇目 | 实践 |
+|------|:--:|
+| ① LLM | ✅ |
+| ② Prompt | ✅ |
+| ③ Context | ✅ |
+| ④ RAG | ✅ |
+| ⑤ Agent | ✅ |
+| ⑥ Frameworks | ✅ |
+| ⑦~⑪ | ⬜ |
+
+Week 1 实践：**6/11 完成**
+
+---
+
+*AI x Web3 School Day 7 课程完成 — 由 Hermes AI（模型：deepseek-v4-pro）在 2026-05-24 生成*
+```
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 \# Daily Note: 2026-05-23
 
 \## 📋 今日计划
@@ -121,6 +188,7 @@ _AI x Web3 School Day 6 课程完成 — 由 Hermes AI（模型：deepseek-v4-pr
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 \# Daily Note: 2026-05-22
 
 \## 📋 今日计划
@@ -214,6 +282,7 @@ _AI x Web3 School Day 5 课程完成 — 由 Hermes AI（模型：deepseek-v4-pr
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 \# Day 4: rag + agent + frameworks + vibe-coding + mcp — AI 基础学习笔记
@@ -3569,6 +3638,7 @@ _AI x Web3 School Day 4 课程完成 — 由 Hermes AI（模型：deepseek-v4-pr
 
 
 
+
 📝 今日学习笔记预览 (Day 3)
 
 \# Day 3 学习笔记：Prompt Engineering & Context Engineering
@@ -3726,6 +3796,7 @@ _学习笔记结束_
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -4116,6 +4187,7 @@ NaN.  ✅ 校验靠 Schema（JSON Schema、Pydantic 等）
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
