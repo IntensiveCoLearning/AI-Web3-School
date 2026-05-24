@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+打卡
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 打卡
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 今天的学习帮我把以前觉得高深莫测的“链上操作”彻底串联起来了！钱包就是我在 Web3 世界的数字身份，里面的账户管理着我的资产，而绝对不能公开、打死也不能发给别人的私钥和助记词，就是保护这一切的唯一最高密码。当我要在链上发起一次交易，或者去触发一个智能合约（也就是写在区块链上自动运行的代码）时，我必须用钱包进行签名来授权，并且支付一笔叫做 Gas 的网络矿工费。我在测试网这个里用领来的测试币进行模拟操作，而且每做完一步，我都会去区块浏览器上查验这笔交易的“电子小票”，亲眼看着它成功打包上链。
@@ -38,6 +46,7 @@ AI x Web3 School
 
 
 
+
 从0-1部署Hermes+接上telegram
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/iluvjaecott/images/2026-05-19-1779204043858-image.png)
@@ -45,6 +54,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
