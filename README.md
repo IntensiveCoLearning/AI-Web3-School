@@ -812,7 +812,7 @@ more information
 | [zmjjjjj](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zmjjjjj.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [clarisseyong77-glitch](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/clarisseyong77-glitch.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [XuetaoZhang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/XuetaoZhang.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | |
-| [Amber-DD](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Amber-DD.md) | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | |
+| [Amber-DD](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Amber-DD.md) | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | | |
 | [qiwihui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/qiwihui.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [3241557202-sys](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/3241557202-sys.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Manuel-dev01](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Manuel-dev01.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | | |
@@ -1233,6 +1233,7 @@ more information
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
