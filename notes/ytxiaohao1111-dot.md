@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+![30.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/ytxiaohao1111-dot/images/2026-05-24-1779638044192-30.png)
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 回顾
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 私钥即主权 → 签名即授权 → 交易即指令 → 区块即账本 → 共识即规则。核心“资产不在钱包里”，钱包只保管私钥和构造签名，余额、NFT、合约状态全在链上账本。这意味着用户真正拥有的不是资产本身，而是“能移动账本上某条记录的私钥”。传统应用里拥有数据，Web3 里只拥有一把钥匙，数据在公开账本上谁都能看，但只有能改属于自己的那部分。
 
@@ -44,6 +51,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 AI Agent 的本质进化与核心机制
 
 AI 从“告诉我怎么做”（问答交互）向“直接帮我做”（任务执行）。AI Agent 的核心运行机制包含四个闭环步骤：理解目标、调用工具（终端命令、文件读写等）、观察结果、出错时自动修正。区别于聊天型 AI（ChatGPT、DeepSeek）和编辑器 AI 助手（Cursor、Copilot），终端型 Agent（如 Claude Code、Codex、Hermes）能够直接进入项目目录，读取修改代码、运行测试、修复 Bug，扮演“住在命令行里的自动化工程师”角色。
@@ -55,6 +63,7 @@ Hermes 属于通用 Agent 系统，被定位为“AI 的基础基建”，而非
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
