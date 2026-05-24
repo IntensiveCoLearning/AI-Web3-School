@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+Week2Day1
+
+1.先提交了已完成的内容。
+
+2.用自己的话复述了一些 AI 概念的卡片，然后查缺补漏了。
+
+计划：按照最小实现做实验，完成这些概念的深入理解，可以学慢一点。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 Week3Day1
 
 今天学习状态很差，感觉学不进去，先找点感觉吧。
@@ -28,6 +40,7 @@ Week3Day1
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 Week1Day6
 
 请假休息一天，漂了个头发
@@ -35,6 +48,7 @@ Week1Day6
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -49,6 +63,7 @@ Week1Day5
 
 
 
+
 Week1Day4
 
 一会开直播开始学，dbq AI X Web3 School
@@ -56,6 +71,7 @@ Week1Day4
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -74,6 +90,7 @@ Week1Day3
 
 
 
+
 Week1 Day2
 
 今天去毕业答辩了，顺利通过捏
@@ -81,6 +98,7 @@ Week1 Day2
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
