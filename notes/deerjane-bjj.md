@@ -21,13 +21,18 @@ AI x Web3 School
 
 这个任务比想象中有挑战。最开始他给我的版本是用户需要自己输入包括以下内容：交易目标地址、函数名、参数、资产变化、simulation 结果、用户原始意图的Json，增加了用户使用的难度（包括我）。于是我调整了一下，看看能不能输入自然语言。结果demo读不懂自然语言，Chatgpt告诉我需要另外做一个prompt去让模型抽取信息转化成json后，再把这段json发给风险分析的prompt。我觉得这个练习的目的是为了了解Prompt的明确输入边界，这么做可能令焦点模糊，于是我改用一个固定模版，使用者只需要跟着格式更改内容就可以。相对最开始的版本，使用的难度减少了。
 
-练习提供的三个cases中，第一个（普通转账）和最后一个（目标地址与用户意图不符）很容易就让demo输出我预期的结果（risk=high），唯有第二个case（无限授权），demo出现了问题：他监测这个case为普通转账，risk=medium。和我预期的结果不一样。我咨询了Chatgpt的意见，**_原因是我在代码层的规则定得太弱，也对函数（Function）的本质区别不清晰_**，例如加上函数语义规则。所以**_“Demo现在只看到了“没有直接资产转出”，判成 medium；但对_** `approve + unlimited` **_这种权限变化没有足够高的优先级。”_** 然后他建议我加上新的规定 - **_“把 approve + unlimited 设成硬规则，并让它优先于“没有直接资产转出”。_** 在我更新这些规矩之后，就成为现在的version。这三个cases都可以输出我预期的结果。
+练习提供的三个cases中，第一个（普通转账）和最后一个（目标地址与用户意图不符）很容易就让demo输出我预期的结果（risk=high），唯有第二个case（无限授权），demo出现了问题：他监测这个case为普通转账，risk=medium。和我预期的结果不一样。我咨询了Chatgpt的意见，**_原因是我在代码层的规则定得太弱，也对函数（Function）的本质区别不清晰_**，例如加上函数语义规则。所以\*\*_“Demo现在只看到了“没有直接资产转出”，判成 medium；但对_\*\* `approve + unlimited` **_这种权限变化没有足够高的优先级。”_** 然后他建议我加上新的规定 - **_“把 approve + unlimited 设成硬规则，并让它优先于“没有直接资产转出”。_** 在我更新这些规矩之后，就成为现在的version。这三个cases都可以输出我预期的结果。
 
-最后
+更新：我发现model 纵使有missing data，也无办法判断risk> low，于是我增加了一个规则：如果miss任何一项条件，都会显示risk= medium，但条件仍然低于approve+unlimited。现在以下是Chatgpt帮我整理后的规则（可以用作参考）：
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/deerjane-bjj/images/2026-05-24-1779628772789-image.png)
+
+最后我认为这个练习令我意识到现实情况一定有更多不同，形形色色的cases，在推出真实的模型给大众，必须要做足够的测试去囊括所有可能的情况。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 今日主要是補听了之前的分享，包括Web3 的运行原理和Web3下乡计划。前者的分享者Bruce 老师在结束分享时提供了几个问题（附截图），值得好好思考一下，因为我也很认同老师所说的Web3 并不是只有技术本身，还是由密码学、经济学和社会学三种学科交集的中心。我的专业是社会学，难怪会被Web3这个大概念吸引。但他蕴含的底层逻辑和核心思想还是需要深刻的思考和认识。除此之外，老师也简介了Web3的一些基本概念和运行，这部分也加深我的认识，特别是节点等。不过因为我也使用过Web3产品（例如钱包、defi、domain等等），所以有一定的理解。
 
@@ -43,6 +48,7 @@ AI x Web3 School
 
 
 
+
 今天去了例會，裡面的小夥伴都很厲害！！特別是Luvia，她只有大一而已，真的後生可畏！！我也要好好加油！！另外一樣有趣的事情，就是大家都有不同程度的焦慮，果然焦慮都是亞洲人的標配啊。。。
 
 今天沒有真實使用到Hermes Agent，這個要留到明天才可以用了。今天就只看了handbook的內容，重點還是focus在AI方面。可能我也了解一下Obsidian怎麼用去打造屬於我的知識庫吧！
@@ -52,6 +58,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -84,6 +91,7 @@ AI x Web3 School
 
 
 
+
 今日目標是要做3樣東西：
 
 1）根據ChatGPT提供的Study Plan，在Github建立Repo，並將Day1、2的筆記錄入。  
@@ -103,6 +111,7 @@ AI x Web3 School
 
 
 
+
 Day2
 
 My note is saved in Google docs: [https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX\_dfMbQRMUDxJcWA0k/edit?usp=sharing](https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX_dfMbQRMUDxJcWA0k/edit?usp=sharing)
@@ -112,6 +121,7 @@ Basically I just read the handbook and clarify the ideas of different AI concept
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
