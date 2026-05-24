@@ -15,8 +15,24 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+```
+确认学习画像：AI 熟悉 / Web3 基础 / 学生 / 晚上 1-2h
+Phase 0 进度推进到 50%（3/6 任务完成）
+TASK-001 PoW 提交测试完成（concept-explorer 实验，9 个 AI/Web3 概念交互卡片）
+TASK-002 Agent 配置与运行记录（选 Agent + 学习任务 + 关键 Prompt + 成功输出 + 人工复核）
+绘制最小 AI × Web3 工作流图，理解 AI 系统与链上操作的边界
+流程：意图解析 → 代码生成 → 安全分析 → 人工复核 → 钱包签名 → 链上执行 → 结果验证
+核心原则：AI 是顾问不是代理人，私钥和签名永远属于人类
+识别 6 类风险（AI 幻觉、提示注入、Gas 陷阱、私钥泄露、链上不可逆、RPC 篡改）及缓解策略
+https://github.com/10yu7ian/ai-web3-school-cohort-0/blob/main/tasks/TASK-002-agent-config-record.md
+```
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 今天做了几个任务，顺便把之前卡住的 Hermes Agent 也配置好了。
 
 1.  **整理 AI 基础概念卡片**  
@@ -37,6 +53,7 @@ timezone: UTC+8
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 今天用cursor辅助装了wsl和ubuntu，电脑小白装了两天才装起
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/10yu7ian/images/2026-05-22-1779464043928-image.png)
@@ -44,6 +61,7 @@ timezone: UTC+8
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 今天参加的是「AI 下乡计划」线上活动，主题是 AI 在 Web3 的应用。整场听下来最核心的一个观点我理解是：**AI + Web3 的重点不是“发一个 AI 项目”，而是当 AI Agent 从回答问题走向执行任务时，Web3 可以为它提供身份、支付、结算、审计和风控这套经济基础设施。**
@@ -70,6 +88,7 @@ timezone: UTC+8
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -163,11 +182,13 @@ timezone: UTC+8
 
 
 
+
 今天的目标是配置 Hermes。看文档发现这个工具在 Windows 下支持不太成熟，推荐用 Linux 环境，所以需要先装 WSL 和 Ubuntu。我先把 WSL 装好了，Ubuntu 还没装完，还卡在下载中。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
