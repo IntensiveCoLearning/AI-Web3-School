@@ -29,6 +29,7 @@ AI x Web3 School
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 \- 智能合约要升级可以通过 Proxy 合约的形式
 
 \- [ethernode.org](http://ethernode.org) 可以看到运行不同实现的共识层和协议层客户端
@@ -40,6 +41,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 \- web2 still counts in web3 technology.
@@ -54,11 +56,13 @@ AI x Web3 School
 
 
 
+
 因系统原因，补交打卡笔记内容，此条内容为系统自动触发。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
