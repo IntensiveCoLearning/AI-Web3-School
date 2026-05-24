@@ -116,7 +116,7 @@ openai_api_key = os.getenv("OPENAI_API_KEY")
 
 ![image.png](attachment:ae4c7d1b-ddad-4c9d-9d2a-0273a01a12f6:image.png)
 
-**原生支持多轮对话**。通过消息列表维护上下文（例如： **\[SystemMessage, HumanMessage, AIMessage, ...\]**），模型可基于完整对话历史生成回复。
+**原生支持多轮对话**。通过消息列表维护上下文（例如： **\[SystemMessage, HumanMessage, AIMessage, …\]**），模型可基于完整对话历史生成回复。
 
 **适用场景**：对话系统（如客服机器人、长期交互的AI助手）
 
@@ -312,7 +312,7 @@ print(model.invoke("什么是LangChain?"))
 
 [https://imooc-langchain.shortvar.com/docs/integrations/chat/openai/](https://imooc-langchain.shortvar.com/docs/integrations/chat/openai/)
 
-需要注意的是国内网络原因不能直接调用，可以通过第三方平台调用。例如https://closeapi.net/
+需要注意的是国内网络原因不能直接调用，可以通过第三方平台调用。例如[https://closeapi.net/](https://closeapi.net/)
 
 现在你有了CloseAI的API Key，需**把代码切换为调用CloseAI（它兼容OpenAI的接口格式）**，直接替换成下面的代码即可调用：
 
@@ -681,7 +681,7 @@ if __name__ == "__main__":
 
 可以简单理解为：
 
--   输入："苹果"、"香蕉"、"汽车" 这些离散的文字
+-   输入：“苹果”、“香蕉”、“汽车” 这些离散的文字
     
 -   输出：\[0.23, -0.56, 0.89\]、\[0.18, -0.49, 0.78\]、\[-0.87, 0.32, -0.11\] 这样的低维向量
     
@@ -981,13 +981,11 @@ for i in range(k):
 2.  **实用选择**：入门/开源场景用Sentence-BERT（all-MiniLM-L6-v2），高精度场景用OpenAI Embedding。
     
 3.  **关键应用**：语义搜索、推荐系统、文本聚类，结合向量数据库可实现高效大规模检索。
-    
-
-通过以上教程，你可以从零开始理解并使用嵌入模型，建议先从Sentence-BERT的基础示例入手，再根据实际需求尝试优化和进阶应用。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 ## 今天终于装上了。。。
 
@@ -1173,6 +1171,7 @@ hermes
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 ### 一、LangChain 是什么
@@ -1481,6 +1480,7 @@ print("最终回答：", response["output"])
 
 
 
+
 # 以太坊账户（Accounts）笔记
 
 ## 一、账户概述
@@ -1578,6 +1578,7 @@ print("最终回答：", response["output"])
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
