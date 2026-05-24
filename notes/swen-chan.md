@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+帮大家审批任务中！！
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 今天参加sophia的分享，其实一些问题没有得到很好的解答hhh
 
 晚上批了2700多份任务，麻了
@@ -24,6 +30,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 写了篇文章，用于整理最近很多新学员关于 API key的共同问题，快速入门 AI 开发：
 
@@ -40,6 +47,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -89,6 +97,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 
 
+
 今日开始学习，先发了一个prompt作为post，给大家需要用hermes agent来学习的同学
 
 然后跟着做做任务 收集问题
@@ -96,6 +105,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
