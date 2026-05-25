@@ -17,11 +17,12 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
-打卡
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/drinkingmorewater/images/2026-05-25-1779710714610-image.png)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 打卡
 <!-- DAILY_CHECKIN_2026-05-24_END -->
@@ -30,11 +31,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -47,11 +50,13 @@ AI x Web3 School
 
 
 
+
 留爪
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -68,11 +73,13 @@ AI x Web3 School
 
 
 
+
 打卡留爪！
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
