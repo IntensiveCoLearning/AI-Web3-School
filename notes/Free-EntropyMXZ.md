@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+学习agent eco治理
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 配置hermes agent
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 学习ai智能体相关内容
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 ### 📝 学习笔记：AI 与 Web3 的交叉融合（AI x Web3）
@@ -117,11 +125,13 @@ AI x Web3 School
 
 
 
+
 阅读了一些ai-web3交叉方向的文档，但有待深入学习
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
