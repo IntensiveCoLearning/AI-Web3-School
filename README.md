@@ -907,7 +907,7 @@ more information
 | [yaoayao0110](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yaoayao0110.md) | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | |
 | [blockpanda](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blockpanda.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | |
 | [nanakodesuu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/nanakodesuu.md) | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | |
-| [zym89861-wq](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zym89861-wq.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | | |
+| [zym89861-wq](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zym89861-wq.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | |
 | [0xcyb3rc4t](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/0xcyb3rc4t.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ShiXuOz](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ShiXuOz.md) | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | |
 | [futureclover87](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/futureclover87.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | | | |
@@ -1233,6 +1233,7 @@ more information
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
