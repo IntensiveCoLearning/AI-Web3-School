@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+今天学习了 AI Framework 和 LangGraph Persistence。Framework 的本质不是替代业务理解，而是管理模型、工具、状态、评估和部署等工程复杂度。Agent 框架尤其要面对模型不稳定、工具调用错误、上下文漂移和长流程恢复问题。深入 LangGraph 后，我理解了 State 是共享黑板，Super-step 是执行节拍，Thread 是持久化会话，Checkpoint 是状态快照。它们共同支撑中断恢复、记忆、时间旅行和可观测性。今天最大的收获是：Agent 工程化的核心，是把不确定的 AI 能力放进可控系统里。  
+  
+[daily\_note](https://github.com/liuhengting/ai-web3-school-bootcamp/blob/master/daily/2026-05-25.md)
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 今天完成了 Hardhat 3 部署合约到 Sepolia 的流程梳理。理解了 Hardhat 不是节点，而是通过 Alchemy / Infura 这类 RPC Provider 连接测试网；部署时本地用私钥签名交易，再通过 RPC 广播到 Sepolia。实践上整理了 pnpm 命令、Hardhat keystore 保存 RPC URL 和私钥、hardhat.config.ts 网络配置、Ignition 部署模块，以及部署后用脚本调用合约验证状态变化。核心收获是：合约部署不是单独写 Solidity，而是一条“编译—签名—广播—确认—调用验证”的完整链路。  
   
 [daily\_note](https://github.com/liuhengting/ai-web3-school-bootcamp/blob/master/daily/2026-05-24.md)
@@ -24,6 +32,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 今日学习打卡 ​
 
@@ -38,6 +47,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 ### Week 1 收尾 + Web3 入门实操
@@ -77,6 +87,7 @@ AI x Web3 School
 
 
 
+
 今天参与了Swen老师的Co-Learning，顺便浏览了下老师的Twitter，了解到了Agent Economy的概念和ERC-8183协议，在脑子里建个索引，以后可以持续关注
 
 阅读了手册里的Agent章节，笔记记在了[daily\_note](https://github.com/liuhengting/ai-web3-school-bootcamp/blob/master/daily/2026-05-20.md)
@@ -89,6 +100,7 @@ AI x Web3 School
 
 
 
+
 昨天晚上直播观看了Web架构课，发现了以往对Web3相关的知识点只有零散的了解，无法把知识应用起来满足一个能通过安全Review的合约，Web3相对于Web2对安全这块需要格外注意，很多东西一上线后就无法挽回。  
   
 今天根据根据Learning Agent的学习规划，阅读Context、RAG章节，记录阅读疑问，笔记和疑问统一记录在个人学习Repo
@@ -96,6 +108,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
