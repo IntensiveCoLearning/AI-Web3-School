@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+这次学习主要围绕三个关键词展开：**记忆、信任和 Agentic Commerce**。
+
+首先，memory 是 Agent 体验中必须解决的问题。好的创意往往不是一次性问答产生的，而是在人与 AI 的连续互动中慢慢涌现。因此，一个真正有用的 Agent 需要记住用户偏好、历史上下文、项目约束和关键决策。ChatGPT 的 memory 更偏向“理解用户”，比如记住用户的表达习惯、偏好和长期兴趣，同时也要适应欧盟等地区的隐私保护要求。Claude，尤其是 Claude Code，则更偏向“完成任务”，需要保存项目约束、技术栈、架构选择和技术决策。
+
+其次，Agent 的链条越长，记忆越容易丢失。单纯聊天的大模型相对更擅长维持上下文，而像 OpenClaw 这类需要交付成果的 Agent，因为涉及拆任务、调用工具、生成文件、测试和迭代，容易出现“记忆扁平化”问题，即只保留表层信息，丢掉真正重要的判断依据。因此，下一步可以探索 Hermes 在长期记忆和复杂任务执行中的表现。
+
+然后，Agent Trust & Reputation 的核心是：信任不是一个简单分数，而是一组可追溯、可比较、可解释的证据，包括 reputation、review、attestation、stake、slashing 和 validation。声誉应该按任务类型拆开，不能压成黑盒总分；stake 不等于能力，资本多不代表质量高；主观任务不能自动 slashing，必须先经过 dispute；历史表现也需要时间衰减。
+
+最后，Agentic Commerce 的机会可能出现在大型企业支付场景中。相比新协议，真实应用更重要。用户通常会选择最方便的路径，所以 builder 的选择会决定未来 agent 经济是被单一公司控制，还是运行在中立、去中心化的基础设施上。避免 scam 的关键仍然是 DYOR，更应该成为 builder，而不是 trader。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 1.  Week 1 全周复盘
     
 2.  有明确项目目标后，再去学习 AI、区块链、智能合约、钱包交互、链上数据解析等知识，效率会更高，也更容易形成可展示的作品。后续参加黑客松或进行 AI + Web3 项目开发时，也可以围绕这些方向展开。
@@ -27,6 +41,7 @@ AI x Web3 School
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 会看了5.20号 AI x Web3 School - Web3 的运行原理
 
 完成了三个任务
@@ -34,6 +49,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 今天主要完成了 AI 基础、Context Engineering、RAG、Agent 与 Agent Wallet 相关内容的学习。上午重点学习了 Embedding、Transformer、Attention、Context Window 与 Context Engineering 的区别，进一步理解了模型如何将文本转化为向量，并通过上下文管理提升回答质量。RAG 部分重点梳理了文档切分、metadata、section\_path、向量检索和 Top-K 召回等流程，认识到检索增强不是简单塞资料，而是要通过结构化信息让模型拿到更准确、可信的内容。
@@ -47,6 +63,7 @@ Agent 部分学习了 Plan、Reflection、Multi-Agent 等架构，也了解了 L
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -303,11 +320,13 @@ AI 自动完成。
 
 
 
+
 AI agent 入门
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
