@@ -15,8 +15,42 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+### **Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性**
+
+-   价值：用户不需要一次次setup agent执行链路越长 记忆消耗越高
+    
+-   memory的生命周期管理：记忆的权重高低，记忆的冲突，修改，记忆的整合
+    
+-   技术栈：
+    
+    -   recall：只有解决了记忆召回问题，用户才能感受到agent记住了该用户。
+        
+    -   revise：agent要对记忆有更新。
+        
+    -   memory：最高层级
+        
+    -   解锁增强生成：数据处理管线
+        
+    -   向量模型：把自然语言表征成数学函数，存储到向量数据库
+        
+    -   agent memory分类：
+        
+        -   working memory & long time memory: 是否持久化
+            
+        -   语义记忆 & 事件/情景记忆 & 程序记忆：记住陈述中的事实 & memory记得用户在什么时候告诉了agent在什么时间干的事情 & 记住了agent的技能，怎么做，workflow等
+            
+-   上下文工程：更大的上下文窗口意味着模型能看到更多的结果和信息，memory决定着agent的能力调用和状态是否回到上下文窗口中
+    
+    -   memory当前生态：mem0， letta, everOS。
+        
+-   memory不是数据库，是三个学科的交叉:数据库，agent强化学习，上下文工程
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 ### **Wallet：用户意图进入链上执行之前的最后一道确认界面。**
 
 钱包交互包括连接钱包，签名消息，发送交易。
@@ -90,6 +124,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 ### **开放代理经济：从 ERC-8004 / ERC-8183 到构建者之路**
 
@@ -206,6 +241,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 ### **RAG：让回答有来源、有版本、有边界**
 
 -   第一性原理：要知道检索结果不是事实，要做到回答的东西关键点可在原文追溯，找不到答案要能让模型说不确定，而不是产生幻觉。
@@ -264,6 +300,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -350,6 +387,7 @@ context 决定模型看到的是用户幻想、过期文档，还是可验证的
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -472,6 +510,7 @@ context 决定模型看到的是用户幻想、过期文档，还是可验证的
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
