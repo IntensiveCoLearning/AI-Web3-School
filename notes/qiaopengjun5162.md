@@ -17,27 +17,41 @@ Web3 开发者 Python Go  Rust  Solidity
 <!-- Content_START -->
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
-2026-05-25 (Day 8) — Week 2 开篇：AI × Web3 Bridge  
-  
+2026-05-25 (Day 8) — Week 2 开篇：AI × Web3 Bridge
+
 **今日学习内容：**  
 \- Handbook Bridge — Chain-aware Context（链感知上下文）：链上状态如何进入 Agent 上下文  
 \- Handbook Bridge — Web3 Tool Use（Web3 工具调用）：RPC、钱包、合约工具如何被 Agent 调用  
-\- Handbook Bridge — Agent Workflow（智能体工作流）：哪些步骤适合自动化，哪些必须 human-in-the-loop  
-  
+\- Handbook Bridge — Agent Workflow（智能体工作流）：哪些步骤适合自动化，哪些必须 human-in-the-loop
+
 **笔记摘要：**  
 \- 核心原则：模型可以选择工具，但工具必须用确定性边界限制模型。写操作必须受白名单合约、白名单方法和额度策略约束  
 \- 写交易前检查清单：chain ID、合约地址、ABI method/args、value/token 预估、gas 估算、simulation、policy 检查、用户授权、交易追踪  
 \- Agent Workflow 是把概率模型放进确定性流程里 — 只读分析自动执行，小额白名单按 session key 执行，高风险交易必须人工确认，超出 policy 直接拒绝  
 \- 人工确认的关键不是"有没有确认"，而是人确认时能否看懂资产变化和风险  
 \- Trace 调试框架：日志应回答模型看到了什么、调用了什么工具、工具返回了什么、系统有没有拦截、用户确认了什么  
-\- 四层关系：Chain-aware Context 提供事实，Web3 Tool Use 提供能力，Agent Wallet 提供权限边界，Workflow 把它们组织成可执行但可控的路径  
-  
+\- 四层关系：Chain-aware Context 提供事实，Web3 Tool Use 提供能力，Agent Wallet 提供权限边界，Workflow 把它们组织成可执行但可控的路径
+
 **明日计划：**  
 \- 继续 AI × Web3 Bridge 剩余章节
+
+**2026-05-25 (Day 8) 打卡总结：**  
+  
+📖 **Bridge 学习：**  
+\- Chain-aware Context ✅  
+\- Web3 Tool Use ✅  
+\- Agent Workflow ✅  
+  
+🎯 **WCB 任务：+80pt**  
+\- 社群自我介绍（10pt）  
+\- Web3 概念卡片（10pt）  
+\- EOA vs 智能账户 vs 多签（30pt）  
+\- 合约部署证明（30pt）
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 026-05-24 (Day 7) — Week 1 收尾：Web3 基础扫读，双基础通关  
   
@@ -65,6 +79,7 @@ Web3 开发者 Python Go  Rust  Solidity
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 2026-05-23 (Day 6) — Web3 基础：密码学 → 钱包 → 智能合约 → 开发栈  
   
 **今日学习内容：**  
@@ -87,6 +102,7 @@ Web3 开发者 Python Go  Rust  Solidity
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -115,6 +131,7 @@ Web3 开发者 Python Go  Rust  Solidity
 
 
 
+
 2026-05-21 (Day 4) — MCP & Vibe Coding 学习  
   
 **今日学习内容：**  
@@ -137,6 +154,7 @@ Web3 开发者 Python Go  Rust  Solidity
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -193,6 +211,7 @@ Vibe Coding 不是"把需求丢给 AI 等代码"，而是人负责方向/约束/
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
