@@ -19,7 +19,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 昨天做完最小的实践后再和朋友聊了一下，我才发现我理解的Prompt和handbook中的prompt是不一样。
 
-我一直理解的prompt是指用户层面输入的内容，就是user prompt；可是handbook里面的prompt是internal prompt 内部Prompt/ system prompt。两者是不一样的东西。这么一来就解释了handbook多次提及的instructions 规则。 我还一直在想在用户层面上的prompt有这么大权力去控制agent的工作？（笑死）我的疑惑也解开了。所以这次我搭建的Ai agent工作流程简单而言就是：
+我一直理解的prompt是指用户层面输入的内容，就是user prompt；可是handbook里面的prompt是internal prompt 内部Prompt/ system prompt。两者是不一样的东西。这么一来就解释了handbook多次提及的instructions 规则。 我还一直在想在用户层面上的prompt有这么大权力去控制agent的权限？（笑死）我的疑惑也解开了。所以这次我搭建的Ai agent工作流程简单而言就是：
 
 ### \_用户输入交易信息 （user prompt）
 
@@ -63,6 +63,7 @@ _Simulation：成功，没有警告”_
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
 
+
 今天根据handbook的建议，完成了Prompt的最小实践。我用Codex搭建了一个小demo：[https://github.com/deerjane-bjj/aixweb3-learning/tree/Handbook-AI-Prompt-exe](https://github.com/deerjane-bjj/aixweb3-learning/tree/Handbook-AI-Prompt-exe)
 
 这个任务比想象中有挑战。最开始他给我的版本是用户需要自己输入包括以下内容：交易目标地址、函数名、参数、资产变化、simulation 结果、用户原始意图的Json，增加了用户使用的难度（包括我）。于是我调整了一下，看看能不能输入自然语言。结果demo读不懂自然语言，Chatgpt告诉我需要另外做一个prompt去让模型抽取信息转化成json后，再把这段json发给风险分析的prompt。我觉得这个练习的目的是为了了解Prompt的明确输入边界，这么做可能令焦点模糊，于是我改用一个固定模版，使用者只需要跟着格式更改内容就可以。相对最开始的版本，使用的难度减少了。
@@ -78,6 +79,7 @@ _Simulation：成功，没有警告”_
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -99,6 +101,7 @@ _Simulation：成功，没有警告”_
 
 
 
+
 今天去了例會，裡面的小夥伴都很厲害！！特別是Luvia，她只有大一而已，真的後生可畏！！我也要好好加油！！另外一樣有趣的事情，就是大家都有不同程度的焦慮，果然焦慮都是亞洲人的標配啊。。。
 
 今天沒有真實使用到Hermes Agent，這個要留到明天才可以用了。今天就只看了handbook的內容，重點還是focus在AI方面。可能我也了解一下Obsidian怎麼用去打造屬於我的知識庫吧！
@@ -108,6 +111,7 @@ _Simulation：成功，没有警告”_
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -146,6 +150,7 @@ _Simulation：成功，没有警告”_
 
 
 
+
 今日目標是要做3樣東西：
 
 1）根據ChatGPT提供的Study Plan，在Github建立Repo，並將Day1、2的筆記錄入。  
@@ -168,6 +173,7 @@ _Simulation：成功，没有警告”_
 
 
 
+
 Day2
 
 My note is saved in Google docs: [https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX\_dfMbQRMUDxJcWA0k/edit?usp=sharing](https://docs.google.com/document/d/18Bv98uTSMrQCXBd3qxowlZqXCX_dfMbQRMUDxJcWA0k/edit?usp=sharing)
@@ -177,6 +183,7 @@ Basically I just read the handbook and clarify the ideas of different AI concept
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
