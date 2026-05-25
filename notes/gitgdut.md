@@ -15,8 +15,17 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+[https://www.notion.so/AI-Web3-Problem-Mapping-and-Main-Direction-Selection-36bbbd522ac780a7ab30fb6a187bff4c?source=copy\_link](https://www.notion.so/AI-Web3-Problem-Mapping-and-Main-Direction-Selection-36bbbd522ac780a7ab30fb6a187bff4c?source=copy_link)  
+今天完成了路径的选择任务，决定了通过agent实现账户抽象的技术发展方向。
+
+还听了分享会，了解了memory在AI前沿的重要地位。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 [https://www.notion.so/AI-Web3-Week-1-Proof-of-Work-Pack-36abbd522ac780fca5d9eb09e034768a?source=copy\_link](https://www.notion.so/AI-Web3-Week-1-Proof-of-Work-Pack-36abbd522ac780fca5d9eb09e034768a?source=copy_link)
 
 今天我总结了这周的学习内容和结果
@@ -27,11 +36,13 @@ AI x Web3 School
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 今天我完成了多个任务，参加了colearning和周分享会
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 今天在共学和AI下乡计划中了解了AI\*Web3的方向和项目，明白了AI和web3的机会：去中心化 AI 基础设施、AI Agent + 钱包、AI 链上分析工具、智能钱包和安全助手、交易所和 DeFi 智能风控，这又利于我在后面的共学中更好地找到自己前进的方向
@@ -42,6 +53,7 @@ AI x Web3 School
 
 
 
+
 今天学校课程比较忙，所以我看了学习面板中的一些对AI介绍的视频，对LLM模型又来了大概的了解，LLM通过对数据的收集和处理，判断一句话下一秒生成每种词语的概率，生成决策树，再通过决策树的分析，回答用户的问题。
 
 我听了Draken老师的课，大致了解了Hermes的配置流程，不过我已经在wsl2中配置好了Hermes并使其连接tg进行贡藕做，就没继续做
@@ -49,6 +61,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
