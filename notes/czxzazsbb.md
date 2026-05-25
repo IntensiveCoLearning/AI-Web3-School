@@ -15,8 +15,19 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+用 Learning Agent 启动 cohort · AI 协作的第一手观察
+
+|   |   |   |
+| --- | --- | --- |
+|   |   |   |
+|   |   |   |
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 观看web3运行原理的直播
 
 1.  ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/czxzazsbb/images/2026-05-23-1779542705454-image.png)
@@ -33,6 +44,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 Hermes Agent 简介
 
@@ -217,6 +229,7 @@ hermes
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 1.web3一部分程度上是要解决信任问题
 
 2.如何解决信任问题（区块链）：
@@ -255,6 +268,7 @@ hermes
 
 
 
+
 1.了解了Hermes vs OpenClaw一些对比：
 
 想要一个 越用越聪明的贴身 AI 助理，单智能体 + 内置学习闭环 → 选 Hermes
@@ -270,6 +284,7 @@ hermes
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
