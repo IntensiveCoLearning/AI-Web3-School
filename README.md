@@ -996,7 +996,7 @@ more information
 | [yushubo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yushubo.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [DarrickLi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/DarrickLi.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | | |
 | [an273](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/an273.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [corinnashisi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/corinnashisi.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | |
+| [corinnashisi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/corinnashisi.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | |
 | [luckykingqing](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/luckykingqing.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [wjy3452801181-a11y](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wjy3452801181-a11y.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [SupeRay0703](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SupeRay0703.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1233,6 +1233,7 @@ more information
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
