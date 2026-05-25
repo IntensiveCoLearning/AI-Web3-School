@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+Skill（技能/工具） 是一个函数——给定输入，执行特定操作，返回结果。它本身不决定"什么时候调用自己"，没有目标感，没有循环，执行完就结束。比如"查股价"、"计算DCF"、"生成图表"都是 Skill。
+
+Agent（智能体） 是一个有目标的执行循环——它感知环境，决定下一步用哪个 Skill，执行，观察结果，再决定下一步，直到目标完成。它是 Skill 的调用者和编排者。
+
+核心差异一句话：Skill 是被动的能力，Agent 是主动的决策者。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 是否引入大模型开发框架，例如langchain：
 
 引入框架的触发条件：
@@ -36,6 +46,7 @@ AI x Web3 School
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 【日期】2026-05-23 【今日完成】
 
 -   法规文档自动化解析需求的思考：技术选型与架构决策笔记（daily/2026-05-23.md）
@@ -50,11 +61,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 研究了下Agent API，为什么只能查任务不能替我打卡
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -81,6 +94,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
