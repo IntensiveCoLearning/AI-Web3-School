@@ -824,7 +824,7 @@ more information
 | [amy250716](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/amy250716.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [deerjane-bjj](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/deerjane-bjj.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | |
 | [Whhhhi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Whhhhi.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [EagleF6432614](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/EagleF6432614.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | |
+| [EagleF6432614](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/EagleF6432614.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | |
 | [Astrid-lty](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Astrid-lty.md) | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Martin2049](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Martin2049.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nqn537](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/nqn537.md) | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1233,6 +1233,7 @@ more information
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
