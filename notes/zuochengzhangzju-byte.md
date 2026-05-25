@@ -15,6 +15,13 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+I continued studying AI x Web3 foundations and recorded the daily learning workflow for 2026-05-25. The focus was on connecting wallet security, GitHub-based learning records, and WCB status synchronization into one verifiable process.
+
+My main takeaway is that Web3 operations need explicit verification before execution: checking domains, contract addresses, approval scopes, transaction simulations, and human confirmation. This is especially important for AI agent workflows, because an agent should not blindly execute wallet actions without clear logs, safety checks, and a recoverable audit trail.
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 I continued studying AI x Web3 foundations and recorded the daily learning workflow for 2026-05-24. The focus was on connecting wallet security, GitHub-based learning records, and WCB status synchronization into one verifiable process.
