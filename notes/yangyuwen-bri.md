@@ -17,17 +17,26 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
-今天参加 / 跟进 Week 2 的 Long-term Memory for AI Agents 分享，重点关注 agent 为什么需要持续上下文和长期一致性。
+今天参加 / 学习了「Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性」相关内容，并把课件整理成中文学习笔记。
 
-我的理解是：如果 agent 只是一次性回答问题，短期上下文可能够用；但如果 agent 要长期辅助学习、维护项目、记录用户偏好、跟踪任务进展，就需要长期记忆能力。否则每次对话都会像重新开始，无法形成稳定的学习伙伴或工作流。
+今天最重要的收获是：Agent Memory 不是更大的上下文窗口，也不是简单的 RAG，而是一个跨时间管理意图和状态的系统。用户一开始给出的目标往往是不完整的，真正有用的任务状态是在澄清、选择、工具调用、验证和产出过程中逐步形成的。好的 memory 应该保留这些有效状态，让下一次工作可以 resume，而不是 restart。
 
-这也让我联想到我已经做的 AI Concept Coach。目前它可以帮助学习者输入概念困惑、生成解释、完成复述训练，但还没有保存学习历史。如果加入 memory，它可以记录我经常混淆的概念、复述薄弱点、已经掌握的内容和下一步练习建议，变成更持续的学习 agent。
+我也区分了几个概念：Recall 是用户看到的“系统记得我”的效果；Retrieve 是系统把相关记忆取回当前上下文；Revise 是根据新证据更新长期记忆。Retrieval、RAG、embeddings、vector store 都可能支持 memory，但它们本身不等于 memory。memory 更关注什么值得长期保存、什么时候返回、什么时候修正、什么时候忘记。
 
-Next action：把 Long-term Memory 作为 Week 2 problem map 的一个方向，并思考它如何和 AI Concept Coach / Learning Agent repo 结合。
+结合自己的学习仓库，我理解到：现在的 daily/、notes/、experiments/、submissions/ 和 prompts/ 其实就是一种显式外部记忆。它们让 learning agent 能跨天继续帮助我，而不是把学习状态散落在聊天记录里。
+
+下一步我想把这个理解用于改进 AI Concept Coach：现在它可以做概念解释和复述反馈，但还没有真正的学习记忆。后续可以加入练习历史、常错概念、复述评分变化、下一次优先练习内容，以及可删除 / 可导出的学习记录。这样它会更像一个长期学习工具，而不是一次性问答页面。
+
+同时我也意识到 memory 的安全边界很重要。API key、token、私钥、助记词、钱包敏感信息和不适合公开的个人隐私都不应该进入公开仓库或长期记忆。对于提交任务、调用 API、链上操作这类高影响动作，agent 可以整理上下文和提出建议，但最终仍然需要人工确认。
+
+Repo:
+
+[https://github.com/yangyuwen-bri/aiweb3-learning-journal](https://github.com/yangyuwen-bri/aiweb3-learning-journal)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 今天主要做 Week 1 收尾和 proof-of-work 打包。我回顾了目前已经完成并提交的任务：GitHub 学习仓库、课程工具准备、Learning Agent Setup、Sepolia 测试网交易，以及 5.20 Web3 运行原理相关记录。
 
@@ -42,6 +51,7 @@ Repo:
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 今天完成了两个方向的学习和产出。
@@ -69,6 +79,7 @@ Repo:
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -115,6 +126,7 @@ Repo:
 
 
 
+
 今天围绕 Week 1 的 AI Agent / Hermes 主题，整理了自己对 prompt、workflow 和 agent 的初步理解，并把它和我的 AI x Web3 School 学习仓库连接起来。
 
 今日完成：
@@ -151,6 +163,7 @@ Demo:
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
