@@ -86,4 +86,9 @@ My main takeaway is that Web3 operations need explicit verification before execu
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 学习了如何用hermes控制管理github，体验感受了自动化流程
 <!-- DAILY_CHECKIN_2026-05-19_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+Uniswap + 隐私基础；kohaku（Ethereum Foundation 隐私工具箱）；Vitalik ZK API Usage Credits（隐私买算力）；Railgun 四层隐私架构
+<!-- DAILY_CHECKIN_2026-05-25_END -->
 <!-- Content_END -->
