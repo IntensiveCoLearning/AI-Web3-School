@@ -15,8 +15,206 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+\# 📌 残酷共学打卡 · Day 8
+
+\> **AI×Web3 School × 创客星球(CGHub)**
+
+\> 学习时长：约 6 小时
+
+\---
+
+\## 🎯 今日目标
+
+| 类别 | 目标 | 状态 |
+
+|------|------|------|
+
+| 主线 | W1 欠账补交 + WCB 任务梳理 | ✅ 完成 |
+
+| 辅线 | GitHub 仓库整理 + 打卡内容输出 | ✅ 完成 |
+
+\---
+
+\## 📚 今日学习内容
+
+\### 主线 · W1 收尾 + W2 规划启动
+
+\#### ✅ 已理解
+
+\> 一句话核心理解：
+
+\> W1 基础阶段收尾，识别出9个遗留任务和23个 W2 新任务，需要系统化逐个攻克。
+
+**关键知识点：**
+
+1\. **Agent（智能体）的本质**
+
+\- 说明：Agent = LLM + Tool Use + Planning + State + Reflection，让模型从"回答"进入"执行"
+
+\- 对应 WCB Roadmap 节点：A5 Agent
+
+2\. **Web3 智能合约部署流程**
+
+\- 说明：Foundry Forge → Sepolia 测试网 → Etherscan 验证，合约地址 `0x1dC966b692C45eCb0E3e96416d9C7f8057F74A1D`
+
+\- 对应 WCB Roadmap 节点：Web3 Dev Stack
+
+3\. **GitHub + WCB 联动提交机制**
+
+\- 说明：WCB 任务需填 GitHub 文件链接作为证明，GitHub 作为去中心化证据层
+
+\- 对应 WCB Roadmap 节点：前置准备 · 建立 GitHub 学习仓库
+
+\#### 🔗 知识关联
+
+\`\`\`
+
+LLM（理解） → Agent（执行） → Tool Use（能力扩展）→ Web3（链上执行）
+
+Prompt（控制） → Context（空间） → RAG（知识检索） → 智能合约（逻辑）
+
+\`\`\`
+
+**与创客星球(CGHub)的关联：**
+
+\> CGHub Agent 的核心逻辑正是 Agent 工作流：用户发起需求 → Agent 查 Context → 调用工具（Tool Use）→ 执行链上操作（通过 Agent Wallet）→ 记录结果到 CGHub 价值层。这套 WCB 学习直接映射到 CGHub 的技术架构。
+
+\#### ⚠️ 待深化
+
+\- \[ \] Agent 的 Planning（规划）如何在 CGHub 中实现多步工作流
+
+\- \[ \] Tool Use 接入 CGHub 知识库和合约调用
+
+\- \[ \] x402 支付协议的具体实现路径
+
+\---
+
+\### 辅线 · WCB 任务体系全景认知
+
+\> 一句话核心：WCB 有33个进行中任务，分布在 W1（欠账）+ W2（主攻）+ W3/W4（进阶），需要优先级排序逐个完成。
+
+**关键收获：**
+
+\- W1 欠账9个任务共240分，优先级高
+
+\- W2 23个任务含多条主线（方向研究/支付/身份/安全/治理）
+
+\- 线上活动参与可累积积分（实时参加+20，回放+10）
+
+\---
+
+\## 🔴 今日卡点 / 遇到的问题
+
+| 问题 | 状态 | 解决方案 |
+
+|------|------|----------|
+
+| WCB 平台 OAuth 授权无法远程访问 | ✅ 已解决 | 改为本地浏览器操作 + GitHub API 远程提交文件 |
+
+| W1 哪些任务实际已完成但未提交 | ✅ 已解决 | 通过截图 + AI 视觉分析还原完整任务清单 |
+
+\---
+
+\## 💡 今日核心洞见
+
+\> 今日最有价值的收获：
+
+1\. **Agent 能力边界 = CGHub 产品边界**
+
+\> Agent 的 Tool Use 能力决定 CGHub 能帮用户做什么。当前 CGHub 需要的核心能力：知识库检索（RAG）、合约调用（Tool Use）、支付（x402）、状态记录（State）。学 W2 就是在学 CGHub 的技术路线图。
+
+2\. **GitHub 是去中心化证据层**
+
+\> WCB 的 GitHub 提交机制本质上是把学习成果锚定在不可篡改的证据层——这和区块链的逻辑完全一致。CGHub 的价值记录层可以借鉴这个思路。
+
+\---
+
+\## 📊 今日进度
+
+\### W1 · AI & Web3 基础
+
+| 节点 | 状态 | 备注 |
+
+|------|------|------|
+
+| LLM 基础 | ✅ 已完成 | Day 1 |
+
+| Prompt 基础 | ✅ 已完成 | Day 1 |
+
+| Context | ✅ 已完成 | Day 1 |
+
+| RAG 入门 | ✅ 已完成 | Day 4 |
+
+| 区块链浏览器（Etherscan） | ✅ 已完成 | Day 8 已提交 |
+
+| 合约部署 Sepolia | ✅ 已完成 | Day 8 已提交 |
+
+| Proof-of-Work 提交 | ✅ 已完成 | Day 8 已提交 |
+
+| AI 概念卡片 | ✅ 已完成 | Day 7 |
+
+**W1 遗留9个任务待完成（见** [**CGHub-WCB-Tasks.md**](http://CGHub-WCB-Tasks.md)**）**
+
+\### W2 · Agent & Tool Calling
+
+| 节点 | 状态 | 备注 |
+
+|------|------|------|
+
+| Agent 入门 | 🔄 今天启动 | 明天深入 |
+
+| Tool Calling | ❌ 未开始 | |
+
+| Planning | ❌ 未开始 | |
+
+| State | ❌ 未开始 | |
+
+| x402 支付协议 | ❌ 未开始 | W2 核心主线 |
+
+\---
+
+\## 📅 明日计划（Day 9）
+
+| 优先级 | 任务 | 预计时长 |
+
+|--------|------|----------|
+
+| 🔴 高 | W1-02 整理Web3基础概念卡片 | 1小时 |
+
+| 🔴 高 | W1-10 建立 AI×Web3 行业信息流清单 | 1小时 |
+
+| 🟡 中 | W2-01 AI×Web3 问题地图与主方向选择 | 2小时 |
+
+| 🟡 中 | W2-03 x402 Paywall 最小支付流程拆解 | 1小时 |
+
+| 🟢 低 | 线上活动回放观看（Cobo Agentic Wallet） | 1小时 |
+
+\---
+
+\## 📁 今日成果文件
+
+\- `submissions/W1-T5-区块链浏览器操作.md` — Etherscan 操作证明
+
+\- `submissions/W1-T6-合约部署Sepolia证明.md` — 合约部署证明
+
+\- `CGHub-WCB-Tasks.md` — 完整任务清单（已更新）
+
+\- `daily/2026-05-25.md` — 今日打卡日志
+
+\---
+
+\> **Tag：** #AI×Web3School #创客星球 #CGHub #残酷共学
+
+\> **打卡平台：** WCB 残酷共学
+
+\> **GitHub：** [https://github.com/Carey-Hugo/ai-web3-school-cghub](https://github.com/Carey-Hugo/ai-web3-school-cghub)
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 ```
 ✅ Day 7/30 - AI × Web3 School
 
@@ -37,6 +235,7 @@ W1 全部完成！
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 Day 6/30 - AI x Web3 School
 
@@ -67,11 +266,13 @@ Day 6/30 - AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 天完成了 W1 前三节核心概念学习：1. 区块链浏览器 Etherscan - 理解了址/交易/区块结构，可查询任意公开地址余额和历史；2. 钱包与账户类型 - EOA（私钥控制）、智能合约账户（代码控制）、多签钱包（多人签名）三者的权限差异；3. 智能合约 - 部署在链上的程序，代码即规则，执行即清算，无私钥。明天计划：领取 Sepolia 测试币，部署最小合约，完成 W1 测试任务。
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -89,6 +290,7 @@ Day 6/30 - AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -144,6 +346,7 @@ Web3 基础 — 密码学 / 钱包 / 智能合约
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
