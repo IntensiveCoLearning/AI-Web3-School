@@ -15,8 +15,155 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+**基于大语言模型（LLM）的智能体（Agent）记忆与检索增强生成（RAG）系统的架构图**。它整体采用了经典的**分层架构设计**，从左到右流式地展示了从用户端（Agent）到数据底层（数据库与基础设施）的调用与数据流转关系。
+
+我们可以将整个系统拆分为六个核心层次来详细拆解：
+
+## 1\. 前端层（Frontend Layer）
+
+这是系统的入口，主要负责智能体与各种功能工具的对接与分发。
+
+-   **SimpleAgent**：系统的核心主体（智能体），它通过发起任务来驱动整个流程。
+    
+-   **ToolRegistry（工具注册表）**：一个中央调度器，用来管理和路由 Agent 可以使用的工具。在这里，它将请求分流到两个方向：
+    
+    -   **MemoryTool**：专门处理与记忆相关的操作。
+        
+    -   **RAGTool**：专门处理与知识检索增强相关的操作。
+        
+
+## 2\. 管理层（Management Layer）
+
+作为控制中枢，负责接收前端工具的请求，并将其分配给具体的处理管道。
+
+-   **MemoryManager（记忆管理器）**：承接 `MemoryTool`，负责协调和调度不同类型的记忆模块（如短期记忆、长期记忆等）。
+    
+-   **RAGPipeline（RAG流水线）**：承接 `RAGTool`，负责编排文档解析、知识检索和问答增强的整体流程。
+    
+
+## 3\. 核心处理层（记忆类型层 vs RAG处理层）
+
+这一纵列是系统的核心业务逻辑所在，分为两大板块：
+
+### 板块 A：记忆类型层（Memory Types Layer）
+
+仿照人类的大脑机制，将 AI 的记忆分为了四种类型：
+
+-   **WorkingMemory（工作记忆）**：标有“纯内存+TTL（生存时间）”。这是短期记忆，数据只存在于内存中，到期自动销毁，用于处理当前对话的上下文。
+    
+-   **EpisodicMemory（情境记忆 / 事件序列）**：记录按时间顺序发生的事件或对话历史。
+    
+-   **SemanticMemory（语义记忆 / 知识图谱）**：存储结构化的核心概念、实体及其关系，形成知识网络。
+    
+-   **PerceptualMemory（感知记忆 / 多模态）**：处理和存储多模态数据（如声音、图片、视频或复杂的感知输入）。
+    
+
+### 板块 B：RAG处理层（RAG Processing Layer）
+
+负责外挂知识库的处理与利用：
+
+-   **DocumentProcessor（文档处理器）**：负责外部文档的解析、切片（Chunking）等前置处理。
+    
+-   **智能问答引擎（LLM增强）**：利用检索出来的知识来增强大模型，生成最终的准确回答。
+    
+
+## 4\. 存储抽象层（Storage Abstraction Layer）
+
+这一层是代码逻辑与底层数据库之间的**中间件/数据访问层（DAO）**。它将不同类型的记忆和数据抽象为特定的存储接口：
+
+-   **SQLiteDocumentStore（结构化存储）**：
+    
+    -   接收 `EpisodicMemory`（事件序列）和 `SemanticMemory`（知识图谱的某些结构数据）。
+        
+    -   也接收 `DocumentProcessor` 拆解后的文档块。
+        
+-   **Neo4jGraphStore（图谱管理）**：
+    
+    -   专门用来管理和存储实体关系，连接了 `EpisodicMemory`、`SemanticMemory` 和 `PerceptualMemory`。
+        
+-   **QdrantVectorStore（向量检索）**：
+    
+    -   专门用于相似度检索，接收 `PerceptualMemory` 的多模态向量，以及由“智能问答引擎”和“文档处理器”处理后的向量数据。
+        
+
+## 5\. 基础设施层（Infrastructure Layer）
+
+这是系统最底层的物理存储和核心底层服务，所有数据最终落盘于此：
+
+-   **内存**：直接为 `WorkingMemory` 提供极速的读写支持。
+    
+-   **SQLite**：轻量级关系型数据库，用于存储结构化文档和事件序列。
+    
+-   **Neo4j**：图数据库，专门用于高效查询和存储知识图谱中的复杂节点和关系。
+    
+-   **Qdrant**：高性能向量数据库，用于高维向量的快速近邻检索（ANN）。
+    
+-   **EmbeddingService（统一嵌入）**：这是一个底层核心服务，`DocumentProcessor`（文档解析）和`智能问答引擎`都会调用它，将文本或多模态数据转化为向量（Embedding），然后再存入 `Qdrant` 或进行检索。
+    
+
+## 1\. 数据库工程（Database Engineering）—— 解决“怎么存”
+
+这一维度的核心是保证数据的**持久化、准确性与多模态存储**，对应上一张架构图中的 SQLite、Neo4j 等基础设施。
+
+-   **Persistent Storage（持久化存储）**：确保 AI 的记忆不会因系统重启或断电而丢失。
+    
+-   **Typed Schemas（强类型 Schema）**：对记忆数据进行结构化定义，例如明确哪些是“事件”，哪些是“实体关系”。
+    
+-   **ACID Transactions（ACID 事务）**：确保高并发下，AI 读取和写入记忆时的数据一致性与安全（不发生数据冲突或损坏）。
+    
+-   **Multi-Store Architecture（多模态存储架构）**：即上一张图展示的“混合存储”，同时管理关系型、图和向量数据库。
+    
+
+## 2\. 智能体工程（Agent Engineering）—— 解决“怎么用”
+
+这一维度关注的是 **AI 智能体如何感知、调度和演化这些记忆**，对应上一张图中的 MemoryManager 和各种 Memory 类型的业务逻辑。
+
+-   **Memory Lifecycle（记忆生命周期管理）**：决定记忆何时生成、何时转为长期记忆、何时因为到期（TTL）而被擦除。
+    
+-   **Write-Back Loops（写回循环）**：智能体在对话或思考后，将新的体验、结论重新写入记忆库的闭环机制。
+    
+-   **Memory Extraction（记忆提取）**：从嘈杂的原始对话或多模态数据中，提炼出有价值的核心事实或用户偏好。
+    
+-   **Autonomous Consolidation（自主固化/整合）**：类似于人类的“睡眠归纳”，AI 在闲时自动将零碎的情境记忆（Episodic）提炼并合并为常识性的语义记忆（Semantic）。
+    
+-   **Context-Aware Routing（上下文感知路由）**：根据当前任务，聪明地决定该调用哪一部分记忆。
+    
+
+## 3\. 信息检索（Information Retrieval）—— 解决“怎么查”
+
+当记忆库变得非常庞大时，如何**快速、精准地捞出最相关的记忆**是关键。这对应上一张图中的向量检索（QdrantStore）和 RAG 处理层。
+
+-   **Hybrid Search（混合检索）**：结合传统的关键词检索（BM25）与现代的向量语义检索，兼顾精准度与泛化性。
+    
+-   **Vector Indexes (HNSW, IVF)（向量索引）**：利用 HNSW（分层导航小世界）或 IVF（倒排文件）等算法，在百万级甚至亿级向量中实现毫秒级的近邻搜索。
+    
+-   **Relevance Ranking（相关性重排）**：评估捞出来的多条记忆中，哪些与当前问题最契合。
+    
+-   **Context Assembly（上下文组装）**：把检索出来的记忆片段合理地拼接、修剪，打包成 LLM 能理解的前景提示词。
+    
+-   **Query Optimization（查询优化）**：对 Agent 输入的复杂问题进行改写或拆解，以获得更好的检索结果。
+    
+
+## 4\. 机器学习工程（Machine Learning Engineering）—— 解决“怎么理解”
+
+这是赋予记忆“语义理解能力”的底座，对应上一张图中的 EmbeddingService 和 LLM 增强引擎。
+
+-   **Embedding Models（嵌入模型）**：负责将文本、图片等高维数据转化为计算机能计算其相似度的数学向量。
+    
+-   **Fine-Tuning (SLMs)（小模型微调）**：针对特定业务场景，微调小语言模型（SLM），使其能更精准地提取或判断记忆。
+    
+-   **Model Versioning（模型版本控制）**：管理不同代际的 Embedding 和 LLM 模型，因为一旦更换 Embedding 模型，底层的向量数据库就需要全部重新计算。
+    
+-   **Reranking Pipelines（重排流水线）**：利用精细的交叉编码器（Cross-Encoder）模型对初筛的记忆进行二次精细化打分。
+    
+-   **Continual Learning（持续学习）**：探索如何让 AI 系统在不发生“灾难性遗忘”的前提下，通过记忆库不断吸收新知识。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 本文用于总结近期围绕 ChainMind 项目学到的核心内容，包括项目定位、量化属性、相似 GitHub 项目对比、当前工程状态、已形成的判断框架，以及后续最值得继续推进的方向。
 
 ## **1\. 我们对 ChainMind 的重新定位**
@@ -569,6 +716,7 @@ AI 的输出应该回答：
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 ### 1\. 基本概念概述
 
 -   **EOA（Externally Owned Account，外部拥有账户）** 传统钱包账户，由私钥直接控制。最常见的 MetaMask 默认账户。
@@ -662,6 +810,7 @@ AI 的输出应该回答：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 # **2026-05-21 项目进度总结**
@@ -1040,6 +1189,7 @@ Holder 汇总中观察到：
 
 
 
+
 几天继续了链上数据分析，AI+Defi投研报告自动项目的学习详细链接[链接](https://github.com/may-tonk/ai-web3-school-cohort-0/tree/codex/chainmind-foundation)
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -1049,11 +1199,13 @@ Holder 汇总中观察到：
 
 
 
+
 **今天和AI探讨了链上数据分析，AI+Defi的想法，简单的建立了一个工作项目计划，内容太多了，上传到了AI x Web3school的GitHub了；详细请查看**[**链接**](https://github.com/may-tonk/ai-web3-school-cohort-0/blob/master/daily/2026-05-19/AI_DeFi_Meme_Workflow_%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.md)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
