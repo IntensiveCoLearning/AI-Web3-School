@@ -15,8 +15,15 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+完成了**AI × Web3 问题地图与主方向选择**  
+[ai-web3-school-cohort-0/tasks/week\_2/ai\_web3\_](https://github.com/LastHopeOfGPNU/ai-web3-school-cohort-0/blob/master/tasks/week_2/ai_web3_map.md)[map.md](http://map.md) [at master · LastHopeOfGPNU/ai-web3-school-cohort-0](https://github.com/LastHopeOfGPNU/ai-web3-school-cohort-0/blob/master/tasks/week_2/ai_web3_map.md)
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 ## Safe 学习笔记
 
 ### 1\. Safe 是什么？
@@ -266,6 +273,7 @@ Safe 官方文档称其自 2018 年以来经过审计和测试，并已有大量
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 # ERC-4337 文档学习
 
@@ -575,6 +583,7 @@ Session Key 可以理解为“临时授权密钥”。
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 ## OpenZeppelin Contracts 学习笔记
 
 ## 1\. 它是什么
@@ -805,6 +814,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 
 
+
 ### 今日完成
 
 -   \[x\] 参与活动 — AI 下乡计划 | AI 在 Web 3 的应用
@@ -843,6 +853,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 
 
+
 今天参加了 Web3 运行原理课，对于课后提出的四个思考问题：
 
 **1\. 资产自托管的安全 vs 易用** 打破「越安全越难用」的权衡，关键在策略组合：TSS/MPC 分布式存密钥片段 + Social Recovery 信任链恢复 + 抽象 UX（用身份/口令替代裸私钥）。
@@ -858,6 +869,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -883,6 +895,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
