@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+今天学习打卡：我研读了Hermes Agent Docs，深入理解了agent、tool calling、skills、记忆和长期执行的核心概念；同时通过Zread.ai解读OpenClaw/Hermes相关内容，梳理并理解了agent进入执行层后带来的架构变化。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 今天我系统学习了AI Agents相关的内容，通过Microsoft《AI Agents for Beginners》建立了对Agent的整体直觉，完成了从概念到代码的入门实践，接着学习OpenAI Agents SDK的介绍，理解了Agent框架如何组织模型、工具与执行流程，最后通过LangGraph Overview掌握了Agent的组织方式，完整走完了从理论认知到框架理解再到流程编排的学习链路，对AI智能体的开发逻辑有了更清晰的认识。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 今天完成了AI开发相关的入门学习，内容覆盖官方API基础课程、Z.ai的GLM MaaS API开发者文档（包括OpenAI兼容接口的快速上手与5分钟跑通第一个请求）、Z.ai Coding Plan解锁GLM全系列模型调用、Claude Code 101的AI编程工具入门，以及AI Agent基础概念的视频课程。通过这些内容，我不仅掌握了大模型API调用的基础流程与OpenAI兼容接口的优势，还了解了AI编程工具的高效用法，初步建立了对AI Agent核心要素的认知，为后续的AI开发实践打下了扎实基础。
 <!-- DAILY_CHECKIN_2026-05-23_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 今天系统开启大语言模型入门学习，通过视频搭建起对LLM的基础认知与核心直觉，借助Hugging Face课程深入理解大模型的底层工作原理，同时上手实操练习LLM基础API调用，跟着官方课程完整学习Claude API的使用方法。从理论概念到实操落地，逐步掌握大模型基础逻辑与接口调用技能，夯实AI开发入门基础
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -47,6 +56,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
