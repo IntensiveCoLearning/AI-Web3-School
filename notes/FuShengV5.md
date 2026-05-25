@@ -41,10 +41,13 @@ Day 8 | AI × Web3 School
 -   继续推进 Phase 1 AI 基础剩余章节（Frameworks / MCP / Vibe Coding / Evaluation / Fine-tuning / Inference）
     
 -   可选改进：增加本地缓存、Jsoup HTML 解析、Web UI
+    
+-   参加今晚的线上分享会
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 Day 7 | AI × Web3 School
@@ -170,6 +173,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 
 
 
+
 ## **Day 6 | AI × Web3 School**
 
 ### **今日完成**
@@ -192,6 +196,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -237,6 +242,7 @@ Day 5 | AI × Web3 School
 
 
 
+
 Day 4 | AI × Web3 School
 
 今日完成：
@@ -272,6 +278,7 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日复习tc老师的web课程，并学习wsl2研究hermes具体的使用方法，有时间接着看handbook的ai部分知识。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -285,11 +292,13 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日将handbook中ai部分学完，然后开始web3部分的学习，并回顾昨晚tc老师的课
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
