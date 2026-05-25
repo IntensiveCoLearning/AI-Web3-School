@@ -15,8 +15,86 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+Day 6 · Week 2 Module A · 2026-05-25
+
+▎ Cohort 0 · 主方向选择 · AI × Web3 School
+
+今天做了什么
+
+把 Week 1 的 5 个工具型小项目（交易解释器 / 风险分析器 / 钱包授权检查 / RAG / DAO Agent）转成一张可讨论的问题地图，从
+
+6 个交叉方向里收敛出主方向，准备进入 Week 3 的 proposal。
+
+想清楚了三件事
+
+1\. Week 2 不是继续堆工具，是建立判断框架
+
+继续写代码=跑偏。这一周回答的是"哪些问题值得用 AI × Web3 的方式做"。
+
+2\. 真交叉的判断标准
+
+两问连续过关才算真交叉：
+
+\- 没有 AI → 这个问题是否仍然成立？
+
+\- 没有 Web3 → 这个问题是否仍然成立？
+
+任一答案是"成立"，就是概念拼贴。
+
+3\. AI 能力 × Web3 机制要具体到动词
+
+不能停在"用了 LLM"和"上了链"。要说清 AI 承担的是理解 / 生成 / 规划 / 监控里的哪个，Web3 提供的是支付 / 权限 /
+
+可验证记录 / 结算里的哪个。
+
+主方向：Module D — Wallet / Permission / Safe Execution
+
+具体落点：AgentPact MVP — 把 5/20 的 advisor（事前风险评估）升级成 executor with bounded autonomy（用户授 Pact → agent
+
+在边界内自主执行 → 超界自动停 + 通知）。
+
+为什么不是纯 AI 问题
+
+LLM 自己不能签名上链、不能强制预算、不能留可验证证据。没有 Web3 的权限合约 + audit log + 结算层，所谓"agent
+
+自动执行"就是"信中心化平台老板"。
+
+为什么不是纯 Web3 问题
+
+Multi-sig / ERC-4337 / Safe Guards 已存在 3-5 年但门槛太高 —— 普通用户表达不了"只允许它在 Uniswap V3 上 swap
+
+USDC，每天不超过 $500"。LLM 是把权限系统从工程师专属降到普通用户可用的关键。
+
+承接最强：直接复用 5/20 的 SimpleToken / TokenShop / Context Engineering，新增工作量最小化。
+
+赛道对口：Cobo CAW、Safe Guards、ETHGlobal AA。
+
+接下来（Week 2 剩余）
+
+\- \[ \] 项目初步 proposal（目标用户 / 场景 / MVP / 验证 / 风险）
+
+\- \[ \] 参考资料清单 ≥5 条
+
+\- \[ \] 方向 backlog（B/C/E/F/G 暂不选的原因）
+
+\- \[ \] Week 2 复盘 + Handbook feedback
+
+今日产出
+
+\- 问题地图：[module-a-problem-map.md](http://module-a-problem-map.md)
+
+([https://github.com/add-cmd/ai-web3-school-cohort-0/blob/master/2026-05-25/module-a-problem-map.md](https://github.com/add-cmd/ai-web3-school-cohort-0/blob/master/2026-05-25/module-a-problem-map.md))
+
+\- D 方向深挖（流程图 + Pact JSON Schema + Policy Engine 伪代码 + 反例 + 风险表 + 验证计划）：[module-d-deep-dive.md](http://module-d-deep-dive.md)
+
+([https://github.com/add-cmd/ai-web3-school-cohort-0/blob/master/2026-05-25/module-d-deep-dive.md](https://github.com/add-cmd/ai-web3-school-cohort-0/blob/master/2026-05-25/module-d-deep-dive.md))
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 # **Week 1 共学打卡 — AI 与 Web3 基础知识**
 
 > **日期：** 2026-05-18 ~ 2026-05-24 **参与者：** add-cmd **环境：** WSL + Windows（Go + Python + Foundry）
@@ -145,6 +223,7 @@ NaN.  WCB 打卡流程还没完全熟悉，这是第一次提交
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 Day 5 — 智能体（Agent）打卡笔记
 
 📖 学了什么
@@ -244,6 +323,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-22
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 Day 4 — RAG（检索增强生成）打卡笔记
 
 📖 学了什么
@@ -319,6 +399,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-21
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -411,6 +492,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-20
 
 
 
+
 Day 2 完成总览
 
 📘 Prompt 章节核心要点：
@@ -446,6 +528,7 @@ Day 2 完成总览
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
