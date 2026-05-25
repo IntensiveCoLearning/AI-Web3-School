@@ -15,8 +15,81 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+### **🎯 今日目标**
+
+用 HTML + ethers.js 做一个极简前端，实时读取链上 AI 结论。
+
+### **📖 理论**
+
+将区块链的信任与 AI 的智能相结合，开发者可以创建能扩展、少手动操作的应用。2025年越来越多的 Web3 团队使用 AI 来运行智能合约、管理用户流程和检测威胁。
+
+### **🛠️ 实操**
+
+新建 `frontend/index.html`：
+
+```
+HTML
+```
+
+```
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>AI × Web3 Oracle Demo</title>
+  <script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+  <style>
+    body { font-family: monospace; background: #0d1117; color: #58a6ff; padding: 40px; }
+    .card { border: 1px solid #30363d; padding: 20px; border-radius: 8px; max-width: 600px; }
+    .result { color: #3fb950; font-size: 1.2em; margin-top: 10px; }
+    button { background: #238636; color: white; border: none; padding: 10px 20px; 
+             border-radius: 6px; cursor: pointer; margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h2>⛓️ AI × Web3 Oracle — 链上 AI 分析仪</h2>
+  <div class="card">
+    <p>合约地址: <span id="addr">加载中...</span></p>
+    <p>最新 AI 结论:</p>
+    <div class="result" id="result">读取中...</div>
+    <p style="color:#8b949e">更新时间: <span id="time">-</span></p>
+    <button onclick="fetchResult()">🔄 刷新链上数据</button>
+  </div>
+
+  <script>
+    const CONTRACT_ADDRESS = "你的合约地址";  // 替换！
+    const ABI = [
+      "function getResult() view returns (string, uint256)",
+    ];
+    const RPC = "https://eth-sepolia.g.alchemy.com/v2/你的KEY"; // 替换！
+
+    async function fetchResult() {
+      const provider = new ethers.JsonRpcProvider(RPC);
+      const contract = new ethers.Contract(CONTRACT_ADDRESS, ABI, provider);
+      const [result, timestamp] = await contract.getResult();
+      
+      document.getElementById("addr").textContent = CONTRACT_ADDRESS;
+      document.getElementById("result").textContent = result || "暂无数据";
+      document.getElementById("time").textContent = 
+        new Date(Number(timestamp) * 1000).toLocaleString("zh-CN");
+    }
+
+    fetchResult();
+  </script>
+</body>
+</html>
+```
+
+直接用浏览器打开 `index.html` 即可看到效果。
+
+**产出**：浏览器页面显示链上的 AI 分析结论和时间戳 ✅
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 ### **📖 理论**
 
 区块链上每笔交易、钱包余额、合约状态都可公开读取；AI Agent 可分析数百万地址的模式，无需协商 API 权限——区块链本身就是数据库。与传统金融需要中间人不同，AI 可以直接与智能合约交互。
@@ -87,6 +160,7 @@ if __name__ == "__main__":
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 ### **🎯 今日目标**
 
 搭建 AI 分析脚本，模拟"链下 AI 推理"环节。
@@ -136,6 +210,7 @@ if __name__ == "__main__":
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 ### **🎯 今日目标**
@@ -191,6 +266,7 @@ npx hardhat run scripts/deploy.js --network sepolia
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -259,6 +335,7 @@ npx hardhat test  # 跑通默认测试
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -615,6 +692,7 @@ text
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1151,6 +1229,7 @@ text
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
