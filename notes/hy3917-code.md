@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+为啥我被淘汰了
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 **ERC-8004（身份）** — 给 AI 代理颁发"身份证"，让其他代理能找到它、信任它
 
 **ERC-8183（商业）** — 定义代理之间如何接任务、锁定资金、验收结算，相当于链上版 Upwork
@@ -26,6 +32,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 OpenAI Agents SDK 是 OpenAI 官方推出的一个轻量级、功能强大的 Python 框架，专为构建单 Agent 或多 Agent
 
@@ -120,6 +127,7 @@ Libraries 提供。
 <!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+
 [https://z168r49nf7s0-d.space-z.ai/](https://z168r49nf7s0-d.space-z.ai/)
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/hy3917-code/images/2026-05-20-1779274011029-image.png)
@@ -150,6 +158,7 @@ Libraries 提供。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
