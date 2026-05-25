@@ -15,8 +15,40 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+[在网站aiweb3.school](http://在网站aiweb3.school)学习的时候，看到支付协议x402，引起我的注意，调研学习了X402协议。
+
+x402协议是一个将“付款”嵌入HTTP请求流程的开放协议。服务端使用HTTP402告诉客户端，某个资源需要付费，客户端用钱包生成付款授权，再把付款凭证随请求发送，服务端可以验证并进行结算后返回资源。
+
+传统的API服务：客户端 → 请求 API → 服务端检查 API Key/账户余额 → 返回结果
+
+x402 API：客户端 → 请求 API → 服务端返回 402 要求付款 → 客户端签名付款 → 服务端验证付款 → 返回结果
+
+核心是让HTTP API、数据服务、内容服务等，可以按次、自动的进行收付款操作。
+
+x402解决什么问题？
+
+传统互联网支付，用户创建账户并绑定支付方式，创建API订阅。用户调用API，服务端维护账户的余额、账单、调用次数等，服务端根据维护的该用户的调用状态来决定是否支持调用。这种模式适用于人类，对于AI Agent和程序化调用很麻烦。
+
+比如说，某个AI Agent想要调用天气API、某数据服务API等多个API，并不适合每个服务都执行传统的互联网支付操作。
+
+x402的思路是：基于HTTP协议中自带 402 Payment Required 状态码，当资源需要支付时，服务器返回该code，并带有支付信息：“该接口需要支付0.001 USDC，收款地址是：0x123....des，。当客户端收到后，就会自动执行付款操作，并再次请求该接口。
+
+x402有4个核心角色：
+
+① Client/Buyer: http请求方，主要是资源请求方，读取服务端返回的付款要求；用钱包生成付款凭证，并发给服务端。
+
+② Server/Seller：资源提供方，提供资源，通知请求方付款，验证付款凭证并返回资源。
+
+③ Wallet：钱包，客户端需要钱包来签名付款授权。
+
+④ Facilitator：支付协助方 / 结算服务，一个可选但推荐的服务。对于服务端来说，可以不用自己实现查链上交易、监听确认交易信息等操作，可以把这些操作交给Facilitator来做。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 主要在Sepolia测试网部署一份存证合约，部署的合约交易hash为：0x11436e8b75dd7b7a7303e96922dea649cef624298e32a6331333b067ee6d6834，合约地址为0x45acd158f0e5c7d4f97766d636240e70b7a6b89c。  
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/sl-tech-design/images/2026-05-22-1779434919300-image.png)
@@ -63,6 +95,7 @@ contract EvidenceRepository {
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
+
 今天任务：  
 ①在[https://aiweb3.school/zh/handbook/ai/](https://aiweb3.school/zh/handbook/ai) 网站上复习AI的概念
 
@@ -75,6 +108,7 @@ contract EvidenceRepository {
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 两个任务：学习web3基础概念；本地部署hermes。  
@@ -230,6 +264,7 @@ https://github.com/NousResearch/hermes-agent/blob/main/README.zh-CN.md
 
 
 
+
 主要在自己本地部署hermes。但是遇到一些问题，现在卡在网络上，下载hermes到约99%就会失败，目前正在排查（放弃使用http clone，改为使用ssh了，不知道会不会成功）。后面也会把整个部署过程记录，上传到打卡点。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/sl-tech-design/images/2026-05-19-1779196495368-image.png)
@@ -237,6 +272,7 @@ https://github.com/NousResearch/hermes-agent/blob/main/README.zh-CN.md
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
