@@ -227,7 +227,7 @@ more information
 | [ggzijean](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ggzijean.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | |
 | [slucifersz](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/slucifersz.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JessieChen5](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JessieChen5.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [NakkiYANG](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/NakkiYANG.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | | |
+| [NakkiYANG](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/NakkiYANG.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | |
 | [hgkgkgk](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hgkgkgk.md) | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
 | [yichen-bear](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yichen-bear.md) | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | | | |
 | [1q2qq789](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/1q2qq789.md) | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | |
@@ -1233,6 +1233,7 @@ more information
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
