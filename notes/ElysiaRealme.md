@@ -15,8 +15,15 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+pow:  
+[https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/daily/2026-05-27.md](https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/daily/2026-05-27.md)
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 pow:  
 [https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/daily/2026-05-26.md](https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/daily/2026-05-26.md)
 <!-- DAILY_CHECKIN_2026-05-26_END -->
@@ -24,11 +31,13 @@ pow:
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 pow:[https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/daily/2026-05-25.md](https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/daily/2026-05-25.md)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 pow 笔记  
@@ -40,12 +49,14 @@ pow 笔记
 
 
 
+
 proof of work:  
 [https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/daily/2026-05-23.md](https://github.com/ElysiaRealme/ai-web3-school-cohort-0/blob/main/daily/2026-05-23.md)
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -64,6 +75,7 @@ Proof:
 
 
 
+
 今天完成了 AI x Web3 School 003 小节学习：Gas、网络、测试网和区块浏览器。
 
 Proof:
@@ -73,6 +85,7 @@ Proof:
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -97,11 +110,13 @@ Proof:
 
 
 
+
 参加了AI Agent 入门 —— Hermes 从 0 到 1 适合对象并自己做了部署
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
