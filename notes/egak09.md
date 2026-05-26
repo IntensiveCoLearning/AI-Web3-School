@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+[https://github.com/egak09/hermes-skills/blob/master/AI-Web3-School/daily-notes/2026-05-26.md](https://github.com/egak09/hermes-skills/blob/master/AI-Web3-School/daily-notes/2026-05-26.md)
+
+今天的学习笔记已上传github
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 [**https://github.com/egak09/hermes-skills/blob/master/AI-Web3-School/daily-notes/2026-05-25.md**](https://github.com/egak09/hermes-skills/blob/master/AI-Web3-School/daily-notes/2026-05-25.md)  
   
 今天的学习笔记主要包括6个板块：
@@ -48,6 +56,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 **日期**：2026-05-23  
 **标签**：#hermes #cron #windows #disk-cleanup
@@ -166,6 +175,7 @@ def strip_articles(data):
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 将目前为止关于agent的所有工作汇合成了笔记，并上传到了GitHub
@@ -429,6 +439,7 @@ AI Agent 不是聊天机器人——它是一个**控制系统**：
 
 
 
+
 **✅ 已完成事项**  
 • 事项: **BlockBeats API 验证**  
 • 详情: 确认 API Key 有效，18 个数据端点全部就绪，成功拉取 AI 赛道快讯 15 条并完成结构化输出
@@ -474,6 +485,7 @@ AI Agent 不是聊天机器人——它是一个**控制系统**：
 
 
 
+
 今天从零到一：把 Telegram 接上了（踩了 SOCKS5→HTTP 代理的坑），装好了 gh CLI 并完成 GitHub 认证，给 Hermes 做了 C 盘大瘦身（sessions/caches/skills 全迁 D 盘），存储器从内置升级到 scope-recall（SQLite + LanceDB 双层架构），构建了三套完整的交易基础设施——币安交易模块（含凯利仓位）、妖币合约策略 v2.2（68 分 + 1K 线确认）并完成 8 妖币回测验证、实盘扫描 16 币（市场安静无信号属正常），还把玄学三合一每日推送设成了 cron。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/egak09/images/2026-05-20-1779291544684-image.png)
@@ -487,11 +499,13 @@ AI Agent 不是聊天机器人——它是一个**控制系统**：
 
 
 
+
 今天主要讲进行了hermes的部署，现在还在学习怎么使用和自己编译skills
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
