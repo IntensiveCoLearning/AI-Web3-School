@@ -15,13 +15,32 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+### zkML（零知识机器学习）—— 解决信任问题
+
+-   **核心概念：** AI 模型是个“黑盒”，我们如何证明一个 AI 推理结果确实是由某个特定模型生成的，且过程中没有被篡改？**zkML (Zero-Knowledge Machine Learning)** 允许模型在不泄露权重或输入数据隐私的前提下，生成一个“正确执行”的密码学证明。
+    
+-   **应用场景：**
+    
+    1.  **隐私保护：** 用个人医疗数据跑 AI 模型，无需把隐私数据上传给中心化服务器。
+        
+    2.  **链上信用：** 将 AI 评估的信用分数通过 ZK 证明无缝引入 DeFi 智能合约。
+        
+-   **关键技术：** Risc0, Modulus Labs。
+    
+-   **今日心得：** Crypto 提供信任底座，AI 提供生产力。zkML 是让 AI 逻辑能够真正被智能合约“确信”的核心技术。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 学习agent eco治理
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 配置hermes agent
 <!-- DAILY_CHECKIN_2026-05-24_END -->
@@ -30,11 +49,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 学习ai智能体相关内容
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -126,11 +147,13 @@ AI x Web3 School
 
 
 
+
 阅读了一些ai-web3交叉方向的文档，但有待深入学习
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
