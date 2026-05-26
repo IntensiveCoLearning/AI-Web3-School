@@ -1176,7 +1176,7 @@ more information
 | [qingfengzxr](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/qingfengzxr.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [CubePlus1](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/CubePlus1.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [tymineros-glitch](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tymineros-glitch.md) | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | |
-| [yedeyu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yedeyu.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | | | |
+| [yedeyu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yedeyu.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | | | |
 | [Beckham2yyy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Beckham2yyy.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [doinb-dotcom](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/doinb-dotcom.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [czczjx04270412-dot](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/czczjx04270412-dot.md) | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | |
@@ -1233,6 +1233,7 @@ more information
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
