@@ -15,8 +15,728 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+Day 2｜Identity / Capability / Interoperability
+
+MCP 官方文档 — 理解三件事：
+
+Server / Client / Host 的角色分工
+
+Tool / Resource / Prompt 三种能力类型
+
+agent 如何"发现"一个工具的能力
+
+A2A 官方 Repo README — 理解两件事：
+
+Agent Card 是什么（类比 agent 的名片）
+
+任务如何在两个 agent 之间传递
+
+ERC-8004 摘要 — 理解一件事：
+
+链上 agent registry 解决的是"发现 + 验证"问题，而不是"执行"问题
+
+阅读后填写对比表：
+
+text
+
+| 协议 | 解决的层级 | agent 能被发现吗 | 能力可验证吗 | 链上记录吗 | 典型使用场景 |
+
+|--------|-----------|----------------|------------|-----------|------------|
+
+| MCP | | | | | |
+
+| A2A | | | | | |
+
+| ERC-8004| | | | | |
+
+下午（3h）｜代码：Agent Profile + 能力声明 + MCP-style 工具调用
+
+Task 2-1：构建 Agent Profile（45min）
+
+Python
+
+\# src/identity/agent\_profile.py
+
+import json
+
+import hashlib
+
+import time
+
+from dataclasses import dataclass, field, asdict
+
+from typing import List, Optional
+
+@dataclass
+
+class Capability:
+
+name: str # 能力名称，例如 "token\_swap"
+
+description: str # 自然语言描述
+
+input\_schema: dict # 输入参数结构
+
+output\_schema: dict # 输出结构
+
+requires\_approval: bool # 是否需要人工确认
+
+max\_budget\_usd: Optional\[float\] = None # 单次最大预算
+
+supported\_networks: List\[str\] = field(default\_factory=list)
+
+@dataclass
+
+class AgentProfile:
+
+agent\_id: str
+
+name: str
+
+description: str
+
+version: str
+
+owner\_address: str # 链上身份绑定
+
+capabilities: List\[Capability\]
+
+payment\_address: str # 收款地址
+
+pricing: dict # 收费方式
+
+created\_at: int = field(default\_factory=lambda: int(time.time()))
+
+def to\_json(self) -> str:
+
+return json.dumps(asdict(self), indent=2)
+
+def compute\_hash(self) -> str:
+
+"""生成 profile 的内容哈希，用于链上锚定"""
+
+content = self.to\_json().encode()
+
+return hashlib.sha256(content).hexdigest()
+
+def get\_capability(self, name: str) -> Optional\[Capability\]:
+
+for cap in self.capabilities:
+
+if cap.name == name:
+
+return cap
+
+return None
+
+\# 创建一个 DeFi 执行 agent 的 profile
+
+defi\_agent\_profile = AgentProfile(
+
+agent\_id="defi-executor-v1",
+
+name="DeFi Execution Agent",
+
+description="在用户授权范围内执行 DeFi 操作，包括 swap、存款、查询",
+
+version="1.0.0",
+
+owner\_address="0xYourAddress",
+
+payment\_address="0xYourPaymentAddress",
+
+pricing={
+
+"model": "per\_transaction",
+
+"base\_fee\_usd": 0.10,
+
+"success\_fee\_pct": 0.05
+
+},
+
+capabilities=\[
+
+Capability(
+
+name="query\_token\_price",
+
+description="查询指定 token 的当前价格",
+
+input\_schema={
+
+"token\_address": "string",
+
+"vs\_currency": "string (default: usd)"
+
+},
+
+output\_schema={
+
+"price": "number",
+
+"timestamp": "number",
+
+"source": "string"
+
+},
+
+requires\_approval=False, # 只读，不需要确认
+
+max\_budget\_usd=0,
+
+supported\_networks=\["ethereum", "sepolia"\]
+
+),
+
+Capability(
+
+name="execute\_token\_swap",
+
+description="在 DEX 上执行 token swap",
+
+input\_schema={
+
+"token\_in": "string (address)",
+
+"token\_out": "string (address)",
+
+"amount\_in": "number",
+
+"slippage\_tolerance": "number (0.01 = 1%)",
+
+"deadline\_minutes": "number"
+
+},
+
+output\_schema={
+
+"tx\_hash": "string",
+
+"amount\_out": "number",
+
+"gas\_used": "number",
+
+"status": "success|failed|pending"
+
+},
+
+requires\_approval=True, # 涉及资金，必须确认
+
+max\_budget\_usd=1000,
+
+supported\_networks=\["ethereum", "sepolia"\]
+
+),
+
+Capability(
+
+name="check\_allowance",
+
+description="检查当前 token approve 额度",
+
+input\_schema={
+
+"token\_address": "string",
+
+"spender\_address": "string"
+
+},
+
+output\_schema={
+
+"allowance": "number",
+
+"is\_sufficient": "boolean"
+
+},
+
+requires\_approval=False,
+
+max\_budget\_usd=0,
+
+supported\_networks=\["ethereum", "sepolia"\]
+
+)
+
+\]
+
+)
+
+print("Agent Profile:")
+
+print(defi\_agent\_profile.to\_json())
+
+print(f"\\nProfile Hash (用于链上锚定): {defi\_agent\_profile.compute\_hash()}")
+
+Task 2-2：实现 MCP-style 工具注册和调用（60min）
+
+Python
+
+\# src/identity/mcp\_style\_server.py
+
+\# 模拟一个简化的 MCP-style 工具服务器
+
+from fastapi import FastAPI, HTTPException
+
+from pydantic import BaseModel
+
+from typing import Any, Dict, List
+
+import httpx
+
+import json
+
+app = FastAPI(title="Agent Tool Server (MCP-style)")
+
+\# 工具注册表
+
+TOOL\_REGISTRY = {}
+
+def register\_tool(name: str, description: str, input\_schema: dict):
+
+"""工具注册装饰器"""
+
+def decorator(func):
+
+TOOL\_REGISTRY\[name\] = {
+
+"name": name,
+
+"description": description,
+
+"inputSchema": input\_schema,
+
+"handler": func
+
+}
+
+return func
+
+return decorator
+
+\# ===== 注册工具 =====
+
+@register\_tool(
+
+name="get\_eth\_balance",
+
+description="查询以太坊地址的 ETH 余额（Sepolia 测试网）",
+
+input\_schema={
+
+"type": "object",
+
+"properties": {
+
+"address": {"type": "string", "description": "以太坊地址"},
+
+},
+
+"required": \["address"\]
+
+}
+
+)
+
+async def get\_eth\_balance(address: str) -> dict:
+
+from web3 import Web3
+
+import os
+
+w3 = Web3(Web3.HTTPProvider(os.getenv("ETH\_RPC\_URL")))
+
+try:
+
+balance = w3.eth.get\_balance(address)
+
+return {
+
+"address": address,
+
+"balance\_wei": balance,
+
+"balance\_eth": float(w3.from\_wei(balance, 'ether')),
+
+"network": "sepolia"
+
+}
+
+except Exception as e:
+
+return {"error": str(e)}
+
+@register\_tool(
+
+name="get\_token\_price",
+
+description="通过 CoinGecko 查询 token 价格",
+
+input\_schema={
+
+"type": "object",
+
+"properties": {
+
+"token\_id": {"type": "string", "description": "CoinGecko token ID，例如 ethereum, bitcoin"},
+
+"vs\_currency": {"type": "string", "description": "计价货币，默认 usd"}
+
+},
+
+"required": \["token\_id"\]
+
+}
+
+)
+
+async def get\_token\_price(token\_id: str, vs\_currency: str = "usd") -> dict:
+
+url = f"https://api.coingecko.com/api/v3/simple/price"
+
+params = {"ids": token\_id, "vs\_currencies": vs\_currency}
+
+async with httpx.AsyncClient() as client:
+
+try:
+
+resp = await client.get(url, params=params, timeout=10)
+
+data = resp.json()
+
+price = data.get(token\_id, {}).get(vs\_currency)
+
+return {"token": token\_id, "price": price, "currency": vs\_currency}
+
+except Exception as e:
+
+return {"error": str(e)}
+
+@register\_tool(
+
+name="decode\_transaction",
+
+description="解码以太坊交易，返回人类可读的描述",
+
+input\_schema={
+
+"type": "object",
+
+"properties": {
+
+"tx\_hash": {"type": "string", "description": "交易哈希"},
+
+},
+
+"required": \["tx\_hash"\]
+
+}
+
+)
+
+async def decode\_transaction(tx\_hash: str) -> dict:
+
+from web3 import Web3
+
+import os
+
+w3 = Web3(Web3.HTTPProvider(os.getenv("ETH\_RPC\_URL")))
+
+try:
+
+tx = w3.eth.get\_transaction(tx\_hash)
+
+receipt = w3.eth.get\_transaction\_receipt(tx\_hash)
+
+return {
+
+"hash": tx\_hash,
+
+"from": tx\["from"\],
+
+"to": tx\["to"\],
+
+"value\_eth": float(w3.from\_wei(tx\["value"\], "ether")),
+
+"gas\_used": receipt\["gasUsed"\],
+
+"status": "success" if receipt\["status"\] == 1 else "failed",
+
+"block": tx\["blockNumber"\]
+
+}
+
+except Exception as e:
+
+return {"error": str(e)}
+
+\# ===== API 端点 =====
+
+@app.get("/tools")
+
+async def list\_tools():
+
+"""列出所有可用工具（对应 MCP 的 tools/list）"""
+
+return {
+
+"tools": \[
+
+{
+
+"name": v\["name"\],
+
+"description": v\["description"\],
+
+"inputSchema": v\["inputSchema"\]
+
+}
+
+for v in TOOL\_REGISTRY.values()
+
+\]
+
+}
+
+class ToolCallRequest(BaseModel):
+
+name: str
+
+arguments: Dict\[str, Any\]
+
+@app.post("/tools/call")
+
+async def call\_tool(request: ToolCallRequest):
+
+"""调用工具（对应 MCP 的 tools/call）"""
+
+tool = TOOL\_REGISTRY.get(request.name)
+
+if not tool:
+
+raise HTTPException(status\_code=404, detail=f"Tool '{request.name}' not found")
+
+result = await tool\["handler"\](\*\*request.arguments)
+
+return {"tool": request.name, "result": result}
+
+\# 运行：uvicorn src.identity.mcp\_style\_server:app --reload --port 8001
+
+Task 2-3：让 LLM agent 自动发现和调用工具（75min）
+
+Python
+
+\# src/identity/agent\_with\_tools.py
+
+\# agent 自动发现工具注册表，并通过 function calling 调用
+
+import os
+
+import json
+
+import httpx
+
+from openai import OpenAI
+
+from dotenv import load\_dotenv
+
+load\_dotenv()
+
+client = OpenAI(
+
+api\_key=os.getenv("ZHIPUAI\_API\_KEY"),
+
+base\_url="https://open.bigmodel.cn/api/paas/v4/"
+
+)
+
+TOOL\_SERVER = "http://localhost:8001"
+
+async def discover\_tools():
+
+"""从工具服务器发现可用工具，转换为 OpenAI function calling 格式"""
+
+async with httpx.AsyncClient() as http:
+
+resp = await http.get(f"{TOOL\_SERVER}/tools")
+
+tools\_data = resp.json()\["tools"\]
+
+\# 转换为 OpenAI tools 格式
+
+openai\_tools = \[\]
+
+for tool in tools\_data:
+
+openai\_tools.append({
+
+"type": "function",
+
+"function": {
+
+"name": tool\["name"\],
+
+"description": tool\["description"\],
+
+"parameters": tool\["inputSchema"\]
+
+}
+
+})
+
+return openai\_tools
+
+async def execute\_tool(tool\_name: str, arguments: dict):
+
+"""执行工具调用"""
+
+async with httpx.AsyncClient() as http:
+
+resp = await http.post(
+
+f"{TOOL\_SERVER}/tools/call",
+
+json={"name": tool\_name, "arguments": arguments},
+
+timeout=30
+
+)
+
+return resp.json()\["result"\]
+
+async def run\_agent(user\_query: str):
+
+"""运行完整的 agent 对话循环"""
+
+print(f"\\n{'='\*60}")
+
+print(f"用户: {user\_query}")
+
+print('='\*60)
+
+\# Step 1: 发现工具
+
+tools = await discover\_tools()
+
+print(f"\[Agent\] 发现 {len(tools)} 个可用工具: {\[t\['function'\]\['name'\] for t in tools\]}")
+
+messages = \[
+
+{
+
+"role": "system",
+
+"content": """你是一个 Web3 信息助手。你可以使用工具查询链上数据。
+
+在回答前，先判断需要调用哪些工具获取真实数据，不要编造数据。
+
+调用工具后，用中文解释结果。"""
+
+},
+
+{"role": "user", "content": user\_query}
+
+\]
+
+\# Step 2: Agent 循环（支持多轮工具调用）
+
+max\_iterations = 5
+
+for i in range(max\_iterations):
+
+response = client.chat.completions.create(
+
+model="glm-4-flash",
+
+messages=messages,
+
+tools=tools,
+
+tool\_choice="auto"
+
+)
+
+msg = response.choices\[0\].message
+
+messages.append(msg)
+
+\# 如果没有工具调用，直接返回最终答案
+
+if not msg.tool\_calls:
+
+print(f"\\n\[Agent 回答\]: {msg.content}")
+
+return msg.content
+
+\# 执行所有工具调用
+
+for tool\_call in msg.tool\_calls:
+
+func\_name = tool\_call.function.name
+
+func\_args = json.loads(tool\_call.function.arguments)
+
+print(f"\\n\[工具调用\] {func\_name}({func\_args})")
+
+result = await execute\_tool(func\_name, func\_args)
+
+print(f"\[工具返回\] {result}")
+
+\# 将结果加入对话历史
+
+messages.append({
+
+"role": "tool",
+
+"tool\_call\_id": tool\_call.id,
+
+"content": json.dumps(result)
+
+})
+
+return "达到最大迭代次数"
+
+\# 测试
+
+import asyncio
+
+async def main():
+
+\# 先启动工具服务器再运行这个
+
+\# uvicorn src.identity.mcp\_style\_server:app --reload --port 8001
+
+queries = \[
+
+"查一下 ethereum 的当前价格",
+
+"查询地址 0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045 的 ETH 余额",
+
+\]
+
+for query in queries:
+
+await run\_agent(query)
+
+asyncio.run(main())
+
+今日交付：
+
+agent\_profile.py 运行，打印出完整 Profile JSON 和 Hash
+
+工具服务器启动，访问 http://localhost:8001/tools 返回工具列表
+
+Agent 成功调用至少 1 个真实工具并返回结果
+
+docs/day2\_notes.md：MCP/A2A/ERC-8004 对比表 + "能力声明解决什么问题"
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 ### **🎯 今日目标**
 
 用 HTML + ethers.js 做一个极简前端，实时读取链上 AI 结论。
@@ -90,6 +810,7 @@ HTML
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 ### **📖 理论**
 
 区块链上每笔交易、钱包余额、合约状态都可公开读取；AI Agent 可分析数百万地址的模式，无需协商 API 权限——区块链本身就是数据库。与传统金融需要中间人不同，AI 可以直接与智能合约交互。
@@ -161,6 +882,7 @@ if __name__ == "__main__":
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 ### **🎯 今日目标**
 
 搭建 AI 分析脚本，模拟"链下 AI 推理"环节。
@@ -210,6 +932,7 @@ if __name__ == "__main__":
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -266,6 +989,7 @@ npx hardhat run scripts/deploy.js --network sepolia
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -335,6 +1059,7 @@ npx hardhat test  # 跑通默认测试
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -692,6 +1417,7 @@ text
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1229,6 +1955,7 @@ text
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
