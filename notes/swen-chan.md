@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+今日笔记：EOA、智能账户和多签账户的权限差异  
+[https://x.com/SwenChan/status/2058823951531593904?s=20](https://x.com/SwenChan/status/2058823951531593904?s=20)
+
+关于“实习计划”风波的看法：  
+[https://x.com/SwenChan/status/2058470307472478281?s=20](https://x.com/SwenChan/status/2058470307472478281?s=20)
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 做了英文版的 《AI x Web3 School 入门指南》：[https://x.com/SwenChan/status/2058272289041609186?s=20](https://x.com/SwenChan/status/2058272289041609186?s=20)
 
 和英文版的《大模型API key 接入入门指南》：[https://x.com/SwenChan/status/2058267141707854223?s=20](https://x.com/SwenChan/status/2058267141707854223?s=20)
@@ -25,11 +35,13 @@ AI x Web3 School
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 帮大家审批任务中！！
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 今天参加sophia的分享，其实一些问题没有得到很好的解答hhh
@@ -39,6 +51,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -57,6 +70,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -110,6 +124,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 
 
+
 今日开始学习，先发了一个prompt作为post，给大家需要用hermes agent来学习的同学
 
 然后跟着做做任务 收集问题
@@ -117,6 +132,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
