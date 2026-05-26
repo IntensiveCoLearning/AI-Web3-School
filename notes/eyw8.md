@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+![屏幕截图 2026-05-26 230351.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/eyw8/images/2026-05-26-1779807856348-_____2026-05-26_230351.png)
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 ![屏幕截图 2026-05-25 231614.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/eyw8/images/2026-05-25-1779722217721-_____2026-05-25_231614.png)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 ![屏幕截图 2026-05-24 232423.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/eyw8/images/2026-05-24-1779636357700-_____2026-05-24_232423.png)
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 ![屏幕截图 2026-05-22 230805.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/eyw8/images/2026-05-22-1779462559875-_____2026-05-22_230805.png)
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 ![屏幕截图 2026-05-20 231122.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/eyw8/images/2026-05-20-1779289894116-_____2026-05-20_231122.png)
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -128,6 +138,7 @@ python experiments/[mini-agent.py](http://mini-agent.py) 你好，你是谁 # �
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
