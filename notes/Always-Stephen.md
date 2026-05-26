@@ -15,8 +15,30 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+#AIWeb3School #Week2Day2
+
+今天三件事：
+
+1\. 深入对比了 MCP vs A2A，搞清楚了「Agent↔Tool」vs「Agent↔Agent」的区别
+
+2\. 用 Hermes 分析了一个真实合约（Uniswap V2 Router），输出了完整的合约解读
+
+3\. 完成了 Week 2 proposal 初稿：AI-Powered Smart Contract Analyzer (MCP Server)
+
+链接：
+
+\- MCP vs A2A: github.com/Always-Stephen/ai-web3-school-cohort-0/blob/master/research/mcp-vs-a2a.md
+
+\- 合约分析: github.com/Always-Stephen/ai-web3-school-cohort-0/blob/master/research/uniswap-v2-router-analysis.md
+
+\- Proposal: github.com/Always-Stephen/ai-web3-school-cohort-0/blob/master/proposals/week2-dev-tooling-proposal.md
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 \# Week 2 Day 1 — AI × Web3 交叉研究方向选择
 
 **日期**: 2026-05-25
@@ -261,6 +283,7 @@ Name: ai-web3-learning-session
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 \# Daily Note — 2026-05-22
 
 \## 今日学习：Web3 网络（Network）基础
@@ -396,6 +419,7 @@ Name: ai-web3-learning-session
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 \# Daily Note — 2026-05-21
 
 \## 今日课程
@@ -486,6 +510,7 @@ Name: ai-web3-learning-session
 
 
 
+
 今天参加了Web3 运行原理的课程，补齐了账户、钱包、签名、交易、Gas、合约、区块浏览器和测试网验证如何组成一次完整链上操作等知识，并且继续学习hermes的进阶玩法
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -495,11 +520,13 @@ Name: ai-web3-learning-session
 
 
 
+
 今天配置好了hermes，并观看了18号8pm的**AI时代，Web3开发者需要具备的基础知识和架构能力**的回放视频，学习了钱包、gas、ai的一些基础概念
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
