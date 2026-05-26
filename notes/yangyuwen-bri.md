@@ -15,8 +15,26 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+今天主要学习了 Week 2 的 Wallet / Permission / Safe Execution 方向，并参加了 Product manager of Cobo Agentic Wallet 分享。
+
+我今天的核心理解是：当 AI agent 开始参与链上动作时，最重要的问题不是“怎么让 agent 自动发交易”，而是“如何让 agent 只在明确授权、预算限制、策略检查和人工确认边界内执行”。如果 agent 直接接触私钥，或者获得长期、模糊、无限制的钱包权限，风险会非常高。
+
+Cobo Agentic Wallet 让我看到 agent wallet 更像是一套权限与执行安全基础设施。MPC、policy、Pact / task-level authorization、audit log 等机制，不是为了让 agent 更自由，而是为了让 agent 的自动化行为被限制在可验证、可撤销、可审计的范围内。
+
+我今天还扩充了一个“agent 发起链上动作”的流程图：从用户目标、agent 解析意图、生成执行计划，到读取 wallet policy、构造交易草案、交易解释和模拟、风险分级、人工确认、钱包签名、链上执行、区块浏览器验证和审计记录。这个流程让我更清楚地看到：只读查询、小额白名单动作可能适合自动化；但签名、转账、token approval、合约写入、部署升级、治理投票等动作必须保留人工确认或非常严格的 policy 控制。
+
+下一步我想继续把这个流程图整理成 Week 2 的 Wallet / Permission 任务材料，进一步设计一个 agent wallet 场景的权限策略，包括预算、可调用合约、可执行动作、人工确认阈值、撤销方式和日志记录。
+
+Repo:
+
+[https://github.com/yangyuwen-bri/aiweb3-learning-journal](https://github.com/yangyuwen-bri/aiweb3-learning-journal)
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 今天参加 / 学习了「Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性」相关内容，并把课件整理成中文学习笔记。
 
 今天最重要的收获是：Agent Memory 不是更大的上下文窗口，也不是简单的 RAG，而是一个跨时间管理意图和状态的系统。用户一开始给出的目标往往是不完整的，真正有用的任务状态是在澄清、选择、工具调用、验证和产出过程中逐步形成的。好的 memory 应该保留这些有效状态，让下一次工作可以 resume，而不是 restart。
@@ -38,6 +56,7 @@ Repo:
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 今天主要做 Week 1 收尾和 proof-of-work 打包。我回顾了目前已经完成并提交的任务：GitHub 学习仓库、课程工具准备、Learning Agent Setup、Sepolia 测试网交易，以及 5.20 Web3 运行原理相关记录。
 
 今天也继续整理 AI Concept Coach 这个 AI 可交互学习产物。它不是普通聊天框，而是一个概念复述训练器：用户输入 AI 概念困惑，glm-5.1 生成结构化解释和自测问题；用户再用自己的话复述，模型反馈复述质量并生成修正版学习笔记。
@@ -51,6 +70,7 @@ Repo:
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -79,6 +99,7 @@ Repo:
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -127,6 +148,7 @@ Repo:
 
 
 
+
 今天围绕 Week 1 的 AI Agent / Hermes 主题，整理了自己对 prompt、workflow 和 agent 的初步理解，并把它和我的 AI x Web3 School 学习仓库连接起来。
 
 今日完成：
@@ -163,6 +185,7 @@ Demo:
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
