@@ -15,6 +15,11 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+今天听了 Agent Wallet 讲座，收获很大。成功将 Hermes Agent 接入了 Cobo Agentic Wallet，创建了专属 Agent 钱包（BSC 地址 0xed788dbae5ea12300e55cc3fad31dc19f8aeebeb），完成了 USDT 查询、授权、Swap 报价等链上操作流程。最大的教训是 BSC 链上操作需要 BNB 支付 gas，钱包必须保持一定 BNB 余额。后续计划探索 Agentic Wallet 与黑客松项目的结合。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 打卡，试一下我的Hermes Agent部署的Github仓库是否成功
