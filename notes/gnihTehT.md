@@ -15,8 +15,64 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+## 每日打卡 — 2026-05-26（周二）
+
+### 今日学习内容
+
+\- \[x\] WCB 交接与任务梳理 — 接手 thound 工作，了解仓库现状
+
+\- \[x\] Agent Secret API Key 测试与分析 — 发现 [api.web3career.build](http://api.web3career.build) 503 宕机
+
+\- \[x\] 开发最小可交互 AI 学习产物 — ai\_[learn.py](http://learn.py)（概念测验 + 解释 + 对比）
+
+\- \[x\] 任务清单梳理 — 整理 Week 1~2 所有有时限/长期任务
+
+### 核心概念
+
+\- **Agent Secret API Key**：WCB 平台生成的密钥，用于外部 Agent 以用户身份调用平台 API。当前独立后端（[api.web3career.build](http://api.web3career.build)）503 不可用，需等项目方修复。
+
+\- **最小可交互学习产物**：一个 CLI 工具，覆盖 12 个 AI × Web3 概念，支持测验/解释/对比三种模式。
+
+\- **Learning Agent 角色边界**：Agent 可规划、解释、整理、生成草稿；但创建 repo、写文件、commit/push、WCB 提交需人工确认；绝不碰钱包/私钥/API key。
+
+### 疑问 / 不理解的点
+
+\- \[ \] WCB 独立 API 后端什么时候恢复？需在 Discord 问项目方
+
+\- \[ \] Demo 方向还没定——需要在 Week 3 结束前（6/7）锁定
+
+### 练习 / 作业
+
+\- \[x\] 完成 Learning Agent Setup 任务验证（已确认 thound 初始化完毕）
+
+\- \[x\] 完成最小可交互学习产物 ai\_[learn.py](http://learn.py)（AI 辅助，人工复核）
+
+\- \[ \] 提交 AI 基础概念卡片到 WCB（thound 已提交了 GitHub）
+
+\- \[ \] 提交 Learning Agent Setup 到 WCB
+
+### 明日计划
+
+\- \[ \] 如果时间允许，开始 Phase 2 的 Agent 章节学习
+
+\- \[ \] 准备 5/29 例会上麦分享（3-5 分钟学习感受）
+
+\- \[ \] 关注 5/27 Neo-Cypherpunk & Privacy 活动 + 5/28 [Z.AI](http://Z.AI) 1st
+
+### 笔记
+
+\- 今日学习时长：~1h
+
+\- 状态（🔥 顺利 / 😵 吃力 / 😤 卡住）：🔥 顺利 — 交接清晰，任务路标明确
+
+\- 交接印象：thound 留了完整的工作流文档和学习计划，上手很顺畅
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 ## **EOA vs 智能账户 vs 多签账户：权限与安全边界对比**
 
 ### **对比总表**
@@ -97,6 +153,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 ## **1\. LLM（大型语言模型）**
 
@@ -179,6 +236,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 或许会有老师对在旧手机部署agent废物利用感兴趣？
@@ -266,6 +324,7 @@ echo 'export http_proxy=http://127.0.0.1:7890' >> ~/.bashrc
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -369,6 +428,7 @@ cd ~/openclaw && node scripts/run-node.mjs gateway
 
 
 
+
 ### **笔记 | AI 下乡计划｜AI 在 Web3 的应用**
 
 如果AI只是聊天，Web3不是必需品，但当AI开始租算力、买数据、调用APl、发起交易、管理资产、和其他agent协作时，它就需要一个能被授权、能付款、能记录、能追责的经济层。
@@ -390,6 +450,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -455,6 +516,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 
 
+
 **笔记 | AI Agent 入门：Hermes 从 0 到 1**
 
 今天学习了Hermes，总体来说和我在用的openclaw差不多，打算还是和龙虾一样部署在旧手机上。
@@ -468,6 +530,7 @@ AI+Web3的核心不是发币，而是经济基础设施。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
