@@ -15,8 +15,136 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+## **今日完成：AI × Web3 问题地图**
+
+### **任务产出**
+
+-   画一张覆盖 6 个方向的 AI × Web3 问题地图
+    
+-   说明每个方向的 AI 作用与 Web3 机制
+    
+-   分析 Payment 和 Wallet 为什么不是纯 AI 问题 / 纯 Web3 问题
+    
+
+### **任务文件**
+
+-   `tasks/Week2-Problem-Map-and-Direction.md` — 问题地图 + 方向分析
+    
+
+* * *
+
+## **Hackathon 方向 Ideas（待打磨）**
+
+### **Idea 1：AI Agent 操作监控与异常预警**
+
+**方向**：Wallet / Permission
+
+**痛点真实性**： 2026 年自主 DeFi 资产管理、合规监控、制裁筛查、风险评分等 Agent 用例已获最大市场牵引力。但企业级 Agent 钱包越来越需要人类可读的审计追踪——将 Agent 决策与链上操作关联——以及异常行为检测和紧急停止机制。
+
+现状：大量团队用 AI Agent 执行链上操作，但"做了什么"几乎是黑盒。操作日志是十六进制，没有上下文，没有异常检测，出了问题才发现。
+
+**真实用户**：
+
+-   用 AI Agent 管理 DeFi 仓位的个人用户：不知道 Agent 昨晚做了什么
+    
+-   小型 DAO 或项目方：让 Agent 代为执行资金操作，需要审计报告
+    
+-   开发者：自己写的 Agent 跑了一段时间，想回溯行为
+    
+
+**MVP 核心功能**：监控指定钱包地址，持续读取链上操作，用 AI 生成自然语言"行为日志"，发现异常时告警。
+
+**告警规则示例**（规则引擎，无需 ML）：
+
+-   单笔金额超过历史均值 3 倍 → 高风险告警
+    
+-   首次交互从未见过的合约地址 → 未知合约警告
+    
+-   连续 5 分钟内超过 10 笔操作 → 异常频率告警
+    
+-   向黑名单地址转账 → 立即停止并告警
+    
+
+**输出示例**：
+
+```
+[2026-05-26 14:32] Agent 执行了 Uniswap V3 swap，将 500 USDC 换成 0.18 ETH，滑点 0.3%，正常。
+[2026-05-26 14:35] ⚠️ 检测到异常：Agent 向一个从未交互过的合约（0x9f3B...）发起了 approve，金额无上限（MAX_UINT256）。建议人工确认。
+```
+
+**分级安全系统**（四档）：
+
+-   INSTANT：小额交易立即执行
+    
+-   NOTIFY：中等金额触发通知
+    
+-   DELAY：较大金额延迟等待审查
+    
+-   APPROVAL：最大金额需要人工明确批准
+    
+
+**技术栈**：
+
+```
+Alchemy Webhook / Etherscan API ← 实时/定期获取钱包交易
+↓
+Python 规则引擎 ← 异常检测逻辑
+↓
+LLM API ← 把操作翻译成人类可读日志
+↓
+Telegram Bot ← 告警推送（最快，3小时搭好）
+```
+
+* * *
+
+### **Idea 2：AI Safe Wallet**
+
+**方向**：Wallet / Permission
+
+**核心**：AI + Account Abstraction + Policy Engine
+
+AI Agent 自动执行交易，但：
+
+-   每笔交易有风险评分
+    
+-   用户可设置权限边界
+    
+-   链上可审计
+    
+-   支持 Intent-based 操作
+    
+
+* * *
+
+## **下一步**
+
+-   从以上两个 ideas 里选一个作为 Week 2 主线
+    
+-   确认技术栈，开始搭建最小 Demo
+    
+-   研究 Alchemy Webhook 或 Etherscan API 的实时交易监控能力
+    
+
+* * *
+
+## **Reference**
+
+-   Crypto APIs - The Agentic Blockchain Stack (2026)：[https://cryptoapis.io/blog/564-the-agentic-blockchain-stack-how-ai-agents-are-rewriting-on-chain-infrastructure-in-2026](https://cryptoapis.io/blog/564-the-agentic-blockchain-stack-how-ai-agents-are-rewriting-on-chain-infrastructure-in-2026)
+    
+-   Blockchain Council - AI in Blockchain：[https://www.blockchain-council.org/blockchain/ai-in-blockchain/](https://www.blockchain-council.org/blockchain/ai-in-blockchain/)
+    
+-   DEV Community - Python SDK for AI Agents：[https://dev.to/walletguy/python-sdk-for-ai-agents-async-wallet-control-with-zero-dependencies-e43](https://dev.to/walletguy/python-sdk-for-ai-agents-async-wallet-control-with-zero-dependencies-e43)
+    
+-   Safe：[https://safe.global/](https://safe.global/)
+    
+-   Alchemy：[https://www.alchemy.com/](https://www.alchemy.com/)
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 ### **1\. Payment / Commerce**
 
 **AI 侧：** AI Agent 可以自动决策触发支付（买 API、买数据、买算力），无需人介入。
@@ -280,6 +408,7 @@ AI x Web3 School
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
+
 ## **学习内容**
 
 ### **文档阅读（Ethereum 官方）**
@@ -353,6 +482,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 ## **今日完成**
 
 ### **受限 Web3 助手设计**
@@ -407,6 +537,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -519,6 +650,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -937,6 +1069,7 @@ result = agent.invoke({"messages": [{"role": "user", "content": "hi"}]})
 
 
 
+
 ## **学习内容**
 
 ### **主题 1：测试网交易任务**
@@ -1169,6 +1302,7 @@ my-project/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1555,6 +1689,7 @@ A：很难追回。所以审计（audit）和风险监控非常重要。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
