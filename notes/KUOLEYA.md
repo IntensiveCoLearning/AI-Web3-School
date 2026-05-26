@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+今天完成模块C的实验方向4下图为生成的成果：
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/KUOLEYA/images/2026-05-26-1779809141872-image.png)
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 今天完成模块B的所有实践任务
 
 1.下图为创建的测试钱包,以及接入的测试网和领取的测试币
@@ -45,6 +53,7 @@ AI x Web3 School
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 今天复习Web3相关的一些知识点，这里还是引用材料中的知识点进行总结。
 
 首先账户、地址与钱包常被混为一谈，但在AI与Web3的构建逻辑中，三者的边界必须厘清：钱包并非普通账号，而是一把掌握私钥、承担安全责任并发起链上动作的唯一入口。\*\*助记词\*\*是私钥的人类可读种子，\*\*私钥\*\*是控制资产的唯一凭证，\*\*地址\*\*则是从私钥推导出的公开收付款标识——正因私钥与助记词能直接支配资产与权限，一旦泄露意味着完全失控，所以必须永远离线保存、绝不触碰网络。
@@ -62,6 +71,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 今天完成模块A的任务3：
@@ -107,6 +117,7 @@ AI x Web3 School
 
 
 
+
 今天接着昨天的任务1完成任务2。
 
 仓库链接：[KUOLEYA/ai-web3-study: AI × Web3 课程学习实验仓库](https://github.com/KUOLEYA/ai-web3-study)
@@ -133,6 +144,7 @@ Agent协助日志：
 
 
 
+
 今天完成了模块a的任务1,包括搭建hermes-agent并完成一次对话式学习任务
 
 ![屏幕截图 2026-05-20 100141.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/KUOLEYA/images/2026-05-20-1779290806560-_____2026-05-20_100141.png)
@@ -142,6 +154,7 @@ Agent协助日志：
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
