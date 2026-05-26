@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+\[参考\](https://github.com/ogalias/OGBC-Intern-Project/blob/master/stage1/stage1.md) ## Polymarket 的核心数据模型 > 数据模型：事件 (Event)、市场 (Market)、条件 (Condition)、集合 (Collection)、头寸 (Position 或 TokenId) 在 Polymarket 中，事件代表一个预测主题，例如"某次美联储利率决议"。一个事件下可以包含一个或多个市场。每个市场对应该事件下的一个具体预测问题。例如，对于事件"2024年美国大选"可以有多个市场："候选人 A 当选总统？"、"候选人 B 当选总统？"等，每个市场通常是一个二元预测（Yes/No）。 - Market（市场） 对应具体的 Yes/No 问题，是交易发生的基本单位。一些事件只有一个市场（例如简单的二元事件），而有些事件包含多个市场形成一个多结果事件，此时通常采用 Polymarket 的"负风险 (NegativeRisk)"机制来提高资金效率。 - NegativeRisk（负风险） 当一个事件包含多个互斥市场（即"赢家通吃"的多选一事件）时，Polymarket 引入 NegRiskAdapter 合约，将这些市场关联起来，提高流动性利用率。具体来说，\*\*在同一事件下，一个市场的 NO 头寸可以转换为该事件中所有其他市场的 YES 头寸\*\*。NegRiskAdapter 合约提供了 convert 功能，实现 NO → YES 的头寸转换。 🎯 场景设定：2024 美国总统大选 假设只有两个主要候选人： 市场 A：特朗普获胜，市场 B：哈里斯获胜。这是一个互斥事件，只有一方获胜。 > ❌ 没有 NegRiskAdapter 时： > > 1.用户小明 认为“特朗普不会赢”，去市场 A 买入 NO (特朗普输)。 > > 成本：假设 NO 价格是 $0.60。小明花 $60 买了 100 股 NO。 > > 结果：如果特朗普输了（哈里斯赢），小明赚 $40。 > > 2.用户小红 认为“哈里斯会赢”。去市场 B 买入 YES (哈里斯赢)。 > > 成本：假设 YES 价格是 $0.55。小红花 $55 买了 100 股 YES。 > > 结果：如果哈里斯赢了，小红赚 $45。 虽然小明的观点（特朗普输）和小红的观点（哈里斯赢）在逻辑上是完全等价的，\*\*但他们的资金被锁在两个不同的市场池子里\*\*，最后获利也不一样。 > ✅ 引入 NegRiskAdapter 后： > > Polymarket 将这两个市场通过 NegRiskAdapter 合约关联起来，形成一个事件组合。核心逻辑公式：在互斥事件中持有“市场 A 的 NO” = 持有“除了 A 以外所有结果的 YES”，即：NO(特朗普) ≡ YES(哈里斯)，此时交易如下： > > !\[\](image.png) > > !\[\](image-1.png) NegRiskAdapter机制优势： 1. 流动性合并 通过转换机制，同一事件所有市场的 NO 流动性都可以瞬间变成任意其他市场的 YES 流动性，让不同候选人市场里的资金形成了一个巨大的共享资金池。\*\*大户想进出大单，不会因为某个单一市场深度不够而滑点巨大。\*\* 2. 资本效率 做市商不需要为每个结果都单独准备资金，可以只在一个市场（比如最热门的那个）提供 NO 流动性，然后通过 convert 自动满足其他市场 YES 的买单需求。 3. 无摩擦套利 如果市场价格出现偏差，例如：Price(NO\_Trump) = $0.60，Price(YES\_Harris) = $0.70，套利者可以瞬间买入 NO\_Trump，通过 Adapter 转换成 YES\_Harris，然后卖出！ Polymarket 使用 Gnosis 开发的条件代币框架 (Conditional Token Framework, CTF) 来实现预测市场的头寸代币化。 ### Condition（条件） 每个市场在链上的"登记身份"。创建市场时，会调用 CTF 合约的 prepareCondition 方法注册一个条件。ConditionId 是通过keccak256计算得出的\*\*唯一标识\*\*： \`\`\`solidity /\*\* oracle 是预言机合约地址（Polymarket 目前使用 UMA Optimistic Oracle 作为预言机）。 questionId 是问题的标识符（通常由问题内容等信息哈希得到，或 UMA Oracle 的 ancillary data 哈希）。 outcomeSlotCount 是结果选项数量。对于二元市场，值为 2。 \* \*/ conditionId = keccak256(oracle, questionId, outcomeSlotCount) \`\`\` ### Position（头寸） 头寸指用户持有的某市场某结果的份额。Polymarket 将每个头寸实现为一个 ERC-1155 标准的可交易代币（又称 PositionId 或 TokenId）。每种结果对应一个不同的 TokenId，用于区分 YES 和 NO 两种头寸。 ### CollectionId（集合 ID） 在条件代币框架中，中间引入了集合的概念，用于表示特定条件下某个结果集合。计算方法为： \`\`\`solidity /\*\* parentCollectionId 对于独立的条件通常为 bytes32(0)（Polymarket 所有市场都是独立条件，没有嵌套条件，因此 parentCollectionId 一律为 0）。 indexSet 是一个二进制位掩码，表示选取哪些结果槽位。对于二元市场，有两个可能的 indexSet： YES 头寸的 indexSet = 1 (0b01，表示选取第一个结果槽)。 NO 头寸的 indexSet = 2 (0b10，表示选取第二个结果槽)。 \* \*/ collectionId = keccak256(parentCollectionId, conditionId, indexSet) \`\`\` ### TokenId（PositionId） 最后，用抵押品代币地址和集合 ID 一起计算得到 ERC-1155 的 Token ID： \`\`\`solidity tokenId = keccak256(collateralToken, collectionId) \`\`\` 在 Polymarket 中，对于每个市场，会产生两个 TokenId，一个对应 YES 份额，一个对应 NO 份额。这两个 TokenId 是在该市场上交易的标的资产，代表了对同一预测问题的两种相反结果的头寸。 ### Collateral（抵押品） Polymarket 市场的押注资金均以稳定币 USDC (Polygon 上为 USDC.e) 作为抵押品。\*\*每份 Outcome Token 背后对应 1 USDC 的抵押\*\*，当市场结算时兑现。 价格含义：比如价格 0.60 USDC 意味着花 0.60 USDC 可购买该市场 1 份 YES 代币。如果该结果最终发生，持有者可赎回 1 USDC（获得净盈利 0.40 USDC）；如果未发生，则该代币价值归零，损失全部本金 0.60 USDC。因此，二元期权代币价格可以理解为市场对该事件发生概率的定价。 ## Polymarket 链上日志在"市场创建 → 交易 → 结算"全过程中的作用 ## 链上日志解析
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 * * *
 
 * * *
@@ -127,6 +133,7 @@ AI x Web3 School
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 Gas 是 EVM 执行操作的单位。每条指令消耗固定的 gas，具体可以看\[以太坊 操作码\](https://ethereum.org/zh/developers/docs/evm/opcodes/)，gas 优化目标是减少交易所需的总 gas，提高用户体验并降低成本。  
   
 \*\*区块链数据存储位置有三种：storage（存储，也就是磁盘）、memory（内存，临时的）、calldata（只读数据）\*\*  
@@ -213,11 +220,13 @@ for (uint i = 0; i < len; ++i) {
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 打卡，今天投了简历
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -413,6 +422,7 @@ AI 时代会出现大量新“商家”：
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -683,6 +693,7 @@ address addr = address(token);
 
 
 
+
 今天学了the graph。
 
 \[官网\]([https://thegraph.com/docs/en/subgraphs/quick-start/](https://thegraph.com/docs/en/subgraphs/quick-start/))
@@ -734,6 +745,7 @@ publish 后：别人也能把它当正式网络服务来用
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
