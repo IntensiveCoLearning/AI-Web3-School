@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+这周算是一头扎进了AI×Web3的坑里，从周日的开营仪式开始，整个人就被课程和co-learning排得满满当当。周日晚上的开营仪式直接给整个学习周期上了发条，听完对目标和节奏有了底，也给自己立了这周不摆烂的flag。周一的两场活动连轴转，晚上先跟大家一起推进任务，第一次接触AI在Web3开发里的基础应用场景，紧接着又上了Web3开发入门课，虽然很多术语听得头大，但好歹搞懂了“AI时代Web3开发到底在干嘛”。周二的AI Agent入门课是这周的重头戏，跟着学了Hermes相关的内容，终于摸到了AI Agent的门，算是打开了新世界的一角。周三下午先啃了Web3运行原理，晚上又接着co-learning推进任务，感觉每天的知识点都在叠buff，越学越觉得自己要补的东西好多。周四的“AI下乡计划”让我第一次系统了解了AI在Web3里的落地场景，原来两者结合的玩法比我想象的要多得多。[周五的Z.AI](http://周五的Z.AI)分享和优秀笔记复盘，一边学别人的思路，一边对照自己的笔记查漏补缺，发现自己还有好多细节没搞透。周六的Open Agentic和co-learning从早忙到晚，上午听了关于Agentic应用的分享，下午接着推进项目任务，一周下来感觉脑子被塞得满满当当，虽然有点累，但看着自己一点点跟上节奏，还是挺有成就感的，下周继续冲！
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 ![IMG_0787.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/zhangchengcheng1220/images/2026-05-24-1779583602888-IMG_0787.png)
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 ![IMG_0785.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/zhangchengcheng1220/images/2026-05-22-1779454048175-IMG_0785.png)
 <!-- DAILY_CHECKIN_2026-05-22_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-21_START -->
 
 
+
 ![image.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/zhangchengcheng1220/images/2026-05-21-1779367945648-image.jpg)
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 昨天把Web3和Web2的区别、钱包和交易流程理了一遍，感觉终于不是一团浆糊了。首先搞懂了Web2和Web3的支付流程差在哪。Web2里，我们付钱要靠电商平台、支付服务、银行这一堆中间机构，钱从用户到商家得走好几道；但Web3收款就不一样了，平台会给一个专属收款地址，用户直接用钱包转USDC，链上一记账，再通过链上监听服务通知商家就行，没有银行和平台卡中间。也终于明白为啥智能合约不能直接访问Web2服务器——它只能按代码执行，读不了外面的数据，得靠链下监听服务把链上结果告诉Web2后台才行。然后重点学了Web3钱包，原来它不是“装钱的”，而是管地址、私钥、签名的工具。私钥就是你的数字身份，签名就是你“同意这笔操作”的证明，不管是转账还是授权，都得用钱包签名确认。也分清了不同钱包类型的区别，核心就是安全性和易用性的取舍，硬件钱包最安全但麻烦，热钱包方便但风险高，选的时候得平衡。安全这块是重点，私钥泄露、签名被骗、权限滥用这三个坑真的要记牢。私钥丢了谁都找不回，签名不明链接可能直接丢资产，授权App也不能随便给无限制额度。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
