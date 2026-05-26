@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+今天有事！打卡先占个位置！
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
+
 打卡共学，自学其他材料
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 去中心化AI基础设施
@@ -37,6 +45,7 @@ Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -242,6 +251,7 @@ RPC背后是节点或节点群
 
 
 
+
 Hermes Agent 记忆，技能，流程
 
 -   quick setup
@@ -256,6 +266,7 @@ Hermes Agent 记忆，技能，流程
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
