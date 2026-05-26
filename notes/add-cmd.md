@@ -15,8 +15,28 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+**Day 6（续）：Week 2 方向选择完成 — 整理交付物与后续规划**
+
+### **今日路径**
+
+**核心任务**
+
+-   ✅ 确认主方向：Module D — Wallet / Permission / Safe Execution
+    
+-   ✅ 具体落点：AgentPact MVP（用户授 Pact，agent 在边界内自主执行）
+    
+-   ✅ 参考资料清单（`module-e-references.md`）— 10 条含价值判断
+    
+-   ✅ 方向 backlog 详化（`module-g-backlog-detailed.md`）— 5 方向 + 路线图
+    
+-   ✅ 今日 daily-note
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 Day 6 · Week 2 Module A · 2026-05-25
 
 ▎ Cohort 0 · 主方向选择 · AI × Web3 School
@@ -94,6 +114,7 @@ USDC，每天不超过 $500"。LLM 是把权限系统从工程师专属降到普
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 # **Week 1 共学打卡 — AI 与 Web3 基础知识**
 
@@ -224,6 +245,7 @@ NaN.  WCB 打卡流程还没完全熟悉，这是第一次提交
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 Day 5 — 智能体（Agent）打卡笔记
 
 📖 学了什么
@@ -324,6 +346,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-22
 
 
 
+
 Day 4 — RAG（检索增强生成）打卡笔记
 
 📖 学了什么
@@ -399,6 +422,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-21
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -493,6 +517,7 @@ GitHub: github.com/add-cmd/ai-web3-school-cohort-0/tree/master/2026-05-20
 
 
 
+
 Day 2 完成总览
 
 📘 Prompt 章节核心要点：
@@ -528,6 +553,7 @@ Day 2 完成总览
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
