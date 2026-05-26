@@ -15,8 +15,37 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+Day 8 | AI × Web3 School
+
+今日完成：
+
+1.  学习 Frameworks 章节，理清 LLM / Agent / Framework 三层关系
+    
+2.  区分 Agent 产品（Claude Code/OpenCode）和 Agent 框架（LangChain/Spring AI/Hermes）
+    
+3.  理解 LangChain（线性链）vs LangGraph（带循环图）的核心区别
+    
+4.  理解循环的本质：Agent 自我检查→发现错误→回头修正
+    
+5.  理解 Spring AI 属于线性链，要实现循环需要手动写 Reflection + 重试
+    
+6.  对比 Spring AI vs LangChain4J 的定位
+    
+
+感受：今天的内容让我把之前自学 Spring AI 时接触到的"自主规划"概念和 HandBook 里的框架分类串起来了。最关键的认知是：多步调用（成绩环比）≠ 循环（写代码→编译→改）。前者 Spring AI 原生支持，后者需要 LangGraph 或手动写循环。这也解释了为什么 OpenCode 用起来比我写的 Spring AI Agent 更"聪明"——不是模型更强，是它内置了循环。
+
+下一步：
+
+-   继续学习 MCP（模型上下文协议）章节
+    
+-   可选：了解 LangChain4J，后续新起项目体验
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 Day 8 | AI × Web3 School
 
 今日完成：
@@ -47,6 +76,7 @@ Day 8 | AI × Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -174,6 +204,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 
 
 
+
 ## **Day 6 | AI × Web3 School**
 
 ### **今日完成**
@@ -196,6 +227,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -243,6 +275,7 @@ Day 5 | AI × Web3 School
 
 
 
+
 Day 4 | AI × Web3 School
 
 今日完成：
@@ -279,6 +312,7 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日复习tc老师的web课程，并学习wsl2研究hermes具体的使用方法，有时间接着看handbook的ai部分知识。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -293,11 +327,13 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日将handbook中ai部分学完，然后开始web3部分的学习，并回顾昨晚tc老师的课
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
