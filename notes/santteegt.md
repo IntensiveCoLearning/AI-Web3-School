@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+**What I did today:** Watched the Week 2 session replay “Long-term Memory for AI Agents: Persistent Context and Long-term Consistency.” Built an interactive quiz artifact for the learning journey: designed and wrote `skills/quiz/SKILL.md` — a 9-step quiz procedure that reads from the wiki knowledge base, randomly selects a concept topic, generates 5 factual multi-choice questions with instant feedback and concept explainers on wrong answers, and manages a 72-hour spaced-repetition cache. Set up a Cowork scheduled task running the quiz every 2 hours. Documented the design in `prompts/INTERACTIVE_LEARNING_ARTIFACT.md` and updated `AGENTS.md` Section 14. Also cleaned up heading link formatting across the knowledge base Web3 chapter notes.
+
+**What I learned:** From the Long-term Memory session: memory builds through work and forms continuity across sessions — it has two key axes (time: short-term/long-term; content: episodic/semantic/procedural) plus side-running scratchpads. The memory lifecycle is capture selectively → retrieve selectively → revise continuously, and requires RAG + context engineering to work well. A project’s [CLAUDE.md](http://CLAUDE.md) is itself a form of evolving long-term procedural memory. From building the quiz: the local filesystem constraint (Cowork artifacts run in a browser sandbox and can’t read local files directly) drove the [SKILL.md](http://SKILL.md) + `show_widget` architecture — orchestration logic stays in Claude’s context while the interactive UI renders via widget buttons wired to `sendPrompt`.
+
+**Blockers / questions:** Are third-party memory plugins using graph-based knowledge stores meaningfully better than plain-text memory engines (like in Openclaw)? What are good benchmark frameworks for evaluating a custom memory layer? Thirteen minimal practice exercises still pending. Five Week 1 WCB tasks still open.
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 **What I did today:** Completed the remaining AI Foundations chapters: read Evaluation, Fine-tuning, and Inference in full and saved structured notes to the knowledge base. Skimmed all 9 Web3 Foundations chapters (Cryptography, Wallet, Smart Contract, Dev Stack, Network, Account Abstraction, DeFi, Oracle, Indexing, Security) — used the Handbook as source material to update the wiki and regenerate the concept cards deck. Completed and submitted proof-of-work for testnet interaction and smart contract deployment/execution exercises on WCB.
 
 **What I learned:** From Evaluation: evaluation is a first-class engineering concern in AI × Web3 — errors can affect assets, permissions, and on-chain execution. A golden set of real tasks and regression tests, combined with online observability, is what makes a system improvable over time. From Fine-tuning: fine-tuning improves consistency on a class of tasks, not factual knowledge — the dataset is the core asset, and goal, data, and evaluation must all be defined before starting. From Inference: inference is a tradeoff across latency, cost, context, quality, privacy, and operational complexity; in AI × Web3 systems specifically, the inference layer must leave auditable records since on-chain actions are hard to reverse.
@@ -26,6 +36,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 **What I did today:** Read three Handbook chapters: Frameworks, Vibe Coding, and MCP. Took structured notes in the knowledge base for all three. Reviewed the WCB task status — three previously submitted recordings (How Web3 Works, Week 1 Review Meeting, Open Agentic Economy) were approved. Two expiring Week 1 tasks (Weekly Review Sharing and Watch 5.21 Recording) unfortunately expired before submission. No new experiments completed today — all five carry-over minimal practice exercises remain pending, and two new ones were added from today’s reading (framework comparison and MCP server build).
 
@@ -38,6 +49,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
 
+
 **What I did today:** Watched three live session recordings: “How Web3 Works” (May 20), “Week 1 Review Meeting” (May 22), and “Open Agentic Economy” (May 23). Read the Agent chapter from the Handbook. Also began building knowledge-base notes and concept card tooling for the wiki. Submitted check-ins for all three recordings on WCB. Hands-on coding experiments remain pending and are carried to tomorrow.
 
 **What I learned:** From the recordings: full Ethereum transaction flow (mnemonic → private/public key → address derivation → digital signature → EIP-1559 gas → PoS consensus); how Ethereum provides neutral coordination and property rights for both humans and agents; ERC-8004 as an emerging trust layer for agent identity and reputation; CROPS as a design principle for agent infrastructure (Censorship-resistant, OSS, Privacy, Security). From the Agent chapter: an agent is a constrained execution loop, not autonomy itself — it must know what it can do, how to verify completion, how to stop on failure, and how to be audited. In Web3 contexts, agents sit between model capability and on-chain execution. Key personal insight from the Week 1 review: treat learning as an executable workflow, not a tools survey — I want to explore deploying a fork of my learning agent to an open framework like Hermes or OpenClaw.
@@ -45,6 +57,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -63,6 +76,7 @@ Also built an Obsidian vault as a wiki-like knowledge base for my notes with its
 
 
 
+
 **What I did today:** Read the AI × Web3 School Handbook intro page to get a first overview of how both domains connect. Then read the LLM chapter and the Prompt chapter in full, taking structured notes in the repo knowledge base. Also completed the three setup tasks on WCB: “Set Up the Course Tools”, “Create Your Course GitHub”, and “Complete Learning Agent Setup”. Deferred hands-on coding experiments to Day 2.
 
 **What I learned:** LLMs generate probabilistically reasonable output — not trustworthy facts by default. The closer an LLM gets to the execution layer in an AI × Web3 system, the more its natural-language output must be converted into verifiable, deterministic objects. On the prompting side: a prompt is interface design, not just a question. A good prompt lets the model know when to stop rather than pushing it to be more confident. Critically, prompts should not be the sole security layer — guardrails and human handoffs are required for high-risk actions. Prompt injection is a first-class security risk, especially in agent scenarios with access to internal systems.
@@ -72,6 +86,7 @@ Also built an Obsidian vault as a wiki-like knowledge base for my notes with its
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -102,6 +117,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 
 
 
+
 -   Reviewed the handbook's recommended startup prompt to create a learning agent
     
 
@@ -123,6 +139,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 
 
 
+
 -   Attended the first co-learning session. Even if it was mostly for the Chinese audience, I noticed there was a walkthrough on setting up a Hermes agent. It should be worth exploring Hermes vs my current Openclaw instance for this bootcamp
     
 -   Watched the replay session about web3 fundamentals with a focus on how blockchain txs work, wallets and private keys.
@@ -134,6 +151,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
