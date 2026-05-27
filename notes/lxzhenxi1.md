@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+Web3 privacy now- 200 speakers, contributors and events around global with activist and private tech etc united by Privacy including Vitalik and Andrey Tang.
+
+Neo-cypherpunk: took old concept from 1993 and make it relevant. Web3 version of Ethereum Cypherpunk Transition Menifest. CROPS.
+
+Neo=privacy+play+care+communication. Start small:Signal, ad blocker, VPN. Privacy stacks shared for awareness. #privacytech on X. Tool usage can be diverse and open.
+
+Neo cyperpunk culture kit: believe in MEMEs, follow new OGs, privacy toolset, multiple tools: bitwarden, message: signal, wallet: Trezor, identity: forecaster, new tools, protocol: ZEC.
+
+The movement: from I to We. For all level, joyful with MEMEs, and no need to full stack.
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 学习真实世界Web3支付案例：Quantoz于本月上线已被央行接纳的欧洲-非洲合规稳定币跨境汇款场景
 
 \- 汇款双方无需接触稳定币或改变现有流程，完全从底层用Web3替代SWIFT。
@@ -31,6 +45,7 @@ AI x Web3 School
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 ![截屏2026-05-25 下午8.06.15.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/lxzhenxi1/images/2026-05-25-1779713908494-__2026-05-25___8.06.15.png)
 
 ChatGPT Saved memory/ChatHistory Claude Project
@@ -40,6 +55,7 @@ ChatGPT Saved memory/ChatHistory Claude Project
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 Future of AI \* Ethereum: Ethereum becoming the coordination layer of value commitment for machines in the machine economy, with humans at center. ERC-8004: Trustless Agent went live same week as OpenClaw.
@@ -64,6 +80,7 @@ Example: Deep funding. Allocate funding to github repos.
 
 
 
+
 练习用AI生成定期行业简报，流程图以及行业研究
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
@@ -73,11 +90,13 @@ Example: Deep funding. Allocate funding to github repos.
 
 
 
+
 学习优秀笔记
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -106,6 +125,7 @@ web3 核心：密码学 经济学 社会学
 
 
 
+
 成功设置hermes agent Telegram channel 并创建GitHub Repo
 
 [https://github.com/lxzhenxi1/ai-web3-school-cohort-0](https://github.com/lxzhenxi1/ai-web3-school-cohort-0)
@@ -120,11 +140,13 @@ web3 核心：密码学 经济学 社会学
 
 
 
+
 成功安装Hermes Agent
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
