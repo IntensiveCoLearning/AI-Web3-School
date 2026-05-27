@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+主要是学习进阶知识，配合workshop理解agent wallet，同时和ai脑暴下黑客松的课题，主要是看看自己适合做哪些东西。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 今天有事，没有参与学习，就进行一个战术性打卡，保持连卡。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 今天主要是在配置Vibe Coding ，暂时没有购买api，在尝试使用免费的模型，还没有搭建成功。
 
@@ -32,11 +39,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 今日主要是回顾基础，web3的基础还好懂一些，因为已经有接触，有编码。而ai的基础还是差点意思，感觉要到进阶段去动手搓一个agent，对基础知识的理解程度应该就加深了。 这个就是接下来的目标了。
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -50,6 +59,7 @@ AI x Web3 School
 
 
 
+
 今日是对手册AI部分进行继续学习，但还是对基础知识有些模糊，没有完整的体系，在对基础概念阅读的时候，理解不透彻。可能是没有体统的学习AI的整套架构。vibe coding是在使用工具，hermes是agent，这些倒是明白，要自己做一个agent的话，还是有点懵逼，是要借助平台来制作？ 比如dify？在早期的时候在dify平台上做过，通过流程图生成简单的前端页面的一个工作流，这算是一个agent？路还很长啊。
 
 github链接：[https://github.com/emptytouch/ai-web3-school-cohort-0/blob/master/daily/2026-05-21.md](https://github.com/emptytouch/ai-web3-school-cohort-0/blob/master/daily/2026-05-21.md)
@@ -57,6 +67,7 @@ github链接：[https://github.com/emptytouch/ai-web3-school-cohort-0/blob/maste
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -77,6 +88,7 @@ github链接：[https://github.com/emptytouch/ai-web3-school-cohort-0/blob/maste
 
 
 
+
 今天主要是在摸索hermes的使用，暂时没有付费购买token，所以在不断的切换测试free的模型，本来想使用deepseek-v4-flash的，但是会有请求频率限制，所以放弃了，还是使用的自带的free模型。  
 然后就是晚上的workshop，跟着人员老师一起配置hermes，接入微信，还没有成功；因为昨天自己就配置成功了hernes，也是解答了一些同学的问题，同时也发现，其实很多同学都不清楚我们配置整个hermes的作用是什么，说是学习小助手，实际的用处在哪里？其实自己也有点模糊，workshop结束以后，我就去翻了hermes给我生成的学习计划，然后按照计划去啃书，和agent进行讨论，提炼了学习手册的主要内容，然后进行查看，有可能是模型的原因，导致内容提取实际不是很全面，还得是自己去平台查阅。  
 然后让他接入学习平台的时候失败了，无法用创建好的apikey来进行接入，我的想法是让agent来进行任务的查询，或者说看看能不能直接完成任务，这个就只有再研究了；  
@@ -86,6 +98,7 @@ github链接：[https://github.com/emptytouch/ai-web3-school-cohort-0/blob/maste
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
