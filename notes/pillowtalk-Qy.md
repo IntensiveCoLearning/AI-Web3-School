@@ -15,8 +15,36 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+今天完成了两份 2026-05-27 的学习整理。
+
+第一份是共学讨论笔记，主题从 Markdown 知识库 Agent、黑客松 API / SDK 支持、Layer2、去中心化社区，一直延伸到贡献激励、DAO 运营和 Web2 用户低门槛进入 Web3。对我最实用的点是：知识库 Agent 不一定一开始就要搭完整 RAG，可以先从现有 Agent + Markdown 索引 + 限定提示词开始；而黑客松项目也应该提前确认 sponsor API、SDK、技术支持和哪些部分可以安全 mock。
+
+第二份是 Why Privacy Matters for Builders & Neo Cyberpunk 主题课笔记。今天最大的理解转变是：privacy 不是工具选择，也不是产品上线后再补的功能，而是 AI x Web3 builder 从项目早期就要考虑的权力结构设计。AI Agent 会记录 prompt、tool calls、memory、payment、identity、reputation 和交易路径，如果没有隐私设计，它可能成为新的监控入口。
+
+我也把自己的问题写进了笔记：当身份、信用、支付、托管、合规和服务准入逐渐从中心化机构转移到密码学、智能合约、DID、ZK 和协议时，个人是否真的更自主，还是权力只是转移到协议设计者、钱包提供商、基础设施运营方和标准制定者？我今天的理解是：密码学不会自动带来自由，关键是系统是否 open-source、auditable、privacy-preserving、permissionless、exit-friendly。
+
+这也直接影响我的 AI Wallet Clear Intent Guard 方向。签名前 review 不应该只告诉用户“这笔交易做什么”，还应该告诉用户“这笔交易暴露什么”：地址、关系、权限历史、支付路径、identity / reputation 线索和 memory 敏感信息。下一步我会考虑给 demo 增加一个 Privacy Review 卡片，但仍然保持第一版范围很小，不碰真实私钥、真实资产、真实钱包地址或真实交易历史。
+
+今日记录：
+
+[**https://github.com/pillowtalk-Qy/ai-web3-school-cohort-0/blob/main/daily/2026-05-27.md**](https://github.com/pillowtalk-Qy/ai-web3-school-cohort-0/blob/main/daily/2026-05-27.md)
+
+Today I completed two learning notes for 2026-05-27.
+
+The first was a co-learning note about Markdown knowledge agents, hackathon API / SDK support, Layer2, decentralized communities, contribution incentives, DAO operations, and low-friction Web3 onboarding. The most practical point is that a Markdown knowledge agent does not need a full custom RAG stack at the beginning. It can start with existing agents, clean Markdown indexes, scoped prompts, and cited source files. For hackathon preparation, I also need to confirm sponsor APIs, SDKs, technical support, and which parts can be safely mocked.
+
+The second was a class note on Why Privacy Matters for Builders & Neo Cyberpunk. My biggest shift today is that privacy is not just a tool choice or a late-stage product add-on. It is a power-structure design question for AI x Web3 builders. AI agents may record prompts, tool calls, memory, payments, identity, reputation, and transaction paths. Without privacy design, they can become a new surveillance surface.
+
+I also added my own question into the note: if identity, credit, payments, custody, compliance, and service access move from institutions to cryptography, smart contracts, DID, ZK, and protocols, do individuals become more sovereign, or does power simply move to protocol designers, wallet providers, infrastructure operators, and standards bodies? My takeaway is that cryptography does not automatically create freedom. The system needs to be open-source, auditable, privacy-preserving, permissionless, and exit-friendly.
+
+This connects directly to my AI Wallet Clear Intent Guard direction. Pre-signing review should not only explain what a transaction does. It should also explain what the transaction exposes: addresses, relationships, permission history, payment routes, identity / reputation links, and memory-sensitive context. My next step is to consider adding a Privacy Review card while keeping the first demo tightly scoped and away from real keys, real assets, real wallet addresses, or real transaction histories.
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 今天正式进入 Week 2 的方向研究主线。我完成并提交了 AI × Web3 问题地图与主方向选择，把 7 个方向重新梳理了一遍，最后选择 Wallet / Permission / Safe Execution 作为接下来最值得深挖的主线。
 
 这条线和我的黑客松方向 AI Wallet Clear Intent Guard 越来越接近：它不是要做一个完整钱包，也不是让 AI 自动签名，而是在签名前把用户意图、确定性的交易事实、权限策略、授权边界和支付路径放在同一个 review surface 里，让人能更清楚地决定是否继续。
@@ -40,6 +68,7 @@ I also completed the Payment / Commerce minimal flow task using an AI Wallet Tra
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 今天的学习主线是 Agent Memory 和 Agent wallet。
 
@@ -70,6 +99,7 @@ My AI Wallet Clear Intent Guard direction moved one step forward: it should even
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
 
+
 今天我继续整理 AI x Web3 School 第一周后半段的学习成果，完成了 AI 基础概念卡片、Web3 基础概念卡片，并围绕自己的黑客松方向拆解了两个 AI 钱包相关项目：Cobo Agentic Wallet 和 Coinbase AgentKit / Agentic Wallet / x402。
 
 这次最大的收获是，AI 钱包方向不能简单理解成“让 AI 帮我操作钱包”。更安全、更适合黑客松的切口是签名前 review layer：先把用户自然语言意图、确定性的交易事实、权限策略和支付路径放在一起检查，再由人决定是否签名。
@@ -92,6 +122,7 @@ Cobo taught me to think in terms of task-scoped, policy-enforced, reviewable, an
 
 
 
+
 今天是 Week 1 的集中收尾日。我把前几天分散完成的 AI、Web3、AI x Web3 综合任务整理成一组更完整的 public proof：测试网交易、只读智能合约调用、EOA / 智能账户 / 多签权限比较、AI x Web3 最小交叉流程图、Week 1 Proof-of-Work Pack，以及一个受限 Web3 助手 workflow。
 
 这次最大的收获是，AI x Web3 的安全边界不能停留在一句“人工确认”。它需要被拆成具体流程：AI 可以解释和准备，工具可以验证公开事实，钱包负责展示待签名动作，人负责确认或拒绝，链上系统负责执行并留下可验证记录，public repo 负责保存脱敏后的 proof。
@@ -111,6 +142,7 @@ I also organized Sophia's guest talk on Open Agile Economy / AI Agent Economy. A
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -143,6 +175,7 @@ I also reported a platform-review issue today. In a Web3 operating-principles ta
 
 
 
+
 今天我整理了 2026-05-21 AI 与 Web3 结合方向分享会笔记。最大的收获是，AI x Web3 不是单向叠加，而是双向关系：Web3 可以为 AI 提供更开放的算力、数据和激励网络，AI 也可以帮助 Web3 在钱包安全、链上数据理解和语义化交互上变得更可用。
 
 另外，我也记录了一个自己主动寻找和分析外部参考后形成的黑客松候选方向：围绕 AI 钱包签名安全，探索 AI 如何在用户确认前帮助理解风险。这个方向和课程主题有关联，但不是课程直接给出的题目。考虑到 idea 还在早期，我只保留低信息量公开版本，不展开具体产品细节。public repo 是学习证明，不等于把所有想法都公开。
@@ -164,6 +197,7 @@ I also recorded a Hackathon candidate direction formed through my own external r
 
 
 
+
 今天我整理了 2026-05-20 Web3 运行原理分享会笔记，从第一性原理复盘了一笔交易如何从钱包签名开始，经过 RPC、mempool、builder、validator、出块和确认，最终成为链上状态。
 
 最大的收获是：Web3 不是几个孤立概念，而是一条从私钥到 finality 的完整系统链路。钱包负责控制签名，交易表达用户意图，gas 定价链上资源，RPC 连接用户和网络，智能合约承载公开规则，协议升级则依赖技术实现和社会共识共同完成。
@@ -179,6 +213,7 @@ The biggest takeaway is that Web3 is not a set of isolated concepts. It is a ful
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -210,6 +245,7 @@ Another important takeaway is that the direction of Qy Knowledge Hub became clea
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
