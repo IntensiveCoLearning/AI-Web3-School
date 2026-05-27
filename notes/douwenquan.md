@@ -15,8 +15,34 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+**第一部分：学习总结**
+
+> 今天完成了 AI × Web3 Bridge 剩余 8 个章节的全面速览：
+> 
+> ① **Agent Wallet** — 钱包是权限系统不是签名按钮，Session Key（临时钥匙）+ Policy（规则层）+ Guard（拦截层）+ Simulation（预演）构建安全体系。
+> 
+> ② **Machine Payment & Settlement** — X402（HTTP 原生支付）、MPP（机器间支付协议）、Micro Payment（小额高频）、ERC-8183 任务支付与交付标准。
+> 
+> ③ **Agent Identity & Trust** — Agent Profile 能力声明、Service Endpoint、DID+VC；ERC-8004 身份声誉验证 Registry；质押和综合评估机制。
+> 
+> ④ **AI Security（重点）** — 模型放在隔离层，可以建议不能绕过权限；Key Safety、Permission Isolation、Sandbox 三防；防范 Prompt Injection、上下文注入与误导数据。
+> 
+> ⑤ **Governance AI** — AI 辅助 DAO 治理：长提案摘要、会议行动项、贡献追踪。
+> 
+> **至此 AI × Web3 Bridge 12 个章节全部完成 ✅，Phase 2 学习完毕。**
+
+**第二部分：今日会议**
+
+> ① **Co-learning** — 了解 AI+Web3 产品想法和 Layer 2 现状问题。
+> 
+> ② **Neo-Cypherpunk & Privacy** — 新赛博朋克：隐私是公共品，渐进式隐私保护，AI 隐私 Agent 是重要方向。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 **第一部分：今日学习总结**
 
 > 今天重点完成了 Week 1 收尾任务和 Week 2 预热：
@@ -35,6 +61,7 @@ AI x Web3 School
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 **第一部分：Web3 基础学习总结**
 
 > 今天完成了 Web3 基础 Phase 1 的全部剩余 6 个章节学习：Network（区块/共识/PoS/L2/Rollup）、Account Abstraction（ERC-4337/Smart Account/Bundler/Paymaster/Session Key）、DeFi（Token/AMM/滑点/无常损失/Lending/Stablecoin/Liquidity）、Oracle（Price Feed/Oracle Risk/AI Oracle）、Indexing（Event Indexing/Subgraph/Data Pipeline）、Security（Reentrancy/Access Control/Audit/Simulation/Monitoring）。共产出 7 份结构化学习笔记沉淀到 GitHub 仓库。
@@ -50,11 +77,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
 
+
 今天主要学习和了解web3的相关文档和知识。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -104,6 +133,7 @@ AI x Web3 School
 
 
 
+
 今天完成了两部分学习：  
   
 一、AI 基础概念深化  
@@ -143,6 +173,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -209,6 +240,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -321,6 +353,7 @@ AI x Web3 School
 
 
 
+
 今日学习总结：  
 今天系统阅读了 AI 基础文档，对已有知识进行了梳理和补充：  
 已熟悉的概念（复习巩固）：
@@ -347,6 +380,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
