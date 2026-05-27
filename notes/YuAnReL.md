@@ -15,8 +15,337 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+## **Today’s Goal**
+
+-   学习链感知上下文（chain-aware context）的组成。
+    
+-   理解 On-chain Data、Contract Docs、ABI / Event、Transaction History、Explorer Context、Indexing Context、Citation 等知识节点。
+    
+-   梳理这些上下文在 AI Agent 链上交互中的作用和边界。
+    
+
+## **Learning Materials**
+
+-   Handbook:
+    
+-   WCB Learning:
+    
+-   Topic: Chain-aware context for AI Agent and Web3 interaction
+    
+
+## **Notes**
+
+### **Chain-Aware Context Overview**
+
+-   今天学习的主题是链感知上下文。
+    
+-   对 AI Agent 来说，链上交互不能只依赖自然语言描述，而需要把链上数据、合约语义、交易历史、索引结果和可验证引用一起放进上下文。
+    
+-   链感知上下文的核心目标是：让 Agent 在理解和执行链上任务时，知道数据来自哪条链、哪个区块、哪个合约、哪个方法，以及这些信息是否可验证。
+    
+-   如果缺少这些上下文，模型很容易把不同链、不同时间、不同合约和不同版本的数据混在一起。
+    
+
+### **Knowledge Node: On-chain Data**
+
+-   难度：初级。
+    
+-   On-chain Data 是链上可直接验证的数据，例如：
+    
+    -   账户余额。
+        
+    -   交易。
+        
+    -   日志。
+        
+    -   合约状态。
+        
+    -   区块信息。
+        
+-   常见来源包括：
+    
+    -   RPC。
+        
+    -   区块浏览器。
+        
+    -   索引器。
+        
+    -   协议 API。
+        
+-   对 Agent 来说，读取 on-chain data 时至少要带上：
+    
+    -   chain id
+        
+    -   block number
+        
+    -   contract address
+        
+    -   method
+        
+    -   返回值
+        
+    -   读取时间
+        
+-   这些字段的价值在于给链上事实加坐标。没有坐标的数据很容易被误用，例如把主网数据和测试网数据混在一起，或者把旧区块的数据当成当前状态。
+    
+
+### **Knowledge Node: Contract Docs**
+
+-   难度：初级。
+    
+-   Contract Docs 帮助模型理解合约的：
+    
+    -   设计意图。
+        
+    -   参数含义。
+        
+    -   权限边界。
+        
+    -   使用方式。
+        
+-   ABI 只能告诉工具函数签名，不能解释业务语义。
+    
+-   例如 execute(bytes calldata data) 这个函数名和参数本身并不能说明它到底是普通执行入口，还是高权限入口。
+    
+-   文档、NatSpec、README、审计报告和部署说明可以补足 ABI 缺失的语义。
+    
+-   但文档也可能过期。Agent 读取文档后，仍要用链上数据验证：
+    
+    -   合约地址是否匹配。
+        
+    -   合约版本是否匹配。
+        
+    -   owner 是否一致。
+        
+    -   proxy implementation 是否一致。
+        
+    -   事件和最近交易是否符合文档描述。
+        
+-   所以 Contract Docs 更像“语义解释层”，不能替代链上事实验证。
+    
+
+### **Knowledge Node: ABI / Event**
+
+-   难度：中级。
+    
+-   ABI 和 Event 是 Agent 理解合约可调用能力和历史行为的核心结构。
+    
+-   ABI 的作用：
+    
+    -   编码函数调用。
+        
+    -   解码返回值。
+        
+    -   解析错误。
+        
+    -   让工具知道合约有哪些可调用方法。
+        
+-   Event 的作用：
+    
+    -   合约向外部系统留下业务日志。
+        
+    -   让 indexer、前端、数据服务和 Agent 理解过去发生过什么。
+        
+-   常见事件包括：
+    
+    -   Transfer
+        
+    -   Swap
+        
+    -   Deposit
+        
+    -   VoteCast
+        
+-   使用 ABI 时要注意：能调用不等于应该调用。
+    
+-   写交易前还需要检查：
+    
+    -   权限。
+        
+    -   余额。
+        
+    -   allowance。
+        
+    -   slippage。
+        
+    -   simulation。
+        
+    -   policy。
+        
+-   相关 topic：
+    
+    -   智能合约（Smart Contract）：理解 ABI 和 event 在合约交互中的位置。
+        
+    -   索引（Indexing）：继续看 event 如何进入索引层。
+        
+
+### **Knowledge Node: Transaction History**
+
+-   难度：中级。
+    
+-   Transaction History 帮助 Agent 理解用户或合约过去做过什么。
+    
+-   交易历史可以用于判断：
+    
+    -   用户是否已经授权。
+        
+    -   某个策略是否执行过。
+        
+    -   某个地址是否和高风险合约交互过。
+        
+    -   某个合约最近是否升级过。
+        
+-   交易历史不能只看自然语言总结。
+    
+-   至少要保留：
+    
+    -   transaction hash
+        
+    -   block number
+        
+    -   from
+        
+    -   to
+        
+    -   method
+        
+    -   value
+        
+    -   token transfers
+        
+    -   logs
+        
+-   模型可以总结交易历史，但证据必须能回到链上。
+    
+-   对 Agent 来说，交易历史既是记忆，也是风控证据。
+    
+
+### **Knowledge Node: Explorer Context**
+
+-   难度：初级。
+    
+-   Explorer Context 是区块浏览器提供的可视化链上证据。
+    
+-   区块浏览器适合给用户和 Agent 提供可检查入口，例如：
+    
+    -   交易是否成功。
+        
+    -   合约是否验证。
+        
+    -   源码是否公开。
+        
+    -   事件是否发出。
+        
+    -   token transfer 是否发生。
+        
+-   在 AI 产品里，给出 explorer link 比只给一句“交易成功”更可靠。
+    
+-   用户可以自己打开链接核验，开发者也能根据链接排查错误。
+    
+-   Explorer Context 的价值是把 Agent 的回答和可检查证据连接起来。
+    
+
+### **Knowledge Node: Indexing Context**
+
+-   难度：中级。
+    
+-   Indexing Context 是把链上事件整理成面向产品查询的数据。
+    
+-   Agent 需要的问题通常不是“某个区块里有什么”，而是：
+    
+    -   用户最近 30 天有哪些 DeFi 操作？
+        
+    -   这个池子的 TVL 变化如何？
+        
+    -   这个 Agent 做过哪些支付？
+        
+    -   某个地址是否经常和高风险合约交互？
+        
+-   这类查询通常需要索引层。
+    
+-   索引上下文必须带：
+    
+    -   时间戳。
+        
+    -   同步状态。
+        
+    -   数据来源。
+        
+    -   最后同步区块。
+        
+-   一个落后 500 个区块的索引结果，不应该被 Agent 当成当前事实。
+    
+-   所以 indexed data 很适合做历史查询、聚合分析和产品展示，但涉及资金操作前仍要用实时链上数据或 RPC 再确认。
+    
+
+### **Knowledge Node: Citation**
+
+-   难度：初级。
+    
+-   Citation 是让模型回答能回到具体链上证据或文档来源。
+    
+-   链上场景里的引用可以是：
+    
+    -   交易哈希。
+        
+    -   区块号。
+        
+    -   合约地址。
+        
+    -   event log。
+        
+    -   explorer 链接。
+        
+    -   文档 URL。
+        
+    -   审计报告章节。
+        
+-   Citation 的价值是让用户和系统知道：这句话基于什么事实。
+    
+-   没有 citation 的链上解释，只能算观点。
+    
+-   带 citation 的解释，才有机会被验证和追责。
+    
+
+### **How These Contexts Work Together**
+
+-   On-chain Data 提供可验证事实。
+    
+-   Contract Docs 提供业务语义。
+    
+-   ABI / Event 提供可调用能力和历史事件结构。
+    
+-   Transaction History 提供过去行为和风控线索。
+    
+-   Explorer Context 提供可视化核验入口。
+    
+-   Indexing Context 提供可查询、可聚合、面向产品的数据层。
+    
+-   Citation 把 Agent 的结论连接回具体证据。
+    
+-   对 AI Agent 来说，这些上下文不是孤立的，而是一套链上事实校验系统。
+    
+
+### **Main Takeaways**
+
+-   链感知上下文的重点不是“给模型更多文本”，而是给模型更可靠、更可验证、更有坐标的链上证据。
+    
+-   Agent 读取链上数据时，至少要知道 chain id、block number、contract address、method、返回值和读取时间。
+    
+-   ABI 能告诉 Agent 怎么调用合约，但不能告诉 Agent 业务上是否应该调用。
+    
+-   文档能解释语义，但文档可能过期，所以需要链上验证。
+    
+-   Indexing 适合历史查询和聚合，但不能无条件当成当前事实。
+    
+-   Citation 是链上 AI 产品里非常重要的可信度机制。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 \## Today’s Goal
 
 \- 学习 Web3 中 Indexing 的作用。
@@ -277,6 +606,7 @@ AI x Web3 School
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 \## Today’s Goal
 
 \- 学习 Web3 中预言机（Oracle）的作用。
@@ -458,11 +788,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
 
+
 今日摸鱼
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -801,6 +1133,7 @@ AI x Web3 School
 
 
 
+
 \## Today’s Goal
 
 \- 学习账户抽象（Account Abstraction, AA）的基本概念。
@@ -1059,6 +1392,7 @@ AI x Web3 School
 
 
 
+
 ## **Today’s Goal**
 
 -   学习以太坊开发相关工具链：Remix、Hardhat、Foundry、OpenZeppelin、viem。
@@ -1238,6 +1572,7 @@ AI x Web3 School
 
 
 
+
 \## Today’s Goal
 
 \- 学习 Web3 相关的密码学、钱包、智能合约和 ETH 合约基础知识。
@@ -1357,6 +1692,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
