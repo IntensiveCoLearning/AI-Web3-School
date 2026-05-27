@@ -15,8 +15,46 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+# **Product manager of Cobo Agentic Wallet**
+
+## agentic economy
+
+-   prompt injection
+    
+-   unscoped authority
+    
+-   shadow operations
+    
+-   zombie permissions
+    
+
+## how control is maintained
+
+## 3 industries - how AI agent go on-chain
+
+-   MPC for AI agents
+    
+-   pact authorization protocol
+    
+-   recipe skill layer
+    
+
+## how 1 pact comes to life
+
+1.  you state the intent
+    
+2.  agent drafts a pact
+    
+3.  you review & approve in the app
+    
+4.  wallet executes under policy
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 # MetaMask
 
 -   metamask is a app tht allows you to manage ethereum,solana,bitcoin and private keys.
@@ -39,6 +77,7 @@ AI x Web3 School
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 # **Long-term Memory for AI Agents**
 
 ## restart VS resume
@@ -54,6 +93,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 # 以太坊账户
@@ -143,6 +183,7 @@ AI x Web3 School
 
 
 
+
 # **Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path**
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-05-23-1779524951056-image.png)
@@ -165,6 +206,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -199,6 +241,7 @@ AI驱动链上分析工具
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -281,6 +324,7 @@ AI驱动链上分析工具
 
 
 
+
 Hermes Agent学习
 
 ```
@@ -335,6 +379,7 @@ API 文档：https://web3career.build/llms.txt
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
