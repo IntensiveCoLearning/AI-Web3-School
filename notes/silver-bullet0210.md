@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+![1000014309.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-27-1779895118472-1000014309.jpg)![1000014308.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-27-1779895130725-1000014308.jpg)
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 ![1000014275.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-26-1779808832387-1000014275.jpg)![1000014276.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-26-1779808851573-1000014276.jpg)
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 ![1000014248.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-25-1779717787345-1000014248.jpg)![1000014250.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-25-1779717804376-1000014250.jpg)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 ![1000014146.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-24-1779631765109-1000014146.jpg)
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 ![1000014146.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-23-1779549374314-1000014146.jpg)![1000014147.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-23-1779549393268-1000014147.jpg)
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -57,11 +67,13 @@ AI x Web3 School
 
 
 
+
 ![1000014108.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-21-1779372515633-1000014108.jpg)
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -80,11 +92,13 @@ AI x Web3 School
 
 
 
+
 ![1000013759.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/silver-bullet0210/images/2026-05-19-1779198699248-1000013759.jpg)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
