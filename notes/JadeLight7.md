@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+这两天太忙，选定做的方向，转向 x402 Payment + CAW Agent 自主支付闭环。[https://github.com/JadeLight7/aiweb3/blob/main/daily/week2-day3.md](https://github.com/JadeLight7/aiweb3/blob/main/daily/week2-day3.md)
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 [https://github.com/JadeLight7/aiweb3/blob/main/daily/week2-day1.md](https://github.com/JadeLight7/aiweb3/blob/main/daily/week2-day1.md)  
   
 综合对比所有模块，打算做一个x402相关的应用出来，并最终在测试链可验证
@@ -25,11 +31,13 @@ AI x Web3 School
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
+
 继续复习uniswap v3，同时在做hackenproof的审计比赛。[https://github.com/JadeLight7/aiweb3/blob/main/daily/day6.md](https://github.com/JadeLight7/aiweb3/blob/main/daily/day6.md)
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 今天复习了下uniswap，[https://github.com/JadeLight7/aiweb3/blob/main/daily/day4.md](https://github.com/JadeLight7/aiweb3/blob/main/daily/day4.md)
@@ -40,11 +48,13 @@ AI x Web3 School
 
 
 
+
 意识到似乎不需要学太深入，感觉transformer深入学习后较难理解。于是转向完成课程目标，完成了课程模块A中的任务[一二三](https://github.com/JadeLight7/aiweb3/tree/main/demos)，最近在投简历，后几天计划复习一下区块链知识，准备可能的面试。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -118,6 +128,7 @@ Transformer 还有一个特别重要的地方：它是\*\*并行的\*\*。以前
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
