@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+For me privacy is not only about applying some smart code to lock up the data, it's a cultural ground. Through this experience, I have come to understand that with the scaling up of technology, a community attitude towards privacy is needed. The design of privacy-first tools is not an option, but a means of demonstrating proactively trust in human expression, ensuring systems are truly decentralized, and creating a strong sense of trust with the people we create for.
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 I will
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 Today as been a wonderful experience
 <!-- DAILY_CHECKIN_2026-05-24_END -->
@@ -31,11 +38,13 @@ Today as been a wonderful experience
 
 
 
+
 The internet is evolving from a place where humans do business with each other to a place where _AI agents do business with other AI agents_.
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -52,6 +61,7 @@ The internet is evolving from a place where humans do business with each other t
 
 
 
+
 Today I didn't do much. I only studied LLMs from the learning handbook, I hope to do more tomorrow.
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
@@ -63,11 +73,13 @@ Today I didn't do much. I only studied LLMs from the learning handbook, I hope t
 
 
 
+
 因系统原因，补交打卡笔记内容，此条内容为系统自动触发。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
