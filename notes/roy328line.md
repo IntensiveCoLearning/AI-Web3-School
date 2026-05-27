@@ -15,6 +15,98 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+## **今日學習主題**
+
+深讀 Handbook：Agent Trust & Reputation 模組
+
+* * *
+
+## **Agent Trust & Reputation｜核心整理**
+
+### **為什麼需要 Agent 信任與聲譽系統？**
+
+Agent Trust & Reputation 解決的是：當一個 Agent 聲稱自己能完成任務時，用戶和其他 Agent 如何判斷它是否可靠、歷史是否真實、失敗是否有代價。
+
+第一性原理：**Agent 的可信度應該來自可驗證行為，而不是自我聲明。**
+
+三個基本要求：
+- 聲譽要綁定身份：沒有穩定身份，歷史記錄無法積累
+- - 評價要綁定任務：泛泛評分不如具體任務結果
+  - - 懲罰要真實：沒有成本的承諾很容易被濫用
+   
+    - ### **知識節點整理**
+   
+    - **Reputation（聲譽信號集合）**
+    - - 包含：成功率、響應時間、爭議率、退款率、用戶評分、驗證通過次數、stake 數量和任務類型表現
+      - - 最好按任務類型拆開，不同類型的 Agent 能力不能混用一個分數
+        - - 需要時間衰減：模型、owner、endpoint 或工具棧都可能已變化，兩年前的好表現不能代表今天
+         
+          - **Review（任務結果反饋）**
+          - - 應綁定任務 ID、交付物、付款記錄和評價者身份，避免成為可刷的口碑文本
+            - - 質量比數量重要：包含任務說明、驗收標準、交付 hash 的 review 比十個「good job」更有價值
+              - - 需防止互刷：評價者本身也需要身份和聲譽
+               
+                - **Attestation（可驗證聲明）**
+                - - 某個主體對 Agent、任務或結果做出的可驗證聲明（如「某評測者證明這個 Agent 完成了測試集」）
+                  - - 應結構化：issuer、subject、claim、evidence、expiration、revocation
+                    - - 需要過期和撤銷機制，否則容易在條件變化後繼續誤導用戶
+                      - - 可成為 reputation 的基礎數據，但仍要允許用戶查看原始聲明
+                       
+                        - **Stake（經濟保證）**
+                        - - 讓承諾有成本，失敗時可能有資金被罰沒或賠付
+                          - - 注意：Stake ≠ 能力，資本多不代表能力強，需與 validation、review、task history 一起評估
+                            - - 設計要明確：抵押什麼、鎖多久、什麼條件釋放/罰沒、罰沒給誰
+                             
+                              - **Slashing（違約罰沒）**
+                              - - 在 Agent 違約、作弊或輸出虛假結果時罰沒抵押
+                                - - 設計很難：必須先定義違約證據、挑戰窗口、仲裁者、誤罰處理和申訴機制
+                                  - - 自動 slashing 適合：未按時交付、簽名偽造、重複提交矛盾結果等明確可驗證違約
+                                    - - 主觀任務（如「報告質量是否足夠」）不適合直接自動 slashing，應先進入 dispute
+                                     
+                                      - **Validation（能力/結果驗證）**
+                                      - - 可以是：自動測試、benchmark、人工審核、Agent 複核、鏈上證明或 TEE attestation
+                                        - - 區分「能力驗證」（大概率能做某類任務）和「任務結果驗證」（某次具體交付是否合格）
+                                          - - 最好做成可查詢歷史，而不是只貼一個認證徽章
+                                           
+                                            - **ERC-8004（Agent 身份、聲譽和驗證 Registry 標準草案）**
+                                            - - 把 Agent 的 identity、reputation、validation 分成可組合 registry
+                                              - - 沒有試圖把「信任」做成單一中心化評分，而是提供身份、反饋和驗證信號的公共承載層
+                                                - - 注意：鏈上注册可以證明身份連續性，不能自動證明服務質量
+                                                 
+                                                  - ### **Agent Trust & Reputation 在 AI x Web3 的位置**
+                                                 
+                                                  - 連接 Agent Identity、Settlement & Escrow 和 Machine Payment：
+                                                  - - 沒有信任層，Agent 之間無法安全委托
+                                                    - - 沒有聲譽和驗證，用戶也難以判斷哪個 Agent 值得付款
+                                                     
+                                                      - 信任鏈路：Identity（是誰）→ Trust（行為有代價）→ Reputation（可追溯歷史）
+                                                     
+                                                      - 真正可靠的系統應同時看：身份、任務歷史、評價者、證明、stake、爭議記錄和上下文適配度
+                                                     
+                                                      - ### **個人發想**
+                                                     
+                                                      - 今天最大的收穫是理解「聲譽不是一個分數，而是一組可追溯的證據」這個核心思想。
+                                                     
+                                                      - 人類信任體系用法律和社會關係作為保障，而 Agent 可以在毫秒間建立和消亡，傳統信任機制完全失效。Agent Trust & Reputation 的解法非常精妙：不是試圖建立一個「所有人都信任」的中央評分系統，而是提供結構化的可驗證信號，讓不同場景的用戶自行判斷。
+                                                     
+                                                      - Slashing 設計讓我印象深刻。真正有效的 slashing 必須限定在「明確可驗證違約」的場景，對主觀任務強制 slashing 反而會產生新的治理風險。這個分析框架—「哪些可以自動化，哪些需要人工仲裁」—在 AI x Web3 的很多場景都適用。
+                                                     
+                                                      - ERC-8004 的方向也很值得關注：身份/反饋/驗證三層分離的設計，讓不同應用可以在共同基礎上構建自己的信任過濾規則，而不是被迫使用某個平台的黑盒評分。這是真正去中心化信任基礎設施的方向。
+                                                     
+                                                      - ### **今日產出**
+                                                     
+                                                      - - Agent Trust & Reputation 核心概念整理（6 個知識節點完整筆記）
+                                                        - - Reputation vs Review vs Attestation vs Stake vs Slashing vs Validation 的概念辨析
+                                                          - - Slashing 適用場景分析框架（哪些可自動化，哪些需人工仲裁）
+                                                            - - Identity → Trust → Reputation 完整信任鏈路整理
+                                                             
+                                                              - ### **明日計劃**
+                                                             
+                                                              - - 深讀 AI Oracle 模組
+                                                                - - 整理 Agent Identity → Trust → Reputation → Oracle 的完整信任數據鏈路
+                                                                  - <!-- DAILY_CHECKIN_2026-05-27_END -->
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 ## **今日學習主題**
