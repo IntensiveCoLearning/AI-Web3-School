@@ -15,13 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+-   观看 Agent Wallet 直播分享。
+    
+-   复习 EOA、智能账户、多签账户和 Agent Wallet 的权限差异。
+    
+-   整理 Agent Wallet 的关键点：身份、权限、限额、人工确认、撤销和审计。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 回看《**Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性**》
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 今天主要集中完成 Week1的任务。  
 
@@ -34,6 +45,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 
 
+
 观看了英文分享：这次分享的主题围绕 Open Agentic Economy，也就是在 AI Agent 逐渐成为互联网新参与者之后，Ethereum 如何为人类和 Agent 共同参与的开放经济提供基础设施。
 
 [https://x.com/i/broadcasts/1qxvvkQkVXQxB](https://x.com/i/broadcasts/1qxvvkQkVXQxB)
@@ -44,6 +56,7 @@ AI x Web3 School
 
 
 
+
 观看老师的分享：**AI 下乡计划｜AI 在 Web3 的应用**
 
 [https://x.com/AgentEconCN/status/2057711778466083149](https://x.com/AgentEconCN/status/2057711778466083149)
@@ -51,6 +64,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -69,11 +83,13 @@ AI x Web3 School
 
 
 
+
 今天主要观看了Hermes Agent分享，收获满满
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -97,6 +113,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
