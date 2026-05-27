@@ -15,8 +15,35 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+# **MCP 远程服务器连接**  
+**三种传输协议**
+
+```
+stdio                   Streamable HTTP          SSE (旧版，已废弃)
+───────                 ────────────────         ──────────────────
+本地子进程              远程 HTTP 单端点           远程双端点
+无网络依赖              可过防火墙/负载均衡          GET /sse + POST /message
+免认证                  支持 OAuth 2.1             需要两个端口
+延迟最低                支持 session 恢复           不支持 session 恢复
+Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 被取代
+```
+
+### **传输选择决策树**
+
+```
+服务器在哪里？
+  ├── 本地本机 → stdio
+  └── 远程/云端
+        ├── 自己新写的 → Streamable HTTP（唯一推荐）
+        └── 接已有旧服务 → SSE（兼容过渡，计划迁移）
+```
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 ## **提示工程（让Agent从“靠运气”到“稳定可控”）**
 
 ### **1\. 系统提示符与用户提示符**
@@ -46,6 +73,7 @@ timezone: UTC+8
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 ## **深度知识：Agent 架构模式**
 
@@ -98,11 +126,13 @@ timezone: UTC+8
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
 
+
 今天学习了一下web3xai有一些大概的总结：从 Agent Workflow 的 human-in-the-loop，到 Escrow 的多签仲裁，到 Sovereignty 的一键 kill switch，到 Governance AI 的「AI 不替你做投票建议」——**自动化程度越高，撤回机制必须越强**。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -130,6 +160,7 @@ timezone: UTC+8
 
 
 
+
 **1\. Web3 Tool Use（学完）**  
 \- 工具分层：只读（RPC/Contract Read）↔️ 写交易（Contract Write/Wallet）必须硬分离  
 \- 写交易前 7 步检查链：chain id → 合约地址 → ABI → value → gas → simulation → policy+确认  
@@ -143,6 +174,7 @@ timezone: UTC+8
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -163,6 +195,7 @@ timezone: UTC+8
 
 
 
+
 今天听了一下web3的课，这些概念都懂算是巩固一下基础了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -175,11 +208,13 @@ timezone: UTC+8
 
 
 
+
 今天终于把hermes弄好，也学习了一些ai的知识
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
