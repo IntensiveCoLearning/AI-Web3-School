@@ -15,6 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+- 观看 Agent Wallet 直播分享。
+- 复习 EOA、智能账户、多签账户和 Agent Wallet 的权限差异。
+- 整理 Agent Wallet 的关键点：身份、权限、限额、人工确认、撤销和审计。
+- 思考 AI Agent 参与链上支付或授权时，哪些步骤必须由用户钱包确认。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 回看《**Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性**》
