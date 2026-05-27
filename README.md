@@ -230,7 +230,7 @@ more information
 | [NakkiYANG](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/NakkiYANG.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | [hgkgkgk](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hgkgkgk.md) | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | |
 | [yichen-bear](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yichen-bear.md) | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | |
-| [1q2qq789](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/1q2qq789.md) | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
+| [1q2qq789](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/1q2qq789.md) | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | [zylg-create](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zylg-create.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | [yaohui1998-netizen](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yaohui1998-netizen.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Moc01](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Moc01.md) | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | |
@@ -484,7 +484,7 @@ more information
 | [Ky4niT3](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ky4niT3.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [nobodyhi](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/nobodyhi.md) | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | | |
 | [big-dudu-mosty](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/big-dudu-mosty.md) | ✅ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | |
-| [Connor532](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Connor532.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
+| [Connor532](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Connor532.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | [hhh835](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hhh835.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ershisihuasheng2003](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ershisihuasheng2003.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
 | [ii300](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ii300.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1031,7 +1031,7 @@ more information
 | [thaliachan-dev](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/thaliachan-dev.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Welight2525](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Welight2525.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [zw2512671014-cpu](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zw2512671014-cpu.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [dodinhanhquyen-ui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dodinhanhquyen-ui.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
+| [dodinhanhquyen-ui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dodinhanhquyen-ui.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | [weleuther900-arch](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/weleuther900-arch.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | | | |
 | [YC-Indis](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/YC-Indis.md) | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | [taylorlearns](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/taylorlearns.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | | |
@@ -1109,7 +1109,7 @@ more information
 | [1838015450-afk](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/1838015450-afk.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sleephard1231](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sleephard1231.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [BrucerTao](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/BrucerTao.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Evelyn2044](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Evelyn2044.md) | ✅ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ |   | | | | | | | | | | | | | | | | | | |
+| [Evelyn2044](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Evelyn2044.md) | ✅ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | | | | | | | | | | | | | | | | | | |
 | [Hiitspevarana](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Hiitspevarana.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [uondoff781-sudo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/uondoff781-sudo.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [L-Zhifei](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/L-Zhifei.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1233,6 +1233,7 @@ more information
 | [blueshark71](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/blueshark71.md) | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
