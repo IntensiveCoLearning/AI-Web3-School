@@ -16,8 +16,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+0527
+
+在今天進行中，成功將本地與GITHUB進行串聯，並完成AI代碼建置。  
+已經可以將本地檔案更新到GITHUB上，未來也會持續將代碼進度更新。  
+  
+短期目標是建立自動化機器人，項目還未定，功能會先學好。  
+長期目標是參加黑克松，並成功創立計畫。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 0526筆記  
   
 今天一直在回想LLM對長文本資料的硬傷，過去看到許多實作家在部屬openclaw自動運營之後，產生問題，導致損失產生。  
@@ -29,6 +41,7 @@ AI x Web3 School
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 0525筆記  
   
 上週成功將api導入LLM中，並成功開啟對話模型。  
@@ -39,6 +52,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 0524筆記  
@@ -54,6 +68,7 @@ AI x Web3 School
 
 
 
+
 0523筆記  
   
 今天開始進行運用VS CODE搭建虛擬環境，並引入openai進行建置。  
@@ -62,6 +77,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -79,6 +95,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -106,6 +123,7 @@ AI x Web3 School
 
 
 
+
 0519筆記  
   
 透過Hermes指定一个“大脑”，也就是大语言模型。  
@@ -116,6 +134,7 @@ Hermes Agent支持众多主流模型，包括**OpenAI、Anthropic Claude。**
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
