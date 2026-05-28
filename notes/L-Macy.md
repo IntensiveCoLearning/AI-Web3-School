@@ -15,8 +15,174 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+1\. 核心问题定义挑战：将 Web3 操作封装为 LLM 可安全调用的标准化 Tools，同时确保权限边界清晰、执行条件明确、用户确认机制完善。关键技术难点：
+
+-   工具粒度平衡（过粗失控，过细复杂）
+    
+-   权限分类体系
+    
+-   安全边界（不暴露私钥）
+    
+-   链上状态一致性
+    
+
+范围：
+
+-   In-Scope：Web3 工具设计、权限分类、Agent-钱包交互模式、MCP 协议应用
+    
+-   Out-of-Scope：智能合约开发、链下数据处理、密钥管理、多签实现
+    
+
+2\. 系统架构核心模块Web3 Tools（主要工具）：
+
+-   read\_balance：读取余额
+    
+-   simulate\_transaction：交易模拟（不上链）
+    
+-   estimate\_gas：Gas 估算
+    
+-   request\_signature：请求用户签名
+    
+-   submit\_transaction：提交交易
+    
+
+权限等级：
+
+![🔵](https://abs.twimg.com/emoji/v2/svg/1f535.svg)
+
+ReadOnly：无需确认
+
+![🟡](https://abs.twimg.com/emoji/v2/svg/1f7e1.svg)
+
+UserConfirmationRequired：需用户确认
+
+![🔴](https://abs.twimg.com/emoji/v2/svg/1f534.svg)
+
+ForbiddenAutoExecution：禁止自动执行架构层级（数据流）：
+
+-   用户层 → 钱包授权
+    
+-   Agent 层（LLM + Tool Executor + State Tracker）
+    
+-   工具层 → RPC 调用
+    
+-   链上层（区块链）
+    
+
+3\. 工具定义与权限矩阵（核心表）
+
+| 工具名称 | 功能描述 | 权限等级 | 用户确认 | 自动执行 | 安全等级 | 备注 |
+| --- | --- | --- | --- | --- | --- | --- |
+| read_balance | 读取余额 | ReadOnly |   |   | 低 | 公开数据 |
+| simulate_transaction | 交易模拟 | ReadOnly |   |   | 低 | 预检安全 |
+| estimate_gas | Gas 估算 | ReadOnly |   |   | 低 | 有误差 |
+| request_signature | 请求签名 | UserConfirmation |   |   | 中 | 必须等待用户 |
+| submit_transaction | 提交交易 | ForbiddenAuto |   |   | 高 | 必须前置签名 |
+
+形式化定义（简版）：
+
+-   ReadOnly：不修改状态
+    
+-   UserConfirm：需用户输入
+    
+-   Forbidden：禁止 Agent 自动执行
+    
+
+4\. 交互流程（状态机）典型时序：
+
+1.  只读流程：Agent → ToolExec → RPC → 返回结果（无用户干预）
+    
+2.  写操作流程：
+    
+    -   Agent 调用 submit\_transaction → 权限检查失败 → 返回需授权
+        
+    -   调用 request\_signature → 钱包弹出确认框 → 用户批准 → 签名 → 提交上链
+        
+
+状态阶段：
+
+-   Initiation：解析任务、准备参数
+    
+-   Verification：权限检查
+    
+-   Commitment：实际执行
+    
+-   Reporting：结果格式化并更新上下文
+    
+
+5\. Agent 决策与优化工具选择决策树：
+
+-   查询类 → ReadOnly 工具
+    
+-   执行类（改状态） → 必须走 request\_signature + submit\_transaction
+    
+-   用户拒绝 → 授权失败
+    
+
+MCP 协议集成：
+
+-   标准化 Tool Schema
+    
+-   上下文桥接（链上数据、钱包状态注入）
+    
+-   统一结果序列化 { success, data, error? }
+    
+
+优化策略：
+
+-   批量只读合并（减 RPC 60%+）
+    
+-   Gas 缓冲 + 自动调整
+    
+-   签名超时（5min）+ pending 状态
+    
+-   缓存（余额 30s，模拟 5min）
+    
+
+6\. 安全漏洞与边界处理三大关键漏洞：
+
+1.  自动交易执行：恶意 Prompt 导致资产转移 → 强制前置签名检查
+    
+2.  RPC 数据不可信：单一节点被攻击 → 多 RPC 交叉验证 + 新鲜度阈值
+    
+3.  签名钓鱼：不可读 message → 提供人类可读交易摘要（地址、金额、函数名）
+    
+
+边界场景：
+
+-   无效地址 → 返回格式化 error
+    
+-   超大数据 → 设置上限
+    
+-   用户无响应 → 超时 + pending
+    
+-   链上拥堵 → 加速/取消机制
+    
+-   高频提交 → Rate Limit
+    
+
+7\. 学术/技术标签
+
+-   Web3 Tool Use
+    
+-   MCP Protocol
+    
+-   Permission Matrix
+    
+-   Agent Security
+    
+-   Human-in-the-Loop
+    
+-   Gas Estimation
+    
+-   Smart Contract Interaction
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 1\. 以太坊底层架构核心概念（Co-learning: Ethereum Whitepaper & Architecture）L1 与 L2 的职能解耦
 
 -   Layer-1（以太坊主链）：负责最终结算（Finality） 与 最高级别安全共识。提供全局状态根、数据可用性与不可篡改性，是整个生态的安全锚点。
@@ -94,6 +260,7 @@ London 升级 & EIP-1559（2021）
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 核心目标：为 Agent 构建高质量、可追溯的上下文，建立「来源类型 → 刷新频率 → 引用规范」的决策框架。1. 来源可信度三级分级
 
@@ -182,6 +349,7 @@ London 升级 & EIP-1559（2021）
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
 
+
 nthropic 认为，Memory（记忆） 是继 MCP、Claude Code/Agent SDK、Skills 之后，下一个关键的 Agent Primitive。为什么重要？  
 传统 Agent 只是“调用工具 + 执行技能”，而 Memory 让 Agent 真正具备持续学习能力：
 
@@ -237,6 +405,7 @@ Anthropic Memory 的设计重点（企业级文件系统）把记忆抽象成 Ag
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -360,6 +529,7 @@ eth\_call 的特殊性：
 
 
 
+
 1.核心摘要（一句话记住）AI Agent 在链上操作时最核心的安全威胁有三大类：私钥泄漏、恶意授权、不可信 RPC 数据源。  
 核心防御思路是：物理人在回路 + 多源 RPC 跨校验，建立多层安全底线。
 
@@ -463,11 +633,13 @@ eth\_call 的特殊性：
 
 
 
+
 今天的学习让我把 Web3 基础知识重新串成了体系，也第一次更清晰地把 AI 和 Web3 结合到实际项目里。我一边复习了区块链机制、智能合约、DeFi 生态与常见安全问题，一边动手做了一个 Web3 AI Assistant，完成了安全审计、合约生成、合约解释和 Gas 优化 4 个核心工具，并通过测试脚本验证了整体功能。这次实践让我意识到，专业 Agent 的价值不在“什么都能做”，而在于聚焦真实场景、沉淀领域知识、提供高频且实用的能力；同时也更深刻地理解了智能合约安全的重要性，以及 AI 在开发中的正确定位是“增强效率、辅助判断”，而不是替代开发者。下一步，我希望继续探索静态分析与 AI 结合、链上数据查询以及 RAG + Web3 的应用，逐步把这个方向做得更深入、更系统。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -491,6 +663,7 @@ Hermes Agent 核心亮点（为什么适合这个学习计划）：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
