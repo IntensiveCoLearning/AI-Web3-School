@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+\> 学习来源：A2A Protocol 官方文档 \[Life of a Task\](https://a2a-protocol.org/latest/topics/life-of-a-task/) ## 建立总图 客户端向 Agent 发送一条消息后，Agent 通常有两种响应方式： 1. 返回一个无状态的 \`Message\` 2. 创建一个有状态的 \`Task\` 如果是 \`Message\`，说明这次交互可以立即完成，不需要后续追踪。比如简单确认、能力协商、范围说明、轻量回答，都可以只用 \`Message\`。 如果是 \`Task\`，说明 Agent 接下来要处理一段可跟踪的工作。这个任务可能需要一段时间，可能会不断更新状态，可能会请求用户补充输入，也可能会产出文件、结构化数据、图片等 artifact。 可以把它理解成： \`\`\`text Message = 一次性的对话回复 Task = 可追踪的工作单元 \`\`\` A2A 交互方式有三种：请求/响应（轮询）、SSE、服务端主动推送 ## \`contextId\`：把相关交互放进同一个上下文 \`contextId\` 是理解 Task 生命周期的第一把钥匙。 它不是某一个任务的 ID，而是一个更大的上下文 ID。\*\*一个 \`contextId\` 可以关联多个 \`Task\`\*\*，也可以关联多个独立的 \`Message\`。当客户端第一次发起交互时，Agent 会返回一个新的 \`contextId\`。如果这次交互创建了任务，响应里还会包含 \`taskId\`。 后续客户端如果继续围绕同一个目标对话，就应该带上相同的 \`contextId\`。这样 Agent 就知道：这不是一个全新的孤立请求，而是在延续之前的上下文。 它的作用可以概括为三点： 1. 让多轮交互保持连续性 2. 让多个任务围绕同一个目标协作 3. 让 Agent 内部可以基于上下文管理对话记忆或 LLM context 举个例子： \`\`\`text 用户：生成一张帆船图片 Agent：创建 task-1，contextId = ctx-a 用户：把船改成红色 Agent：创建 task-2，仍然使用 contextId = ctx-a，并引用 task-1 \`\`\` 这里第二次请求不是重启对话，而是在同一个上下文里对前一个结果做 refinement。 ## \`taskId\`：定位某一个具体工作单元 如果说 \`contextId\` 表示“这一串交互属于同一个上下文”，那么 \`taskId\` 表示“这一项具体工作”。 一个上下文里可以有多个任务。每个任务都有自己的输入、状态、产物和历史。客户端在后续消息里可以附带 \`taskId\`，表示这条消息和某个具体任务有关。 更常见的做法是使用 \`referenceTaskIds\` 来提示 Agent：当前请求和之前哪些任务有关。比如修改一张图片时，客户端可以引用生成原图的 task。 需要注意的是，\`taskId\` 不等于会话 ID。不要把所有后续交互都塞回同一个任务里。A2A 的设计更倾向于把每一次明确的新工作、新请求、新 refinement 建成新的任务，再用 \`contextId\` 和引用关系把它们串起来。 ## 什么时候返回 \`Message\`，什么时候创建 \`Task\` 官方文档把这个选择交给 Agent，因为不同 Agent 的能力边界不同。但可以用下面的判断方式来学习。 适合返回 \`Message\` 的情况： 1. 可以立即完成 2. 不需要持续追踪状态 3. 不会产生需要版本管理的 artifact 4. 更像一次说明、确认、拒绝或澄清 适合创建 \`Task\` 的情况： 1. 工作可能耗时较长 2. 需要客户端查询或订阅进度 3. 过程中可能需要用户补充输入 4. 会产出 artifact，例如文件、图片、报告、结构化结果 5. 后续可能围绕结果继续 refinement 一个实用判断是：如果客户端未来可能会问“这个工作现在到哪一步了？”或者“上一版结果是什么？”，那它大概率应该是 \`Task\`。 ## Task 的生命周期状态 \`Task\` 创建之后，会进入一个生命周期。它不会永远停留在“处理中”，它会持续更新，直到进入中断状态或终态。 官方文档里提到的中断状态包括： 1. \`input-required\` 2. \`auth-required\` 终态包括： 1. \`completed\` 2. \`canceled\` 3. \`rejected\` 4. \`failed\` 中断状态的意思是：任务还没有结束，但 Agent 无法继续，需要外部动作。比如缺少必要参数，就进入 \`input-required\`；需要用户授权，就进入 \`auth-required\`。 终态的意思是：任务结束了。无论是成功、取消、拒绝还是失败，它都不应该被重新启动。 可以画成一个简化状态图： \`\`\`text message.send | v Task created | v working / progressing | +--> input-required --用户补充信息--> 新消息继续处理 | +--> auth-required --用户授权------> 新消息继续处理 | +--> completed | +--> canceled | +--> rejected | +--> failed \`\`\` 这个生命周期设计的价值是把 Agent 执行过程显式化。客户端不必猜 Agent 在做什么，也不必把长任务伪装成同步请求。 ## Task 是不可变的：终态之后不要重启 \`Task\` 一旦进入终态，就不能重新启动。 这是文档中非常重要但容易被忽略的一点。比如一个图片生成任务已经 \`completed\`，用户又说“把船改成红色”。这不是把原任务重新打开，而是在同一个 \`contextId\` 下创建一个新的任务。 这样做有几个好处： 1. 输入和输出的映射更清楚 2. 任务历史更容易审计 3. orchestration 更容易做 4. 客户端可以稳定引用某个任务的状态和产物 5. refinement 不会破坏原始任务结果 这也是 A2A 和很多临时拼接式 Agent API 的不同之处。A2A 更像是在定义一个可追踪的工作账本：每一个明确的工作单元都应该留下自己的记录。 ## Agent Card Agent Card 用于描述 agent 身份、能力(SSE、推送、轮询)、请求端点、技能及认证要求的 JSON 元数据文档。 帮助客户端发现agent，并了解如何安全有效地使用。 ## Agent 注册发现策略 ### 通过 Well-Known URI 适用于公共代理或在特定领域内。 A2A 服务器通过在其域名中托管一个标准化且知名的 URI 来使其代理卡可被发现。标准路径是 https://{agent-server-domain}/.well-known/agent-card.json。发现流程： 1. client agent 发现潜在 A2A 服务器的域名（例如smart-thermostat.example.com） 2. client agent 对 https://smart-thermostat.example.com/.well-known/agent-card.json 执行 HTTP GET 请求 3. 如果 Agent Card 存在且可访问，服务器会以 JSON 响应的形式返回。 ### 基于Catalog的发现 适用于企业环境或公共市场，Agent Card通常由中央注册局管理。策划的注册库作为一个中央仓库，允许客户端根据“技能”或“标签”等标准查询和发现Agent。 1. A2A 服务器会将其Agent Card发布到注册表。 2. client agent 查询注册库的 API，并根据“特定技能”等条件进行搜索。 3. 注册处返回匹配的Agent Card或参考。 ## 直接配置 / 私有部署 适用于紧耦合系统、私有代理或开发用途，客户端直接配置代理卡信息或 URL。 ## Artifact：任务产物不是任务本身 \`Task\` 可以产生 \`artifacts\`。artifact 是任务的输出结果，可以是文件、图片、结构化数据等。 在官方例子里，Agent 先生成一张帆船图片，任务完成后返回一个 artifact，例如： \`\`\`text task-boat-gen-123 artifact: sailboat\_image.png \`\`\` 之后客户端要求“把帆船改成红色”。Agent 不会修改原 task，而是创建一个新 task，并产生新的 artifact： \`\`\`text task-boat-color-456 artifact: sailboat\_image.png \`\`\` 注意这里 artifact 的名字可以保持一致，但 \`artifactId\` 应该不同。这意味着它是同一个逻辑产物的不同版本。 文档建议 serving agent 在生成 refinement 结果时使用一致的 artifact name。这样客户端更容易把不同版本识别为同一类产物。 ## Artifact mutation 应该由客户端追踪 官方文档明确指出：artifact 的变更链路不应该由 serving agent 负责维护，也不是 A2A 协议规范的一部分。 这点很有意思。因为直觉上我们可能会想：既然 Agent 生成了新 artifact，那 Agent 应该知道哪个 artifact 是哪个 artifact 的新版。但 A2A 的设计选择是把这个责任交给客户端。 原因是客户端更适合判断： 1. 哪个结果被用户接受 2. 哪个版本是当前有效版本 3. 哪个 artifact 应该被继续 refinement 4. 哪些版本应该展示给用户或隐藏起来 所以客户端需要维护自己的版本关系。例如： \`\`\`text sailboat\_image.png v1: artifact-boat-v1-xyz, from task-boat-gen-123 v2: artifact-boat-v2-red-pqr, from task-boat-color-456 \`\`\` 如果客户端再次请求 refinement，最好显式引用自己认为“最新且可接受”的 artifact。不要假设 Agent 一定能猜对。 ## refinement 的正确建模方式 refinement 指的是基于已有任务结果继续提出修改、补充、扩展或重新生成。 在 A2A 里，refinement 的推荐模式是： 1. 使用相同的 \`contextId\` 2. 创建新的 \`Task\` 3. 使用 \`referenceTaskIds\` 引用相关旧任务 4. 如果要修改特定 artifact，尽量在 part metadata 中带上 \`artifactId\` 和 \`taskId\` 5. 新任务生成新的 artifact 6. 客户端维护 artifact 版本链 如果客户端没有明确指出要修改哪个 artifact，Agent 可以尝试根据 \`contextId\` 推断。但如果上下文里有多个候选 artifact，Agent 不应该强行猜测，而应该返回 \`input-required\`，要求客户端澄清。 这是一个很好的协议设计细节：不确定时，把不确定性显式暴露出来，而不是默默做一个可能错误的决定。 ## 客户端实现时要承担的责任 从客户端视角看，Life of a Task 不只是理解字段，还要设计好本地状态管理。 客户端至少应该记录： 1. 当前 \`contextId\` 2. 当前上下文下的所有 \`taskId\` 3. 每个任务的状态 4. 每个任务的 artifacts 5. artifact 的版本链 6. 用户接受的是哪个 artifact 版本 7. 哪些任务处于 \`input-required\` 或 \`auth-required\` 客户端在发起后续请求时，应该尽量带上： 1. \`contextId\` 2. 相关的 \`referenceTaskIds\` 3. 如果 refinement 针对某个产物，带上 artifact 引用 4. 用户补充输入或授权结果 一个客户端的数据模型可以粗略设计为： \`\`\`text Context id messages\[\] tasks\[\] Task id contextId status artifacts\[\] history\[\] ArtifactVersion artifactId artifactName taskId previousArtifactId acceptedByUser createdAt \`\`\` A2A 不强制你这么建模，但如果要做一个可靠的 Agent 客户端，这些结构迟早会出现。 ## Agent 实现时要承担的责任 从 Agent 服务端视角看，关键不是把所有请求都变成任务，而是正确判断交互复杂度。 Agent 应该做到： 1. 对简单交互返回 \`Message\` 2. 对可追踪工作创建 \`Task\` 3. 为首次交互生成 \`contextId\` 4. 为新任务生成 \`taskId\` 5. 在任务推进时更新状态 6. 需要输入时进入 \`input-required\` 7. 需要授权时进入 \`auth-required\` 8. 任务结束后进入明确终态 9. 不重启已经终态的任务 10. 对 refinement 创建新任务 11. 生成 refinement artifact 时尽量保持 artifact name 一致 如果 Agent 使用 LLM，那么 \`contextId\` 可以帮助它管理内部上下文。但这不意味着 LLM 的完整上下文一定要暴露给客户端。\`contextId\` 是协议层的连续性标识，LLM memory 是服务端内部实现细节。 ## 常见误区 误区一：把 \`contextId\` 当成 \`taskId\` \`contextId\` 是上下文，\`taskId\` 是任务。一个上下文可以有多个任务。 误区二：把 refinement 写回旧任务 终态任务不可重启，refinement 应该创建新任务。 误区三：让 Agent 负责 artifact 版本树 A2A 建议客户端维护 artifact mutation。Agent 可以帮助保持命名一致，但不负责判断哪个版本是用户认可的最新版本。 误区四：上下文不清时让 Agent 猜 如果多个 artifact 都可能是目标，正确做法是进入 \`input-required\`，请求客户端明确。 误区五：所有请求都建成 Task 简单、立即、自包含的交互用 \`Message\` 更自然。过度任务化会让系统变复杂。 ## 用一个例子串起来 假设用户要用 Agent 生成一份产品海报。 第一轮： \`\`\`text 用户：帮我生成一张咖啡新品海报 Agent：创建 task-001，contextId = ctx-001 结果：poster.png, artifactId = art-001 状态：completed \`\`\` 第二轮： \`\`\`text 用户：把标题改得更高级一点 客户端：发送相同 contextId，并引用 task-001 / art-001 Agent：创建 task-002 结果：poster.png, artifactId = art-002 状态：completed \`\`\` 第三轮： \`\`\`text 用户：把刚才那张图做成小红书封面 客户端：引用当前接受版本 art-002 Agent：创建 task-003 结果：poster-xhs.png, artifactId = art-003 状态：completed \`\`\` 在这个过程中： 1. \`ctx-001\` 把所有交互放在同一个上下文里 2. \`task-001\`、\`task-002\`、\`task-003\` 是三个独立工作单元 3. \`art-001\`、\`art-002\`、\`art-003\` 是不同产物或版本 4. 客户端负责知道用户当前接受的是 \`art-002\` 还是 \`art-003\`
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 \## 抽象合约  
   
 当合约中至少有一个函数没有被实现，或者合约没有为其所有的基本合约构造函数提供参数时，合约必须被标记为 abstract。  
@@ -345,11 +351,13 @@ return p1 + p2;
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
+
 \[参考\](https://github.com/ogalias/OGBC-Intern-Project/blob/master/stage1/stage1.md) ## Polymarket 的核心数据模型 > 数据模型：事件 (Event)、市场 (Market)、条件 (Condition)、集合 (Collection)、头寸 (Position 或 TokenId) 在 Polymarket 中，事件代表一个预测主题，例如"某次美联储利率决议"。一个事件下可以包含一个或多个市场。每个市场对应该事件下的一个具体预测问题。例如，对于事件"2024年美国大选"可以有多个市场："候选人 A 当选总统？"、"候选人 B 当选总统？"等，每个市场通常是一个二元预测（Yes/No）。 - Market（市场） 对应具体的 Yes/No 问题，是交易发生的基本单位。一些事件只有一个市场（例如简单的二元事件），而有些事件包含多个市场形成一个多结果事件，此时通常采用 Polymarket 的"负风险 (NegativeRisk)"机制来提高资金效率。 - NegativeRisk（负风险） 当一个事件包含多个互斥市场（即"赢家通吃"的多选一事件）时，Polymarket 引入 NegRiskAdapter 合约，将这些市场关联起来，提高流动性利用率。具体来说，\*\*在同一事件下，一个市场的 NO 头寸可以转换为该事件中所有其他市场的 YES 头寸\*\*。NegRiskAdapter 合约提供了 convert 功能，实现 NO → YES 的头寸转换。 🎯 场景设定：2024 美国总统大选 假设只有两个主要候选人： 市场 A：特朗普获胜，市场 B：哈里斯获胜。这是一个互斥事件，只有一方获胜。 > ❌ 没有 NegRiskAdapter 时： > > 1.用户小明 认为“特朗普不会赢”，去市场 A 买入 NO (特朗普输)。 > > 成本：假设 NO 价格是 $0.60。小明花 $60 买了 100 股 NO。 > > 结果：如果特朗普输了（哈里斯赢），小明赚 $40。 > > 2.用户小红 认为“哈里斯会赢”。去市场 B 买入 YES (哈里斯赢)。 > > 成本：假设 YES 价格是 $0.55。小红花 $55 买了 100 股 YES。 > > 结果：如果哈里斯赢了，小红赚 $45。 虽然小明的观点（特朗普输）和小红的观点（哈里斯赢）在逻辑上是完全等价的，\*\*但他们的资金被锁在两个不同的市场池子里\*\*，最后获利也不一样。 > ✅ 引入 NegRiskAdapter 后： > > Polymarket 将这两个市场通过 NegRiskAdapter 合约关联起来，形成一个事件组合。核心逻辑公式：在互斥事件中持有“市场 A 的 NO” = 持有“除了 A 以外所有结果的 YES”，即：NO(特朗普) ≡ YES(哈里斯)，此时交易如下： > > !\[\](image.png) > > !\[\](image-1.png) NegRiskAdapter机制优势： 1. 流动性合并 通过转换机制，同一事件所有市场的 NO 流动性都可以瞬间变成任意其他市场的 YES 流动性，让不同候选人市场里的资金形成了一个巨大的共享资金池。\*\*大户想进出大单，不会因为某个单一市场深度不够而滑点巨大。\*\* 2. 资本效率 做市商不需要为每个结果都单独准备资金，可以只在一个市场（比如最热门的那个）提供 NO 流动性，然后通过 convert 自动满足其他市场 YES 的买单需求。 3. 无摩擦套利 如果市场价格出现偏差，例如：Price(NO\_Trump) = $0.60，Price(YES\_Harris) = $0.70，套利者可以瞬间买入 NO\_Trump，通过 Adapter 转换成 YES\_Harris，然后卖出！ Polymarket 使用 Gnosis 开发的条件代币框架 (Conditional Token Framework, CTF) 来实现预测市场的头寸代币化。 ### Condition（条件） 每个市场在链上的"登记身份"。创建市场时，会调用 CTF 合约的 prepareCondition 方法注册一个条件。ConditionId 是通过keccak256计算得出的\*\*唯一标识\*\*： \`\`\`solidity /\*\* oracle 是预言机合约地址（Polymarket 目前使用 UMA Optimistic Oracle 作为预言机）。 questionId 是问题的标识符（通常由问题内容等信息哈希得到，或 UMA Oracle 的 ancillary data 哈希）。 outcomeSlotCount 是结果选项数量。对于二元市场，值为 2。 \* \*/ conditionId = keccak256(oracle, questionId, outcomeSlotCount) \`\`\` ### Position（头寸） 头寸指用户持有的某市场某结果的份额。Polymarket 将每个头寸实现为一个 ERC-1155 标准的可交易代币（又称 PositionId 或 TokenId）。每种结果对应一个不同的 TokenId，用于区分 YES 和 NO 两种头寸。 ### CollectionId（集合 ID） 在条件代币框架中，中间引入了集合的概念，用于表示特定条件下某个结果集合。计算方法为： \`\`\`solidity /\*\* parentCollectionId 对于独立的条件通常为 bytes32(0)（Polymarket 所有市场都是独立条件，没有嵌套条件，因此 parentCollectionId 一律为 0）。 indexSet 是一个二进制位掩码，表示选取哪些结果槽位。对于二元市场，有两个可能的 indexSet： YES 头寸的 indexSet = 1 (0b01，表示选取第一个结果槽)。 NO 头寸的 indexSet = 2 (0b10，表示选取第二个结果槽)。 \* \*/ collectionId = keccak256(parentCollectionId, conditionId, indexSet) \`\`\` ### TokenId（PositionId） 最后，用抵押品代币地址和集合 ID 一起计算得到 ERC-1155 的 Token ID： \`\`\`solidity tokenId = keccak256(collateralToken, collectionId) \`\`\` 在 Polymarket 中，对于每个市场，会产生两个 TokenId，一个对应 YES 份额，一个对应 NO 份额。这两个 TokenId 是在该市场上交易的标的资产，代表了对同一预测问题的两种相反结果的头寸。 ### Collateral（抵押品） Polymarket 市场的押注资金均以稳定币 USDC (Polygon 上为 USDC.e) 作为抵押品。\*\*每份 Outcome Token 背后对应 1 USDC 的抵押\*\*，当市场结算时兑现。 价格含义：比如价格 0.60 USDC 意味着花 0.60 USDC 可购买该市场 1 份 YES 代币。如果该结果最终发生，持有者可赎回 1 USDC（获得净盈利 0.40 USDC）；如果未发生，则该代币价值归零，损失全部本金 0.60 USDC。因此，二元期权代币价格可以理解为市场对该事件发生概率的定价。 ## Polymarket 链上日志在"市场创建 → 交易 → 结算"全过程中的作用 ## 链上日志解析
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 * * *
@@ -464,6 +472,7 @@ return p1 + p2;
 
 
 
+
 Gas 是 EVM 执行操作的单位。每条指令消耗固定的 gas，具体可以看\[以太坊 操作码\](https://ethereum.org/zh/developers/docs/evm/opcodes/)，gas 优化目标是减少交易所需的总 gas，提高用户体验并降低成本。  
   
 \*\*区块链数据存储位置有三种：storage（存储，也就是磁盘）、memory（内存，临时的）、calldata（只读数据）\*\*  
@@ -552,11 +561,13 @@ for (uint i = 0; i < len; ++i) {
 
 
 
+
 打卡，今天投了简历
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -754,6 +765,7 @@ AI 时代会出现大量新“商家”：
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -1028,6 +1040,7 @@ address addr = address(token);
 
 
 
+
 今天学了the graph。
 
 \[官网\]([https://thegraph.com/docs/en/subgraphs/quick-start/](https://thegraph.com/docs/en/subgraphs/quick-start/))
@@ -1079,6 +1092,7 @@ publish 后：别人也能把它当正式网络服务来用
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
