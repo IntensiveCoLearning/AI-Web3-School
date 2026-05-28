@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/iokk/images/2026-05-28-1779983956433-image.png)
+
+AI 与 Web3 时代的隐私价值，强调新密码朋克精神、去中心化身份、数据主权与文化层面的隐私意识。对开发者而言，隐私不仅是技术功能，更是构建信任、自由与抗审查系统的基础。
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/iokk/images/2026-05-27-1779896966434-image.png)
 
 查看回放了一下昨天的课程。  
@@ -30,6 +38,7 @@ Web3 Agent 钱包应以“用户控资产、Agent 受限执行”为核心。不
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/iokk/images/2026-05-25-1779712594950-image.png)
 
@@ -132,6 +141,7 @@ Text
 <!-- DAILY_CHECKIN_2026-05-24_START -->
 
 
+
 今天通过AI了解相关的钱包概念：
 
 测试钱包就是用 MetaMask 这类钱包创建一个地址，在测试网上使用。测试网的币没有真实价值，通常可以从水龙头领取，比如 Sepolia 测试 ETH。它主要用来练习转账、部署合约和调用合约，不会损失真钱。
@@ -160,6 +170,7 @@ Text
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/iokk/images/2026-05-23-1779550761265-image.png)
 
 **Agentic Economy** 的核心，是让 AI Agent 从“回答问题的工具”变成能参与经济活动的主体：它可以接任务、调用服务、自动付款/收款，并证明任务已完成。
@@ -173,6 +184,7 @@ ERC-8004 / ERC-8183 这类标准的意义，是尝试把 Agent、钱包、支付
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -201,6 +213,7 @@ ERC-8004 / ERC-8183 这类标准的意义，是尝试把 Agent、钱包、支付
 
 
 
+
 今天有学习Hermes相关的安装，并且已经在本地部署，并且使用了对应的提醒文档，主要涉及到模型配置、消息渠道的设置以及常见问题点的处理。另外，还推荐了一些好用的工作流。
 
 ![iShot_2026-05-19_20.28.13.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/iokk/images/2026-05-19-1779205044574-iShot_2026-05-19_20.28.13.png)
@@ -208,6 +221,7 @@ ERC-8004 / ERC-8183 这类标准的意义，是尝试把 Agent、钱包、支付
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
