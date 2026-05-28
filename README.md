@@ -1134,7 +1134,7 @@ more information
 | [snp9528](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/snp9528.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [ashlyngu-ai](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ashlyngu-ai.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [yilai6969](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yilai6969.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [SeeMoon357](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SeeMoon357.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | | | | | | | |
+| [SeeMoon357](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SeeMoon357.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | |
 | [teresawang0405](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/teresawang0405.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [rose20040801-oss](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/rose20040801-oss.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [New-zy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/New-zy.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
