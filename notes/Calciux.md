@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+[https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-05-28.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-05-28.md)
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 防退出占位, 笔记参考5.29
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 暂时打卡，笔记后补
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 打卡内容: AI基础概念
@@ -40,6 +48,7 @@ AI x Web3 School
 
 
 
+
 今日学习内容简单记录, 正文内容参考5.23提交内容
 
 [https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-05-22.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-05-22.md)
@@ -47,6 +56,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -63,6 +73,7 @@ AI x Web3 School
 
 
 
+
 第一天学习记录
 
 [https://github.com/Calciux/ai-web3-learning](https://github.com/Calciux/ai-web3-learning)
@@ -70,6 +81,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
