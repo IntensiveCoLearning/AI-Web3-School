@@ -1009,7 +1009,7 @@ more information
 | [Thiago610](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Thiago610.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Wea1her](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Wea1her.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | |
 | [chubai0669-byte](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/chubai0669-byte.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [xukangjie](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xukangjie.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ |   | | | | | | | | | | | | | | | | | |
+| [xukangjie](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xukangjie.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | | | | | | | | | | | | | | | | | |
 | [lewis2026120](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lewis2026120.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [WikiToTheMoon](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/WikiToTheMoon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
 | [chenqing0106](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/chenqing0106.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
