@@ -15,7 +15,100 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
-# 2026-05-27
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+今日學習：深讀 Account Abstraction 模組 + Co-learning 共學活動
+
+核心概念：Account Abstraction 把「帳戶如何驗證操作、誰來付 gas、哪些權限可以自動執行」從固定的 EOA 模式釋放出來，讓錢包變成可編程的帳戶系統。
+
+## 第一性原理
+
+> 當帳戶本身可以編程，權限就可以從「有私鑰/沒私鑰」變成「在什麼條件下允許什麼動作」。
+>
+> 這對 AI x Web3 特別重要：Agent 不應該拿用戶主私鑰，而應該獲得一個可限制、可過期、可撤銷、可審計的行動空間。
+>
+> ## 知識節點整理
+>
+> **ERC-4337（核心標準）**
+>
+> - 不直接發普通交易，而是創建 UserOperation
+> - - 流程：用戶/應用生成 UserOperation → 智能帳戶驗證 → Bundler 打包提交 → EntryPoint 調用帳戶執行 → Paymaster 可選贊助 gas
+>   - - 把帳戶驗證邏輯從協議層解耦，讓帳戶自己定義「什麼算合法操作」
+>     -
+>     - **Smart Account（智能帳戶）**
+>     -
+>     - - EOA 的驗證邏輯固定：有私鑰就能簽名。Smart Account 則可以定義：
+>       -   - 多簽才能轉移大額資產
+>           -   - 小額交易可自動通過
+>               -   - 特定 dApp 在一定額度內可調用
+>                   -   - 丟失後可通過恢復人或設備找回
+>                       - - 風險：合約 bug、模組權限、升級邏輯都會成為帳戶風險
+>                         -
+>                         - **Bundler**
+>                         -
+>                         - - 收集 UserOperation，模擬驗證後提交到 EntryPoint
+>                           - - 類似交易打包服務，但處理的是 UserOperation 而非普通交易
+>                             - - Bundler 不穩定 → 用戶操作卡住；模擬不充分 → 失敗交易帶來體驗問題
+>                               -
+>                               - **Paymaster**
+>                               -
+>                               - - 允許第三方為用戶操作支付 gas，或讓用戶用非原生資產付費
+>                                 - - 常用於 onboarding（新用戶沒有 ETH 也能完成第一筆操作）
+>                                   - - 風控問題：贊助哪些方法？每個用戶額度多少？如何防止 spam 和套利？
+>                                     -
+>                                     - **Session Key（最重要的 AI x Web3 組件）**
+>                                     -
+>                                     - - 給應用或 Agent 的**臨時權限**，不等同於用戶主私鑰
+>                                       - - 可以被限制為：只在某段時間有效 / 只調用某個合約 / 只使用某些方法 / 只花費某個額度 / 只在特定鏈上執行
+>                                         - - **Agent Wallet 的關鍵基礎**：讓 Agent 可以自動執行低風險動作，但高風險動作仍然需要用戶確認
+>                                           -
+>                                           - ## Account Abstraction 在 AI x Web3 中的位置
+>                                           -
+>                                           - 沒有帳戶抽象，Agent 往往只能停留在「給建議」或「讓用戶每一步都簽名」。有了智能帳戶、Paymaster 和 Session Key，Agent 才可能在受限範圍內自動執行。
+>                                           -
+>                                           - 但越自動化，越需要清楚的 policy：
+>                                           - - 能調用什麼合約/方法
+>                                             - - 額度多少、多久過期
+>                                               - - 誰能撤銷
+>                                                 - - 日誌在哪裡
+>                                                   - - 失敗後怎麼處理
+>                                                     -
+>                                                     - **帳戶抽象不是讓 AI 更自由，而是讓 AI 的自由被規則包起來。**
+>                                                     -
+>                                                     - ## 最小實踐設計
+>                                                     -
+>                                                     - 設計一個 Agent Session Key 策略（場景：「每日最多重新平衡一次測試網小額資產」）：
+>                                                     -
+>                                                     - - **允許調用**：Uniswap Router 合約，只允許 `swapExactTokensForTokens` 方法
+>                                                       - - **額度限制**：每次最多 10 USDC，每日累計不超過 50 USDC
+>                                                         - - **時間限制**：UTC+8 每日 09:00–21:00 有效，超時自動失效
+>                                                           - - **鏈限制**：只在 Sepolia 測試網有效
+>                                                             - - **最大交易次數**：每日 5 次
+>                                                               - - **必須人工確認的動作**：任何涉及主錢包的操作、任何超出額度的請求、任何涉及新合約地址的調用
+>                                                                 - - **撤銷方式**：用戶主帳戶隨時可以撤銷 Session Key
+>                                                                   -
+>                                                                   - ## 個人洞察
+>                                                                   -
+>                                                                   - 今天最大的收穫是把 Account Abstraction 和之前學的 Agent Identity、Agent Trust 串聯起來了。
+>                                                                   -
+>                                                                   - Agent Identity 解決「你是誰」，Agent Trust 解決「別人為什麼信你」，而 Account Abstraction（特別是 Session Key）解決「你被允許做什麼」——這三者合在一起，才是 AI Agent 安全上鏈的完整基礎設施。
+>                                                                   -
+>                                                                   - Session Key 的比喻很精準：不是給 AI 一把主鑰匙，而是給 AI 一張限時限額的員工門禁卡（最小權限原則）。這個設計思路其實和 MPC 錢包、多簽的核心思路一樣：把「全有或全無的控制權」拆成「細粒度的、可審計的、可撤銷的」授權結構。
+>                                                                   -
+>                                                                   - Co-learning 共學心得：和同學討論的過程中，發現大家對「Agent 需要什麼樣的帳戶系統」有很多不同的思考角度——有從安全角度出發的，有從用戶體驗出發的，有從開發者工具出發的。這些角度互相補充，讓我對 Agent Wallet 的設計空間有了更立體的理解。
+>                                                                   -
+>                                                                   - ## 今日產出
+>                                                                   -
+>                                                                   - - Account Abstraction 完整知識節點整理（ERC-4337 / Smart Account / Bundler / Paymaster / Session Key）
+>                                                                     - - Agent Session Key 最小策略設計（含額度、時間、合約、撤銷等完整參數）
+>                                                                       - - Account Abstraction 在 AI x Web3 架構中的位置梳理
+>                                                                         - - Identity + Trust + Permission 三層信任架構的個人理解框架
+>                                                                           -
+>                                                                           - ## 明日計劃
+>                                                                           -
+>                                                                           - 深讀 Privacy / Security / Sovereignty 模組，整理 Agent 在安全和隱私方面的 threat model
+>                                                                           - <!-- DAILY_CHECKIN_2026-05-28_END -->
+>                                                                           - # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 今日學習：深讀 Agent Trust & Reputation 模組
 
