@@ -472,7 +472,7 @@ more information
 | [averywexler](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/averywexler.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [dream-zyy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dream-zyy.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [czxzazsbb](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/czxzazsbb.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [huochewang-9331](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/huochewang-9331.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | | |
+| [huochewang-9331](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/huochewang-9331.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | | |
 | [321335801-cloud](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/321335801-cloud.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [JingyuSui](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JingyuSui.md) | ✅ | ⭕️ | ✅ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [sb6629](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sb6629.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
