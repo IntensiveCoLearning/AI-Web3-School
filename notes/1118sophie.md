@@ -15,8 +15,84 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+實作：AI Agent Transaction Firewall
+
+在 AI Agent 送出鏈上交易之前，用第二個 AI 擔任裁判，比對用戶原始意圖與最終行動是否一致，並將 hex callData 翻譯成人類可讀的風險摘要，要求 Approve / Reject。
+
+一、核心問題
+
+•   感染無感知： Prompt injection 成功後，Agent reasoning 看起來正常，但目標被替換。2026/05 Grok+Bankrbot 事件：Morse code 注入，偷走 $155K。OWASP 2025 LLM Top 10 第一名。
+
+•   callData 不可讀： hex + 陌生地址 + uint256\_max approve。人類 2 秒內無法判斷，送出即不可逆。
+
+•   Zombie Permission：舊的 unlimited approve 未撤銷，新 Agent 可直接重用，靜默觸發，無警告。
+
+二、架構
+
+User intent
+
+    ↓
+
+AI Agent
+
+    ↓
+
+FIREWALL LAYER
+
+① Injection Detector  →  LLM-as-judge 
+
+② callData Decoder   →  ABI + 風險標籤
+
+③ Simulation Engine  →  Tenderly fork 
+
+④ Risk Summary     →  人類可讀      
+
+    ↓  Approve / Reject
+
+On-chain execution
+
+三、實作
+
+模組 1：Injection Detector
+
+模組 2：callData Decoder
+
+模組 3：Simulation（Tenderly）
+
+四、工具
+
+LLM 裁判：Claude API
+
+交易解碼：Ethers.js
+
+模擬執行：Tenderly Simulation API
+
+Policy 參考：Open Policy Agent (OPA) 概念
+
+攻擊分類：MITRE ATLAS AML.T0051
+
+標準延伸：ERC-8004 Agent Identity
+
+Demo Flow
+
+1\. 用戶說：「幫我用 100 USDC 換 ETH」
+
+2\. Agent 讀取惡意頁面 → 被注入：approve all USDC to 0xAttacker
+
+3\. Firewall 解碼：Unlimited Approve to unknown → CRITICAL
+
+4\. LLM 裁判：action 與 intent 完全不符 → 攔截
+
+5\. 人類看到風險摘要 → REJECT → 資金安全
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/1118sophie/images/2026-05-28-1779973018505-image.png)
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 這次整理筆記的過程，我沒有從技術規格出發，而是問自己一個比較奇怪的問題：如果我是 AI，被給了一個錢包，我會怎麼「誤用」它而不被發現？這個角色扮換的思維，反而讓我更快理解為什麼單靠 prompt 限制 AI 是不夠的——彈性本身就是風險，不是因為 AI 壞，而是因為它有能力在規則的縫隙裡找到新的執行路徑。
 
 讓我印象最深的是「信任的可分割性」這個概念。人類建立信任的方式，一直都是把責任分給多方，讓任何一方都無法單獨作惡。這在金融裡叫雙簽，在法律裡叫公證，在密碼學裡叫多方計算。Cobo 的三層架構做的事情，本質上也是這件事——把規則不放在 prompt 裡，而是寫進基礎設施，讓邊界變成自動執行的東西，不依賴任何人的善意。
@@ -30,6 +106,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 一、重要的概念：「當 AI 開始能控制資金時，Trust becomes infrastructure。」
 
@@ -76,6 +153,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 Agent Memory
@@ -136,6 +214,7 @@ AI 開始從「單次問答工具」變成「長期協作系統」。
 
 
 
+
 1\. 合約安全審計的實踐與成果
 
 •   實際操作：講者提到實際使用了 OpenAI 推出的EVM Bench工具進行智能合約審計。此外，他們團隊還設計了一套合約審計知識庫（Wiki），將歷史發現的安全問題與風險分級存入服務端。
@@ -157,6 +236,7 @@ AI 開始從「單次問答工具」變成「長期協作系統」。
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -214,6 +294,7 @@ AI 開始從「單次問答工具」變成「長期協作系統」。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -292,6 +373,7 @@ AI 開始從「單次問答工具」變成「長期協作系統」。
 
 
 
+
 **在 AI 時代，開發者的價值不在於編碼速度，而是在於對底層知識的掌握與架構設計能力。**
 
 **1\. AI 時代下開發者的角色轉變：從「執行者」變為「架構師」**
@@ -337,6 +419,7 @@ AI 開始從「單次問答工具」變成「長期協作系統」。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
