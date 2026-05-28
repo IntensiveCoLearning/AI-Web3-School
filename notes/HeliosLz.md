@@ -15,8 +15,412 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+\# 2026-05-28 学习日志
+
+\## 今日主题
+
+\- Handbook 节点：\[Chain-aware Context\]([https://aiweb3.school/zh/handbook/bridge/chain-aware-context/)（Bridge](https://aiweb3.school/zh/handbook/bridge/chain-aware-context/\)（Bridge) 层）
+
+\- 关联 cohort Week：\*\*Week 2 第 3 天\*\*（探索 AI x Web3 交叉）
+
+\- 模式：\*\*边学边讲 + 逐节提问 + Hermes context package 设计\*\*
+
+\- 提交入口：[https://intensivecolearn.ing/en（"Check-in](https://intensivecolearn.ing/en（"Check-in)" 按钮）
+
+\## 为什么读它 / 带着什么问题读
+
+昨天已经把 Hermes staking 拆成 Web3 tool specs，明确了只读、交易草稿、模拟、授权、写链工具的边界。今天往前补一层：\*\*Agent 调工具前，到底凭什么判断自己该不该调工具？\*\*
+
+今天带着 4 个问题读：
+
+1\. Agent 说"用户余额足够"时，背后需要哪些可验证证据？
+
+2\. 链上 context 里哪些是 `raw_facts`，哪些是 `derived_checks`？
+
+3\. 发交易前哪些字段要 `REFRESH`，哪些字段要 `REVALIDATE`？
+
+4\. Auditor 如何把 context package 翻译成人能看懂的 risk summary？
+
+\## Agent 整理的精炼摘要
+
+Chain-aware Context = 让 AI 在回答或行动前看到正确的链、地址、合约、交易、事件、余额、授权和数据来源，而不是靠自然语言猜链上状态。核心不是"把链上数据塞给模型"，而是把链上事实拆成 `raw_facts -> derived_checks -> decision`，并保留来源、区块高度和新鲜度。对 Hermes staking 来说，Agent 不能只说"可以质押"，必须能说明在什么链、什么区块、哪个地址、哪个来源下推导出这个结论。
+
+\## 我用自己的话复述
+
+\### 第 1 轮：什么是可验证 context
+
+**问题**：如果 context 里只写"用户余额足够，可以质押 32 ETH"，缺了哪些关键证据？
+
+**我的回答**：
+
+\- 链是以太坊吗？
+
+\- deposit contract 地址是否是官方地址？
+
+\- withdrawal credentials 是否指向用户控制地址？
+
+**Agent 对照**：方向对，这三项是高风险判断。但落到工程里要从问题变成可记录字段`chain_id` / `block_number` / `deposit_contract_address` / `source_url` / `withdrawal_credentials_raw` / `decoded_withdrawal_address` / `ownership_proof`。如果只是证明"余额足够"，还必须有 `user_addressbalance_weiestimated_gas_wei`。
+
+\### 第 2 轮`balance_wei` 与 `estimated_gas_wei`
+
+`balance_wei` 是用户地址当前 ETH 余额，用 wei 表示`wei` 是 ETH 最小单位：
+
+\`\`\`text
+
+1 ETH = 1,000,000,000,000,000,000 wei = 10^18 wei
+
+\`\`\`
+
+`estimated_gas_wei` 是这笔交易预计需要支付的 gas 费。staking 不是只需要 32 ETH，还需要额外 ETH 支付交易费：
+
+\`\`\`text
+
+required\_total\_wei = deposit\_value\_wei + estimated\_gas\_wei
+
+\`\`\`
+
+所以余额足够必须能复算：
+
+\`\`\`text
+
+balance\_wei >= deposit\_value\_wei + estimated\_gas\_wei
+
+\`\`\`
+
+\### 第 3 轮：为什么 context B 更适合 Agent
+
+**问题**：哪个更适合喂给 staking Agent？
+
+A:
+
+\`\`\`json
+
+{
+
+"user": "has enough ETH",
+
+"target": "official deposit contract"
+
+}
+
+\`\`\`
+
+B:
+
+\`\`\`json
+
+{
+
+"chain\_id": 1,
+
+"block\_number": 22481234,
+
+"user\_address": "0xabc...",
+
+"balance\_eth": "32.18",
+
+"deposit\_contract": {
+
+"address": "0x...",
+
+"source": "[ethereum.org](http://ethereum.org) deposit-contract page",
+
+"cross\_checked": true
+
+},
+
+"withdrawal\_credentials": {
+
+"decoded\_address": "0xabc...",
+
+"matches\_user\_address": true
+
+}
+
+}
+
+\`\`\`
+
+**我的回答**：B。
+
+**Agent 对照**：正确。B 的价值不只是字段更多，而是可验证、可审计、可约束 Agent。A 把判断直接塞给模型，Auditor 无法复查。
+
+\### 第 4 轮：raw facts / derived checks
+
+**问题**：这些字段分别属于 `raw_facts` 还是 `derived_checks`？
+
+1\. `chain_id = 1`
+
+2\. `deposit_contract_verified = true`
+
+3\. `balance_wei = 32180000000000000000`
+
+4\. `has_enough_balance = true`
+
+5\. `withdrawal_credentials_raw = 0x...`
+
+**我的回答**：
+
+1\. `chain_id = 1` -> `raw_facts`
+
+2\. `deposit_contract_verified = true` -> `derived_checks`
+
+3\. `balance_wei = 32180000000000000000` -> `raw_facts`
+
+4\. `has_enough_balance = true` -> `derived_checks`
+
+5\. `withdrawal_credentials_raw = 0x...` -> `derived_checks`
+
+**Agent 对照**：前 4 个对，第 5 个要改`withdrawal_credentials_raw` 是系统从 deposit data / tx draft / staking flow 里直接读到的原始字段，所以是 `raw_facts`。从它推出来的 `decoded_withdrawal_addresswithdrawal_matches_user_address` 才是 `derived_checks`。
+
+\### 第 5 轮：provenance 与 freshness
+
+**问题**：哪个 context 更适合 Auditor？
+
+A:
+
+\`\`\`yaml
+
+has\_enough\_balance: true
+
+\`\`\`
+
+B:
+
+\`\`\`yaml
+
+balance\_wei:
+
+value: "32180000000000000000"
+
+source: "eth\_getBalance"
+
+chain\_id: 1
+
+block\_number: 22481234
+
+required\_total\_wei:
+
+value: "32025000000000000000"
+
+formula: "deposit\_value\_wei + estimated\_gas\_wei"
+
+has\_enough\_balance: true
+
+\`\`\`
+
+**我的回答**：B。
+
+**Agent 对照**：正确。B 让 Auditor 可以复算判断。A 只能相信结论。
+
+今天的关键区分：
+
+\`\`\`text
+
+REFRESH = 重新读会变化的事实
+
+REVALIDATE = 检查不该变的约束有没有变
+
+STOP = 关键约束破了，不能继续
+
+\`\`\`
+
+快速变化事实：
+
+\- `balance_wei`
+
+\- `gas_price` / `max_fee_per_gas`
+
+\- `nonce`
+
+\- pending tx status
+
+不该变化的约束：
+
+\- `chain_id`
+
+\- `deposit_contract_address`
+
+\- `withdrawal_credentials_raw`
+
+\- `deposit_value_wei`
+
+\### 第 6 轮：REFRESH / REVALIDATE / STOP
+
+**问题**：下面这些情况分别应该是 `REFRESHREVALIDATE` 还是 `STOP`？
+
+1\. `balance_wei` 是 20 个区块前读的
+
+2\. `nonce` 和 pending tx 对不上
+
+3\. `deposit_contract_address` 和已确认地址不一致
+
+4\. `withdrawal_credentials_raw` 和用户确认时不一致
+
+5\. `gas_price` 是 10 分钟前估的
+
+**我的回答**：
+
+1\. `REVALIDATE`
+
+2\. `STOP`
+
+3\. `STOP`
+
+4\. `STOP`
+
+5\. `REFRESH`
+
+**Agent 对照**：4/5。第 1 个要改成 `REFRESH`，因为 `balance_wei` 是快速变化事实，不是拿旧值重新检查，而是要重新读链。
+
+\### 第 7 轮：risk summary 的颜色分层
+
+**问题**：下面哪些是 `RED / STOP`，哪些是 `YELLOW / REVIEW`，哪些是 `GREEN / OK`？
+
+1\. `deposit_contract_verified = false`
+
+2\. `withdrawal_matches_user = true`
+
+3\. `withdrawal_address_first_seen = true` 且无 ownership proof
+
+4\. `deposit_value_wei = 32 ETH`
+
+5\. `balance refreshed 1 block ago and enough`
+
+**我的回答**：
+
+1\. `RED`
+
+2\. `OK`
+
+3\. `RED`
+
+4\. `YELLOW`
+
+5\. `GREEN`
+
+**Agent 对照**：全对。32 ETH 即使字段正确，也应该黄标高亮，因为它本身是高价值不可逆动作。红色应该留给阻断风险，例如合约未验证、提款地址无证明、关键字段和用户确认时不一致。
+
+\## 今日最小实验
+
+\- 选择的实验：为 Hermes staking 设计最小 `context_package`，明确 `raw_facts` / `derived_checks` / `decision`。
+
+\- 产物：本日志中的 context package 草图。
+
+\`\`\`yaml
+
+context\_package:
+
+raw\_facts:
+
+chain\_id:
+
+value: 1
+
+source: "eth\_chainId"
+
+balance\_wei:
+
+value: "32180000000000000000"
+
+source: "eth\_getBalance"
+
+block\_number: 22481234
+
+nonce:
+
+value: 17
+
+source: "eth\_getTransactionCount"
+
+block\_tag: "pending"
+
+deposit\_contract\_address:
+
+value: "0x..."
+
+source\_urls:
+
+\- "[ethereum.org](http://ethereum.org) deposit contract page"
+
+\- "staking launchpad"
+
+\- "explorer verified contract"
+
+withdrawal\_credentials\_raw:
+
+value: "0x..."
+
+source: "deposit\_data.json"
+
+derived\_checks:
+
+has\_enough\_balance: true
+
+deposit\_contract\_verified: true
+
+withdrawal\_matches\_user: true
+
+no\_conflicting\_pending\_tx: true
+
+decision:
+
+can\_request\_user\_confirmation: true
+
+can\_send\_deposit\_tx: false
+
+\`\`\`
+
+\## 我的卡点
+
+\- `launchpad` 一开始容易和发币平台混淆。这里指 Ethereum Staking Launchpad，是质押流程入口；deposit contract 是真正接收 32 ETH 的链上合约。
+
+\- `withdrawal_credentials_raw` 容易被误判为 derived check。实际它是 raw fact；从它 decode 出来的提款地址和所有权匹配结果才是 derived checks。
+
+\## Follow-up
+
+\- \[ \] **hackathon/**[**ideation.md**](http://ideation.md) **首条**：Auditor 用 cohort 5 问写下来（注意"谁付钱"最易卡）
+
+\- \[ \] **Q11 架构决定**：FSM 实现路径（自研 / LangGraph / LangGraph+SDK）——Week 2 内定
+
+\- \[ \] **Hermes context package**：后续可升级成 JSON Schema，并接到 Web3 tool specs 之前
+
+\- \[ \] **代码实验补做**（5.22 "裸 vs 框架" 对比）
+
+\- \[ \] **ERC-4337 + ERC-7562 原文阅读**
+
+\- \[ \] **handbook-feedback 整理**：累计反馈落进 `handbook-feedback/`
+
+\## Handbook / 课程反馈
+
+\- \[ \]
+
+\## 打卡草稿（粘到 [intensivecolearn.ing](http://intensivecolearn.ing) Check-in 表单的 Markdown）
+
+\`\`\`markdown
+
+**Day 10 · Chain-aware Context —— 不让 Agent 把猜测伪装成链上事实**
+
+今天读 Bridge 层的 Chain-aware Context。昨天学 Web3 Tool Use，解决的是 Agent 能调用哪些链上工具；今天补的是工具调用前后，Agent 必须看到哪些链上事实。
+
+核心结论：链上判断要拆成三层`raw_facts → derived_checks → decisionchain_id / block_number / balance_wei / nonce / withdrawal_credentials_raw` 是事实`has_enough_balance / deposit_contract_verified / withdrawal_matches_user` 是从事实推出来的判断。Auditor 不能只看"可以质押"，必须能复算这个结论来自哪个区块、哪个地址、哪个来源。
+
+今天最大的收获是区分 `REFRESH / REVALIDATE / STOP`：余额、gas、nonce 这种会变化的事实，发交易前要 refresh；deposit contract、chain id、withdrawal credentials 这种不该变化的关键约束，要 revalidate；提款权变化、合约地址不一致、nonce 冲突这类情况必须 STOP。
+
+对 Hermes staking 来说，最容易被低估的是 `withdrawal_credentials_raw`。用户会自然关注 32 ETH 是否存进官方 deposit contract，但未来提款权是否指向用户控制地址同样关键。Auditor 的工作，就是把这些机器字段翻译成人能快速判断风险的 summary。
+
+\`\`\`
+
+\- 提交入口：[https://intensivecolearn.ing/en](https://intensivecolearn.ing/en) → 登录 → AI × Web3 School → 左侧 "Check-in"
+
+\- 提交后回填提交时间 / 截图：
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 \# 2026-05-27 学习日志
 
 \## 今日主题
@@ -195,6 +599,7 @@ staking 里除了 `deposit_contract`，最容易被忽略的高危字段是 `wit
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
+
 \# 2026-05-26 学习日志
 
 \## 今日主题
@@ -324,6 +729,7 @@ Week 1 我是在脑子里想这条缝，今天它落成了一张能跑 regressio
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 \# 2026-05-25 学习日志
@@ -457,6 +863,7 @@ cohort Week 1 的官方目标是跑通一条最小链`user intent → AI plannin
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -771,6 +1178,7 @@ Handbook 推荐的 "裸 API vs 框架" 对比（5.22 留的）+ 今天的 Golden
 
 
 
+
 \# 2026-05-22 学习日志
 
 \## 今日主题
@@ -1063,6 +1471,7 @@ DSPy / Hermes / Learning Agent / AI×Web3 分工 / 最小实践——只在 "Age
 
 
 
+
 \# 2026-05-21 学习日志
 
 \## 今日主题
@@ -1276,6 +1685,7 @@ cohort Week 1 / Web3 侧。AA 是 Agent Wallet 的前置——昨天读完 Smart
 
 
 
+
 \# 2026-05-20 学习日志
 
 \## 今日主题
@@ -1440,6 +1850,7 @@ cohort Week 1 / Web3 侧打基础。
 
 
 
+
 \# 2026-05-19 学习日志
 
 \## 留给自己的作业
@@ -1587,6 +1998,7 @@ cohort Week 1 / Web3 侧打基础。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
