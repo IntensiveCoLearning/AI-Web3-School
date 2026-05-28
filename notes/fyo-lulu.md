@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+[https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260528](https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260528)
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 [https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260527.md](https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260527.md)
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 [https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260525.md](https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260525.md)
 <!-- DAILY_CHECKIN_2026-05-26_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
 
+
 [https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260525.md](https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260525.md)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260521.md](https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260521.md)
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -68,11 +79,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260519.md](https://github.com/fyo-lulu/ai-web3-school-cohort-lulu/blob/main/Notes/260519.md)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
