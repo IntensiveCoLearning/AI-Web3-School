@@ -15,8 +15,120 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+## **Women Builders in AI × Web3**
+
+### 1\. **背景与意义**
+
+-   **AI × Web3 的交汇点**：
+    
+    -   **AI（人工智能）**：机器学习、自然语言处理、计算机视觉、智能合约生成等。
+        
+    -   **Web3**：去中心化技术（区块链、DAO、NFT、去中心化金融）。
+        
+-   **女性参与的重要性**：
+    
+    -   提升技术多样性与创新力。
+        
+    -   缩小性别差距，创造更公平的技术生态。
+        
+    -   在Web3去中心化组织中，女性有机会成为早期贡献者和决策者。
+        
+
+* * *
+
+### 2\. **学习路径 (Learning Paths)**
+
+女性开发者和创业者通常通过以下方式进入AI × Web3领域：
+
+1.  **技术基础**：
+    
+    -   **编程语言**：Python（AI）、Solidity（智能合约）、Rust（区块链）。
+        
+    -   **工具与框架**：
+        
+        -   AI：TensorFlow、PyTorch、Hugging Face
+            
+        -   Web3：Ethereum、Polkadot、Cosmos SDK、Chainlink
+            
+2.  **课程与在线教育**：
+    
+    -   Coursera、Udemy、edX：AI基础、机器学习、区块链开发
+        
+    -   Web3特定课程：
+        
+        -   Buildspace、Moralis Academy
+            
+        -   Women in Blockchain 社区课程
+            
+3.  **实践与项目经验**：
+    
+    -   AI：构建AI模型、开源项目贡献
+        
+    -   Web3：智能合约部署、NFT项目、DAO参与
+        
+
+**重点**：建议从小型项目入手，逐步结合AI和Web3技术，比如用AI生成NFT艺术，或者在DAO里管理AI项目。
+
+* * *
+
+### 3\. **协作网络 (Collaboration Networks)**
+
+-   **女性科技社区**：
+    
+    -   Women in AI
+        
+    -   Women in Blockchain
+        
+    -   She256、CryptoChicks
+        
+-   **线上与线下活动**：
+    
+    -   Hackathons（HackMIT、ETHGlobal）
+        
+    -   Web3 Meetups、AI工作坊
+        
+-   **导师与合作关系**：
+    
+    -   导师：技术指导、职业规划
+        
+    -   合作伙伴：共同开发AI × Web3项目
+        
+
+**观察**：
+
+-   社区提供技能培训、资源共享、融资机会。
+    
+-   网络越广，获取全球机会的可能性越大。
+    
+
+* * *
+
+### 4\. **全球机会 (Global Opportunities)**
+
+-   **创业与融资**：
+    
+    -   Web3初创公司对女性创始人的支持增加（如女性加速器、DAOs投资基金）。
+        
+    -   AI × Web3创新产品有全球市场潜力。
+        
+-   **职业发展**：
+    
+    -   AI研究、区块链开发、智能合约工程师、DAO治理角色。
+        
+    -   远程工作机会丰富，可跨国合作。
+        
+-   **影响力与社会贡献**：
+    
+    -   女性领导者在多样化团队中更容易推动公平、可持续项目。
+        
+    -   在全球性问题（气候、金融包容、医疗AI）中创造解决方案。
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 # **Cypherpunk & the Cultural Layers of Privacy: Why Privacy Matters for Builders**
 
 ## Cypherpunk
@@ -52,6 +164,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 # **Product manager of Cobo Agentic Wallet**
 
@@ -92,6 +205,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
 
+
 # MetaMask
 
 -   metamask is a app tht allows you to manage ethereum,solana,bitcoin and private keys.
@@ -116,6 +230,7 @@ AI x Web3 School
 
 
 
+
 # **Long-term Memory for AI Agents**
 
 ## restart VS resume
@@ -131,6 +246,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -224,6 +340,7 @@ AI x Web3 School
 
 
 
+
 # **Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path**
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-05-23-1779524951056-image.png)
@@ -246,6 +363,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -282,6 +400,7 @@ AI驱动链上分析工具
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -368,6 +487,7 @@ AI驱动链上分析工具
 
 
 
+
 Hermes Agent学习
 
 ```
@@ -422,6 +542,7 @@ API 文档：https://web3career.build/llms.txt
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
