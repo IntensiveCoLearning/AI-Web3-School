@@ -15,8 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+**今天进行了最小支付流程拆解**
+
+```
+用户设 Budget + 授权
+  → Agent 收 Quote，检查预算
+    → Guard 校验交易（金额、接收地址）
+      → Simulation 预演
+        → Human Check 确认
+          → 链上执行
+            → Receipt 生成
+              → 验收 / 退款 / 争议
+```
+
+今天工作有些忙碌，只看了这么多，周末会爆发一下，全部完成week2的任务
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 今日学习的时间少点，所以看的不是很多，主要还是看看了方向问题。
 
 今天仔细看了 Week 2「AI × Web3 交叉研究与方向选择」的几个方向描述，最终锁定：
@@ -54,6 +73,7 @@ AI x Web3 School
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
+
 **今日学习总结**
 
 **Stablecoin Payment** 最基础的稳定币支付，USDC/USDT 转账，没啥说的。
@@ -85,6 +105,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
 
+
 **今日学习内容**
 
 **AA Wallet / Smart Account**（基础层） 之前 Week 1 读 AA 的时候只觉得「很厉害」，现在理解了它的具体价值：传统 EOA 是一把私钥控制一切，AA 让账户本身能写规则——谁能操作、能操作什么、什么时候失效。Smart Account 就是带规则的钱包账户。对 Agent 来说，AA 的关键不是「钱包更高级」，而是账户终于能表达规则了。
@@ -111,11 +132,13 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日完成了一个任务；设计一个受限 Web3 助手 workflow（40 pts）— 以「用稳定币订阅 X Premium」为场景，设计了基于智能账户（Smart Account）+ Session Key 的受限支付助手。核心设计：Session Key 四维限制（金额 ≤10U、每日 ≤3 笔、收款地址白名单、30 天有效期），规则由人来定、执行交给 Agent。重点搞清楚了白名单地址为什么必须人工核实（Agent 可能获取被篡改的地址），以及 Session Key 和 EOA 体验差异的本质——不是「不需要确认」，而是「授权范围内提前确认过了」。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -157,6 +180,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日学习
 
 用 Excalidraw 画了一张从 用户发起任务 到 链上执行验证 的完整流程图，把 Week 1 学的 LLM、Prompt、Context、RAG、Agent、钱包、合约串成了一条链路。
@@ -187,6 +211,7 @@ RPC 广播 → mempool →
 
 
 
+
 Day 5 打卡｜概念卡片整理：AI 6 个 + Web3 8 个  
   
 前两天把 Handbook 四章读完了，今天没读新东西，把读过的概念用自己的话整理成了卡片，方便以后翻。  
@@ -210,6 +235,7 @@ ERC-4337 是新东西，看了 UserOperation → Bundler → EntryPoint → Paym
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -347,6 +373,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 ## 单笔交易流转流程
 
 钱包签名→节点网络传播→内存池排队→构建者排序→验证者打包出块→区块上链可查询
@@ -402,6 +429,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 今日的学习笔记作结
 
 ```markdown
@@ -434,6 +462,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
