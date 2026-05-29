@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+今日主要听了**Women Builders in AI × Web3: Learning Paths, Collaboration Networks & Global Opportunities**
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 # 2026-05-27 今日总结
 
 今天我把 Week 2 的 CAW 安全实验从“纸面设计”推进到了“真实跑通并拿到链上结果”的阶段。
@@ -36,6 +42,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 # 2026-05-27 今日总结
 
@@ -58,6 +65,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
 
+
 今天我主要把 Week 2 的 `Privacy / Security / Sovereignty` 方向真正落到了一个可执行的安全实验框架上，而不是停留在“AI × Web3 很有风险”这种泛泛判断。
 
 最重要的进展是，我把这周的主线明确收敛到了 **CAW 的安全边界实验**。我先确认了当前的 CAW 环境状态：测试网是 `Sepolia`，wallet 已经完成 pairing，而且已经有 active pact，可以看到 `pending approvalpolicy-enforced txpact lifecycle` 和 `operation tracking` 这些关键信息。这让我不再只是抽象讨论 agent 安全，而是可以围绕一个真实的、已经具备策略检查能力的钱包基础设施去做实验。
@@ -71,6 +79,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -106,6 +115,7 @@ AI x Web3 School
 
 
 
+
 * * *
 
 # **Week 1 总结**
@@ -127,6 +137,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -445,6 +456,7 @@ Stage 2 虽然更强，但安全边界没有变：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -786,6 +798,7 @@ Stage 2 虽然更强，但安全边界没有变：
 
 
 
+
 今天我主要完成了 Week 1 Proof-of-Work Pack 的收口工作，把零散材料整理成了可提交、可审核的公开入口。核心产出是把 \[[README.md](http://README.md)\]重写成 Week 1 总入口，并补上了 \[tasks/[minimal-ai-web3-workflow.md](http://minimal-ai-web3-workflow.md)\]，用最小流程说明了 AI 生成、人工复核、钱包确认、测试网执行和区块浏览器验证之间的边界。
 
 今天还补充了对这个最小 AI × Web3 工作流的简短说明，明确了它解决什么问题、哪些步骤由 AI / Agent 辅助、哪些步骤必须人工确认、如何验证最终结果，以及主要风险点。最后，这些更新已经提交并推送到 GitHub
@@ -793,6 +806,7 @@ Stage 2 虽然更强，但安全边界没有变：
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -957,6 +971,7 @@ Stage 2 虽然更强，但安全边界没有变：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
