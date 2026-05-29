@@ -15,8 +15,29 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+```
+传统以太坊的痛点：
+
+  EOA（私钥账户）:
+    ❌ 丢失私钥 = 丢失全部资产
+    ❌ 只能 ETH 付 gas（不能用 USDC）
+    ❌ 没有权限控制（单签）
+    ❌ 不能批量交易（多步操作要多次签名）
+    ❌ 没有社交恢复 / 多签 / 限额
+
+  智能合约钱包：
+    ✅ 可以做到以上全部
+    ❌ 但合约不能发起交易——必须有人用 EOA 触发
+```
+
+**ERC-4337 的答案**：让智能合约钱包自己"发起"交易——不是真的发起（那需要改协议层），而是通过一个替代 mempool（Alt Mempool）把用户的意图打包，由 Bundler 代为提交到链上。
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 ```
 线 1：Agent 怎么做事？
   ├── MCP  → Agent ↔ 工具（发现 + 调用）
@@ -33,6 +54,7 @@ timezone: UTC+8
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 # **MCP 远程服务器连接**  
 **三种传输协议**
@@ -60,6 +82,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 ## **提示工程（让Agent从“靠运气”到“稳定可控”）**
@@ -91,6 +114,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -147,11 +171,13 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天学习了一下web3xai有一些大概的总结：从 Agent Workflow 的 human-in-the-loop，到 Escrow 的多签仲裁，到 Sovereignty 的一键 kill switch，到 Governance AI 的「AI 不替你做投票建议」——**自动化程度越高，撤回机制必须越强**。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -183,6 +209,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 **1\. Web3 Tool Use（学完）**  
 \- 工具分层：只读（RPC/Contract Read）↔️ 写交易（Contract Write/Wallet）必须硬分离  
 \- 写交易前 7 步检查链：chain id → 合约地址 → ABI → value → gas → simulation → policy+确认  
@@ -196,6 +223,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -220,6 +248,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天听了一下web3的课，这些概念都懂算是巩固一下基础了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -234,11 +263,13 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天终于把hermes弄好，也学习了一些ai的知识
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
