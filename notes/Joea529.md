@@ -40,6 +40,7 @@ AI x Web3 School
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
+
 📚 AI × Web3 School Day 8 — 氛围编程（Vibe Coding）
 
 💡 3 个核心理解：
@@ -64,6 +65,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
 
+
 📚 AI × Web3 School Day 7 — 框架（Frameworks）
 
 💡 3 个核心理解：
@@ -86,6 +88,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -115,6 +118,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 5 — 检索增强生成（RAG）
 
 💡 3 个核心理解：
@@ -137,6 +141,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -177,6 +182,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 4 — 上下文（Context）
 
 💡 3 个核心理解：
@@ -199,6 +205,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -237,6 +244,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 2 — 提示词（Prompt）
 
 💡 对照手册学完 4 个知识节点：
@@ -260,6 +268,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
