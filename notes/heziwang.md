@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+[https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-29.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-29.md)
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/heziwang/images/2026-05-29-1780022650589-image.png)
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 今日学习分享心得：提醒 Builder，隐私是一种产品基础能力、一种社区伦理，也是一种可以从小工具、小选择、小设计开始实践的技术文化。Neo Cypherpunk 的重点，是把隐私从恐惧叙事带回到开放、互助、快乐和可建设的未来里。
 
 co-learing学习心得：技术上能做，不代表组织上能跑通。黑客松阶段可以把项目讲成“Web2 友好的贡献记录与奖励分配协议/工具”，先解决一个小社群里的真实协作问题；不要一开始就承担完整 DAO、完整信用体系和大众教育三件大事。产品第一版应让用户明显感觉到：我的贡献被记录了、被看见了、能兑换权益了，而且不用先学会一堆 Web3 概念。
@@ -28,6 +36,7 @@ git笔记：[https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/da
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 [https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-26.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-26.md)
 
@@ -50,6 +59,7 @@ git笔记：[https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/da
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
 
+
 学习笔记：[https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-25.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-25.md)  
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/heziwang/images/2026-05-25-1779718908732-image.png)
@@ -59,6 +69,7 @@ git笔记：[https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/da
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -77,6 +88,7 @@ Web3 可以先理解成一套“公开账本系统”，资产记录在链上，
 
 
 
+
 学习笔记：  
 [https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-23.md](https://github.com/heziwang/ai-web3-school-cohort-wang/blob/main/daily/2026-05-23.md)  
   
@@ -87,6 +99,7 @@ Web3 可以先理解成一套“公开账本系统”，资产记录在链上，
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -109,6 +122,7 @@ Web3 可以先理解成一套“公开账本系统”，资产记录在链上，
 
 
 
+
 [https://github.com/heziwang/ai-web3-school-cohort-wang](https://github.com/heziwang/ai-web3-school-cohort-wang)
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/heziwang/images/2026-05-21-1779372183332-image.png)
@@ -122,6 +136,7 @@ Web3 可以先理解成一套“公开账本系统”，资产记录在链上，
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -154,6 +169,7 @@ Web3 可以先理解成一套“公开账本系统”，资产记录在链上，
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
