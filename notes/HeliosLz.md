@@ -21,13 +21,13 @@ AI x Web3 School
 
 \## 今日主题
 
-\- Handbook 节点：\[AI Security\]([https://aiweb3.school/zh/handbook/bridge/ai-security/)（Bridge](https://aiweb3.school/zh/handbook/bridge/ai-security/\)（Bridge) 层）
+\- Handbook 节点：\[AI Security\]([https://aiweb3.school/zh/handbook/bridge/ai-security/)（Bridge](https://aiweb3.school/zh/handbook/bridge/ai-security/\)%EF%BC%88Bridge) 层）
 
 \- 关联 cohort Week：\*\*Week 2 第 5 天\*\*（探索 AI x Web3 交叉 / Week 2 收束）
 
 \- 模式：\*\*边讲边学 + 逐节提问 + Hermes threat model 设计\*\*
 
-\- 提交入口：[https://intensivecolearn.ing/en（"Check-in](https://intensivecolearn.ing/en（"Check-in)" 按钮）
+\- 提交入口：[https://intensivecolearn.ing/en（"Check-in](https://intensivecolearn.ing/en%EF%BC%88%22Check-in)" 按钮）
 
 \## 为什么读它 / 带着什么问题读
 
@@ -97,107 +97,107 @@ threat\_model:
 
 assets:
 
-\- "32 ETH principal"
+\- “32 ETH principal”
 
-\- "withdrawal\_credentials / withdrawal rights"
+\- “withdrawal\_credentials / withdrawal rights”
 
-\- "official deposit contract address"
+\- “official deposit contract address”
 
-\- "user confirmation integrity"
+\- “user confirmation integrity”
 
-\- "session key scope"
+\- “session key scope”
 
-\- "chain-aware context freshness and provenance"
+\- “chain-aware context freshness and provenance”
 
 threats:
 
 transaction\_substitution:
 
-description: "用户确认的是交易 A，实际提交的是交易 B。"
+description: “用户确认的是交易 A，实际提交的是交易 B。”
 
-example: "risk summary 里 withdrawal address 是用户地址，但 calldata 里 withdrawal\_credentials 被换成 attacker address。"
+example: “risk summary 里 withdrawal address 是用户地址，但 calldata 里 withdrawal\_credentials 被换成 attacker address。”
 
 detection:
 
-\- "calldata\_hash matches confirmed plan"
+\- “calldata\_hash matches confirmed plan”
 
-\- "withdrawal\_credentials\_raw matches confirmed plan"
+\- “withdrawal\_credentials\_raw matches confirmed plan”
 
-\- "deposit\_data\_root matches confirmed plan"
+\- “deposit\_data\_root matches confirmed plan”
 
-\- "risk\_summary\_id and user\_confirmation\_id match"
+\- “risk\_summary\_id and user\_confirmation\_id match”
 
-response: "STOP\_AND\_REVIEW"
+response: “STOP\_AND\_REVIEW”
 
 context\_poisoning:
 
-description: "Agent 判断所依赖的链上事实或外部来源被污染。"
+description: “Agent 判断所依赖的链上事实或外部来源被污染。”
 
-example: "错误 context 声称 attacker address 是用户控制的 withdrawal address。"
+example: “错误 context 声称 attacker address 是用户控制的 withdrawal address。”
 
 detection:
 
-\- "source provenance required"
+\- “source provenance required”
 
-\- "ownership proof required for withdrawal address"
+\- “ownership proof required for withdrawal address”
 
-\- "cross-check deposit contract sources"
+\- “cross-check deposit contract sources”
 
-response: "STOP\_OR\_REQUIRE\_PROOF"
+response: “STOP\_OR\_REQUIRE\_PROOF”
 
 authorization\_replay:
 
-description: "旧 user confirmation 或旧 session key 被复用到新交易。"
+description: “旧 user confirmation 或旧 session key 被复用到新交易。”
 
-example: "昨天确认的一次 deposit 被拿来授权今天另一笔 deposit。"
+example: “昨天确认的一次 deposit 被拿来授权今天另一笔 deposit。”
 
 detection:
 
-\- "user\_confirmation\_id is single-use"
+\- “user\_confirmation\_id is single-use”
 
-\- "session\_key expires quickly"
+\- “session\_key expires quickly”
 
-\- "max\_transactions == 1"
+\- “max\_transactions == 1”
 
-\- "session\_key binds to risk\_summary\_id and calldata\_hash"
+\- “session\_key binds to risk\_summary\_id and calldata\_hash”
 
-\- "authorization package is marked used after submit"
+\- “authorization package is marked used after submit”
 
-response: "REVIEW\_AGAIN"
+response: “REVIEW\_AGAIN”
 
 tool\_misuse:
 
-description: "Agent 调用了不在计划范围内的工具、合约或函数。"
+description: “Agent 调用了不在计划范围内的工具、合约或函数。”
 
-example: "用户授权 staking deposit，但 Agent 调用 x402 payment / generic transfer / swap 工具去花 32 ETH。"
+example: “用户授权 staking deposit，但 Agent 调用 x402 payment / generic transfer / swap 工具去花 32 ETH。”
 
 detection:
 
-\- "allowed\_tools enforced"
+\- “allowed\_tools enforced”
 
-\- "allowed\_contracts enforced"
+\- “allowed\_contracts enforced”
 
-\- "allowed\_functions enforced"
+\- “allowed\_functions enforced”
 
-\- "max\_transactions == 1"
+\- “max\_transactions == 1”
 
-response: "STOP"
+response: “STOP”
 
 stale\_context\_execution:
 
-description: "使用旧余额、旧 gas 或旧 nonce 提交交易。"
+description: “使用旧余额、旧 gas 或旧 nonce 提交交易。”
 
-example: "发送前 gas fee 已经变化，不能继续使用旧 gas\_quote 提交交易。"
+example: “发送前 gas fee 已经变化，不能继续使用旧 gas\_quote 提交交易。”
 
 detection:
 
-\- "refresh balance\_wei before submit"
+\- “refresh balance\_wei before submit”
 
-\- "refresh gas\_quote before submit"
+\- “refresh gas\_quote before submit”
 
-\- "refresh nonce and pending\_tx\_status before submit"
+\- “refresh nonce and pending\_tx\_status before submit”
 
-response: "REFRESH\_THEN\_BLOCK\_IF\_INVALID"
+response: “REFRESH\_THEN\_BLOCK\_IF\_INVALID”
 
 \`\`\`
 
@@ -215,7 +215,7 @@ response: "REFRESH\_THEN\_BLOCK\_IF\_INVALID"
 
 \- \[ \] **Hermes context package**：升级成 JSON Schema，并接到 Web3 tool specs 之前
 
-\- \[ \] **代码实验补做**（5.22 "裸 API vs 框架" 对比）
+\- \[ \] **代码实验补做**（5.22 “裸 API vs 框架” 对比）
 
 \- \[ \] **ERC-4337 + ERC-7562 原文阅读**
 
@@ -239,13 +239,14 @@ response: "REFRESH\_THEN\_BLOCK\_IF\_INVALID"
 
 \`\`\`
 
-\- 提交入口：[https://intensivecolearn.ing/en](https://intensivecolearn.ing/en) → 登录 → AI × Web3 School → 左侧 "Check-in"
+\- 提交入口：[https://intensivecolearn.ing/en](https://intensivecolearn.ing/en) → 登录 → AI × Web3 School → 左侧 “Check-in”
 
-\- 提交后回填提交时间 / 截图：
+\- 提交后回填提交时间 / 截图：2026-05-30 HH:MM CST
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 \# 2026-05-29 学习日志
 
@@ -412,6 +413,7 @@ can\_submit\_tx: false
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 \# 2026-05-28 学习日志
@@ -820,6 +822,7 @@ can\_send\_deposit\_tx: false
 
 
 
+
 \# 2026-05-27 学习日志
 
 \## 今日主题
@@ -1001,6 +1004,7 @@ staking 里除了 `deposit_contract`，最容易被忽略的高危字段是 `wit
 
 
 
+
 \# 2026-05-26 学习日志
 
 \## 今日主题
@@ -1130,6 +1134,7 @@ Week 1 我是在脑子里想这条缝，今天它落成了一张能跑 regressio
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -1266,6 +1271,7 @@ cohort Week 1 的官方目标是跑通一条最小链`user intent → AI plannin
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -1586,6 +1592,7 @@ Handbook 推荐的 "裸 API vs 框架" 对比（5.22 留的）+ 今天的 Golden
 
 
 
+
 \# 2026-05-22 学习日志
 
 \## 今日主题
@@ -1881,6 +1888,7 @@ DSPy / Hermes / Learning Agent / AI×Web3 分工 / 最小实践——只在 "Age
 
 
 
+
 \# 2026-05-21 学习日志
 
 \## 今日主题
@@ -2097,6 +2105,7 @@ cohort Week 1 / Web3 侧。AA 是 Agent Wallet 的前置——昨天读完 Smart
 
 
 
+
 \# 2026-05-20 学习日志
 
 \## 今日主题
@@ -2264,6 +2273,7 @@ cohort Week 1 / Web3 侧打基础。
 
 
 
+
 \# 2026-05-19 学习日志
 
 \## 留给自己的作业
@@ -2411,6 +2421,7 @@ cohort Week 1 / Web3 侧打基础。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
