@@ -15,8 +15,202 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+\# Week 2 Day 4 — Co-learning & 冲刺 Week 2 例会
+
+**日期**: 2026-05-28
+
+**主线方向**: Dev Tooling / Agent Workflow
+
+**WCB 学习面板**: [https://web3career.build/zh/programs/AI-Web3-School#tab=learning](https://web3career.build/zh/programs/AI-Web3-School#tab=learning)
+
+**课程参考**: \[Notion Week 2\]([https://ethpanda.notion.site/Week-2-AI-Web3-354bbd63be87818a83abdca6da1e50cf?pvs=74](https://ethpanda.notion.site/Week-2-AI-Web3-354bbd63be87818a83abdca6da1e50cf?pvs=74))
+
+\---
+
+\## 今日活动
+
+| 时间 | 活动 | 状态 |
+
+|------|------|------|
+
+| 19:00 | Co-learning｜任务推进与答疑 | |
+
+\### Co-learning 答疑
+
+\- **Zoom**: [https://us06web.zoom.us/j/89182753424?pwd=MXUUjEdw7aUdt7yhZxmRfSXKuHeM3a.1](https://us06web.zoom.us/j/89182753424?pwd=MXUUjEdw7aUdt7yhZxmRfSXKuHeM3a.1)
+
+\- 会议号: 891 8275 3424 / 密码: 815963
+
+\- ⚠️ 无回放
+
+\> 原定今晚 20:00 [Z.AI](http://Z.AI) 1st 已替换为明天 5/29 19:00 的 Women Builders in AI × Web3
+
+\---
+
+\## 学习笔记
+
+\### 关联课程：模块 E — Agent DeFi Execution
+
+\> Week 2 的新增模块，聚焦 agent 如何安全执行链上操作。跟你的 Smart Contract Analyzer 方向互补——分析完合约后，agent 可能还要执行。
+
+**核心问题**（课程）：
+
+\- agent 参与 DeFi 时，真正执行的是什么链上动作？
+
+\- 如何限制 agent 的预算、协议、token、合约、时间窗口和最大损失？
+
+\- swap/approve/deposit/borrow/withdraw/redeem 各自有什么风险？
+
+\- 哪些动作可自动执行？哪些必须人工确认？
+
+\- 执行完成后如何通过 tx record 和 audit log 进行验证？
+
+**典型协议速览**（课程）：
+
+| 协议 | 学习重点 |
+
+|------|---------|
+
+| Uniswap | DEX swap、slippage、allowance、MEV、交易前模拟 |
+
+| Aave | 存款、借贷、健康因子、清算风险、oracle 风险 |
+
+| Polymarket | 预测市场下注、赎回、合规边界 |
+
+| Hyperliquid | 链上永续合约、订单类型、杠杆风险、授权边界 |
+
+| Lido/Jito | 流动性质押、收益凭证、赎回延迟、脱锚风险 |
+
+**安全材料**（课程推荐）：
+
+\- \[OpenAI: 理解提示词注入攻击\]([https://openai.com/index/prompt-injections/](https://openai.com/index/prompt-injections/))
+
+\- \[OWASP: 敏感信息披露\]([https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/](https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/))
+
+\- \[OWASP: 代理过剩\]([https://genai.owasp.org/llmrisk/llm062025-excessive-agency/](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/))
+
+\### 今日产出
+
+\- **MCP Server 全部 4 个模块完成**`experiments/smart-contract-analyzer/`
+
+\- `server.py` — MCP 主入口，4 个 Tool 全部实现
+
+\- `etherscan_client.py` — Etherscan API 封装
+
+\- `abi_parser.py` — ABI 解析（函数查找、分类、摘要）
+
+\- `security_rules.py` — 8 条安全规则引擎
+
+\- 已通过导入测试和安全规则逻辑验证
+
+\### MCP Server 12 个文件的最终结构
+
+\`\`\`
+
+experiments/smart-contract-analyzer/
+
+├── [server.py](http://server.py) # MCP Server 主入口 (stdio + HTTP调试)
+
+├── etherscan\_[client.py](http://client.py) # Etherscan API 封装
+
+├── abi\_[parser.py](http://parser.py) # ABI 解析工具集
+
+├── security\_[rules.py](http://rules.py) # 8条安全审计规则
+
+├── requirements.txt # mcp\[cli\] + requests
+
+└── [README.md](http://README.md) # 项目文档
+
+\`\`\`
+
+**下一步**（配好 ETHERSCAN\_API\_KEY 后即可在 Hermes 中使用）：
+
+\`\`\`yaml
+
+\# ~/AppData/Local/hermes/config.yaml
+
+mcp\_servers:
+
+\- name: contract-analyzer
+
+command: python
+
+args: \["C:/Users/psxxc/ai-web3-school-cohort-0/experiments/smart-contract-analyzer/[server.py](http://server.py)"\]
+
+\`\`\`
+
+\---
+
+\## Week 2 交付清单（明天 20:00 例会前）
+
+对照课程「本周总交付」逐条检查：
+
+| # | 交付物 | 状态 | 产出 |
+
+|---|--------|:--:|------|
+
+| 1 | AI × Web3 问题地图（≥5 方向） | ⬜ | |
+
+| 2 | 方向选择说明（为什么不是纯 AI/纯 Web3） | ✅ | `proposals/week2-dev-tooling-proposal.md` |
+
+| 3 | 问题拆解（参与方、流程、AI作用、Web3机制、自动化边界） | ✅ | proposal + `research/mcp-vs-a2a.md` |
+
+| 4 | 项目初步 proposal | ✅ | `proposals/week2-dev-tooling-proposal.md` |
+
+| 5 | 参考资料清单（≥5 条） | ⬜ | 分散在各 research 文档中，需汇总 |
+
+| 6 | 主方向深挖包（流程图+场景+反例+风险+验证计划） | ⚠️ | proposal 有基础，需补充流程图和反例 |
+
+| 7 | 方向 backlog（未选方向+不选原因） | ⬜ | |
+
+\> 课程警告：「如果 Week 2 结束后，学员仍然只是在罗列热门名词，无法说明一个方向中的 AI 作用、Web3 机制、验证方式和风险边界，那么这一周还没有真正完成。」
+
+\---
+
+\## 明日预告 (5/29 — Week 2 最后一天)
+
+| 时间 | 活动 | Zoom |
+
+|------|------|------|
+
+| 19:00 | Women Builders in AI × Web3 | \[Zoom\]([https://us06web.zoom.us/j/83554099273?pwd=mW8dOaJOhLplm8xFJc1rSIjtMrEg2x.1](https://us06web.zoom.us/j/83554099273?pwd=mW8dOaJOhLplm8xFJc1rSIjtMrEg2x.1)) 密码: 164100 |
+
+| **20:00** | **Week 2 例会｜成果分享+Week 3 预告** | \[Zoom\]([https://us06web.zoom.us/j/87492556811?pwd=yCa7M68zCp1y1f1Q5J7aYa0e3PVHIx.1](https://us06web.zoom.us/j/87492556811?pwd=yCa7M68zCp1y1f1Q5J7aYa0e3PVHIx.1)) 密码: 033931 |
+
+**X 直播/回放**:
+
+\- Women Builders: [https://x.com/i/broadcasts/1mxPaLvzjOgKN](https://x.com/i/broadcasts/1mxPaLvzjOgKN)
+
+\- Week 2 例会: [https://x.com/i/broadcasts/1dGYljZYLlZKX](https://x.com/i/broadcasts/1dGYljZYLlZKX)
+
+\---
+
+\## WCB 打卡草稿
+
+\`\`\`
+
+#AIWeb3School #Week2Day4
+
+今天冲刺 Week 2 交付：
+
+1\. 对照课程 7 条总交付逐条检查进度
+
+2\. 学习了 Agent DeFi Execution 模块——Uniswap/Aave/Hyperliquid 等协议的安全执行
+
+明天周五 20:00 是 Week 2 例会，准备分享内容中。
+
+\`\`\`
+
+\- 打卡链接: [https://web3career.build/zh/programs/AI-Web3-School#tab=learning](https://web3career.build/zh/programs/AI-Web3-School#tab=learning)
+
+\- 提交状态: pending
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 #AIWeb3School #Week2Day2
 
 今天三件事：
@@ -38,6 +232,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 \# Week 2 Day 1 — AI × Web3 交叉研究方向选择
 
@@ -284,6 +479,7 @@ Name: ai-web3-learning-session
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 
 
+
 \# Daily Note — 2026-05-22
 
 \## 今日学习：Web3 网络（Network）基础
@@ -420,6 +616,7 @@ Name: ai-web3-learning-session
 
 
 
+
 \# Daily Note — 2026-05-21
 
 \## 今日课程
@@ -511,6 +708,7 @@ Name: ai-web3-learning-session
 
 
 
+
 今天参加了Web3 运行原理的课程，补齐了账户、钱包、签名、交易、Gas、合约、区块浏览器和测试网验证如何组成一次完整链上操作等知识，并且继续学习hermes的进阶玩法
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -521,11 +719,13 @@ Name: ai-web3-learning-session
 
 
 
+
 今天配置好了hermes，并观看了18号8pm的**AI时代，Web3开发者需要具备的基础知识和架构能力**的回放视频，学习了钱包、gas、ai的一些基础概念
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
