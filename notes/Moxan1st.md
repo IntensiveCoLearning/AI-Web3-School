@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+Week2Day5
+
+今天5点半飞chengdu了，人麻了
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 Week2Day5
 
 今天社交一整天加出差了捏
@@ -25,6 +33,7 @@ Week2Day5
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
+
 Week2Day3
 
 听了一下neo cyberpunk，强调了一下隐私的关键性，还是那个问题，隐私的重要性对于每个个体的要求是不一样的，怎样针对个体定制化的设计产品？
@@ -32,6 +41,7 @@ Week2Day3
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 Week2Day2
@@ -46,6 +56,7 @@ Week2Day2
 
 
 
+
 Week2Day1
 
 1.先提交了已完成的内容。
@@ -57,6 +68,7 @@ Week2Day1
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -76,6 +88,7 @@ Week3Day1
 
 
 
+
 Week1Day6
 
 请假休息一天，漂了个头发
@@ -83,6 +96,7 @@ Week1Day6
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -105,6 +119,7 @@ Week1Day5
 
 
 
+
 Week1Day4
 
 一会开直播开始学，dbq AI X Web3 School
@@ -112,6 +127,7 @@ Week1Day4
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -138,6 +154,7 @@ Week1Day3
 
 
 
+
 Week1 Day2
 
 今天去毕业答辩了，顺利通过捏
@@ -145,6 +162,7 @@ Week1 Day2
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
