@@ -15,8 +15,612 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+# Day 6 學習總結 — Agent Memory、Knowledge Infrastructure 與 Context Engineering
+
+今天其實有兩條主線：
+
+1.  **Long-term Memory（長期記憶）**
+    
+2.  **Context Engineering（上下文工程）**
+    
+
+而這兩條線其實正在回答同一個問題：
+
+> AI 怎樣在長時間內保持一致、可靠和有用？
+
+* * *
+
+# 一、Long-term Memory
+
+今天最大的認知突破：
+
+# Memory ≠ Database
+
+* * *
+
+Database 記錄：
+
+```text
+發生過甚麼
+```
+
+例如：
+
+-   GG23 proposal
+    
+-   GitHub activity
+    
+-   funding history
+    
+
+* * *
+
+Memory 記錄：
+
+```text
+對歷史的理解
+```
+
+例如：
+
+```text
+CancerDAO 長期維持穩定交付
+```
+
+或：
+
+```text
+某 reviewer 特別重視 evidence
+```
+
+* * *
+
+你也理解：
+
+# Memory 本質上是抽象化（abstraction）
+
+不是原始資料。
+
+* * *
+
+# 二、目前 Agent Memory 的四種主流做法
+
+* * *
+
+## 1\. Retrieval-based Memory
+
+最主流。
+
+做法：
+
+```text
+歷史資料
+↓
+Embedding
+↓
+Vector DB
+↓
+需要時 retrieve
+```
+
+本質：
+
+```text
+Memory = 特殊用途的 RAG
+```
+
+* * *
+
+優點：
+
+-   可擴充
+    
+-   可搜尋
+    
+-   容量大
+    
+
+缺點：
+
+-   不一定一致
+    
+-   容易 drift
+    
+
+* * *
+
+## 2\. Summary-based Memory
+
+定期產生：
+
+```text
+長期摘要
+```
+
+例如：
+
+```text
+User prefers concise reviews.
+```
+
+* * *
+
+優點：
+
+-   token 低
+    
+-   穩定
+    
+
+缺點：
+
+-   資訊遺失
+    
+
+* * *
+
+## 3\. Knowledge Graph Memory
+
+把記憶變成關係網。
+
+例如：
+
+```text
+CancerDAO
+→ participated_in → GG23
+→ category → longevity
+```
+
+* * *
+
+優點：
+
+-   結構清晰
+    
+-   explainable
+    
+
+缺點：
+
+-   維護困難
+    
+
+* * *
+
+## 4\. Fine-tuned Identity
+
+今天新學到。
+
+* * *
+
+# Fine-tuning 不是加入知識
+
+而是：
+
+# 改變模型行為傾向
+
+* * *
+
+例如：
+
+讓模型：
+
+-   更像 reviewer
+    
+-   更保守
+    
+-   更 evidence-first
+    
+
+* * *
+
+你理解：
+
+* * *
+
+# RAG
+
+管理：
+
+```text
+知識
+```
+
+* * *
+
+# Fine-tuning
+
+管理：
+
+```text
+行為
+```
+
+* * *
+
+# 三、Obsidian 作為第二大腦
+
+今天很重要的一部分。
+
+* * *
+
+你理解：
+
+# Obsidian 不是 Memory Engine
+
+而是：
+
+# Human-readable Knowledge Store
+
+* * *
+
+本質：
+
+```text
+第二大腦
+```
+
+* * *
+
+AI 可以：
+
+```text
+Obsidian
+↓
+Chunking
+↓
+Embedding
+↓
+Retrieval
+```
+
+* * *
+
+優點：
+
+-   Markdown
+    
+-   Backlinks
+    
+-   本地控制
+    
+-   適合研究工作
+    
+
+* * *
+
+缺點：
+
+-   AI 不會自動理解
+    
+-   Retrieval 仍要自己設計
+    
+-   容易變成資訊垃圾場
+    
+
+* * *
+
+# 四、Notion 與 GitHub 的角色
+
+今天這部分其實直接影響 Spark 架構。
+
+* * *
+
+# Notion
+
+定位：
+
+# Human Coordination Layer
+
+* * *
+
+用途：
+
+-   round management
+    
+-   reviewer collaboration
+    
+-   dashboards
+    
+
+* * *
+
+不是：
+
+# Canonical Knowledge
+
+* * *
+
+# GitHub
+
+定位：
+
+# Canonical Archive
+
+* * *
+
+用途：
+
+-   snapshots
+    
+-   version history
+    
+-   structured exports
+    
+
+* * *
+
+是：
+
+# Source of Truth
+
+* * *
+
+# 五、Agent 應該抓哪裡？
+
+今天你得到很重要的架構觀念：
+
+Agent 不應直接抓：
+
+```text
+Notion
+```
+
+* * *
+
+而應：
+
+```text
+Notion
+↓
+Export
+↓
+GitHub Archive
+↓
+Chunking
+↓
+Embeddings
+↓
+Vector DB
+↓
+Agent Retrieval
+```
+
+* * *
+
+也就是：
+
+# Agent 最終抓的是 AI-ready retrieval layer
+
+不是原始工具。
+
+* * *
+
+# 六、Context Engineering
+
+今天第二大主線。
+
+* * *
+
+你理解：
+
+# Retrieval 成功 ≠ Agent 成功
+
+* * *
+
+因為：
+
+即使找到資料：
+
+還有問題：
+
+```text
+AI 最終看到甚麼？
+```
+
+* * *
+
+這就是：
+
+# Context Assembly
+
+* * *
+
+# 七、Lost in the Middle
+
+非常重要。
+
+* * *
+
+LLM：
+
+通常：
+
+```text
+最重視開頭
+次重視結尾
+最容易忽略中間
+```
+
+* * *
+
+所以：
+
+長 context：
+
+不一定比較好。
+
+* * *
+
+# 八、Top-K Problem
+
+今天理解：
+
+```text
+retrieve 越多 ≠ 越好
+```
+
+* * *
+
+因為：
+
+會：
+
+-   token 增加
+    
+-   attention 稀釋
+    
+-   relevance 降低
+    
+
+* * *
+
+所以：
+
+production system：
+
+常做：
+
+```text
+Dynamic Top-K
+```
+
+* * *
+
+# 九、Context Compression
+
+今天超重要。
+
+* * *
+
+即：
+
+retrieval 完後：
+
+再做：
+
+```text
+summary
+evidence extraction
+structured compression
+```
+
+* * *
+
+目的：
+
+```text
+用最少 token
+保留最多推理價值
+```
+
+* * *
+
+# 十、今天最重要的一句
+
+如果昨天你學的是：
+
+```text
+AI 怎樣找到知識
+```
+
+那今天學的是：
+
+```text
+AI 怎樣使用知識
+```
+
+* * *
+
+# 十一、Spark 的演化路線（目前理解）
+
+你現在已經能描述：
+
+```text
+Notion
+↓
+Human Workspace
+
+GitHub
+↓
+Canonical Archive
+
+Chunking
+↓
+Embeddings
+
+Vector DB
+↓
+Retrieval Layer
+
+Memory Layer
+↓
+Long-term Understanding
+
+Context Assembly
+↓
+Knowledge Selection
+
+Agent
+↓
+Reasoning + Actions
+```
+
+* * *
+
+# 十二、你目前學習地圖的位置
+
+你已經完成：
+
+✅ Prompt  
+✅ Context  
+✅ RAG  
+✅ Chunking  
+✅ Embeddings  
+✅ Dense vs Sparse Retrieval  
+✅ Metadata Filtering  
+✅ Vector DB  
+✅ Reranking  
+✅ Memory Systems  
+✅ Fine-tuning  
+✅ Obsidian vs Notion vs GitHub  
+✅ Context Engineering
+
+* * *
+
+# 下一步（Day 7）
+
+最適合進入：
+
+# Agent Planning & Reasoning
+
+也就是：
+
+> Agent 怎樣決定下一步做甚麼？
+
+你會開始接觸：
+
+-   ReAct（Reason + Act）
+    
+-   Planning
+    
+-   Tool Selection
+    
+-   Reflection / Self-Critique
+    
+-   Multi-step Workflows
+    
+-   Multi-Agent Systems
+    
+
+這一步開始，AI 不再只是「查資料」，而是開始真正「執行任務」。
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
 
 今天你開始進入：
@@ -606,6 +1210,7 @@ Context Engineering 組織知識
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 # Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
@@ -1254,6 +1859,7 @@ LLM 會忽略中間資訊。
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -1868,6 +2474,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 # Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -2473,6 +3080,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -3057,6 +3665,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -3570,11 +4179,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -3997,6 +4608,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -4091,6 +4703,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
