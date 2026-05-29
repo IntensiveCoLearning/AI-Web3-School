@@ -17,17 +17,48 @@ timezone: UTC+8
 <!-- Content_START -->
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
-今日继续完成handbook剩余内容的学习，如果有时间接着复习之前的线上课
+Day 10 | AI × Web3 School
+
+今日完成：
+
+1.  WCB 任务提交：完成 Proof-of-Work 提交测试（Week 1）
+    
+2.  学习 MCP（模型上下文协议）四大核心概念
+    
+3.  理解 Skill 的本质（场景包 = prompt + plan + tools + rules）
+    
+4.  讨论 Skill 跨 CLI 的可移植性
+    
+5.  复习 LangChain（线性链）vs LangGraph（带循环图）的区别
+    
+6.  学习 Vibe Coding 章节，理解它是方法论而非 AI 理论
+    
+7.  掌握 Vibe Coding 的 8 个知识节点层级
+    
+
+感受：今天的核心认知是把 Vibe Coding 和前面学的理论区分开了。LLM / Prompt / RAG 是理论，Vibe Coding 是"人怎么用 AI 写代码"的方法论。Vibe Coding 章节的 8 个节点从初级工具到高级工作流层层递进，最关键的是 Node 6（Repo Workflow）——AI 也要走正常工程流程，不能因为是 AI 就跳过 review。
+
+Phase 1 进度：9/26
+
+下一步：
+
+-   继续学习 Evaluation（评估）章节
+    
+-   Fine-tuning（微调）章节
+    
+-   Inference（推理服务）章节
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 今日计划加深java cli的理解，然后继续学习handbook剩下的内容
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 Day 8 | AI × Web3 School
@@ -61,6 +92,7 @@ Day 8 | AI × Web3 School
 
 
 
+
 Day 8 | AI × Web3 School
 
 今日完成：
@@ -91,6 +123,7 @@ Day 8 | AI × Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -224,6 +257,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 
 
 
+
 ## **Day 6 | AI × Web3 School**
 
 ### **今日完成**
@@ -246,6 +280,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -299,6 +334,7 @@ Day 5 | AI × Web3 School
 
 
 
+
 Day 4 | AI × Web3 School
 
 今日完成：
@@ -338,6 +374,7 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日复习tc老师的web课程，并学习wsl2研究hermes具体的使用方法，有时间接着看handbook的ai部分知识。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -355,11 +392,13 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日将handbook中ai部分学完，然后开始web3部分的学习，并回顾昨晚tc老师的课
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
