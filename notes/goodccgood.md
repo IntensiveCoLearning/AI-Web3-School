@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+听英语builder，继续研究ai和web3的结合点
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 补课ai类产品和最前线，但是vibe coding也是需要一些coding基础，基础补，然后看看如何结合web3，还是不太理解web3的生态发展
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
+
 开始狂学模式，然后今天colearning听了小海老师讲l2，可以自学以太坊层，同时继续加油
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 了解ai时代agent和钱包之间的关联性，以及在哪些节点可以做一些安全设置
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 听了马铃薯老师讲解web3的前沿知识，以及李老师讲解基础memory，好好复习！
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -57,11 +67,13 @@ AI x Web3 School
 
 
 
+
 今天听了ef大佬的分享，意识到英语是个很重要的听力，以及skill和web3的具体融合方式
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -80,11 +92,13 @@ AI x Web3 School
 
 
 
+
 晚上跟着elon老师了解了合约以及ai和web3如何具体操作实践的方面，对于钱包安全这块可以自己尝试动手做个小插件
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -109,6 +123,7 @@ AI x Web3 School
 
 
 
+
 结合之前了解的manus，到后来的cc，还有codex，再到部署小龙虾和现在的harmess，每一次技术的进步，带来我对ai不一样的视野
 
 关于首周的行动计划，我希望能先脚踏实地完成环境配置，并争取稳妥地拿到基础积分。接下来，我会尝试通过 Telegram 或者lark接入 Harmers Agent 学习助手，按照官网提供的助记词模板认真完成初始化；同时，我也会授权助手检查本地 Git 环境，建立一个专属的 GitHub 仓库，用来记录后续的打卡与思考。同时思考此次配置对于日常生活中的应用，以及之前所学过的知识的融合
@@ -116,6 +131,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
