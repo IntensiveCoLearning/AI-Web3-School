@@ -20,10 +20,13 @@ AI x Web3 School
 今天主要听了1场solene的分享+co-learning weekly分享：  
 1\. 在生态里，你需要的不止是一个好的项目，更是让生态认识到你。  
 2\. 关于如何筛选黑客松idea，如果不知道如何拆解一个真问题，可以看一下前50的笔记参考。
+
+![Integrate community.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-29-1780068287853-Integrate_community.png)![BUILDER JOURNEY.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-29-1780068299836-BUILDER_JOURNEY.png)
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 本来想要重新再捡起前几天学到一半的RAG，突然想起一个Andrew Ng的通识课。真的非常推荐所有希望能更有效使用AI的人去看，不需要任何代码基础。总时长只有3h。[https://www.deeplearning.ai/courses/ai-prompting-for-everyone](https://www.deeplearning.ai/courses/ai-prompting-for-everyone)
@@ -72,6 +75,7 @@ Co-learning：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -168,6 +172,7 @@ allowlist、预算上限、L3人工确认都很关键啊，这个问题提问方
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -332,6 +337,7 @@ Q: 什么是 Agentic Wallet？它和普通钱包的核心区别是什么？
 
 
 
+
 # 打卡日志 — 2026-05-25
 
 **学习时长**：\_ \_ 小时
@@ -422,11 +428,13 @@ Q:不怎么了解黑客松，做哪些方向比较好？ A:马铃薯
 
 
 
+
 ![Screenshot 2026-05-24 at 23.57.18.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-24-1779638290862-Screenshot_2026-05-24_at_23.57.18.png)
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -449,6 +457,7 @@ Q:不怎么了解黑客松，做哪些方向比较好？ A:马铃薯
 
 
 
+
 ![Screenshot 2026-05-22 at 23.57.21.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Y-shuyi/images/2026-05-22-1779465443887-Screenshot_2026-05-22_at_23.57.21.png)
 
 今天诚实地请个假，有优先级更高的事情需要做。
@@ -456,6 +465,7 @@ Q:不怎么了解黑客松，做哪些方向比较好？ A:马铃薯
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -519,11 +529,13 @@ Further question/action：
 
 
 
+
 今天主要听了Bruce分享的Web3的运行基础。之前我也听不同的人讲过这个部分，其它部分Bruce老师的解读其实能发现是从技术底层逻辑上去拆解为什么其中某一个环节的存在对于整个系统会有影响——这一点其实我还不够问自己更深。最后的Takeaway是web3不仅是关于技术，技术只是基础设施，而更涉及到社会学、经济学和密码学。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -550,6 +562,7 @@ X博主分享：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
