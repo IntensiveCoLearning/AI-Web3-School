@@ -16,11 +16,6 @@ AI x Web3 School
 
 <!-- Content_START -->
 # 2026-05-28
-<!-- DAILY_CHECKIN_2026-05-28_START -->
-I continued studying AI x Web3 foundations and recorded the daily learning workflow for 2026-05-28. The focus was on connecting wallet security, GitHub-based learning records, and WCB status synchronization into one verifiable process.
-
-My main takeaway is that Web3 operations need explicit verification before execution: checking domains, contract addresses, approval scopes, transaction simulations, and human confirmation. This is especially important for AI agent workflows, because an agent should not blindly execute wallet actions without clear logs, safety checks, and a recoverable audit trail.
-<!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
@@ -107,4 +102,45 @@ My main takeaway is that Web3 operations need explicit verification before execu
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 学习了如何用hermes控制管理github，体验感受了自动化流程
 <!-- DAILY_CHECKIN_2026-05-19_END -->
+
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+## 5/28 打卡：比特币铭文宪法 + AI Agent 的法律边界
+
+### 事实核查：美国宪法上链 Bitcoin
+
+**核查结论：属实（但不是第一次）**
+
+- 2026-05-29，比特币区块 951,492，Ordinals 协议铭文完整美国宪法文本
+- TXID: 261f3d9a0414c2904932183be3a51f1773087d03c664468f85c7b6f9ce8a5686
+- 由个人或小团队完成，无代币发行、无募资、无企业背书
+- 这是历史上第 15 次将美国宪法铭刻上 Bitcoin（第一次是 Ordinals 早期 inscription #1893）
+
+**历史背景**：
+- 2025-01-17，MARA Holdings（上市矿企）在区块 879,613 铭刻宪法 + 权利法案 + Trump 照片，成本约 1.244 BTC
+- MARA 的版本是企业行为，有政治色彩；本次是纯文档存档，无政治含义
+
+**为什么这重要（对 AI × Web3）**：
+- Bitcoin 作为"永恒档案"的叙事：Ordinals 证明链上可以存任意数据
+- 但"上链 ≠ 真实"：区块链只证明"某人在某时写了这些字"，不证明内容真假（Oracle Problem）
+- 对 AI Agent 的启示：链上数据需要 Oracle 来保证真实性，纯上链不够
+
+### AI Agent 的法律地位
+
+**核心问题：AI Agent 签署的合同有法律效力吗？**
+
+- 传统合同法：需要"有行为能力的自然人或法人"
+- AI Agent 没有法律人格——它签的合约在现行法律下无效
+- 解决方案 1：以主人（Principal）名义签署，Agent 作为工具（Agency）
+- 解决方案 2：ERC-8004 提供链上身份，但法律层面的追责仍回到控制人
+
+**AI Agent 签名的实际约束力**：
+- 技术层面：私钥签名 = 不可抵赖（你的私钥 = 你的意志表示）
+- 法律层面：签名真实 ≠ 合同有效（还缺对价、合意、法律能力）
+- 对 Agentic Commerce 的影响：如果 Agent 自主执行百万美元交易，链下法律追索几乎是空的
+
+### 今日关键词
+
+`Ordinals` `Bitcoin 铭文` `Oracle Problem` `AI Agent 法律人格` `Principal-Agent` `ERC-8004`
+<!-- DAILY_CHECKIN_2026-05-28_END -->
 <!-- Content_END -->
