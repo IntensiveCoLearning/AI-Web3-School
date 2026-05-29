@@ -15,6 +15,68 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+今日學習：複習深化 Agent Trust & Reputation + Account Abstraction，整合信任三層架構
+
+核心概念：Agent 可信度來自可驗證行為，信任不是一個分數，而是可追溯、可比較、可解釋的證據；帳戶抽象讓 Agent 的「行動授權」從全有全無變成細粒度的可程式規則。
+
+## 第一性原理
+
+> Identity（你是誰）+ Trust（別人為什麼信你）+ Permission（你被允許做什麼）= AI Agent 安全上鏈的完整基礎設施。
+>
+> 三者缺一不可：有身份沒信任，別人不敢用；有信任沒權限邊界，Agent 可能失控；有權限邊界沒身份，無法追責。
+
+## Agent Trust & Reputation 複習整理
+
+**信任三角：聲譽 + 驗證 + 代價**
+
+- **Reputation**：按任務類型拆分的歷史表現信號，需時間衰減機制。一個擅長生成合約測試的 Agent，不一定適合做高價值 escrow evaluator
+- **Attestation**：結構化可驗證聲明（issuer / subject / claim / evidence / expiration / revocation）。鏈上身份可證明連續性，不能自動證明服務品質
+- **Stake + Slashing**：讓承諾有真實代價。Stake ≠ 能力，需搭配 validation 和任務歷史評估。自動 slashing 只適合明確可驗證違約，主觀任務應先進入 dispute
+- **ERC-8004**：身份 / 反饋 / 驗證三層分離的去中心化標準，不做成黑盒評分，讓不同應用可以構建自己的信任過濾規則
+
+**防操縱設計要點：**
+- 評價者本身需要身份和聲譽，或能看到其與被評價 Agent 的歷史交易關係
+- 泛泛五星評價 < 綁定任務 ID、交付物、付款記錄的具體 review
+- 聲譽要處理 Sybil、刷評、時間衰減和任務類型差異
+
+## Account Abstraction 複習整理
+
+**核心元件回顧：**
+- **ERC-4337**：UserOperation → Bundler → EntryPoint → Smart Account → Paymaster（可選贊助 gas）
+- **Smart Account**：帳戶本身是合約，可定義多簽、社交恢復、批量執行，但合約 bug 會成為帳戶風險
+- **Session Key**：Agent 的「限時限額員工門禁卡」。不拿主私鑰，只拿受限授權空間
+
+**Session Key 最小策略再思考：**
+- 合約地址白名單 + 方法白名單（不是「允許調用任何方法」）
+- 金額上限 + 時間窗口 + 最大次數
+- 高風險動作（主錢包操作、超額請求、新合約地址）強制回人工確認
+- 撤銷入口：用戶主帳戶隨時可撤銷，撤銷記錄可查
+
+## 兩者的整合洞察
+
+Agent Trust & Reputation 解決「你有沒有資格被使用」，Account Abstraction 解決「你使用時的邊界是什麼」。
+
+完整的 AI Agent 信任鏈路：
+1. **Identity**（ERC-8004 / DID）：我是誰，誰控制我，能提供什麼服務
+2. **Trust**（Reputation / Attestation / Stake）：我做過什麼，誰驗證過，失敗有沒有代價
+3. **Permission**（Session Key / Smart Account）：我被允許自動執行什麼，超出邊界必須人工確認
+
+只有三層都設計好，才能做到「用戶放心委托、Agent 有效執行、失敗有跡可查」。
+
+## 今日產出
+
+- Agent Trust & Reputation 七大知識節點複習（Reputation / Review / Attestation / Stake / Slashing / Validation / ERC-8004）
+- Account Abstraction 五大元件複習（ERC-4337 / Smart Account / Bundler / Paymaster / Session Key）
+- Identity + Trust + Permission 三層信任架構整合理解
+- 複習 Session Key 策略設計要點
+
+## 明日計劃
+
+深讀 AI Security / AI Privacy / AI Sovereignty 模組，整理 Agent 在安全和隱私方面的 threat model
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 今日學習：深讀 Account Abstraction 模組 + Co-learning 共學活動
