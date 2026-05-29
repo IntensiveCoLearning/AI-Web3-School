@@ -241,11 +241,12 @@ response: “REFRESH\_THEN\_BLOCK\_IF\_INVALID”
 
 \- 提交入口：[https://intensivecolearn.ing/en](https://intensivecolearn.ing/en) → 登录 → AI × Web3 School → 左侧 “Check-in”
 
-\- 提交后回填提交时间 / 截图：2026-05-30 HH:MM CST
+\- 提交后回填提交时间 / 截图：2026-05-30 07:58 CST
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 \# 2026-05-29 学习日志
@@ -413,6 +414,7 @@ can\_submit\_tx: false
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -823,6 +825,7 @@ can\_send\_deposit\_tx: false
 
 
 
+
 \# 2026-05-27 学习日志
 
 \## 今日主题
@@ -1005,6 +1008,7 @@ staking 里除了 `deposit_contract`，最容易被忽略的高危字段是 `wit
 
 
 
+
 \# 2026-05-26 学习日志
 
 \## 今日主题
@@ -1134,6 +1138,7 @@ Week 1 我是在脑子里想这条缝，今天它落成了一张能跑 regressio
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -1271,6 +1276,7 @@ cohort Week 1 的官方目标是跑通一条最小链`user intent → AI plannin
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -1593,6 +1599,7 @@ Handbook 推荐的 "裸 API vs 框架" 对比（5.22 留的）+ 今天的 Golden
 
 
 
+
 \# 2026-05-22 学习日志
 
 \## 今日主题
@@ -1889,6 +1896,7 @@ DSPy / Hermes / Learning Agent / AI×Web3 分工 / 最小实践——只在 "Age
 
 
 
+
 \# 2026-05-21 学习日志
 
 \## 今日主题
@@ -2106,6 +2114,7 @@ cohort Week 1 / Web3 侧。AA 是 Agent Wallet 的前置——昨天读完 Smart
 
 
 
+
 \# 2026-05-20 学习日志
 
 \## 今日主题
@@ -2274,6 +2283,7 @@ cohort Week 1 / Web3 侧打基础。
 
 
 
+
 \# 2026-05-19 学习日志
 
 \## 留给自己的作业
@@ -2421,6 +2431,7 @@ cohort Week 1 / Web3 侧打基础。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
