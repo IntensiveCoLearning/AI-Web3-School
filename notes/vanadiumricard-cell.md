@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+共享会收获很大
+
+＃ai的提示词使用方法，让ai全面了解你
+
+＃对agent权限的限制
+
+目标＃基本Hermes使用流程已经打通
+
+计划尝试多agent写作，每天自动抓取分析a股财报，编写一个类似日报的分析
+
+＃继续学习py，llm，
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 agent项目驱动学习 Linux 基础入门笔记
 
 一、Linux 目录结构
@@ -59,6 +75,7 @@ cd 切换目录，pwd 查看当前位置。
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
+
 1.链接hermes obsidian 微信，建立个人知识库，微信远程输入碎片化知识，自动整理，写入对应目录
 
 2.收听直播课，了解基本agent记忆
@@ -72,6 +89,7 @@ cd 切换目录，pwd 查看当前位置。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 ### 1
@@ -107,6 +125,7 @@ cd 切换目录，pwd 查看当前位置。
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -147,6 +166,7 @@ WSL → localhost:9222 → Windows Edge CDP → 已登录浏览器 → 截图成
 
 
 
+
 ![8ea165da574308ceb2b5da1cbeee40b2.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vanadiumricard-cell/images/2026-05-20-1779289671833-8ea165da574308ceb2b5da1cbeee40b2.jpg)
 
 讲了web3的整体宏观的运行流程，比昨天的老师讲的更宏观，可惜没有仔细整理，今天时间一直在跟Hermes斗争，搭建一个工作流反而搭建塌了，没有达成昨天的目标，气死我了，明天继续延续昨天目标
@@ -154,6 +174,7 @@ WSL → localhost:9222 → Windows Edge CDP → 已登录浏览器 → 截图成
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -170,6 +191,7 @@ WSL → localhost:9222 → Windows Edge CDP → 已登录浏览器 → 截图成
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
