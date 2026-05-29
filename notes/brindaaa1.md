@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+总结week2内容
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 继续完成web3进阶课程任务
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 完成平台任务
 <!-- DAILY_CHECKIN_2026-05-26_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
 
+
 参与Long-term Memory for AI Agents 活动
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 配置了hermes在微信平台的聊天助手，继续完成任务
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -68,6 +79,7 @@ AI x Web3 School
 
 
 
+
 1.补听AI时代Web3架构能力分享
 
 2.实施参加Web3 运行原理分享
@@ -77,6 +89,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
