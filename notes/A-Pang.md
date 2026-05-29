@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+完成项目选题方向思考
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 继续完善个人网站中的编辑文章及dapp模块的详细功能
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/A-Pang/images/2026-05-25-1779720988562-image.png)
 
@@ -30,6 +37,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 整理evm处理dapp调用
@@ -56,6 +64,7 @@ AI x Web3 School
 
 
 
+
 erc721代币详解：  
 [https://x.com/Pang26989586/status/2057820218366533700?s=20](https://x.com/Pang26989586/status/2057820218366533700?s=20)
 <!-- DAILY_CHECKIN_2026-05-22_END -->
@@ -66,12 +75,14 @@ erc721代币详解：
 
 
 
+
 发布erc20代币相关：approve race condition 授权竞态攻击 讲解  
 [https://x.com/pang26989586/status/2057470923213873255?s=46](https://x.com/pang26989586/status/2057470923213873255?s=46)
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -130,6 +141,7 @@ event Transfer(address indexed from, address indexed to, uint256 value); event A
 
 
 
+
 1、hermes对接wx bot ，试用wechat 聊天  
 2、完成web3相关知识学习，整理内容并发布推特帖子  
 [https://x.com/Pang26989586/status/2056659742425288980?s=20](https://x.com/Pang26989586/status/2056659742425288980?s=20)  
@@ -138,6 +150,7 @@ event Transfer(address indexed from, address indexed to, uint256 value); event A
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
