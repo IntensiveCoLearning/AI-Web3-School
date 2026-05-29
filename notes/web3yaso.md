@@ -15,8 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+今天完成了 AI × Web3 School 的两项补充任务，主要围绕 Week 1 学习总结和行业案例拆解做复盘。
+
+1.  发布了一份 AI × Web3 学习总结，整理了这一阶段对 agent memory、长期上下文、AI 工具协作、Web3 权限边界和可验证记录的理解。  
+    证明链接：  
+    [**https://github.com/web3yaso/ai-web3-school-cohort-0/blob/main/submissions/2026-05-29-agent-memory-learning-summary.md**](https://github.com/web3yaso/ai-web3-school-cohort-0/blob/main/submissions/2026-05-29-agent-memory-learning-summary.md)
+    
+2.  拆解了 Virtuals Protocol 与 agent economy 方向，重点分析它如何把 AI agent、代币化、社区参与、收益分配和链上资产机制结合起来。我也记录了这个方向的潜力与风险：真正有价值的 agent economy 不能只停留在发币或 persona，而要能解释任务、交付、收益、责任和验证机制。  
+    证明链接：  
+    [**https://github.com/web3yaso/ai-web3-school-cohort-0/blob/main/tasks/2026-05-29-virtuals-protocol-agent-economy.md**](https://github.com/web3yaso/ai-web3-school-cohort-0/blob/main/tasks/2026-05-29-virtuals-protocol-agent-economy.md)
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 -   完成了week 1 的任务：设计AI & Web3的最小边界
     
 -   观看了Neo-Cypherpunk / Privacy分享的回放
@@ -26,6 +40,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 -   观看 Agent Wallet 直播分享。
     
@@ -38,11 +53,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
 
+
 回看《**Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性**》
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -59,6 +76,7 @@ AI x Web3 School
 
 
 
+
 观看了英文分享：这次分享的主题围绕 Open Agentic Economy，也就是在 AI Agent 逐渐成为互联网新参与者之后，Ethereum 如何为人类和 Agent 共同参与的开放经济提供基础设施。
 
 [https://x.com/i/broadcasts/1qxvvkQkVXQxB](https://x.com/i/broadcasts/1qxvvkQkVXQxB)
@@ -71,6 +89,7 @@ AI x Web3 School
 
 
 
+
 观看老师的分享：**AI 下乡计划｜AI 在 Web3 的应用**
 
 [https://x.com/AgentEconCN/status/2057711778466083149](https://x.com/AgentEconCN/status/2057711778466083149)
@@ -78,6 +97,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -100,11 +120,13 @@ AI x Web3 School
 
 
 
+
 今天主要观看了Hermes Agent分享，收获满满
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -130,6 +152,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
