@@ -15,8 +15,59 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+# 我讓一個 AI agent 整夜把我自己的 AIP 拆開重做,踩到的幾件事
+
+這兩天的作業是把 AIP 那句核心主張 ——「**宣告 = 執行**(declarations match execution)」—— 真的做成可執行、擋得住攻擊的東西。我沒自己埋頭寫,而是讓一個 AI agent 整夜在一份 sandbox 副本上動手(原 repo 沒碰、沒 push),而且關鍵在:**每做一版,我就叫另一個獨立的 AI 子代理當「攻擊者」去對抗式審查它**,寫 probe 測試把它打穿,再補。記一下跟我原本直覺不一樣的東西。
+
+## **1\. 先證明缺口,而不是先相信宣稱**
+
+第一件事是抓 ground truth。AIP 對外講 "declarations match execution",但我讓 agent 實讀出貨的 demo 程式後發現:鏈下其實是把 agent 的意圖雜湊成一個**不透明的 32-byte hash** 丟上鏈,而鏈上 hook 收到後解出來是**空陣列**,真正的 action 還是 mock。也就是說那筆「AIP 保護的交易」實際上**什麼都沒檢查**。重點是——這不是我嘴上講,是用一個可執行的 Foundry 測試把它證出來的。先有可執行證據,再談修。
+
+## **2\. 一版一版做,每版都被 AI 對抗式打穿一次**
+
+接著是迭代。我刻意不讓「寫的人」自己 review,而是每完成一版,**開一個全新的 AI 子代理,假設它是攻擊者,去寫 probe 測試打穿**。結果七版裡每一版都被打穿一個最關鍵的洞,下一版補掉:
+
+-   綁了「宣告的清單」→ 但沒人簽,等於循環論證
+    
+-   加 EIP-712 簽章 → 但 hook 管不到 account 實際執行什麼(綁定只是「建議」)
+    
+-   改成合約自己執行 → 但它一旦持有資金,**留下的 ERC-20 授權**就能被直接搬走
+    
+-   授權改成「用完即撤」+ 防重入 → 但只要簽錯一次,流出無上限
+    
+-   加上「每種 token 流出上限」→ 但這個清單是**簽名者自己列的**,沒列到的 token / ETH 照樣全漏
+    
+
+## **3\. 最大的一課:簽章 bound 不住一個會花錢的 agent**
+
+七輪打下來,收斂到一個我一開始沒想到的結論:
+
+> **簽章只能認證「誰批准了、宣告了什麼」。它 bound 不住「實際執行了什麼、流出了多少」。**
+
+一個持有資金、又能呼叫任意合約的 executor,你給它再完美的簽章、再嚴的 commitment,只要它能 call 到一個惡意目標,錢就出得去。真正能限制損失的,是**把它能呼叫/授權的對象限制在一份「被審核過的白名單」**。
+
+這直接改寫了我對 registry 的理解:它的價值不在「黑名單擋壞地址」,而在「**白名單只放可信的執行目標**」。而這恰好就是 ERC-8004 那個還在演進的 **Validation registry** 的定位 —— AIP 真正該卡的位置是這層,不是去跟 x402 / AP2 搶支付軌。
+
+## **4\. 方法論的一課:讓 AI 打穿 AI,但每個結論都要可執行證據**
+
+用「對抗式 AI 子審查」去打 AI 自己寫的合約,比我自己 code review 強得多 —— 因為它**真的寫 probe 去打穿**,而不是「看起來對就過」。它甚至自己寫了 11 個拋棄式測試實證、跑完再刪掉。
+
+但前提跟我上一篇 Hermes 筆記那條完全一樣:**AI 會很自信地給你結論**,所以我每個 finding 都要求它用可執行測試證明,不接受嘴砲。最後落地的是 67 個離線測試 + 2 個 fuzz 不變量(各 256 runs)+ 真鏈 anvil 跑通一筆完整 swap + 對**真實 mainnet ETH/USDC 池** fork 驗過門檻邏輯。沒有「terminal 顯示成功」就當完成這種事。
+
+## **收斂**
+
+我原本以為這題的難點在「怎麼把 intent 綁好」,做完才發現難點在「**怎麼 bound 執行**」。一句話:**intent integrity = (認證過的 intent) ×(有界且受審的執行),缺一不可。** 大家盯著怎麼簽、怎麼證明意圖,但會花錢的 agent 真正危險的地方,是它執行時能碰到誰。
+
+## **下一步**
+
+把這條接回 SafeHarness 的 HITL —— 人在錢包簽一個 EIP-712 intent(已驗過 MetaMask 的 `signTypedData_v4` 算出來的 digest 跟合約逐位元組相同),鏈上 executor 強制執行;「自然語意 plan → canonical intent」那條我也跑通了。剩下要定的是產品形態:自執行 executor(我就是 account)vs 掛在第三方帳戶上的 ERC-7579 hook(那樣綁定只是建議)。
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 # **把一個 self-hosted agent harness 跑起來，踩到的幾件事**
 
 這幾天在折騰 Hermes Agent（Nous Research 的自架 agent 平台），不是當聊天框用，而是真的拿它接幾條 workflow：把報告萃取成知識圖、排程做新聞摘要、用 Kanban 跑多 agent 並行。記一下實際踩出來、跟「官網說法」不太一樣的東西。
@@ -70,6 +121,7 @@ AI x Web3 School
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
+
 **\## 今天涵蓋**
 
 1. **Week 2 Module A** —— AI × Web3 問題地圖(六方向),選 **Wallet × Privacy 交集** 當 Week 2 主線。
@@ -105,6 +157,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 \---
@@ -171,6 +224,7 @@ NeoCypherPunk 由 Rose O'Leary (Dark5) 起,Paul Allen Ellis 發展。是對 Eric
 
 
 
+
 **\## Today's Events**
 
 \- 學院 Week 2 Lesson 2：Cobo 團隊來賓演講介紹 Agentic Wallet (CAW)
@@ -208,6 +262,7 @@ NeoCypherPunk 由 Rose O'Leary (Dark5) 起,Paul Allen Ellis 發展。是對 Eric
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -337,6 +392,7 @@ Agent 架構應由系統的\*\*具體 failure point\*\* 驅動（context anxiety
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -494,6 +550,7 @@ Agent 進 vault 從 top MOC 開始，**不全 grep**。比 pure Zettelkasten「h
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -740,6 +797,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 
 
 
+
 今天做了什麼：
 
 1\. Learning Agent 初始化
@@ -792,6 +850,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 
 
 
+
 今天做了什麼
 
 發布 obsidian-knowledge-vault
@@ -811,6 +870,7 @@ repo 7 個 commit，今天從空目錄推到完整 README + prompt + annotated o
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -900,6 +960,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 
 
+
 今天的主題是 Hermes Agent 安裝。
 
 因為看到直播裡很多夥伴卡在環境設定，就順手做了一份 Windows WSL2 + macOS 的完整安裝教程，在課程進行中同步解答問題。
@@ -920,6 +981,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
