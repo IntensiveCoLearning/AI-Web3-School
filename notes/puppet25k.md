@@ -15,8 +15,51 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+### **Handbook — 智能合约（Smart Contract）**
+
+1.  自学了 Handbook「智能合约（Smart Contract）」章节
+    
+2.  用对照学习法理解核心概念：
+    
+    -   **Contract ≈ 会话 + Java Class**：状态公开 vs 封装、调用需 gas vs 无成本、部署后不可变 vs 可随意修改
+        
+    -   **Gas ≈ 内存/CPU 开销**：每条指令要花钱，storage 贵 memory 便宜
+        
+    -   **ABI ≈ API**：机器可读接口，但不是安全说明书
+        
+    -   **Event ≈ Log**：合约不可读 event，但外部可索引；成本低于 storage
+        
+3.  理解了合约的公开性带来可组合性也带来攻击面
+    
+4.  学习了 EVM 执行环境、Solidity 特有概念和合约升级风险
+    
+5.  掌握了完整调用链路：用户→钱包确认→EVM 执行→event→前端→索引器
+    
+6.  理解了 AI x Web3 中的分层设计：AI 做建议，钱包做授权，合约做执行
+    
+7.  学习计划进度更新：智能合约 ✅ → 下一站 **Account Abstraction（AA）** 🎯
+    
+
+### **随堂笔记**
+
+> 合约的公开性带来了可组合性，也带来了攻击面。你写的不是普通函数，而是会管理真实资产和公共状态的程序。
+
+> ABI 是机器可读接口，不是安全说明书。
+
+### **下一步工作**
+
+1.  继续 Handbook Web3 基础学习 — 下一站 **Account Abstraction（AA）**
+    
+2.  在区块浏览器里找一个简单 ERC-20 合约，实践查看源码、ABI 和事件
+    
+3.  学习 Solidity 基础语法
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 2026-05-29
 
 Dev3pack Builder 成长路径分享
@@ -48,6 +91,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 ### **Handbook — 钱包（Wallet）**
 
@@ -83,6 +127,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 ### **Co-Learning — 021 学习以太坊**
@@ -131,6 +176,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Cobo Agentic Wallet 分享**
 
 1.  参加了 Cobo Agentic Wallet 分享会 — AI Agent 链上安全架构
@@ -167,6 +213,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -228,6 +275,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -321,6 +369,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Open Agentic Economy**
 
 1.  参加了 Sophia ([Z.AI](http://Z.AI)) 的 "Open Agentic Economy" 分享会
@@ -343,6 +392,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -400,6 +450,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
 
 2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
@@ -415,6 +466,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -489,11 +541,13 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
