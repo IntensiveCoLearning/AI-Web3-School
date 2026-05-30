@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+# **2026-05-30 Week 2 总结打卡**
+
+今天做了 Week 2 的阶段整理。相比 Week 1 主要是 learning agent、repo、钱包和基础工具，Week 2 更重要的是建立问题空间地图：哪些问题真的需要 AI 和 Web3 同时出现，哪些只是把概念拼在一起。
+
+我把 AI x Web3 的方向先粗略分成几类：payment / commerce 关注机器支付和结算；identity / reputation 关注 Agent 或用户的身份与信誉；capability / interoperability 关注 Agent 能力声明和跨应用协作；wallet / permission 关注钱包授权和操作边界；privacy / security 关注数据暴露、签名风险和安全确认。
+
+我目前更想继续做 wallet / permission 与 privacy / security 交叉的方向。一个初步 proposal 是：做一个“链上操作风险解释 Agent”。它不替用户签名或付款，而是在用户执行交易、授权或合约交互前，先解释这笔操作要做什么、涉及哪些权限、可能暴露哪些信息、是否存在高风险信号，并要求用户人工确认。
+
+在这个方案里，AI 负责理解、总结、风险解释和交互式追问；Web3 提供交易数据、钱包权限、签名上下文、链上记录和可验证状态。任务发起方是用户，执行方是 Agent 和钱包工具，付款方仍然是用户，验证方可以是链上数据和规则检查，风险承担方主要是用户，因此必须保留 human-in-the-loop。
+
+接下来进入 Week 3，我想把这个方向继续收敛成更清晰的项目说明：目标用户是谁、输入输出是什么、最小 demo 怎么做、哪些部分只读、哪些部分必须人工确认，以及如何避免 Agent 越权操作。
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 # **2026-05-28 打卡**
 
 今天继续做 Week 2 的方向选择和问题收敛。前几天看了 Agentic Economy、机器支付、钱包权限和隐私相关主题后，我感觉 AI x Web3 里面一个比较值得做的方向，是让 Agent 在用户执行链上操作前，帮助解释风险和确认边界。
@@ -30,6 +46,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 # **2026-05-27 隐私主题打卡**
 
@@ -46,6 +63,7 @@ Web3 强调开放和可验证，但链上公开状态也会让用户暴露更多
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
 
+
 # **2026-05-26 Week 2 打卡**
 
 今天开始进入 Week 2 的学习。相比 Week 1 偏工具入门和基础补齐，Week 2 更像是在做方向判断：哪些问题真的值得用 AI x Web3 来解决，哪些只是把两个概念拼在一起。
@@ -59,6 +77,7 @@ Web3 强调开放和可验证，但链上公开状态也会让用户暴露更多
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -113,6 +132,7 @@ Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path
 
 
 
+
 # **2026-05-21 Hermes 工作流设计打卡**
 
 今天比较忙，没有系统学习新的课程内容，主要在思考怎么把 Learning Agent 的方法用到自己的真实工作流里。
@@ -130,6 +150,7 @@ Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -163,6 +184,7 @@ Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -325,6 +347,7 @@ AI 时代更重要的能力包括：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
