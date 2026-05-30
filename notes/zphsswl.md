@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+今天具体回顾了上两周的视频
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 今天开始具体动手构建应用，发现agent的能力确实很强，但是也很烧token
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 今天主要学习了**Cobo CAW 在 Agent Commerce 链路中的作用**
 <!-- DAILY_CHECKIN_2026-05-26_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-25_START -->
 
 
+
 今天主要用agent做了一个小卡片关于web3的知识点，动手做然后才有实际的收获
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 今天主要是做和agent一起看看对于跨链的监控数据方面的一些讨论和想法实践
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -68,11 +79,13 @@ AI x Web3 School
 
 
 
+
 今天主要学习AI在web3的应用方向，为后续的项目做准备
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -93,11 +106,13 @@ AI x Web3 School
 
 
 
+
 今天系统学习一下web3的钱包、支付等流程包括昨天tc老师说的一些知识点也温故一下
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
