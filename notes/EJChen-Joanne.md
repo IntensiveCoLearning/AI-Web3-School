@@ -15,8 +15,19 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+1.  閱讀x402材料：
+    
+
+-   [https://www.x402.org](https://www.x402.org)
+    
+-   PayAI
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 1.  學習Virtual Protocols的[EconomyOS架構](https://os.virtuals.io/quickstart)。
     
 2.  開始架構MVP：Agentic Commerce => 先以現實e-commerce為借鏡，
@@ -31,11 +42,13 @@ AI x Web3 School
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
+
 1.  研究、閱讀相關Agent協議：Google - **Agent Payments Protocol (AP2) 、Visa -Trusted Agent Protocol.**
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 ### **Agentic wallet**
@@ -86,6 +99,7 @@ Trust will become infrastructure.
 
 
 
+
 1.  安排第二周學習計劃：[https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/week2.md](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/week2.md)
     
 2.  參與晚上分享會。
@@ -93,6 +107,7 @@ Trust will become infrastructure.
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -109,6 +124,7 @@ Trust will become infrastructure.
 
 
 
+
 1.  復盤本週間課程及概念學習，準備週末可以補上本週尚缺內容：AI、Web3的知識解釋集錦、確定AI學習助手workflow
     
 2.  參與同學筆記分享會和確立本次參與共學主要目標：本身Web3開發經驗，缺少AI Agent的實操和應用，先不以必須產出兩項技術交互的項目，我認為AI可以幫上我在每天非常多的Web3訊息內（訂閱的news、關注的），打造客製化的訊息流
@@ -116,6 +132,7 @@ Trust will become infrastructure.
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -138,6 +155,7 @@ Trust will become infrastructure.
 
 
 
+
 1.  將handbook內容製作[學習卡](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/terms.json)，並加入至learning bot的功能，可以在聊天機器人中做隨機的test。
     
 2.  完成學習handbook中AI和Web3基礎的解釋。
@@ -150,6 +168,7 @@ Web3 = Cryptography + Economics + Social Consensus
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -201,6 +220,7 @@ Web3 = Cryptography + Economics + Social Consensus
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
