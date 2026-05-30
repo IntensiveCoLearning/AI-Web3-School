@@ -15,8 +15,48 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+## 训练营状态
+
+-   **阶段**：Week 2 收官 + Hackathon 方向锁定日
+    
+-   **今日主题**：模块 F — Agent Workflow Threat Model 与确认策略
+    
+-   **关键动作**：完成 STRIDE 六维威胁模型 + 攻击模拟验证 + 风险分层策略
+    
+
+* * *
+
+## 今日完成
+
+| 项目 | 状态 | 链接 |
+| --- | --- | --- |
+| 模块 F 交付：Agent Workflow Threat Model | ✅ 已完成 | [tasks/week2-module-f-agent-workflow-threat-model.md](tasks/week2-module-f-agent-workflow-threat-model.md) |
+| STRIDE 六维威胁模型（资产/权限/数据/工具/依赖/后果） | ✅ 已完成 | 覆盖 8 种攻击场景 |
+| 攻击模拟与拦截验证（v1 vs v2 Pact 对比） | ✅ 已完成 | experiments/x402-caw-agent-payment-loop/threat-model-simulator.py |
+| 风险分层矩阵 + 人工确认触发器清单 | ✅ 已完成 | 7 维度 × 3 层级判定规则 |
+| Hackathon 方向初步锁定 | 🟡 待最终确认 | 见下方「方向决策」 |
+
+* * *
+
+## Hackathon 方向决策
+
+### 三个方向的当前准备度评估
+
+| 维度 | 方向 A: Agentic Commerce | 方向 B: AI Security | 方向 C: 治理自动化 |
+| --- | --- | --- | --- |
+| 已有代码资产 | ⭐⭐⭐ 完整（x402+CAW 闭环、Pact v1/v2、威胁模拟器） | ⭐⭐ 中等（Threat Model 文档，缺可运行 Guard） | ⭐ 较低（模块 C 草图，无实验代码） |
+| 可演示性 | ⭐⭐⭐ 高（Agent 自动购买内容并支付，有明确前后端） | ⭐⭐ 中（攻击模拟脚本可运行，但防御系统需额外实现） | ⭐⭐ 中（治理流程慢节奏，Agent 提效难即时量化） |
+| 差异化 | ⭐⭐ 中（x402 已有一定知名度） | ⭐⭐⭐ 高（AI Agent 安全是基础设施级空白） | ⭐⭐ 中（治理自动化已有多个项目） |
+| 与课程模块契合 | ⭐⭐⭐ Module A+B+D+F 全部自然融入 | ⭐⭐⭐ Module F 直接延伸，A/B 可融入 | ⭐⭐ Module C 延伸，但 A/B 需重新适配 |
+| 技术深度 | ⭐⭐ 中（支付流程集成为主） | ⭐⭐⭐ 高（威胁建模、多层防御、反脆弱设计） | ⭐⭐ 中（治理规则适配为主） |
+| 周末可推进度 | ⭐⭐⭐ 高（伪代码→可运行脚本，测试网实验） | ⭐⭐ 中（需实现 Guard/Policy 运行时） | ⭐ 低（需选定具体 DAO 协议并研究规则） |
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 今日核心动作：完成模块 C（Agent Identity）交付 + Week 2 三个模块全部收尾。
 
 模块 C 交付：
@@ -44,6 +84,7 @@ Week 2 整体交付：
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 > 今日核心动作：完成模块 B（Payment/Commerce/Settlement）交付 + 推进 Hackathon 原型。
@@ -87,6 +128,7 @@ Week 2 整体交付：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -145,6 +187,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
 > 关键动作：
@@ -165,6 +208,7 @@ Week 2 整体交付：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -211,6 +255,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -239,6 +284,7 @@ Week 2 整体交付：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -283,6 +329,7 @@ Week 2 整体交付：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -357,6 +404,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -385,6 +433,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -441,6 +490,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
