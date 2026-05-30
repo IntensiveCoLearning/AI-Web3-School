@@ -15,8 +15,59 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+### 1\. 小额免密支付场景
+
+-   **已支持 x402 微支付协议** + gasless 体验
+    
+-   可通过 Pact 限制：单次金额（如 <$100）、收款地址白名单、日频次、总金额上限
+    
+-   超大额可触发单笔人工 review，不破坏原有 Pact
+    
+
+### 2\. Agent 支付一定要在链上吗？
+
+-   主流 Web2 支付仍占主导，但 Crypto 在**跨境支付、快速结算**有独特优势
+    
+-   短期内不会完全取代支付宝/微信，但出海企业和欧美市场链上支付比重会增加
+    
+
+### 3\. Agent Wallet 与主钱包是否操作同一账户？
+
+-   默认是**同一个地址**，但 Agent 受 Pact 限制，Human 拥有绝对控制权
+    
+-   也可以创建两个钱包：主钱包存大额资金，Agentic Wallet 放小额自动化资金
+    
+
+### 4\. Human-in-the-loop 与未来自主执行
+
+-   **短期（1-2 年）**：Human-in-the-loop 不可或缺
+    
+-   **长期（5-10 年）**：可能实现 Agent 自发支付、Agent 雇佣 Agent，但需要更多基础设施
+    
+
+### 5\. Agent 掉线或服务不可用的兜底方案
+
+-   MPC 私钥分片已 re-share 到移动端，Agent 挂掉不影响资金安全
+    
+-   移动端丢失可通过 Google/Apple ID 从云端恢复分片
+    
+-   钱不会丢，但 Agent 能力需要重新配置
+    
+
+### 6\. 意图执行过程中的攻击防范
+
+-   **Recipe** 固化执行步骤，减少大模型随意发挥
+    
+-   **Pact + Policy** 在每一步校验合约、金额、滑点、min received 等参数
+    
+-   不符合授权边界的交易不会被签名
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 ## 一、Cobo 的可信执行链路（四步闭环）
 
 1.  **Agent submit** → 发起请求
@@ -90,6 +141,7 @@ Pact 执行流程
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
+
 ## Cobo 的可信执行链路（四步闭环）
 
 1.  **Agent submit** → 发起请求
@@ -106,6 +158,7 @@ Pact 执行流程
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 ## 一、缺少可控边界时已出现的两类风险案例
@@ -136,6 +189,7 @@ Pact 执行流程
 
 
 
+
 ### 1\. Agentic commerce 的下一个突破在哪里？
 
 **大型企业的支付场景**（Stripe、Bridge、Visa 等正在布局 AI 驱动的支付与交易）。
@@ -162,6 +216,7 @@ Pact 执行流程
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -203,6 +258,7 @@ Pact 执行流程
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -287,6 +343,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 
 
+
 一、实现原理
 
 1.  **Bittensor**：子网定义规则 → 矿工提供服务 → 验证者评分 → 链上结算 → 奖励
@@ -320,6 +377,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 
 
+
 | 方向 | 解决什么问题 | 主案例 | 核心原理 |
 | --- | --- | --- | --- |
 | 1. 去中心化 AI 基础设施 | 算力、存储、模型服务如何组织与激励 | Bittensor | Subnet 定义任务 → Miner 提供服务 → Validator 评估质量 → 链上共识 → Token 奖励优质供给 |
@@ -331,6 +389,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -351,6 +410,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
