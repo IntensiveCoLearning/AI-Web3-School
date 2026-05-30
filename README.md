@@ -396,7 +396,7 @@ more information
 | [binxiaowen7-coder](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/binxiaowen7-coder.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [emptytouch](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/emptytouch.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | |
 | [owenniezewen](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/owenniezewen.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | |
-| [Yuanyi-Ma](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Yuanyi-Ma.md) | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | | | |
+| [Yuanyi-Ma](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Yuanyi-Ma.md) | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | |
 | [zhiyong1997](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zhiyong1997.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [tuimao666](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tuimao666.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [xunxun99](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/xunxun99.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | | | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
