@@ -15,8 +15,31 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+📚 AI × Web3 School Day 9 — 模型上下文协议 (Model Context Protocol, MCP)
+
+💡 3 个核心理解：
+
+1.  MCP 是 AI 时代的 USB-C 接口，将大模型与外部工具/数据源的连接彻底标准化，消除了以往为每个 Agent 开发专属插件的碎片化痛点。
+    
+2.  2\. 采用 Host-Server 架构，三大支柱（Resources/Tools/Prompts）无缝将静态的大模型推理能力与实时多变的外部物理/网络数据隔离开来，实现上下文的安全按需供给。
+    
+3.  3\. 在 Web3 场景中，MCP 是智能体钱包与链上上下文交互的绝佳物理桥梁。通过标准化 RPC 资源与签名工具，它能在大模型与敏感私钥之间构建出一套清晰的权限隔离沙箱。
+    
+
+🎯 最大收获：大模型是“中枢大脑”，而 MCP 统一了“感知器官”与“运动肢体”的控制信号。在多智能体（Multi-Agent）和 Agent Wallet 的大趋势下，MCP 将成为智能体跨链交互、跨系统结算的核心基础设施，极大提升了 AI 与 Web3 结合时的工程落地可行性。
+
+❓ 目前 MCP 尚未原生支持复杂的加密与去中心化权限控制，未来是否可能与去中心化身份协议（DID）和智能合约多签结合，构建完全去中心化且零信任的 AI 动作网络？
+
+🔗 [https://github.com/Joea529/ai-web3-school-cohort-0](https://github.com/Joea529/ai-web3-school-cohort-0)
+
+📖 https://aiweb3.school/zh/handbook/
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 📚 AI × Web3 School Day 8 — 氛围编程（Vibe Coding）
 
 💡 3 个核心理解：
@@ -39,6 +62,7 @@ AI x Web3 School
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 📚 AI × Web3 School Day 8 — 氛围编程（Vibe Coding）
@@ -66,6 +90,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 7 — 框架（Frameworks）
 
 💡 3 个核心理解：
@@ -88,6 +113,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -119,6 +145,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 5 — 检索增强生成（RAG）
 
 💡 3 个核心理解：
@@ -141,6 +168,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -183,6 +211,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 4 — 上下文（Context）
 
 💡 3 个核心理解：
@@ -205,6 +234,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -245,6 +275,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 2 — 提示词（Prompt）
 
 💡 对照手册学完 4 个知识节点：
@@ -268,6 +299,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
