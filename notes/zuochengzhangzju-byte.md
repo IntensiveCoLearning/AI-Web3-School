@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+之前的打卡笔记在PR里，没成功更新到主打卡步骤。今天才发现agent代理有漏洞，在补齐优化系统。回看课程
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 I continued studying AI x Web3 foundations and recorded the daily learning workflow for 2026-05-28. The focus was on connecting wallet security, GitHub-based learning records, and WCB status synchronization into one verifiable process.
 
 My main takeaway is that Web3 operations need explicit verification before execution: checking domains, contract addresses, approval scopes, transaction simulations, and human confirmation. This is especially important for AI agent workflows, because an agent should not blindly execute wallet actions without clear logs, safety checks, and a recoverable audit trail.
@@ -24,6 +30,7 @@ My main takeaway is that Web3 operations need explicit verification before execu
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 I continued studying AI x Web3 foundations and recorded the daily learning workflow for 2026-05-26. The focus was on connecting wallet security, GitHub-based learning records, and WCB status synchronization into one verifiable process.
 
 My main takeaway is that Web3 operations need explicit verification before execution: checking domains, contract addresses, approval scopes, transaction simulations, and human confirmation. This is especially important for AI agent workflows, because an agent should not blindly execute wallet actions without clear logs, safety checks, and a recoverable audit trail.
@@ -31,6 +38,7 @@ My main takeaway is that Web3 operations need explicit verification before execu
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 I continued studying AI x Web3 foundations and recorded the daily learning workflow for 2026-05-25. The focus was on connecting wallet security, GitHub-based learning records, and WCB status synchronization into one verifiable process.
 
 My main takeaway is that Web3 operations need explicit verification before execution: checking domains, contract addresses, approval scopes, transaction simulations, and human confirmation. This is especially important for AI agent workflows, because an agent should not blindly execute wallet actions without clear logs, safety checks, and a recoverable audit trail.
@@ -38,6 +46,7 @@ My main takeaway is that Web3 operations need explicit verification before execu
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 I continued studying AI x Web3 foundations and recorded the daily learning workflow for 2026-05-24. The focus was on connecting wallet security, GitHub-based learning records, and WCB status synchronization into one verifiable process.
 
 My main takeaway is that Web3 operations need explicit verification before execution: checking domains, contract addresses, approval scopes, transaction simulations, and human confirmation. This is especially important for AI agent workflows, because an agent should not blindly execute wallet actions without clear logs, safety checks, and a recoverable audit trail.
@@ -45,6 +54,7 @@ My main takeaway is that Web3 operations need explicit verification before execu
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 I continued studying AI x Web3 foundations and recorded the daily learning workflow for 2026-05-23. The focus was on connecting wallet security, GitHub-based learning records, and WCB status synchronization into one verifiable process.
 
 My main takeaway is that Web3 operations need explicit verification before execution: checking domains, contract addresses, approval scopes, transaction simulations, and human confirmation. This is especially important for AI agent workflows, because an agent should not blindly execute wallet actions without clear logs, safety checks, and a recoverable audit trail.
@@ -52,6 +62,7 @@ My main takeaway is that Web3 operations need explicit verification before execu
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 ## ZK 隐私基础设施 + Synthesis 黑客松获奖项目分析
 
 ### 核心收获
@@ -87,6 +98,7 @@ Stealth Address（断联收款人）→ Railgun 屏蔽池（断联发送人）�
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 I continued studying AI x Web3 foundations and recorded the daily learning workflow for 2026-05-21. The focus was on connecting wallet security, GitHub-based learning records, and WCB status synchronization into one verifiable process.
 
 My main takeaway is that Web3 operations need explicit verification before execution: checking domains, contract addresses, approval scopes, transaction simulations, and human confirmation. This is especially important for AI agent workflows, because an agent should not blindly execute wallet actions without clear logs, safety checks, and a recoverable audit trail.
@@ -94,6 +106,7 @@ My main takeaway is that Web3 operations need explicit verification before execu
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 ## Web3 钱包签名安全
 
 - EIP-712：将「盲签」升级为「结构化可读签名」，钱包能展示类型化域名和字段，用户能看清签了啥
@@ -105,6 +118,7 @@ My main takeaway is that Web3 operations need explicit verification before execu
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 学习了如何用hermes控制管理github，体验感受了自动化流程
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 <!-- Content_END -->
