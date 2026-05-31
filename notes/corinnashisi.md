@@ -15,13 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+继续学习ing，在考虑黑客松的赛道，感觉第二个赛道更有难度，但是更感兴趣。
+
+[Z.AI](http://Z.AI)｜Web3 × Long-Horizon Task
+
+探索 AI Agent 如何在 Web3 场景中自主拆解复杂任务、持续调用工具、迭代修复，并完成从需求到交付的完整工作流。
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 今日的进展不多，在复习这周的课程。准备研究下KV层
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 这两天出差+应酬，课程完全落下啦。周末补上
 
@@ -32,6 +43,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 完成打卡任务。
@@ -48,6 +60,7 @@ AI x Web3 School
 
 
 
+
 今日听完co-learning和ai的长记忆功能，感觉如果給ai做好长记忆挺困难的。后面要深度研究下
 
 ![262da3579b66b8f7b0dfb6dc64518280.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/corinnashisi/images/2026-05-25-1779723117593-262da3579b66b8f7b0dfb6dc64518280.png)
@@ -55,6 +68,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -79,6 +93,7 @@ AI x Web3 School
 
 
 
+
 早上听了**Open Agentic Economy的分享，英文的分享对我还是有压力。只能后面看逐字稿补课。**  
 
 今天还是正式用Hermes来制定学习计划了，在不**homebrew和github的安装。先把学习计划搞定，后面每日安装学习计划执行。**
@@ -88,6 +103,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -108,6 +124,7 @@ AI x Web3 School
 
 
 
+
 今日#流水账#
 
 这两天工作太多，没法抽出过多的时间学习和实践。晚8坚持听完老师的分享，agent payment是近期ai在web3实践的课题，老师也分享了。后续会着重看看这个方向。
@@ -117,6 +134,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -145,6 +163,7 @@ AI x Web3 School
 
 
 
+
 已经完成hermes的安排，虽然ollama的本地模型没有调用成功，但用api key的方式已经成功用hermes帮我做学习计划。
 
 计划随时学习的过程逐步深入使用agent帮我完成更多的任务。
@@ -154,6 +173,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
