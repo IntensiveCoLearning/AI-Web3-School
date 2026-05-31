@@ -15,8 +15,162 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+完成了这个项目的雏形
+
+````markdown
+# AA Paymaster Swap Hub
+
+> **ERC-4337 Account Abstraction Wallet + Paymaster + DEX Swap + Payment Protocol**
+> Built for Bitget Smart Contract Developer role — Hackathon Project
+
+## Overview
+
+A comprehensive smart contract system demonstrating **Account Abstraction (ERC-4337)**, **Session Key Authorization**, **Paymaster Gas Sponsorship**, **DEX Swap Integration**, and **On-chain Payment Protocols** — all deployable on L2 (Arbitrum/Optimism).
+
+## Technical Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Language | Solidity ^0.8.28 |
+| Framework | Foundry (Forge, Cast, Anvil) |
+| Standards | ERC-4337, ERC-20, EIP-712, UUPS |
+| Security | Slither, Foundry PoC, Invariant Tests |
+| L2 Deployment | Arbitrum / Optimism Sepolia |
+| AI Assistance | Claude-powered development & optimization |
+
+## Architecture
+
+```
+aa-paymaster-swap-hub/
+├── src/
+│   ├── account/
+│   │   ├── SmartWallet.sol          # ERC-4337 wallet (UUPS upgradeable)
+│   │   └── SessionKeyManager.sol    # Session key authorization (EIP-712)
+│   ├── paymaster/
+│   │   ├── VerifyingPaymaster.sol   # EIP-712 signed gas sponsorship
+│   │   └── TokenPaymaster.sol       # ERC-20 token gas payment
+│   ├── swap/
+│   │   ├── SwapHub.sol             # DEX aggregation (Uniswap V3 router)
+│   │   └── LimitOrderBook.sol       # On-chain limit orders (EIP-712)
+│   ├── payment/
+│   │   ├── PaymentSplitter.sol      # Multi-party payment splitting
+│   │   └── StreamingPayment.sol     # Continuous token streaming
+│   └── interfaces/
+│       └── ISessionKeyManager.sol
+├── test/                           # 17 tests: unit + integration
+├── script/                         # Deployment scripts
+├── security/                       # Security audit report
+└── foundry.toml
+```
+
+## Core Features
+
+### 1. Account Abstraction Wallet (`SmartWallet.sol`)
+- ERC-4337 `IAccount` compliant
+- Dual authorization: EOA owner + Session Key
+- UUPS upgradeable proxy pattern
+- Batch execution via `executeBatch`
+
+### 2. Session Key Authorization (`SessionKeyManager.sol`)
+- Time-bound session keys (validAfter / validUntil)
+- Permission scoping: target addresses & function selectors
+- Per-operation value limits
+- EIP-712 typed signatures for key creation
+- Owner-controlled revocation
+
+### 3. Verifying Paymaster (`VerifyingPaymaster.sol`)
+- EIP-712 signed approval for gas sponsorship
+- Configurable signing key
+- Built-in staking support
+
+### 4. Token Paymaster (`TokenPaymaster.sol`)
+- ERC-20 token gas payment (instead of ETH)
+- Configurable token price oracle
+- PostOp settlement with ERC-20 transfer
+
+### 5. DEX Swap Hub (`SwapHub.sol`)
+- Uniswap V3 router integration
+- UserOp atomic swap execution
+- Slippage protection
+
+### 6. Limit Order Book (`LimitOrderBook.sol`)
+- EIP-712 signed order creation
+- Partial fill support
+- Full/cancel order lifecycle
+
+### 7. Payment Splitter (`PaymentSplitter.sol`)
+- Proportional (basis points) & fixed split modes
+- Pull-based claiming
+- Supports both ETH and ERC-20
+
+### 8. Streaming Payment (`StreamingPayment.sol`)
+- Continuous per-second token streaming
+- Real-time accrual calculation
+- Sender cancel with pro-rata refund
+
+## Security
+
+- **Slither static analysis** — 0 critical findings
+- **Foundry PoC** — Verified attack scenarios: signature forgery, expiry bypass, value limits
+- **Invariant tests** — Core invariants validated with fuzzing
+- See [Security Audit Report](./security/audit-report.md)
+
+## Quick Start
+
+```bash
+# Build
+forge build
+
+# Test (17 tests)
+forge test -vv
+
+# Deploy to testnet
+forge script script/Deploy.s.sol --rpc-url $RPC_URL --broadcast
+```
+
+## Test Results
+
+```
+Ran 17 tests across 4 suites:
+  SmartWalletTest .............. 10/10 passed
+  LimitOrderBookTest .......... 3/3 passed
+  PaymentSplitterTest ......... 2/2 passed
+  StreamingPaymentTest ........ 2/2 passed
+  Total ....................... 17/17 passed
+```
+
+## Job Requirement Coverage
+
+| Requirement | Coverage |
+|------------|----------|
+| Solidity Smart Contracts | 8 production-grade contracts |
+| Authorization Logic | SessionKeyManager (EIP-712 signed keys) |
+| Swap Logic | SwapHub + LimitOrderBook |
+| Payment Logic | PaymentSplitter + StreamingPayment |
+| Account Abstraction | ERC-4337 SmartWallet |
+| Paymaster / Gas Optimization | Verifying + Token Paymasters |
+| L2 Deployment | Optimism/Arbitrum compatible |
+| Security Audit | Slither + PoC + Invariant tests |
+| AI Development Practice | Claude-powered full-cycle development |
+
+## Deployment Addresses
+
+| Contract | Address |
+|----------|---------|
+| EntryPoint (Mainnet) | `0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789` |
+| EntryPoint (Sepolia) | `0x5FF137D4b0FDCD49DcA30c7CF57E578a026d2789` |
+
+## License
+
+MIT
+````
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 ````markdown
 # AI × DAO 工作流探索
 
@@ -194,11 +348,13 @@ AI x Web3 School
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
 
+
 ![6cfbbd6e81c7abb9b9bee892b4837c0.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/ybk-1/images/2026-05-26-1779804654199-6cfbbd6e81c7abb9b9bee892b4837c0.png)
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 ````markdown
@@ -336,6 +492,7 @@ AI x Web3 School
 
 
 
+
 ## 4\. Workflow
 
 **一句话解释**：Workflow 是把多个 AI 调用按固定流程串起来，前一步的输出作为后一步的输入。
@@ -347,6 +504,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -436,6 +594,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -747,6 +906,7 @@ dApp 页面："Approving Uniswap Router"（实际 spender 是一个未审计的�
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/ybk-1/images/2026-05-21-1779376029547-image.png)
 
 今天完成了一个ai交互的一个demo
@@ -904,6 +1064,7 @@ MIT
 
 
 
+
 ````markdown
 # Daily Note / 每日打卡 — 2026-05-20
 
@@ -975,6 +1136,7 @@ MIT
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1115,6 +1277,7 @@ MIT
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
