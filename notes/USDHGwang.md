@@ -15,8 +15,40 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+# 實際跑一條 fan-out / fan-in 的多 agent 流程，學到的東西
+
+延續前幾天玩 agent harness 的紀錄。今天主要在搞「多 agent 怎麼協作」——不是並排各做各的，而是真的串成一條有依賴關係的流程。
+
+## **1\. 並行很容易，協作才是重點**
+
+一開始我以為「多 agent」就是開好幾個同時跑。實際做才發現，純並行（各做各的、互不相干）沒什麼了不起——難的是讓多個 agent 的產出**匯流成一件事**。
+
+今天跑的結構：三個 worker **並行**處理三份不同輸入（fan-out）；第四個 agent **等三個都完成後**，把產出彙整成一份（fan-in）。「等三個都完成才啟動」是關鍵，而且不是我手動盯著按的，是系統自己處理。
+
+## **2\. DAG 依賴：把「等待」變成宣告，而不是流程控制**
+
+第四個任務在建立時就宣告「我的 parent 是這三個」。它會自動卡在 todo，**不被調度器認領**，直到三個 parent 全完成才自動升級 → 被認領 → 跑。
+
+漂亮的地方：**依賴是用「聲明」表達，不是用「程式流程」控制**。我不用寫「if A and B and C done then run D」，只要把依賴關係講清楚（一個 DAG），剩下調度系統自己算。從 harness engineering 看，這是把「編排邏輯」從使用者手上接走、做進基礎設施——使用者只描述「要什麼」，不管「怎麼協調」。
+
+## **3\. 持久化任務板讓多 agent 變得可觀測**
+
+整個流程跑在 SQLite-backed 任務看板上。狀態變化、認領、心跳、完成摘要全留在 DB。意外的好處：**整個多 agent 系統是可觀測的**——隨時能查每個 worker 在哪個狀態、哪個 pid、有沒有報錯。多 agent 最怕「背景一堆東西在跑但不知道發生什麼」，把狀態落進持久 store 等於天然有 audit trail + debug 入口。越做越覺得：**agent 系統的工程，一大半是「讓不可見的東西變可見」**。
+
+## **4\. 心跳與 reclaim：長任務的容錯**
+
+worker 跑長任務要定時送心跳，超時沒心跳就被判掛、收回重派（reclaim）。這是分散式系統老觀念（lease / liveness），但在 agent 場景特別有意義——agent 任務常慢又不穩，沒這層容錯，一個 worker 卡死整條依賴鏈就卡住。
+
+## **收斂**
+
+最大體感：**多 agent 的價值不在「數量」，在「編排」**。好的多 agent harness 幫你做掉三件難事——依賴管理（DAG 宣告式）、自動調度、可觀測+容錯。模型一個都沒變，變強的是外面那層協調基礎設施。又一次印證主線：agent 的工程，主要在 harness。
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 # 我讓一個 AI agent 整夜把我自己的 AIP 拆開重做,踩到的幾件事
 
 這兩天的作業是把 AIP 那句核心主張 ——「**宣告 = 執行**(declarations match execution)」—— 真的做成可執行、擋得住攻擊的東西。我沒自己埋頭寫,而是讓一個 AI agent 整夜在一份 sandbox 副本上動手(原 repo 沒碰、沒 push),而且關鍵在:**每做一版,我就叫另一個獨立的 AI 子代理當「攻擊者」去對抗式審查它**,寫 probe 測試把它打穿,再補。記一下跟我原本直覺不一樣的東西。
@@ -67,6 +99,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 # **把一個 self-hosted agent harness 跑起來，踩到的幾件事**
 
@@ -122,6 +155,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
 
+
 **\## 今天涵蓋**
 
 1. **Week 2 Module A** —— AI × Web3 問題地圖(六方向),選 **Wallet × Privacy 交集** 當 Week 2 主線。
@@ -157,6 +191,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -225,6 +260,7 @@ NeoCypherPunk 由 Rose O'Leary (Dark5) 起,Paul Allen Ellis 發展。是對 Eric
 
 
 
+
 **\## Today's Events**
 
 \- 學院 Week 2 Lesson 2：Cobo 團隊來賓演講介紹 Agentic Wallet (CAW)
@@ -262,6 +298,7 @@ NeoCypherPunk 由 Rose O'Leary (Dark5) 起,Paul Allen Ellis 發展。是對 Eric
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -392,6 +429,7 @@ Agent 架構應由系統的\*\*具體 failure point\*\* 驅動（context anxiety
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -550,6 +588,7 @@ Agent 進 vault 從 top MOC 開始，**不全 grep**。比 pure Zettelkasten「h
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -798,6 +837,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 
 
 
+
 今天做了什麼：
 
 1\. Learning Agent 初始化
@@ -851,6 +891,7 @@ Claude 的 MEMORY.md                  Hermes 的 MEMORY.md
 
 
 
+
 今天做了什麼
 
 發布 obsidian-knowledge-vault
@@ -870,6 +911,7 @@ repo 7 個 commit，今天從空目錄推到完整 README + prompt + annotated o
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -961,6 +1003,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 
 
+
 今天的主題是 Hermes Agent 安裝。
 
 因為看到直播裡很多夥伴卡在環境設定，就順手做了一份 Windows WSL2 + macOS 的完整安裝教程，在課程進行中同步解答問題。
@@ -981,6 +1024,7 @@ HITL 模組要設計成 **「可被替代的層」**，不是 hardcode 必要的
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
