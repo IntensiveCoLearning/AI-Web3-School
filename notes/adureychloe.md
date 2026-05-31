@@ -15,8 +15,23 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+今天整理了一下hackthon的参赛说明：
+
+-   `tasks/week3-hackathon-direction-card.md` — 项目方向卡
+    
+
+-   `tasks/week3-track-selection.md` — 赛道对齐说明
+    
+-   `tasks/week3-one-line-pitch.md` — 一句话说明
+    
+-   `tasks/week3-team-status.md` — 单人参赛确认
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 今天做一个知识扩展，对除了主方向以外的Week 2 其他模块学习：Agent Identity、Security / Privacy、Governance / Coordination。
 
 ## **1\. Agent Identity / Profile**
@@ -99,6 +114,7 @@ AI x Web3 School
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
+
 今天继续 Week 2 主线，并把前几天的学习收敛成总交付：
 
 -   5/25：AI × Web3 问题地图，选择 Payment / Commerce / Settlement 作为主方向。
@@ -157,6 +173,7 @@ intent → quote → policy → confirmation → payment → delivery → accept
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
 
+
 今天继续 Week 2 主线：Payment / Commerce / Settlement。
 
 前两次已经完成：
@@ -212,6 +229,7 @@ intent → quote → policy → confirmation → payment → delivery → accept
 
 
 
+
 昨天我选择的 Week 2 主线是 Payment / Commerce / Settlement，也就是：Agent 如何帮助用户购买服务、完成交付、验收结果，并留下可审计的付款记录。
 
 今天我把问题推进到更底层的钱包和权限问题。我的当前理解是：
@@ -234,6 +252,7 @@ intent → quote → policy → confirmation → payment → delivery → accept
 
 
 
+
 今天进入 Week 2，我做了一张 AI × Web3 问题地图，覆盖 Payment、Identity、Wallet/Permission、Privacy/Security、Dev Tooling、Governance 六个方向。我的主线选择改为 Payment / Commerce / Settlement，因为它最直接地回答：Agent 如何在用户授权预算内购买服务、完成交付、验收结果，并留下可验证付款和收据。具体的笔记内容在：[https://github.com/adureychloe/ai-web3-school-cohort-0/blob/master/tasks/week2-ai-web3-problem-map.md](https://github.com/adureychloe/ai-web3-school-cohort-0/blob/master/tasks/week2-ai-web3-problem-map.md)
 
 今天的关键收获：AI 负责理解任务、比较服务和判断交付是否达标；Web3 负责把报价、预算、付款、退款、收据和验证变成可检查机制。
@@ -241,6 +260,7 @@ intent → quote → policy → confirmation → payment → delivery → accept
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -329,11 +349,13 @@ intent → quote → policy → confirmation → payment → delivery → accept
 
 
 
+
 今天继续 AI × Web3 School 学习，完成了 EOA、智能账户、多签账户的权限差异比较。我的核心理解是：这三者不是简单的钱包形态差异，而是三种不同的权限模型。EOA 简单直接，但控制权高度集中在一把私钥上；智能账户把账户规则变成可编程逻辑，可以支持 session key、限额、过期、恢复和撤销，更适合受限 Agent workflow；多签则把高风险操作拆成多人确认，适合团队资金、DAO treasury 或协议管理。对 AI × Web3 来说，关键不是让 Agent “更自由地控制钱包”，而是让账户边界更明确：Agent 可以读、解释、准备、检查和验证，但涉及签名、转账、授权、合约写入时，必须有清晰的权限限制和人工/多方确认。
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -354,11 +376,13 @@ intent → quote → policy → confirmation → payment → delivery → accept
 
 
 
+
 今天继续 AI × Web3 School 的学习，重点从 AI Agent 的安全边界转到 Web3 基础概念：Wallet、Network、Transaction、Gas、Smart Contract、Testnet 和 Block Explorer。我的核心收获是：钱包不是一个简单的登录按钮，而是用户账户控制权、签名、交易和风险确认的边界；网络也不是背景环境，而是交易能否被传播、打包、执行和验证的基础。把这两点和 AI Agent 放在一起看，我更清楚地意识到：Agent 可以帮助读文档、整理 ABI、解释交易、生成操作清单和检查风险，但不能接触助记词/私钥，也不能替用户自动签名、授权或发送交易（要实现自动交易Agent应该给Agent一个单独的钱包）。下一步准备做一次测试网交易，把钱包确认、gas、tx hash 和区块浏览器验证串起来。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -383,11 +407,13 @@ intent → quote → policy → confirmation → payment → delivery → accept
 
 
 
+
 今天推进 AI × Web3 School 的基础学习，重点看 LLM 和 Prompt。我的理解是，LLM 本身更像是语言和推理引擎，而 Prompt 是把任务、上下文、约束和输出格式组织起来的接口。放到 Web3 场景里，Prompt 不能只是“帮我操作钱包”这种模糊指令，而必须明确网络、权限、资金风险、是否需要用户确认、以及 proof-of-work 记录。今天最大的收获是：AI Agent 的能力边界，很大程度上取决于我们如何设计上下文、工具权限和确认流程。下一步会继续学习 Context 和 Agent，把它们和链上状态、钱包权限连接起来。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
