@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+继续学习智能合约的相关内容
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 学习智能合约
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
+
 给hermas配置api，并输入学习资料指引
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 继续学习web3知识
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 练习使用hermas 还是不太会使用它，用ai协助使用
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -104,6 +114,7 @@ AI x Web3 School
 
 
 
+
 **学习主题：** 深入理解以太坊账户 (Ethereum Accounts)
 
 **参考资料：** [Ethereum 官方开发者文档](https://ethereum.org/developers/docs/accounts/)
@@ -157,6 +168,7 @@ AI x Web3 School
 
 
 
+
 1.观看**AI 在 Web3 的应用，了解AI在web3可以有哪些应用，在使用的时候应该注意什么**  
 **2.运用ai辅助安装wsl2环境，研究api**
 <!-- DAILY_CHECKIN_2026-05-21_END -->
@@ -170,12 +182,14 @@ AI x Web3 School
 
 
 
+
 1.观看**AI 时代，Web3 开发者需要具备的基础知识和架构能力回放**  
 **2.了解Natural Language Processing and Large Language Models，以及transformer的原理**
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
