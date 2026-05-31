@@ -15,8 +15,120 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+# Daily: 2026-05-31
+
+> 完成 Week 2 全部模块 + 总交付 + Week 3 准备工作
+
+* * *
+
+## 今日完成
+
+### Module D — Wallet / Permission（补完）
+
+-   新增任务级授权与 Session Key 概念
+    
+-   新增完整 ASCII 执行流程图（标出自动/人工/紧急）
+    
+
+### Module E — DeFi Execution（新增）
+
+-   回答核心问题：Agent 执行时链上真正发生了什么
+    
+-   Swap/Approve/Deposit/Borrow/Withdraw/Redeem 风险矩阵
+    
+-   5 个协议详解：Uniswap V3、Balancer、Hyperliquid、Lido、Gitcoin
+    
+-   5 步扩展路径（Uniswap → Lido → Balancer → Aave → Hyperliquid）
+    
+-   补充 3 个学习材料：Prompt Injection / 敏感信息披露 / 代理过剩
+    
+
+### Module F — Security/Privacy（重构成 Task + Learning 拆分）
+
+-   Task 1：低风险自动执行 / 高风险人工确认策略 + 8 个触发条件 + 决策树
+    
+-   Task 2：8 种攻击模拟（6/8 被 Cobo CAW 拦截）
+    
+-   Workflow Threat Model：资产/权限/数据流/工具调用/外部依赖/失败后果
+    
+
+### Module G — Governance（新增）
+
+-   5 阶段 DAO 治理流程拆解（提案→讨论→投票→执行→复盘）
+    
+-   Meeting-to-Action Workflow 草图（4 步）
+    
+-   AI vs 人工确认边界矩阵
+    
+
+### 总交付 — 方向深挖包与 Proposal（新增）
+
+-   7 项要求全部覆盖
+    
+-   DCA Automation Agent 项目 Proposal（含 MVP、风险、赛道、Week 3 计划）
+    
+-   3 方向 Backlog
+    
+
+### 学习复盘
+
+-   生成 Week 1+2 学习总结 [review-week1-week2.md](http://review-week1-week2.md)
+    
+-   口头复盘 MPC / Uniswap V3 / ERC-8004 / ERC-8183
+    
+
+## 明天计划
+
+-   开始 Week 3 任务（Hackathon 准备周）
+    
+-   最低完成路径：Hackathon Direction Card / 赛道选择 / Repo Skeleton / Sprint Plan
+    
+
+* * *
+
+## 学习笔记
+
+### MPC 三句话
+
+1.  私钥拆成多个碎片，分别存在不同地方
+    
+2.  签名需要多方协同计算，完整私钥从不出现
+    
+3.  DCA Agent 不持私钥——Agent 只有 API Key，Cobo MPC 执行签名
+    
+
+### Uniswap V3 三句话
+
+1.  集中流动性——资金集中在当前价格区间，效率比 V2 高 4000 倍
+    
+2.  Quoter（只读报价）+ Router（执行 swap）
+    
+3.  Slippage 保护 = amountOutMinimum 参数
+    
+
+### ERC-8004 三句话
+
+1.  Agent 身份 = ERC-721 NFT，URI 指向注册文件
+    
+2.  声誉 = 链上评分（成功率/交易量/可用率）
+    
+3.  验证 = 可插拔（质押重执行 / zkML / TEE）
+    
+
+### ERC-8183 三句话
+
+1.  Client 锁钱 → Provider 干活 → Evaluator 验收
+    
+2.  资金在合约里托管，只有 Evaluator 能放行
+    
+3.  超时自动退款，拒绝就是终局
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 # 2026-05-30 每日学习笔记
 
 ## 学习内容
@@ -83,6 +195,7 @@ AI x Web3 School
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
+
 # 2026-05-29 每日学习笔记
 
 ## 学习内容
@@ -110,6 +223,7 @@ AI x Web3 School
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 # 2026-05-28 每日学习笔记
@@ -182,6 +296,7 @@ AI x Web3 School
 
 
 
+
 **第一部分：学习总结**
 
 > 今天完成了 AI × Web3 Bridge 剩余 8 个章节的全面速览：
@@ -211,6 +326,7 @@ AI x Web3 School
 
 
 
+
 **第一部分：今日学习总结**
 
 > 今天重点完成了 Week 1 收尾任务和 Week 2 预热：
@@ -228,6 +344,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -252,11 +369,13 @@ AI x Web3 School
 
 
 
+
 今天主要学习和了解web3的相关文档和知识。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -314,6 +433,7 @@ AI x Web3 School
 
 
 
+
 今天完成了两部分学习：  
   
 一、AI 基础概念深化  
@@ -353,6 +473,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -423,6 +544,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -543,6 +665,7 @@ AI x Web3 School
 
 
 
+
 今日学习总结：  
 今天系统阅读了 AI 基础文档，对已有知识进行了梳理和补充：  
 已熟悉的概念（复习巩固）：
@@ -569,6 +692,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
