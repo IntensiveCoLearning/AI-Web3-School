@@ -15,8 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+# Web3与AI发展策略会
+
+| 行动 | 说明 |
+| --- | --- |
+| 加入线上/线下社区 | 找到自己兴趣方向的社群（比如通过 Twitter、Discord），潜水到活跃 |
+| 参加线下 meetup | 即使不知道期待什么，好的事情往往意外发生（合作伙伴、朋友、投资人） |
+| 加入 fellowship 项目 | 结构化课程 + 深度社区，一般持续 6 个月 ~ 1 年，有筛选机制，能建立高质量网络 |
+| 成为大使（Ambassador） | 直接获得项目方背书，内部机会优先给大使（例子：Cursor 的企业团队大多来自大使项目）——⚠️ 选对项目，避免损失 credibility |
+| 贡献开源（Open Source） | 无需团队协作，24/7 可做；招聘时 recruiter 第一眼看 GitHub，不是 LinkedIn；贡献多了项目方会主动找你 |
+| 成为演讲者（Speaker） | 即使刚开始，可以申请本地 meetup 分享 20 分钟；能极大提升 credibility，可能吸引投资人 |
+| 成为导师（Mentor） | 例如在 global academy 做 mentor，networking 效率高 |
+| 做志愿者（Volunteer） | 比单纯参会更容易交到朋友，克服社恐 |
+| Build in Public | 在 X / LinkedIn 持续分享自己的学习、项目、思考；案例：Diana 被裁后靠 build in public 获得 Wallet Connect 工作 |
+| 为你的地区产内容 | 翻译、教程、总结，建立区域影响力 |
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 ### 1\. 小额免密支付场景
 
 -   **已支持 x402 微支付协议** + gasless 体验
@@ -67,6 +86,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 ## 一、Cobo 的可信执行链路（四步闭环）
 
@@ -142,6 +162,7 @@ Pact 执行流程
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
 
+
 ## Cobo 的可信执行链路（四步闭环）
 
 1.  **Agent submit** → 发起请求
@@ -158,6 +179,7 @@ Pact 执行流程
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -190,6 +212,7 @@ Pact 执行流程
 
 
 
+
 ### 1\. Agentic commerce 的下一个突破在哪里？
 
 **大型企业的支付场景**（Stripe、Bridge、Visa 等正在布局 AI 驱动的支付与交易）。
@@ -216,6 +239,7 @@ Pact 执行流程
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -258,6 +282,7 @@ Pact 执行流程
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -344,6 +369,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 
 
+
 一、实现原理
 
 1.  **Bittensor**：子网定义规则 → 矿工提供服务 → 验证者评分 → 链上结算 → 奖励
@@ -378,6 +404,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 
 
+
 | 方向 | 解决什么问题 | 主案例 | 核心原理 |
 | --- | --- | --- | --- |
 | 1. 去中心化 AI 基础设施 | 算力、存储、模型服务如何组织与激励 | Bittensor | Subnet 定义任务 → Miner 提供服务 → Validator 评估质量 → 链上共识 → Token 奖励优质供给 |
@@ -389,6 +416,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -410,6 +438,7 @@ Ethereum Foundation 已试点让 AI agent 参与**分配数十万美元给数百
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
