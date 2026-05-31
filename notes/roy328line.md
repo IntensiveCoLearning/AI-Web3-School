@@ -15,7 +15,191 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
-# 2026-05-30
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+今日學習：深讀 AI Oracle + Verifiable AI 模組，理解 AI 輸出如何在鏈上被驗證
+
+核心概念：AI Oracle 的核心不是讓模型替合約做判斷，而是讓模型判斷變成可記錄、可驗證、可挑戰的輸入。Verifiable AI 的核心是讓「相信模型」變成「驗證證據和約束」。
+
+## 第一性原理
+
+當 AI 輸出會影響鏈上資產或權限時，輸出本身必須有來源、邊界和爭議機制。驗證成本必須和輸出影響力匹配：給用戶總結新聞不需要 ZK proof；釋放 escrow 或罰沒 stake，就不能只靠一句模型輸出。
+
+## AI Oracle 核心知識整理
+
+### AI Output（模型輸出）
+
+鏈上系統最好只消費結構化輸出（accepted: true、riskScore: 72），而非長文本
+
+輸出分兩層：機器字段（進入合約/後端規則）+ 人類解釋（進入 UI/報告/爭議材料）
+
+影響資金或權限時，必須記錄 confidence、模型版本、輸入 hash、輸出 hash 和生成時間
+
+### Data Feed（數據饋送）
+
+AI data feed 比價格 feed 更容易漂移：模型升級、訓練數據變化、prompt 調整都會讓同一對象的評分變化
+
+Feed 應明確版本，允許查詢歷史
+
+若用於自動執行：合約需檢查 stale data、異常跳變和來源簽名
+
+### Model Result（模型結果記錄）
+
+需包含：模型版本 + prompt 模板 + 輸入引用 + 輸出字段 + 輸出 schema
+
+不保存生成條件，後續很難復核（模型升級後同樣輸入可能得到不同結果）
+
+多模型系統還要記錄路由信息：為什麼選這個模型、是否用了 fallback、是否經過人工復核
+
+### Oracle Risk（預言機風險）
+
+風險分層：輸出只展示標籤（低）→ 決定釋放資金/罰沒 stake/拒絕用戶（高）
+
+高風險輸出需要 challenge、multi-evaluator 或可驗證執行
+
+AI Oracle 應按影響範圍分層：低風險直接展示，中風險人工復核，高風險需挑戰機制
+
+### Attestation（可驗證聲明）
+
+TEE 可證明某模型在特定環境中運行；驗證者可證明輸出通過測試；服務方簽名可證明結果來源
+
+Attestation 字段要具體：驗證者 / 驗證對象 / 輸入輸出 hash / 模型版本 / 過期時間 / 是否可撤銷
+
+鏈上系統中 attestation 是可消費信號，不是最終真理，仍可保留爭議窗口
+
+### Proof of Inference（推理證明）
+
+實現路線：TEE attestation / ZK proof / 簽名日誌 / 可重放推理 / 可信服務證明
+
+需先明確「證明什麼」：證明用了某模型、輸入沒變、由某環境生成、還是推理過程完整正確
+
+大型 LLM 完整推理證明成本高，現實系統常用折中：TEE 證明環境 + 簽名日誌證明輸入輸出 + ZK 證明關鍵後處理
+
+### Dispute / Challenge（爭議機制）
+
+Optimistic 模式：先接受結果，給出挑戰窗口；有人提出證據則進入復核/仲裁/多方驗證
+
+挑戰窗口和成本設計：窗口太短（用戶來不及發現）/ 窗口太長（結算效率低）/ 成本太低（被 spam）/ 成本太高（受害者無法申訴）
+
+實用分層：小額任務短窗口，高價值任務長窗口，高爭議任務進入人工或多方 evaluator
+
+## Verifiable AI 核心知識整理
+
+### TEE（可信執行環境）
+
+適合需要隱私和較低證明成本的場景：私有數據評分、模型推理、Agent runtime 證明
+
+強項：工程上相對可用，可跑複雜程序，可處理私有輸入，證明成本低於 ZK
+
+弱點：仍依賴硬件和供應鏈信任，不是純密碼學信任
+
+### ZK（零知識證明）
+
+優勢：密碼學驗證強；限制：生成證明成本高、工程複雜
+
+更適合邊界清楚、計算規模可控的任務：小型分類模型、後處理規則驗證、數據聚合約束
+
+對 LLM 完整 ZK proof 仍不現實，很多產品選擇只證明關鍵部分
+
+### zkML
+
+適合：模型較小、結構固定、輸出需強驗證的場景
+
+設計前先問：是否真的需要隱藏輸入？是否能接受證明延迟？模型是否能轉成電路？
+
+很多「需要可信 AI」的場景，用簽名日誌 / TEE / 人工復核更經濟
+
+### Verifiable Compute（可驗證計算）
+
+鏈下執行 + 鏈上驗證 = AI x Web3 系統的現實路徑
+
+把昂貴計算放鏈下，把摘要/證明/簽名結果放鏈上：保留可驗證性，避免把複雜推理塞進合約
+
+注意數據可用性：鏈上只有 hash/proof 時，用戶仍需知道原始輸入輸出在哪裡、誰能訪問、保存多久
+
+### Benchmark（基準測試）
+
+公開 benchmark 說明一般能力，不能證明某次輸出正確
+
+AI x Web3 benchmark 應包含正常樣本 + 邊界樣本 + 攻擊樣本（錯誤鏈 / 惡意上下文 / 過期價格 / 假合約文檔）
+
+項目應建立自己的任務集，不能只依賴通用榜單
+
+### Audit Trail（審計軌跡）
+
+最基礎、最實用的可驗證層：記錄輸入/輸出/模型版本/工具調用/時間/用戶確認/交易哈希/錯誤
+
+不能證明模型絕對正確，但能證明「系統當時看到了什麼、調用了什麼、用戶確認了什麼」
+
+敏感原文加密保存，公開層只放 hash、摘要和權限可控的引用
+
+## 兩者的整合洞察
+
+AI Oracle 解決「如何把 AI 判斷帶上鏈」，Verifiable AI 解決「如何讓這個判斷被驗證」。
+
+完整的可信 AI x Web3 執行鏈路：
+
+1. **生成**：輸入 + 模型版本 + prompt 模板 → 結構化輸出 + 輸出 hash
+2. 2. **證明**：Audit Trail（基礎）→ Attestation（服務方/TEE 簽名）→ ZK/TEE Proof（高風險場景）
+   3. 3. **上鏈**：只傳結構化字段 + hash，長文本放鏈下
+      4. 4. **挑戰**：設置 challenge window，按金額和風險分層
+         5. 5. **結算**：通過挑戰期後，觸發 escrow 釋放或 slashing
+            6.
+            7. 按風險分層設計驗證強度：
+            8.
+            9. - 低風險（標籤/摘要）：Audit Trail 即可
+               - - 中風險（評分/分類影響業務決策）：Attestation + Challenge Window
+                 - - 高風險（釋放資金/罰沒 stake/封禁用戶）：TEE/ZK Proof + Multi-evaluator + Challenge
+                   -
+                   - ## 最小實踐設計
+                   -
+                   - 設計一個「智能合約風險評估」的 AI Oracle：
+                   -
+                   - **輸入定義**：合約地址、ABI、源碼 hash、評估任務模板 hash
+                   -
+                   - **輸出結構**：
+                   - - riskLevel: "low" | "medium" | "high"
+                     - - riskScore: 0-100
+                       - - findings: [{type, severity, description}]
+                         - - modelVersion: "xxx"
+                           - - inputHash: "0x..."
+                             - - outputHash: "0x..."
+                               - - timestamp: Unix timestamp
+                                 -
+                                 - **驗證層次**：
+                                 - - 服務方簽名 → 證明輸出來自此服務
+                                   - - TEE attestation → 證明在可信環境執行
+                                     - - 未來升級路徑 → zkML 對後處理規則的關鍵判斷
+                                       -
+                                       - **Challenge 設計**：
+                                       - - 挑戰窗口：48 小時
+                                         - - 挑戰成本：0.1 ETH（防 spam，但不過高）
+                                           - - 挑戰材料：替代評估結果 + 具體差異說明
+                                             - - 仲裁：3 人 evaluator 多數決，仲裁費從挑戰金中支出
+                                               -
+                                               - ## 個人洞察
+                                               -
+                                               - 今天最大的收穫是理解了「可驗證 AI」不是一個二元選擇（要麼完全可信 / 要麼完全不可信），而是一個按風險分層的工程設計問題。
+                                               -
+                                               - AI Oracle 的核心設計張力和 Machine Payment 其實是對稱的：Machine Payment 解決「AI 用錢的邊界」，AI Oracle 解決「AI 說的話的可信邊界」。兩者都需要 policy（什麼條件下觸發）、boundary（影響範圍多大）、challenge（出錯後怎麼辦）。
+                                               -
+                                               - Audit Trail 的重要性被低估了。在沒有 TEE 或 ZK 的場景裡，完整的審計軌跡其實已經能解決大多數實際問題。很多系統把精力放在「如何用最強的密碼學證明」，但其實「先把日誌做好、再逐步升級」是更務實的路徑。
+                                               -
+                                               - Dispute / Challenge 機制是整個系統的「壓力閥」。設計好的挑戰機制，可以讓系統在大多數情況下快速結算（因為沒人挑戰 = 默認接受），同時保留了出錯時的糾錯路徑——這是 Optimistic Rollup 和 Optimistic Oracle 共同的優雅設計思路。
+                                               -
+                                               - ## 今日產出
+                                               - - AI Oracle 六大知識節點整理（AI Output / Data Feed / Model Result / Oracle Risk / Attestation / Proof of Inference / Dispute）
+                                                 - - Verifiable AI 六大知識節點整理（TEE / ZK / zkML / Verifiable Compute / Benchmark / Audit Trail）
+                                                   - - AI Oracle 與 Verifiable AI 整合鏈路設計（生成 → 證明 → 上鏈 → 挑戰 → 結算）
+                                                     - - 按風險分層的驗證強度設計框架
+                                                       - - 「智能合約風險評估」AI Oracle 完整設計（含輸入/輸出/驗證/Challenge）
+                                                         -
+                                                         - ## 明日計劃
+                                                         -
+                                                         - 進入 Governance AI 模組，研究 AI 如何參與鏈上治理決策，以及如何防止 AI 操縱治理
+                                                         -
+                                                         - <!-- DAILY_CHECKIN_2026-05-31_END -->
+                                                         - # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
 今日學習：深讀 AI Security / Privacy / Sovereignty 模組，整理 Agent Threat Model
 
