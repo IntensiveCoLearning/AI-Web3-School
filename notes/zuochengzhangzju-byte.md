@@ -107,4 +107,25 @@ My main takeaway is that Web3 operations need explicit verification before execu
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 学习了如何用hermes控制管理github，体验感受了自动化流程
 <!-- DAILY_CHECKIN_2026-05-19_END -->
+
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+## 记忆系统增强：X/Twitter URL 结构化提取
+
+- 为记忆分类器新增 X URL 检测逻辑，支持 x.com / twitter.com 多种格式
+- 提取结构化字段：x_url（标准化URL）、x_author（账号名）、x_status_id（推文ID）、x_content_hint（上下文摘要）
+- classify_text 在规则判断前优先检测 X URL，匹配时 type=fact, confidence=0.85, importance=0.88
+- 验证通过：0xMalingshu 推文能正确提取所有字段
+
+## 记忆架构优化验证
+
+- 核查记忆系统架构更新与系统默认实现无冲突
+- 统一写入方案：重要记忆同时写 memory/*.md（人可读）+ memory_bus（机器可查）
+- 确认检索 MRR 达到 1.00，进行事实检查验证
+
+## 反思
+
+- 筛选器决定记录含外部引用的事件时，必须完整记录所有可提取的局部上下文
+- 窄化改动可能导致普适记录流程失效，需全面覆盖
+<!-- DAILY_CHECKIN_2026-05-29_END -->
 <!-- Content_END -->
