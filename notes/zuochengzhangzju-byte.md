@@ -107,4 +107,27 @@ My main takeaway is that Web3 operations need explicit verification before execu
 <!-- DAILY_CHECKIN_2026-05-19_START -->
 学习了如何用hermes控制管理github，体验感受了自动化流程
 <!-- DAILY_CHECKIN_2026-05-19_END -->
+
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+## Dream 模块修复：经验提取 + 去重
+
+- 修复 memory_consolidation.py 只做主题统计不做经验提炼的问题
+- 新增 step0b_extract_experiences()，用 Ollama qwen2.5:7b 从对话记录提取具体经验
+- 经验格式：[时间] [操作] [结果] [教训] — 像回测记录一样可追溯
+- 去重机制：character bigram 模糊匹配，action >0.7 或 (action >0.5 AND result >0.25) 判为重复
+- 同时写入 memory_events.jsonl + daily log
+
+## Self-improver 空转修复
+
+- 根因：cron message 是"请运行xxx"，LLM 在 isolated session 经常不执行
+- 修复：cron message 改为 "MUST EXECUTE: Run this exact command via exec tool"，明确指令
+- 验证：修复后经验提取正常产出
+
+## 记忆系统改进方向
+
+- 需区分经验、错误与高价值信息三种类型
+- 统一写入：重要记忆同时写 memory/*.md（人可读）+ memory_bus（机器可查）
+- 每个文档定位要明确，避免无关项占据关键位置
+<!-- DAILY_CHECKIN_2026-05-30_END -->
 <!-- Content_END -->
