@@ -341,7 +341,7 @@ more information
 | [jaqlinww](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jaqlinww.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Ariaarise](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Ariaarise.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [LikaiTOP](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/LikaiTOP.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [haoshidoufasheng-dev](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/haoshidoufasheng-dev.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | | | | | | |
+| [haoshidoufasheng-dev](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/haoshidoufasheng-dev.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | | | | | | |
 | [lunateng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lunateng.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [aoright](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/aoright.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [743443975c](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/743443975c.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
