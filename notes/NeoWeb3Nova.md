@@ -15,8 +15,29 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+### 今日完成
+
+1.  **Week 2 交付物整理**：全部 6 个模块（A/B/C/D/F/G）已完成，从问题地图到威胁建模到治理流程，覆盖 AI×Web3 交叉全链路。
+    
+2.  **Week 3 大纲锁定**：读完官方 Week 3 课程大纲，明确"课程线 + Hackathon 线"并行节奏。
+    
+3.  **Cobo 赛道锁定**：Agentic Economy × Cobo Agentic Wallet — 天然对齐已有 x402 + CAW + Pact + Threat Model 资产。
+    
+4.  **Hackathon Proposal 完成**：项目名 PactGuard，1 页完整 proposal（问题、方案、验证方式、Sprint Plan），含 3 句话电梯演讲 + 8 个 Demo 验证点。
+    
+
+### 今日收获
+
+-   **赛道选择 = 方向减法**：从"支付流 + 安全层 + 治理"三个方向中，到最后锁定 Cobo 赛道是最快路径——因为代码资产最完整、威胁模型可直接展示、课程模块自然融合。
+    
+-   **Proposal 写作 = 范围绑定**：1 页 proposal 的核心不是"想做什么"而是"不做什么"——明确 fallback 方案、单人参赛、每天只做一个最小闭环。
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 ## 训练营状态
 
 -   **阶段**：Week 2 收官 + Hackathon 方向锁定日
@@ -57,6 +78,7 @@ AI x Web3 School
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
+
 今日核心动作：完成模块 C（Agent Identity）交付 + Week 2 三个模块全部收尾。
 
 模块 C 交付：
@@ -84,6 +106,7 @@ Week 2 整体交付：
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -128,6 +151,7 @@ Week 2 整体交付：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -188,6 +212,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
 > 关键动作：
@@ -208,6 +233,7 @@ Week 2 整体交付：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -256,6 +282,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -284,6 +311,7 @@ Week 2 整体交付：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -329,6 +357,7 @@ Week 2 整体交付：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -405,6 +434,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -433,6 +463,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -490,6 +521,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
