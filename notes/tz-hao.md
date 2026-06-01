@@ -15,8 +15,56 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+Cobo 赛道的核心要求是：项目必须围绕 **Agent 与资金操作场景** 展开，并且资金相关操作需要通过 **Cobo Agentic Wallet (CAW)** 完成。
+
+根据今天的判断，当前项目状态如下：
+
+| 赛道要求 | 当前项目状态 | 结论 |
+| --- | --- | --- |
+| 围绕 Agent 与资金操作场景 | 已围绕 agent payment / transfer / approve 设计 | 部分符合 |
+| 体现权限控制和安全边界 | 已有 policy、人工确认、deny、audit log | 部分符合 |
+| Agent 具备真实资金执行能力 | 当前仍是 mock wallet | 不符合 |
+| 使用 Cobo Agentic Wallet | 当前还没有接入 CAW | 不符合 |
+| 可运行产品 Demo | 本地 Next.js demo 可运行 | 部分符合 |
+| 提供 CAW 关键代码或配置 | 当前没有 | 不符合 |
+| 提供测试网地址、tx hash、agent wallet 地址 | 当前没有 | 不符合 |
+
+所以今天的结论是：
+
+> Guardian Agent Wallet 当前是一个合格的赛道原型基础，但还不是最终可提交版本。要符合 Cobo 赛道，必须把 mock wallet execution 替换或扩展为 CAW 测试网真实执行。
+
+* * *
+
+## **推荐选择的赛道方向**
+
+在 Cobo 给出的几个方向里，我认为当前项目最适合切入：
+
+## **Agent-Native Payments**
+
+这个方向的目标是让 Agent 成为互联网的一等支付公民，可以在授权范围内自动完成支付、购买 API、购买数据或调用付费服务。
+
+当前项目天然适配这个方向，因为它已经有：
+
+-   agent action 输入；
+    
+-   payment / transfer / approve intent；
+    
+-   policy 判断；
+    
+-   低风险自动执行；
+    
+-   高风险人工确认；
+    
+-   危险操作拒绝；
+    
+-   audit trail。
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 AI Agent Server Wallet 与 [LI.FI](http://LI.FI) Agent Integration 学习
 
 今天学习了两份和 SafePay Guard Wallet 方向高度相关的资料：
@@ -66,6 +114,7 @@ Audit records.
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 Week 2 总结：AI x Web3 Bridge 深挖 - 安全钱包方向
 
@@ -132,6 +181,7 @@ Week 3 下一步：
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
 
+
 ```
 传统以太坊的痛点：
 
@@ -155,6 +205,7 @@ Week 3 下一步：
 
 
 
+
 ```
 线 1：Agent 怎么做事？
   ├── MCP  → Agent ↔ 工具（发现 + 调用）
@@ -171,6 +222,7 @@ Week 3 下一步：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -206,6 +258,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 ## **提示工程（让Agent从“靠运气”到“稳定可控”）**
 
 ### **1\. 系统提示符与用户提示符**
@@ -235,6 +288,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -297,11 +351,13 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天学习了一下web3xai有一些大概的总结：从 Agent Workflow 的 human-in-the-loop，到 Escrow 的多签仲裁，到 Sovereignty 的一键 kill switch，到 Governance AI 的「AI 不替你做投票建议」——**自动化程度越高，撤回机制必须越强**。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -339,6 +395,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 **1\. Web3 Tool Use（学完）**  
 \- 工具分层：只读（RPC/Contract Read）↔️ 写交易（Contract Write/Wallet）必须硬分离  
 \- 写交易前 7 步检查链：chain id → 合约地址 → ABI → value → gas → simulation → policy+确认  
@@ -352,6 +409,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -382,6 +440,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天听了一下web3的课，这些概念都懂算是巩固一下基础了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -399,11 +458,13 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天终于把hermes弄好，也学习了一些ai的知识
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
