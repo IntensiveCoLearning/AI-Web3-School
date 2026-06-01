@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+I will update later
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 Todays session was amazing
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 I will check back later
 <!-- DAILY_CHECKIN_2026-05-30_END -->
@@ -30,11 +37,13 @@ I will check back later
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
 
+
 I will complete some notes later today
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -47,11 +56,13 @@ For me privacy is not only about applying some smart code to lock up the data, i
 
 
 
+
 I will
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -69,11 +80,13 @@ Today as been a wonderful experience
 
 
 
+
 The internet is evolving from a place where humans do business with each other to a place where _AI agents do business with other AI agents_.
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -98,6 +111,7 @@ The internet is evolving from a place where humans do business with each other t
 
 
 
+
 Today I didn't do much. I only studied LLMs from the learning handbook, I hope to do more tomorrow.
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
@@ -113,11 +127,13 @@ Today I didn't do much. I only studied LLMs from the learning handbook, I hope t
 
 
 
+
 因系统原因，补交打卡笔记内容，此条内容为系统自动触发。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
