@@ -15,8 +15,81 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+### **Hackathon 方向 Brainstorm（**[**Z.AI**](http://Z.AI) **赛道）**
+
+**市场调研（2026-05）**
+
+> 来源：firecrawl 搜索
+
+-   **Long-horizon Agent 现状**：模型能力已非瓶颈，真正的竞争壁垒在 orchestration、feedback loops、sandbox、tooling（EPAM 2026）。真正可用的模式是 bounded multi-step tasks + human-in-the-loop review，不是 fully autonomous。
+    
+-   **Web3 开发痛点**：写合约只是很小一部分，配置/测试/部署/跨链适配更费时间。Bridge/cross-chain 的信任假设和安全风险是真实问题。
+    
+-   **审计工具现状**：Slither/Mythril 单次静态扫描；AI 增强版 Cyfrin Aderyn、Olympix F1 > 80%，但都是**单次扫描**，无迭代修复。**多轮自主迭代修复**是空白。
+    
+-   **AI Agents in Web3**：Autonomous DeFi portfolio managers、AI agents with crypto wallets、Agentic commerce 是 2026 热门方向。
+    
+-   **GLM-5 能力**：Terminal-Bench 2.0 表现强，200K context，16K output，MIT license 可自部署，$18/月 coding plan。
+    
+
+* * *
+
+### **三个方向对比**
+
+|   | 方向A Dev Agent | 方向B Audit Agent | 方向C Publishing |
+| --- | --- | --- | --- |
+| 市场需求 | 真实但拥挤 | 真实痛点 | 需培育 |
+| GLM-5 使用关键性 | 中 | 高 | 中 |
+| 长程体现 | 强，但难超出 Claude Code | 最强：scan→interpret→fix→rescan→verify | 强但链上变现路径复杂 |
+| Web3 真实集成 | 可部署到测试网 | 合约+链上数据+真实漏洞 | x402 早期 |
+| 评委差异化 | 难（同类多） | 高（无竞品做迭代修复） | 中 |
+
+* * *
+
+### **选定方向：Multi-Round Smart Contract Audit Agent**
+
+**不是新 Slither，是"会自己修的审计员"**
+
+**赛道匹配**：[Z.AI](http://Z.AI) 要求"自主拆解、持续执行、迭代修复"——Audit 天然完整体现。
+
+**MVP（Week 4，10天）**：
+
+-   输入：ERC-20 合约地址或代码
+    
+-   GLM-5 全程驱动：读取代码 → 调用静态分析 → 解读漏洞 → 生成修复代码 → 重新扫描验证 → 输出结构化报告
+    
+-   全程记录 task decomposition、tool calls、iteration 过程（评委核心看这点）
+    
+
+**优势**：
+
+-   评委直接看到 GLM-5 的长程规划+迭代纠错
+    
+-   已有真实漏洞的合约可作验证集
+    
+-   安全是真实痛点，审计报告可发布/交易
+    
+
+**风险**：Cyfrin Aderyn、Olympix 已有人在做，但都是单次扫描；聚焦"迭代修复"是新意所在
+
+* * *
+
+### **参与内容**
+
+**1\. Co-learning session**
+
+> 来源：课堂
+
+**2.「从 VC 角度，如何更好打磨项目」课程**
+
+VC 核心维度：问题是否真实/痛苦/足够大、方案是否可验证、团队执行能力、护城河。 对 Hackathon 启发：demo 不是炫技，是证明"这个问题确实存在，且我能解决"。
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 ### **任务产出**
 
 Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
@@ -84,6 +157,7 @@ Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
 
+
 ## **LXDAO 治理流程 AI 辅助方案**
 
 任务：选一个 DAO / 社区流程，拆出 AI 可以辅助的步骤，以及必须由人或治理流程确认的步骤。
@@ -110,6 +184,7 @@ Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 ## **ETHGlobal OpenAgents Hackathon 项目扫描**
@@ -240,6 +315,7 @@ Agent GET /analyze → 402 (payment info)
 
 
 
+
 ### **任务 1：Agent Profile Design**
 
 以 Web3 Analysis Agent 为例，设计完整 Agent Profile。
@@ -357,6 +433,7 @@ Agent GET /analyze → 402 (payment info)
 
 
 
+
 ## **今日完成：Agent Payment/Commerce Flow 设计**
 
 ### **任务产出**
@@ -416,6 +493,7 @@ Agent GET /analyze → 402 (payment info)
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -548,6 +626,7 @@ AI Agent 自动执行交易，但：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -823,6 +902,7 @@ AI Agent 自动执行交易，但：
 
 
 
+
 ## **学习内容**
 
 ### **文档阅读（Ethereum 官方）**
@@ -902,6 +982,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 
 
+
 ## **今日完成**
 
 ### **受限 Web3 助手设计**
@@ -956,6 +1037,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -1074,6 +1156,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1504,6 +1587,7 @@ result = agent.invoke({"messages": [{"role": "user", "content": "hi"}]})
 
 
 
+
 ## **学习内容**
 
 ### **主题 1：测试网交易任务**
@@ -1736,6 +1820,7 @@ my-project/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -2128,6 +2213,7 @@ A：很难追回。所以审计（audit）和风险监控非常重要。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
