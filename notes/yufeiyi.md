@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+**Co-learning｜任务推进与答疑**
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 ### **Women Builders in AI × Web3: Learning Paths, Collaboration Networks & Global Op**
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 **Co-learning｜任务推进与答疑**
 <!-- DAILY_CHECKIN_2026-05-28_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-27_START -->
 
 
+
 **Co-learning｜任务推进与答疑**
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 ### **Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性 听讲学习**
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -310,6 +321,7 @@ binance-bot/
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -742,6 +754,7 @@ LLM 是概率模型
 
 
 
+
 ## 1-hermes下载
 
 步骤：更新win10-下载wsl-下载Ubuntu-脚本下载hermes
@@ -769,6 +782,7 @@ api接口： [算龙头平台ai.bayesdl.com](http://算龙头平台ai.bayesdl.co
 
 
 
+
 20260519AI x Web3 School - AI Agent 入门 —— Hermes 从 0 到 1
 
 AI进化历程：从问答交互到任务执行（以提示词为命令）
@@ -778,6 +792,7 @@ AI进化历程：从问答交互到任务执行（以提示词为命令）
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
