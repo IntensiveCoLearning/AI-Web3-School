@@ -15,13 +15,22 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+**6/1**
+
+**尋找黑客松隊伍（尚未找到隊友）**
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 整理筆記 準備第三周學習內容
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 聽優秀筆記分享
 
@@ -32,6 +41,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
 
+
 學習遇到一些小瓶頸
 
 所以複習自己的筆記 並確認自己要的方向
@@ -39,6 +49,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -53,6 +64,7 @@ AI x Web3 School
 
 
 
+
 Co learning
 
 AI Web3問題空間地圖
@@ -60,6 +72,7 @@ AI Web3問題空間地圖
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -78,11 +91,13 @@ AI Web3問題空間地圖
 
 
 
+
 建立新錢包並補足相關Web3知識
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -103,6 +118,7 @@ AI Web3問題空間地圖
 
 
 
+
 因系统原因，补交打卡笔记内容，此条内容为系统自动触发。
 
 理解GLM和AI agent底層邏輯
@@ -110,6 +126,7 @@ AI Web3問題空間地圖
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
