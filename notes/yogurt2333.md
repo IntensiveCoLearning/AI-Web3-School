@@ -15,8 +15,50 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+**今日完成：**
+
+**1\. AGW MVP 技术规格书（609行）✅**
+
+\- 完整架构设计：Vue3 前端 → Spring Boot 后端 → Python Agent（OpenAI FC）→ Cobo CAW
+
+\- 15+ API 接口定义（request/response 完整示例）
+
+\- 数据模型（SQL + Pydantic）、前端组件树、Vue 组件树
+
+\- 分 Phase 1-3 实现优先级
+
+**2\. MVP 已实现 ✅（本机 Codex 已完成）**
+
+\- 还没传 GitHub，待提交
+
+**3\. VC 讲座学习 ✅**
+
+\- 听 Tracy 讲 VC 视角：更看重落地和驱动力 > 宏大叙事
+
+\- 反思 AGW 定位：工程型项目适合小奖，大奖需要更"哇塞"的方向
+
+\- 后续 AdventureX 考虑 pivot 到更激进的方向（AI × Funkot / 游戏自动化 / 开发者工具）
+
+**4\. VSCode Remote SSH 排错**
+
+\- 确认是网络层问题（安全组/本地 22 端口封锁），非服务端问题
+
+**问题 / Blocker**
+
+\- 上传代码到 GitHub（待办）
+
+**明日计划**
+
+\- push GitHub
+
+\- Phase 2-3 继续推进（风险分析 + Cobo 执行）
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 **1\. Week 3 开发排期确认 ✅**
 
 \- 完整 7 天开发排期已落地`hackathon/week3-dev-plan.md`）
@@ -58,6 +100,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 \# Project Proposal: AI Guard Wallet (AGW)
 
@@ -352,6 +395,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
 
+
 ## 今日完成
 
 ### 1\. 项目初步 Proposal ✅
@@ -410,6 +454,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 **问题地图** 扫了全部 6 个方向
 
 **主方向选择** Wallet / Permission，写了为什么不是纯 AI / 不是纯 Web3
@@ -423,6 +468,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -444,6 +490,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -492,6 +539,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 \### Web3 基础 — 过了一遍
 
 章节 核心收获
@@ -524,6 +572,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 🧭 2026 核心趋势 Agents with Wallets — Agent 自己管钱自己花
 
 📦 项目全景表 基础设施层 / 钱包支付层 / 应用层，每个都有简介
@@ -541,6 +590,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -581,6 +631,7 @@ Web3 底层原理
 
 
 
+
 \## 📋 5月19日学习总结
 
 \### ✅ 已完成
@@ -602,6 +653,7 @@ Web3 底层原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
