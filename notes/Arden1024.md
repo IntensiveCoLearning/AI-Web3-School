@@ -16,8 +16,33 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+0601
+
+今天以開發簡易監控系統，可以針對合約地址與鏈上地址進行異常分析，目前跑出來得到的回饋如下：  
+這幾天會新增漏洞檢查機制。  
+  
+🔍 錢包 \[我的測試錢包\] 0xC80a0c7f3F9df...
+
+✅ Alchemy 交易查詢成功，3 筆
+
+💰 ETH: 0.0268 | Nonce: 19 | 交易: 3 筆
+
+🔍 錢包 \[Vitalik 主網地址（觀察用）\] 0xd8dA6BF26964a...
+
+✅ Alchemy 交易查詢成功，5 筆
+
+💰 ETH: 58.0806 | Nonce: 0 | 交易: 5 筆
+
+🪙 代幣 \[HeroToken\] 0x272FDa7a1eA83...
+
+Transfer 事件: 4 筆 | 總量: 1,030,000.00 HERO
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 0531  
   
 今天正式進入Remix上進行鏈上合約代碼撰寫，一開始發生很多問題，我連功能都不知道。  
@@ -27,6 +52,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 0530
 
@@ -62,6 +88,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
 
+
 0527  
   
 今天正式將GIT與bitget錢包串再一起，並且成功調閱數據，練習抓取交易的時間、區塊高度、並將記錄自動存檔。  
@@ -70,6 +97,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -84,6 +112,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -103,6 +132,7 @@ AI x Web3 School
 
 
 
+
 0525筆記  
   
 上週成功將api導入LLM中，並成功開啟對話模型。  
@@ -113,6 +143,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -136,6 +167,7 @@ AI x Web3 School
 
 
 
+
 0523筆記  
   
 今天開始進行運用VS CODE搭建虛擬環境，並引入openai進行建置。  
@@ -144,6 +176,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -165,6 +198,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -200,6 +234,7 @@ AI x Web3 School
 
 
 
+
 0519筆記  
   
 透過Hermes指定一个“大脑”，也就是大语言模型。  
@@ -210,6 +245,7 @@ Hermes Agent支持众多主流模型，包括**OpenAI、Anthropic Claude。**
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
