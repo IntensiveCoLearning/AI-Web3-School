@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+1
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 听讲座，写黑客松计划书
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 筹备黑客松
 <!-- DAILY_CHECKIN_2026-05-31_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-30_START -->
 
 
+
 忙着收拾东西，思绪很乱，先打个卡
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -138,6 +147,7 @@ AI x Web3 School
 
 
 
+
 ## **今日目标**
 
 -   学习量化基础知识（动量、反转）
@@ -234,6 +244,7 @@ async def place_order(self, inst_id, side, sz):
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -343,6 +354,7 @@ caw tx call --chain-id BSC_BNB --contract 0x55d398326f99059ff775485246999027b319
 
 
 
+
 打卡，试一下我的Hermes Agent部署的Github仓库是否成功
 
 话说ai真是好用
@@ -350,6 +362,7 @@ caw tx call --chain-id BSC_BNB --contract 0x55d398326f99059ff775485246999027b319
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -370,11 +383,13 @@ caw tx call --chain-id BSC_BNB --contract 0x55d398326f99059ff775485246999027b319
 
 
 
+
 加了小伙伴脑暴，在想项目最终的实现方式，如果能直接接入币安和okx钱包那就太好了。
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -399,11 +414,13 @@ caw tx call --chain-id BSC_BNB --contract 0x55d398326f99059ff775485246999027b319
 
 
 
+
 我的First Agent又进了一步，可以抓取实时数据了，下一步应该让他分析一些数据，生成一些投资小白能看懂的信号。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -436,6 +453,7 @@ caw tx call --chain-id BSC_BNB --contract 0x55d398326f99059ff775485246999027b319
 
 
 
+
 明晚回家安装Hermes，可以用来比较一下和open claw有什么区别。
 
 AI的应用试过很多，但还没有真正用来提高效率，我感觉我的输入有问题。
@@ -443,6 +461,7 @@ AI的应用试过很多，但还没有真正用来提高效率，我感觉我的
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
