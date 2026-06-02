@@ -15,8 +15,29 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+今日完成：
+
+1.  向量知识库从零搭建的分级体系：Level 0（规则切块+纯向量检索→Demo）、Level 1（语义分块+混合检索+Reranker+Eval→检索质量转折点）、Level 2（查询改写+Agent 检索+文档解析+多租户→用户问题端优化）
+    
+2.  Reranker（交叉编码器精排）与 LLM 判断（信息充足度）的角色分工
+    
+3.  Skill 的本质：操作手册而非角色身份，可叠加不可互换
+    
+4.  Agent 工作流退化：日志格式偏离根因分析
+    
+5.  Fine-tuning 知识节点：SFT（全量微调，云端默认）、LoRA（插入小矩阵省显存）、PEFT（方法体系，LoRA 是其一）、Dataset（质量决定成败）、Overfitting（背答案没真学会）
+    
+
+核心收获：RAG 系统的质量取决于"你如何知道自己搜得好不好"——Eval 是一切优化的前提。Fine-tuning 不是唯一方案，前置排查链要先走完。
+
+Phase 1 进度：10/26（Fine-tuning 知识节点讲解完成，待完成 Inference 章节）
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 今日完成：
 
 1.  理解 LLM Evaluation 与传统软件测试的本质区别
@@ -37,11 +58,13 @@ timezone: UTC+8
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
 
+
 今日学习handbook剩余的内容
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -63,6 +86,7 @@ Phase 1 进度：9/26（还差 Evaluation / Fine-tuning / Inference）
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -109,11 +133,13 @@ Phase 1 进度：9/26
 
 
 
+
 今日计划加深java cli的理解，然后继续学习handbook剩下的内容
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -159,6 +185,7 @@ Day 8 | AI × Web3 School
 
 
 
+
 Day 8 | AI × Web3 School
 
 今日完成：
@@ -189,6 +216,7 @@ Day 8 | AI × Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -334,6 +362,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 
 
 
+
 ## **Day 6 | AI × Web3 School**
 
 ### **今日完成**
@@ -356,6 +385,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -421,6 +451,7 @@ Day 5 | AI × Web3 School
 
 
 
+
 Day 4 | AI × Web3 School
 
 今日完成：
@@ -466,6 +497,7 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日复习tc老师的web课程，并学习wsl2研究hermes具体的使用方法，有时间接着看handbook的ai部分知识。
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -489,11 +521,13 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日将handbook中ai部分学完，然后开始web3部分的学习，并回顾昨晚tc老师的课
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
