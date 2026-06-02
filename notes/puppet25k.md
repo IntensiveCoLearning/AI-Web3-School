@@ -15,8 +15,62 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+### **Week 3 分享会 —** [**Z.ai**](http://Z.ai) **GLM-5.1: 8 Hour Autonomy**
+
+1.  参加了 [Z.ai](http://Z.ai)（智谱 AI）Cara 的分享会
+    
+2.  了解了 [Z.ai](http://Z.ai) 生态演进：GLM-130B → ChatGLM → GLM-4 → GLM-5 → GLM-5.1（MIT 开源权重）
+    
+3.  理解了 **8 Hour Autonomy 的核心概念**：不是时长，而是深度（Depth）— 进入实验循环、数百轮迭代、数千次工具调用
+    
+4.  学习了 Demo：8 小时 Linux 桌面构建，1200 步自主完成
+    
+5.  掌握了 GLM 的技术路线：交错思考、DSA 注意力分配、保留思考
+    
+6.  理解了深度的取舍：1M token 召回从 78%→32%，但 Agentic Coding 显著提升
+    
+7.  关注到定价优势：$3/MTok vs Claude Opus $25/MTok（8.3×）
+    
+8.  记住了 Hackathon 实用建议：目标漂移 / 错误累积 / 策略僵化的对策
+    
+
+### **Hackathon Openday**
+
+1.  参加了 20:00 的 Hackathon Openday（LXDAO / ETHPanda 主办）
+    
+2.  了解了两个赛道细则：
+    
+    -   **Cobo 赛道（3500U）**：Agentic Economy × Cobo Agentic Wallet
+        
+    -   [**Z.AI**](http://Z.AI) **赛道（3500U）**：Web3 × Long-Horizon Task（GLM-5.1 驱动）
+        
+3.  掌握了评分五维度：创新性 / 技术实现 / 用户体验 / 生态影响 / 演示质量（各10分）
+    
+4.  了解了 [Z.AI](http://Z.AI) API 报销政策：Lite Plan $18/月赛后实报实销
+    
+5.  记住了提交方式：6月13日12:00前通过 GitHub Issues 提交，项目必须开源
+    
+6.  关注到 Cobo Discord 答疑：[https://discord.gg/hJ6wPunpQ](https://discord.gg/hJ6wPunpQ)
+    
+
+### **随堂笔记**
+
+> 8 Hours = Depth, not time length. — 进入实验循环，而不是往前冲。
+
+> 三个习惯会让所有模型在长任务上更好：明确检查清单、要求自测、卡住时打断转向。
+
+### **下一步工作**
+
+1.  继续 Handbook Web3 基础学习 — 下一站 **Account Abstraction（AA）**
+    
+2.  关注 GLM-5.1 的本地部署可能性（MIT 权重 + 低成本）
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 ### **Co-Learning | 任务推进与答疑**
 
 1.  参加了 19:00 的 Co-Learning 答疑交流
@@ -52,6 +106,7 @@ AI x Web3 School
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 ### **Handbook — 开发栈（Dev Stack）**
 
@@ -95,6 +150,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 ### **Handbook — 智能合约（Smart Contract）**
@@ -142,6 +198,7 @@ AI x Web3 School
 
 
 
+
 2026-05-29
 
 Dev3pack Builder 成长路径分享
@@ -173,6 +230,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -211,6 +269,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -265,6 +324,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Cobo Agentic Wallet 分享**
 
 1.  参加了 Cobo Agentic Wallet 分享会 — AI Agent 链上安全架构
@@ -301,6 +361,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -365,6 +426,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -464,6 +526,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Open Agentic Economy**
 
 1.  参加了 Sophia ([Z.AI](http://Z.AI)) 的 "Open Agentic Economy" 分享会
@@ -486,6 +549,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -549,6 +613,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
 
 2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
@@ -564,6 +629,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -644,11 +710,13 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
