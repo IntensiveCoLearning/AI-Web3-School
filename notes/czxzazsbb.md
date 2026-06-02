@@ -15,13 +15,40 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+了解黑客松相关信息比如赛道、规则 奖金
+
+-   时间安排6.13提交截止
+    
+
+1.  cobo：agent参与真实的经济活动（支付、采购、管理资金），是否能在在一个安全可控可审计的边界内完成任务
+    
+2.  agent在边界中完成操作（小：一次支付交易）
+    
+3.  为什么需要agent，为什么用web3，为什么中心化系统做不到这些
+    
+4.  更关注权限和安全边界，真实问题把它做透
+    
+5.  能参与经济活动，值得信赖的，可控的agent
+    
+6.  中英都可以，有限时间内表达流利（5分钟）
+    
+7.  可运行，可演示
+    
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/czxzazsbb/images/2026-06-02-1780410217171-image.png)![屏幕截图 2026-06-02 223650.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/czxzazsbb/images/2026-06-02-1780411041964-_____2026-06-02_223650.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/czxzazsbb/images/2026-06-02-1780411237765-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/czxzazsbb/images/2026-06-02-1780411508784-image.png)
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 补前几天的学习视频
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 ### **一、核心概念**
 
@@ -139,6 +166,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
 
+
 ### 1\. **Account（账户）**
 
 -   **一句话解释**：区块链上的身份，可以用来接收、发送资产或调用智能合约。
@@ -230,6 +258,7 @@ AI x Web3 School
 
 
 
+
 1\. agent是智能体或者代理。
 
 2\. LLM（大语言模型）：输入--LLM--输出(无法自己调用工具)
@@ -272,6 +301,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
