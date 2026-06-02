@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+打卡
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 打卡一下
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 打卡
 <!-- DAILY_CHECKIN_2026-05-29_END -->
@@ -31,11 +38,13 @@ AI x Web3 School
 
 
 
+
 最近在思考AI在大型场景开发中的必要性和可行性
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -51,11 +60,13 @@ AI x Web3 School
 
 
 
+
 研究了一下codex
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -109,11 +120,13 @@ Workflow 是指**将多个 LLM 处理节点、工具调用或 Agent 按照特定
 
 
 
+
 today I deal with the problem of chatgpt plus, and then I will use it for my AI.
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -138,11 +151,13 @@ today I deal with the problem of chatgpt plus, and then I will use it for my AI.
 
 
 
+
 打卡，期待晚上追老师的分享
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
