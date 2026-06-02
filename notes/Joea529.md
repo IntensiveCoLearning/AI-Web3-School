@@ -15,8 +15,31 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+📚 AI × Web3 School Day 10 — 评估 (Evaluation)
+
+💡 3 个核心理解：
+
+1.  评估是区分 AI Demo 与可靠 AI 产品的分水岭。没有体系化的评估，每一次 Prompt 优化和模型升级都是盲人摸象。
+    
+2.  2\. 黄金测试集配合 LLM-as-a-Judge (模型裁判) 是当前性价比最高的半自动评估范式，能够有效拦截语义输出中的逻辑退化。
+    
+3.  3\. 在 Web3 场景中，交易不可逆的属性要求 Agent 在调用签名工具前，必须通过确定性与结构化评估，形成交易安全性的闭环。
+    
+
+🎯 最大收获：评估的本质是给概率性的 LLM 筑起一道确定性的防御墙。结构化输出 (JSON Schema) 是让评估迈向全自动化、可写断言的最佳解法。只有先搞定评估，微调和后续优化才是有源之水。
+
+❓ 在完全去中心化的 AI 网络中，如何防范“裁判模型”本身串通作恶或对抗性样本的注入？如何设计抗共谋的链上评估博弈机制？
+
+🔗 [https://github.com/Joea529/ai-web3-school-cohort-0](https://github.com/Joea529/ai-web3-school-cohort-0)
+
+📖 https://aiweb3.school/zh/handbook/
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 📚 AI × Web3 School Day 9 — 模型上下文协议 (Model Context Protocol, MCP)
 
 💡 3 个核心理解：
@@ -40,6 +63,7 @@ AI x Web3 School
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
+
 📚 AI × Web3 School Day 8 — 氛围编程（Vibe Coding）
 
 💡 3 个核心理解：
@@ -62,6 +86,7 @@ AI x Web3 School
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -91,6 +116,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 7 — 框架（Frameworks）
 
 💡 3 个核心理解：
@@ -113,6 +139,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -146,6 +173,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 5 — 检索增强生成（RAG）
 
 💡 3 个核心理解：
@@ -168,6 +196,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -212,6 +241,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 4 — 上下文（Context）
 
 💡 3 个核心理解：
@@ -234,6 +264,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -276,6 +307,7 @@ AI x Web3 School
 
 
 
+
 📚 AI × Web3 School Day 2 — 提示词（Prompt）
 
 💡 对照手册学完 4 个知识节点：
@@ -299,6 +331,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
