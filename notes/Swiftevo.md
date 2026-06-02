@@ -15,8 +15,550 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+我認為你這個方向其實非常符合 [Z.AI](http://Z.AI) 賽道，而且比一般「Web3 Agent」更有特色。
+
+因為大部分參賽者可能做：
+
+-   AI 寫 Solidity
+    
+-   AI 做 Audit
+    
+-   AI 發 NFT
+    
+
+但你的優勢是：
+
+> 你手上已經有真實的 DeSci Funding Data、真實 Funding Round Workflow，以及真實評審痛點。
+
+這很難複製。
+
+* * *
+
+# 先判斷是否符合賽道
+
+[Z.AI](http://Z.AI) 評審最看重：
+
+```text
+Long-Horizon Task
+```
+
+即：
+
+-   多步驟
+    
+-   長流程
+    
+-   多工具
+    
+-   自主規劃
+    
+-   自我修正
+    
+
+* * *
+
+如果你只是：
+
+```text
+Proposal
+↓
+GLM
+↓
+Summary
+```
+
+不符合。
+
+* * *
+
+如果是：
+
+```text
+Funding Round
+↓
+Proposal Intake
+↓
+Evidence Verification
+↓
+Academic Validation
+↓
+Cross-round Comparison
+↓
+Risk Detection
+↓
+Missing Evidence Detection
+↓
+Reviewer Brief
+↓
+Human Review Support
+```
+
+這就非常符合。
+
+* * *
+
+# 我會怎樣定義項目
+
+## Spark DeSci Review Agent
+
+一句話：
+
+> An AI-native DeSci funding review system powered by GLM-5.1, combining Spark DeSci Database and AMiner academic intelligence to assist human reviewers through autonomous multi-step proposal evaluation.
+
+* * *
+
+# 為甚麼 AMiner 是關鍵
+
+目前 Spark Database 有：
+
+```text
+Project Claims
+```
+
+例如：
+
+-   AI for Rare Disease
+    
+-   Longevity Research
+    
+-   Cancer Research
+    
+-   Open Science Platform
+    
+
+* * *
+
+但缺：
+
+```text
+Scientific Context
+```
+
+* * *
+
+AMiner 剛好補上：
+
+```text
+Academic Literature
+Research Trends
+Citation Networks
+Researcher Profiles
+```
+
+* * *
+
+這意味：
+
+Agent 可以：
+
+* * *
+
+## Step 1
+
+讀 Proposal
+
+* * *
+
+## Step 2
+
+抽取：
+
+```text
+research topics
+keywords
+claims
+```
+
+* * *
+
+## Step 3
+
+查 AMiner
+
+例如：
+
+```text
+rare disease AI diagnosis
+```
+
+* * *
+
+## Step 4
+
+判斷：
+
+```text
+是否有相關研究？
+是否已有大量研究？
+是否是新方向？
+是否存在爭議？
+```
+
+* * *
+
+## Step 5
+
+產生：
+
+```text
+Scientific Context Report
+```
+
+* * *
+
+# 這比普通 Reviewer 強很多
+
+因為：
+
+人類評審：
+
+通常：
+
+```text
+不知道整個學術背景
+```
+
+* * *
+
+# 這就是 AMiner 的護城河
+
+很多 Agent 都沒有。
+
+* * *
+
+# 我會把 Agent 分成五個階段
+
+## Agent 1
+
+Proposal Understanding Agent
+
+工作：
+
+```text
+讀 Proposal
+抽取 Claims
+抽取 Milestones
+抽取 Evidence
+```
+
+* * *
+
+## Agent 2
+
+Evidence Verification Agent
+
+工作：
+
+```text
+GitHub
+Demo
+Website
+Publication
+```
+
+* * *
+
+## Agent 3
+
+Academic Context Agent
+
+核心：
+
+```text
+AMiner
+```
+
+工作：
+
+```text
+Literature Search
+Research Trend
+Related Work
+Scientific Credibility
+```
+
+* * *
+
+## Agent 4
+
+Funding Memory Agent
+
+核心：
+
+```text
+Spark DB
+Gitcoin DeSci
+```
+
+工作：
+
+```text
+Cross-round history
+Past participation
+Evidence continuity
+```
+
+* * *
+
+## Agent 5
+
+Reviewer Support Agent
+
+輸出：
+
+```text
+Summary
+Strengths
+Risks
+Missing Evidence
+Scientific Context
+Suggested Questions
+```
+
+* * *
+
+# 這裡開始符合 ReAct
+
+Agent 不再：
+
+```text
+一次回答
+```
+
+而是：
+
+```text
+Reason
+↓
+Need Evidence
+↓
+Call GitHub Tool
+
+Reason
+↓
+Need Academic Validation
+↓
+Call AMiner
+
+Reason
+↓
+Need Funding History
+↓
+Call Spark DB
+
+Reason
+↓
+Need Cross-round Context
+↓
+Call Historical Database
+
+Generate Report
+```
+
+* * *
+
+# Long-Horizon Task 在哪裡？
+
+評審最想看到：
+
+```text
+Agent 自己規劃
+```
+
+* * *
+
+例如：
+
+Proposal：
+
+```text
+AI for Rare Disease Diagnosis
+```
+
+* * *
+
+Agent：
+
+```text
+Task Planning
+
+1. Understand proposal
+2. Extract scientific claims
+3. Search AMiner
+4. Search prior funding rounds
+5. Verify GitHub
+6. Compare evidence
+7. Generate reviewer report
+```
+
+* * *
+
+這就是：
+
+# Planning + ReAct
+
+* * *
+
+# 學習路線（接下來 2~3 週）
+
+我會這樣安排。
+
+* * *
+
+## Week 1
+
+Agent Planning
+
+學：
+
+-   ReAct
+    
+-   Planner
+    
+-   Tool Calling
+    
+-   Multi-step Reasoning
+    
+
+目標：
+
+畫出：
+
+```text
+Spark Review Workflow
+```
+
+* * *
+
+## Week 2
+
+Tool Layer
+
+設計：
+
+```text
+search_spark_project()
+search_aminer()
+search_github()
+get_project_history()
+```
+
+理解：
+
+Agent 如何決定用哪個 Tool。
+
+* * *
+
+## Week 3
+
+Multi-Agent Design
+
+設計：
+
+```text
+Proposal Agent
+Evidence Agent
+Academic Agent
+Funding Agent
+Reviewer Agent
+```
+
+* * *
+
+# 最終 Demo
+
+評審看到：
+
+```text
+Input:
+Proposal
+```
+
+↓
+
+```text
+GLM-5.1
+Planning
+```
+
+↓
+
+```text
+AMiner Search
+```
+
+↓
+
+```text
+GitHub Verification
+```
+
+↓
+
+```text
+Spark Database Retrieval
+```
+
+↓
+
+```text
+Cross-round Analysis
+```
+
+↓
+
+```text
+Reviewer Report
+```
+
+↓
+
+```text
+Risk
+Missing Evidence
+Scientific Context
+Funding History
+Suggested Reviewer Questions
+```
+
+這會比單純：
+
+```text
+AI summarize proposal
+```
+
+高出一個層級。
+
+* * *
+
+我認為你目前的最佳策略不是做「AI Reviewer」。
+
+而是做：
+
+# Spark DeSci Funding Intelligence Agent
+
+定位成：
+
+> An autonomous long-horizon research and funding evaluation agent that combines proprietary DeSci funding data (Spark Database) with AMiner's scientific knowledge graph and GLM-5.1 planning capabilities to reduce reviewer workload while preserving human oversight.
+
+這個敘事同時符合：
+
+-   [Z.AI](http://Z.AI) Long-Horizon Agent
+    
+-   DeSci
+    
+-   AI × Research
+    
+-   真實使用場景
+    
+-   你已有的資料優勢。
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 很好。
 
 如果說前幾天你學的是：
@@ -629,6 +1171,7 @@ AI 怎樣決定下一步做甚麼
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
+
 # Day 7 學習總結 — Memory、Fine-tuning 與人類認知模型
 
 今天最大的收穫其實不是新技術。
@@ -1151,6 +1694,7 @@ AI 怎樣決定做甚麼
 <!-- DAILY_CHECKIN_2026-05-30_START -->
 
 
+
 這兩者之中，**Cobo Agentic Wallet (CAW)** 以及其背後的技術架構，與 **Public Goods（公共物品）** 的發展有著直接且明確的關聯；而 [**Z.AI**](http://Z.AI) 則是從開源（Open Source）與學術工具的角度切入，間接回饋了 Public Goods 的生態。
 
 以下為兩者在 DeSci 或 Public Goods 發展上的交集與關聯分析：
@@ -1190,6 +1734,7 @@ AI 怎樣決定做甚麼
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -1800,6 +2345,7 @@ Reasoning + Actions
 
 
 
+
 Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
 
 今天你開始進入：
@@ -2389,6 +2935,7 @@ Context Engineering 組織知識
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -3045,6 +3592,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -3663,6 +4211,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 # Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -4272,6 +4821,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -4860,6 +5410,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -5377,11 +5928,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -5812,6 +6365,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -5906,6 +6460,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
