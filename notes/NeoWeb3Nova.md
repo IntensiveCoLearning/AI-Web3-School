@@ -15,8 +15,38 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+### 今日完成
+
+1.  **完整抓取黑客松页面信息**：提取了 Cobo 赛道 5 个方向 + Z.AI 赛道 3 个方向的完整规则、提交要求、评审侧重点。
+    
+2.  **赛道最终确认**：基于评审标准重新验证，Cobo 赛道与 PactGuard 项目 100% 对齐——CAW 关键性、资金流程完整度、真实资金执行能力、可演示性均满足。
+    
+3.  **识别关键风险**："不接受 Mockup"和"真实资金执行能力"两条硬性要求意味着必须在 6/12 前完成可运行代码，否则直接出局。
+    
+4.  **资源汇总**：整理了 Cobo 和 Z.AI 两个赛道的全部官方文档、SDK、API 链接。
+    
+
+### 今日收获
+
+-   **评审标准 = 开发优先级**：把评审侧重点翻译成 Sprint Plan——"CAW 关键性"意味着代码中 CAW 接口不可替换；"资金流程完整度"意味着必须展示从触发到完成的每一步；"可演示性"意味着 Demo 视频需要攻击拦截对比的可视化。
+    
+-   **Open Day 是关键窗口**：今晚 20:00 的 Open Day 可能有合作方补充说明、组队信息、API 补贴申请方式——不能错过。
+    
+
+### 链接
+
+-   Hackathon Proposal: `submissions/hackathon-proposal-cobo-agentic-payment.md`
+    
+-   Hackathon Overview: `hackathon/overview.md`
+    
+-   Daily Log: `daily/2026-06-02.md`
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 ### 今日完成
 
 1.  **Week 2 交付物整理**：全部 6 个模块（A/B/C/D/F/G）已完成，从问题地图到威胁建模到治理流程，覆盖 AI×Web3 交叉全链路。
@@ -37,6 +67,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 ## 训练营状态
 
@@ -79,6 +110,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-29_START -->
 
 
+
 今日核心动作：完成模块 C（Agent Identity）交付 + Week 2 三个模块全部收尾。
 
 模块 C 交付：
@@ -106,6 +138,7 @@ Week 2 整体交付：
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -151,6 +184,7 @@ Week 2 整体交付：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -213,6 +247,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
 > 关键动作：
@@ -233,6 +268,7 @@ Week 2 整体交付：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -283,6 +319,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -311,6 +348,7 @@ Week 2 整体交付：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -357,6 +395,7 @@ Week 2 整体交付：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -435,6 +474,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -463,6 +503,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -521,6 +562,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
