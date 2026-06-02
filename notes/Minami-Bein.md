@@ -14,6 +14,264 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+# Day 16｜AI x Web3 School 技术报告
+
+---
+
+## 目录
+
+- [1. 执行摘要与问题空间](#1-执行摘要与问题空间)
+- [2. 系统架构与拓扑](#2-系统架构与拓扑)
+- [3. 理论框架与形式分类](#3-理论框架与形式分类)
+- [4. 状态机与协议演练](#4-状态机与协议演练)
+- [5. Agent 自主集成与优化](#5-agent-自主集成与优化)
+- [6. 漏洞向量与边界场景验证](#6-漏洞向量与边界场景验证)
+- [7. 学术标签](#7-学术标签)
+
+---
+
+## 1. 执行摘要与问题空间
+
+### 摘要
+
+本文档作为 AI x Web3 School **第 16 天**的学习打卡记录，聚焦于 **用户画像构建（User Persona）与问题定义（Problem Definition）** 的系统化方法论。在前两周完成了 Web3 基础直觉建立（wallet、signature、transaction、smart contract）和 Agent Workflow 连接 Web3 Tool Use 的原型设计之后，本阶段的核心任务是将抽象的学习积累锚定到一个**可验证、可演示、可持续迭代的项目方向**上。
+
+通过对比“传统 Web2 开发范式”与“AI x Web3 原生范式”的本质差异，本文将系统性地定义目标用户的核心痛点、现有替代方案的边界条件，以及为什么需要引入 AI Agent 作为 Web3 交互的新层（layer）。最终输出为一份结构化的问题定义文档（`hackathon/problem-definition.md`）和用户-痛点-方案映射表，作为第三周最小可行 Demo（MVP）设计的前置输入。
+
+### In-Scope / Out-of-Scope
+
+| 维度 | 包含（In-Scope） | 排除（Out-of-Scope） |
+|------|------------------|----------------------|
+| **用户群体** | Web3 开发者、DAO 参与者、NFT 交易者、智能合约审计需求方 | 普通 C 端用户（非加密货币持有者） |
+| **痛点类型** | 信息过载、操作复杂、权限风险认知不足、链上数据可读性差 | 复杂 DeFi 策略制定、交易所套利 |
+| **技术边界** | AI Agent 调用 Web3 Tool（MCP 协议）、链上数据读取、交易模拟 | 链上写操作自动化、合约自主部署 |
+| **验证方式** | Mock prototype、人工评估清单、用户访谈框架 | 大规模用户 A/B 测试、主网上线 |
+
+---
+
+## 2. 系统架构与拓扑
+
+### 概念脑图：AI x Web3 项目定位
+
+```mermaid
+mindmap
+  root((AI x Web3 Project))
+    问题发现层
+      用户痛点识别
+        信息过载
+        权限风险盲区
+        链上数据噪声
+      市场机会评估
+        现有工具不足
+        AI Agent 成熟度
+    方案设计层
+      核心功能定位
+        交易解释器
+        钱包权限顾问
+        DAO 提案总结
+        合约学习助手
+      用户确认边界
+        签名请求
+        交易提交
+        只读操作
+    技术实现层
+      Agent Workflow
+        observe
+        decide
+        act
+        verify
+        report
+      Web3 Tool Use
+        read balance
+        simulate transaction
+        estimate gas
+      权限矩阵
+        只读工具
+        用户确认工具
+        禁止自动执行工具
+    验证与迭代层
+      Evaluation Checklist
+      Replay Mechanism
+      安全审计流程
+```
+
+### 组件拓扑图：用户问题 → Agent 解决 → 可验证输出
+
+```mermaid
+graph TD
+    subgraph 用户层["👤 User Layer"]
+        U1[Web3 开发者]
+        U2[DAO 参与者]
+        U3[合约学习者]
+    end
+
+    subgraph 问题识别["❓ Problem Identification"]
+        P1[信息过载痛点]
+        P2[权限风险盲区]
+        P3[链上数据噪声]
+    end
+
+    subgraph Agent 核心["🤖 Agent Core"]
+        A1[LLM 推理引擎]
+        A2[Context Manager]
+        A3[Tool Orchestrator]
+    end
+
+    subgraph Web3 工具["⛓️ Web3 Tool Layer"]
+        W1[链上数据读取]
+        W2[交易模拟器]
+        W3[Gas 估算器]
+        W4[签名请求器]
+    end
+
+    subgraph 输出层["📤 Output Layer"]
+        O1[结构化解释]
+        O2[权限检查清单]
+        O3[提案总结报告]
+        O4[合约分析笔记]
+    end
+
+    U1 --> P1
+    U2 --> P2
+    U3 --> P3
+
+    P1 --> A1
+    P2 --> A2
+    P3 --> A3
+
+    A1 --> W1
+    A2 --> W2
+    A3 --> W3
+    A3 --> W4
+
+    W1 --> O1
+    W2 --> O2
+    W3 --> O3
+    W4 --> O4
+
+    style 用户层 fill:#e1f5fe
+    style 问题识别 fill:#fff3e0
+    style Agent 核心 fill:#f3e5f5
+    style Web3 工具 fill:#e8f5e9
+    style 输出层 fill:#fce4ec
+```
+
+---
+
+## 3. 理论框架与形式分类
+
+### 核心组件术语表
+
+| 组件名称 | 功能定义 | 输入类型 | 输出类型 | 约束条件 |
+|----------|----------|----------|----------|----------|
+| **User Persona**（用户画像） | 描述典型用户的背景、目标、行为模式 | 用户访谈数据、行为日志 | 结构化用户档案（角色卡片） | 需基于真实用户样本，非假设 |
+| **Pain Point**（痛点） | 用户在特定场景下遇到的阻碍或摩擦 | 场景分析、问卷调查 | 痛点分级（高/中/低）、出现频率 | 痛点需可量化验证 |
+| **Problem Statement**（问题陈述） | 用一句话清晰定义需要解决的核心问题 | 用户画像 + 痛点 + 市场分析 | 问题陈述模板（P1 = 用户 + P2 = 场景 + P3 = 结果） | 避免解决方案描述渗入问题定义 |
+| **Alternative Solution**（替代方案） | 用户当前解决该问题的已有方法 | 竞品分析、市场调研 | 对比矩阵（功能/成本/风险/体验） | 需覆盖至少 3 种主流替代方案 |
+| **AI x Web3 Gap**（AI×Web3 差距） | 现有替代方案无法解决、而 AI Agent 可以填补的空缺 | 痛点分析 + AI 能力评估 | Gap 定义文档、差异化说明 | 需明确 AI 的不可替代性 |
+
+### 问题定义形式化模板
+
+$$
+\text{Problem Statement} = \langle \text{Target User} \rangle + \langle \text{Hidden Pain} \rangle + \langle \text{Current Behavior} \rangle + \langle \text{Negative Consequence} \rangle
+$$
+
+| 字段 | 定义 | 示例 |
+|------|------|------|
+| **Target User** | 典型用户的角色描述 | "一个每天参与 3 个 DAO 提案投票的开发者" |
+| **Hidden Pain** | 用户未明确表达但客观存在的痛苦 | "需要在海量链上讨论中提取核心论点" |
+| **Current Behavior** | 用户当前如何应对该问题 | "手动阅读每个提案的讨论帖和链上数据" |
+| **Negative Consequence** | 不解决该问题会导致的后果 | "错过关键投票截止日期，或因信息不全做出错误决策" |
+
+### 系统不变量：问题定义质量保证
+
+$$
+\forall \text{Problem Definition } p, \quad \text{Valid}(p) \implies (\text{HasUser}(p) \land \text{HasPain}(p) \land \text{HasAlt}(p) \land \text{HasGap}(p))
+$$
+
+即：每一个有效的问题定义必须包含**用户画像**、**痛点描述**、**替代方案分析**和**AI×Web3 差距定位**四个必要条件。
+
+---
+
+## 4. 状态机与协议演练
+
+### 用户问题定义时序图
+
+```mermaid
+sequenceDiagram
+    participant User as 👤 用户
+    participant Guide as 📖 Handbook 阅读
+    participant Analysis as 🔍 问题分析
+    participant Output as 📤 输出生成
+    participant Review as ✅ 质量审核
+
+    User->>Guide: Day 16 启动：阅读所选方向相关章节
+    Guide-->>User: 获取前沿探索概览、Dev Tooling 等背景知识
+    
+    Analysis->>User: 收集用户画像数据
+    User-->>Analysis: 提供角色背景、目标、行为模式
+    
+    Analysis->>Analysis: 定义核心痛点 (Pain Point)
+    Analysis->>Analysis: 评估现有替代方案 (Alternative)
+    Analysis->>Analysis: 定位 AI x Web3 Gap
+    
+    Note over Analysis: 生成 Problem Statement 候选版本
+    
+    Output->>Analysis: 提取问题定义要素
+    Output-->>Output: 撰写 hackathon/problem-definition.md
+    
+    Output->>Output: 创建可视化图表或 Checklist
+    
+    Review->>Output: 验证完整性：用户+痛点+替代+差距
+    Review-->>User: 输出结构化问题定义文档
+    
+    Note over User: 进入 Day 17：最小 Demo 设计
+```
+
+### 状态阶段细化
+
+| 阶段 | 状态描述 | 进入条件 | 退出条件 | 关键产物 |
+|------|----------|----------|----------|----------|
+| **Initiation（初始化）** | 确认学习目标，激活相关 Handbook 页面 | Day 16 日期触发 | 用户画像数据已收集 | 方向确认文档 |
+| **Analysis（分析）** | 深度分析用户、痛点、替代方案和差距 | 初始化完成 | 问题陈述（Problem Statement）生成 | 问题定义草案 |
+| **Synthesis（综合）** | 将分析结果结构化为标准格式 | 分析完成 | 输出文档草稿完成 | `hackathon/problem-definition.md` |
+| **Verification（验证）** | 质量审核：四大要素完整性检查 | 综合完成 | 审核通过 | 问题定义终稿 + 可视化图表 |
+
+---
+
+## 5. Agent 自主集成与优化
+
+### AI Agent 在问题定义中的角色
+
+在 **Day 16** 的学习过程中，AI Agent 扮演的不是“替代用户思考”的角色，而是“结构化辅助推理”的工具。基于前两周积累的 AI Builder 知识体系，今天的核心任务是把抽象的项目方向落地为**可验证的问题定义**。
+
+#### Agent 工作流映射
+
+```mermaid
+graph LR
+    subgraph observe["🔍 Observe（观察）"]
+        O1[读取 Handbook 相关章节]
+        O2[检索前两周积累的 Daily Notes]
+        O3[收集用户访谈素材]
+    end
+
+    subgraph decide["⚖️ Decide（决策）"]
+        D1[评估四个备选方向]
+        D2[筛选高价值问题切入点]
+        D3[确认差异化定位]
+    end
+
+    subgraph act["🔧 Act（行动）"]
+        A1[撰写 Problem Statement]
+        A2[生成用户-痛点映射表]
+        A3[创建可视化图表]
+    end
+
+    subgraph verify["✔️ Verify（
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 # Day 15 | AI x Web3 学习打卡
