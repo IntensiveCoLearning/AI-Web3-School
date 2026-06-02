@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+### 全同态加密（FHE）—— 密文状态下的 AI 训练
+
+-   **核心概念：** zkML 解决了“证明 AI 计算正确”的问题，而 **FHE (Fully Homomorphic Encryption, 全同态加密)** 解决的是“计算过程中数据绝不泄露”的问题。它允许 AI 直接在加密的数据（密文）上进行数学运算和推理，且输出的结果解密后与直接在明文上运算完全一致。
+    
+-   **技术融合 (FHE + ZK + AI)：**
+    
+    -   用户加密个人财务/健康数据 $\\rightarrow$ 发送给去中心化 AI 节点 $\\rightarrow$ 节点在不知道数据内容的情况下完成 AI 推理 $\\rightarrow$ 返回加密结果 + ZK 证明（证明节点没有作弊）。
+        
+-   **代表项目：** Mind Network, Inco Network, Zama。
+    
+-   **今日心得：** 如果说 ZK 是“我相信你做对了”，那 FHE 就是“我根本不让你看到数据”。FHE + AI 是真正激活医疗、高净值金融等传统隐私领域的终极钥匙。
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 ### 前沿项目拆解与黑客松思考
 
 -   **明星项目拆解：**
@@ -36,6 +52,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 ### 前沿项目拆解与黑客松思考
 
@@ -58,6 +75,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-28_START -->
 
 
+
 ### Day 4：AI + Web3 的代币经济学（Tokenomics）
 
 -   **核心概念：** 如何用 Token 驱动 AI 生态的飞轮？Web3 为 AI 引入了全新的数据贡献与标注激励机制。
@@ -75,6 +93,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -99,11 +118,13 @@ AI x Web3 School
 
 
 
+
 学习agent eco治理
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -120,11 +141,13 @@ AI x Web3 School
 
 
 
+
 学习ai智能体相关内容
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -224,11 +247,13 @@ AI x Web3 School
 
 
 
+
 阅读了一些ai-web3交叉方向的文档，但有待深入学习
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
