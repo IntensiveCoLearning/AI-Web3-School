@@ -15,8 +15,86 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+**Today's Focus**
+
+\- \[x\] 参加 AI Web3 Agentic Builders Hackathon 启动会 ✅
+
+\- \[x\] Codex 生成的 AGW 代码同步到 GitHub ✅
+
+\- \[x\] 写项目 README ✅
+
+**1\. 🏁 Hackathon 启动会**
+
+参加了 AI Web3 Agentic Builders Hackathon 的 kickoff，关键信息：
+
+**两个赛道：**
+
+\- **Combo（Agentic Economy）** — Agent 安全管理链上资产，权限风控。AGW 完美对齐
+
+\- **ZAI（Long Horizon Task）** — Agent 自主完成复杂 Web3 任务
+
+**时间线：**
+
+\- 6/2 启动 → 6/13 提交 → 6/14 Demo Day → 6/17 公布结果
+
+\- 总奖池 7000 USDT（各赛道 3500）
+
+**Submit 要求：** 必须可演示的 MVP，5min Demo，纯 PPT 不行。 **学习支持：** Workshop + Office Hour，Combo 赛道 6/3 晚 8 点有专项 Workshop。
+
+**2\. 🥇 AGW 代码上链**
+
+Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogurt2333/agw-wallet](https://github.com/yogurt2333/agw-wallet)
+
+**当前状态：**
+
+\- 三端骨架完整：Vue 3 前端 + Spring Boot 后端 + FastAPI Agent
+
+\- Mock Mode 可跑通完整流转闭环
+
+\- 写了 README，项目介绍、架构图、快速开始都有了
+
+**下一步：**
+
+\- 接 OpenAI function calling（替换当前 regex parse）
+
+\- 接真实 Sepolia RPC 余额
+
+\- 目标：黑客松提交前跑通真实转账
+
+**3\. 🥈 关于"粘合剂"的思考**
+
+跟 Hermes 聊了一轮"一直在写胶水代码怎么破"——结论是 AI 时代的产品本质就是胶水工程，破局点不是不写 glue，而是升级 glue 的层次：从粘 API 变成粘产品认知。AGW 的"Agent 是提议者不是决策者"这个定位本身就是价值，比代码值钱。
+
+**Key Takeaways**
+
+1\. AGW 天然对齐 Combo 赛道，不需要 pivot
+
+2\. MVP 先跑 Mock 闭环是对的 — 我们已领先大部分参赛者
+
+3\. Cobo CAW 的 Pact 机制是 Combo 赛道的标准答案
+
+4\. 11 天时间接 OpenAI + RPC，Demo 日稳
+
+**Next Steps**
+
+\- \[ \] 6/3 晚 8 点参加 Combo 赛道专项 Workshop
+
+\- \[ \] 接 OpenAI function calling
+
+\- \[ \] 接 Sepolia RPC 真实余额
+
+\- \[ \] 准备 5min Demo 演讲稿
+
+**Check-in Stats**
+
+\- 学习时间：~2h
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 **今日完成：**
 
 **1\. AGW MVP 技术规格书（609行）✅**
@@ -59,6 +137,7 @@ AI x Web3 School
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
 
+
 **1\. Week 3 开发排期确认 ✅**
 
 \- 完整 7 天开发排期已落地`hackathon/week3-dev-plan.md`）
@@ -100,6 +179,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 \# Project Proposal: AI Guard Wallet (AGW)
@@ -396,6 +476,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 ## 今日完成
 
 ### 1\. 项目初步 Proposal ✅
@@ -455,6 +536,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 **问题地图** 扫了全部 6 个方向
 
 **主方向选择** Wallet / Permission，写了为什么不是纯 AI / 不是纯 Web3
@@ -468,6 +550,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -490,6 +573,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -540,6 +624,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 \### Web3 基础 — 过了一遍
 
 章节 核心收获
@@ -573,6 +658,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 🧭 2026 核心趋势 Agents with Wallets — Agent 自己管钱自己花
 
 📦 项目全景表 基础设施层 / 钱包支付层 / 应用层，每个都有简介
@@ -590,6 +676,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -632,6 +719,7 @@ Web3 底层原理
 
 
 
+
 \## 📋 5月19日学习总结
 
 \### ✅ 已完成
@@ -653,6 +741,7 @@ Web3 底层原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
