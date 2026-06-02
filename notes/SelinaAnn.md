@@ -15,19 +15,130 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+# **如何更好打磨项目**
+
+## TOP 1 : 人
+
+-   对行业理解深度
+    
+-   虚心听取意见
+    
+-   执行>想法
+    
+
+## 关注点
+
+-   产品未来增长潜力
+    
+-   产品盈利
+    
+-   项目核心优势是否长期保持
+    
+
+## 先打磨问题，而不是打磨产品
+
+-   谁愿意为这个想法付钱？
+    
+-   用户
+    
+-   痛点
+    
+-   场景
+    
+-   解决方案
+    
+
+## 验证需求
+
+先：
+
+-   发博客
+    
+-   发视频
+    
+-   建群
+    
+-   做课程
+    
+
+看看有没有人愿意看。
+
+如果没人看：
+
+说明需求有问题
+
+## 寻找PMF（产品市场匹配）
+
+-   用户自发推荐
+    
+-   用户愿意付费
+    
+-   用户愿意等待更新
+    
+-   用户流失率下降
+    
+
+## 建立增长逻辑
+
+-   用户通过小红书内容进入公众号；
+    
+-   公众号进入微信群；
+    
+-   群内转化付费课程；
+    
+-   老用户邀请新用户获得会员奖励
+    
+
+## 证明团队能力
+
+-   团队 > 产品
+    
+-   是否持续执行
+    
+
+## 建立竞争壁垒
+
+### 数据
+
+拥有大量用户行为数据。
+
+### 社区
+
+运营多年技术社区。
+
+### 品牌
+
+在某个细分领域成为第一认知。
+
+### 网络效应
+
+用户越多越有价值
+
+## 学会讲故事
+
+VC投资的是未来。
+
+所以必须能看到未来的增长空间。
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-01-1780278788327-image.png)
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-05-31-1780207428353-image.png)
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 # Why Ethereum and decentralized applications are important for the future of technology and society.
@@ -117,6 +228,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -235,6 +347,7 @@ AI x Web3 School
 
 
 
+
 # **Cypherpunk & the Cultural Layers of Privacy: Why Privacy Matters for Builders**
 
 ## Cypherpunk
@@ -270,6 +383,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -318,6 +432,7 @@ AI x Web3 School
 
 
 
+
 # MetaMask
 
 -   metamask is a app tht allows you to manage ethereum,solana,bitcoin and private keys.
@@ -346,6 +461,7 @@ AI x Web3 School
 
 
 
+
 # **Long-term Memory for AI Agents**
 
 ## restart VS resume
@@ -361,6 +477,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -462,6 +579,7 @@ AI x Web3 School
 
 
 
+
 # **Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path**
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-05-23-1779524951056-image.png)
@@ -484,6 +602,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -524,6 +643,7 @@ AI驱动链上分析工具
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -618,6 +738,7 @@ AI驱动链上分析工具
 
 
 
+
 Hermes Agent学习
 
 ```
@@ -672,6 +793,7 @@ API 文档：https://web3career.build/llms.txt
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
