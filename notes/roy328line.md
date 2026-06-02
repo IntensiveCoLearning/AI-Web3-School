@@ -15,6 +15,36 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+今日學習：Week 3 Hackathon Openday + Agentic Commerce 深化
+
+核心概念：Week 3 正式啟動 Hackathon，課程進入「從學習到執行」的關鍵轉折點。Agentic Commerce 是今日重點方向：AI Agent 不只是提出建議，而是在明確預算、授權、可審計記錄下完成真實的鏈上交易。
+
+學習重點：
+
+Hackathon Openday 核心理解：
+- Week 3 分兩條線：課程線（補齊 Week 1-2 基礎 + 深入方向研究）和 Hackathon 線（正式啟動賽道、組隊、項目收斂）
+- - 進入 Week 4 前 Ready Checklist：項目方向 3 句話說明、隊伍確認、SDK/API/合約技術棧確認、Repo Skeleton + 任務看板、Week 4 Sprint Plan
+ 
+  - Agentic Commerce 深化整合：
+  - - Cobo 賽道核心：讓 AI Agent 具備可控的鏈上資金執行能力（Agent-Native Payments、Agent 資源採購、A2A Economy）
+    - - Z.AI 賽道核心：GLM-5.1 長程任務能力，自主拆解複雜任務、多步驟計劃、持續工具調用、完整閉環
+      - - Agent Commerce 的關鍵不是「自動付款」，而是「在明確授權、預算控制和可審計記錄下完成自動交易」
+       
+        - Week 3 個人方向鎖定：
+        - - 主方向：Wallet / Permission / Safe Execution（延伸 Account Abstraction 研究）
+          - - 研究重點：ERC-4337 Session Key 作為 Agentic Wallet 基礎 + Cobo CAW Pact 機制
+            - - 最小 Demo 目標：設計一個帶 Policy 控制的 Agent 鏈上執行流程（預算邊界 + 人工確認節點 + 審計日誌）
+             
+              - Hackathon 準備狀態：
+              - - 已完成：AI x Web3 問題地圖 / 主方向選擇 / Proposal 初稿
+                - - 本週任務：Repo skeleton + Sprint plan + Sponsor workshop 筆記
+                  - - 待確認：隊友組成 / 角色分工 / Week 4 每日任務拆解
+                   
+                    - 個人洞察：Hackathon Openday 讓我意識到「從學習到執行」的真正挑戰不在技術，而在「範圍收斂」——Week 4 只能做一個可驗證的 MVP，而不是完整產品。Session Key + Policy 設計是 Agentic Wallet 的核心防護層，也是最有可能在 Hackathon 週期內完整展示的技術點。
+                   
+                    - <!-- DAILY_CHECKIN_2026-06-02_END -->
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 今日學習：深讀 Governance AI 模組，理解 AI 如何輔助 DAO 與鏈上治理
