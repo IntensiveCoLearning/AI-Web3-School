@@ -15,8 +15,25 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+**What I did today:** Wrapped up Week 2 by completing the GuildOS project proposal — a programmable agent coordination studio using A2A, AgentFightClub (Moloch treasury), and ERC-8004 on-chain reputation. Also reviewed key Handbook concepts around Prompt Design and On-chain Data handling as context for the proposal.
+
+**What I learned:**
+
+-   Prompts are executable communication protocols, not just instructions — they need task goals, input boundaries, prohibited behaviors, and output format to be reliable
+    
+-   High-risk actions can’t rely on prompt interception alone; they need code-layer verification as a second guard
+    
+-   On-chain data requires full context (chain ID, block number, contract address, method, return value, read time) to prevent models from confusing data across chains and timestamps
+    
+
+**Blockers / questions:** None blocking. Week 3 starts tomorrow — plan is to finish any remaining Week 2 task deliverables, do another review pass on the proposal, then dive into Week 3 material.
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 **What I did today:** Completed the final Week 2 deliverables sprint. Enriched the AI × Web3 problem space map with real-user profiles, best learning form judgments, verification methods, and risk boundaries for all 6 directions — grounded in the Agentic Commerce workflow’s 3-layer verification chain. Applied the Direction Evaluation Matrix (5 criteria) formally to the main and secondary tracks in the direction selection document: both pass all five criteria. Generated 5 direction analysis documents (deep dives for Identity/Capability and Governance; overviews for Payment, Wallet, and Privacy) each with Mermaid flowcharts, typical scenarios, counterexamples, key risks, and minimal validation plans. Generated 5 direction task deliverables working through each aim concretely. Rebuilt the Identity/Capability task file using a real ERC-8004-registered agent (DataAnalyst Pro, Base mainnet token 22300) — analysed its live MCP manifest, A2A agent card, on-chain registration JSON, and 8004scan compliance report; documented 8 gaps for the profile.
 
 **What I learned:** The Direction Evaluation Matrix forced clarity on why Identity/Capability passes all five criteria structurally and not just intuitively: the problem predates hot projects (structural demand ✓), the demo is a read-only registry query + LLM matching (verifiability ✓), the prototype needs only existing ERC-8004 infrastructure (minimal entry ✓), no keys or funds at the initial layer (risk boundaries ✓), and the build feeds directly into the Week 3 proposal and hackathon (follow-through ✓). Analysing a real ERC-8004 agent revealed what the standards look like in production: owner and agent wallet are the same address on DataAnalyst Pro — a common shortcut that creates a security gap where owner key compromise equals agent key compromise. Most production agents on 8004scan score metadata completeness around 77–85%, indicating the ecosystem is still maturing on the profile completeness front.
@@ -25,11 +42,13 @@ AI x Web3 School
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
+
 **What I did today:** Light study day — spent the time on ambient research rather than structured handbook reading. Listened to podcasts on recent AI agent developments and frontier model news to gather inspiration and directional signal for the hackathon project. This is part of the ideation phase: scanning what’s being built in the space, what problems practitioners are actually hitting, and where the gaps are that my chosen track (Identity / Reputation / Capability / Interoperability) might address.
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 **What I did today:** Ran 3 spaced-repetition quizzes — MCP Permission Model, AI Oracle, and Direction Evaluation Matrix — reinforcing the tool interface layer, oracle risk-layering patterns, and the five-criteria framework (Structural Demand, Verifiability, Minimal Entry Point, Risk Boundaries, Follow-Through) for evaluating AI × Web3 directions. Watched the Neo-Cypherpunk & Privacy session recording (neo-cypherpunk framing: privacy as collective defense, not individual retreat; key actions: personal privacy stack + Ethereum Cypherpunk Manifesto). Built the AI × Web3 Problem Space Map as an HTML infographic and markdown summary covering all 6 foundational directions with AI role, Web3 mechanism, and why-both-required breakdown for each. Used this output to complete the direction selection analysis and formally chose **Identity / Reputation / Capability / Interoperability** as the main track and **Governance / Coordination** as the secondary.
@@ -41,6 +60,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -57,6 +77,7 @@ AI x Web3 School
 
 
 
+
 **What I did today:** Completed Week 1 closure. Designed and published two AI × Web3 workflow diagrams: an Agentic Commerce swimlane (Human Operator → Requester Agent → Data Provider Agent → On-chain/L2, 9 steps with full risk annotations and a 6-layer verification chain) and a Restricted Web3 Assistant workflow (read-only chain access with human confirmation gate before any write action). Ran a comparative analysis report on two AI × Web3 projects (Bankr and [Venice.AI](http://Venice.AI)) covering problem space, solution design, and developer tools. Wrote the Week 1 Proof-of-Work Pack (`submissions/Week1-PoW.md`) and Week 1 Learning Summary (`submissions/Week1-Learning-Summary.md`) as formal Week 1 wrap-up deliverables. Submitted workflow and project analysis tasks via WCB.
 
 **What I learned:** From building the workflow diagrams: mapping an AI × Web3 system to a concrete swimlane forces you to identify every trust boundary. The six-layer verification model (prompt → context → model → code → guard → human) emerged from that exercise — it’s more useful than any individual framework because it tells you _which_ layers need automation vs. human confirmation vs. on-chain enforcement. Most demos only implement layers 1 and 3; production systems need all six. From the project analysis: Bankr and [Venice.AI](http://Venice.AI) both address agent execution in Web3 contexts but from very different angles — one optimizing for consumer UX (natural language → intent execution) and the other for privacy-preserving inference at the infrastructure level.
@@ -64,6 +85,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -84,6 +106,7 @@ AI x Web3 School
 
 
 
+
 **What I did today:** Completed the remaining AI Foundations chapters: read Evaluation, Fine-tuning, and Inference in full and saved structured notes to the knowledge base. Skimmed all 9 Web3 Foundations chapters (Cryptography, Wallet, Smart Contract, Dev Stack, Network, Account Abstraction, DeFi, Oracle, Indexing, Security) — used the Handbook as source material to update the wiki and regenerate the concept cards deck. Completed and submitted proof-of-work for testnet interaction and smart contract deployment/execution exercises on WCB.
 
 **What I learned:** From Evaluation: evaluation is a first-class engineering concern in AI × Web3 — errors can affect assets, permissions, and on-chain execution. A golden set of real tasks and regression tests, combined with online observability, is what makes a system improvable over time. From Fine-tuning: fine-tuning improves consistency on a class of tasks, not factual knowledge — the dataset is the core asset, and goal, data, and evaluation must all be defined before starting. From Inference: inference is a tradeoff across latency, cost, context, quality, privacy, and operational complexity; in AI × Web3 systems specifically, the inference layer must leave auditable records since on-chain actions are hard to reverse.
@@ -93,6 +116,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -117,6 +141,7 @@ AI x Web3 School
 
 
 
+
 **What I did today:** Watched three live session recordings: “How Web3 Works” (May 20), “Week 1 Review Meeting” (May 22), and “Open Agentic Economy” (May 23). Read the Agent chapter from the Handbook. Also began building knowledge-base notes and concept card tooling for the wiki. Submitted check-ins for all three recordings on WCB. Hands-on coding experiments remain pending and are carried to tomorrow.
 
 **What I learned:** From the recordings: full Ethereum transaction flow (mnemonic → private/public key → address derivation → digital signature → EIP-1559 gas → PoS consensus); how Ethereum provides neutral coordination and property rights for both humans and agents; ERC-8004 as an emerging trust layer for agent identity and reputation; CROPS as a design principle for agent infrastructure (Censorship-resistant, OSS, Privacy, Security). From the Agent chapter: an agent is a constrained execution loop, not autonomy itself — it must know what it can do, how to verify completion, how to stop on failure, and how to be audited. In Web3 contexts, agents sit between model capability and on-chain execution. Key personal insight from the Week 1 review: treat learning as an executable workflow, not a tools survey — I want to explore deploying a fork of my learning agent to an open framework like Hermes or OpenClaw.
@@ -124,6 +149,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -154,6 +180,7 @@ Also built an Obsidian vault as a wiki-like knowledge base for my notes with its
 
 
 
+
 **What I did today:** Read the AI × Web3 School Handbook intro page to get a first overview of how both domains connect. Then read the LLM chapter and the Prompt chapter in full, taking structured notes in the repo knowledge base. Also completed the three setup tasks on WCB: “Set Up the Course Tools”, “Create Your Course GitHub”, and “Complete Learning Agent Setup”. Deferred hands-on coding experiments to Day 2.
 
 **What I learned:** LLMs generate probabilistically reasonable output — not trustworthy facts by default. The closer an LLM gets to the execution layer in an AI × Web3 system, the more its natural-language output must be converted into verifiable, deterministic objects. On the prompting side: a prompt is interface design, not just a question. A good prompt lets the model know when to stop rather than pushing it to be more confident. Critically, prompts should not be the sole security layer — guardrails and human handoffs are required for high-risk actions. Prompt injection is a first-class security risk, especially in agent scenarios with access to internal systems.
@@ -163,6 +190,7 @@ Also built an Obsidian vault as a wiki-like knowledge base for my notes with its
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -205,6 +233,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 
 
 
+
 -   Reviewed the handbook's recommended startup prompt to create a learning agent
     
 
@@ -232,6 +261,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 
 
 
+
 -   Attended the first co-learning session. Even if it was mostly for the Chinese audience, I noticed there was a walkthrough on setting up a Hermes agent. It should be worth exploring Hermes vs my current Openclaw instance for this bootcamp
     
 -   Watched the replay session about web3 fundamentals with a focus on how blockchain txs work, wallets and private keys.
@@ -243,6 +273,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
