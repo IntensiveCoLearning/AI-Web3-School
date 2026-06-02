@@ -15,8 +15,30 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+### **完成任务**
+
+**Week 1–2 任务汇总整理** `tasks/week1-week2-summary.md` 对 Week 1–2 所有任务进行结构化整理，按 Week 1 基础搭建 / Week 2 问题探索分类，每个任务标注文件名（反引号框起）和核心内容摘要。产出 Hackathon 准备状态自查清单。
+
+* * *
+
+### **Hackathon Open Day（线上实时参加）**
+
+Hackathon 正式启动。了解了赛道结构、评分维度和参与方式。继续围绕 Z.AI 赛道思考可行性。
+
+* * *
+
+### **Hackathon Idea 继续思考**
+
+Verifiable Web3 Research Agent
+
+在 Open Day 之后继续推敲方向，核心差异化在于"多轮迭代修复"而非"单次扫描"。
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 ### **Hackathon 方向 Brainstorm（**[**Z.AI**](http://Z.AI) **赛道）**
 
 **市场调研（2026-05）**
@@ -90,6 +112,7 @@ VC 核心维度：问题是否真实/痛苦/足够大、方案是否可验证、
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
+
 ### **任务产出**
 
 Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
@@ -158,6 +181,7 @@ Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
 <!-- DAILY_CHECKIN_2026-05-30_START -->
 
 
+
 ## **LXDAO 治理流程 AI 辅助方案**
 
 任务：选一个 DAO / 社区流程，拆出 AI 可以辅助的步骤，以及必须由人或治理流程确认的步骤。
@@ -184,6 +208,7 @@ Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -316,6 +341,7 @@ Agent GET /analyze → 402 (payment info)
 
 
 
+
 ### **任务 1：Agent Profile Design**
 
 以 Web3 Analysis Agent 为例，设计完整 Agent Profile。
@@ -434,6 +460,7 @@ Agent GET /analyze → 402 (payment info)
 
 
 
+
 ## **今日完成：Agent Payment/Commerce Flow 设计**
 
 ### **任务产出**
@@ -493,6 +520,7 @@ Agent GET /analyze → 402 (payment info)
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -626,6 +654,7 @@ AI Agent 自动执行交易，但：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -903,6 +932,7 @@ AI Agent 自动执行交易，但：
 
 
 
+
 ## **学习内容**
 
 ### **文档阅读（Ethereum 官方）**
@@ -983,6 +1013,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 
 
+
 ## **今日完成**
 
 ### **受限 Web3 助手设计**
@@ -1037,6 +1068,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -1156,6 +1188,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1588,6 +1621,7 @@ result = agent.invoke({"messages": [{"role": "user", "content": "hi"}]})
 
 
 
+
 ## **学习内容**
 
 ### **主题 1：测试网交易任务**
@@ -1820,6 +1854,7 @@ my-project/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -2213,6 +2248,7 @@ A：很难追回。所以审计（audit）和风险监控非常重要。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
