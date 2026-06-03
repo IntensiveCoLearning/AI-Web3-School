@@ -750,7 +750,7 @@ more information
 | [lml152](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lml152.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Mars-1129](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Mars-1129.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [sherryxiao0](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/sherryxiao0.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [tiyadegure](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tiyadegure.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | | | | |
+| [tiyadegure](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tiyadegure.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | | | | |
 | [shun12306](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/shun12306.md) | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ |   | | | | | | | | | | | |
 | [yolanda000](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yolanda000.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [zblingling](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zblingling.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ |   | | | | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
