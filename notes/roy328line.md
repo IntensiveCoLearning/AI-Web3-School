@@ -15,6 +15,44 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+今日學習：Week 3 黑客松賽道實戰 + Co-learning 任務推進
+
+核心主題：Hackathon 賽道分析、項目方向收斂、Cobo CAW 深入研究
+
+## Hackathon 賽道整理
+
+本週黑客松正式啟動，兩大 Sponsor 賽道：
+
+**Cobo｜Agentic Economy × Cobo Agentic Wallet**：核心問題是 AI Agent 如何具備可控的鏈上資金執行能力。方向包括 Agent-Native Payments、Agent 資源採購、A2A Economy。關鍵工具：Cobo CAW 的 Pact 機制（任務級授權：明確預算、操作範圍、時間窗口）。
+
+**Z.AI｜Web3 × Long-Horizon Task**：核心問題是 GLM-5.1 的長程任務能力結合 Web3 執行環境。方向包括 Web3 Agentic Dev Tools、AI-Powered Web3 Game Studio、AI × Creator Economy。關鍵工具：GLM-5.1 的 function calling、長上下文、自主規劃能力。
+
+## 賽道選擇判斷框架
+
+用三個維度評估兩個賽道：結構性需求（問題是否長期存在）、驗證可能性（能否在 Week 4 完成展示 demo）、最小切入點（一週能否完成核心閉環）。
+
+Cobo 賽道：Agent 安全執行是真實需求，越自動化越需要權限控制。最小 demo 路徑：用戶設定 Pact → Agent 自動執行符合邊界的操作 → 審計記錄輸出。需接入 CAW SDK，有清晰的 demo 路徑。
+
+Z.AI 賽道：Long-horizon task 是 Agent 從「工具」走向「Worker」的關鍵能力。GLM-5.1 API 可直接調用，快速原型可行。最小 Z.AI demo：自然語言描述 Web3 任務 → Agent 自主規劃多步驟 → 完成鏈上交互。
+
+## 技術研究：Cobo CAW 深入理解
+
+**Pact 機制**：Pact 是任務級授權邊界，而不是通用錢包權限。包含任務描述、預算上限、可調用合約白名單、時間窗口、失敗處理策略。Agent 只能在 Pact 定義的邊界內操作，超出範圍自動拒絕。Pact 完成後權限自動失效（臨時性授權）。
+
+**與 ERC-4337 Session Key 的關係**：Session Key 是底層加密授權機制（鏈上可驗證的臨時密鑰）；Pact 是業務邏輯層的任務授權框架（更高層的策略描述）。兩者互補：Session Key 提供執行安全保障，Pact 提供業務邏輯邊界。
+
+**x402 + CAW 自主支付閉環設計**：服務方設置受 x402 保護的 API → Agent 發起請求收到 402 Payment Required → 識別付款條件 → 用戶預設 Pact（限額/合約白名單/時間窗口）→ Agent 在 Pact 範圍內自動完成鏈上支付 → 付款成功取得 API 結果 → 鏈上留下完整可驗證記錄。
+
+## 核心洞察
+
+Agent commerce 的核心不是「自動付款」，而是「在明確授權、預算控制和可審計記錄下完成自動交易」。支付只是結算的最後一步，前面的發現→報價→授權→執行→驗收鏈路才是真正的難點。
+
+Week 3 最大收穫：Hackathon 的本質不是比誰代碼多，而是在有限時間內找到一個有真實需求、有技術可行路徑、有可驗證成果的最小閉環。Week 4 目標：選定一個賽道，做出能跑通完整閉環的 demo，而不是漂亮的 PPT。
+
+Account Abstraction + Session Key = AI Agent 的「最小權限信用卡」；x402 + CAW = AI Agent 的「自主採購能力」；Governance AI = AI Agent 的「治理輔助角色」。三者合在一起，構成了「AI Agent 作為可信經濟參與者」的完整基礎設施願景。
+<!-- DAILY_CHECKIN_2026-06-03_END -->
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 今日學習：Week 3 Hackathon Openday + Agentic Commerce 深化
