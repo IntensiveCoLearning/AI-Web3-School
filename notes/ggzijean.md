@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+### **学习进度：**
+
+-   **06-03 19:00 - 20:00** Co-learning
+    
+-   **06-03 20:00 - 21:00** 黑客松赛道实战
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 ### **学习进度：**
 
 -   **06-02 19:00 - 20:00** 学习README的各种markdown语法
@@ -26,6 +36,7 @@ AI x Web3 School
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 ### **学习进度：**
 
@@ -38,6 +49,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
 
+
 ### **学习进度：**
 
 -   **05-31 22：30 - 23:00** 翻阅handbook并整理笔记
@@ -48,6 +60,7 @@ AI x Web3 School
 
 
 
+
 ### **学习进度：**
 
 -   **05-30 22：00 - 24:00** 翻阅handbook并整理笔记
@@ -55,6 +68,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -75,6 +89,7 @@ AI x Web3 School
 
 
 
+
 ### **学习进度：**
 
 -   **05-26 20:00 - 21:30** Product manager of Cobo Agentic Wallet
@@ -84,6 +99,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -108,6 +124,7 @@ AI x Web3 School
 
 
 
+
 ### **学习进度：**
 
 -   **05-24 16:00 - 17:30** 翻阅handbook并整理笔记
@@ -125,6 +142,7 @@ AI x Web3 School
 
 
 
+
 ### **学习进度：**
 
 -   **05-23 20:30 - 23：00** 阅读Hung-yi Lee老师的生成式人工智慧课程
@@ -134,6 +152,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -164,6 +183,7 @@ AI x Web3 School
 
 
 
+
 ### **学习进度：**
 
 -   **05-21 19:00 - 20:00** 阅读Hung-yi Lee老师的生成式人工智慧课程
@@ -177,6 +197,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -255,6 +276,7 @@ AI x Web3 School
 
 
 
+
 # 每日学习笔记
 
 日期: 2026-05-19
@@ -298,6 +320,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
