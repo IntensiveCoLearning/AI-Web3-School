@@ -15,8 +15,106 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+## Hackathon Day 1: Validation + Scaffolding
+
+### Task 1.1: Initialize Backend Project
+
+-   Create `backend/` with FastAPI 项目结构
+    
+-   `requirements.txt`: fastapi, uvicorn, httpx, openai, pydantic, python-dotenv, websockets
+    
+-   `config.py`: Pydantic Settings 读取环境变量
+    
+-   `main.py`: FastAPI app + CORS + health check endpoint
+    
+-   `.env.example`: GLM\_API\_KEY, GLM\_BASE\_URL, DUNE\_API\_KEY, TALLY\_API\_KEY, FIRECRAWL\_API\_KEY
+    
+-   验证: `uvicorn main:app` 启动成功，`/health` 返回 200
+    
+
+### Task 1.2: Initialize Frontend Project
+
+-   Vite + React + TypeScript 脚手架
+    
+-   安装依赖: @xyflow/react, zustand, framer-motion, shiki, tailwindcss
+    
+-   初始化 shadcn/ui (button, card, badge, input, sheet, scroll-area)
+    
+-   最小 App.tsx: 暗色背景 + 标题
+    
+-   验证: `npm run dev` 启动成功，页面可见
+    
+
+### Task 1.3: GLM-5.1 API Connectivity Test
+
+-   Create `backend/llm/glm_client.py`: 封装 OpenAI 兼容的 AsyncClient
+    
+-   测试基础 chat completion
+    
+-   测试 function calling（定义一个简单 tool，确认返回 tool\_calls）
+    
+-   **GATE:** 如果 function calling 不工作，立即排查（模型名称、API 格式）
+    
+
+### Task 1.4: Dune API Connectivity Test
+
+-   Create `backend/tools/dune_client.py`: 封装 Dune REST API (execute query, get results, search tables)
+    
+-   测试 search tables
+    
+-   测试执行一条简单 SQL 并获取结果
+    
+-   **GATE:** 确认 API Key 有执行权限，确认返回数据格式
+    
+
+### Task 1.5: Tally API Connectivity Test
+
+-   Create `backend/tools/tally_client.py`: GraphQL client
+    
+-   测试获取 Uniswap/Aave 近期提案列表
+    
+-   **GATE:** 确认 API Key 和 GraphQL schema 可用
+    
+
+### Task 1.6: Demo Case Data Validation
+
+-   用 Dune 执行 Demo A 的 SQL（Aave Treasury 近期转账）
+    
+-   用 Dune 执行 Demo C 的 SQL（Lido 提款数据）
+    
+-   用 Tally 获取 Demo B 需要的提案数据
+    
+-   **GATE:** 三个案例都有数据。任何一个无数据立即更换案例。
+    
+
+* * *
+
+Verified:
+
+\- Backend /health: 200 {"status":"ok"}
+
+\- Frontend dev server: 200, page contains expected title
+
+\- GLM glm-5.1: basic chat returned pong; function calling returned 1 tool\_calls
+
+\- Dune: dataset search returned 432; SELECT 1 AS ok returned 1 row
+
+\- Tally: Uniswap 3 proposal nodes; Aave 3 proposal nodes
+
+\- Demo validation:
+
+\- Aave Treasury transfers: 10 rows
+
+\- Lido withdrawals: 10 rows
+
+\- Uniswap proposals: 3 nodes
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 ### **完成任务**
 
 **Week 1–2 任务汇总整理** `tasks/week1-week2-summary.md` 对 Week 1–2 所有任务进行结构化整理，按 Week 1 基础搭建 / Week 2 问题探索分类，每个任务标注文件名（反引号框起）和核心内容摘要。产出 Hackathon 准备状态自查清单。
@@ -38,6 +136,7 @@ Verifiable Web3 Research Agent
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 ### **Hackathon 方向 Brainstorm（**[**Z.AI**](http://Z.AI) **赛道）**
 
@@ -113,6 +212,7 @@ VC 核心维度：问题是否真实/痛苦/足够大、方案是否可验证、
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
 
+
 ### **任务产出**
 
 Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
@@ -182,6 +282,7 @@ Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
 
 
 
+
 ## **LXDAO 治理流程 AI 辅助方案**
 
 任务：选一个 DAO / 社区流程，拆出 AI 可以辅助的步骤，以及必须由人或治理流程确认的步骤。
@@ -208,6 +309,7 @@ Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -342,6 +444,7 @@ Agent GET /analyze → 402 (payment info)
 
 
 
+
 ### **任务 1：Agent Profile Design**
 
 以 Web3 Analysis Agent 为例，设计完整 Agent Profile。
@@ -461,6 +564,7 @@ Agent GET /analyze → 402 (payment info)
 
 
 
+
 ## **今日完成：Agent Payment/Commerce Flow 设计**
 
 ### **任务产出**
@@ -520,6 +624,7 @@ Agent GET /analyze → 402 (payment info)
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -654,6 +759,7 @@ AI Agent 自动执行交易，但：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -933,6 +1039,7 @@ AI Agent 自动执行交易，但：
 
 
 
+
 ## **学习内容**
 
 ### **文档阅读（Ethereum 官方）**
@@ -1014,6 +1121,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 
 
+
 ## **今日完成**
 
 ### **受限 Web3 助手设计**
@@ -1068,6 +1176,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -1188,6 +1297,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1622,6 +1732,7 @@ result = agent.invoke({"messages": [{"role": "user", "content": "hi"}]})
 
 
 
+
 ## **学习内容**
 
 ### **主题 1：测试网交易任务**
@@ -1854,6 +1965,7 @@ my-project/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -2248,6 +2360,7 @@ A：很难追回。所以审计（audit）和风险监控非常重要。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
