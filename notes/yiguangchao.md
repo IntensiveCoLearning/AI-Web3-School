@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+大家在讨论 AI Web3 黑客松的参赛方向，重点围绕 AI Agent 如何和 Web3 钱包结合。结论是：单纯做流程优化不够有亮点，AI 投资又偏离钱包核心，最值得做的是“AI 钱包安全 + 交易解释 + 资产管账”这类既贴合钱包场景、又容易做出 Demo 的方向。
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 已在 [tracemind-ai-web3](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html) 初始化项目骨架，并根据两个文档内容创建了以下内容：
 
 -   [package.json](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [tsconfig.json](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [next.config.ts](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [tailwind.config.ts](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html)
@@ -35,11 +41,13 @@ AI x Web3 School
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
+
 项目定位：一个面向 Web3 新手、开发者和 AI × Web3 共学营学员的链上交易解释与安全确认助手。用户输入测试网交易哈希、合约地址或合约交互信息后，系统读取链上数据，并用 AI 生成中文解释、风险提示、人工确认清单和 Markdown 学习记录。
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 -   **搭建一个 learning agent**  
@@ -57,6 +65,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -79,6 +88,7 @@ AI x Web3 School
 
 
 
+
 老师强调，做项目不必一开始就追求完整、成熟的方案，而应把 AI 当作头脑风暴和协作工具，在反复沟通中不断更新想法、完善需求。对于新人来说，拆解项目时看不懂是正常现象，关键是针对不懂的细节继续追问、深挖，直到形成自己的理解。
 
 在黑客松准备方面，老师建议不要过度焦虑时间有限，也不必追求技术实现百分百完美。只要有一个清晰、有趣的想法，并能借助 AI 快速做出可演示的 demo，就具备提交价值。项目重点在于形成逻辑闭环，能够说明问题、场景、解决方案和流程。部分功能如果来不及全部上链或接入测试网，也可以通过 mock 方式展示，只要整体流程合理即可。
@@ -90,6 +100,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -110,6 +121,7 @@ AI x Web3 School
 
 
 
+
 主要讨论了 AI Agent 在动用用户资金时面临的信任与安全问题。传统做法通常只是给 Agent 一个钱包，并期待它不要执行超出预期的操作，但这种方式不足以应对系统性风险、权限失控、长期授权暴露以及执行不可控等问题。一旦 Agent 开始移动用户资产，信任就不能只停留在应用层，而必须上升到基础设施层，通过更强制的机制来保障执行安全。
 
 Cobo 的思路是建立一条可信的执行链路：Agent 先提交请求，人类用户进行审批，审批通过后 Agent 才能在受限范围内获得自主签名能力并完成交易，最终形成链上可执行、可追踪的结果。为了实现这一点，Cobo 引入了 MPC 多方计算方案，确保没有任何单方可以私自转移用户资金。同时，通过 2/2 签名模式，让 Agent、人类用户与 Cobo 共同参与授权与风控，既支持 Agent 自动执行，也保留用户对大额转账等关键行为的控制权。
@@ -121,6 +133,7 @@ Cobo 的思路是建立一条可信的执行链路：Agent 先提交请求，人
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -149,6 +162,7 @@ Cobo 的思路是建立一条可信的执行链路：Agent 先提交请求，人
 
 
 
+
 1.  Week 1 全周复盘
     
 2.  有明确项目目标后，再去学习 AI、区块链、智能合约、钱包交互、链上数据解析等知识，效率会更高，也更容易形成可展示的作品。后续参加黑客松或进行 AI + Web3 项目开发时，也可以围绕这些方向展开。
@@ -158,6 +172,7 @@ Cobo 的思路是建立一条可信的执行链路：Agent 先提交请求，人
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -184,6 +199,7 @@ Cobo 的思路是建立一条可信的执行链路：Agent 先提交请求，人
 
 
 
+
 今天主要完成了 AI 基础、Context Engineering、RAG、Agent 与 Agent Wallet 相关内容的学习。上午重点学习了 Embedding、Transformer、Attention、Context Window 与 Context Engineering 的区别，进一步理解了模型如何将文本转化为向量，并通过上下文管理提升回答质量。RAG 部分重点梳理了文档切分、metadata、section\_path、向量检索和 Top-K 召回等流程，认识到检索增强不是简单塞资料，而是要通过结构化信息让模型拿到更准确、可信的内容。
 
 Agent 部分学习了 Plan、Reflection、Multi-Agent 等架构，也了解了 LangChain、LangGraph、OpenAI Agents SDK、MCP 等框架和协议。通过 “交易解释器” 和 “DAO 提案研究 Agent” 两个最小实践，进一步理解了 Agent 的设计重点：只读优先、来源标注、权限分级、simulation 预检查，尤其是在 Web3 场景中，安全和授权比自动执行更重要。
@@ -195,6 +211,7 @@ Agent 部分学习了 Plan、Reflection、Multi-Agent 等架构，也了解了 L
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -467,11 +484,13 @@ AI 自动完成。
 
 
 
+
 AI agent 入门
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
