@@ -15,8 +15,476 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+已在 [tracemind-ai-web3](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html) 初始化项目骨架，并根据两个文档内容创建了以下内容：
+
+-   [package.json](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [tsconfig.json](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [next.config.ts](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [tailwind.config.ts](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html)
+    
+-   [.gitignore](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [.env.example](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html)
+    
+-   [README.md](http://README.md)
+    
+-   [PRD.md](http://PRD.md), [TECHNICAL.md](http://TECHNICAL.md)
+    
+-   [transaction-explainer.md](http://transaction-explainer.md)
+    
+-   [page.tsx](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [layout.tsx](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html), [globals.css](vscode-file://vscode-app/d:/Program%20Files%20\(x86\)/Microsoft%20VS%20Code/8761a5560c/resources/app/out/vs/code/electron-browser/workbench/workbench.html)
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+
+项目定位：一个面向 Web3 新手、开发者和 AI × Web3 共学营学员的链上交易解释与安全确认助手。用户输入测试网交易哈希、合约地址或合约交互信息后，系统读取链上数据，并用 AI 生成中文解释、风险提示、人工确认清单和 Markdown 学习记录。
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+
+
+-   **搭建一个 learning agent**  
+    用 Claude Code、Codex、Hermes 或 GLM/[Z.ai](http://Z.ai) 这类工具，帮助你整理学习计划、笔记、代码和问题清单。
+    
+-   **创建 GitHub repo**  
+    用来保存学习笔记、prompt、demo、日志、实验记录。
+    
+-   **完成一次 Web3 测试网实践**  
+    包括创建测试钱包、领取测试币、发送测试交易、部署最小合约、读写合约。
+    
+-   **做一个 AI × Web3 最小实验**  
+    比如 AI 帮你生成合约部署脚本，但真正签名和执行必须由你人工确认。
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+
+
+
+这次分享主要围绕 Web3 与 AI 领域中的“Builder 成长路径”和“个人网络建设”展开，核心观点是：技术固然重要，但真正决定长期发展的，是个人品牌、社区影响力以及人脉网络。
+
+分享者首先介绍了自己组织国际社区、Bootcamp 和 Builder Village 的经历，并强调“Network is everything（人脉就是一切）”。她认为，很多开发者虽然技术很强，但缺乏创业思维、资源整合能力以及建立信任的能力，因此难以把项目真正做大。投资人、合作伙伴往往优先相信“人”，而不是单纯的项目，所以个人信誉和社区影响力极其重要。
+
+在学习路径方面，她提出一个 Builder 的成长路线：先学习，再贡献，最后建立自己的项目。学习阶段可以通过 Bootcamp、线上课程等方式入门；之后要尽快参与开源项目、Hackathon、社区活动或 Ambassador（大使）计划，而不是只停留在“学习”层面。她强调，在如今竞争激烈、AI 快速发展的环境下，仅仅找工作已经越来越难，更重要的是培养自己“创造项目”的能力。
+
+关于如何建立网络，她给出了很多具体建议。第一是学英语，因为 Web3 生态大部分交流都基于英语，语言能力直接决定机会的多少。第二是重视 X（Twitter），因为 Web3 的核心信息流、开发者交流和机会几乎都在 X 上，而不是 LinkedIn。第三是主动加入社区，例如学生社区、女性社区、技术方向社区等，通过共同兴趣建立联系。她还鼓励大家参加 Meetup、国际活动、黑客松以及驻留计划（Residency Program），因为这些场景最容易认识合作者、导师甚至投资人。
+
+此外，她特别强调开源贡献的重要性。现在很多招聘者更关注 GitHub 而不是 LinkedIn，持续参与开源项目不仅能提升技术能力，还能获得 Fellowship、实习甚至创业机会。她还分享了多个真实案例，例如有人通过持续公开分享（Build in Public）获得 WalletConnect 的工作机会，有人通过开源贡献进入以太坊 Fellowship，还有人因为积极参与社区而获得设备支持并最终建立自己的学生组织。
+
+最后，在问答环节中，她认为 AI + Web3 是未来最值得投入的方向，因为 AI 能提升开发效率，而 Web3 提供开放、去中心化和长期可持续的生态。对于非工程背景的人，她建议利用 AI 编程工具（如 Cursor、Vibe Coding）结合设计能力进行实践，通过不断做项目提升工程理解，而不是只停留在理论学习。整体来看，这场分享的核心思想是：主动参与社区、持续输出内容、建立可信赖的个人品牌，才能在 Web3 与 AI 时代获得长期机会。
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+
+
+
+
+老师强调，做项目不必一开始就追求完整、成熟的方案，而应把 AI 当作头脑风暴和协作工具，在反复沟通中不断更新想法、完善需求。对于新人来说，拆解项目时看不懂是正常现象，关键是针对不懂的细节继续追问、深挖，直到形成自己的理解。
+
+在黑客松准备方面，老师建议不要过度焦虑时间有限，也不必追求技术实现百分百完美。只要有一个清晰、有趣的想法，并能借助 AI 快速做出可演示的 demo，就具备提交价值。项目重点在于形成逻辑闭环，能够说明问题、场景、解决方案和流程。部分功能如果来不及全部上链或接入测试网，也可以通过 mock 方式展示，只要整体流程合理即可。
+
+讨论中还提到，自然语言转账、swap、多 Agent 风控、链上声誉、Agent 任务评估、安全钱包等方向都可以作为 AI × Web3 的探索切入点。老师建议从真实场景反推技术应用，而不是只盯着某项技术本身。黑客松评审不仅看技术难度，也看创意、叙事和展示效果，因此需要讲清楚为什么做、解决什么痛点、用户如何使用。
+
+此外，组队方面建议配置多元化角色，包括开发、产品、主讲人，若想提高展示质量，最好加入 UI 或设计角色。最后，老师分享了自己使用多模型协作的工作流：先让一个模型生成方案，再让另一个模型评估和补充，经过多轮讨论后形成更完善的执行方案。这种方式能帮助项目构思更清晰，也能提升开发效率。
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+
+
+
+
+
+一是 AI 行业正在快速发展，并吸引大量资金进入。对建设者来说，这是机会，但行业变化太快，很难找到一劳永逸的解决方案，很多时候只能不断追赶变化。
+
+二是讨论了链上 agent 交易的隐私问题。链上交易一旦可被观察，就可能带来风险，但是否敏感取决于具体使用者和场景。普通小额交易可能影响不大，但如果涉及公众人物、大额资金或频繁交易，就更容易暴露身份、资产和行为模式。因此，理想情况下，用户应该能自主选择隐私级别，比如完全私密、部分公开或完全公开。
+
+三是反思了加密行业的发展方向。现在很多加密项目更偏向金融投机和追逐收益，逐渐偏离了早期通过技术保护自由的理念。但分享中也认为，不需要简单回到过去，而是要把过去重视自由、隐私和社区的精神，重新结合今天的现实。建设者不应只关注赚钱和速度，也应思考如何创造更自由、更有公共价值、更关心人的技术未来。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+
+
+
+
+
+
+主要讨论了 AI Agent 在动用用户资金时面临的信任与安全问题。传统做法通常只是给 Agent 一个钱包，并期待它不要执行超出预期的操作，但这种方式不足以应对系统性风险、权限失控、长期授权暴露以及执行不可控等问题。一旦 Agent 开始移动用户资产，信任就不能只停留在应用层，而必须上升到基础设施层，通过更强制的机制来保障执行安全。
+
+Cobo 的思路是建立一条可信的执行链路：Agent 先提交请求，人类用户进行审批，审批通过后 Agent 才能在受限范围内获得自主签名能力并完成交易，最终形成链上可执行、可追踪的结果。为了实现这一点，Cobo 引入了 MPC 多方计算方案，确保没有任何单方可以私自转移用户资金。同时，通过 2/2 签名模式，让 Agent、人类用户与 Cobo 共同参与授权与风控，既支持 Agent 自动执行，也保留用户对大额转账等关键行为的控制权。
+
+核心机制是 Pact。Pact 本质上是一份授权协议，用来明确 Agent 能做什么、不能做什么、何时必须停止。它通常包含四个要素：第一是 Intent，即用户希望 Agent 完成的目标；第二是 Execution Plan，即 Agent 将目标转译成具体、透明、可审计的执行计划；第三是 Policy，即预算、白名单、链、Token、合约甚至 ABI 参数级别的风控约束；第四是 Completion Condition，即完成或失效条件，避免授权永久有效。
+
+整体流程是：用户表达意图，Agent 与 Cobo Agent Wallet 通信并生成执行计划、策略和完成条件，随后这些内容被封装成 Pact 推送到移动端 App，由用户以自然语言方式审阅、修改、批准或拒绝。批准后，Agent 才能在 Pact 设定的边界内执行链上交易。这样可以让 Agent 的自动化能力与用户资产安全同时得到保障。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+
+
+
+
+
+
+
+这次学习主要围绕三个关键词展开：**记忆、信任和 Agentic Commerce**。
+
+首先，memory 是 Agent 体验中必须解决的问题。好的创意往往不是一次性问答产生的，而是在人与 AI 的连续互动中慢慢涌现。因此，一个真正有用的 Agent 需要记住用户偏好、历史上下文、项目约束和关键决策。ChatGPT 的 memory 更偏向“理解用户”，比如记住用户的表达习惯、偏好和长期兴趣，同时也要适应欧盟等地区的隐私保护要求。Claude，尤其是 Claude Code，则更偏向“完成任务”，需要保存项目约束、技术栈、架构选择和技术决策。
+
+其次，Agent 的链条越长，记忆越容易丢失。单纯聊天的大模型相对更擅长维持上下文，而像 OpenClaw 这类需要交付成果的 Agent，因为涉及拆任务、调用工具、生成文件、测试和迭代，容易出现“记忆扁平化”问题，即只保留表层信息，丢掉真正重要的判断依据。因此，下一步可以探索 Hermes 在长期记忆和复杂任务执行中的表现。
+
+然后，Agent Trust & Reputation 的核心是：信任不是一个简单分数，而是一组可追溯、可比较、可解释的证据，包括 reputation、review、attestation、stake、slashing 和 validation。声誉应该按任务类型拆开，不能压成黑盒总分；stake 不等于能力，资本多不代表质量高；主观任务不能自动 slashing，必须先经过 dispute；历史表现也需要时间衰减。
+
+最后，Agentic Commerce 的机会可能出现在大型企业支付场景中。相比新协议，真实应用更重要。用户通常会选择最方便的路径，所以 builder 的选择会决定未来 agent 经济是被单一公司控制，还是运行在中立、去中心化的基础设施上。避免 scam 的关键仍然是 DYOR，更应该成为 builder，而不是 trader。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+
+
+
+
+
+
+
+
+1.  Week 1 全周复盘
+    
+2.  有明确项目目标后，再去学习 AI、区块链、智能合约、钱包交互、链上数据解析等知识，效率会更高，也更容易形成可展示的作品。后续参加黑客松或进行 AI + Web3 项目开发时，也可以围绕这些方向展开。
+    
+3.  总体来看，AI + Web3 仍处于发展阶段，很多产品体验还不够成熟，但方向具有较大潜力。未来如果能够将 AI Agent、钱包操作、链上安全分析和去中心化激励机制结合起来，可能会出现更具实用价值的新型应用。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+
+
+
+
+
+
+
+
+
+会看了5.20号 AI x Web3 School - Web3 的运行原理
+
+完成了三个任务
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+
+
+
+
+
+
+
+
+
+今天主要完成了 AI 基础、Context Engineering、RAG、Agent 与 Agent Wallet 相关内容的学习。上午重点学习了 Embedding、Transformer、Attention、Context Window 与 Context Engineering 的区别，进一步理解了模型如何将文本转化为向量，并通过上下文管理提升回答质量。RAG 部分重点梳理了文档切分、metadata、section\_path、向量检索和 Top-K 召回等流程，认识到检索增强不是简单塞资料，而是要通过结构化信息让模型拿到更准确、可信的内容。
+
+Agent 部分学习了 Plan、Reflection、Multi-Agent 等架构，也了解了 LangChain、LangGraph、OpenAI Agents SDK、MCP 等框架和协议。通过 “交易解释器” 和 “DAO 提案研究 Agent” 两个最小实践，进一步理解了 Agent 的设计重点：只读优先、来源标注、权限分级、simulation 预检查，尤其是在 Web3 场景中，安全和授权比自动执行更重要。
+
+晚上参加了 19:00 的 Co-learning 和 20:00 的 Week 1 例会。Co-learning 主要讲解了 Week 1 的任务拆解、proof 整理和 prompt 对齐方法，让我意识到提交 proof 不能只放链接，而要逐条对应 proofPrompt 检查。例会展示了优秀同学的笔记和 proof 模板，包括截图分类、任务拆分、证据单独对应等做法，对我后续整理作业很有参考价值。
+
+今天最大的收获是对 Context Engineering 和 Agent 安全边界有了更清晰的认识。上下文不是越多越好，而是要分清指令层、任务层、事实层、知识层和记忆层。接下来准备完成合约部署、EOA 与多签对比，把 Week 1 收尾做好，并开始准备 Week 2 的项目实战和 Hackathon 选题。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+
+
+
+
+
+
+
+
+\## 一、普通人其实并不在意 Web3、隐私、去中心化
+
+\* 大部分普通人连银行理财产品都搞不清楚
+
+\* 更不会主动研究区块链、钱包、私钥这些东西
+
+\* 很多人愿意“用部分权利换稳定和便利”
+
+技术圈很在意“隐私”“去中心化”“数据主权”，但现实里多数普通用户并不关心这些。
+
+普通用户真正关心的是：
+
+\* 好不好用
+
+\* 能不能赚钱
+
+\* 麻不麻烦
+
+\* 能不能解决问题
+
+所以很多纯 Web3 产品做不大。
+
+\---
+
+\## 二、现在很多 Web3 产品一开始就把用户挡住了
+
+\* 大部分人没有钱包
+
+\* 不懂助记词
+
+\* 不懂 Gas Fee
+
+\* 不想管理私钥
+
+所以如果产品必须：
+
+\* 安装钱包
+
+\* 买币
+
+\* 签名
+
+\* 理解链
+
+那普通人根本不会进入。
+
+意思是：
+
+\> Web3 技术应该隐藏在后面，而不是让用户感知到。
+
+就像：
+
+\* 用户不用知道 HTTPS
+
+\* 不用知道数据库
+
+\* 不用知道服务器
+
+未来大众 Web3 也应该：
+
+\* 不需要理解区块链
+
+\* 不需要自己管理钱包
+
+\* 像普通 App 一样使用
+
+这个观点其实是现在很多 Web3 创业者也在强调的。
+
+\---
+
+\## 三、个人数据资产化
+
+这是全文最核心的部分。
+
+在香港参加比赛时看到一个 idea：
+
+\### “用区块链管理个人健康/行为数据”
+
+比如：
+
+\* 步数
+
+\* 饮食
+
+\* 排泄
+
+\* 睡眠
+
+\* 行为习惯
+
+\* 生理数据
+
+这些数据未来 AI 都能采集。
+
+然后：
+
+\* 用户拥有数据所有权
+
+\* 企业想使用数据，需要授权
+
+\* 所有调用记录透明可查
+
+\* 用户能获得收益
+
+本质上是：
+
+\> “把人的数据变成资产”
+
+\* AI 时代最值钱的是数据
+
+\* 大公司会大量需要真实人的数据
+
+\* 未来很多工作会被 AI 替代
+
+\* 人可以靠“提供自身数据”获得收入
+
+这个概念其实接近：
+
+\* Data Ownership（数据主权）
+
+\* Data Marketplace（数据交易市场）
+
+\* DePIN / AI Data Economy
+
+\* Personal Data DAO
+
+\---
+
+\## 四、为什么这里一定需要区块链
+
+传统互联网也能签合同授权数据，
+
+但问题是：
+
+\* 用户看不到数据怎么被用
+
+\* 企业是否超范围使用很难验证
+
+\* 权限不透明
+
+\* 记录可以修改
+
+而区块链可以：
+
+\* 记录不可篡改
+
+\* 授权透明
+
+\* 可追踪
+
+\* 自动结算收益
+
+所以：
+
+\> 区块链不是为了“发币”，而是为了“可信的数据授权系统”。
+
+\---
+
+\## 五、未来真正的大众入口是 AI Chat/Voice
+
+未来更符合人性的方式是：
+
+\* Chat
+
+\* Voice
+
+\* AI Agent
+
+而不是复杂操作。
+
+未来用户不会：
+
+\* 点钱包
+
+\* 点签名
+
+\* 管理私钥
+
+而是：
+
+“帮我买”
+
+“帮我授权”
+
+“帮我处理”
+
+AI 自动完成。
+
+所以：
+
+\> AI 会成为 Web3 的操作层（Operating Layer）。
+
+这也是现在很多 AI Agent + Crypto 项目的方向。
+
+\---
+
+\## 六、整体想表达的核心思想
+
+\> 真正能大规模普及的 Web3，不应该让用户“感知到 Web3”，而应该用区块链在底层解决信任、数据归属和价值分配问题，再通过 AI/Chat/Voice 这种符合人性的方式提供服务。
+
+\---
+
+\## 核心观点
+
+\### 1. 普通人不关心 Web3 理念
+
+只关心：
+
+\* 简单
+
+\* 方便
+
+\* 能赚钱
+
+\---
+
+\### 2. 钱包是巨大门槛
+
+“连接钱包”已经劝退绝大多数人。
+
+\---
+
+\### 3. 真正有价值的是“区块链解决现实问题”
+
+尤其：
+
+\* 数据授权
+
+\* 数据确权
+
+\* 数据收益分配
+
+\---
+
+\### 4. AI + 个人数据经济可能是未来方向
+
+人未来可能：
+
+\> 靠自己的数据获得收入。
+
+\---
+
+\### 5. AI Chat/Voice 才是未来入口
+
+不是复杂的 Web3 操作流程。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+AI agent 入门
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 本次分享聚焦Web3支付系统的安全设计与AI工具的正确使用。主要结论：**AI并未降低系统复杂度，反而对开发者的架构能力和基础知识提出更高要求**；**Web3本质上是倾向方向的不同，而非全新技术**；**安全必须源于设计并贯穿项目全生命周期**。在支付场景中，区块链的定位类似于传统银行机构，通过算法和透明代码解决信任问题。
 <!-- DAILY_CHECKIN_2026-05-18_END -->
 <!-- Content_END -->

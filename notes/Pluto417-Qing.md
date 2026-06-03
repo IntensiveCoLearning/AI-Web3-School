@@ -15,8 +15,25 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+# 2026-05-19 学习笔记
+
+## 今日打卡
+
+-   \[x\] AI 时代，Web3 开发者需要具备的基础知识和架构能力分享会
+    
+
+## 学习内容
+
+### 相关笔记链接
+
+-   [AI 时代，Web3 开发者需要具备的基础知识和架构能力会议笔记](https://github.com/Pluto417-Qing/ai-web3-school-learning-note/blob/main/notes/%E5%88%86%E4%BA%AB%E4%BC%9A/AI%20%E6%97%B6%E4%BB%A3%EF%BC%8CWeb3%20%E5%BC%80%E5%8F%91%E8%80%85%E9%9C%80%E8%A6%81%E5%85%B7%E5%A4%87%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E5%92%8C%E6%9E%B6%E6%9E%84%E8%83%BD%E5%8A%9B.md)
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 # 2026-05-18 学习笔记
 
 ## 今日打卡

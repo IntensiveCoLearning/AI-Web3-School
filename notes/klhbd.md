@@ -15,8 +15,25 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+-   **AI 工具概念区分** ：
+    
+    -   **聊天机器人与智能体区别** ：聊天机器人主要是问答式，智能体（agent）会理解命令和自然语言目标并做事。
+        
+    -   **各类 AI 工具举例** ：聊天型 AI 有 ChatGPT、DeepSeek、Gemini 等；AI 编程助手如 Cursor、Vscode、Terra 等；终端型 agent 如 OBS、Claude code 等；模型平台如 Fornoster、魔搭社区；通用助手底座有 Workday、House agent 等。
+        
+-   **智能体技能与特点** ：
+    
+    -   **技能定义** ：是模板化工作流，写好 agent 角色、行为边界和能力等。
+        
+    -   **核心超能力** ：支持多模型接入、工具调用，优化了 memory 记忆和 skills 技能，能沉淀固定任务流程。
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
 ## 结论
 
 ### **1\. AI** **不能替代基础，基础差 = 被 AI 坑。**

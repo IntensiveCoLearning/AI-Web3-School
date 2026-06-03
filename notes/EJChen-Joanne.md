@@ -15,8 +15,223 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+1.  閱讀x402材料：
+    
+
+-   [https://www.x402.org](https://www.x402.org)
+    
+-   PayAI
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+
+1.  學習Virtual Protocols的[EconomyOS架構](https://os.virtuals.io/quickstart)。
+    
+2.  開始架構MVP：Agentic Commerce => 先以現實e-commerce為借鏡，
+    
+    -   透過過去交易行為建立信用數據
+        
+    -   ERC-721 => identity => ERC-8004
+        
+    -   思考rollback或防詐機制
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+
+
+1.  研究、閱讀相關Agent協議：Google - **Agent Payments Protocol (AP2) 、Visa -Trusted Agent Protocol.**
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+
+
+
+### **Agentic wallet**
+
+1\. why agentic economy?
+
+\- 如何讓大型模型agent在執行層自行調用錢包付crypto
+
+\- 如何建立人與agent的授權支付
+
+2\. 待解問題：如何讓AI代表人類的intent去花錢？
+
+\- 痛點：鏈上需透過人使用私鑰動用crypto
+
+3\. 如沒有Agent的可控邊界，會導致什麼問題？
+
+\- _Silent Override_: ex. 人在prompt中限制只能花100美，但如沒有硬性的邊界層和授權規則，AI在執行上有時候會超出人類預期，只有在人類強制干預時才能中止，可能為時已晚。
+
+\- _Shadow Custody_ (影子託管): AI可能會自行創建EOA，將資金轉出MCP錢包，將資金放入不可控和安全性較低的空間，就追不回來了。
+
+4\. Agent可能失控的情形：
+
+\- Prompt Injection:
+
+\- Shadow Operations: AI去執行未明確授權的行動，ex. 自行創建新錢包
+
+\- Unscoped Authority: 如無設定權限邊界，系統性的敞口大
+
+\- Zombie Permissions: 授權未撤銷時，
+
+Trust will become infrastructure.
+
+5\. 主流的Agent Wallet作法：只讓Agent做預期內的事（current），如何設定邊界讓AI自由發揮成爲下一步。
+
+\- 人類做Approve
+
+6\. Cobo:
+
+\* Key management: MPC
+
+\* Pact Authority Protocol: 設定邊界
+
+\* Recipe: 賦予其他skills, 串接DeFi, ex. Uniswap
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+
+
+
+
+1.  安排第二周學習計劃：[https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/week2.md](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/week2.md)
+    
+2.  參與晚上分享會。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+
+
+
+
+
+1.  回放今日分享會課程。
+    
+2.  整理好本週學到的AI、Web3知識點。
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+
+
+
+
+
+1.  復盤本週間課程及概念學習，準備週末可以補上本週尚缺內容：AI、Web3的知識解釋集錦、確定AI學習助手workflow
+    
+2.  參與同學筆記分享會和確立本次參與共學主要目標：本身Web3開發經驗，缺少AI Agent的實操和應用，先不以必須產出兩項技術交互的項目，我認為AI可以幫上我在每天非常多的Web3訊息內（訂閱的news、關注的），打造客製化的訊息流
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+
+
+
+
+
+
+
+1.  智能合約複習、錢包知識學習。缺少AI輔助解釋交易內容、可視化簽名的步驟。
+    
+2.  每日接收非常多Web3的News，設計使用AI Agent整理每日訂閱內容 -> summary post-> 銜接各種premium post的機制
+    
+3.  參與今日分享會，新增Web3xAI Bridge知識閱讀。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+
+
+
+
+
+1.  將handbook內容製作[學習卡](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/terms.json)，並加入至learning bot的功能，可以在聊天機器人中做隨機的test。
+    
+2.  完成學習handbook中AI和Web3基礎的解釋。
+    
+3.  參與\[分享會\]，本身是Web3開發背景出身，很快速地過一次基本概念的復盤：
+    
+
+Web3 = Cryptography + Economics + Social Consensus
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+
+
+
+
+
+
+將AIxWeb3School HandBook內容加入學習bot的學習資源，並產生一[每日重點整理。](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/handbook.md)
+
+\[分享會\] **探索AI Agent的新世界地圖**
+
+分享人：Draken老師
+
+1.  **AI的進化：**問答模式 ChatGPT -> 任務執行 Agent
+    
+2.  **AI常用類型**
+    
+
+-   聊天型AI: 常用的ChatGPT、Gemini、Claude
+    
+-   AI IDE: Cursor，AI的開發工具
+    
+-   CLI型: agents living in terminal
+    
+-   模型平台
+    
+-   Hermes Agent/OpenClaw
+    
+
+3.  **Hermes Agent**
+    
+
+-   Def: Agents' assitance
+    
+-   Pros: multi-models, Cron Scheduling, Gateway channels, long-term memory and iterated learning by itself.
+    
+-   Why Hermes Agent?
+    
+    -   Easy for beginner
+        
+    -   長期記憶能力、學習閉環
+        
+
+完成設定Telegram Learning Bot: /goal 、/notes指令，回傳每日學習目標及重點整理。
+
+![S__473300995.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/EJChen-Joanne/images/2026-05-19-1779198588461-S__473300995.jpg)
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
+
+
+
+
+
+
 1.  創建個人學習Github Repo，並讓Claude Code產生本週的[學習計劃表](https://github.com/EJChen-Joanne/AI-Agent-Learning-Archive/blob/master/curriculums/week1.md)
     
 2.  **\[分享會\] AI時代，Web3開發者所需的能力**

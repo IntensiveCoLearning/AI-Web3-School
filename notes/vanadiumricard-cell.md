@@ -15,8 +15,208 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+＃持续优化Hermes使用，用gpt建造提示词skill，节省token
+
+＃参阅排行榜前几名同学笔记
+
+＃持续学习py，Linux基础
+
+＃短期目标不变
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+
+共享会收获很大
+
+＃ai的提示词使用方法，让ai全面了解你
+
+＃对agent权限的限制
+
+目标＃基本Hermes使用流程已经打通
+
+计划尝试多agent写作，每天自动抓取分析a股财报，编写一个类似日报的分析
+
+＃继续学习py，llm，
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+
+
+agent项目驱动学习 Linux 基础入门笔记
+
+一、Linux 目录结构
+
+与 Windows 不同，Linux 只有一个顶级根目录 /，所有文件挂载其下。
+
+路径开头 / 代表根目录，路径中间 / 是层级分隔符。
+
+常用目录：
+
+\- /home/用户名：用户 HOME 目录
+
+\- /bin：系统核心程序
+
+\- /etc：系统配置文件
+
+\- /tmp：临时文件
+
+二、ls 命令（查看目录内容）
+
+ls \[-选项\] \[文件夹路径\]
+
+常用：ls -lah（显示全部+详细+人性化大小）
+
+\- -a：显示隐藏文件
+
+\- -l：长格式详细信息
+
+\- -h：人性化大小
+
+三、cd 与 pwd 命令
+
+cd 切换目录，pwd 查看当前位置。
+
+绝对路径以 / 开头，相对路径不以 / 开头。
+
+快捷符号：. 当前目录，.. 上一级，~ HOME 目录
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+
+
+
+1.链接hermes obsidian 微信，建立个人知识库，微信远程输入碎片化知识，自动整理，写入对应目录
+
+2.收听直播课，了解基本agent记忆
+
+![ce856d7da112c94c53df778a2c867925.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vanadiumricard-cell/images/2026-05-25-1779723771504-ce856d7da112c94c53df778a2c867925.jpg)
+
+后期任务1，继续调教Hermes，部署个人网页，自动提交脚本
+
+2，完善个人知识库，系统化知识
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+
+
+
+### 1
+
+今天学习了计算机网络今天学习了计算机网络。
+
+今天的重点是学习计算机网络的基础知识，包括 TCP/IP 协议栈、HTTP/HTTPS 协议、网络分层模型等内容。通过实际操作和笔记记录，加深了对网络通信原理的理解。
+
+同时，今天还完成了远程操控网页浏览器的技术验证：
+
+1.  通过 Edge CDP 实现了从 WSL 远程操控 Windows 浏览器的完整流程
+    
+2.  2\. 掌握了页面导航、元素检测、富文本编辑器操控、截图确认等环节
+    
+3.  3\. 将完整工作流泛化为通用远程操控方案，可适用于任意网站的自动化操作
+    
+
+今天笔记由操控Hermes远程输入今天学习了计算机网络。
+
+今天的重点是学习计算机网络的基础知识，包括 TCP/IP 协议栈、HTTP/HTTPS 协议、网络分层模型等内容。通过实际操作和笔记记录，加深了对网络通信原理的理解。
+
+同时，今天还完成了远程操控网页浏览器的技术验证：
+
+1.  通过 Edge CDP 实现了从 WSL 远程操控 Windows 浏览器的完整流程
+    
+2.  2\. 掌握了页面导航、元素检测、富文本编辑器操控、截图确认等环节
+    
+3.  3\. 将完整工作流泛化为通用远程操控方案，可适用于任意网站的自动化操作
+    
+
+今天笔记由操控Hermes远程输入
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+
+
+
+
+
+\## 📝 今日收货记录
+
+\### 🎯 核心目标：让 AI 自动完成 Web3 每日打卡
+
+从中午搞到晚上，终于打通了关键环节：
+
+\### 🔑 突破性进展：Edge CDP 截图方案
+
+**问题：** WSL 里的 Hermes Agent 需要截取已登录网站的页面，但 headless 浏览器没有 cookie，看不到登录态。
+
+**最终方案（参考网友第四关）：**
+
+\`\`\`
+
+WSL → localhost:9222 → Windows Edge CDP → 已登录浏览器 → 截图成功 ✅
+
+\`\`\`
+
+**技术栈：** Node.js + WebSocket + Chrome DevTools Protocol
+
+**关键发现：**
+
+\- WSL 可以通过 `localhost:9222` 访问 Windows 上 Edge 的 CDP 端口
+
+\- Edge 的 `--user-data-dir` 保留完整 cookies / 登录态
+
+\- `PUT /json/new` 创建新标签页`Page.captureScreenshot` 截全页
+
+\- 有登录态截图约 **876KB**，无登录态仅 **480KB**，差异明显
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+
+
+
+![8ea165da574308ceb2b5da1cbeee40b2.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vanadiumricard-cell/images/2026-05-20-1779289671833-8ea165da574308ceb2b5da1cbeee40b2.jpg)
+
+讲了web3的整体宏观的运行流程，比昨天的老师讲的更宏观，可惜没有仔细整理，今天时间一直在跟Hermes斗争，搭建一个工作流反而搭建塌了，没有达成昨天的目标，气死我了，明天继续延续昨天目标
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+
+
+
+
+![641306ec4490e14b6c9cabd8b5ee527c.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/vanadiumricard-cell/images/2026-05-19-1779200416860-641306ec4490e14b6c9cabd8b5ee527c.jpg)
+
+##成功安装Hermes
+
+#短期任务（明天上课前）配置消息网关（微信），用Hermes辅助完成一项工作
+
+#中期任务：学习操作系统，计算机网络，如果今天的安装Hermes是一项项目，这就是这个项目驱动我，让我认为自己需要学习的
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
+
+
 \# 📖 Web3 初步认识：支付逻辑与底层架构学习笔记
 
 \---

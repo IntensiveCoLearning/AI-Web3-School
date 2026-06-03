@@ -10,13 +10,30 @@ timezone: UTC-7
 
 ## Self-introduction
 
-Worked mostly across strategy and operations in tech startups, now exploring AI agents for stablecoin reconciliation. Based in Vancouver.
+Worked mostly across strategy and operations in tech startups, now exploring Web3 & AI. Based in Vancouver.
 
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+待補
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+
+Check-in
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
 I finished the first sharing session of the bootcamp: “_Essential Knowledge and Architectural Skills Web3 Developers Need in the AI Era._” （[https://x.com/aiweb3school/status/2056351391853981936?s=20](https://x.com/aiweb3school/status/2056351391853981936?s=20)）
 
 Teacher TC started with three questions:
@@ -34,10 +51,4 @@ I’m more of a strategy and operations person in the startup world, so honestly
 
 One thing I learned from this session is the importance of systems thinking and risk awareness. Systems thinking helps me understand how flows operate, where the risk points are, how permissions should be designed, and also gives me a better perspective when communicating with engineers.
 <!-- DAILY_CHECKIN_2026-05-18_END -->
-
-# 2026-05-19
-<!-- DAILY_CHECKIN_2026-05-19_START -->
-
-待補
-<!-- DAILY_CHECKIN_2026-05-19_END -->
 <!-- Content_END -->

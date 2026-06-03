@@ -15,8 +15,225 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+Week3Day1
+
+听了一下VC讲座，重新建立一些认知
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+
+Week2Day7
+
+今天升级了一下家里的灯具线路，利用智能开关模块改变接线的方式，通过分析线序的方式判断了每根线的功能，总算是搞清楚了。升级成功
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+
+
+Week2Day6
+
+今天回过头复盘过去的两个项目了。
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+
+
+
+Week2Day5
+
+今天5点半飞chengdu了，人麻了
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+
+
+
+
+Week2Day5
+
+今天社交一整天加出差了捏
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+
+
+
+
+
+Week2Day3
+
+听了一下neo cyberpunk，强调了一下隐私的关键性，还是那个问题，隐私的重要性对于每个个体的要求是不一样的，怎样针对个体定制化的设计产品？
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+
+
+
+
+
+
+Week2Day2
+
+1.订阅了一下codex。
+
+2.听了一下今天的分享会，主要是介绍cobo的产品架构，以及分享了一些agent钱包的设计心得，比昨天干一点。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+
+
+
+
+
+
+
+Week2Day1
+
+1.先提交了已完成的内容。
+
+2.用自己的话复述了一些 AI 概念的卡片，然后查缺补漏了。
+
+计划：按照最小实现做实验，完成这些概念的深入理解，可以学慢一点。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+
+
+
+
+
+
+
+
+Week3Day1
+
+今天学习状态很差，感觉学不进去，先找点感觉吧。
+
+1.配置了WCB的Agent key
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+
+
+
+
+
+
+
+
+
+
+Week1Day6
+
+请假休息一天，漂了个头发
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+
+
+
+
+
+
+
+
+
+
+Week1Day5  
+终于开始学了  
+今日目标：制定学习计划，配置学习助理，学习前两天的分享内容。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+Week1Day4
+
+一会开直播开始学，dbq AI X Web3 School
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+Week1Day3
+
+讲道理今天应该开始学了，但是鼓捣直播鼓捣了一天。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Week1 Day2
+
+今天去毕业答辩了，顺利通过捏
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Week 1 Day 1
 
 给老板讲了一下答辩报告，燃尽了。

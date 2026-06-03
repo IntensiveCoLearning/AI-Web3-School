@@ -15,8 +15,98 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Aiinna/images/2026-05-28-1779967359000-image.png)
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+
+web2 how to use web3, we crate embad wallet or smart contract wallet
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Aiinna/images/2026-05-26-1779797483001-image.png)
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+
+
+
+-   [https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh\_CN.md](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+
+
+
+听到大家的分享让我觉得我们在不同层
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+
+
+
+
+
+![A screenshot of a web page
+
+AI-generated content may be incorrect.](file:////Users/ailinna/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.png)
+
+![](file:////Users/ailinna/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.png)
+
+[https://x.com/0xUSDHG/status/2057431346176495756?s=20](https://x.com/0xUSDHG/status/2057431346176495756?s=20)
+
+[https://github.com/USDHGwang/obsidian-knowledge-vault](https://github.com/USDHGwang/obsidian-knowledge-vault)
+
+[https://paradigm.xyz/evmbench](https://paradigm.xyz/evmbench)
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Aiinna/images/2026-05-21-1779367179024-image.png)
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+
+
+
+[https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Flygreenbaby.md#%E5%89%8D%E8%A8%80](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Flygreenbaby.md#%E5%89%8D%E8%A8%80)  
+  
+像大佬学习
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+
+
+
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Aiinna/images/2026-05-19-1779199360711-image.png)
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
+
+
 2026.5.17
 
 ·  **关于** [**Zen.AI**](http://Zen.AI) **和 GLM 的理解**  

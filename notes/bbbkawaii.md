@@ -15,8 +15,183 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+学习了A2A的内容
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+
+学习了x402 Paywall + CAW Agent
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+
+
+学习了agent commerce
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+
+
+
+学习了Chat Completion API
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+
+
+
+
+使用 Hardhat 或 Foundry 完成最小合约开发、测试与部署
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+
+
+
+
+
+学习了Cypherpunk相关的内容
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+
+
+
+
+
+
+学习了一些 PM 角度的观点
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+
+
+
+
+
+
+
+学习了 AI agent 的Long-term Memory 的一些机制
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+
+
+
+
+
+
+
+
+学习OpenAI Agents SDK，尝试创建 agent
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+
+
+
+
+
+
+
+
+
+学习的内容：x402Coinbase 和 Cloudflare 推出的、复用 HTTP 402 状态码的机器原生支付协议，处理的是单次、即时、小额的「按调用付费」场景。三者的分工大致是：ERC-8004 管「我是谁、你信不信我」，x402 管「按次付费的微支付」，ERC-8183 管「带交付与验收的复杂任务结算」
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+
+
+
+
+
+
+
+
+
+了解了ERC-20、ERC-721 与 ERC-1155 协议的商业精髓
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+
+
+
+
+
+
+
+
+
+
+
+了解了区块浏览器和测试网，包括以太坊目前最常用的两个主流测试网
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+学习了 gas 机制，L1 和 L2 的关系，以及和 AI agent 的联系
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+学习了区块链浏览器、钱包、信任机制、支付生命周期相关的概念
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 笔记：Web3 资产控制的核心在于“私钥—算法—签名”的链条。私钥本质上是一串随机数，对于普通开发者而言，可以将 ECDSA 或 EDDSA 等签名算法视为一个“黑盒”，但必须深刻理解其输入输出。
 
 -   **签名的本质：** 签名（Signature）既是交易意图的证明，也是身份认证的唯一凭证。区块链不认识你，它只认符合数学逻辑的签名。

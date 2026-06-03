@@ -15,8 +15,1037 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+![屏幕截图 2026-05-26 175615.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Accuracy333/images/2026-05-26-1779789482536-_____2026-05-26_175615.png)
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+
+![屏幕截图 2026-05-25 234441.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Accuracy333/images/2026-05-25-1779723901109-_____2026-05-25_234441.png)
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+
+
+AI + Web3 学习笔记
+
+整理时间：2026-05-24
+
+\============================================================
+
+【总纲：看懂 AI + Web3 的三条判断】
+
+不需要先记住所有项目名。抓住这三条判断，就能理解大多数项目的位置和价值边界。
+
+1\. Agent 需要经济账户
+
+"AI agent 一旦开始做事，就会遇到账户、支付、授权和追责问题。"
+
+\- 算力和存储解决生产资源
+
+\- 钱包解决经济账户
+
+\- 分析工具解决认知
+
+\- 安全助手解决用户风险
+
+\- 风控系统解决机构和协议风险
+
+2\. 项目对应具体环节
+
+"每个项目都不是孤立的，它在回答 agent 经济线里的一个具体问题。"
+
+\- Bittensor → 回答 AI 服务如何被激励
+
+\- Coinbase AgentKit → 回答 agent 如何上链执行
+
+\- Arkham → 回答链上数据如何被解释
+
+\- Blockaid → 回答签名前如何阻断风险
+
+3\. Token 不是价值本身
+
+"AI + Web3 的价值不是给 AI 套 token，而是让软件主体进入可授权、可结算、可审计的经济系统。"
+
+\- 需要把投机叙事和基础设施价值分开
+
+\- 真正值得跟踪的是：有真实用户、有工程接口、有安全约束、有合规意识的项目
+
+\============================================================
+
+【第一类：去中心化 AI 基础设施】
+
+\============================================================
+
+这一类项目回答的是"AI 生产要素怎么被组织"：GPU、存储、数据集、模型推理、agent 服务市场，以及这些服务如何用 token 激励和验证。
+
+关键理解：
+
+\- 主流路径不是把大模型直接放到链上运行，而是链下计算、链上激励、结算、验证和服务发现
+
+\- 中心化云通常是平台化资源市场，Bittensor、Render、Akash 代表更开放的资源市场实验
+
+\- 关键难点是质量验证、反作弊、稳定性、价格效率和企业级 SLA
+
+\------------------------------------------------------------
+
+主案例：Bittensor（激励网络）
+
+\------------------------------------------------------------
+
+代表"用市场机制组织 AI 服务"。不追求把大模型直接放到链上运行，而是把模型输出、推理服务、数据服务或预测能力放进不同 subnet 竞争，再通过验证者评分和 token 激励分配收益。
+
+实现原理：
+
+Subnet 定义任务和评分规则
+
+→ Miner 提供 AI 服务
+
+→ Validator 评估输出质量
+
+→ 链上共识汇总评分
+
+→ 优质供给获得奖励
+
+核心看点：AI 服务如何用 token 发现价格和组织生产。
+
+\------------------------------------------------------------
+
+其他项目：
+
+\------------------------------------------------------------
+
+Render Network（GPU）
+
+从去中心化渲染网络起家，叙事延展到 GPU compute 和生成式 AI。重点是闲置 GPU 资源如何进入开放市场。
+
+核心看点：真实资源供需网络，而不是纯概念 AI 叙事。
+
+Akash（云计算）
+
+去中心化云计算市场，支持部署容器、GPU 和 AI/ML workload，可以和 AWS、GCP、Azure 做对照。
+
+核心看点：开发者能不能用更开放的方式购买计算资源。
+
+Filecoin / Arweave（存储）
+
+Filecoin 代表可验证存储市场，Arweave 代表永久存储。AI 数据集、模型权重、agent memory 都需要长期存储路径。
+
+核心看点：AI 数据资产不能只放在封闭平台数据库里。
+
+[Fetch.ai](http://Fetch.ai) / ASI（服务网络）
+
+围绕 autonomous agents、服务发现和微支付构建开放 AI 经济网络，对应"agent 之间如何交易服务"的场景。
+
+核心看点：AI agent 不只和人交互，也会和其他 agent 交互。
+
+\============================================================
+
+【第二类：AI Agent + 钱包】
+
+\============================================================
+
+这一类项目回答的是"AI 怎么从建议者变成执行者"：agent 需要身份、钱包、限额、付款、交易执行和撤销权限。
+
+关键理解：
+
+\- 没有钱包的 agent 只能推荐；有钱包的 agent 才能支付、交易和收款
+
+\- 安全形态不是"完全自治"，而是"人类授权范围内自动执行"
+
+\- 关键 guardrails 包括：预算、白名单、单笔上限、会话上限、KYT、日志和撤销
+
+\------------------------------------------------------------
+
+主案例：Coinbase AgentKit（开发者）
+
+\------------------------------------------------------------
+
+AgentKit 代表是 AI agent 的"链上手脚"。普通 agent 可以分析和建议，但接入钱包与 onchain actions 之后，才能在授权范围内完成转账、swap、合约调用和部署等真实链上动作。
+
+实现原理：
+
+用户给出目标
+
+→ LLM 拆解任务
+
+→ AgentKit 选择链上 action
+
+→ Wallet Provider 签名和广播
+
+→ 链上结果返回给 agent
+
+核心看点：如何把 LLM 的工具调用连接到真实链上动作。
+
+\------------------------------------------------------------
+
+其他项目：
+
+\------------------------------------------------------------
+
+MoonPay Agents（支付）
+
+把入金、钱包、稳定币支付和交易执行放进 agent 工作流。MoonAgents Card 进一步尝试让 agent 使用稳定币通过卡网络消费。
+
+核心看点：agentic commerce 不是聊天，而是能付款和完成购买。
+
+Privy Agentic Wallets（权限）
+
+面向嵌入式钱包和 agent 授权，重点是用户体验、MFA、花费限制、审批策略和应用内钱包管理。
+
+核心看点：真正的关键不是"AI 会操作钱包"，而是"用户怎么安全授权"。
+
+Virtuals Protocol（消费端）
+
+把 AI agent token 化，强调 agent 可以创造内容、服务、收入和社区协作。代表"agent 经济体"的市场叙事。
+
+核心看点：agent 变成可以被资本化、治理和交易的经济主体。
+
+elizaOS（开源框架）
+
+开源 Web3 agent 框架，围绕社交、钱包、链上插件和多平台部署构建开发者生态。
+
+核心看点：普通开发者如何用插件系统搭建链上 agent。
+
+\============================================================
+
+【第三类：AI 驱动的链上分析工具】
+
+\============================================================
+
+这一类项目回答的是"链上数据怎么变成判断"：地址标签、资金流、项目关系、聪明钱、风险信号和自然语言查询。
+
+关键理解：
+
+\- 链上数据是公开的，但公开不等于可理解。AI 的价值在于清洗、标签、解释和生成假设
+
+\- 面向普通用户，关键是"看懂"；面向机构，关键是"可验证、可追溯、可审计"
+
+\- 标签和聚类是概率判断，不是法律事实
+
+\------------------------------------------------------------
+
+主案例：Arkham（实体画像）
+
+\------------------------------------------------------------
+
+代表把"地址层数据"翻译成"实体层情报"。链上数据虽然公开，但哈希地址、跨链转移和合约交互很难直接理解；Arkham 通过地址标签、实体归因和资金流分析，把链上行为还原成更接近现实主体的画像。
+
+实现原理：
+
+采集多链交易数据
+
+→ 地址聚类和标签
+
+→ 归因到实体和钱包集群
+
+→ 计算资金流和行为画像
+
+→ 生成搜索、告警和分析视图
+
+核心看点：链上透明性和隐私之间的张力。
+
+\------------------------------------------------------------
+
+其他项目：
+
+\------------------------------------------------------------
+
+Nansen（聪明钱）
+
+以钱包标签、Smart Money 和资金流分析出名，常用于跟踪交易员、机构和市场行为。
+
+核心看点：链上研究从"看价格"走向"看行为"。
+
+Dune（自然语言）
+
+Dune 的 API、Agents 和 MCP 能让 agent 辅助查询、生成 dashboard 和分析报告。
+
+核心看点：AI 把链上分析从"写查询"变成"说需求"。
+
+\============================================================
+
+【第四类：智能钱包和安全助手】
+
+\============================================================
+
+这一类项目回答的是"普通用户怎么安全使用 Web3"：从单私钥账户升级到智能账户、交易模拟、权限管理、恶意 dApp 检测和签名前提醒。
+
+关键理解：
+
+\- Web3 最大的 UX 问题不是按钮难看，而是用户看不懂签名后果
+
+\- 智能钱包把"账户"变成权限系统：多签、恢复、限额、session key、gas sponsor
+
+\- 安全助手把"签名确认"变成"交易解释 + 风险拦截"
+
+\------------------------------------------------------------
+
+主案例：Blockaid（安全基础设施）
+
+\------------------------------------------------------------
+
+代表钱包背后的实时安全检测层。把用户即将签名的交易、访问的 dApp、接触的合约和链上历史行为放在一起分析，在资产真正移动前识别钓鱼、恶意授权和高风险交互。
+
+实现原理：
+
+用户打开 dApp 或发起交易
+
+→ 扫描域名、合约和 calldata
+
+→ 模拟交易执行结果
+
+→ 匹配恶意模式和风险实体
+
+→ 钱包展示警告或拦截
+
+核心看点：安全能力会成为钱包默认基础设施，而不是用户自己搜索攻略。
+
+\------------------------------------------------------------
+
+其他项目：
+
+\------------------------------------------------------------
+
+Coinbase Smart Wallet（账户抽象）
+
+passkey、免插件、批量交易、gas sponsor 等能力，代表面向大众用户的 Web3 钱包。
+
+核心看点：新用户不应该一上来就面对助记词和 gas。
+
+Argent（恢复）
+
+seedless、social recovery 和安全策略是早期智能钱包 UX 的代表路径。
+
+\============================================================
+
+【第五类（风险边界）：先识别边界，再判断价值】
+
+\============================================================
+
+AI + Web3 很容易被包装成万能叙事。更稳妥的判断方式是区分真实基础设施、早期实验和短期投机。
+
+四大风险边界：
+
+1\. 模型不能直接等于执行权
+
+agent 可以建议交易，但真实资金动作必须有授权、限额、确认、撤销和日志。
+
+否则 prompt injection 就可能变成资金损失。
+
+2\. 链上标签不是法律事实
+
+地址映射到实体有误差。机构使用时需要证据链、人工复核和合规流程。
+
+3\. 去中心化资源要验证质量
+
+token 就能上，核心问题是可用性、反作弊、定价、隐私和 SLA。
+
+4\. 钱包体验不能牺牲安全
+
+低门槛也会带来托管边界、权限滥用和恢复机制风险。
+
+\------------------------------------------------------------
+
+主案例：Chainalysis（交易所与 DeFi 风控）
+
+\------------------------------------------------------------
+
+代表机构级链上合规和风险分析。不面向短线交易信号，而是帮助交易所、金融机构和监管场景判断资金来源、识别可疑行为、满足合规要求，并把链上交易转成可调查、可审计的风险事件。
+
+实现原理：
+
+采集多链地址和交易数据
+
+→ 实体归因和风险分类
+
+→ KYT 实时监控充值提现
+
+→ 异常交易触发告警
+
+→ 合规团队调查和处置
+
+核心看点：交易所风控的核心是资金来源、制裁、诈骗和可疑行为。
+
+关键理解：
+
+\- 交易所看的是合规与资金来源，DeFi 协议看的是攻击、清算、流动性和参数风险
+
+\- AI 的价值不是替代规则，而是把海量链上行为转成异常模式、解释和优先级
+
+\- 风险系统必须能落地到动作：告警、冻结、限额、参数调整、暂停合约或阻断交易
+
+\------------------------------------------------------------
+
+其他项目：
+
+\------------------------------------------------------------
+
+Elliptic（KYT）
+
+提供钱包和交易风险识别，并把链上风险分析转成更容易被合规团队理解的洞察。
+
+核心看点：AI copilot 如何辅助合规分析员判断风险。
+
+Forta（监控网络）
+
+去中心化实时监控网络，围绕攻击检测、异常行为和交易前防护建立安全体系。
+
+核心看点：DeFi 安全从事后报告走向事前监控和阻断。
+
+\============================================================
+
+【项目矩阵速查】
+
+\============================================================
+
+类别 项目名称 简介
+
+\----------------------------------------------------------------------
+
+去中心化基础设施 Bittensor 用市场机制组织 AI 服务，token 激励
+
+去中心化基础设施 Render Network GPU 算力去中心化市场
+
+去中心化基础设施 Akash 去中心化云计算市场
+
+去中心化基础设施 Filecoin / Arweave 可验证存储 / 永久存储
+
+去中心化基础设施 [Fetch.ai](http://Fetch.ai) / ASI agent 服务交易网络
+
+Agent 钱包 Coinbase AgentKit agent 链上执行工具包（开发者）
+
+Agent 钱包 MoonPay Agents agent 支付和入金
+
+Agent 钱包 Privy Agentic Wallets 嵌入式钱包授权管理
+
+Agent 钱包 Virtuals Protocol agent token 化经济体
+
+Agent 钱包 elizaOS 开源 Web3 agent 框架
+
+链上分析 Arkham 地址实体画像
+
+链上分析 Nansen 聪明钱追踪
+
+链上分析 Dune 自然语言链上查询
+
+钱包安全 Blockaid 实时交易安全检测
+
+钱包安全 Coinbase Smart Wallet 账户抽象大众钱包
+
+钱包安全 Argent 社交恢复智能钱包
+
+风控合规 Chainalysis 机构级链上合规分析
+
+风控合规 Elliptic 钱包和交易风险识别（KYT）
+
+风控合规 Forta 去中心化实时监控网络
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+
+
+
+```
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gas / 合约执行交互学习</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;font-size:13px;color:#1a1a1a;background:#f5f5f0;padding:24px}
+h1{font-size:18px;font-weight:500;margin-bottom:4px;color:#1a1a1a}
+.subtitle{font-size:13px;color:#666;margin-bottom:20px}
+.card{background:#fff;border:0.5px solid rgba(0,0,0,0.12);border-radius:12px;padding:1rem 1.25rem;margin-bottom:1rem}
+.section-title{font-size:14px;font-weight:500;margin-bottom:12px;color:#1a1a1a}
+.tab-bar{display:flex;gap:6px;margin-bottom:1rem;border-bottom:0.5px solid rgba(0,0,0,0.1);padding-bottom:8px}
+.tab{padding:5px 14px;border-radius:6px;cursor:pointer;font-size:13px;border:0.5px solid transparent;color:#666;transition:all 0.15s}
+.tab.active{background:#E6F1FB;color:#185FA5;border-color:#B5D4F4;font-weight:500}
+.tab:hover:not(.active){background:#f5f5f0}
+.panel{display:none}.panel.active{display:block}
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}
+@media(max-width:600px){.metrics{grid-template-columns:repeat(2,1fr)}}
+.metric{background:#f5f5f0;border-radius:8px;padding:12px;text-align:center}
+.metric-label{font-size:12px;color:#666;margin-bottom:4px}
+.metric-value{font-size:20px;font-weight:500;color:#1a1a1a}
+.metric-value.danger{color:#A32D2D}
+.metric-value.success{color:#3B6D11}
+.metric-value.info{color:#185FA5}
+.slider-row{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.slider-row label{width:140px;font-size:13px;color:#555;flex-shrink:0}
+.slider-row input[type=range]{flex:1;accent-color:#378ADD}
+.slider-row .val{width:90px;text-align:right;font-size:13px;color:#1a1a1a;font-weight:500}
+.gas-bar-wrap{margin:1rem 0}
+.gas-bar-label{display:flex;justify-content:space-between;font-size:12px;color:#666;margin-bottom:4px}
+.gas-bar-bg{height:10px;background:#e8e8e4;border-radius:5px;overflow:hidden}
+.gas-bar-fill{height:100%;border-radius:5px;transition:width 0.3s,background 0.3s;background:#378ADD}
+.gas-bar-fill.warn{background:#EF9F27}
+.gas-bar-fill.over{background:#E24B4A}
+.opcode-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(max-width:500px){.opcode-grid{grid-template-columns:1fr}}
+.op-card{background:#f5f5f0;border-radius:8px;padding:10px 12px;cursor:pointer;border:0.5px solid transparent;transition:border-color 0.15s}
+.op-card:hover{border-color:rgba(0,0,0,0.2)}
+.op-card.selected{border-color:#378ADD;background:#E6F1FB}
+.op-name{font-weight:500;font-size:13px;margin-bottom:2px}
+.op-gas{font-size:12px;color:#666}
+.op-detail{background:#f5f5f0;border-radius:8px;padding:12px;margin-top:10px;font-size:13px;line-height:1.7;color:#333}
+.evm-stack{display:flex;flex-direction:column;gap:4px;min-height:120px}
+.stack-item{background:#E6F1FB;border:0.5px solid #B5D4F4;border-radius:6px;padding:4px 10px;font-family:"SF Mono","Fira Code",monospace;font-size:12px;color:#185FA5;animation:slideIn 0.25s ease}
+@keyframes slideIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:translateY(0)}}
+.exec-log{font-family:"SF Mono","Fira Code",monospace;font-size:12px;line-height:1.8;max-height:180px;overflow-y:auto;background:#f5f5f0;border-radius:8px;padding:10px}
+.log-line{margin-bottom:2px}
+.log-op{color:#185FA5;font-weight:500}
+.log-gas{color:#A32D2D}
+.log-ok{color:#3B6D11}
+.step-btns{display:flex;gap:8px;margin-bottom:12px}
+button{padding:6px 16px;border-radius:6px;border:0.5px solid rgba(0,0,0,0.18);background:#fff;font-size:13px;cursor:pointer;transition:background 0.15s}
+button:hover:not(:disabled){background:#f0f0ec}
+button:disabled{opacity:0.45;cursor:default}
+.cost-row{display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:0.5px solid rgba(0,0,0,0.08)}
+.cost-row:last-child{border-bottom:none}
+.cost-name{flex:1;font-size:13px;color:#333}
+.cost-num{font-size:13px;font-weight:500;color:#185FA5;width:80px;text-align:right}
+.cost-bar-bg{flex:2;height:6px;background:#e8e8e4;border-radius:3px;overflow:hidden}
+.cost-bar-fill{height:100%;border-radius:3px;background:#378ADD;transition:width 0.3s}
+.info-box{background:#E6F1FB;border:0.5px solid #B5D4F4;border-radius:8px;padding:10px 12px;font-size:13px;color:#185FA5;margin-top:10px;line-height:1.6}
+.exec-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:500px){.exec-grid{grid-template-columns:1fr}}
+.col-label{font-size:12px;color:#666;margin-bottom:6px}
+</style>
+</head>
+<body>
+
+<h1>Gas / 合约执行交互学习</h1>
+<p class="subtitle">Ethereum EVM Gas 机制全解 — 费用模拟 · 操作码查询 · 逐步执行 · EIP-1559</p>
+
+<div class="tab-bar">
+  <div class="tab active" onclick="switchTab('sim')">Gas 费用模拟</div>
+  <div class="tab" onclick="switchTab('opcode')">操作码 Gas 表</div>
+  <div class="tab" onclick="switchTab('exec')">逐步执行演示</div>
+  <div class="tab" onclick="switchTab('eip1559')">EIP-1559 机制</div>
+</div>
+
+<!-- ========== Tab 1: Gas 模拟器 ========== -->
+<div id="panel-sim" class="panel active">
+  <div class="card">
+    <div class="section-title">交易 Gas 费用模拟器</div>
+    <div class="slider-row">
+      <label>Gas limit</label>
+      <input type="range" min="21000" max="500000" step="1000" value="100000" id="sl-limit" oninput="updateSim()">
+      <span class="val" id="v-limit">100,000</span>
+    </div>
+    <div class="slider-row">
+      <label>Gas 实际消耗</label>
+      <input type="range" min="21000" max="500000" step="1000" value="65000" id="sl-used" oninput="updateSim()">
+      <span class="val" id="v-used">65,000</span>
+    </div>
+    <div class="slider-row">
+      <label>Base fee (Gwei)</label>
+      <input type="range" min="1" max="300" step="1" value="20" id="sl-base" oninput="updateSim()">
+      <span class="val" id="v-base">20 Gwei</span>
+    </div>
+    <div class="slider-row">
+      <label>Priority fee (Gwei)</label>
+      <input type="range" min="0" max="50" step="1" value="2" id="sl-prio" oninput="updateSim()">
+      <span class="val" id="v-prio">2 Gwei</span>
+    </div>
+    <div class="slider-row">
+      <label>ETH 价格 (USD)</label>
+      <input type="range" min="500" max="10000" step="100" value="3500" id="sl-eth" oninput="updateSim()">
+      <span class="val" id="v-eth">$3,500</span>
+    </div>
+  </div>
+
+  <div class="metrics">
+    <div class="metric"><div class="metric-label">实际费用 (ETH)</div><div class="metric-value info" id="m-eth">0.0000</div></div>
+    <div class="metric"><div class="metric-label">实际费用 (USD)</div><div class="metric-value" id="m-usd">$0.00</div></div>
+    <div class="metric"><div class="metric-label">燃烧 Base fee (ETH)</div><div class="metric-value danger" id="m-burn">0.0000</div></div>
+    <div class="metric"><div class="metric-label">矿工小费 (ETH)</div><div class="metric-value success" id="m-tip">0.0000</div></div>
+  </div>
+
+  <div class="gas-bar-wrap">
+    <div class="gas-bar-label"><span>Gas 使用率</span><span id="bar-pct">0%</span></div>
+    <div class="gas-bar-bg"><div class="gas-bar-fill" id="gas-fill" style="width:0%"></div></div>
+  </div>
+  <div class="info-box" id="sim-tip">调整上方滑块来探索 Gas 费用的构成原理。</div>
+
+  <div style="margin-top:16px;font-size:12px;color:#888;line-height:1.8">
+    <b>公式说明：</b><br>
+    实际费用 = (Base fee + Priority fee) × Gas 实际消耗<br>
+    燃烧金额 = Base fee × Gas 实际消耗（由协议销毁）<br>
+    矿工收益 = Priority fee × Gas 实际消耗<br>
+    未使用的 Gas（limit − used）全额退还给发送者
+  </div>
+</div>
+
+<!-- ========== Tab 2: 操作码 ========== -->
+<div id="panel-opcode" class="panel">
+  <div class="section-title">EVM 操作码 Gas 消耗查询</div>
+  <p style="font-size:12px;color:#888;margin-bottom:12px">点击任意操作码查看详细说明与成本原理</p>
+  <div class="opcode-grid" id="op-grid"></div>
+  <div class="op-detail" id="op-detail">点击任意操作码查看详细说明。</div>
+
+  <div style="margin-top:16px;font-size:12px;color:#888;line-height:1.8">
+    <b>成本等级参考：</b><br>
+    算术/内存读写 ≈ 3–6 Gas（极廉价）&nbsp;|&nbsp;
+    哈希/事件 ≈ 30–1500 Gas（中等）&nbsp;|&nbsp;
+    跨合约调用 ≈ 2600 Gas（较贵）&nbsp;|&nbsp;
+    Storage 读写 ≈ 2100–20000 Gas（最昂贵）
+  </div>
+</div>
+
+<!-- ========== Tab 3: 逐步执行 ========== -->
+<div id="panel-exec" class="panel">
+  <div class="section-title">合约逐步执行演示</div>
+  <div style="margin-bottom:10px;font-size:13px;color:#555">
+    示例合约：<code style="background:#f5f5f0;padding:2px 8px;border-radius:4px;font-size:12px">function add(uint a, uint b) public pure returns (uint)</code>
+    &nbsp;— 调用时传入 a=10, b=20
+  </div>
+  <div class="step-btns">
+    <button onclick="execStep()" id="btn-step">下一步 &#8594;</button>
+    <button onclick="execReset()">重置</button>
+  </div>
+  <div class="exec-grid">
+    <div>
+      <div class="col-label">EVM 栈（栈顶在上）</div>
+      <div class="evm-stack" id="evm-stack"><div style="color:#aaa;font-size:12px">栈空</div></div>
+    </div>
+    <div>
+      <div class="col-label">执行日志</div>
+      <div class="exec-log" id="exec-log">等待开始执行...</div>
+    </div>
+  </div>
+  <div class="metrics" style="grid-template-columns:repeat(3,1fr);margin-top:12px">
+    <div class="metric"><div class="metric-label">剩余 Gas</div><div class="metric-value info" id="ex-gas">30,000</div></div>
+    <div class="metric"><div class="metric-label">当前步骤</div><div class="metric-value" id="ex-step">0 / 6</div></div>
+    <div class="metric"><div class="metric-label">状态</div><div class="metric-value success" id="ex-status">就绪</div></div>
+  </div>
+
+  <div style="margin-top:16px;font-size:12px;color:#888;line-height:1.8">
+    <b>EVM 执行模型要点：</b><br>
+    EVM 是基于栈的虚拟机，每条指令弹出若干栈顶值、执行操作、将结果压回栈。<br>
+    函数参数通过 calldata 传入，局部变量存于 memory（临时），状态变量存于 storage（永久）。<br>
+    每执行一条指令都会消耗对应 Gas；Gas 耗尽时抛出 out-of-gas 异常，所有状态回滚。
+  </div>
+</div>
+
+<!-- ========== Tab 4: EIP-1559 ========== -->
+<div id="panel-eip1559" class="panel">
+  <div class="section-title">EIP-1559 Gas 定价机制</div>
+  <div style="margin-bottom:12px">
+    <div style="font-size:13px;color:#555;margin-bottom:8px">模拟网络拥堵程度（0 = 空闲，100 = 极度拥堵）</div>
+    <input type="range" min="0" max="100" value="50" id="sl-congestion" oninput="updateEip()" style="width:100%;accent-color:#378ADD">
+    <div style="display:flex;justify-content:space-between;font-size:11px;color:#aaa;margin-top:2px">
+      <span>空闲</span><span>正常</span><span>拥堵</span>
+    </div>
+  </div>
+  <div id="eip-costs"></div>
+  <div class="info-box" id="eip-info"></div>
+  <div style="margin-top:14px;font-size:13px;color:#555;font-weight:500;margin-bottom:8px">ETH 流向分配（以 21000 Gas 转账为例）</div>
+  <div id="eip-breakdown"></div>
+
+  <div style="margin-top:16px;font-size:12px;color:#888;line-height:1.8">
+    <b>EIP-1559 核心机制：</b><br>
+    1. Base fee 由协议自动算法调整，目标区块使用率为 50%<br>
+    2. 区块使用率 &gt; 50% → Base fee 最多上涨 12.5%；&lt; 50% → 最多下降 12.5%<br>
+    3. Base fee 全部销毁（通缩）；Priority fee（小费）归矿工/验证者<br>
+    4. 用户设置 maxFeePerGas = 愿意支付的最高 Gas 价格，超出部分退还
+  </div>
+</div>
+
+<script>
+function switchTab(id) {
+  var ids = ['sim','opcode','exec','eip1559'];
+  document.querySelectorAll('.tab').forEach(function(t,i){ t.classList.toggle('active', ids[i]===id); });
+  document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+  document.getElementById('panel-'+id).classList.add('active');
+}
+
+function fmtN(n){ return Math.round(n).toLocaleString('zh-CN'); }
+
+function updateSim() {
+  var lim = +document.getElementById('sl-limit').value;
+  var used = Math.min(+document.getElementById('sl-used').value, lim);
+  var base = +document.getElementById('sl-base').value;
+  var prio = +document.getElementById('sl-prio').value;
+  var eth = +document.getElementById('sl-eth').value;
+
+  document.getElementById('v-limit').textContent = fmtN(lim);
+  document.getElementById('v-used').textContent = fmtN(used);
+  document.getElementById('v-base').textContent = base + ' Gwei';
+  document.getElementById('v-prio').textContent = prio + ' Gwei';
+  document.getElementById('v-eth').textContent = '$' + fmtN(eth);
+
+  var totalEth = (base + prio) * used / 1e9;
+  var burnEth = base * used / 1e9;
+  var tipEth = prio * used / 1e9;
+  var totalUsd = totalEth * eth;
+
+  document.getElementById('m-eth').textContent = totalEth.toFixed(6);
+  document.getElementById('m-usd').textContent = '$' + totalUsd.toFixed(2);
+  document.getElementById('m-burn').textContent = burnEth.toFixed(6);
+  document.getElementById('m-tip').textContent = tipEth.toFixed(6);
+
+  var pct = Math.round(used / lim * 100);
+  document.getElementById('bar-pct').textContent = pct + '%';
+  var fill = document.getElementById('gas-fill');
+  fill.style.width = pct + '%';
+  fill.className = 'gas-bar-fill' + (pct > 90 ? ' over' : pct > 70 ? ' warn' : '');
+
+  var tip = '';
+  if (pct > 95) tip = '使用率接近上限，说明这是一笔计算密集型合约调用，容易触发 out-of-gas 风险，建议提高 limit 或优化合约。';
+  else if (pct > 70) tip = 'Gas 使用率偏高，建议在合约中预留至少 20% 余量以应对动态执行路径。';
+  else if (pct < 30) tip = 'Gas limit 设置偏保守，实际上很宽裕。可以适当降低 limit，减少发送前锁定的 ETH。';
+  else tip = 'Gas 使用率合理（' + pct + '%）。未使用的 ' + fmtN(lim - used) + ' 单位 Gas 将在交易完成后退还给发送者。';
+  document.getElementById('sim-tip').textContent = tip;
+  document.getElementById('sl-used').max = lim;
+}
+
+var opcodes = [
+  {name:'ADD',     gas:3,     cat:'算术', desc:'两个栈顶数相加，结果压栈。最基础的 EVM 指令之一，成本固定为 3 Gas。EVM 中所有整数均为 256 位无符号整数。', color:'#185FA5'},
+  {name:'MUL',     gas:5,     cat:'算术', desc:'乘法运算，成本 5 Gas。EVM 中所有算术均按字（256-bit）操作，溢出自动截断，不抛出异常。', color:'#185FA5'},
+  {name:'SLOAD',   gas:2100,  cat:'存储', desc:'从 storage 读取一个槽（cold access，EIP-2929）。若同一交易中已读过该槽（warm），仅需 100 Gas。Storage 是合约中最昂贵的资源。', color:'#A32D2D'},
+  {name:'SSTORE',  gas:20000, cat:'存储', desc:'写入新值到 storage 槽（cold write）。修改已有非零值为非零值 = 2900 Gas；写入零值可触发 Gas 退款。是合约中最昂贵的操作。', color:'#A32D2D'},
+  {name:'MLOAD',   gas:3,     cat:'内存', desc:'从 memory（临时内存）读取 32 字节，基础 3 Gas。Memory 按需扩展，访问超出已分配范围时会产生内存扩展费用（按 word 计费）。', color:'#3B6D11'},
+  {name:'MSTORE',  gas:3,     cat:'内存', desc:'向 memory 写入 32 字节，基础 3 Gas + 内存扩展费。Memory 在函数调用结束后自动释放，不收取持久成本。', color:'#3B6D11'},
+  {name:'CALL',    gas:2600,  cat:'调用', desc:'调用另一个合约（cold address）。携带 ETH 时额外 +9000 Gas；若目标账户不存在则 +25000 Gas（创建账户费）。', color:'#854F0B'},
+  {name:'LOG2',    gas:1500,  cat:'日志', desc:'发出含 2 个 topic 的事件日志。费用 = 375 + 2×375（topic）+ 数据字节×8。日志永久写入链但合约无法读取。', color:'#3C3489'},
+  {name:'CREATE',  gas:32000, cat:'部署', desc:'部署一个新合约，基础 32000 Gas + initcode 字节费（200 Gas/字节）+ 内存费。CREATE2 费用相同但加入 hash 计算。', color:'#993C1D'},
+  {name:'KECCAK256',gas:30,   cat:'加密', desc:'基础 30 Gas + 6 Gas/word（每 32 字节）。Solidity mapping 键哈希、事件签名、CREATE2 地址计算等均依赖此指令。', color:'#0F6E56'},
+];
+
+function renderOpcodes() {
+  var g = document.getElementById('op-grid');
+  g.innerHTML = opcodes.map(function(op, i) {
+    var barW = Math.min(100, Math.log10(op.gas+1) / Math.log10(32001) * 100).toFixed(1);
+    return '<div class="op-card" id="opc-'+i+'" onclick="selectOp('+i+')">'
+      + '<div class="op-name" style="color:'+op.color+'">'+op.name+' <span style="font-size:11px;color:#aaa">['+op.cat+']</span></div>'
+      + '<div class="op-gas">'+op.gas.toLocaleString()+' Gas</div>'
+      + '<div class="cost-bar-bg" style="margin-top:4px"><div class="cost-bar-fill" style="width:'+barW+'%;background:'+op.color+'"></div></div>'
+      + '</div>';
+  }).join('');
+}
+
+function selectOp(i) {
+  document.querySelectorAll('.op-card').forEach(function(c){ c.classList.remove('selected'); });
+  document.getElementById('opc-'+i).classList.add('selected');
+  var op = opcodes[i];
+  document.getElementById('op-detail').innerHTML =
+    '<b style="color:'+op.color+'">'+op.name+'</b>'
+    + ' &nbsp;|&nbsp; 类别：'+op.cat
+    + ' &nbsp;|&nbsp; 消耗：<b>'+op.gas.toLocaleString()+' Gas</b>'
+    + '<br><br>'+op.desc;
+}
+
+var execSteps = [
+  {op:'PUSH1 0x0a', desc:'将参数 a=10 (0x0a) 压栈', gasUse:3, stack:['0x0a']},
+  {op:'PUSH1 0x14', desc:'将参数 b=20 (0x14) 压栈', gasUse:3, stack:['0x14','0x0a']},
+  {op:'ADD',        desc:'弹出两值相加 10+20=30，结果压栈', gasUse:3, stack:['0x1e']},
+  {op:'DUP1',       desc:'复制栈顶值（备份返回值用）', gasUse:3, stack:['0x1e','0x1e']},
+  {op:'MSTORE',     desc:'弹出地址 0 和值，将 30 写入 memory[0]', gasUse:6, stack:[]},
+  {op:'RETURN',     desc:'返回 memory[0..31]，函数执行完成', gasUse:0, stack:[]},
+];
+var execState = {step:0, gas:30000, log:[]};
+
+function renderExec() {
+  var s = execState;
+  document.getElementById('ex-gas').textContent = s.gas.toLocaleString();
+  document.getElementById('ex-step').textContent = s.step + ' / ' + execSteps.length;
+  var done = s.step >= execSteps.length;
+  document.getElementById('btn-step').disabled = done;
+  document.getElementById('ex-status').textContent = done ? '已完成' : (s.step > 0 ? '执行中' : '就绪');
+  document.getElementById('ex-status').className = 'metric-value ' + (done ? 'success' : s.step > 0 ? 'info' : 'success');
+  var stackEl = document.getElementById('evm-stack');
+  var cur = s.step > 0 ? execSteps[s.step-1] : null;
+  if (cur && cur.stack.length > 0) {
+    stackEl.innerHTML = cur.stack.map(function(v){ return '<div class="stack-item">'+v+'</div>'; }).join('');
+  } else if (s.step === 0) {
+    stackEl.innerHTML = '<div style="color:#aaa;font-size:12px">栈空</div>';
+  } else {
+    stackEl.innerHTML = '<div style="color:#aaa;font-size:12px">栈已清空（值已消耗）</div>';
+  }
+  var logEl = document.getElementById('exec-log');
+  logEl.innerHTML = s.log.join('') || '等待开始执行...';
+  logEl.scrollTop = 9999;
+}
+
+function execStep() {
+  var i = execState.step;
+  if (i >= execSteps.length) return;
+  var st = execSteps[i];
+  execState.gas -= st.gasUse;
+  execState.step++;
+  execState.log.push(
+    '<div class="log-line"><span class="log-op">'+st.op+'</span>'
+    + ' — '+st.desc
+    + (st.gasUse > 0 ? ' <span class="log-gas">(-'+st.gasUse+' Gas)</span>' : ' <span style="color:#aaa">(free)</span>')
+    + '</div>'
+  );
+  if (execState.step === execSteps.length) {
+    execState.log.push('<div class="log-line log-ok">执行成功。返回值：30 (0x1e)，总消耗：18 Gas</div>');
+  }
+  renderExec();
+}
+
+function execReset() {
+  execState = {step:0, gas:30000, log:[]};
+  renderExec();
+}
+
+function updateEip() {
+  var cong = +document.getElementById('sl-congestion').value;
+  var baseFee = Math.round(5 + cong * 2.9);
+  var maxFee = Math.round(baseFee * 1.5 + 2);
+  var prio = 2;
+  var gas = 21000;
+  var burnEth = (baseFee * gas / 1e9).toFixed(8);
+  var tipEth = (prio * gas / 1e9).toFixed(8);
+
+  var items = [
+    {name:'Base fee（由协议算法设定）',  val:baseFee, max:300,  color:'#E24B4A'},
+    {name:'Priority fee（用户小费）',   val:prio,    max:50,   color:'#3B6D11'},
+    {name:'建议 maxFeePerGas 上限',    val:maxFee,  max:450,  color:'#185FA5'},
+  ];
+  document.getElementById('eip-costs').innerHTML = items.map(function(it) {
+    var w = Math.min(100, it.val / it.max * 100).toFixed(1);
+    return '<div class="cost-row">'
+      + '<span class="cost-name">'+it.name+'</span>'
+      + '<div class="cost-bar-bg"><div class="cost-bar-fill" style="width:'+w+'%;background:'+it.color+'"></div></div>'
+      + '<span class="cost-num" style="color:'+it.color+'">'+it.val+' Gwei</span>'
+      + '</div>';
+  }).join('');
+
+  var breakdown = [
+    {name:'燃烧销毁（Base fee × 21000 Gas）', val:burnEth+' ETH', color:'#A32D2D'},
+    {name:'矿工/验证者收益（Priority fee × Gas）', val:tipEth+' ETH', color:'#3B6D11'},
+  ];
+  document.getElementById('eip-breakdown').innerHTML = breakdown.map(function(b) {
+    return '<div class="cost-row">'
+      + '<span class="cost-name" style="color:'+b.color+'">'+b.name+'</span>'
+      + '<span class="cost-num" style="color:'+b.color+'">'+b.val+'</span>'
+      + '</div>';
+  }).join('');
+
+  var trend = '';
+  if (cong > 60) trend = '当前网络拥堵（'+cong+'%），Base fee 将在下一区块继续上涨（每块最多 +12.5%）。建议设置更高的 maxFeePerGas 以保证上链。';
+  else if (cong < 40) trend = '网络相对空闲（'+cong+'%），Base fee 正在下降。此时是低成本发送交易的好时机，无需设置过高 maxFee。';
+  else trend = '网络负载适中（'+cong+'%），Base fee 在目标区块容量附近波动，可按当前 Base fee 的 1.5 倍设置 maxFeePerGas。';
+  document.getElementById('eip-info').textContent = trend;
+}
+
+renderOpcodes();
+updateSim();
+updateEip();
+renderExec();
+</script>
+</body>
+</html>
+```
+
+对gas合约交易的模拟学习界面
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+
+
+
+![屏幕截图 2026-05-22 204758.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Accuracy333/images/2026-05-22-1779454088506-_____2026-05-22_204758.png)
+
+```
+文件路径C:\Users\Accuracy\WorkBuddy\2026-05-22-task-7\gas-interactive-learning.html# 2026-05-22 工作记录
+
+## Gas / 合约执行交互学习产物
+
+生成了一个完整的 HTML 交互学习文件：`gas-interactive-learning.html`
+
+包含四个模块：
+1. **Gas 费用模拟器** — 可拖动滑块调整 Gas limit / 消耗 / Base fee / Priority fee / ETH 价格，实时计算费用构成
+2. **操作码 Gas 表** — 10 种常见 EVM 操作码（ADD/MUL/SLOAD/SSTORE/MLOAD/MSTORE/CALL/LOG2/CREATE/KECCAK256），点击查看详细说明
+3. **逐步执行演示** — 模拟 `add(uint a, uint b)` 函数的 EVM 执行过程，逐步查看操作码、EVM 栈变化和 Gas 递减
+4. **EIP-1559 机制** — 可调节网络拥堵程度，实时看到 Base fee 变化、ETH 燃烧量和矿工收益分配
+
+文件路径：`C:\Users\Accuracy\WorkBuddy\2026-05-22-task-7\gas-interactive-learning.html`
+```
+
+file:///C:/Users/Accuracy/WorkBuddy/2026-05-22-task-7/gas-interactive-learning.html
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+
+
+
+
+
+
+Web3/以太坊核心原理
+
+一、账户体系：助记词、私钥、公钥与地址
+
+这是你掌控链上资产的基础，核心逻辑是“一对多派生，私钥唯一授权”。
+
+1\. 助记词（根种子）
+
+◦ 你所有账户的“母体”，可以派生出无数个独立账户。
+
+◦ 一旦泄露，所有派生账户的资产都会面临风险。
+
+2\. 私钥
+
+◦ 从助记词派生而来，是控制单个账户资金的唯一钥匙。
+
+◦ 核心特点：永远不离开本地钱包，一旦泄露，任何人都能直接转走资产。
+
+3\. 公钥
+
+◦ 由私钥通过密码学算法生成的公开信息，用于验证签名。
+
+4\. 钱包地址
+
+◦ 公钥经过哈希处理后，截取最后一段生成的公开“名片”，用于接收资产。
+
+二、资产与钱包的真相
+
+很多人都有一个误区：资产不是存在钱包里的。
+
+• 钱包的本质：只负责保存私钥、构造交易、发起签名，不存储资产。
+
+• 资产的位置：余额、NFT、合约状态等，全部记录在链上账本中。
+
+• 区块浏览器的作用：读取链上数据，展示交易、区块和合约状态。
+
+三、交易的完整生命周期
+
+一笔交易从你发起，到最终上链确认，会经历6个关键步骤：
+
+身份验证 → 授权签名 → 网络传播 → 内存池排队 → 区块排序 → 链上执行与确认
+
+1\. 签名与授权（本地）
+
+◦ 钱包在本地用私钥签名交易，私钥不会泄露。
+
+◦ 交易的本质是一段“我授权网络执行这件事”的数据，不仅是转账，还包括合约调用、投票、授权等。
+
+2\. 传播与排队（网络）
+
+◦ 交易通过RPC节点广播到网络，进入内存池（Mempool）排队等待打包。
+
+3\. 打包与出块（共识）
+
+◦ 区块构建者（Builder）对交易进行排序，验证者（Validator）负责出块和证明。
+
+4\. 确认与Finality
+
+◦ 交易被写入区块后，会随着后续区块的生成不断获得“确认数”。
+
+◦ 以太坊PoS中，约2个epoch（约12.8分钟）后交易达到Finalized（最终确认），几乎无法被篡改。
+
+四、Gas Fee：链上的“运行成本”
+
+Gas Fee不是单纯的“手续费”，它有三个核心作用：
+
+1\. 阻挡垃圾交易：让占用公共网络资源这件事有成本，防止网络被恶意攻击。
+
+2\. 激励区块提议者：以太坊中，base fee会销毁，priority fee和MEV激励验证者，普通节点不直接接收Gas。
+
+3\. 让资源有价格：谁占用计算、存储和区块空间，谁付费，避免免费资源被滥用。
+
+五、数字签名：链上的“身份证”
+
+数字签名是区块链信任的核心机制，逻辑非常简单：
+
+1\. 你用私钥签名一段消息或交易。
+
+2\. 其他人可以通过公钥验证签名，确认交易确实由对应私钥授权。
+
+3\. 除非拿到私钥，否则任何人都无法伪造你的签名。
+
+4\. 注意：签名消息不一定会上链，只有广播交易才会进入链上执行流程。
+
+六、共识机制：PoW vs PoS
+
+这是区块链决定“谁说了算”的核心规则：
+
+机制 代表项目 核心逻辑 特点
+
+PoW（工作量证明） 比特币（BTC） 算力竞争写账，谁先解出难题谁记账，全网验算 能源消耗高，去中心化程度依赖算力分布
+
+PoS（权益证明） 以太坊（ETH） 验证者质押ETH，系统随机选取提议者和证明者，作恶会被罚没 能源效率高，安全性与质押资产规模挂钩
+
+七、钱包、RPC与节点：你如何连接区块链
+
+用户不直接接入区块链全网，而是通过RPC节点间接访问：
+
+1\. 钱包：连接某个RPC节点（访问节点的API），不直连全网。
+
+2\. RPC节点：背后是节点或节点集群，负责接收、传播交易。
+
+3\. 风险提示：很多用户依赖少数RPC服务商，这会带来可用性、隐私、审查和单点故障风险，但这不等同于以太坊共识层中心化。
+
+八、智能合约：写在链上的“自动代码”
+
+1\. 本质：写在链上、能被交易触发的代码，运行在EVM等虚拟机中。
+
+2\. 特点：不是真的“有智能”，只是按代码规则执行；交易触发后会改变链上状态，执行历史写入区块后极难篡改。
+
+3\. 社会学意义：
+
+◦ 规则透明：合约代码、调用记录和执行历史都可被公开检查。
+
+◦ 减少人为干预：条件满足后按代码自动执行，临时改规则的空间变小。
+
+◦ 信任对象转变：从“相信某个机构”转向“检查代码 + 共识 + 审计/治理”。
+
+九、以太坊的治理与升级
+
+以太坊的规则不是由某个人或机构决定的，而是通过社区流程迭代：
+
+1\. 讨论：在Ethereum Magicians、AllCoreDevs等社区论坛进行公开讨论。
+
+2\. 文档：形成EIP（以太坊改进提案），Core EIP是协议变更的正式规格。
+
+3\. 实现与测试：多个客户端实现提案，在测试网验证，协调生态适配。
+
+4\. 主网升级：一次升级通常打包多个EIP，通过硬分叉（Hard Fork）激活。
+
+十、节点客户端多样性：去中心化的保障
+
+1\. 以太坊节点软件分为执行层客户端和共识层客户端，不止一种实现。
+
+2\. 多样性越高，越不怕单一软件bug、分叉或Finality风险。
+
+3\. 去中心化不仅是“节点数量多”，还包括“实现多样性”，避免因单一客户端故障导致全网瘫痪。
+
+十一、Web3的核心本质
+
+Web3是密码学、经济学、社会学三门学科的交叉：
+
+• 密码学：签名、哈希、ZK技术让权利和行为可以被验证，保障所有权。
+
+• 经济学：Gas、质押和罚没机制，把成本和奖励写进系统规则，协调参与者行为。
+
+• 社会学：个人主权、去中心化治理和共识形成，回答“谁说了算”的问题。
+
+它的核心不是技术本身，而是数字世界控制权的重新分配。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
+
 ````
 ### 一、AI时代基础知识的重要性
 

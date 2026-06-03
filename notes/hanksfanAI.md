@@ -15,6 +15,37 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+参加了Open Agentic Economy会议
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+参加了 Co-learning Week 1 例会
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
 
 
+观看了Web3运行原理
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+因系统原因，补交打卡笔记内容，此条内容为系统自动触发。
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
+# 2026-05-18
+<!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+因系统原因，补交打卡笔记内容，此条内容为系统自动触发。
+<!-- DAILY_CHECKIN_2026-05-18_END -->
 <!-- Content_END -->

@@ -15,8 +15,153 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+为啥我被淘汰了
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+
+**ERC-8004（身份）** — 给 AI 代理颁发"身份证"，让其他代理能找到它、信任它
+
+**ERC-8183（商业）** — 定义代理之间如何接任务、锁定资金、验收结算，相当于链上版 Upwork
+
+**x402（支付）** — 代理之间的即时微支付通道
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+
+
+OpenAI Agents SDK 是 OpenAI 官方推出的一个轻量级、功能强大的 Python 框架，专为构建单 Agent 或多 Agent
+
+协作工作流而设计。它秉持“Python 优先”的理念，让开发者无需引入过度复杂的抽象框架，就能轻松实现工具调用、状态管理、Agent
+
+协作以及沙盒执行等高级能力。
+
+1\. 核心概念与组件
+
+\- 代理 (Agent)： Agent 是应用程序的核心构建块。在 SDK 中，一个 Agent 本质上是一个被配置了指令
+
+(instructions)、工具 (tools)、护栏 (guardrails) 以及交接规则 (handoffs) 的大语言模型。
+
+\- 模型配置：当前 SDK 默认使用的模型通常是 gpt-5.4-mini（针对低延迟 Agent 工作流优化）。如果你有权限，官方推荐切换至
+
+gpt-5.5 以获得更高质量的输出。
+
+\- 运行器 (Runner & Agent Loop)： 区别于直接调用基础的 Responses API，Agents SDK 的核心在于
+
+Runner。Runner 能够为你自动管理“Agent Loop”（自动化的工具调用循环）、安全护栏、多 Agent
+
+交接以及会话状态。开发者不再需要手动编写死循环来解析模型的每一次工具调用。
+
+\- 交接与编排 (Handoffs & Orchestration)： 当一个复杂的任务超出单个 Agent 的能力时，系统可以通过 Handoffs
+
+将对话无缝委派（Delegate）给其他专精的 Agent（如数据分析 Agent 交接给代码编写 Agent）。
+
+\- 安全护栏 (Guardrails)： 允许开发者设置并行的输入校验机制或使用小型的辅助 Agent
+
+作为“门卫”。例如，如果用户提出了与系统无关或敏感的话题，护栏可以在触发核心流程前阻断或拒绝请求。
+
+\- 沙盒代理 (Sandbox Agents)： 这是针对长时间跨度、复杂任务的杀手级功能。Sandbox Agent
+
+允许模型在一个持久化、隔离的工作区（如 Unix 本地或 Docker
+
+容器）内运行。模型可以直接读取文档目录、写入文件、执行 Python 脚本和系统命令。SDK
+
+在底层自动为你处理了文件同步、快照生命周期等繁琐问题。
+
+2\. 强大的工具系统 (Tools)
+
+工具赋予了 Agent 与外部世界交互的能力。SDK 将工具分为五大类：
+
+1\. OpenAI 托管工具 (Hosted OpenAI tools)：如网络搜索 (WebSearchTool)、文件检索
+
+(FileSearchTool)、代码解释器 (CodeInterpreterTool) 和图像生成 (ImageGenerationTool)
+
+等，这些都在 OpenAI 的服务器上运行。
+
+2\. 函数工具 (Function tools)：支持使用简单的装饰器，将任意普通的 Python 函数直接封装成工具供 Agent 调用，SDK
+
+会自动提取参数 Schema。
+
+3\. 本地/运行时执行工具 (Local runtime tools)：包含计算机控制 (ComputerTool)
+
+和能在你的本地机器或容器中直接执行命令的终端工具
+
+(ShellTool)。
+
+4\. Agent 作为工具 (Agents as tools)：在不需要彻底交接 (Handoff) 对话控制权的情况下，允许一个 Agent 把另一个
+
+Agent 当作工具来调用。
+
+5\. 实验性工具：例如 Codex tool，用于在工作区范围内运行代码补全任务。
+
+3\. 会话管理与进阶功能
+
+\- 会话记忆 (Sessions)：SDK 提供了开箱即用的会话内存机制，可自动维护多个 Agent 运行周期中的对话历史记录（支持
+
+SQLAlchemy、SQLite 和加密 Session 等后端）。
+
+\- 多模态与实时交互：不仅支持纯文本，库中还囊括了对 Realtime Agents 和 Voice Agents 的支持，包括音频输入处理、SIP
+
+电话集成和播放打断跟踪。
+
+\- 可观测性 (Tracing)：集成了强大的 Tracing 功能，用于可视化、监控和调试复杂的多步骤工作流和内部逻辑。
+
+4\. 架构选择：何时应该使用它？
+
+官方文档给出了明确的开发路径指南：
+
+\- 只想要简单的文字回复：使用基础的 Responses API 或 Chat Completions API 即可，这由基础的 OpenAI Client
+
+Libraries 提供。
+
+\- 需要自主规划、操作文件、跨角色协作：当你需要应用程序掌管编排、执行工具调用、管理状态（State）时，选择 Agents SDK。
+
+\- 需要无代码/低代码体验：直接使用平台托管的 Agent Builder 界面。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+[https://z168r49nf7s0-d.space-z.ai/](https://z168r49nf7s0-d.space-z.ai/)
+
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/hy3917-code/images/2026-05-20-1779274011029-image.png)
+
+### **交互式概念测验网页**
+
+**运行方式**: 直接访问当前页面预览
+
+-   **19道选择题**覆盖 5 大知识领域
+    
+-   专业暗色主题 + 青色强调色
+    
+-   3屏流程：欢迎页 → 答题 → 结果仪表盘
+    
+-   实时进度条 + 分数追踪
+    
+-   每题答后显示详细解析
+    
+-   结果页：环形得分图 + 各领域得分条 + 错题回顾
+    
+-   高分(≥80%)时彩带庆祝动画
+    
+-   题目随机打乱，支持无限重试
+    
+
+![week1-mindmap.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/hy3917-code/images/2026-05-20-1779273975048-week1-mindmap.png)
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
 《大语言模型 (LLMs) 指南》学习笔记
 
 1\. 核心概念：什么是大语言模型？

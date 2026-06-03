@@ -15,8 +15,247 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+今日任务总结
+
+-   完成了week2遗留任务，设计了agent的安全地区；复盘了AI如何帮助AAVE DAO更好的应对生存危机
+    
+-   整理了项目实现技术文档 [https://github.com/web3yaso/x402write/tree/dev](https://github.com/web3yaso/x402write/tree/dev)
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+
+-   确定了黑客松主题和框架 [https://web3yaso.github.io/x402write/](https://web3yaso.github.io/x402write/)
+    
+-   完成了week2的遗留任务： agent access control研究
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+
+
+今日工作
+
+-   初步实现了：x402 Paywall + CAW Agent 自主支付闭环，明天会继续测试
+    
+-   确定了黑客松的选题和设计
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+
+
+
+今日完成
+
+-   Agent支付商业流程拆解
+    
+-   Agent profile分析
+    
+-   Agent设计
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+
+
+
+
+## **今日完成**
+
+-   参加线上活动｜观看回放 5.29｜Women Builders in AI × Web3: Learning Paths, Collaboration Networks & Global Opportunities。
+    
+-   参加线上活动｜观看回放 5.29｜Week 2 例会，并补充回放观看截图说明。
+    
+-   完成 WCB 任务提交：AI × Web3 问题地图与主方向选择。
+    
+-   梳理了 AI x Web3 的 6 个基础方向：
+    
+    -   Payment / Commerce / Settlement
+        
+    -   Identity / Reputation / Capability / Interoperability
+        
+    -   Wallet / Permission / Safe Execution
+        
+    -   Privacy / Security / Sovereignty
+        
+    -   Dev Tooling / Agent Workflow
+        
+    -   Governance / Coordination / Public Goods
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+
+
+
+
+
+今天完成了 AI × Web3 School 的两项补充任务，主要围绕 Week 1 学习总结和行业案例拆解做复盘。
+
+1.  发布了一份 AI × Web3 学习总结，整理了这一阶段对 agent memory、长期上下文、AI 工具协作、Web3 权限边界和可验证记录的理解。  
+    证明链接：  
+    [**https://github.com/web3yaso/ai-web3-school-cohort-0/blob/main/submissions/2026-05-29-agent-memory-learning-summary.md**](https://github.com/web3yaso/ai-web3-school-cohort-0/blob/main/submissions/2026-05-29-agent-memory-learning-summary.md)
+    
+2.  拆解了 Virtuals Protocol 与 agent economy 方向，重点分析它如何把 AI agent、代币化、社区参与、收益分配和链上资产机制结合起来。我也记录了这个方向的潜力与风险：真正有价值的 agent economy 不能只停留在发币或 persona，而要能解释任务、交付、收益、责任和验证机制。  
+    证明链接：  
+    [**https://github.com/web3yaso/ai-web3-school-cohort-0/blob/main/tasks/2026-05-29-virtuals-protocol-agent-economy.md**](https://github.com/web3yaso/ai-web3-school-cohort-0/blob/main/tasks/2026-05-29-virtuals-protocol-agent-economy.md)
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+
+
+
+
+
+
+-   完成了week 1 的任务：设计AI & Web3的最小边界
+    
+-   观看了Neo-Cypherpunk / Privacy分享的回放
+    
+-   研究了如何自动打卡
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+
+
+
+
+
+
+
+-   观看 Agent Wallet 直播分享。
+    
+-   复习 EOA、智能账户、多签账户和 Agent Wallet 的权限差异。
+    
+-   整理 Agent Wallet 的关键点：身份、权限、限额、人工确认、撤销和审计。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+
+
+
+
+
+
+
+
+回看《**Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性**》
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+
+
+
+
+
+
+
+
+
+今天主要集中完成 Week1的任务。  
+
+-   补齐了前置任务
+    
+-   完成Week1 AI方向任务
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+
+
+
+
+
+
+
+
+
+
+观看了英文分享：这次分享的主题围绕 Open Agentic Economy，也就是在 AI Agent 逐渐成为互联网新参与者之后，Ethereum 如何为人类和 Agent 共同参与的开放经济提供基础设施。
+
+[https://x.com/i/broadcasts/1qxvvkQkVXQxB](https://x.com/i/broadcasts/1qxvvkQkVXQxB)
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+
+
+
+
+
+
+
+
+
+
+观看老师的分享：**AI 下乡计划｜AI 在 Web3 的应用**
+
+[https://x.com/AgentEconCN/status/2057711778466083149](https://x.com/AgentEconCN/status/2057711778466083149)
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+今日完成：
+
+✅ 复习 Web3 基础（Network、Cryptography、Wallet、Smart Contract）
+
+✅ 阅读 AI×Web3 Bridge（Agent Wallet、Machine Payment、Settlement & Escrow、Web3 Tool Use）
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+今天主要观看了Hermes Agent分享，收获满满
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ```
 今日完成：
 ✅ 复习 Web3 基础（Network、Cryptography、Wallet、Smart Contract）
@@ -34,6 +273,20 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 今天观看了开营仪式的视频
 <!-- DAILY_CHECKIN_2026-05-18_END -->

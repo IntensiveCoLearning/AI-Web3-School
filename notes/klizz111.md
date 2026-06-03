@@ -15,8 +15,50 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+# Langchain 实现 HyDE
+
+```python
+from langchain.llms import OpenAI
+from langchain.embeddings import OpenAIEmbeddings
+from langchain.vectorstores import FAISS
+from langchain.prompts import PromptTemplate
+
+llm = OpenAI(temperature=0)
+embeddings = OpenAIEmbeddings()
+
+# 创建 HyDE 提示
+hyde_prompt = PromptTemplate(
+    input_variables=["question"],
+    template="Please write a passage that answers the following question:\n\nQuestion: {question}\n\nPassage:"
+)
+
+# 创建文档库
+docs = ["Document 1 content", "Document 2 content", "Document 3 content"]
+vectorstore = FAISS.from_texts(docs, embeddings)
+
+def hyde_retriever(query, k=3):
+    # 生成假设文档
+    hypothetical_doc = llm(hyde_prompt.format(question=query))
+    
+    # 嵌入假设文档
+    hyde_embedding = embeddings.embed_query(hypothetical_doc)
+    
+    # 使用假设文档嵌入检索相似文档
+    similar_docs = vectorstore.similarity_search_by_vector(hyde_embedding, k=k)
+    
+    return similar_docs
+
+# 使用 HyDE 检索器
+results = hyde_retriever("What is the meaning of life?")
+print(results)
+```
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 # Langchain 与 Pydantic 集成
 
 ```python

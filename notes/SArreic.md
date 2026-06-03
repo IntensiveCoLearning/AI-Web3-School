@@ -15,8 +15,49 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+**Blockchain Basics: On-Chain Operation Chain**
+
+-   **Account** – A user’s identity on-chain. Contains a public address and private key (control).
+    
+-   **Wallet** – Software/tool to manage accounts, check balances, send transactions. Examples: MetaMask, Phantom.
+    
+-   **Signature** – Cryptographic proof using the private key. Proves you _authorized_ a transaction.
+    
+-   **Transaction (tx)** – An action (send ETH, call contract) submitted to the blockchain. Signed, then broadcasted.
+    
+-   **Gas** – Fee paid to validators/computers for processing your tx. Measured in gwei (small unit of ETH).
+    
+-   **Contract** – Smart contract: code deployed on-chain that automatically executes logic when called.
+    
+-   **Testnet** – A practice blockchain (e.g., Sepolia). Uses fake money. Safe to test without real value.
+    
+-   **Block Explorer** – A search engine for the chain (e.g., Etherscan). View tx, gas, contract code, balances.
+    
+
+* * *
+
+**The On-Chain Operation Chain:**
+
+1.  **Wallet** creates → **transaction**
+    
+2.  User signs it with **private key** → **signature**
+    
+3.  Wallet sends tx to **testnet/mainnet**
+    
+4.  **Gas** fee is paid
+    
+5.  Tx may call a **contract**
+    
+6.  All recorded on **block explorer**
+    
+7.  Tied to your **account**
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 **AI Basics: Key Terms**
 
 -   **LLM** – Large Language Model (e.g., GPT). A neural network trained on massive text to understand and generate human-like language.

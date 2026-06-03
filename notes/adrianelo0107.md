@@ -15,8 +15,884 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+今天我学习/完成了：
+
+-   阅读 AI x Web3 Bridge 剩余三节：治理 AI、AI 主权、去中心化 AI。
+    
+-   完成 AI x Web3 Bridge 主线的阶段性复盘，并把前几天的 Agent/RAG/Web3/Bridge 笔记串成一个项目方向。
+    
+-   将自己的后续方向收敛为：Verifiable AI x Web3 Risk Research Agent。
+    
+
+关键收获：
+
+-   Governance AI 的价值不是替社区投票，而是降低治理信息不对称，保留来源、分歧和预算证据。
+    
+-   AI Sovereignty 让我意识到，AI Agent 的上下文、记忆、模型选择和权限撤销同样属于用户控制权。
+    
+-   Decentralized AI 不是口号，而是模型、数据、算力、推理、benchmark、路由和结算市场的组合。
+    
+
+我的理解：
+
+-   AI x Web3 不是两个技术栈相加，而是让概率模型进入可验证经济系统的一整套边界设计。
+    
+-   我后续更适合从只读优先的风险研究工具做起：输入交易哈希、合约地址或治理提案，输出带来源、trace、风险分类和隐私保护的可审计报告。
+    
+
+遇到的问题或下一步：
+
+-   下一步为 Verifiable AI x Web3 Risk Research Agent 写第一个 PRD 草稿。
+    
+-   设计 10 个合约/交易/提案风险分析 eval 样本。
+    
+-   做一个交易哈希解释器最小原型，先只读、可引用、可审计，不做自动交易。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+
+今天我学习/完成了：
+
+-   阅读 AI x Web3 Bridge 中从 AI 预言机到 AI 隐私的四节内容。
+    
+-   整理四节之间的可信闭环：AI Oracle 把模型输出带入协议流程，Verifiable AI 给输出和执行过程加证明，AI Security 防止 Agent 被攻击或滥用工具，AI Privacy 限制用户数据和模型记忆的暴露。
+    
+-   结合自己的 AI x Web3 Risk Research Agent 方向，更新成“可信研究报告系统”：报告需要证据引用、工具 trace、模型版本、报告 hash、安全检查和隐私红线。
+    
+
+关键收获：
+
+-   AI 预言机不是简单地把模型输出写上链，而是要回答输入、模型、版本、执行环境、置信度、挑战机制和影响范围。
+    
+-   可验证 AI 不一定一开始就等于 zkML。早期产品可以先做到可审计：记录 input hash、model version、policy version、tool trace 和 report hash。
+    
+-   AI 安全的边界不能靠 prompt，要靠上下文隔离、工具权限、sandbox、audit log、alert 和 human review。
+    
+-   AI 隐私不只是保护私钥，还要防止钱包地址、任务意图、预算、偏好和长期记忆被过度关联。
+    
+
+我的理解：
+
+-   如果一个 Agent 能支付、能调用工具、能参与结算，但它的输出不可验证、安全边界不清、隐私处理粗糙，它就不适合进入真实的链上经济流程。
+    
+-   AI x Web3 的长期价值不是让模型直接替用户行动，而是让模型输出在可验证、安全、隐私受控的边界内成为可信协作信号。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+
+
+今天我学习/完成了：
+
+-   阅读 AI x Web3 Bridge 中从智能体钱包到智能体信任与声誉的五节内容。
+    
+-   整理这五节之间的完整链路：Agent 先有身份，再获得受限钱包权限，用机器支付购买服务，通过托管完成结算，最后用长期行为积累声誉。
+    
+-   结合自己的产品研究方向，把 AI x Web3 Risk Research Agent 扩展成一个带任务预算、可付费调用工具、可审计支出记录的 Agentic Commerce 原型方向。
+    
+
+关键收获：
+
+-   智能体钱包不是给 Agent 一把主私钥，而是给 Agent 一个受限权限容器：预算、额度、合约、方法、时间和日志都要被约束。
+    
+-   机器支付让 Agent 可以为 API、数据、算力、simulation 或其他 Agent 付费，但它必须和预算、receipt、结算和争议处理连接起来。
+    
+-   身份和声誉是 Agent 参与长期经济协作的基础。身份回答“它是谁、代表谁、能做什么”，声誉回答“它过去是否可靠、在哪类任务上可靠”。
+    
+
+我的理解：
+
+-   AI x Web3 的重点不是让 Agent 完全自动花钱，而是让 Agent 拥有受限、可撤销、可审计的经济能力。
+    
+-   Web3 在这里提供的不是单纯支付通道，而是一整套经济制度层：钱包、授权、支付、托管、身份、凭证、声誉和追责。
+    
+
+遇到的问题或下一步：
+
+-   下一步为“5 USDC 预算协议风险研究 Agent”画一个任务流程图。
+    
+-   设计一个最小 Agent Wallet policy schema，覆盖预算、服务白名单、支付上限、有效期和撤销。
+    
+-   写 5 条 Agent reputation eval 样本，用来测试声誉是否按任务类型、证据和争议记录分维度。
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+
+
+今天我学习/完成了：
+
+-   阅读 AI x Web3 Bridge 的前三节：Chain-aware Context、Web3 Tool Use、Agent Workflow。
+    
+-   整理三节之间的关系：Chain-aware Context 提供链上事实，Web3 Tool Use 提供受限工具能力，Agent Workflow 提供可停止、可恢复、可审计的执行流程。
+    
+-   结合自己的 Hackathon / 产品研究方向，更新了 AI x Web3 Risk Research Agent 的 MVP 思路。
+    
+-   写了一份实践检查清单，用来约束 Agent 的上下文、工具权限、交易草稿、simulation、human confirmation 和 trace。
+    
+
+关键收获：
+
+-   AI x Web3 的 Bridge 不是让模型直接“上链操作”，而是在自然语言意图和链上执行之间建立安全过渡层。
+    
+-   Agent 必须先看见正确链上事实，再通过受限工具行动，最后在状态机和 trace 约束下推进。
+    
+-   真正有价值的 Agent 不是“什么都能点”，而是能解释、准备、检查、模拟、记录，并在高风险处停下来。
+    
+
+遇到的问题或下一步：
+
+-   下一步选一个测试网 swap 交易，按 Task Graph 拆解完整流程。
+    
+-   为 Risk Research Agent 写 10 条 regression set，覆盖错误链、未知合约、无限 approve、恶意文档、余额不足、oracle stale、用户拒签等场景。
+    
+-   把今天的 “低风险 swap 贯穿案例” 整理成 Handbook feedback candidate。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+
+
+
+
+# **Web3 基础全章学习笔记**
+
+日期：2026-05-21
+
+来源：
+
+-   [https://aiweb3.school/zh/handbook/web3/cryptography/](https://aiweb3.school/zh/handbook/web3/cryptography/)
+    
+-   [https://aiweb3.school/zh/handbook/web3/wallet/](https://aiweb3.school/zh/handbook/web3/wallet/)
+    
+-   [https://aiweb3.school/zh/handbook/web3/smart-contract/](https://aiweb3.school/zh/handbook/web3/smart-contract/)
+    
+-   [https://aiweb3.school/zh/handbook/web3/dev-stack/](https://aiweb3.school/zh/handbook/web3/dev-stack/)
+    
+-   [https://aiweb3.school/zh/handbook/web3/network/](https://aiweb3.school/zh/handbook/web3/network/)
+    
+-   [https://aiweb3.school/zh/handbook/web3/account-abstraction/](https://aiweb3.school/zh/handbook/web3/account-abstraction/)
+    
+-   [https://aiweb3.school/zh/handbook/web3/defi/](https://aiweb3.school/zh/handbook/web3/defi/)
+    
+-   [https://aiweb3.school/zh/handbook/web3/oracle/](https://aiweb3.school/zh/handbook/web3/oracle/)
+    
+-   [https://aiweb3.school/zh/handbook/web3/indexing/](https://aiweb3.school/zh/handbook/web3/indexing/)
+    
+-   [https://aiweb3.school/zh/handbook/web3/security/](https://aiweb3.school/zh/handbook/web3/security/)
+    
+
+## **1\. 总结**
+
+Web3 基础不是一组孤立概念，而是一条从“控制权”到“可验证执行”的系统链路：
+
+-   **密码学** 定义身份、签名、哈希和证明的底层边界。
+    
+-   **钱包** 是用户意图进入链上执行前的确认入口。
+    
+-   **智能合约** 把规则、资产和状态放进公开可验证的执行环境。
+    
+-   **开发栈** 让合约开发、测试、部署、前端调用和链上验证可复现。
+    
+-   **网络** 决定交易如何传播、打包、确认，以及 L1/L2/测试网的环境差异。
+    
+-   **账户抽象** 把账户从单一私钥扩展成可编程权限系统。
+    
+-   **DeFi** 把 token、流动性、借贷、稳定币和价格机制组合成开放金融协议。
+    
+-   **预言机** 把链外数据带入链上，同时引入新的信任边界。
+    
+-   **索引** 把原始区块、交易和事件整理成产品与 AI Agent 可用的数据层。
+    
+-   **安全** 把权限、测试、模拟、监控和应急响应贯穿整个系统。
+    
+
+对 AI x Web3 来说，今天最重要的收获是：Agent 不能只“理解 Web3 概念”，它必须尊重 Web3 的执行边界。模型可以解释、检索、生成计划和辅助判断，但私钥、签名、资产转移、合约调用、授权、升级、清算、预言机依赖和高风险交易都必须由工具事实、策略约束、模拟结果和人工确认共同控制。
+
+## **2\. 密码学：链上控制权的根**
+
+密码学是 Web3 账户、地址、签名、所有权和证明的基础。这里不需要先成为密码学研究者，但必须理解几个产品边界：
+
+-   **Hash** 是数据指纹和承诺，用来验证数据是否被改过。交易哈希、区块哈希、合约字节码哈希都属于这类可验证标识。Hash 不是加密，通常不能从哈希反推出原文。
+    
+-   **Public Key / Address** 可以公开，用来验证签名或定位账户，但地址本身不是“可信身份”。一个地址是否可信，取决于来源、验证信息和上下文。
+    
+-   **Private Key** 是账户控制权。泄漏私钥或助记词，不是“密码泄漏后改密码”的问题，而是资产和权限可能直接失控。
+    
+-   **Signature** 是对具体消息或交易内容的授权证明，不应该被产品包装成含糊的“登录确认”。
+    
+-   **Merkle Tree** 用哈希组织大量数据，让用户用少量 proof 证明某条数据属于某个集合。
+    
+
+我需要形成的习惯：看到签名弹窗时，先问它在证明身份、授权登录，还是在授权资产或改变链上状态。任何要求把私钥、助记词、签名原文或钱包控制材料交给网页、脚本、客服、AI 工具的流程，都应该默认视为高风险。
+
+## **3\. 钱包：不是登录按钮，而是确认边界**
+
+钱包管理的不是账号资料，而是链上控制权。Web3 产品里常见的动作需要明确拆开：
+
+-   **连接钱包**：应用读取地址、网络、账户状态，不等于可以动用资产。
+    
+-   **签名消息**：用户证明自己控制某地址，可能用于登录、订单创建或授权。
+    
+-   **发送交易**：用户请求改变链上状态，可能涉及转账、approve、合约调用、gas 支付。
+    
+
+这三类动作的风险完全不同，UI、文案和确认提示也应该不同。钱包交互的基本要求是：用户应该知道自己在哪条链、调用哪个合约、授权什么资产、费用用什么支付、失败后是否可恢复。
+
+关键概念：
+
+-   **EOA** 是由私钥控制的外部账户，兼容性好但权限粗、恢复难、自动化弱。
+    
+-   **Mnemonic** 是恢复钱包的高风险秘密，不应被任何应用索要。
+    
+-   **Transaction** 是正式的链上状态变更请求，要经历钱包确认、签名、广播、打包、执行和确认。
+    
+-   **Gas** 是链上执行成本，用户需要知道大致费用、失败成本和重试路径。
+    
+-   **Explorer** 是查看链上事实的重要入口，应检查 status、from/to、method、value、token transfers、logs、gas used。
+    
+
+AI Agent 可以帮助解释交易、准备参数和检查风险，但签名和权限不能随意交给模型。更稳妥的设计是：AI 做理解和辅助，钱包做确认和授权，智能账户或策略合约做执行约束。
+
+## **4\. 智能合约：公开可验证的规则系统**
+
+智能合约不是“自动执行的法律合同”，而是部署在链上的程序。它把规则、资产和状态放到公开环境里，也把 bug、权限和升级风险暴露给所有人。
+
+核心理解：
+
+-   合约的价值来自可验证执行，不是代码看起来聪明。
+    
+-   状态公开可查，不能把链上 storage 当私有数据库。
+    
+-   调用有成本和顺序，受 gas、区块顺序和外部状态影响。
+    
+-   权限必须显式，mint、pause、upgrade、withdraw 等敏感动作不能依赖默认信任。
+    
+
+知识点：
+
+-   **Solidity** 是 EVM 生态常见合约语言。学习重点不是语法，而是 storage、`msg.sender`、modifier、event、external call、revert、权限控制。
+    
+-   **EVM** 是合约执行环境，解释了 gas、storage 成本、外部调用风险和多链兼容。
+    
+-   **ABI** 是应用和合约沟通的接口说明，告诉工具能调用什么，但不保证调用安全。
+    
+-   **Event** 是合约向外部系统留下的可索引日志，前端、索引器和分析工具常依赖它构建历史记录。
+    
+-   **Upgrade** 是安全、治理和产品迭代之间的权衡。可升级合约更灵活，但引入管理员权限、治理攻击和信任问题。
+    
+
+一个链上调用不是“按钮点击”这么简单。完整链路通常包括：前端读取钱包和网络，按 ABI 编码调用数据，钱包确认签名，交易经 RPC 广播，验证者打包进区块，EVM 执行合约逻辑，event 被索引器读取，前端再更新状态。
+
+AI x Web3 里的边界：模型可以解释 ABI、生成调用参数、解释交易结果、写测试用例；合约必须承担最终规则和约束。
+
+## **5\. 开发栈：把不可逆执行前移到可验证流程**
+
+Web3 开发栈不是收集工具名，而是让合约开发、测试、部署、前端调用和监控变成可重复系统。一个最小链路包括：
+
+1.  写合约。
+    
+2.  编译合约，得到 bytecode 和 ABI。
+    
+3.  在本地链或测试网部署。
+    
+4.  写测试覆盖状态变化和权限边界。
+    
+5.  前端用地址和 ABI 读合约或发交易。
+    
+6.  在区块浏览器验证源码、交易和事件。
+    
+
+工具分层：
+
+-   **Remix**：适合入门、教学、原型和观察合约调用流程，但不适合长期替代工程化 repo。
+    
+-   **Hardhat**：适合 JavaScript/TypeScript 项目，把合约开发接到测试、部署脚本、前端和 CI。
+    
+-   **Foundry**：偏命令行和 Solidity-native 测试，适合高强度合约开发、fuzz testing、fork testing 和快速反馈。
+    
+-   **OpenZeppelin**：提供 ERC 标准、Ownable、AccessControl、Pausable 等成熟组件，但不能替代业务逻辑审查。
+    
+-   **viem / wagmi**：解决前端与链交互，重点是钱包连接、网络、合约读写、交易状态和缓存。
+    
+
+我需要记住：链上开发不是普通代码生成。AI 可以提升效率，比如解释 ABI、生成部署脚本、补测试、排查交易失败，但 Agent 如果能运行 `forge test`、读取部署配置、调用 `cast` 或生成前端合约调用代码，就必须被 repo workflow、测试、权限和 secret 管理约束。
+
+## **6\. 网络：链上状态的执行环境**
+
+Network 不是背景，而是交易能否被打包、状态能否同步、费用如何产生、确认要多久、L2 和主网如何分工的基础环境。
+
+关键点：
+
+-   **Block** 是交易被批量提交和排序的单位。交易顺序会影响结果，区块 gas limit 限制吞吐，新区块引用前一区块形成历史。
+    
+-   **Consensus** 让节点在没有中心数据库的情况下，对区块顺序和状态变化达成一致。应用要考虑 confirmation、短暂重组和 RPC 延迟。
+    
+-   **PoS** 用质押和惩罚机制组织验证者，安全来自经济质押、客户端实现和节点参与。
+    
+-   **Testnet** 适合验证部署脚本、钱包连接、RPC 配置、合约调用和前端状态处理，但不能替代主网安全审查。
+    
+-   **L2 / Rollup** 在安全、成本、速度和复杂度之间做权衡。费用更低不代表复杂度消失，桥、提现等待、排序器、跨链状态同步都会影响产品体验。
+    
+
+AI Agent 读取或执行链上动作时，必须明确网络上下文：chain id、RPC 来源、区块高度、合约地址、交易哈希、确认数、explorer 链接。主网和测试网、L1 和 L2、不同 chain id 的状态不能由模型猜。
+
+## **7\. 账户抽象：把权限变成可编程规则**
+
+账户抽象试图把账户从“谁有私钥谁控制”扩展成“在什么条件下允许什么动作”。这对 AI x Web3 特别重要，因为 Agent 不应该拿用户主私钥，也不应该拥有无限交易权限。
+
+核心概念：
+
+-   **ERC-4337**：通过 `UserOperation`、Bundler、EntryPoint、Paymaster 等组件实现智能账户交易流程。
+    
+-   **Smart Account**：由合约控制的账户，可以支持多签、恢复、批量执行、额度限制、方法限制和策略模块。
+    
+-   **Bundler**：收集 `UserOperation`，模拟验证并提交到 EntryPoint。它是应用的基础设施依赖。
+    
+-   **Paymaster**：允许第三方赞助 gas 或让用户用非原生资产支付费用，但需要风控和额度限制。
+    
+-   **Session Key**：给应用或 Agent 的临时权限，可以限制时间、链、合约、方法、额度和次数。
+    
+
+账户抽象不是让 AI 更自由，而是把 AI 的自由包在规则里。一个合理的 Agent Session Key 策略应该写清楚允许调用的合约和方法、额度、过期时间、chain id、最大交易次数、必须回到用户钱包确认的动作、撤销方式和审计日志。
+
+## **8\. DeFi：可组合金融，也会放大风险**
+
+DeFi 把资产、交易、借贷、稳定币和流动性协议化。它的难点不是合约能不能运行，而是资产和机制如何相互影响。
+
+关键概念：
+
+-   **Token** 是资产单位。看 token 不能只看名称和图标，还要检查合约地址、decimals、供应量、发行权限、暂停/冻结/增发/升级、特殊转账税或黑名单逻辑。
+    
+-   **AMM** 用流动性池和公式替代订单簿。需要理解滑点、流动性提供者、价格影响、MEV 和 sandwich risk。
+    
+-   **Lending** 把抵押、债务、利率、清算写进合约。风险来自抵押品价格、预言机、流动性、参数和依赖资产。
+    
+-   **Stablecoin** 是计价和结算基础，但稳定来自不同机制，不是天然保证。要看储备、赎回、抵押品、监管、治理和流动性。
+    
+-   **Liquidity** 决定资产能否以合理成本买入、卖出、借出、清算或退出。没有流动性支撑的价格只是屏幕数字。
+    
+
+AI 进入 DeFi，适合先做信息整理和风险辅助：解释交易、总结仓位、监控清算、识别异常价格、生成策略草案。高风险动作包括 swap、借贷、加杠杆、授权、跨链和清算。如果 Agent 要执行，至少需要额度限制、协议白名单、滑点上限、模拟结果、预言机检查、人工确认和交易后审计记录。
+
+## **9\. 预言机：链外数据进入链上的信任边界**
+
+区块链不能天然知道链外世界发生了什么。Oracle 的作用是把价格、天气、比赛结果、储备证明、随机数或计算结果，以合约可用的形式带进链上。
+
+关键理解：
+
+-   预言机不是“真实世界 API”，而是链上合约愿意信任的一套数据提交和验证机制。
+    
+-   一旦外部数据进入链上，它就会变成协议规则的一部分。
+    
+-   数据源、更新频率、聚合方式、权限和异常处理都会影响用户资产安全。
+    
+
+知识点：
+
+-   **Price Feed** 是常见形式。读取价格时要检查资产对、decimals、更新时间、异常值和当前链上的 feed 地址。
+    
+-   **Data Feed** 可以包括储备证明、利率、宏观数据、体育结果、灾害事件等。
+    
+-   **Oracle Risk** 包括数据源操纵、feed 延迟、节点离线、单位错误、低流动性资产价格攻击、stale price、升级权限不透明。
+    
+-   **AI Oracle** 把模型推理、评分、分类或生成结果提交给链上系统，会涉及模型版本、输入数据、prompt、评估标准、复核和争议处理。
+    
+
+我对 AI Oracle 的判断：不能让“模型说什么，合约就执行什么”。更合理的方式是记录输入、来源、模型版本、置信度和输出，给高风险结果设置 human-in-the-loop、挑战期、多人验证或经济惩罚。
+
+## **10\. 索引：从链上事实到产品可用数据**
+
+链上数据公开，不等于好用。Indexing 的作用是把区块、交易、事件和状态整理成产品、分析工具和 AI Agent 能快速查询的结构化数据。
+
+关键理解：
+
+-   链上是事实来源，索引层是可用数据层。
+    
+-   RPC 适合读取链状态和发送交易，不适合承载所有复杂历史查询。
+    
+-   产品需要面向问题的数据模型，例如地址仓位、协议 TVL、订单状态、Agent 执行历史，而不是原始区块流。
+    
+-   索引要能重放，以处理 reorg、bug 修复、合约升级和数据补偿。
+    
+
+知识点：
+
+-   **Event Indexing**：监听合约日志，把 `Transfer`、`Deposit`、`VoteCast` 等事件转成查询记录。
+    
+-   **Subgraph**：声明要监听的合约和事件、事件到实体的 mapping，并通过 GraphQL 暴露查询。
+    
+-   **RPC**：可用 `eth_call`、`eth_getLogs`、`eth_sendRawTransaction` 等接口，但会遇到 rate limit、节点不同步、archive 数据不可用、多 RPC 不一致等问题。
+    
+-   **Data Pipeline**：把 RPC、event listener、ABI 解码、数据库、reorg 处理、API、GraphQL、vector store、dashboard 和 Agent context 组合起来。
+    
+
+AI Agent 需要上下文，而链上上下文通常来自索引层。好的索引层应该给 Agent 提供结构化、带来源、带时间戳、可回溯的数据。模型负责解释，索引层负责事实。
+
+## **11\. 安全：从设计到执行后的完整流程**
+
+Web3 安全不是上线前找人审一次代码，而是从合约设计、权限、测试、交易模拟、监控、应急暂停到权限撤销的一整套工程流程。
+
+核心原则：
+
+-   链上系统默认暴露在公开对抗环境里，任何可调用路径都要按攻击面看待。
+    
+-   权限必须最小化，owner、admin、upgrade、pause、withdraw 都要有清楚边界。
+    
+-   执行前要模拟，尽量提前看到资产变化、合约调用、revert 和异常授权。
+    
+-   上线后要监控，大额转账、权限变更、合约升级、预言机异常、失败交易、TVL 流出和 Agent 高风险调用都需要观察。
+    
+
+知识点：
+
+-   **Reentrancy**：外部调用未完成前被再次调用，防护思路包括 Checks-Effects-Interactions、reentrancy guard、避免状态未更新前调用不可信合约。
+    
+-   **Access Control**：不要只问有没有 `onlyOwner`，还要问 owner 是谁、是否多签、是否 timelock、角色能否互授、权限变更是否有 event、私钥泄漏最坏结果是什么。
+    
+-   **Audit**：审计不是安全保证书。要看覆盖 commit、合约范围、已修复问题、接受风险、依赖版本、部署参数和上线代码是否一致。
+    
+-   **Simulation**：交易发出前的预演，可检查资产变化、revert、gas、授权、链 ID、滑点、余额和方法是否符合预期。
+    
+-   **Monitoring**：监控只有和响应流程结合才有效。谁收到告警，谁能 pause，谁确认误报，谁恢复系统，都要提前设计。
+    
+
+AI 会让安全边界更复杂。Agent 可以解释合约、生成交易、调用工具和执行策略，但也可能读错上下文、被 prompt injection 影响、调用错误工具或生成危险交易。因此 AI x Web3 的安全设计必须拆开：模型输出建议，工具返回事实，policy 限制权限，simulation 预演结果，human check 确认高风险动作，monitoring 记录执行后果。
+
+## **12\. AI x Web3 Research Agent 的产品化启发**
+
+结合前三天 AI 基础笔记，我可以把 Web3 基础接到一个更具体的 Hackathon / 产品研究方向：**只读优先的 AI x Web3 Risk Research Agent**。
+
+MVP 能力：
+
+1.  输入合约地址、交易哈希、协议名称或 DAO 提案链接。
+    
+2.  Agent 通过索引层、RPC、区块浏览器和文档 RAG 收集证据。
+    
+3.  输出结构化风险报告：网络、合约、钱包动作、权限、DeFi 暴露、预言机依赖、索引数据来源、安全检查。
+    
+4.  对所有高风险动作只生成 checklist，不直接执行。
+    
+5.  如果要进入执行阶段，需要智能账户/session key 策略、simulation 和 human confirmation。
+    
+
+需要的 Web3 数据字段：
+
+-   chain id、network、block number、timestamp。
+    
+-   contract address、ABI、verified source、upgrade status。
+    
+-   wallet action type：connect / sign message / send transaction。
+    
+-   transaction hash、status、method、from/to、value、token transfers、logs、gas used。
+    
+-   event sources、indexer timestamp、reorg handling。
+    
+-   oracle feed address、decimals、latest update、stale check。
+    
+-   DeFi token decimals、liquidity、slippage、health factor、liquidation threshold。
+    
+-   security signals：admin、multisig、timelock、pause、upgrade、audit commit、monitoring events。
+    
+
+这类产品的价值不是替用户“自动上链”，而是让用户在签名前知道自己将要做什么、依据是什么、风险在哪里、哪些事实来自工具、哪些只是模型推断。
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+
+
+\# Evaluation / Fine-tuning / Inference 学习笔记
+
+日期：2026-05-20
+
+来源：
+
+\- [https://aiweb3.school/zh/handbook/ai/evaluation/](https://aiweb3.school/zh/handbook/ai/evaluation/)
+
+\- [https://aiweb3.school/zh/handbook/ai/fine-tuning/](https://aiweb3.school/zh/handbook/ai/fine-tuning/)
+
+\- [https://aiweb3.school/zh/handbook/ai/inference/](https://aiweb3.school/zh/handbook/ai/inference/)
+
+\## 1. 总结
+
+今天读完 AI 基础部分剩下的三节：Evaluation、Fine-tuning、Inference。它们解决的是 AI 系统进入产品阶段后的三个核心问题：
+
+\- **Evaluation**：怎么判断模型或 Agent 的输出是否真的好、是否稳定、是否安全。
+
+\- **Fine-tuning**：什么时候需要改变模型行为，而不是继续堆 prompt、RAG 或工具。
+
+\- **Inference**：模型真正运行时，如何在质量、成本、延迟、吞吐和安全之间做取舍。
+
+如果把前两天的内容串起来，AI 应用从概念到产品大概是：
+
+1\. 用 **Prompt** 定义任务接口。
+
+2\. 用 **Context / RAG** 提供证据和边界。
+
+3\. 用 **Agent / Tools / MCP** 连接外部能力。
+
+4\. 用 **Frameworks** 管理状态、工作流和追踪。
+
+5\. 用 **Vibe Coding** 快速构建和迭代。
+
+6\. 用 **Evaluation** 判断是否真的有效。
+
+7\. 必要时用 **Fine-tuning** 改变模型稳定行为。
+
+8\. 最后用 **Inference** 控制线上质量、速度和成本。
+
+对 AI x Web3 来说，Evaluation、Fine-tuning、Inference 尤其重要，因为 Web3 场景里经常涉及资产、权限、签名、合约、治理和链上不可逆操作。一个看起来“会说”的 Agent，如果没有评估、上线推理控制和安全边界，很容易从“解释错误”升级为“执行错误”。
+
+\## 2. Evaluation：把感觉变成可复现判断
+
+Evaluation 的核心是：不要只凭感觉判断模型效果。一个 AI 产品需要回答：
+
+\- 它在哪些任务上表现好？
+
+\- 哪些场景会失败？
+
+\- 失败是否可复现？
+
+\- 新 prompt、新模型、新 RAG pipeline、新工具 schema 是否真的让系统变好？
+
+\- 是否引入了新的安全风险？
+
+我理解 Evaluation 至少有几层：
+
+\### 2.1 样本集
+
+评估首先需要样本。样本可以来自真实用户问题、课程任务、历史失败案例、合约分析案例、治理提案、客服对话、代码审查任务等。
+
+好的 eval set 不能只放“简单成功样本”，还要包含：
+
+\- 模糊问题：用户没有提供足够上下文。
+
+\- 冲突信息：不同来源给出不同版本。
+
+\- 过期信息：文档和链上状态不一致。
+
+\- 高风险请求：签名、转账、授权、部署、投票。
+
+\- 恶意输入：prompt injection、伪造工具输出、诱导泄露密钥。
+
+\- 边界案例：未知协议、未支持链、缺失 ABI、异常交易。
+
+\### 2.2 指标
+
+不同任务需要不同指标。不能只用“回答像不像人话”作为标准。
+
+可用指标：
+
+\- **准确性**：事实是否正确，链、地址、金额、合约接口是否匹配。
+
+\- **完整性**：是否覆盖关键风险、限制条件和下一步。
+
+\- **可追溯性**：关键结论是否有来源、链接或工具结果。
+
+\- **一致性**：同类输入是否得到稳定输出。
+
+\- **安全性**：是否拒绝危险请求，是否避免泄露敏感信息。
+
+\- **可执行性**：建议是否能转化为明确行动。
+
+\- **成本/延迟**：线上是否能在可接受时间和成本内完成。
+
+Web3 场景里，我会额外加几个指标：
+
+\- 是否区分“链上事实”“文档描述”“模型推断”。
+
+\- 是否在涉及签名或资产动作时要求人工确认。
+
+\- 是否在证据不足时拒答或要求补充信息。
+
+\- 是否避免直接生成高风险交易执行指令。
+
+\### 2.3 人工评估与自动评估
+
+人工评估适合高风险、开放式、产品判断强的任务；自动评估适合可重复、格式稳定、标准明确的任务。
+
+组合方式：
+
+\- 先用人工标注建立小而可靠的黄金样本。
+
+\- 用自动测试检查格式、字段、引用、拒答策略、敏感词、工具调用顺序。
+
+\- 对开放式答案可以用 LLM-as-judge，但 judge prompt 本身也要评估。
+
+\- 对关键任务保留人工复核，尤其是链上动作、合约部署和资产相关建议。
+
+LLM-as-judge 有用，但不能盲信。它适合做初筛、排序、风格一致性检查，不适合作为唯一安全裁判。
+
+\### 2.4 Regression Eval
+
+每次改 prompt、换模型、改检索策略、加工具、改 framework，都应该跑回归评估。否则很容易出现局部优化：一个 demo 变好了，另一个重要场景变坏了。
+
+我的最小流程：
+
+1\. 收集 20-50 个代表性样本。
+
+2\. 为每个样本写期望输出要点和不可接受行为。
+
+3\. 每次系统改动后跑 eval。
+
+4\. 记录分数变化、失败样本和原因。
+
+  
+\### 3.4 Fine-tuning 与 RAG / Agent 的关系
+
+我的理解：
+
+\- RAG 解决“知道什么资料”。
+
+\- Agent 解决“能调用什么工具做什么事”。
+
+\- Fine-tuning 解决“模型稳定地怎么说、怎么组织输出、怎么遵守任务风格”。
+
+所以 fine-tuning 不应该替代 RAG，也不应该替代工具调用。对 AI x Web3 产品，稳妥路线通常是：
+
+1\. 先用 prompt + RAG + tools 做出可评估原型。
+
+2\. 收集真实输入和失败案例。
+
+3\. 用 eval 判断失败类型。
+
+4\. 如果失败主要来自格式、风格、任务习惯，再考虑 fine-tuning。
+
+5\. fine-tune 后继续跑 regression eval。
+
+\## 4. Inference：上线时的质量、成本和速度控制
+
+Inference 是模型真正响应用户请求的过程。它不是“调用一下模型”这么简单，而是线上产品的成本、延迟、稳定性和用户体验核心。
+
+\### 4.1 Decoding 参数
+
+推理时的采样参数会影响输出稳定性。
+
+\- **Temperature**：越高越随机，越低越稳定。风险分析、代码生成、合约解释应偏低；创意 brainstorming 可以更高。
+
+\- **Top-p / Top-k**：控制候选 token 范围。适合调节多样性，但不应该用来掩盖任务定义不清。
+
+\- **Max tokens**：控制输出长度和成本。太短会截断关键风险，太长会拖慢响应并增加噪声。
+
+\- **Stop sequences / structured output**：可以帮助控制格式和结束边界。
+
+AI x Web3 的建议：涉及风险、资产、合约、签名、授权时，推理参数应该更保守，优先稳定和可验证，而不是创造性。
+
+\### 4.2 Latency 与 Throughput
+
+用户体验不只看模型质量，还看等待时间。一个产品研究 Agent 如果每次都要检索、rerank、调用多个工具、再长文本生成，延迟会变高。
+
+可优化点：
+
+\- 缓存稳定资料和检索结果。
+
+\- 把只读检索和工具调用并行化。
+
+\- 对长任务分阶段返回：先给进度，再给最终报告。
+
+\- 对简单任务使用小模型或短链路。
+
+\- 对批量任务使用 batching。
+
+但 Web3 高风险任务不能只为速度牺牲安全。交易模拟、权限检查、人工确认不应该被跳过。
+
+\### 4.3 Cost 控制
+
+成本来自输入 token、输出 token、模型选择、检索、rerank、工具调用、日志和重试。
+
+我的成本策略：
+
+\- 能用确定性代码解决的，不用模型。
+
+\- 能用小模型解决的，不默认用大模型。
+
+\- 能缓存的资料和中间结果要缓存。
+
+\- RAG 只放必要上下文，不把整份文档塞进去。
+
+\- 对高价值任务用强模型，对低风险重复任务用轻量模型。
+
+\- 记录每类任务的平均 token 和失败重试成本。
+
+\### 4.4 Reliability
+
+线上推理需要处理失败：
+
+\- 模型超时。
+
+\- 工具调用失败。
+
+\- 检索无结果。
+
+\- 输出 JSON 格式错误。
+
+\- 上下文过长。
+
+\- 用户请求越权。
+
+\- 结果不确定。
+
+一个成熟系统需要 fallback：
+
+\- 重试一次。
+
+\- 降级到只读摘要。
+
+\- 要求用户补充信息。
+
+\- 返回“无法确认”，而不是编造。
+
+\- 对高风险动作转人工确认。
+
+\### 4.5 Observability
+
+没有日志，就无法评估和改进。推理链路应该记录：
+
+\- 用户任务类型。
+
+\- 使用的模型和参数。
+
+\- 检索到的 sources。
+
+\- 工具调用及返回摘要。
+
+\- 输出长度、延迟、成本。
+
+\- 是否触发拒答、人工确认或错误。
+
+\- 用户反馈和后续修正。
+
+注意：日志不能记录 API key、私钥、助记词、cookie、未公开团队信息、敏感钱包数据。
+
+\## 5. 对 AI x Web3 Research Agent 的落地设计
+
+我可以把今天三节接到昨天的 AI x Web3 Research Agent MVP 上。
+
+\### 5.1 Evaluation 设计
+
+建立一个小型 eval set：
+
+\- 10 个协议文档问答。
+
+\- 10 个 DAO 提案摘要。
+
+\- 10 个合约接口解释。
+
+\- 10 个风险识别任务。
+
+\- 10 个恶意或高风险请求。
+
+每个样本标注：
+
+\- 必须引用哪些来源。
+
+\- 必须指出哪些不确定性。
+
+\- 是否应该拒答。
+
+\- 是否需要人工确认。
+
+\- 输出是否符合固定结构。
+
+\### 5.2 Fine-tuning 预留策略
+
+先不 fine-tune。原因：
+
+\- 当前阶段更需要 RAG、工具和 eval。
+
+\- Web3 事实变化快，不适合靠 fine-tune 记忆。
+
+\- 还没有足够高质量样本。
+
+未来如果收集到足够多的高质量研究报告样本，可以考虑 fine-tune 一个“固定输出风格和结构”的小模型，用于初稿生成，但仍然让 RAG 和工具提供事实。
+
+\### 5.3 Inference 策略
+
+默认策略：
+
+\- 风险分析 temperature 低。
+
+\- 输出固定 JSON 或 Markdown 结构。
+
+\- 检索结果限制在最相关来源。
+
+\- 高风险动作输出 checklist，不输出直接执行步骤。
+
+\- 记录 sources、工具调用、延迟和成本。
+
+\- 失败时降级为“证据不足，需要补充资料”。
+
+\## 6. 我的检查清单
+
+以后做 AI x Web3 产品或 Hackathon 原型时，我会用这张检查清单：
+
+\- \[ \] 是否有 eval set，而不是只靠 demo 感觉？
+
+\- \[ \] 是否包含失败样本、恶意输入、高风险请求？
+
+\- \[ \] 是否区分事实错误、格式错误、工具错误、权限错误？
+
+\- \[ \] 是否先尝试 prompt/RAG/tools，再考虑 fine-tuning？
+
+\- \[ \] Fine-tuning 数据是否经过清洗和版本标注？
+
+\- \[ \] 推理参数是否符合任务风险等级？
+
+\- \[ \] 是否记录成本、延迟、工具调用和用户反馈？
+
+\- \[ \] 日志是否排除了密钥、私钥、cookie、钱包敏感数据？
+
+\- \[ \] 高风险链上动作是否有人工确认和审计记录？
+
+\## 7. Handbook Feedback Candidate
+
+建议 AI 基础部分可以在 Evaluation / Fine-tuning / Inference 三节末尾加入一个统一案例：
+
+\> 把一个 AI x Web3 Research Agent 从原型推进到可评估版本。
+
+这个案例可以展示：
+
+\- 如何从真实问题构建 eval set。
+
+\- 如何判断一个失败应该用 prompt、RAG、tool、fine-tuning 还是产品流程解决。
+
+\- 如何为不同风险等级设置 inference 参数。
+
+\- 如何记录 trace、成本、延迟和人工确认。
+
+这样可以帮助学习者理解：Evaluation、Fine-tuning、Inference 不是模型部署后的细节，而是 AI 产品能不能稳定进入真实用户场景的关键工程层。
+
+\## 8. 今日行动项
+
+\- \[x\] 阅读 Evaluation / Fine-tuning / Inference 三节。
+
+\- \[x\] 完成 AI 基础部分剩余章节笔记。
+
+\- \[x\] 将三节内容接到 AI x Web3 Research Agent 产品思路。
+
+\- \[ \] 设计一个 50 条以内的最小 eval set。
+
+\- \[ \] 从一个具体协议开始写 5 条评估样本。
+
+\- \[ \] 把 Handbook feedback candidate 整理成可提交反馈。
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+
+
+
 # **RAG / Agent / Frameworks / Vibe Coding / MCP 学习笔记**
 
 日期：2026-05-19
@@ -202,6 +1078,12 @@ MVP 设计：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
 
 # **LLM / Prompt / Context 学习笔记**
 

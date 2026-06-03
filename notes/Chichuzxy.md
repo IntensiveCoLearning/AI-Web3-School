@@ -15,8 +15,1464 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+## **Week 3 学习笔记 | 2026-06-02**
+
+主方向: Privacy & Security -> ZKML 推理验证 目标赛道: [Z.AI](http://Z.AI) | Web3 x Long-Horizon Task
+
+* * *
+
+### **今日完成**
+
+| 任务 | 产出 |
+| --- | --- |
+| Week 1-2 缺口诊断 | week3/README.md |
+| 根 README 更新 | 标注 Week 3 进行中 |
+| 1 页 Hackathon proposal memo | week3/proposal-memo.md |
+| 深度研究 (3 个方向) | week3/deep-research.md |
+| 项目骨架 + sprint plan | project/ (README + foundry.toml + plan) |
+| 4 个遗留文件提交 | push 到仓库 |
+
+* * *
+
+### **赛道对齐分析**
+
+ZKML 全链路（训练->ONNX->电路->部署->推理->验证）是 6 步串行依赖 + 跨工具调用 + 错误恢复 = 天然 Long-Horizon Task。对齐 [Z.AI](http://Z.AI) 赛道，不硬套 Cobo。
+
+* * *
+
+### **深度研究收获**
+
+1.  EZKL 自动 ONNX->Halo2 电路，但操作符只覆盖约 50 个（ONNX 有 120+），量化有精度损失。PoC 必须用小模型。
+    
+2.  Circom/SnarkJS 工具链成熟但只适合手写电路，不适合 ML。PoC 保留作为 fallback。
+    
+3.  Groth16 vs Halo2: PoC 用 Halo2（EZKL 默认），生产才考虑 Groth16 的 proof 更小优势。不纠结选型。
+    
+4.  最大风险: EZKL Windows 环境兼容性。应对: 提前在 Colab 跑通。
+    
+
+* * *
+
+### **项目定位**
+
+ZKML Pipeline Agent: 用户说"训练房价模型并部署 ZK verifier"，agent 全自动执行 6 步，最终输出 Sepolia 合约地址 + 链上验证 tx hash。不做 UI、不做复杂模型、不做隐私输入层。最小闭环 = 一句自然语言 -> 链上可验证结果。
+
+* * *
+
+### **Week 4 Sprint 规划**
+
+Day 1: 模型 + EZKL 环境 Day 2: Proof 生成 + Verifier 合约 Day 3: Sepolia 部署 + 验证 Day 4: Agent 编排 + 端到端 Day 5: 打磨 + 提交 Day 6-7: Buffer
+
+* * *
+
+### **下一步**
+
+-   组队 / 确认单人参赛
+    
+-   了解 GLM-5.1 API
+    
+-   Colab 跑通 EZKL 全流程（验证环境兼容性）
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+
+下面是为你整理的今天可以直接打卡的笔记，涵盖了 Week 2 的核心学习内容、技术理解与实践记录。
+
+\---
+
+\## 📌 Week 2 学习打卡
+
+**日期：** 2026-06-01
+
+**模块：** Week 2 | AI x Web3 问题地图 & Proposal
+
+**主方向：** Privacy & Security → ZKML（零知识证明机器学习）
+
+\### 一、今日核心目标
+
+构建 AI × Web3 问题地图，选定 ZKML 方向深挖，产出 Proposal。\*\*关键判断标准\*\*：AI 的角色和 Web3 机制是否都不可替代。
+
+\### 二、Week 2 核心框架：AI × Web3 问题地图
+
+**六大问题域与不可替代性判断：**
+
+| 方向 | 核心痛点 | AI 不可替代 | Web3 不可替代 |
+
+|------|---------|------------|--------------|
+
+| **① Payment / Commerce** | Agent 如何自主完成 API/算力购买、结算 | 自动识别报价条款、规划预算、判断交付质量 | 链上结算 + x402/MPP 支付协议 + 不可篡改收据 |
+
+| **② Identity / Reputation** | Agent 如何被发现、验证协作 | 动态能力匹配、解析任务需求 | DID/ENS + EAS 链上证明 + ERC-8004 注册表 |
+
+| **③ Wallet / Permission** | Agent 接触私钥/资金时如何分层授权 | 自然语言→权限策略翻译、风险评估 | Safe Guard + CAW Pact 任务级授权、链上强制执行 |
+
+| **④ Privacy / Security ← 主方向** | AI 推理数据隐私、合约漏洞 | 生成 ZK 证明、检测异常模式、审计代码 | ZK 链上验证 + 不可篡改审计日志 |
+
+| **⑤ Governance / Coordination** | DAO 信息过载、提案质量低 | 提案摘要、贡献统计、预算 checklist | Snapshot 投票 + 链上执行 + 抗审查投票 |
+
+| **⑥ Agent DeFi Execution** | Agent 执行 swap/lend 时的安全边界 | 市场分析、策略优化、异常检测 | 链上清算 + Pact 预算限制 + 审计日志 |
+
+**核心结论**：判断 AI × Web3 项目是否真·不可替代，需要问两个问题——去掉 AI 还能成立吗？去掉 Web3 还能成立吗？只有两边都必不可少，才是真正的交叉创新。
+
+\### 三、主方向深度理解：ZKML
+
+**1\. 方向选择逻辑：为什么是 Privacy & Security？**
+
+扫描五大领域后，ZKML 在"AI 和 Web3 各自不可替代"这个标准上表现最强：
+
+| 维度 | 去掉 AI | 去掉 Web3 | 结论 |
+
+|------|---------|-----------|------|
+
+| 合约审计 | 人工审计慢、覆盖率低 | 中心化数据库存审计结果，信任成本高 | AI 不可替代（速度+覆盖面） |
+
+| 隐私计算 | 不用 AI 就没有智能分析，只剩加密管道 | 不用 Web3/ZK 就无法在不暴露数据前提下验证结果 | 两者都不可替代 |
+
+| 链上异常检测 | 规则引擎漏报率高 | 中心化检测结果公信力不足 | AI 不可替代 |
+
+**核心结论**：在"用 ZK 证明 AI 推理正确性"这个交叉点上，AI 提供推理能力，Web3（ZKP）提供验证机制，去掉任何一边都无法实现"可信且隐私的 AI 推理"。
+
+**2\. 核心问题定义**
+
+\> 如何不暴露模型权重的前提下，让链上合约验证 AI 推理结果？
+
+拆解为三个子问题：
+
+\- **数据隐私**：用户数据不能明文交给 AI 服务方
+
+\- **推理可信**：AI 给出的结果如何证明是正确的
+
+\- **链上验证**：证明过程能否低成本上链且公开可验证
+
+**3\. 四阶段流程全解**
+
+| 阶段 | 位置 | 执行内容 | 自动化程度 | 是否人工确认 |
+
+|------|------|---------|-----------|------------|
+
+| **① 数据提交** | 链下 | 用户加密数据 → Prover | 测试网需确认 | ✅ 人工确认授权 |
+
+| **② 链下推理+证明** | 链下 | 加载模型 → 推理 R → 生成 ZK proof P | 全自动 | ❌ 无需人工 |
+
+| **③ 链上验证** | 链上 | 提交(R,P) → 合约验证 P 有效性 | 合约自动执行 | ✅ 上链交易需确认 gas |
+
+| **④ 结果使用** | 链上 | Consumer 读取已验证的结果 R | 全自动 | ❌ 无需人工 |
+
+**关键理解**：推理和验证是纯计算，没有资金风险，可以全自动化；而数据授权（谁有权用我的数据）和链上交易提交（gas 花费）必须保留人工确认。
+
+**4\. 典型场景：健康数据隐私诊断**
+
+**场景描述**：患者 Alice 有敏感健康数据（血糖、血压、家族病史），希望 AI 评估糖尿病风险评分，但：
+
+\- 不希望原始数据泄露给第三方
+
+\- 希望保险公司信任评分结果
+
+\- 保险公司只想要验证后的评分，不想看到原始数据
+
+**完整流程**：
+
+1\. Alice 加密健康数据，发送给 Prover
+
+2\. Prover 加载糖尿病风险模型（ONNX），推理得 R = 0.73
+
+3\. Prover 用 EZKL 生成 ZK proof P："我用 commit\_W 对应的模型、commit\_X 对应的输入，算出了 R=0.73"
+
+4\. Prover 提交（R, P）到 Sepolia Verifier 合约，支付 gas
+
+5\. 合约验证 P 有效 → 存储 R 为"已验证"
+
+6\. 保险公司读取链上已验证的 R=0.73，计算保费
+
+**核心价值**：Alice 的原始血糖、血压数据从未离开 Prover 的内存，从未上链。验证的内容是"Prover 确实用承诺的模型和输入计算出了 R"，而不暴露实际值。
+
+**5\. 技术选型方案**
+
+| 组件 | 选择 | 理由 |
+
+|------|------|------|
+
+| AI 模型 | 简单线性回归 / 小型 MLP | Circom 对大模型支持有限，先跑通 PoC |
+
+| 模型格式 | ONNX | EZKL 原生支持 |
+
+| ZK 框架 | **EZKL（主）+ Circom（辅助）** | EZKL 从 ONNX 自动转电路，Circom 手动电路辅助 |
+
+| 证明系统 | PoC: Groth16 / 生产: Halo2 | Groth16 工具链成熟、gas 低；Halo2 无需可信设置 |
+
+| 部署链 | Sepolia 测试网 | 免费 gas，训练营标准 |
+
+| 合约框架 | Foundry | 测试快，Solidity 原生 |
+
+**EZKL 的优势**：将 ONNX 模型转为 ZK 电路，自动生成 proving key 和 verifying key，大幅降低 ZKML 入门门槛。
+
+**6\. 为什么这个场景必须同时有 AI 和 Web3？**
+
+| 如果去掉... | 方案还成立吗？ | 原因 |
+
+|------------|--------------|------|
+
+| **AI** | ❌ 不成立 | 纯链上合约无法运行非线性模型推理（算力不够） |
+
+| **Web3** | ❌ 不成立 | 没有 ZKP，Prover 无法在不暴露数据的情况下让第三方信任推理结果 |
+
+\### 四、ZK 电路开发实践（Circom 实战记录）
+
+**1\. 完整开发链路跑通**
+
+编译 → Powers of Tau → 生成密钥 → Witness → Proof → Verify
+
+**2\. 遇到的关键问题与解决方案**
+
+| 问题 | 现象 | 解决方案 |
+
+|------|------|---------|
+
+| **circom 版本陷阱** | npm 安装的是 circom1（JS 实现），不支持 circom2 语法（pragma circom 2.x、signal input）| 从 GitHub Releases 下载官方 circom2 v2.2.3（Rust 版）|
+
+| **CRLF 换行符问题** | Windows 下编辑的文件默认带 \\r\\n，circom 解析器报错 | `sed -i 's/\r$//'` 解决|
+
+| **文档一致性问题** | 5 个文档中证明系统选择前后矛盾 | 交叉检查，统一 Groth16(PoC)/Halo2(生产) 的分工|
+
+**关键认知升级**：ZK 证明的生成有这么多步骤，不是简单的"写个电路就跑"。每个步骤都有明确的工具和命令。
+
+\### 五、方向 Backlog（未选方向的原因记录）
+
+**Wallet / Permission**：AI 角色不够硬（主要是自然语言→结构化 Pact 的翻译层），偏工程集成而非交叉创新。
+
+**Payment / Commerce**：协议层还在早期，x402 和 MPP 生态不成熟，AI 角色偏向自动化而非智能。
+
+**Governance / Coordination**：AI 角色太软，不依赖 Web3 也能做（Notion AI 就能实现大半）。
+
+\> 记录未选方向的原因，防止后续讨论中反复摇摆——如果某个方向再次出现，可以回到这里确认当初的判断是否仍然成立。
+
+\### 六、参考资料清单
+
+\- **ZKML 项目**：EZKL（ONNX → ZK 电路，最易用）、Modulus Labs（技术博客）、Giza（AI Agent + ZK 验证）
+
+\- **ZK 证明系统**：Circom（电路编写语言）、Halo2、SnarkJS
+
+\- **论文**：zkCNN（2021，开创性工作）、ZKML（2023，EZKL 团队技术报告）
+
+\### 七、安全红线
+
+\- 私钥/助记词永不暴露给 AI
+
+\- 所有链上操作仅限测试网
+
+\- 每笔交易须人工确认
+
+\- AI 生成代码须人工审查后部署
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+
+
+\# Week 2 学习笔记 | AI x Web3
+
+**作者:** Chichuzxy
+
+**主方向:** Privacy & Security -> ZKML 推理验证
+
+**时间:** 2026-05-28 ~ 05-30
+
+\---
+
+\## 一、核心认知
+
+\### 1. "去掉AI / 去掉Web3"双重检验法
+
+判断一个方向值不值得做：分别去掉AI和Web3，看方案是否还成立。
+
+\- 合约审计：去掉AI -> 人工审计太慢、太贵 -> AI不可替代
+
+\- 隐私计算：去掉Web3 -> 无法在不暴露数据前提下验证 -> Web3不可替代
+
+\- 选Privacy & Security的理由就是两端都是硬依赖，没有一方是"锦上添花"
+
+\### 2. Groth16 vs Halo2 不是二选一，是分阶段
+
+直觉上想统一用一个证明系统。实用做法：
+
+\- PoC阶段用 Groth16：工具链成熟（Circom+SnarkJS）、gas低、社区资料多
+
+\- 生产阶段用 Halo2：无需可信设置（trusted setup）、安全性更高
+
+\- 两个阶段的分工要在所有文档中统一措辞，否则互相矛盾
+
+\### 3. ZK电路的完整链路
+
+不是"写个电路就跑"。标准流程：
+
+编译(.circom -> .r1cs) -> Powers of Tau(可信设置) -> 生成密钥 -> Witness -> Proof -> Verify
+
+每一步有独立工具和命令，遗漏一步就跑不通。
+
+\### 4. 问题拆解的五个维度
+
+参与方 x 流程阶段 x 自动化边界 x 验证机制 x 风险 = 完整拆解。
+
+4个参与方（User/Prover/Verifier/Consumer）、4个阶段，每阶段判断需不需要人工确认。
+
+\### 5. AI辅助审计的定位
+
+AI不是替代人工审计，而是"加速器"和"扫描器"：
+
+\- AI快速扫描代码模式（访问控制、存储布局、常见漏洞）
+
+\- 但无法判断业务逻辑是否合理（"是否需要访问控制"取决于使用场景）
+
+\- 人工复核必不可少：判别误报（本实验1/4为低价值发现）、补充漏报
+
+\### 6. 交付物不等于"写完文件"
+
+Week 2总共7项交付，不是7个文件。之前 direction-selection 里有个简表以为是问题地图，实际缺5个方向的完整分析和判断矩阵。深挖包也类似：proposal里有流程图碎片，但没有场景、反例、风险和验证计划的独立整理。
+
+教训：对着要求一项一项过，不要靠感觉。
+
+\### 7. Week 2真正产出的不是文档
+
+是三个能力的建立：
+
+\- 判断能力：一个方向中AI和Web3各自不可替代什么
+
+\- 拆解能力：参与方、流程、自动化边界、验证机制、风险
+
+\- 表达能力：用场景、反例、流程图把一个复杂方向讲清楚
+
+\---
+
+\## 二、踩坑记录
+
+\### 坑1: npm版circom是旧版
+
+\- 现象`npm install -g circom` 安装的是circom1（JS实现），编译circom2代码报 Parse error
+
+\- 解决：从GitHub Releases下载circom2 v2.2.3 Rust版可执行文件
+
+\- 教训：工具链第一步就是确认版本，不要默认npm的即为最新
+
+\### 坑2: pragma版本号不匹配
+
+\- 现象`pragma circom 0.5.46;` 在circom2.2.3上报错
+
+\- 解决：改为 `pragma circom 2.2.3;`
+
+\- 原因：0.5.46是circom1的版本号，circom2用2.x体系
+
+\### 坑3: `signal private input` 语法已废弃
+
+\- 现象：circom2中private不再是关键字
+
+\- 解决：改为 `signal input a;` —— circom2中input默认就是private
+
+\### 坑4: Windows CRLF换行符
+
+\- 现象：circom解析器不`\r\n`
+
+\- 解决`sed -i 's/\r$//' basicAdd.circom`
+
+\- 后续：编辑circom文件时确保保存为LF
+
+\### 坑5: 文档间描述矛盾
+
+\- 现象：[problem-decomposition.md](http://problem-decomposition.md)写Groth16，[proposal-zkml.md](http://proposal-zkml.md)写Halo2
+
+\- 解决：明确分工——PoC用Groth16，生产用Halo2，所有文档统一措辞
+
+\### 坑6: AI对业务逻辑判断困难
+
+\- 现象：AI建议添加onlyOwner，但TraceRecorder是"开放记录本"，不需要权限控制
+
+\- 教训：AI只能给技术建议，最终决策需要人理解业务场景
+
+\### 坑7: AI审计误报率高
+
+\- 现象：4个AI发现，3个有实际价值，1个是低优先级
+
+\- 教训：AI审计是"发现"而非"诊断"，需要人类过滤
+
+\### 坑8: 事件参数优化容易被忽略
+
+\- 现象：AI没发现MessageChanged事件中oldMessage(string)的冗余
+
+\- 教训：AI习惯于"功能正确"判断，对"效率优化"不够敏感
+
+\---
+
+\## 三、想法和疑问
+
+\### 想法
+
+1\. ZKML的信任模型微妙点：用户信任ZK数学，但Prover可能用错误的模型推理。需要模型哈希链上承诺来约束
+
+2\. Layer2部署Verifier合约能大幅降低gas，但L2的sequencer去中心化程度是trade-off
+
+3\. 当前Circom对大模型（CNN/Transformer）支持有限，PoC只能用小模型。电路复杂度随模型参数数量线性增长
+
+4\. AI审计流水线可以自动化：将审计结果存入数据库，定期重新扫描合约更新
+
+5\. 可以结合形式化验证：AI扫描 + 形式化证明，提高安全性
+
+\### 疑问
+
+1\. EZKL自动将ONNX转ZK电路，生成的电路效率如何？会不会比手写Circom大很多？
+
+2\. Halo2的可信设置"可选"具体怎么运作？和Groth16的强制可信设置区别在哪？
+
+3\. ZK电路验证的是"计算正确性"，但如果Prover用了一个看起来对但实际有后门的模型版本怎么办？
+
+4\. 电路规模对proof生成时间的影响有多大？普通笔记本能跑多大的模型？
+
+5\. AI审计的准确率能提升到多少？如何量化效率提升？
+
+6\. AI审计报告如何集成到CI/CD流程？
+
+\---
+
+\## 四、Week 2 产出总览
+
+| # | 交付物 | 文件 |
+
+|---|--------|------|
+
+| 1 | 问题地图（6方向xAI/Web3不可替代性判断） | [problem-map.md](http://problem-map.md) |
+
+| 2 | 方向选择说明 | [direction-selection.md](http://direction-selection.md) |
+
+| 3 | 问题拆解（五维度） | [problem-decomposition.md](http://problem-decomposition.md) |
+
+| 4 | 初步Proposal | [proposal-zkml.md](http://proposal-zkml.md) |
+
+| 5 | 参考资料清单 | [references.md](http://references.md) |
+
+| 6 | 主方向深挖包（流程图/场景/反例/风险/验证计划） | [deep-dive-package.md](http://deep-dive-package.md) |
+
+| 7 | 方向backlog | [direction-backlog.md](http://direction-backlog.md) |
+
+附带产出：
+
+\- Circom PoC产物（artifacts/circom-poc/，5个文件）
+
+\- AI辅助合约审计报告（[experiment-1-audit-report.md](http://experiment-1-audit-report.md)）
+
+\- Circom调试记录（[circom-debug-log.md](http://circom-debug-log.md)）
+
+当前PoC进度：basicAdd电路编译+Proof生成+本地验证已完成。下一步：Solidity Verifier合约部署到Sepolia测试网。
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+
+
+
+## **Week 2 学习打卡 | 2026-05-30**
+
+**主方向:** Privacy & Security → ZKML 推理验证
+
+* * *
+
+### **今日完成**
+
+补齐 Week 2 最后 3 项缺失交付物，现在 7 项全部齐全。
+
+| # | 交付物 | 状态 |
+| --- | --- | --- |
+| 1 | AI x Web3 问题地图 (problem-map.md) | Done |
+| 2 | 方向选择说明 (direction-selection.md) | Done |
+| 3 | 问题拆解 (problem-decomposition.md) | Done |
+| 4 | 初步 Proposal (proposal-zkml.md) | Done |
+| 5 | 参考资料清单 (references.md) | Done |
+| 6 | 主方向深挖包 (deep-dive-package.md) | Done |
+| 7 | 方向 backlog (direction-backlog.md) | Done |
+
+* * *
+
+### **今日产出内容**
+
+**问题地图** — 覆盖 6 个方向，每方向标注 AI 作用 + Web3 机制 + 不可替代性判断 + 反例
+
+**方向 Backlog** — 记录 3 个未选方向 (Wallet, Payment, Governance) 及不选原因，防止反复摇摆
+
+**主方向深挖包** — 1 张流程图 + 1 个健康诊断场景 + 3 个反例 + 7 项风险矩阵 + Circom PoC 验证计划
+
+* * *
+
+### **学习收获**
+
+1.  交付物要对清单，不能靠感觉。之前以为 direction-selection 里的简表就是问题地图，实际上缺 5 方向完整分析。
+    
+2.  写反例是检验理解的最高效方式。ZKML 的三个反例: 结果上链无 verify(proof)、公开数据不需要隐私、信任硬件而非密码学。
+    
+3.  Week 2 真正产出不是 7 个文档，而是判断"一个方向中 AI 和 Web3 各自不可替代什么"的能力。
+    
+
+* * *
+
+### **下一步**
+
+Circom PoC 阶段 Step 5-7: Solidity Verifier 合约 → Foundry 部署到 Sepolia → 链上验证 proof
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+
+
+
+
+\## AI × Web3 训练营 Week 2 笔记（简洁打卡版）
+
+\> **时间**：2026.5.24–5.29｜\*\*Repo\*\*：\[week2\]([https://github.com/Chichuzxy/ai-web3-training-week1/tree/main/week2](https://github.com/Chichuzxy/ai-web3-training-week1/tree/main/week2))
+
+\### 一、本周目标
+
+\- 去中心化 AI（DeAI）概念
+
+\- Agent 链上钱包设计逻辑
+
+\- AI ↔ Web3 双向赋能
+
+\- 进阶交叉实验
+
+\### 二、核心模块速览
+
+| 模块 | 内容 |
+
+|------|------|
+
+| **DeAI** | 去中心化算力 + 数据所有权；0G 操作系统层 |
+
+| **Agent Wallet** | 自主交易 + 多签/时间锁 + 可撤销机制 |
+
+| **交叉实验** | AI 分析 DAO 提案 → 人工复核 → 链上记录 |
+
+| **L2/ZK 入门** | Rollups 原理、ZKML 概念探索 |
+
+\### 三、本周关键数据
+
+\- 学习天数：6 天
+
+\- 核心概念：10+ 个
+
+\- 交叉链路：1 条（治理助手 → 人工审核）
+
+\### 四、打卡小结
+
+1\. **DeAI 不是蹭热点**：Web3 解决数据/算力垄断，AI 让链上从手动变智能。
+
+2\. **Agent 钱包=关键基建**：安全（多签/限额/人工确认）比功能更重要。
+
+3\. **分层思维**：L1 做共识，L2 做扩容，各司其职。
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+
+
+
+
+
+\# Week 2 学习打卡
+
+**日期:** 2026-05-28
+
+**模块:** Module A (问题地图) + Module D (L2/ZK)
+
+**今日时间:** 约 5 小时
+
+\---
+
+\## 今日完成
+
+| # | 任务 | 状态 | 备注 |
+
+|---|------|------|------|
+
+| 1 | 方向选择说明 | 已完成 | 选定 Privacy & Security → ZKML，用"去掉AI/去掉Web3"双重检验论证不可替代性 |
+
+| 2 | 核心问题拆解 | 已完成 | 定义4个参与方、4阶段流程、自动化边界、验证机制、6个风险点 |
+
+| 3 | 初步 Proposal | 已完成 | 技术选型: ONNX + EZKL + Halo2 (生产) / Circom + Groth16 (PoC) |
+
+| 4 | 参考资料清单 | 已完成 | ZKML 项目(3个)、ZK 工具(3个)、论文(5篇)，带阅读优先级 |
+
+| 5 | Circom 环境搭建 | 已完成 | 安装 circom2 v2.2.3，跑通 basicAdd 编译→Witness→Proof→Verify |
+
+| 6 | 文档一致性修复 | 已完成 | 统一 Groth16(PoC)/Halo2(生产) 的分工描述，消除5个文档间矛盾 |
+
+\## 关键收获
+
+1\. **Circom 版本陷阱** -- npm 安装的 `circom` 是旧版 JS 实现 (circom1)，不支持 circom2 语法 `pragma circom 2.xsignal input`)。正确的做法是从 GitHub Releases 下载官方的 circom2 (Rust 版)。这个问题卡了很久，之前一直以为是代码写错了，其实是工具版本不对。
+
+2\. **Groth16 vs Halo2 的分层设计** -- 之前直觉上会觉得选了就要统一用一个。但实际合理的做法是：PoC 阶段用 Groth16 (工具链成熟、gas 低、快速验证)，生产阶段用 Halo2 (无需可信设置、更安全)。这样既保证前期开发效率，又给后期留了升级路径。
+
+3\. **CRLF 换行符问题** -- Windows 下编辑的文件默认带 `\r\n`，circom 解析器不认`sed -i 's/\r$//'` 一行命令解决。以后写 circom 文件要注意保存时的换行符设置。
+
+4\. **ZK 电路开发的完整链路** -- 今天跑通了完整的编译→Powers of Tau→生成密钥→Witness→Proof→Verify 流程。原来 ZK 证明的生成有这么多步骤，不是简单的"写个电路就跑"。每个步骤都有明确的工具和命令。
+
+5\. **文档一致性很重要** -- 写完 5 个相关联的文档后自己交叉检查，发现证明系统的选择前后矛盾。多份文档互相引用时，关键决策点一定要对齐，否则后面回头读时会很困惑。
+
+\## 遇到的问题
+
+1\. **npm 版 circom 是旧版** -- 运行 `npm install -g circom` 安装的是 circom1 (JS 实现)，编译 `basicAdd.circom` 时报 `Parse error on line 1`。解决：从 GitHub 下载 circom2 v2.2.3 的 Windows 可执行文件。
+
+2\. \*`pragma circom 0.5.46` 版本号不匹配\*\* -- 原始代码的 pragma 版本与编译器 v2.2.3 不兼容。改为 `pragma circom 2.2.3` 后编译通过。
+
+3\. \*`signal private input` 语法已废弃\*\* -- circom2 中 `input` 默认就是 private 的`private` 关键字已移除。改为 `signal input a;`。
+
+4\. **CRLF 换行符导致解析失败** -- Windows 编辑器的默认换行符 circom 不认。用 `sed -i 's/\r$//'` 修复。
+
+5\. **文档间证明系统描述矛盾** -- 任务2 写 Groth16，任务3 写 Halo2，互相矛盾。解决：明确 PoC 阶段用 Groth16，生产阶段用 Halo2，在文档中标注过渡关系。
+
+\## 明日计划
+
+1\. 用 `snarkjs zkey export solidityverifier` 生成 Solidity 验证合约
+
+2\. 在 Sepolia 测试网部署 Verifier 合约
+
+3\. 提交 proof 到链上验证
+
+4\. 开始 Module B (Solidity 深入) 或搭建 EZKL 环境
+
+\## 截图/链接
+
+\- 代码提交: [https://github.com/Chichuzxy/ai-web3-training-week1/commits/main](https://github.com/Chichuzxy/ai-web3-training-week1/commits/main)
+
+\- 电路源码: [https://github.com/Chichuzxy/ai-web3-training-week1/blob/main/week2/artifacts/circom-poc/basicAdd.circom](https://github.com/Chichuzxy/ai-web3-training-week1/blob/main/week2/artifacts/circom-poc/basicAdd.circom)
+
+\- Verification Key: [https://github.com/Chichuzxy/ai-web3-training-week1/blob/main/week2/artifacts/circom-poc/verification\_key.json](https://github.com/Chichuzxy/ai-web3-training-week1/blob/main/week2/artifacts/circom-poc/verification_key.json)
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+
+
+
+
+
+
+**学习目标回顾**
+
+-   构建隐私安全方向的问题地图（核心痛点+技术冲突点）。
+    
+-   设计 ZKML（零知识机器学习）融合 Layer2 的提案框架。
+    
+-   输出初步架构图与验证流程说明。
+    
+
+**心得体会**
+
+1.  **项目结构的重要性**：通过今天的工作，我们明确了良好的项目组织对于团队协作和个人理解都至关重要。合理的目录划分可以帮助我们在复杂的开发环境中快速定位文件并保持代码整洁。
+    
+2.  **工具链的选择与配置**：安装和配置 Circom 等工具时遇到了一系列挑战，这让我认识到选择适合当前需求的技术栈是多么重要。同时，也意识到文档查阅能力和故障排查技巧在实际操作中的价值。
+    
+3.  **问题解决的过程**：面对编译错误和其他技术障碍时，逐步排除法是非常有效的策略。每次一个小改动后立即测试结果，有助于迅速缩小问题范围。
+    
+4.  **持续学习的态度**：随着区块链和人工智能领域的快速发展，不断有新的概念和技术涌现。这种情况下，保持好奇心和开放心态，积极寻求解决方案显得尤为重要。
+    
+
+**遇到的主要问题及应对措施**
+
+1.  **Circom 安装与版本兼容性问题**
+    
+    -   _问题_：初始安装时出现版本不匹配的情况，导致无法正确解析 `.circom` 文件。
+        
+    -   _解决_：通过更新至最新稳定版解决了该问题。这里提醒自己以后要注意检查所用库或框架的版本要求。
+        
+2.  **PowerShell 脚本执行限制**
+    
+    -   _问题_：在尝试删除某些目录时收到了权限相关的警告消息。
+        
+    -   _解决_：修改了执行策略允许脚本运行，并且以管理员身份打开终端执行命令。这也强调了熟悉操作系统特性的重要性。
+        
+3.  **电路编写中的语法错误**
+    
+    -   _问题_：最初编写 circom 模板时不小心写错了关键字（如将 `pragma circom` 错误地写作其他词语）。明明代码是对的，总是说我是错的。
+        
+    -   _解决_：仔细校对模板内容，利用文本编辑器的搜索功能查找潜在错误。未来应该更加注重细节，特别是在处理敏感格式如编程语言特有的语法结构时。
+        
+4.  **环境变量设置不当**
+    
+    -   _问题_：刚开始接触 new project 时，由于忽略了 PATH 环境变量的调整，导致部分命令不可用。
+        
+    -   _解决_：学会了如何查看并修改系统级环境变量，确保所有必要的路径都被包含进去，从而使得全局安装的包可以被轻松访问。
+        
+
+**建议与反思**
+
+-   在日常工作中加强基础知识的学习，特别是那些看似基础但实际上极为重要的领域，比如操作系统使用、网络通信原理等。
+    
+-   养成良好的编码习惯，定期备份重要数据以防意外丢失；同时也要学会合理利用版本控制系统进行管理。
+    
+-   对于初学者来说，加入相关社区或者论坛可以获得很多宝贵的经验分享和支持，在遇到难题时不要害怕求助于他人。
+    
+-   时间管理同样关键，制定清晰的日程安排并尽量遵守，这样可以让整个学习过程变得更加高效有序。
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+
+
+
+
+
+
+
+### **学习笔记：隐私与安全领域探索**
+
+**1\. 核心问题**
+
+-   敏感数据暴露
+    
+-   智能合约漏洞
+    
+-   去中心化身份验证
+    
+
+我们聚焦于**敏感数据暴露**问题，并探讨了同态加密、零知识证明等技术的应用。
+
+**2\. 技术方案**
+
+-   使用部分同态加密（如Pyfhel）实现链下数据加密。
+    
+-   将密文提交至区块链存储（通过智能合约）。
+    
+-   结合ZKP技术进行数据真实性的链上验证。
+    
+
+**3\. 实验流程**
+
+1.  **链下加密**：
+    
+    -   使用Python脚本调用Pyfhel库对数据进行加密。
+        
+    -   输出密文数组。
+        
+2.  **智能合约部署**：
+    
+    -   编写Solidity合约，支持存储和查询密文数据。
+        
+3.  **前端交互**：
+    
+    -   使用Web3.js连接本地测试网，调用合约方法完成数据提交。
+        
+
+**4\. 关键工具**
+
+-   **Pyfhel**：实现同态加密。
+    
+-   **Hardhat/Truffle**：搭建本地测试环境。
+    
+-   **ZKML/ZKP**：未来扩展方向，用于增强数据验证能力。
+    
+
+**5\. 下一步计划**
+
+-   完善ZKP验证逻辑，提升安全性。
+    
+-   在测试网上实际运行代码并记录性能表现。
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+
+
+
+
+
+
+
+
+AI x Web3 School 训练营 Week 1 学习打卡 日期：2026-05-24
+
+一、今日完成的任务
+
+1.  Gas 数据补充与对比分析 从之前记录的三笔交易中提取了完整 Gas 数据：
+    
+    -   setMessage: Gas Used 34,706, Gas Price 1.534776295 Gwei, TxFee 0.000053261341765385 ETH
+        
+    -   setValue: Gas Used 33,226, Gas Price 1.53062375 Gwei, TxFee 0.0000509054846775 ETH
+        
+    -   普通转账: Gas Used 21,000, Gas Price 1.50000004 Gwei, TxFee 0.00003150000084 ETH 四笔交易总成本约 0.00036 ETH，按当前价格约 0.001 美元，测试网几乎无成本
+        
+2.  Gas 对比分析发现
+    
+    -   普通转账最省 Gas (21,000)，因为不执行合约代码
+        
+    -   setMessage 最费 Gas (34,706)，字符串存储比纯数值修改更耗 Gas
+        
+    -   合约写入比纯转账贵约 58%，因为需要执行合约逻辑和触发事件
+        
+    -   字符串存储比数值存储多消耗约 1,480 Gas，因为 Solidity 中 string 是动态长度类型
+        
+    -   Sepolia 测试网 Gas Price 极低 (1.5 Gwei)，主网同期可能在 20-50 Gwei
+        
+3.  合约地址统一 将所有文件中的合约地址从旧的 0xc56a...7948 更新为新的 0xdA2E...651a 部署交易从 0xf414...f937 更新为 0x7276...2671
+    
+4.  模块 C 交叉实验确认完成 完整链路已跑通：AI 生成合约代码 -> 人工复核 -> 钱包确认 -> 链上部署 -> 区块浏览器验证 交叉实验文档已创建，记录了每个环节的操作和验证结果
+    
+5.  仓库文件更新
+    
+    -   [README.md](http://README.md): 更新模块 B 合约地址，标记模块 C 完成，更新 Next Steps
+        
+    -   tx-hashes.txt: 补充完整交易历史（含两次部署、读写、转账），验证状态全部勾选
+        
+    -   [testnet-tx-record.md](http://testnet-tx-record.md): 更新合约地址和部署信息
+        
+
+二、Git 提交记录
+
+Commit 1: d9aed99 文件: module-b-web3-fundamentals/[testnet-tx-record.md](http://testnet-tx-record.md) 变更: 补全 3 笔交易 Gas 数据，新增对比分析表格和关键发现
+
+Commit 2: 98c20b2 文件: [README.md](http://README.md), artifacts/tx-hashes.txt, module-b-web3-fundamentals/[testnet-tx-record.md](http://testnet-tx-record.md) 变更: 统一合约地址，标记模块 C 完成，补充完整交易记录
+
+三、Week 1 完成状态总览
+
+模块 A - AI 基础: 全部完成 Learning Agent 配置记录 Prompt 库 Demo 代码 (eth-checksum-cli, gas-price-checker) Prompt 参数实验记录 每日打卡 (Day 1-5)
+
+模块 B - Web3 基础: 全部完成 测试钱包创建 (MetaMask, Sepolia) 合约部署 (TraceRecorder) 合约源码归档 测试网交易记录文档 Gas 数据补充和对比分析
+
+模块 C - 交叉实验: 全部完成 AI 生成合约 -> 人工复核 -> 钱包确认 -> 链上部署 -> 区块浏览器验证 交叉实验文档已创建
+
+四、核心概念速查
+
+Gas 相关: Gas Used: 交易实际消耗的计算资源量 Gas Price: 每单位 Gas 的价格（单位 Gwei） Base Fee: EIP-1559 后的基础费用，由网络自动计算，会被销毁 Priority Fee: 给验证者的小费，决定交易被打包的优先级 TxFee: 总费用 = Gas Used x Gas Price
+
+交易类型: Legacy 交易: 使用 Gas Price 的传统模式 EIP-1559 交易: 使用 Base Fee + Priority Fee 的新模式，Gas 费用更可预测
+
+Gas 消耗对比: 普通转账: 21,000 Gas（固定基础成本） 简单合约调用 (setValue): 约 33,000 Gas 字符串存储 (setMessage): 约 34,700 Gas（字符串比数值更耗 Gas） 合约部署: 约 150,000 Gas（初始化代码 + 存储合约字节码）
+
+五、安全红线回顾
+
+私钥和助记词从未暴露给 AI 全部操作在 Sepolia 测试网完成 每笔交易和合约写入均经人工确认 AI 仅负责代码生成和流程指导，签名环节完全人工 测试网 Gas 极低，主网操作需格外谨慎
+
+记录时间: 2026-05-24 记录方式: Hermes Agent 从会话日志提取汇总，人工确认后输出
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+
+
+
+
+
+
+
+
+
+### **当前 Hermes 配置问题（排查过程与现状）**
+
+**现象：** 即使 API key 通过 `curl` 验证有效，Hermes 在配置为 `custom` provider 后仍返回 HTTP 401。
+
+**排查步骤：**
+
+1.  检查 `.env` 文件存在且包含 `CUSTOM_API_KEY`。
+    
+2.  确认 `hermes config show` 中 `model` 配置正确。
+    
+3.  手动设置环境变量 `set CUSTOM_API_KEY=...`，再次测试，依然 401。
+    
+4.  `curl` 直接调用成功，说明 key 和端点有效。
+    
+5.  `hermes update` 因网络限制无法完成。
+    
+6.  尝试 `hermes auth activate custom` 和 `hermes config set` 等操作，未解决问题。
+    
+
+**当前结论：** 可能是 Hermes 版本（v0.14.0）对 `custom` provider 的请求构造方式与 DashScope 兼容性不佳，或缺少必要的请求头参数。
+
+**临时解决方案：** 使用 Python 脚本直接调用模型，完成本周任务。
+
+**待解决问题：** 需要更新 Hermes 到支持 `--base-url` 或正确构造 `custom` 请求的版本，或等待后续版本修复。  
+  
+**下一步计划**
+
+1.  **修复 Hermes 配置：** 尝试手动下载更新或使用国内镜像重新安装，待网络改善后继续调试。
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+
+
+
+
+
+
+
+
+
+
+AI x Web3 School 训练营 Week 1 学习打卡 日期：2026-05-23 (Day 4-5)
+
+一、今日完成的任务
+
+1.  GitHub Repo 交付物整理
+    
+    -   创建 artifacts/tx-hashes.txt 交易哈希汇总文件 合约地址: 0xc56a356d2ccfe3240cc35dc8a8b3064e2cc67948 部署交易: 0xf414a4aea774f9c34c0fc694e9f0792b8cfacdeaad7cca35adee7cd391dff937 包含 Etherscan 验证链接
+        
+    -   创建 module-b-web3-fundamentals/[testnet-tx-record.md](http://testnet-tx-record.md) 详细测试网交易记录 包含部署信息、读写验证清单、Gas 记录表
+        
+    -   更新 [README.md](http://README.md) 进度追踪区
+        
+    -   Commit 并推送到 GitHub (commit: f1b8954)
+        
+2.  Week 1 提交笔记整理
+    
+    -   从会话日志中提取完整学习内容
+        
+    -   整理为精简版提交文档: [AI-Web3-Week1-Submission-Notes.md](http://AI-Web3-Week1-Submission-Notes.md)
+        
+    -   涵盖 7 大模块: Learning Agent 配置、Web3 基础任务、AI 工具实践、核心概念、交叉实验、安全原则、本周统计
+        
+3.  项目结构梳理
+    
+    -   确认 repo 包含 4 个 commits
+        
+    -   核心文件: Module A: [learning-agent-setup.md](http://learning-agent-setup.md), [prompts-library.md](http://prompts-library.md), demo/ Module B: [testnet-tx-record.md](http://testnet-tx-record.md) Docs: [prompt-parameter-experiments.md](http://prompt-parameter-experiments.md), daily-checkin Artifacts: tx-hashes.txt
+        
+
+二、本周完成的全部交付物
+
+Module A - AI Fundamentals (已完成) Hermes Agent 配置记录 ([learning-agent-setup.md](http://learning-agent-setup.md)) Prompt 库 ([prompts-library.md](http://prompts-library.md)) Prompt 参数实验记录 ([prompt-parameter-experiments.md](http://prompt-parameter-experiments.md)) Demo 代码: [eth-checksum-cli.py](http://eth-checksum-cli.py), [gas-price-checker.py](http://gas-price-checker.py)
+
+Module B - Web3 Fundamentals (已完成) 测试钱包创建 (MetaMask, Sepolia) 地址: 0x147Fcf3EB8B9E305a5b4e16cbba90462F7126db9 领取测试币并发送交易 合约部署到 Sepolia 合约: 0xc56a356d2ccfe3240cc35dc8a8b3064e2cc67948 交易: 0xf414a4aea774f9c34c0fc694e9f0792b8cfacdeaad7cca35adee7cd391dff937 区块浏览器验证 (Sepolia Etherscan) 测试网交易记录文档 ([testnet-tx-record.md](http://testnet-tx-record.md)) 交易哈希汇总 (artifacts/tx-hashes.txt)
+
+Module C - AI x Web3 交叉实验 (部分完成) 智谱 API 调用实践 (已完成) 完整链路验证: AI 生成 -> 人工复核 -> 钱包确认 -> 链上执行 -> 浏览器验证 (已完成) 模块 C 文档目录待创建 (未完成)
+
+综合交付 (已完成) GitHub Repo: [https://github.com/Chichuzxy/ai-web3-training-week1](https://github.com/Chichuzxy/ai-web3-training-week1) Week 1 提交笔记 ([AI-Web3-Week1-Submission-Notes.md](http://AI-Web3-Week1-Submission-Notes.md)) 每日打卡记录 (docs/) 核心概念速查表 (AI + Web3 各 8 个概念)
+
+三、本周统计
+
+活跃天数: 5 天 (2026-05-19 至 2026-05-23) 会话数: 33+ 独立会话 使用模型: 5 种 (qwen3.6-plus, qwen3.6-35b, qwen3.5-27b, glm-5.1, qwen3.6-flash) 主要工具: terminal, search\_files, read\_file, write\_file, session\_search, execute\_code GitHub Commits: 4+
+
+四、待补充项
+
+1.  合约源码文件，补充到 module-b-web3-fundamentals/smart-contract-demo/
+    
+2.  合约部署方式说明，Remix 或 Hardhat 或 Foundry
+    
+3.  合约读写验证截图
+    
+4.  普通转账交易 TX Hash
+    
+5.  Gas 数据记录
+    
+6.  模块 C 交叉实验的详细文档
+    
+
+五、安全红线回顾
+
+私钥和助记词从未暴露给 AI 全部操作在 Sepolia 测试网完成 每笔交易和合约写入均经人工确认 AI 仅负责代码生成和流程指导，签名环节完全人工
+
+记录时间: 2026-05-23 21:49 记录方式: Hermes Agent 从会话日志提取汇总，人工确认后输出
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+
+
+
+
+
+
+
+
+
+
+# **AI x Web3 School 训练营 - Week 1 学习打卡**
+
+**日期：** 2026-05-22 **学员：** Chichuzxy
+
+## **一、今日完成的任务**
+
+**1\. Hermes Agent 配置与使用**
+
+-   环境：Windows 桌面版 Hermes Agent
+    
+-   完成模型切换测试：Qwen 3.6/3.5 系列、GLM 等
+    
+-   验证工具链：browser / search / terminal / file 等全部正常运行
+    
+-   记录 Session 数量：今日约 33 个独立会话
+    
+
+**2\. Web3 基础任务回顾（专业课已完成）**
+
+-   钱包：MetaMask 已创建 (地址: 0x147Fcf...6db9)
+    
+-   测试网：Sepolia (已领币、已发交易)
+    
+-   合约部署：使用 Remix IDE 连接 MetaMask 部署合约
+    
+-   验证：已在 Sepolia Etherscan 确认交易和合约
+    
+
+**3\. AI 工具实践**
+
+-   使用 ZhipuAI (智谱) SDK 编写并运行了 Python 聊天脚本
+    
+-   实现了 API Key 安全加载 (.env) 和上下文管理
+    
+-   验证了"AI 生成代码 -> 人工复核 -> 运行"的完整链路
+    
+
+**4\. Learning Agent 配置记录**
+
+-   确认当前 Hermes Agent 即为 Week 1 要求的 learning agent
+    
+-   已生成两份配置文档：实验报告 + 学习日志
+    
+
+## **二、今日学到的关键概念**
+
+**Agent vs Chatbot**
+
+-   Chatbot 只能输出文本，Agent 可以调用工具（读写文件、执行命令、联网等），形成"感知-决策-执行"循环。
+    
+
+**安全原则**
+
+-   私钥/助记词绝对不能给 AI。
+    
+-   所有链上操作必须在测试网进行。
+    
+-   签名、转账必须保留人工确认环节。
+    
+
+## **三、遇到的问题与解决**
+
+1.  **API 401 错误**: 原因是 Key 失效，已更换有效 Key 解决。
+    
+2.  **GitHub 推送失败**: HTTPS 连接不稳定，尝试通过 API 推送，待网络恢复。
+    
+
+## **四、明日计划**
+
+-   检查网络，确认 GitHub 推送是否成功。
+    
+-   补充 Etherscan 交易哈希截图到 Repo。
+    
+-   完善最小交叉实验记录文档。
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+\# Week 1 Day 1 学习打卡日志
+
+\## 基本信息
+
+\- 日期：2026-05-21（Week 1）
+
+\- 状态：进行中
+
+\- 学习目标对齐：理解 LLM/AI 基本概念、搭建 Learning Agent、建立 Web3 操作安全意识、启动交叉实验链路
+
+\## 今日完成事项
+
+\### 1. Learning Agent 配置记录
+
+\- 使用 Hermes CLI 完成 `training-week1` 技能加载与 Chat 会话初始化
+
+\- 配置目录`~/.hermes/config.yaml`
+
+\- 启用的核心工具集：terminal / file / web / browser / memory / skills / todo / delegation
+
+\- 安全上下文已开启 `security_context.redact_secrets: true`，自动屏蔽私钥/助记词等敏感信息
+
+\- 遇到 Windows 终端兼容问题（Git Bash 下 `hermes setup` 报错），已明确需在 PowerShell / Windows Terminal 中运行
+
+\### 2. 项目仓库初始化
+
+\- 创建统一学习入口仓库：[https://github.com/Chichuzxy/ai-web3-training-week1](https://github.com/Chichuzxy/ai-web3-training-week1)
+
+\- 规划文档结构：README（任务清单）、docs/[learning-agent.md](http://learning-agent.md)（Agent 配置说明）、[log.md](http://log.md)（每日进度记录）
+
+\### 3. 核心概念学习与理解
+
+\- Learning Agent：具备上下文记忆、结构化 Prompt 工程能力、多工具 Workflow 整合的持续学习系统。相比传统一次性问答，能主动追踪进度并生成可复用的学习笔记。
+
+\- Web3 操作链基础路径：创建测试钱包 -> 领取测试币 -> 发送测试交易 -> 部署最小合约 -> 区块浏览器验证。强调必须在测试网完成，严禁主网随意调用。
+
+\## 安全与规范确认
+
+\- 私钥/助记词绝不交由 AI Agent 直接接触，所有签名、转账、合约写入必须保留人工确认环节
+
+\- 实验严格限制在测试网环境
+
+\- 建立权限意识与失败恢复意识，为后续交叉实验铺底
+
+\## 本周模块规划（今日已讨论）
+
+\- 模块 A：Learning Agent 配置记录 + Prompt 工程实践（今日已打底）
+
+\- 模块 B：创建测试钱包、领测试币、发一笔测试交易（核心实操，待执行）
+
+\- 模块 C：AI + Web3 的最小交叉实验（跑通 AI 生成 -> 人工复核 -> 钱包确认 -> 链上执行 -> 浏览器验证 链路）
+
+\## 待办与明日计划
+
+\- \[ \] 切换至 PowerShell 完成 `hermes setup` 深度配置，更新 API Key
+
+\- \[ \] 准备测试网钱包地址与 Faucet 链接，开始模块 B 实操
+
+\- \[ \] 将本日志正式推送到 `ai-web3-training-week1` 仓库
+
+\- \[ \] 继续推进 Prompt Template 设计，用于自动化周报总结
+
+\## 交付物清单对齐
+
+| 交付项 | 状态 | 备注 |
+
+|--------|------|------|
+
+| Learning Agent 配置记录 | 基本完成 | 需补全环境配置细节 |
+
+| GitHub Repo 及日志 | 进行中 | Repo 已建，首篇 [log.md](http://log.md) 归档中 |
+
+| Web3 测试网交互数据 | 待执行 | 需生成测试钱包与 TX Hash |
+
+| 概念说明与交叉实验记录 | 规划中 | 明日启动模块 B/C |
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+好的，这是根据你今天的实际操作整理的学习笔记，可以直接放入 GitHub 仓库的 `notes/` 目录。
+
+\---
+
+\## 📝 Week 1 学习笔记：Hermes Agent 配置与 LLM 模型接入
+
+\*\*日期\*\*：2026-05-20
+
+\*\*作者\*\*：zxy
+
+\*\*主题\*\*：在 WSL2 中安装并配置 Hermes Agent，接入免费 LLM 模型，完成首次 AI 工具实践
+
+\---
+
+\### 🎯 学习目标回顾
+
+\- 理解 LLM 的基本工作方式与 API 调用
+
+\- 动手搭建一个 AI Agent（learning agent）
+
+\- 完成 AI 工具实践：跑通 Agent 对话，并用它辅助学习
+
+\- 建立 GitHub 学习仓库，记录全过程
+
+\---
+
+\### ⚙️ 环境与工具
+
+\- \*\*操作系统\*\*：Windows 11 + WSL2 (Ubuntu)
+
+\- \*\*Agent 框架\*\*：Hermes Agent v0.14.0（安装在 `~/.hermes/hermes-agent`）
+
+\- \*\*模型服务\*\*：
+
+\- 最终选择 \*\*智谱AI BigModel\*\* 的免费模型 `GLM-4.7-Flash`
+
+\- 兼容 OpenAI 接口，通过 `GLM_API_KEY` + 修改 `GLM_BASE_URL` 接入
+
+\---
+
+\### 🚧 遇到的问题与解决过程
+
+1\. \*\*找不到 `openai.py` 文件\*\*
+
+\- 现象`find ~/.hermes -name "openai.py"` 无结果。
+
+\- 原因：Hermes 使用模块化插件结构，没有独立的 `openai.py` 文件。
+
+\- 解决：通过查看 `.env.example` 了解配置机制，转而配置 Provider 环境变量。
+
+2\. \*\*[Z.ai](http://Z.ai) 模型不可用\*\*
+
+\- 尝试使用 [Z.ai](http://Z.ai) 的 `glm-4-flash` 报错 `Unknown Model`。
+
+\- 通过 API 查询发现 [Z.ai](http://Z.ai) 当前可用模型列表中无该模型，免费额度已下线。
+
+\- 转向课程推荐的 BigModel`open.bigmodel.cn`）。
+
+3\. \*\*Hermes 配置文件的修改\*\*
+
+\- 复制 `.env.example` 为 `.env`
+
+\- 设置 `GLM_API_KEY` 和 `GLM_BASE_URL` 指向 BigModel
+
+\- 使用 `hermes config set model.default GLM-4.7-Flash` 切换模型
+
+\- 重启 Hermes 后成功返回对话。
+
+\---
+
+\### ✅ 最终配置（关键参数）
+
+\`\`\`ini
+
+\# ~/.hermes/hermes-agent/.env
+
+GLM\_API\_KEY=你的BigModel密钥
+
+GLM\_BASE\_URL=[https://open.bigmodel.cn/api/paas/v4](https://open.bigmodel.cn/api/paas/v4)
+
+\`\`\`
+
+\`\`\`yaml
+
+\# ~/.hermes/config.yaml (自动修改)
+
+model:
+
+default: GLM-4.7-Flash
+
+\`\`\`
+
+\---
+
+\### 🧪 验证测试
+
+\- 启动 Hermes`hermes`
+
+\- 输入：“你好”
+
+\- 返回：Hermes 自我介绍并列举能力，回复正常，上下文用量 19.8K/200K（10%）
+
+\---
+
+\### 🎓 模型选择总结
+
+| 方案 | 可用性 | 费用 | 结论 |
+
+|------|--------|------|------|
+
+| 阿里云百炼 | 未成功配置 | 免费额度 | 暂未使用 |
+
+| [Z.ai](http://Z.ai) (智谱国际) | 免费模型已下线 | 无免费 | 放弃 |
+
+| BigModel (智谱国内) | ✅ 正常 | 免费 2000万 tokens | \*\*最终采用\*\* |
+
+| OpenRouter | 备选方案 | 有免费模型 | 后续可尝试 |
+
+\---
+
+\### 💡 图形化界面探索
+
+\- Hermes WebUI：通过 Docker 部署，浏览器访问 `localhost:3001`，可直接对接现有 WSL2 中的 Hermes 配置。
+
+\- Hermes Desktop：独立 Windows 应用，需重新配置，暂时不采用。
+
+\- 决定优先使用命令行完成本周任务，图形化界面留待后续优化。
+
+\---
+
+\### 📦 产出与下一步
+
+\- ✅ 创建 GitHub 学习仓库（待补充链接）
+
+\- ✅ 本次笔记归档至 `notes/week1-hermes-setup.md`
+
+\- ⏭️ 下一步任务：
+
+\- 用 Hermes 生成 LLM/Agent 概念笔记
+
+\- 创建 Web3 测试钱包，完成一笔测试网交易
+
+\- 完成最小交叉实验（AI 输出 → 人工复核 → 链上执行）
+
+\---
+
+\### 📌 重要经验
+
+\- \*\*环境变量优先\*\*：Agent 框架通常通过 `.env` 和 config.yaml 控制模型，而不是直接修改代码。
+
+\- \*\*API 兼容性\*\*：很多国产模型都支持 OpenAI 接口格式，只需改 base\_url 和 api\_key。
+
+\- \*\*免费模型选择\*\*：密切关注平台公告，模型生命周期和免费政策会动态调整。
+
+\- \*\*学习记录是关键\*\*：所有操作、错误和解决过程都应写下来，形成可回溯的材料。
+
+\---
+
+_本笔记由 Hermes Agent (GLM-4.7-Flash) 辅助整理，人工审核后归档。_
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
+# 2026-05-19
+<!-- DAILY_CHECKIN_2026-05-19_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\### 📝 任务1：搭建Learning Agent（Hermes）— 进度与困惑记录
+
+**📅 打卡日期：** 2026年5月19日
+
+**🧰 当前环境：** Windows + WSL2（已安装）
+
+**🔧 正在搭建的工具：** Hermes Agent
+
+**🔑 API状态：** 已获取免费模型API（但还在选择用哪个模型）
+
+\---
+
+\#### ✅ 已完成的工作
+
+1\. **WSL2环境已安装就绪**
+
+\- 可以在Windows下运行Linux子系统，为Hermes等工具提供了运行环境。
+
+2\. **初步了解Hermes**
+
+\- 知道它是一个可以接入不同大模型API的Agent工具，适合做学习助手的搭建。
+
+3\. **已获取免费API**
+
+\- 已在某个平台（[如Z.ai](http://如Z.ai)、GLM或DeepSeek等）申请了免费API Key，暂时不需要充值。
+
+\---
+
+\#### ❌ 当前卡住的问题（核心困惑）
+
+1\. **免费模型太多，不知道怎么选**
+
+\- 手里有几个候选：GLM-4-flash、DeepSeek-V3、Qwen-turbo、[Z.ai](http://Z.ai)免费版等。
+
+\- 纠结点：
+
+\- 哪个和Hermes兼容性最好？（有些模型API格式不一样，怕接不上）
+
+\- 哪个在免费额度下性能够用？（怕跑不动Hermes的完整功能）
+
+\- 哪个回复质量适合做学习辅助？（怕生成的学习计划太水）
+
+2\. **不确定怎么把免费API接入Hermes**
+
+\- 是直接在Hermes的配置文件里改Base URL和API Key？还是需要额外写代码？
+
+\- 不同平台的API格式（如OpenAI兼容格式、智谱格式、DeepSeek格式）怎么统一适配？
+
+\- 没找到特别清晰的教程，怕自己配错了跑不起来。
+
+3\. **Hermes的搭建方法不明确**
+
+\- 是在WSL2里直接git clone下来运行？还是需要pip install特定包？
+
+\- 需不需要提前装Node.js或Docker？（有些Agent工具需要这些依赖）
+
+\- 怕装了半天发现差某个依赖，又得重新搞。
+
+4\. **免费模型的限制有多大**
+
+\- 免费版会不会有每分钟请求次数限制（RPM）或每天额度限制？
+
+\- 万一在实验中途额度用完，会不会导致任务中断？
+
+\- 生成学习计划、概念解释这些任务，大概会消耗多少token？心里没底。
+
+5\. **还是没有完全搞懂“Agent”和“普通API调用”的区别**
+
+\- 在Hermes里调用API，[和我在Python里直接requests.post](http://和我在Python里直接requests.post)调用API，本质上有什么不同？
+
+\- Agent到底“智能”在哪里？是不是只是多了一个Prompt模板和上下文管理？
+
+\- 担心自己理解偏了，后面的作业基础打歪。
+
+\---
+
+\#### 💡 我的下一步打算（明确计划）
+
+1\. **先选一个免费模型试水**
+
+\- 初步决定：优先选 **GLM-4-flash**（智谱免费版），或者 **DeepSeek-V3**（也是免费且API格式兼容OpenAI）。
+
+\- 理由：这两个模型对中文理解好，API文档清晰，且免费额度够学习使用。
+
+2\. **先在WSL2里用Python跑通一个最简单的Hermes demo**
+
+\- 不追求完美配置，先验证API能不能通。
+
+\- 如果官方的Hermes安装太复杂，先找个替代方案（比如直接用LangChain或简单的Python脚本模拟Agent行为）。
+
+3\. **先完成“对话任务”的最小闭环**
+
+\- 不纠结高大上的配置，直接用Hermes或脚本把Week1大纲扔进去，看到输出就收货。
+
+\- 哪怕只是让AI生成一个简单的学习计划表格，也算任务完成。
+
+4\. **记录每一步踩的坑**
+
+\- 把API配置、依赖安装、报错信息都截图或记下来，后面也好复盘。
+
+\---
+
+\#### ❓ 待解决的新问题清单（留给后续）
+
+1\. WSL2里运行Hermes时，如果有网络代理问题怎么处理？
+
+2\. 免费API的Key如果到期了，怎么快速续期或换新的？
+
+3\. 如果Hermes不支持某个模型格式，有没有办法用Python做个中转适配层？
+
+4\. 后续任务2、3会不会要求必须用付费版模型才能完成？
+<!-- DAILY_CHECKIN_2026-05-19_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \### 📚 每日学习笔记：从LLM到Agent工作流
 
 **日期：** 2026年5月18日

@@ -1,5 +1,5 @@
 ---
-timezone: UTC+1
+timezone: UTC+0
 ---
 
 # brindaaa1
@@ -15,8 +15,88 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+总结week2内容
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+
+继续完成web3进阶课程任务
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+
+
+完成平台任务
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+
+
+
+参与Long-term Memory for AI Agents 活动
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+
+
+
+
+完成tasks，思考交互和部署的设计
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
+# 2026-05-22
+<!-- DAILY_CHECKIN_2026-05-22_START -->
+
+
+
+
+
+配置了hermes在微信平台的聊天助手，继续完成任务
+<!-- DAILY_CHECKIN_2026-05-22_END -->
+
+# 2026-05-21
+<!-- DAILY_CHECKIN_2026-05-21_START -->
+
+
+
+
+
+
+准备好github repo，并完成任务
+<!-- DAILY_CHECKIN_2026-05-21_END -->
+
+# 2026-05-20
+<!-- DAILY_CHECKIN_2026-05-20_START -->
+
+
+
+
+
+
+
+1.补听AI时代Web3架构能力分享
+
+2.实施参加Web3 运行原理分享
+
+因为旅游，这两天完成的任务都比较“轻”，明天上手大量实操
+<!-- DAILY_CHECKIN_2026-05-20_END -->
+
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
+
+
+
+
+
+
+
 因为在其他时区，参与线上活动不方便，因此基本采用回看录播的形式学习。
 
 今日观看开营仪式，并思考个人期望通过这个活动达成的产出。
