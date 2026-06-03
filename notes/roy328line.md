@@ -15,48 +15,172 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+今日學習：Week 3 黑客松賽道實戰 + Co-learning 任務推進
+
+核心主題：Hackathon 賽道分析、項目方向收斂、Cobo CAW 深入研究
+
+## Hackathon 賽道整理
+
+本週黑客松正式啟動，兩大 Sponsor 賽道：
+
+**Cobo｜Agentic Economy × Cobo Agentic Wallet**：核心問題是 AI Agent 如何具備可控的鏈上資金執行能力。方向包括 Agent-Native Payments、Agent 資源採購、A2A Economy。關鍵工具：Cobo CAW 的 Pact 機制（任務級授權：明確預算、操作範圍、時間窗口）。
+
+**Z.AI｜Web3 × Long-Horizon Task**：核心問題是 GLM-5.1 的長程任務能力結合 Web3 執行環境。方向包括 Web3 Agentic Dev Tools、AI-Powered Web3 Game Studio、AI × Creator Economy。關鍵工具：GLM-5.1 的 function calling、長上下文、自主規劃能力。
+
+## 賽道選擇判斷框架
+
+用三個維度評估兩個賽道：結構性需求（問題是否長期存在）、驗證可能性（能否在 Week 4 完成展示 demo）、最小切入點（一週能否完成核心閉環）。
+
+Cobo 賽道：Agent 安全執行是真實需求，越自動化越需要權限控制。最小 demo 路徑：用戶設定 Pact → Agent 自動執行符合邊界的操作 → 審計記錄輸出。需接入 CAW SDK，有清晰的 demo 路徑。
+
+Z.AI 賽道：Long-horizon task 是 Agent 從「工具」走向「Worker」的關鍵能力。GLM-5.1 API 可直接調用，快速原型可行。最小 Z.AI demo：自然語言描述 Web3 任務 → Agent 自主規劃多步驟 → 完成鏈上交互。
+
+## 技術研究：Cobo CAW 深入理解
+
+**Pact 機制**：Pact 是任務級授權邊界，而不是通用錢包權限。包含任務描述、預算上限、可調用合約白名單、時間窗口、失敗處理策略。Agent 只能在 Pact 定義的邊界內操作，超出範圍自動拒絕。Pact 完成後權限自動失效（臨時性授權）。
+
+**與 ERC-4337 Session Key 的關係**：Session Key 是底層加密授權機制（鏈上可驗證的臨時密鑰）；Pact 是業務邏輯層的任務授權框架（更高層的策略描述）。兩者互補：Session Key 提供執行安全保障，Pact 提供業務邏輯邊界。
+
+**x402 + CAW 自主支付閉環設計**：服務方設置受 x402 保護的 API → Agent 發起請求收到 402 Payment Required → 識別付款條件 → 用戶預設 Pact（限額/合約白名單/時間窗口）→ Agent 在 Pact 範圍內自動完成鏈上支付 → 付款成功取得 API 結果 → 鏈上留下完整可驗證記錄。
+
+## 核心洞察
+
+Agent commerce 的核心不是「自動付款」，而是「在明確授權、預算控制和可審計記錄下完成自動交易」。支付只是結算的最後一步，前面的發現→報價→授權→執行→驗收鏈路才是真正的難點。
+
+Week 3 最大收穫：Hackathon 的本質不是比誰代碼多，而是在有限時間內找到一個有真實需求、有技術可行路徑、有可驗證成果的最小閉環。Week 4 目標：選定一個賽道，做出能跑通完整閉環的 demo，而不是漂亮的 PPT。
+
+Account Abstraction + Session Key = AI Agent 的「最小權限信用卡」；x402 + CAW = AI Agent 的「自主採購能力」；Governance AI = AI Agent 的「治理輔助角色」。三者合在一起，構成了「AI Agent 作為可信經濟參與者」的完整基礎設施願景。
+<!-- DAILY_CHECKIN_2026-06-03_END -->
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 今日學習：Week 3 Hackathon Openday + Agentic Commerce 深化
 
 核心概念：Week 3 正式啟動 Hackathon，課程進入「從學習到執行」的關鍵轉折點。Agentic Commerce 是今日重點方向：AI Agent 不只是提出建議，而是在明確預算、授權、可審計記錄下完成真實的鏈上交易。
 
+學習重點：
+
 Hackathon Openday 核心理解：
-
--   Week 3 分兩條線：課程線（補齊 Week 1-2 基礎 + 深入方向研究）和 Hackathon 線（正式啟動賽道、組隊、項目收斂）
-    
--   \- 進入 Week 4 前 Ready Checklist：項目方向 3 句話說明、隊伍確認、SDK/API/合約技術棧確認、Repo Skeleton + 任務看板、Week 4 Sprint Plan
-    
-
-Agentic Commerce 深化整合：
-
--   Cobo 賽道核心：讓 AI Agent 具備可控的鏈上資金執行能力（Agent-Native Payments、Agent 資源採購、A2A Economy）
-    
--   \- [Z.AI](http://Z.AI) 賽道核心：GLM-5.1 長程任務能力，自主拆解複雜任務、多步驟計劃、持續工具調用、完整閉環
-    
-
-Week 3 個人方向鎖定：主方向 Wallet / Permission / Safe Execution，延伸 Account Abstraction 研究。研究重點：ERC-4337 Session Key 作為 Agentic Wallet 基礎 + Cobo CAW Pact 機制。
-
-個人洞察：Session Key + Policy 設計是 Agentic Wallet 的核心防護層，也是最有可能在 Hackathon 週期內完整展示的技術點。
-
-PR: #53
-<!-- DAILY_CHECKIN_2026-06-02_END -->
-
+- Week 3 分兩條線：課程線（補齊 Week 1-2 基礎 + 深入方向研究）和 Hackathon 線（正式啟動賽道、組隊、項目收斂）
+- - 進入 Week 4 前 Ready Checklist：項目方向 3 句話說明、隊伍確認、SDK/API/合約技術棧確認、Repo Skeleton + 任務看板、Week 4 Sprint Plan
+ 
+  - Agentic Commerce 深化整合：
+  - - Cobo 賽道核心：讓 AI Agent 具備可控的鏈上資金執行能力（Agent-Native Payments、Agent 資源採購、A2A Economy）
+    - - Z.AI 賽道核心：GLM-5.1 長程任務能力，自主拆解複雜任務、多步驟計劃、持續工具調用、完整閉環
+      - - Agent Commerce 的關鍵不是「自動付款」，而是「在明確授權、預算控制和可審計記錄下完成自動交易」
+       
+        - Week 3 個人方向鎖定：
+        - - 主方向：Wallet / Permission / Safe Execution（延伸 Account Abstraction 研究）
+          - - 研究重點：ERC-4337 Session Key 作為 Agentic Wallet 基礎 + Cobo CAW Pact 機制
+            - - 最小 Demo 目標：設計一個帶 Policy 控制的 Agent 鏈上執行流程（預算邊界 + 人工確認節點 + 審計日誌）
+             
+              - Hackathon 準備狀態：
+              - - 已完成：AI x Web3 問題地圖 / 主方向選擇 / Proposal 初稿
+                - - 本週任務：Repo skeleton + Sprint plan + Sponsor workshop 筆記
+                  - - 待確認：隊友組成 / 角色分工 / Week 4 每日任務拆解
+                   
+                    - 個人洞察：Hackathon Openday 讓我意識到「從學習到執行」的真正挑戰不在技術，而在「範圍收斂」——Week 4 只能做一個可驗證的 MVP，而不是完整產品。Session Key + Policy 設計是 Agentic Wallet 的核心防護層，也是最有可能在 Hackathon 週期內完整展示的技術點。
+                   
+                    - <!-- DAILY_CHECKIN_2026-06-02_END -->
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+今日學習：深讀 Governance AI 模組，理解 AI 如何輔助 DAO 與鏈上治理
 
+核心概念：Governance AI 不是讓 AI 替社區投票，而是幫助治理參與者更好地閱讀提案、追蹤會議、理解預算、保留來源、發現協作關係，並在關鍵決策中減少信息不對稱。
 
-今日學習：深讀 Governance AI 模組
+第一性原理
 
-核心概念：Governance AI 不是讓 AI 替社區投票，而是幫助治理參與者更好地閱讀提案、追蹤會議、理解預算、保留來源，在關鍵決策中減少信息不對稱。
+治理裡的 AI 輸出必須保留來源和不確定性。治理不是客服問答，提案通常涉及價值取捨、資源分配和長期影響。AI 可以總結，但必須讓讀者回到原始材料，看到不同觀點，而不是只給一個「應該支持」的結論。
 
-知識節點：Proposal Summary / Meeting Action / Contribution Graph / Budget Check / Source Traceability / Deep Funding / Plurality
+Governance AI 核心知識整理
 
-個人洞察：治理 AI 的核心是提升信息質量，而非替代人的政治判斷。Proposal Summary + Source Traceability 是 Governance AI 的基礎設施；Plurality 思路讓治理 AI 展示多元視角而非單一結論。
+Proposal Summary（提案摘要）
 
-PR: IntensiveCoLearning#53
+好的摘要不只縮短文本，還要保留關鍵來源、反對意見、未回答問題和影響範圍
+治理摘要最好有固定結構：提案目標、背景、預算、執行主體、時間線、影響範圍、支持理由、反對理由、未決問題、相關歷史——讓不同提案可以橫向比較
+AI 摘要必須標注不確定性：「預算是否合理」是判斷，「提案請求 50,000 USDC」才是事實；兩者混在一起會讓讀者誤以為 AI 判斷就是治理結論
+不要讓 AI 把爭議性提案總結成單一宣傳稿
+
+Meeting Action（會議行動事項）
+
+核心難點：從討論中提取承諾。「我們應該研究一下」不是 action；「Alice 在下週五前整理三種支付方案」才是 action
+必須記錄：誰負責、截止時間、上下文鏈接、決策狀態和後續檢查方式
+還要記錄決策狀態：已決定、待確認、需要投票、需要預算、需要法律/安全複核
+沒有 action owner 的會議摘要，很快會變成無用記錄
+
+Contribution Graph（貢獻圖）
+
+幫助社區看到誰在做什麼、貢獻如何連接、哪些工作被低估
+資料來源：GitHub、論壇、鏈上支付、會議記錄和項目管理工具
+特別重要：發現「隱形貢獻」——誰長期 review、誰在協調會議、誰維護文檔、誰回答新人問題
+不應把複雜貢獻簡化成 commits 數量；社區照護、協調和研究類工作很難量化
+在公共物品資助中，貢獻圖能幫助避免重複撥款和漏撥款
+
+Budget Check（預算審查）
+
+好的預算審查要問：這筆錢對應哪些 deliverables，付款節奏是否和里程碑綁定，是否有可驗證交付，失敗或延期怎麼辦
+AI 可以幫忙檢查：預算項是否完整、里程碑是否具體、過去撥款是否完成、金額是否和工作範圍匹配
+鏈上付款還要檢查：收款地址是否屬於提案方、是否是多簽、是否需要 vesting、歷史是否有異常提款
+Budget Check 不是自動砍預算，而是讓社區看清問題
+
+Source Traceability（來源可追溯性）
+
+Governance AI 的底線：每條關鍵總結都應該附來源（論壇鏈接、提案編號、會議時間戳、鏈上交易、投票記錄或預算表）
+沒有來源的治理摘要不應該用於投票依據
+還要支持反向檢查：讀者看到一句摘要，能點回原文；看到一個預算結論，能點回表格和交易
+如果 AI 輸出無法給出來源，應該明確標注為「推斷」或「不確定」
+
+Deep Funding（深度資助）
+
+核心難點：影響不是線性的——一個底層庫可能被很多項目間接使用，一個協調者可能讓多個團隊成功
+AI 可以輔助構建證據包：項目依賴圖、使用案例、貢獻者網絡、歷史資助、用戶反饋
+但最終分配應該保留多元評審、公開理由和申訴機制——模型不應該成為黑箱撥款者
+
+Plurality（多元性）
+
+強調在多元群體中保留差異、協調合作，而不是把所有人壓成一個平均意見
+實際產品含義：AI 摘要不要只給「主流意見」，還要展示少數派擔憂、利益相關者差異、地區/角色差異和可協商空間
+例如協議費用提案中，LP、交易者、開發者、金庫管理者和長期 token holder 的視角可能完全不同——治理 AI 應該把這些視角展開，而不是用一個平均立場抹平衝突
+
+在 AI x Web3 中的位置
+
+Governance AI 連接 AI 總結能力和 Web3 公共決策：可以讀取鏈上投票、論壇討論、預算流向和貢獻記錄，幫助社區理解治理狀態。
+
+但治理比交易更重視正當性。AI 輔助工具必須透明、可質疑、可複核，尤其不能悄悄替用戶投票或隱藏反對意見。
+
+最小實踐設計
+
+設計一個治理提案摘要模板（以「AI x Web3 School 課程更新提案」為例）：
+
+提案目標：新增 Decentralized AI 模組，覆蓋 FL / ZK / TEE 三個子方向
+背景：學員反饋現有課程在去中心化 AI 執行層的內容不足
+預算：20,000 USDC（課程設計 + 審核 + 翻譯），分三個里程碑付款
+執行主體：核心貢獻者 + 外部 reviewer（需多簽審批）
+支持理由：填補課程空白，與現有 Verifiable AI 模組強相關
+反對理由：預算未明確 KPI，模組完成標準不夠具體
+未決問題：第三方 reviewer 如何篩選？翻譯覆蓋哪些語言？
+每條關鍵結論附來源鏈接：[提案討論串] [預算明細表]
+明確寫出「AI 沒有替你做投票建議」
+
+個人洞察
+
+今天最大的收穫是理解了「治理 AI 的核心不是提升效率，而是提升信息質量」。治理決策的合法性來自公開辯論和多元聲音，不是來自 AI 的快速總結。如果 AI 把複雜爭議壓成單一結論，反而會損害治理正當性。
+
+Proposal Summary + Source Traceability 的組合是 Governance AI 的基礎設施。沒有來源，摘要就是單方聲明；有了來源，讀者才能做獨立判斷。
+
+Plurality 的思路讓我聯想到 Verifiable AI 的設計原則：系統不應該只暴露單一結果，而應該暴露不確定性範圍和多元視角。治理裡的「沒有單一正確答案」和 Verifiable AI 裡的「結果需要被質疑和挑戰」有異曲同工之妙。
+
+Contribution Graph 是我覺得最有潛力但最難做好的部分。它試圖解決開源社區裡「可見貢獻 vs. 隱形貢獻」的不平等問題——但量化評分本身可能製造新的激勵扭曲。好的 Contribution Graph 應該是「展示證據」而非「計算分數」。
+
+今日產出
+Governance AI 七大知識節點整理（Proposal Summary / Meeting Action / Contribution Graph / Budget Check / Source Traceability / Deep Funding / Plurality）
+治理提案摘要模板設計（含目標/背景/預算/支持反對理由/未決問題/來源）
+Governance AI 在 AI x Web3 架構中的位置梳理
+個人洞察：治理 AI 的核心是提升信息質量，而非替代人的政治判斷
+明日計劃
+進入 Decentralized AI 模組，研究去中心化 AI 執行的技術方向（FL / ZK / TEE）
 <!-- DAILY_CHECKIN_2026-06-01_END -->
-
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
