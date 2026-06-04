@@ -15,6 +15,72 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-04
+<!-- DAILY_CHECKIN_2026-06-04_START -->
+今日學習：Week 3 Hackathon Sprint + Wallet/Permission 賽道深化
+
+核心主題：ERC-4337 Session Key 實作細節、Cobo CAW Pact 機制完整分析、x402 + CAW 自主支付閉環 Demo 設計
+
+## Session Key 深化研究
+
+Session Key 本質：不是「讓 Agent 拿主鑰匙」，而是「讓 Agent 拿一張有明確邊界的臨時授權」。
+
+ERC-4337 Session Key 四層約束設計：
+- 合約白名單（Allowed Contracts）：Agent 只能調用預授權的合約地址
+- - 方法白名單（Allowed Methods）：即使合約在白名單，只有特定 function selector 可調用
+  - - 額度上限（Spending Limit）：每次交易或累計額度的硬上限，超過自動 revert
+    - - 時間窗口（Time Window）：Session Key 有明確的 expiry timestamp，過期自動失效
+     
+      - 實作關鍵點：Session Key 存儲在 Smart Account 的 storage 中，由 validator module 在 validateUserOp 階段檢查。攻擊者拿到 Session Key 也只能在授權邊界內操作——最壞情況下損失已知且有上限。
+     
+      - ## Cobo CAW Pact 機制完整分析
+     
+      - Pact = 任務級授權策略（Task-Scoped Authorization Policy）
+     
+      - Pact 五個關鍵維度：
+      - - 資金範圍（Fund Scope）：鎖定特定金庫或資金池，Agent 無法跨 Pact 移動資金
+        - - 合約白名單（Contract Whitelist）：每個 Pact 獨立維護可調用合約列表
+          - - 額度控制（Budget Cap）：單次 + 週期性累計預算雙重限制
+            - - 時間邊界（Time Boundary）：Pact 有效期和冷卻期設計
+              - - 審計鏈路（Audit Trail）：每次授權和執行都留下可驗證記錄
+               
+                - Pact vs Session Key 對比：Session Key 是錢包層的臨時授權（適合一次性操作），Pact 是任務層的持久策略（適合長跑型 Agent 任務）。兩者可組合：Pact 定義任務邊界，Session Key 控制單次執行授權。
+               
+                - ## x402 + CAW 自主支付閉環 Demo 設計
+               
+                - 目標：設計一個能跑通的 Demo，展示 AI Agent 在 Pact 授權下通過 x402 完成自主服務採購。
+               
+                - 完整閉環流程：
+                - 1. Agent 讀取任務目標（從 A2A 協議或用戶指令）
+                  2. 2. 服務發現：Agent 查詢服務目錄，獲得 x402 Payment Required 格式的報價
+                     3. 3. Pact 授權檢查：Agent 提交付款請求到 CAW，Pact 驗證是否在授權邊界內
+                        4. 4. UserOperation 生成：Bundler 打包，EntryPoint 執行，Paymaster 處理 gas
+                           5. 5. 服務交付：服務方收到鏈上確認後執行任務
+                              6. 6. Receipt 記錄：交易 hash + 任務 ID + 交付物 hash 存入 Audit Trail
+                                
+                                 7. 關鍵設計決策：Pact 驗證必須在 simulation 階段完成——如果模擬失敗，不進入真實提交，保護用戶資金。
+                                
+                                 8. ## 個人洞察
+                                
+                                 9. 今天最大的收穫是理解了 Session Key 和 Pact 在不同層次解決授權問題的邏輯。
+                                
+                                 10. Session Key 解決的是「單次操作的最小權限」，Pact 解決的是「任務生命週期內的持續授權邊界」。一個好的 Agentic Wallet 系統需要兩層都在——否則要麼太嚴格（每次都要人工確認），要麼太寬鬆（Agent 拿到大量資產控制權）。
+                                
+                                 11. x402 的精妙之處是把支付語義嵌入 HTTP 協議層——Agent 處理付款就像處理 401 重定向一樣自然，不需要額外的支付 SDK，降低了 Machine Payment 的集成複雜度。
+                                
+                                 12. Builder 機會：設計「Pact 可視化管理界面 + Session Key 審計 Dashboard」，讓用戶能清晰看到每個 Agent 任務的授權邊界、已消耗預算和執行記錄。這是 Agentic Wallet 缺失的「控制面板」。
+                                
+                                 13. ## Week 3 Hackathon 進度
+                                
+                                 14. - [x] Wallet/Permission 賽道方向確認
+                                     - [ ] - [x] ERC-4337 Session Key 機制深化
+                                     - [ ] - [x] Cobo CAW Pact 完整分析
+                                     - [ ] - [x] x402 + CAW 閉環 Demo 設計稿完成
+                                     - [ ] - [ ] Demo Repo Skeleton 搭建（Week 4 啟動）
+                                     - [ ] - [ ] Testnet 部署驗證
+                                    
+                                     - [ ] <!-- DAILY_CHECKIN_2026-06-04_END -->
+                                     - [ ] 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
 今日學習：Week 3 黑客松賽道實戰 + Co-learning 任務推進
