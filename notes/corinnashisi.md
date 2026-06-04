@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-04
+<!-- DAILY_CHECKIN_2026-06-04_START -->
+继续打卡，等周末更新笔记写学习内容
+<!-- DAILY_CHECKIN_2026-06-04_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 今日错过了cobo的分享，还是要找个时间计划好好复习下cobo的内容，争取做个小demo
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 今天完整的听完hackthon的介绍，确实还是对参加hackthon有些心动。明天好好听下cobo的分享。
 
@@ -34,11 +41,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
 
+
 今天如期打卡，听完课
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -55,11 +64,13 @@ AI x Web3 School
 
 
 
+
 今日的进展不多，在复习这周的课程。准备研究下KV层
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -74,6 +85,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -98,6 +110,7 @@ AI x Web3 School
 
 
 
+
 今日听完co-learning和ai的长记忆功能，感觉如果給ai做好长记忆挺困难的。后面要深度研究下
 
 ![262da3579b66b8f7b0dfb6dc64518280.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/corinnashisi/images/2026-05-25-1779723117593-262da3579b66b8f7b0dfb6dc64518280.png)
@@ -105,6 +118,7 @@ AI x Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -137,6 +151,7 @@ AI x Web3 School
 
 
 
+
 早上听了**Open Agentic Economy的分享，英文的分享对我还是有压力。只能后面看逐字稿补课。**  
 
 今天还是正式用Hermes来制定学习计划了，在不**homebrew和github的安装。先把学习计划搞定，后面每日安装学习计划执行。**
@@ -146,6 +161,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -174,6 +190,7 @@ AI x Web3 School
 
 
 
+
 今日#流水账#
 
 这两天工作太多，没法抽出过多的时间学习和实践。晚8坚持听完老师的分享，agent payment是近期ai在web3实践的课题，老师也分享了。后续会着重看看这个方向。
@@ -183,6 +200,7 @@ AI x Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -219,6 +237,7 @@ AI x Web3 School
 
 
 
+
 已经完成hermes的安排，虽然ollama的本地模型没有调用成功，但用api key的方式已经成功用hermes帮我做学习计划。
 
 计划随时学习的过程逐步深入使用agent帮我完成更多的任务。
@@ -228,6 +247,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
