@@ -17,17 +17,19 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
-打卡
+LLM本身还有很多可以探索的方向，agent和chatbot只是开始
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 黑客松先不参加了，感觉底子不太牢，先努力把之前的内容先消化了吧
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 现在的VC，喜欢已经落地的项目，靠PPT融资不太可能了。运营和营销能力很重要
@@ -39,11 +41,13 @@ AI x Web3 School
 
 
 
+
 今天重新听了第一周的关于Web3的课程，感觉对Web3的理解更加深刻了。
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -61,11 +65,13 @@ AI x Web3 School
 
 
 
+
 今天的听讲座的感悟，好好学习英语，多用X，学习X的推流规则，有助于Web3学习
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -91,11 +97,13 @@ AI x Web3 School
 
 
 
+
 课程是英文的，理解有限。但今天了解到的信息，Layer2 当前情况不太好。
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -129,11 +137,13 @@ AI x Web3 School
 
 
 
+
 今天的课程虽然有点卡顿,但还是有一点让人印象深刻,那就是memory的设计似乎和人的大脑有相似性.我记得在大学时某个老师说神经网络和人没有关系,虽然不是同一个概念但今天这个似乎有点相反的感觉.
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -177,6 +187,7 @@ AI x Web3 School
 
 
 
+
 再记录这周学习的另外几个印象深刻的点。
 
 1.当prompt输入LLM的时候，Tokenizer会先把这段文字变为vocabulary中的代码，然后将这段代码发给model，model再输出output，output最后再被tokenizer转化为具体的token。
@@ -188,6 +199,7 @@ AI x Web3 School
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -252,11 +264,13 @@ AI x Web3 School
 
 
 
+
 今天学习了AI的系统课程，了解了LLM的工作原理，同时还了解了Context Engineering，同时根据今天的讲座，我觉得除了学习知识，要尽快地尝试或者选择产品方向，找一个方向进行学习更有针对性，当然基础的通用知识要打牢。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -335,11 +349,13 @@ AI x Web3 School
 
 
 
+
 今天，花了很长时间把Hermes下载了。明天开始将模型接入就可以让Hermes帮我规划学习了。已经搞明白了Hermes其实就是学习助手（对于训练营来说）。具体coding我还是打算放到CodeX上。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
