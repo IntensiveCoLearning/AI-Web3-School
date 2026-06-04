@@ -15,8 +15,49 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-04
+<!-- DAILY_CHECKIN_2026-06-04_START -->
+# Daily: 2026-06-04
+
+> 支付场景的探索和思考 + Co-learning
+
+* * *
+
+## 今日活动
+
+### 1\. Co-learning
+
+### 2\. 🔴 支付场景的探索和思考
+
+了解了从真实支付场景出发识别用户需求、约束条件、风控边界和可落地 MVP 的方法，以及当前支付场景与 Agent 和 Web3 结合的整体流程和开发注意事项。
+
+* * *
+
+## 今日完成
+
+| 任务 | 积分 | 状态 |
+| --- | --- | --- |
+| Week 3｜线上活动｜实时参加 6.04｜支付场景的探索和思考 | 20 | ✅ 已提交 |
+| 今日小计 | 20 |   |
+
+* * *
+
+## 明日计划（6/5）
+
+⚠️ **重头戏日**
+
+| 时间 | 任务 | 积分 |
+| --- | --- | --- |
+| 11:00 | 🔴 AI Agent 时代，重新审视区块链 | 20 |
+| 12:00 | 🔴 Week 3 例会 + 上麦分享 ⭐（5分） | 20+5 |
+| 会后 | Week 1-2 缺口诊断 | 10 |
+| 会后 | Proposal Memo | 20 |
+| 会后 | Scope Review | 20 |
+<!-- DAILY_CHECKIN_2026-06-04_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 # Daily: 2026-06-03
 
 > 黑客松赛道实战 + Co-learning + Repo Skeleton
@@ -66,6 +107,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 # Daily: 2026-06-02
 
@@ -124,6 +166,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 # Daily: 2026-06-01
@@ -199,6 +242,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -317,6 +361,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 # 2026-05-30 每日学习笔记
 
 ## 学习内容
@@ -387,6 +432,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 # 2026-05-29 每日学习笔记
 
 ## 学习内容
@@ -414,6 +460,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -494,6 +541,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 **第一部分：学习总结**
 
 > 今天完成了 AI × Web3 Bridge 剩余 8 个章节的全面速览：
@@ -519,6 +567,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -553,6 +602,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 **第一部分：Web3 基础学习总结**
 
 > 今天完成了 Web3 基础 Phase 1 的全部剩余 6 个章节学习：Network（区块/共识/PoS/L2/Rollup）、Account Abstraction（ERC-4337/Smart Account/Bundler/Paymaster/Session Key）、DeFi（Token/AMM/滑点/无常损失/Lending/Stablecoin/Liquidity）、Oracle（Price Feed/Oracle Risk/AI Oracle）、Indexing（Event Indexing/Subgraph/Data Pipeline）、Security（Reentrancy/Access Control/Audit/Simulation/Monitoring）。共产出 7 份结构化学习笔记沉淀到 GitHub 仓库。
@@ -576,11 +626,13 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 今天主要学习和了解web3的相关文档和知识。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -646,6 +698,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 今天完成了两部分学习：  
   
 一、AI 基础概念深化  
@@ -685,6 +738,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -759,6 +813,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -887,6 +942,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 今日学习总结：  
 今天系统阅读了 AI 基础文档，对已有知识进行了梳理和补充：  
 已熟悉的概念（复习巩固）：
@@ -913,6 +969,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
