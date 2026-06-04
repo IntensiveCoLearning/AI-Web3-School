@@ -15,8 +15,620 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-04
+<!-- DAILY_CHECKIN_2026-06-04_START -->
+很好。
+
+如果說前幾天你學的是：
+
+```text
+Knowledge Architecture
+```
+
+（RAG、Memory、Retrieval）
+
+那今天開始進入：
+
+```text
+Agent Architecture
+```
+
+* * *
+
+# ReAct 是甚麼？
+
+全名：
+
+# Reason + Act
+
+來自 2022 年的論文：
+
+ReAct: Synergizing Reasoning and Acting in Language Models
+
+它是現代 Agent Framework 的祖先之一。
+
+很多後來的：
+
+-   AutoGPT
+    
+-   LangGraph workflows
+    
+-   OpenAI Agents
+    
+-   Claude tool use
+    
+-   Cursor agent
+    
+
+其實都有 ReAct 的影子。
+
+* * *
+
+# ReAct 出現前
+
+傳統 LLM：
+
+```text
+Question
+↓
+Think
+↓
+Answer
+```
+
+例如：
+
+```text
+User:
+CancerDAO 是否值得進 shortlist？
+```
+
+↓
+
+AI：
+
+```text
+直接回答
+```
+
+* * *
+
+問題：
+
+AI 根本沒有：
+
+-   查資料
+    
+-   驗證證據
+    
+-   比較歷史
+    
+
+* * *
+
+# ReAct 出現後
+
+變成：
+
+```text
+Question
+↓
+Reason
+↓
+Act
+↓
+Observation
+↓
+Reason
+↓
+Act
+↓
+Observation
+↓
+Final Answer
+```
+
+* * *
+
+# 最簡單例子
+
+User：
+
+```text
+CancerDAO 最近活躍嗎？
+```
+
+* * *
+
+# Step 1
+
+Reason：
+
+```text
+我需要查看 GitHub activity
+```
+
+* * *
+
+# Step 2
+
+Act：
+
+```text
+Call:
+check_github_activity(CancerDAO)
+```
+
+* * *
+
+# Step 3
+
+Observation：
+
+```text
+Last commit: 2 days ago
+12 commits this month
+```
+
+* * *
+
+# Step 4
+
+Reason：
+
+```text
+看起來活躍
+我再看看 funding history
+```
+
+* * *
+
+# Step 5
+
+Act：
+
+```text
+get_funding_history(CancerDAO)
+```
+
+* * *
+
+# Step 6
+
+Observation：
+
+```text
+GG21
+GG23
+Spark Round
+```
+
+* * *
+
+# Step 7
+
+Final Answer：
+
+```text
+CancerDAO shows sustained activity...
+```
+
+* * *
+
+# 關鍵突破
+
+你會發現：
+
+# Agent 不再一次回答
+
+而是：
+
+# 多步驟思考
+
+* * *
+
+# ReAct 的核心公式
+
+# Thought
+
+↓
+
+# Action
+
+↓
+
+# Observation
+
+↓
+
+# Thought
+
+↓
+
+# Action
+
+↓
+
+# Observation
+
+↓
+
+# Answer
+
+* * *
+
+很多 Agent Framework：
+
+本質上就是這循環。
+
+* * *
+
+# 為甚麼 ReAct 很重要？
+
+因為：
+
+它第一次把：
+
+```text
+Thinking
+```
+
+和
+
+```text
+Doing
+```
+
+結合。
+
+* * *
+
+以前：
+
+LLM：
+
+只是：
+
+```text
+Reason
+```
+
+* * *
+
+現在：
+
+Agent：
+
+可以：
+
+```text
+Reason + Act
+```
+
+* * *
+
+# 對 Spark Agent 的例子
+
+User：
+
+```text
+哪些 GG23 projects 最值得關注？
+```
+
+* * *
+
+Agent：
+
+Reason：
+
+```text
+我需要：
+1. GG23 project list
+2. GitHub activity
+3. Evidence quality
+4. Historical participation
+```
+
+* * *
+
+Act：
+
+```text
+query_projects()
+```
+
+* * *
+
+Observation：
+
+```text
+21 projects found
+```
+
+* * *
+
+Reason：
+
+```text
+需要排序 evidence
+```
+
+* * *
+
+Act：
+
+```text
+extract_evidence()
+```
+
+* * *
+
+Observation：
+
+```text
+Evidence scores generated
+```
+
+* * *
+
+Reason：
+
+```text
+現在可以產生 shortlist
+```
+
+* * *
+
+Final Output。
+
+* * *
+
+# ReAct 和 Workflow 的差別
+
+這很重要。
+
+* * *
+
+# Workflow
+
+是：
+
+```text
+人預先定義
+```
+
+例如：
+
+```text
+Step 1
+Step 2
+Step 3
+```
+
+固定。
+
+* * *
+
+# ReAct
+
+是：
+
+```text
+Agent 自己決定下一步
+```
+
+* * *
+
+所以：
+
+更彈性。
+
+但：
+
+風險更高。
+
+* * *
+
+# 為甚麼 Agent 常犯錯？
+
+因為：
+
+ReAct：
+
+其實是一種：
+
+# 自主決策系統
+
+* * *
+
+Agent 可能：
+
+```text
+選錯工具
+```
+
+* * *
+
+或者：
+
+```text
+推理錯誤
+```
+
+* * *
+
+或者：
+
+```text
+陷入循環
+```
+
+* * *
+
+例如：
+
+```text
+Search
+↓
+Search again
+↓
+Search again
+↓
+Search again
+```
+
+永遠停不下來。
+
+* * *
+
+# 所以後來出現：
+
+# Planning Layer
+
+* * *
+
+即：
+
+先：
+
+```text
+規劃
+```
+
+再：
+
+```text
+執行
+```
+
+* * *
+
+# Agent 世界最大爭論之一
+
+這很 frontier。
+
+* * *
+
+## ReAct 派
+
+認為：
+
+```text
+邊思考邊行動
+```
+
+最好。
+
+* * *
+
+## Planner 派
+
+認為：
+
+```text
+先規劃再行動
+```
+
+更穩。
+
+* * *
+
+例如：
+
+* * *
+
+# ReAct
+
+```text
+想到一步
+做一步
+```
+
+* * *
+
+# Planner
+
+```text
+先列出 10 步
+再執行
+```
+
+* * *
+
+目前：
+
+很多 production agents：
+
+其實是：
+
+# Planner + ReAct 混合
+
+* * *
+
+# 對你最重要的理解
+
+Spark Agent 未來：
+
+其實很可能：
+
+不是：
+
+```text
+Chatbot
+```
+
+而是：
+
+# Research Analyst Agent
+
+* * *
+
+工作模式：
+
+```text
+User Question
+↓
+Plan
+↓
+Retrieve
+↓
+Verify
+↓
+Analyze
+↓
+Generate Report
+```
+
+* * *
+
+這本質：
+
+就是：
+
+# ReAct + Planning
+
+* * *
+
+# Day 7 最重要一句
+
+前幾天你學的是：
+
+```text
+AI 怎樣取得知識
+```
+
+今天開始學的是：
+
+```text
+AI 怎樣決定下一步做甚麼
+```
+
+這正是 Agent 與 RAG 最大的分界線。
+<!-- DAILY_CHECKIN_2026-06-04_END -->
+
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 我認為你這個方向其實非常符合 [Z.AI](http://Z.AI) 賽道，而且比一般「Web3 Agent」更有特色。
 
 因為大部分參賽者可能做：
@@ -558,6 +1170,7 @@ AI summarize proposal
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 很好。
 
@@ -1172,6 +1785,7 @@ AI 怎樣決定下一步做甚麼
 <!-- DAILY_CHECKIN_2026-05-31_START -->
 
 
+
 # Day 7 學習總結 — Memory、Fine-tuning 與人類認知模型
 
 今天最大的收穫其實不是新技術。
@@ -1695,6 +2309,7 @@ AI 怎樣決定做甚麼
 
 
 
+
 這兩者之中，**Cobo Agentic Wallet (CAW)** 以及其背後的技術架構，與 **Public Goods（公共物品）** 的發展有著直接且明確的關聯；而 [**Z.AI**](http://Z.AI) 則是從開源（Open Source）與學術工具的角度切入，間接回饋了 Public Goods 的生態。
 
 以下為兩者在 DeSci 或 Public Goods 發展上的交集與關聯分析：
@@ -1734,6 +2349,7 @@ AI 怎樣決定做甚麼
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -2346,6 +2962,7 @@ Reasoning + Actions
 
 
 
+
 Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
 
 今天你開始進入：
@@ -2935,6 +3552,7 @@ Context Engineering 組織知識
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -3593,6 +4211,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -4212,6 +4831,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 # Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -4822,6 +5442,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -5411,6 +6032,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -5929,11 +6551,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -6366,6 +6990,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -6460,6 +7085,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
