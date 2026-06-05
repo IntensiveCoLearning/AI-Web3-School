@@ -15,8 +15,75 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+### Task 2.1: GLM Client — Plan Generation
+
+-   扩展 `glm_client.py`: 添加 `plan_research(query)` 方法
+    
+-   System prompt 引导 GLM-5.1 输出结构化研究计划 JSON
+    
+-   测试: 输入 Demo A 的问题，确认返回 3-5 步计划
+    
+
+### Task 2.2: Data Models
+
+-   Create `backend/models/evidence.py`: EvidencePin dataclass (id, step\_index, tool\_name, tool\_input, tool\_output, timestamp, dune\_query\_id, block\_range, status, retry\_count)
+    
+-   Create `backend/models/graph.py`: GraphNode, GraphEdge, ResearchSession dataclass
+    
+-   Create `backend/models/report.py`: Report, Conclusion dataclass
+    
+
+### Task 2.3: Agent Orchestrator — Basic Loop
+
+-   Create `backend/agent/orchestrator.py`:
+    
+    -   `run(query, session_id)` → Plan → 逐步执行 → 收集 Evidence → 结论
+        
+    -   每步执行后存储 EvidencePin
+        
+    -   基础错误处理（单步失败不崩整个流程）
+        
+-   暂时用 mock 工具执行（返回固定数据），验证 loop 逻辑正确
+    
+
+### Task 2.4: Tool Executor — Dune 工具
+
+-   Create `backend/tools/tool_executor.py`: 工具注册表 + dispatch 逻辑
+    
+-   实现 `search_dune_tables`: 调用 Dune search API
+    
+-   实现 `execute_dune_sql`: 创建查询 + 执行 + 轮询等待结果
+    
+-   实现 `get_query_results`: 获取执行结果
+    
+-   集成到 orchestrator 的 tool dispatch
+    
+
+### Task 2.5: Tool Executor — Entity Resolver
+
+-   Create `backend/tools/entity_resolver.py`:
+    
+    -   预验证地址库（dict: protocol\_name → addresses）
+        
+    -   GLM-5.1 推断兜底
+        
+-   实现 `resolve_entity` tool
+    
+
+### Task 2.6: Preset Query Library
+
+-   Create `backend/tools/preset_queries.py`:
+    
+    -   5 条预验证 SQL 模板（地址转账、大额筛选、净流出、Lido 提款、token transfer）
+        
+    -   参数化：接受 address, time\_range, threshold 变量
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 ## Hackathon Day 1: Validation + Scaffolding
 
 ### Task 1.1: Initialize Backend Project
@@ -115,6 +182,7 @@ Verified:
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 
+
 ### **完成任务**
 
 **Week 1–2 任务汇总整理** `tasks/week1-week2-summary.md` 对 Week 1–2 所有任务进行结构化整理，按 Week 1 基础搭建 / Week 2 问题探索分类，每个任务标注文件名（反引号框起）和核心内容摘要。产出 Hackathon 准备状态自查清单。
@@ -136,6 +204,7 @@ Verifiable Web3 Research Agent
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 ### **Hackathon 方向 Brainstorm（**[**Z.AI**](http://Z.AI) **赛道）**
@@ -213,6 +282,7 @@ VC 核心维度：问题是否真实/痛苦/足够大、方案是否可验证、
 
 
 
+
 ### **任务产出**
 
 Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
@@ -283,6 +353,7 @@ Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
 
 
 
+
 ## **LXDAO 治理流程 AI 辅助方案**
 
 任务：选一个 DAO / 社区流程，拆出 AI 可以辅助的步骤，以及必须由人或治理流程确认的步骤。
@@ -309,6 +380,7 @@ Week 2 到期，综合整理 Week 2 所有产出，生成总交付文档。
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -445,6 +517,7 @@ Agent GET /analyze → 402 (payment info)
 
 
 
+
 ### **任务 1：Agent Profile Design**
 
 以 Web3 Analysis Agent 为例，设计完整 Agent Profile。
@@ -565,6 +638,7 @@ Agent GET /analyze → 402 (payment info)
 
 
 
+
 ## **今日完成：Agent Payment/Commerce Flow 设计**
 
 ### **任务产出**
@@ -624,6 +698,7 @@ Agent GET /analyze → 402 (payment info)
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -759,6 +834,7 @@ AI Agent 自动执行交易，但：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -1040,6 +1116,7 @@ AI Agent 自动执行交易，但：
 
 
 
+
 ## **学习内容**
 
 ### **文档阅读（Ethereum 官方）**
@@ -1122,6 +1199,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 
 
+
 ## **今日完成**
 
 ### **受限 Web3 助手设计**
@@ -1176,6 +1254,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -1297,6 +1376,7 @@ L1 网络层   P2P Gossip       ← 节点发现、广播、同步
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1733,6 +1813,7 @@ result = agent.invoke({"messages": [{"role": "user", "content": "hi"}]})
 
 
 
+
 ## **学习内容**
 
 ### **主题 1：测试网交易任务**
@@ -1965,6 +2046,7 @@ my-project/
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -2360,6 +2442,7 @@ A：很难追回。所以审计（audit）和风险监控非常重要。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
