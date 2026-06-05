@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+📝 今日学习了 Governance 前沿章节。核心理解：治理是辅助型 Agent 的最佳切入点——不需要控制资产就能降低信息成本。Bridge 版讲理论框架，前沿版给具体产品形态。关键收获——Source-preserving Summary 格式：结论+证据+不确定性+反方观点+建议阅读；Meeting-to-Action 要严格区分讨论/建议/决定/执行四种状态；Public-goods Impact Dashboard 的价值是减少信息收集时间而非替投票者做决定。产品路径：提案摘要→会议workflow→预算/贡献dashboard→最后才考虑投票建议。
+
+📎 仓库：[https://github.com/juyixin98/ai-web3-school-cohort-0](https://github.com/juyixin98/ai-web3-school-cohort-0)
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 📝 今日学习了 AI Security 前沿章节。核心理解：Bridge AI Security 讲概念和原则，前沿版给实施方案——Threat Model 画法、恶意文档 Demo、工具权限 5 层划分（公开只读→用户只读→草稿→写入→资产）、AI Behavior Audit 定位到层。关键收获：Malicious Document Demo 是最小可行安全入门练习，可以直接做成实验 006；Tool Permission Isolation 的 5 层模型让 005 Guard 的拦截位置更加清晰。
 
 📎 仓库：[https://github.com/juyixin98/ai-web3-school-cohort-0](https://github.com/juyixin98/ai-web3-school-cohort-0)
@@ -24,6 +32,7 @@ AI x Web3 School
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 📝 今日学习了 Decentralized AI 章节，完成了 AI×Web3 Bridge 全部 15 章！核心理解——去中心化 AI 不是把模型放链上，而是重新设计数据/模型/算力/推理/评测/结算的组织方式。先分层再判断价值，链上更适合做协调层而非承载大规模训练。关键模块：Model Routing 是调度器决定何时便宜/可靠/拒绝，Settlement 复用 Machine Payment 和 Escrow 设计，Quality Benchmark 要进入路由和定价而不仅是排行榜。Bridge 15 章从 Agent 基础能力→支付结算→身份信任→预言机验证→安全隐私→主权治理→去中心化基础设施，形成了完整知识体系。
 
@@ -34,6 +43,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
 
+
 📝 今日学习了 Decentralized AI 章节，完成了 AI×Web3 Bridge 全部 15 章！核心理解——去中心化 AI 不是把模型放链上，而是重新设计数据/模型/算力/推理/评测/结算的组织方式。先分层再判断价值，链上更适合做协调层而非承载大规模训练。关键模块：Model Routing 是调度器决定何时便宜/可靠/拒绝，Settlement 复用 Machine Payment 和 Escrow 设计，Quality Benchmark 要进入路由和定价而不仅是排行榜。Bridge 15 章从 Agent 基础能力→支付结算→身份信任→预言机验证→安全隐私→主权治理→去中心化基础设施，形成了完整知识体系。
 
 📎 仓库：[https://github.com/juyixin98/ai-web3-school-cohort-0](https://github.com/juyixin98/ai-web3-school-cohort-0)
@@ -41,6 +51,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -55,6 +66,7 @@ AI x Web3 School
 
 
 
+
 📝 今日学习了 AI Privacy 章节。核心原则：模型只应该看到完成任务所需的最小数据——不要因为"可能有帮助"就把一切塞进上下文。关键理解——隐私问题的本质不是单点泄漏，是链上公开身份和 AI 私有上下文被拼接。Data Boundary 按工具划分不按系统划分，Secret Management 与前一天 Security 的 Key Safety 完全对齐（Smart Account + Session Key 就是实现），Local AI 务实定位是隐私网关而非主力推理，Minimal Disclosure 最实用方案是"摘要代替原始数据"。
 
 📎 仓库：[https://github.com/juyixin98/ai-web3-school-cohort-0](https://github.com/juyixin98/ai-web3-school-cohort-0)
@@ -62,6 +74,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -80,6 +93,7 @@ AI x Web3 School
 
 
 
+
 📝 今日学习了 AI Oracle 章节。核心理解：AI 的判断要安全进入链上世界，关键是三层设计——1）输出结构化，机器字段进合约不消费自然语言；2）风险按影响分层（低风险展示/中风险复核/高风险challenge），不按技术分层；3）必须有 challenge 机制，不能把模型错误硬写进链上状态。Model Result 必须保存完整生成条件（版本/prompt/输入hash/schema），否则无法复核。
 
 📎 仓库：[https://github.com/juyixin98/ai-web3-school-cohort-0](https://github.com/juyixin98/ai-web3-school-cohort-0)
@@ -87,6 +101,7 @@ AI x Web3 School
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -109,6 +124,7 @@ AI x Web3 School
 
 
 
+
 📝 今日学习了 Agent Identity 章节。核心理解：Agent Identity 不是起名字，而是让 Agent 从临时会话变成可发现、可验证、可追责的经济参与者。一个可用身份至少要回答——谁拥有它、能做什么、入口在哪、历史能不能追溯。关键设计原则：Profile 更新不能静默发生（变模型/变地址/增能力都是信任信号），Registry 提供身份锚点但不等于信任层，operator 和 owner 应该可以分离。
 
 📎 仓库：[https://github.com/juyixin98/ai-web3-school-cohort-0](https://github.com/juyixin98/ai-web3-school-cohort-0)
@@ -116,6 +132,7 @@ AI x Web3 School
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -142,6 +159,7 @@ AI x Web3 School
 
 
 
+
 📝 今日完成两个模块： 1）**Machine Payment 章节**：核心理解——Agent 的支付能力必须有限制（Budget 先于执行），报价必须可验证（Quote + quote\_id），付款意图必须可追溯（Payment Intent ≠ 已结算），高频小额不适合每笔上链（需 L2/批量结算）。 2）**Agent 受限支付钱包设计**：实现了 5 步支付流程 + 4 种场景演示（正常自动/超预算拒绝/白名单外拦截/超额升级 HITL）。关键设计原则：Guard 是确定性代码不走 AI、三层决策（小额自动→大额 HITL→超限直接拒）、撤销比授权更重要。
 
 📎 仓库：[https://github.com/juyixin98/ai-web3-school-cohort-0](https://github.com/juyixin98/ai-web3-school-cohort-0)
@@ -149,6 +167,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -179,6 +198,7 @@ AI x Web3 School
 
 
 
+
 📝 今日核心进展：完成了 RPC Agent 最小实验。使用公共以太坊 RPC 节点，通过 eth\_blockNumber / eth\_getBalance / eth\_gasPrice 三个方法，演示了 Agent 如何查询真实链上数据。关键理解：Agent 不直接「知道」链上状态，而是通过 JSON-RPC Tool Use 获取——这和 Web2 的 API tool 本质相同，区别在于数据格式（hex/Wei）和写操作的安全边界（需要私钥签名）。
 
 📎 实验代码：[https://github.com/juyixin98/ai-web3-school-cohort-0/tree/main/experiments/001-rpc-agent](https://github.com/juyixin98/ai-web3-school-cohort-0/tree/main/experiments/001-rpc-agent)
@@ -186,6 +206,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
