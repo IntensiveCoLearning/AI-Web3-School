@@ -15,8 +15,18 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+今天是支付讲座
+
+周会参与
+
+项目推进
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 参加cobo的讲座
 
 参加了co-learning，扩大了选题视野
@@ -24,6 +34,7 @@ AI x Web3 School
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 参加Hackathon Openday
 
@@ -34,6 +45,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-01_START -->
 
 
+
 参加VC行内人员讲座，受益匪浅。
 
 Hackathon要开始了
@@ -41,6 +53,7 @@ Hackathon要开始了
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -55,6 +68,7 @@ sry...
 
 
 
+
 今天状态很不好。。。
 
 干的事情特别少，不足以记录。。。
@@ -62,6 +76,7 @@ sry...
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -80,6 +95,7 @@ sry...
 
 
 
+
 -   今天专注求职了，没怎么做进度
     
 -   参加晚上讲座
@@ -87,6 +103,7 @@ sry...
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -114,6 +131,7 @@ sry...
 
 
 
+
 -   今天在培训Hermes。
     
 -   明天批量做任务。
@@ -130,6 +148,7 @@ sry...
 
 
 
+
 -   成功实践Hermes部署
     
 -   思考了Hackqthon选题的可能性，钱包选题大家都很有想法，之外的选题又有什么呢？
@@ -137,6 +156,7 @@ sry...
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -168,6 +188,7 @@ sry...
 
 
 
+
 -   参加AI下乡计划
     
 
@@ -176,6 +197,7 @@ sry...
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -208,6 +230,7 @@ sry...
 
 
 
+
 -   钱包与抽象X推文大纲
     
 -   参加Hermes部署讲座。准备部署一个Hermes。
@@ -215,6 +238,7 @@ sry...
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
