@@ -15,19 +15,393 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+## **1\. Current Phase 4 Status**
+
+Current status:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Phase 4A: completed Phase 4A.1: calibration started Phase 4B: not started`
+
+This means ChainMind has completed the first executable Phase 4 scoring upgrade:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`complete scoring package + Copyability v0`
+
+The project is not yet at full Wallet Alpha. Full Wallet Alpha is intentionally deferred until wallet-history data is available and stable.
+
+## **2\. Phase 4 Scope**
+
+Existing project documents used several Phase 4 meanings:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`docs/roadmap/07-mvp-roadmap.md: Wallet Alpha + Copyability docs/roadmap/08-execution-plan.md: complete scoring system docs/learning/13-token-analysis-data-analyst-workflow.md: AI explanation layer`
+
+For this implementation cycle, Phase 4 was defined as:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Phase 4A = complete scoring package + Copyability v0`
+
+This avoided jumping too early into AI reports or full Wallet Alpha.
+
+## **3\. Completed Capabilities**
+
+Before Phase 4A, the main scoring package included:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Risk Security Entity Cluster Opportunity Grade / Action`
+
+After Phase 4A, the scoring package includes:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Risk Security Entity Cluster Opportunity Copyability Priority Grade / Action`
+
+New output fields:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`copyability_score copyability_evidence priority_score priority_evidence`
+
+These fields are now available in `AnalysisResult.to_mapping()` and therefore in script JSON output.
+
+## **4\. Copyability v0 Design**
+
+Copyability v0 answers:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`If this token appears to have opportunity, is there still a practical observation or follow window for a normal human user?`
+
+It does not claim:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`This wallet has proven alpha. This token should be bought. This token will go up.`
+
+Copyability v0 uses existing `TokenSnapshot` fields:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`market flow_5m early_buyers funding security`
+
+It does not call external API clients directly. This keeps the scoring module stable and makes future data-source upgrades easier.
+
+Main positive signals:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`usable or strong liquidity usable or strong 24h volume positive latest 5m net buy buyers outnumber sellers healthy early-buyer retention`
+
+Main negative signals:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`low liquidity weak 24h volume negative latest 5m net buy sellers outnumber buyers repeated negative net buy early buyer exit ratio high shared funder risk high tax / honeypot / sellability risk`
+
+## **5\. Priority Score Design**
+
+Priority Score combines:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Opportunity Copyability Risk penalty Entity Cluster penalty Security penalty`
+
+Priority is used to rank candidates more smoothly than A/B/C/D alone.
+
+Grade rules now consider:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`risk_score opportunity_score copyability_score entity_cluster_score security_score`
+
+Current high-level behavior:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`D: extreme risk or high security risk C: high risk or strong entity-cluster concern A: low risk + high opportunity + high copyability B: moderate opportunity + moderate copyability + acceptable risk C: default store-only result`
+
+The legacy `grade_from_scores(risk_score, opportunity_score)` call remains compatible.
+
+## **6\. Files Added**
+
+Planning and reports:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`docs/progress/2026-06-05-phase4-plan.md docs/progress/2026-06-05-phase4-check-report.md docs/progress/2026-06-05-phase4-completion-report.md`
+
+Scoring:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`src/chainmind/scoring/copyability.py`
+
+Tests:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`tests/unit/test_copyability_scoring.py tests/unit/test_priority_scoring.py`
+
+Calibration artifacts:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`experiments/phase4-calibration/labels.csv experiments/phase4-calibration/batch-1-tokens.txt experiments/phase4-calibration/batch-1-output.txt experiments/phase4-calibration/batch-1-output.json experiments/phase4-calibration/batch-1-results.md experiments/phase4-calibration/batch-2-plan.md experiments/phase4-calibration/batch-2-tokens.txt experiments/phase4-calibration/batch-2-results.md experiments/phase4-calibration/batch-2-controls-quick-output.md experiments/phase4-calibration/snapshots/.gitkeep`
+
+## **7\. Files Updated**
+
+Core result model:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`src/chainmind/domain/token_snapshot.py`
+
+Main orchestration:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`src/chainmind/orchestration/analyze_token.py`
+
+Scoring exports and priority logic:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`src/chainmind/scoring/__init__.py src/chainmind/scoring/priority.py`
+
+CLI output:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`scripts/analyze_dune_token.py scripts/batch_analyze_tokens.py`
+
+## **8\. Validation**
+
+Test command:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)![](http://localhost:63342/markdownPreview/880767211/commandRunner/runrun.png)
+
+`python -m pytest`
+
+Latest result:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`75 passed`
+
+This confirms:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Copyability v0 rules are tested. Priority scoring is tested. Existing analysis and batch workflows still pass. Backward-compatible grade calls still work.`
+
+## **9\. Real Sample Calibration: Batch 1**
+
+Batch 1 used cached BNB meme-token samples.
+
+Command:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)![](http://localhost:63342/markdownPreview/880767211/commandRunner/runrun.png)
+
+`python scripts\batch_analyze_tokens.py --file experiments\phase4-calibration\batch-1-tokens.txt --output experiments\phase4-calibration\batch-1-output.txt python scripts\batch_analyze_tokens.py --file experiments\phase4-calibration\batch-1-tokens.txt --json --output experiments\phase4-calibration\batch-1-output.json`
+
+Batch 1 result:
+
+| Token | Symbol | Grade | Action | Risk | Security | Entity | Opportunity | Copyability | Priority |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0xf500d904b07ac6214be407b69fe817a82eac7777 | 世界杯纪念币 | D | filter | 100 | 0 | 50 | 20 | 0 | 9 |
+| 0x90166915b98d24d284c56de3b9f4ed59338f7777 | 彩蝶 | D | filter | 85 | 0 | 50 | 50 | 20 | 33 |
+| 0x3d96b30ba2c08724b70efff1ad16d005db1c7777 | 野马 | D | filter | 100 | 0 | 40 | 20 | 0 | 11 |
+| 0x90507254e9c594e728172b9d217f4ab1a2ee7777 | 美蛙 | D | filter | 95 | 0 | 50 | 20 | 0 | 11 |
+| 0xff6b0006d17af50a0c0082ca1beb03af3f284444 | 世界杯 | D | filter | 85 | 0 | 50 | 60 | 20 | 36 |
+| 0x9ec5d5082895b8bf56523e02a831aa0dc8737777 | 矛 | C | store_only | 65 | 0 | 50 | 35 | 33 | 40 |
+
+Batch 1 conclusion:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Do not tune rules yet. The batch is mostly risky/unknown meme samples. Copyability is low but not flat. Priority separates severity inside D-heavy samples.`
+
+## **10\. Control Calibration: Batch 2**
+
+Batch 2 added mainstream/high-liquidity controls:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`USDT WBNB CAKE USDC control address`
+
+The full Dune-backed Batch 2 command timed out at the shell level after 5 minutes, but it produced a complete table output:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`experiments/phase4-calibration/batch-2-output.txt`
+
+Deep Batch 2 result:
+
+| Token | Symbol | Grade | Action | Risk | Security | Entity | Opportunity | Copyability | Priority |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0x55d398326f99059ff775485246999027b3197955 | USDT | B | watchlist | 45 | 40 | 0 | 60 | 80 | 73 |
+| 0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c | WBNB | D | filter | 100 | 0 | 30 | 30 | 0 | 16 |
+| 0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82 | Cake | B | watchlist | 45 | 40 | 0 | 60 | 80 | 73 |
+| 0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d | UB | D | filter | 100 | 0 | 20 | 30 | 0 | 17 |
+| 0xf500d904b07ac6214be407b69fe817a82eac7777 | 世界杯纪念币 | D | filter | 100 | 0 | 50 | 20 | 0 | 9 |
+| 0x90166915b98d24d284c56de3b9f4ed59338f7777 | 彩蝶 | D | filter | 85 | 0 | 50 | 50 | 20 | 33 |
+| 0x9ec5d5082895b8bf56523e02a831aa0dc8737777 | 矛 | C | store_only | 65 | 0 | 50 | 35 | 33 | 40 |
+
+Interpretation of the timeout:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`The current Dune deep-analysis queries are designed for meme-token analysis and can be slow for mainstream/high-volume controls. Even when output is produced, the run should be treated as a heavier calibration path rather than the normal low-latency control workflow.`
+
+A Quick Screen control check was run instead.
+
+Summary:
+
+| Token | Symbol | Quick Decision | Main Trigger | Notes |
+| --- | --- | --- | --- | --- |
+| 0x55d398326f99059ff775485246999027b3197955 | USDT | BLOCK | mintable | Stablecoin / high-liquidity control; mintable is not equivalent to new meme-token mint risk. |
+| 0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c | WBNB | WATCH | owner not renounced / unknown | Wrapped native asset control. |
+| 0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82 | CAKE | BLOCK | mintable | Mainstream ecosystem token; special contract permissions expected. |
+| 0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d | UB | WATCH | owner not renounced / unknown | Pair/symbol should be rechecked before using as canonical USDC. |
+
+Batch 2 conclusion:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Mainstream and infrastructure tokens need context. Rules that are correct for new meme tokens can be too coarse for non-meme assets. Do not tune Copyability v0 yet based on these controls.`
+
+Additional Batch 2 finding:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`USDT and CAKE can receive high Copyability scores because liquidity, volume, and flow are strong, while still triggering security or context-specific rules such as mintable / owner not renounced.`
+
+This confirms that Copyability v0 is not simply forcing high-liquidity tokens to zero. The bigger issue is interpretation context: mainstream controls should not be ranked as meme opportunities without a `token_profile` layer.
+
+## **11\. Important Boundary Learned**
+
+The most important finding from Batch 2:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`ChainMind needs a lightweight token_profile layer before using mainstream tokens as scoring controls.`
+
+Suggested future values:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`meme_candidate mainstream_control infrastructure`
+
+This should initially be used for interpretation and rule boundaries, not as a major refactor of the scoring core.
+
+## **12\. GitHub Upload**
+
+The Phase 4 work was committed and pushed to GitHub.
+
+Branch:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`codex/chainmind-foundation`
+
+Remote:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`https://github.com/may-tonk/ai-web3-school-cohort-0.git`
+
+Pushed commits:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`51a8c71 feat: add phase 4a copyability scoring 02bdf71 docs: record phase 4 batch 2 control check`
+
+GitHub branch URL:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`https://github.com/may-tonk/ai-web3-school-cohort-0/tree/codex/chainmind-foundation`
+
+## **13\. What Is Not Done Yet**
+
+Not done in Phase 4A:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Full Wallet Alpha Score GMGN signed request integration Nansen-backed wallet alpha when credits are available Dune wallet-history profile queries AI report generation Hermes push output database-backed long-term wallet profiles`
+
+These remain future phases.
+
+## **14\. Recommended Next Step**
+
+Recommended next step:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Phase 4A.2 = token_profile boundary layer`
+
+Goal:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Separate meme-token candidate scoring from mainstream/infrastructure controls without rewriting the scoring package.`
+
+Suggested implementation:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Add token_profile metadata to snapshots or calibration labels. Use token_profile for interpretation and future rule boundaries. Keep Copyability v0 unchanged until more healthy meme samples are tested.`
+
+After that, move to:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Phase 4B = wallet alpha snapshot design`
+
+Phase 4B should start with fields, not API calls:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`wallet_address trade_count_30d win_rate_30d median_return_30d buy_to_peak_15m buy_to_peak_1h same_block_entry_ratio liquidity_after_entry_usd copyability_penalty`
+
+## **15\. Final Conclusion**
+
+Phase 4A is complete.
+
+ChainMind now has a complete first-pass scoring package:
+
+![](http://localhost:63342/markdownPreview/1032752532/docs/progress?_ijt=2i56devk919l35iq9ougu642s0)
+
+`Risk / Security / Entity / Opportunity / Copyability / Priority / Grade`
+
+The scoring framework is intentionally extensible. It supports future Wallet Alpha upgrades without forcing a rewrite of the current pipeline.
+
+The current system should now move from implementation to calibration and context-boundary work before entering full Wallet Alpha.
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 请假一天，遇到创作瓶颈了
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 
+
 明天考试，今天复习和确认比赛项目的方向
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 # **Phase 3 Real Token Batch 1**
@@ -245,6 +619,7 @@ Observation: liquidity is not the weakest in the batch, but 24h volume is low an
 
 
 
+
 今天阶段三的核心开发基本完成了，已经不只是计划层面，而是把主要代码骨架和评分能力都接上了。
 
 **今天已完成**
@@ -395,6 +770,7 @@ Observation: liquidity is not the weakest in the batch, but 24h volume is low an
 
 
 
+
 快考试了，今天继续复习，再请假一天，明天全部补上；
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
@@ -406,11 +782,13 @@ Observation: liquidity is not the weakest in the batch, but 24h volume is low an
 
 
 
+
 这两天快考试了，明天会继续补上学习内容
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -791,6 +1169,7 @@ ORDER BY 1;
 
 
 
+
 ## 继续学习AI+链上数据分析
 
 ## **如何 像数据分析师一样处理链上数据**
@@ -880,6 +1259,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 
 
+
 **今天手动打卡，总结一下最近学习的内容和研究的方向**
 
 对于meme币，我一直都是充满幻想和喜欢的，但是市场上太多的币种是没有然后对成长价值，就连最基本的安全和信任也没有，找到一个短期或是是长期潜力比较大的一个币是比较不容易的，我们不仅要去详细了解代币的安全性和代币的分配，还要去看链上的数据，是否是真实玩家买入，狗庄的格局，是否存在大量的机器人刷单，叙事和用户情绪怎么样，判断当前是否值得去投资，什么时候该撤退；所以现在我在做一个链上数据分析（识别bot，是否大量代币来至同一个钱包，是否大量钱包时最近在进行创建，是否是左手倒右手等等），通过接入各家相应平台的API来进行相应的筛选BNB链上的meme，筛选出值得研究的，在进行下一步的数据补充和分析，然后AI进行相应的报告的产生，这期间AI是可以对我们处理的数据结果根据相应的规则进行解释和分析建议和需要数据的补充进行下一步的分析；然后因为meme的短暂性，所以我们推荐值得研究的4个等级的meme会进行相应的AI复盘，AI可以参与到我们规则的相应的调整；
@@ -887,6 +1267,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -1043,6 +1424,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -1617,6 +1999,7 @@ AI 的输出应该回答：
 
 
 
+
 ### 1\. 基本概念概述
 
 -   **EOA（Externally Owned Account，外部拥有账户）** 传统钱包账户，由私钥直接控制。最常见的 MetaMask 默认账户。
@@ -1710,6 +2093,7 @@ AI 的输出应该回答：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -2110,6 +2494,7 @@ Holder 汇总中观察到：
 
 
 
+
 几天继续了链上数据分析，AI+Defi投研报告自动项目的学习详细链接[链接](https://github.com/may-tonk/ai-web3-school-cohort-0/tree/codex/chainmind-foundation)
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -2130,11 +2515,13 @@ Holder 汇总中观察到：
 
 
 
+
 **今天和AI探讨了链上数据分析，AI+Defi的想法，简单的建立了一个工作项目计划，内容太多了，上传到了AI x Web3school的GitHub了；详细请查看**[**链接**](https://github.com/may-tonk/ai-web3-school-cohort-0/blob/master/daily/2026-05-19/AI_DeFi_Meme_Workflow_%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.md)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
