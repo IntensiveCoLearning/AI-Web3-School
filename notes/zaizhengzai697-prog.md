@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+今日围绕Web3 Agent经济赛道开展学习：研读ERC-8004、ERC-8183协议，参考其agent信任、任务用工、资金托管、任务评审相关协议规范；调研Stripe Agentic Commerce，以Web2金融科技的Agent商业产品作为对标参照；同时学习Olas项目，借鉴其智能代理经济体、去中心化自主服务的架构与落地思路，横向对比Web2与Web3环境下Agent商业化、链上任务协作的实现逻辑。
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 今日学习GLM-5.1相关能力：核心Chat Completion API兼容OpenAI的messages、tools、tool\_choice字段，5分钟调试通首个function calling请求，是capability manifest、agent profile、payment flow相关任务的基础骨架；内置Web Search Tool自带联网检索，省去对接搜索API的开发成本，预备第二周依托该功能快速搭建可读取文档、查询合约、解析交易、接入外部资讯的Agent演示项目。
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 Web3协议学习打卡
 
@@ -50,6 +57,7 @@ Web3协议学习打卡
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 
 
+
 今日学习打卡
 
 今日围绕MPP机器支付协议开展专项学习：
@@ -66,6 +74,7 @@ Web3协议学习打卡
 
 
 
+
 今天学习了GLM-5.1的Chat Completion核心API与内置Web Search工具，掌握了兼容OpenAI格式的消息、工具调用字段，快速调通function calling接口，以此作为各类Agent任务的基础开发框架，同时依托自带网页检索能力省去第三方搜索接口接入成本，能够快速搭建可查询文档、链上合约与交易信息的Agent示例项目。
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
@@ -75,11 +84,13 @@ Web3协议学习打卡
 
 
 
+
 今日学习围绕MCP/A2A协议与GLM-5.1智能体开发指南展开，弄懂了Agent跨主体、跨工具的协作接口规范，同时梳理出GLM-5.1在任务规划、工具调用、代码生成场景里的能力边界，明确了选型参考标准，也完善了AI在Agent工作流中职责定位的相关知识点。
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -96,11 +107,13 @@ Web3协议学习打卡
 
 
 
+
 今日学习掌握了跨业务场景的任务拆分逻辑，能够把交叉业务拆解为发起方、执行方、付款方、验证方、风险承担方以及治理仲裁方六大参与角色，理清各主体权责边界，完善了链上协作业务的整体分析思路。
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -121,11 +134,13 @@ Web3协议学习打卡
 
 
 
+
 今天我系统学习了Anthropic的Claude API官方入门课程、Z.ai的GLM MaaS API开发者文档（包括OpenAI兼容接口的快速上手实践），并了解了Z.ai Coding Plan解锁GLM全系列模型调用的相关内容，完成了对主流大模型API开发工具的入门梳理。
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -150,11 +165,13 @@ Web3协议学习打卡
 
 
 
+
 今天学习打卡：我研读了Hermes Agent Docs，深入理解了agent、tool calling、skills、记忆和长期执行的核心概念；同时通过Zread.ai解读OpenClaw/Hermes相关内容，梳理并理解了agent进入执行层后带来的架构变化。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -183,11 +200,13 @@ Web3协议学习打卡
 
 
 
+
 今天完成了AI开发相关的入门学习，内容覆盖官方API基础课程、Z.ai的GLM MaaS API开发者文档（包括OpenAI兼容接口的快速上手与5分钟跑通第一个请求）、Z.ai Coding Plan解锁GLM全系列模型调用、Claude Code 101的AI编程工具入门，以及AI Agent基础概念的视频课程。通过这些内容，我不仅掌握了大模型API调用的基础流程与OpenAI兼容接口的优势，还了解了AI编程工具的高效用法，初步建立了对AI Agent核心要素的认知，为后续的AI开发实践打下了扎实基础。
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -220,6 +239,7 @@ Web3协议学习打卡
 
 
 
+
 理清Prompt、Workflow、Agent的边界：Prompt由人决策，仅单次问答；Workflow是固定预设流程，模型为流程节点；Agent可自主规划、动态调用工具、管理状态，三者失控风险与可调试性差异明显。
 
 了解AI Coding工具价值与局限：Claude Code、Codex CLI、Cursor可快速生成样板代码、解析陌生库、搭建原型，但代码审查、测试设计、架构决策无法被替代。
@@ -229,6 +249,7 @@ Web3协议学习打卡
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
