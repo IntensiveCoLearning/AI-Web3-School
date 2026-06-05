@@ -15,8 +15,52 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+## **分享会 - AI Agent 时代，重新审视区块链这项技术选择 + Conflux 实战**
+
+-   主讲人 FuSheng（树哥）
+    
+-   核心论点：AI Agent 正在移动 Web3 选型的临界点
+    
+    -   基础设施（L2、新 L1、Conflux 3.0）降低成本
+        
+    -   Agentic 场景产生更多跨系统/跨主体任务，增加区块链收益
+        
+-   用不用区块链 = 是否需要共享、可验证的状态和规则
+    
+-   复杂性分层：Agent 做附属复杂性，开发者保留判断（本质复杂性）
+    
+
+## **Conflux 链上投票 Demo 开发流程**
+
+-   5 步流程：确认需求 → 实现 → 调试 → 部署 → 合约升级
+    
+-   需求阶段：Agent 辅助追问信任边界、投票规则、状态归属、异常路径
+    
+-   实现阶段：Ralph loop / Codex 目标模式，Agent 自主执行 + 交付前 self-review
+    
+-   底层链：Conflux Layer 1（树图共识，2020 年主网上线）
+    
+
+## **随堂笔记**
+
+> 用不用区块链，是系统能力选择。重点不是谁更先进，而是场景是否需要共享、可验证的状态和规则。
+
+> 高度依赖资深经验的部分，正在被工具化、流程化。开发者保留判断，Agent 帮助展开判断，把工程工作推进到可验证结果。
+
+> AI Agent 正在移动 Web3 选型的临界点——过去算不过账的中间地带应用，现在有了新的 ROI。
+
+## **下一步工作**
+
+1.  结合 Cobo CAW + Conflux 思考黑客松方案
+    
+2.  继续 Handbook Web3 基础学习 — Account Abstraction（AA）
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 ## **分享会 - Harness Engineering for Financial Intelligence**
 
 -   主讲人 Skyl，FluxA 的 AI 原生支付基础设施
@@ -59,6 +103,7 @@ AI x Web3 School
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
 
+
 # **2026-06-03 周三**
 
 ## **Co-Learning：**
@@ -96,6 +141,7 @@ AI x Web3 School
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 ### **Week 3 分享会 —** [**Z.ai**](http://Z.ai) **GLM-5.1: 8 Hour Autonomy**
@@ -154,6 +200,7 @@ AI x Web3 School
 
 
 
+
 ### **Co-Learning | 任务推进与答疑**
 
 1.  参加了 19:00 的 Co-Learning 答疑交流
@@ -189,6 +236,7 @@ AI x Web3 School
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -235,6 +283,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -288,6 +337,7 @@ AI x Web3 School
 
 
 
+
 2026-05-29
 
 Dev3pack Builder 成长路径分享
@@ -319,6 +369,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -360,6 +411,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -420,6 +472,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Cobo Agentic Wallet 分享**
 
 1.  参加了 Cobo Agentic Wallet 分享会 — AI Agent 链上安全架构
@@ -456,6 +509,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -523,6 +577,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -628,6 +683,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Open Agentic Economy**
 
 1.  参加了 Sophia ([Z.AI](http://Z.AI)) 的 "Open Agentic Economy" 分享会
@@ -650,6 +706,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -719,6 +776,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
 
 2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
@@ -734,6 +792,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -820,11 +879,13 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
