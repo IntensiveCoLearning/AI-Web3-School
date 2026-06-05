@@ -15,6 +15,21 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+今日學習：Week 3 直播 | AI Agent 時代，重新審視區塊鏈這項技術選擇 & AI Agent 深度參與下的區塊鏈應用開發實戰
+
+核心主題：從 AI Agent 視角重新審視區塊鏈的技術價值，以及 AI Agent 深度參與區塊鏈應用開發的實戰方法。
+
+重新審視區塊鏈的三個問題框架：AI Agent 時代，評估一條鏈/技術棧不再是「TPS 多少、生態多大」，而是「這條鏈能不能讓 Agent 安全執行、身份可驗證、行為可審計、支付可自主」。四個關鍵判斷維度：鏈上 Agent 身份（DID/ENS）、可程式化授權（Session Key/Account Abstraction）、原生支付（穩定幣/ERC-20 自動結算）、行為審計（on-chain log + attestation）。
+
+AI Agent 深度參與區塊鏈開發實戰：Hackathon 週期的技術選型邏輯——優先選有完整 SDK、有 simulation、有明確 escrow 機制的技術棧。Agent 參與的鏈上應用需要「可組合性」：Session Key + Policy + Pact 可以組合，但每個模組必須獨立可測試。Demo 設計原則：能端到端跑通比功能完整更重要，優先展示「Agent 自主決策 → 觸發 Pact 授權 → x402 支付 → 鏈上收據」這條主線閉環。
+
+Week 3 例會精華分享回顧：優秀筆記特質——用第一性原理推導而非羅列知識點；有個人洞察而非課程複述；知識節點之間有因果邏輯連接；有最小實踐設計或 Builder 應用想像。
+
+個人洞察：「AI Agent 時代重新審視區塊鏈」的核心轉變是：區塊鏈從「人用的去信任系統」變成「Agent 用的可驗證執行環境」——人需要去信任，Agent 需要可程式化信任邊界。這個視角轉換讓很多之前覺得過於複雜的技術設計（Account Abstraction、Session Key、Pact）突然變得非常必要和自然。
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
 今日學習：Week 3 Hackathon Sprint + Wallet/Permission 賽道深化
