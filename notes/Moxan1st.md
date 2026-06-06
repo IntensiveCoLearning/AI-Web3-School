@@ -15,8 +15,16 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+Week3Day6
+
+今天更新了一下主机的配置，装机成功一次点亮。
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 Week3Day6
 
 把V1完成了，还更新到V1.1，下一目标是优化美观度。
@@ -24,6 +32,7 @@ Week3Day6
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 Week3Day4
 
@@ -36,6 +45,7 @@ Week3Day4
 <!-- DAILY_CHECKIN_2026-06-03_START -->
 
 
+
 Week3Day3
 
 脑暴了Idea，感觉不错，但是完成度有待确定。想上会招人分享一下。
@@ -43,6 +53,7 @@ Week3Day3
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -57,6 +68,7 @@ Week3Day1
 
 
 
+
 Week2Day7
 
 今天升级了一下家里的灯具线路，利用智能开关模块改变接线的方式，通过分析线序的方式判断了每根线的功能，总算是搞清楚了。升级成功
@@ -64,6 +76,7 @@ Week2Day7
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -82,6 +95,7 @@ Week2Day6
 
 
 
+
 Week2Day5
 
 今天5点半飞chengdu了，人麻了
@@ -89,6 +103,7 @@ Week2Day5
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -111,6 +126,7 @@ Week2Day5
 
 
 
+
 Week2Day3
 
 听了一下neo cyberpunk，强调了一下隐私的关键性，还是那个问题，隐私的重要性对于每个个体的要求是不一样的，怎样针对个体定制化的设计产品？
@@ -118,6 +134,7 @@ Week2Day3
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -146,6 +163,7 @@ Week2Day2
 
 
 
+
 Week2Day1
 
 1.先提交了已完成的内容。
@@ -157,6 +175,7 @@ Week2Day1
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -190,6 +209,7 @@ Week3Day1
 
 
 
+
 Week1Day6
 
 请假休息一天，漂了个头发
@@ -197,6 +217,7 @@ Week1Day6
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -233,6 +254,7 @@ Week1Day5
 
 
 
+
 Week1Day4
 
 一会开直播开始学，dbq AI X Web3 School
@@ -240,6 +262,7 @@ Week1Day4
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -280,6 +303,7 @@ Week1Day3
 
 
 
+
 Week1 Day2
 
 今天去毕业答辩了，顺利通过捏
@@ -287,6 +311,7 @@ Week1 Day2
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
