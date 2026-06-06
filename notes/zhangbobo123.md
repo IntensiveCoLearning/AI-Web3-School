@@ -15,19 +15,27 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+1
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 1
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
 
+
 1
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 1
@@ -38,11 +46,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -57,11 +67,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -115,11 +127,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -149,11 +163,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -186,11 +202,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -229,6 +247,7 @@ timezone: UTC+8
 
 
 
+
 ```
 链上数据存在哪？全球几万个全节点硬盘里，Etherscan只是索引层。数据越来越大怎么办：状态过期、无状态客户端、历史数据修剪、数据可用性采样、Layer 2 + 数据压缩、专门存储链。核心思路不是让每个节点存所有，而是分工。
 ```
@@ -236,6 +255,7 @@ timezone: UTC+8
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -316,6 +336,7 @@ timezone: UTC+8
 
 
 
+
 理解Web3底层原理：
 
 成功安装Hermes：将任务和AIxWEB3学习网站发送了
@@ -351,6 +372,7 @@ hermes gateway
 
 
 
+
 [先安装wsl，安装好了之后会输入账号密码，打开wsl环境进行配置](https://hermes-agent.nousresearch.com/docs/zh-Hans/getting-started/installation)
 
 具体网站Hermes：
@@ -362,6 +384,7 @@ hermes gateway
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
