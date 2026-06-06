@@ -350,7 +350,7 @@ more information
 | [jke2008-hub](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/jke2008-hub.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [chagelo](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/chagelo.md) | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | |
 | [ydr63630-design](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ydr63630-design.md) | ✅ | ⭕️ | ✅ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
-| [baikingrio](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/baikingrio.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | | |
+| [baikingrio](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/baikingrio.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | | | | |
 | [rahman-aj](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/rahman-aj.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [wfnuser](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/wfnuser.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [justinwongcn](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/justinwongcn.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ |   | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
