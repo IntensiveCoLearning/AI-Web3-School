@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+参加了昨晚的分享直播和Week 3的例会，但是忘记打卡了，哭
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 马上参加今晚的co learning和分享直播~
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
 
+
 已参加今晚的co learning和分享直播~
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 已参加完今天的co learning和VC分享直播~
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 看视频回放复习~
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -57,11 +67,13 @@ AI x Web3 School
 
 
 
+
 参加晚上共学和优秀笔记分享的直播~
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -80,11 +92,13 @@ AI x Web3 School
 
 
 
+
 参加co learning和直播分享会“Neo-Cypherpunk & the Cultural Layers of Privacy: Why Privacy Matters for Builders”
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -107,11 +121,13 @@ AI x Web3 School
 
 
 
+
 参加今晚的co-learning和直播~
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -138,11 +154,13 @@ AI x Web3 School
 
 
 
+
 参加今晚的“AI下乡计划”直播
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -173,11 +191,13 @@ AI x Web3 School
 
 
 
+
 参与共学~
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
