@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+打卡
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 打卡
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 打卡
 <!-- DAILY_CHECKIN_2026-06-04_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-02_START -->
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -68,11 +79,13 @@ AI x Web3 School
 
 
 
+
 看回放
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -93,11 +106,13 @@ AI x Web3 School
 
 
 
+
 学习建立 AI-native knowledge systems
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -124,11 +139,13 @@ AI x Web3 School
 
 
 
+
 抽时间回看视频
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -157,11 +174,13 @@ AI x Web3 School
 
 
 
+
 今日在回看视频
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -202,6 +221,7 @@ AI的输出并非事实结果，AI有幻觉。
 
 
 
+
 今天学习了模块B的Web3的知识。
 
 首先，发现了一些之前并未察觉的概念模糊，比如账户和钱包是不等同的。
@@ -215,6 +235,7 @@ AI的输出并非事实结果，AI有幻觉。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
