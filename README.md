@@ -231,7 +231,7 @@ more information
 | [hgkgkgk](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hgkgkgk.md) | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
 | [yichen-bear](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yichen-bear.md) | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | |
 | [1q2qq789](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/1q2qq789.md) | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | |
-| [zylg-create](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zylg-create.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | |
+| [zylg-create](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/zylg-create.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | | | | | | | | |
 | [yaohui1998-netizen](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yaohui1998-netizen.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Moc01](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Moc01.md) | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | | | | | | | | | |
 | [Silence-dream](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Silence-dream.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ |   | | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
