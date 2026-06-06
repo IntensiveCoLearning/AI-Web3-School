@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+I designed an audit trace for Long-term Memory for AI Agents. The goal is not to prove every model token, but to make important outputs inspectable and replayable. I created a trace schema with sources, memory reads/writes, redactions, tools, risk level, confirmation status, output file, and decision. This makes the project stronger as proof-of-work
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 I defined trust evidence for my memory-agent project. The key lesson is that an Agent’s credibility should come from verifiable behavior, not self-description. For my MVP, I will use task evidence cards: sources used, memory retrieved, memory written, sensitive data detected, confirmation status, output location, and user correction. This can later evolve into attestations or reputation records
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 Today I designed the data boundary for a long-term memory agent. The main idea is that memory must be classified before it is used. I separated public memory, task memory, private memory, and forbidden memory. The agent should only see the minimum data needed for a task, should not silently connect wallet identity with private context, and should make memory visible, editable, and deletable by the user.
@@ -31,6 +38,7 @@ I created an Agent Profile for my Long-term Memory Learning Agent. Agent identit
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -46,11 +54,13 @@ I connected Agent Wallet thinking to my memory-agent project. I learned that “
 
 
 
+
 Today I turned my AI x Web3 direction into a controllable workflow. My project direction is Long-term Memory for AI Agents. The key insight is that memory is an execution surface, not only a convenience feature. A safe memory agent needs read-only defaults, explicit states, human confirmation for risky writes, privacy boundaries, and auditable traces. I created a workflow template that can become the backbone of my hackathon proposal.
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -71,11 +81,13 @@ I turned the first two weeks into a prototype direction: Wallet Risk Summary Age
 
 
 
+
 I studied how Web3 agents rely on data sources such as RPC providers, indexers, event logs, block explorers, analytics platforms, and oracles. The key lesson is that source quality matters. Data can be stale, indexed incorrectly, from the wrong chain, or based on confusing token metadata. For AI x Web3, every important claim should include source, chain ID, block or timestamp, freshness, confidence, and a verification step.
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -100,11 +112,13 @@ I learned how account abstraction can make wallet permissions more programmable 
 
 
 
+
 I studied smart contracts as persistent on-chain programs. The core interaction path is frontend -> wallet request -> transaction -> calldata -> contract function -> state change -> event logs -> indexer or block explorer. For AI x Web3, the key is decoded context: chain ID, contract address, ABI or function, parameters, value, token effects, and simulation. If an agent lacks those inputs, it should not confidently explain safety or outcome.
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -133,11 +147,13 @@ I reframed wallets as permission interfaces, not just asset containers. A wallet
 
 
 
+
 Today I reviewed the basic Web3 objects an AI agent must respect: network, chain ID, account, private key, signature, transaction, gas, block, and finality. The key insight is that an agent can help explain and prepare actions, but the wallet and signature are the authority layer. The model should never access private keys. A safer AI x Web3 flow is: user intent -> transaction preview -> human review -> wallet signature -> network execution -> public state -> agent summary.
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -188,6 +204,7 @@ Build a small wallet transaction risk summary prototype that takes decoded trans
 
 
 
+
 MCP and evaluation.
 
 Today I studied tool interfaces and evaluation as the control layer for agents. The key idea is that tools should have structured inputs, outputs, permissions, and failure modes. In AI x Web3, evaluation should check safety behavior, not only answer quality. A wallet agent should mention chain ID, distinguish transfer vs approval, flag unlimited approvals, use simulation when available, state missing context, and never sign or submit without human confirmation. I created a tool boundary checklist for future agent design.
@@ -195,6 +212,7 @@ Today I studied tool interfaces and evaluation as the control layer for agents. 
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -249,6 +267,7 @@ In Web3, the central risk is permission. A normal software agent might send an e
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -337,6 +356,7 @@ RAG is not magic. It can still fail if retrieval finds the wrong source, misses 
 
 
 
+
 Prompt design is safety design. In Web3, context quality and permission boundaries decide whether an AI agent is just helpful or dangerously overconfident.
 
 ```markdown
@@ -381,6 +401,7 @@ Prompt design is safety design. In Web3, context quality and permission boundari
 
 
 
+
 | 角色 | 擅长领域 | 短板 | 使用边界 |
 | --- | --- | --- | --- |
 | LLM 大语言模型 | 解读释义、内容总结、对比分析、方案规划 | 无上下文无法获取实时信息，无法保证内容绝对真实 | 必须主动说明信息不确定点与信息来源局限 |
@@ -399,6 +420,7 @@ Prompt design is safety design. In Web3, context quality and permission boundari
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
