@@ -15,8 +15,39 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-07
+<!-- DAILY_CHECKIN_2026-06-07_START -->
+今天做了两件事：把 Week 3 所有 WCB 任务赶在截止前提交完，然后给黑客松项目补了本次 review 里价值最高的改动——用代码展示 CAW Pact 真正阻止了什么。
+
+**WCB 任务方面**，今天一口气写完并提交了 14 个 Week 3 文档（355pts），涵盖 Sprint Plan、Proposal Memo、Scope Review、Risk Memo、Cobo 赛道对齐、技术验证计划、项目流程图、深度研究包、SDK 接入计划、Workshop 笔记、Sponsor 问题清单等，全部推到学习仓库。
+
+**项目代码方面**，今天做了三件事：
+
+**1\. README 全面重写**，真实反映当前架构：三 Worker 服务发现流程图、加了「Narrative Warning」（Go server 不是普通 API，是持有独立钱包的自主经济参与者）、已知漏洞段落（合法浪费攻击、Sybil attack）、A2A 路线图。
+
+**2\. 新增** `demo_guard.py`，展示被阻止的攻击场景：
+
+-   场景 2：攻击者通过 prompt injection 诱导 Agent 支付 1.0 SETH（Pact 上限是 0.002 SETH）→ CAW 在合约层拒绝，0 SETH 损失
+    
+-   场景 3：攻击者把 Worker 响应里的收款地址替换成自己的钱包 → Pact 白名单拒绝，转账不执行
+    
+
+这解决了一个核心展演问题：项目最重要的主张是「CAW Pact 在合约层拦截越权操作」，但之前 demo 里这件事从来没被观察到过——评委只能相信我们说的。现在把论点变成了可录屏的事实。
+
+**3\.** `tools.py` **加了** `dst_address_in` **地址白名单**——之前 Pact 只限制了金额，现在每次支付都绑定到具体的 Worker 地址，地址白名单从代码层推到了合约层。
+
+核心 Insight 加固：
+
+> CAW Pact 的约束在合约层执行，不在 Agent 代码里。即使攻击者通过 prompt injection 完全控制了 Agent 的决策逻辑，Pact 仍然在最终执行层拦截越权操作。这就是「信任边界在合约层 vs 代码层」的本质差异。
+
+🔗 项目仓库：[https://github.com/Fisher-one/chain-research-agent](https://github.com/Fisher-one/chain-research-agent)  
+🔗 学习仓库：[https://github.com/Fisher-one/ai-web3-school-cohort-0](https://github.com/Fisher-one/ai-web3-school-cohort-0)  
+⛓️ 链上 tx：[https://sepolia.etherscan.io/tx/0xe77dcf36b81eeee1eb016b6c5dd53419c2bbdc3bd34e584dc03deeea0fafb2cc](https://sepolia.etherscan.io/tx/0xe77dcf36b81eeee1eb016b6c5dd53419c2bbdc3bd34e584dc03deeea0fafb2cc)
+<!-- DAILY_CHECKIN_2026-06-07_END -->
+
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 ### **今日完成**
 
 **架构升级：从单 Agent 到多 Worker 服务发现**
@@ -54,6 +85,7 @@ AI x Web3 School
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 今日完成
 
@@ -108,6 +140,7 @@ Agent: 数据已验证，正在生成报告...
 <!-- DAILY_CHECKIN_2026-06-03_START -->
 
 
+
 ### **今天产出**
 
 1.  **确定了单人参赛** — 组队找了一圈没合适的，Cobo 赛道单人能做，直接定。
@@ -135,6 +168,7 @@ Agent: 数据已验证，正在生成报告...
 
 
 
+
 今日学习前两周的内容
 
 8 种攻击，两句话总结规律：
@@ -148,6 +182,7 @@ Agent: 数据已验证，正在生成报告...
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -174,6 +209,7 @@ Agent: 数据已验证，正在生成报告...
 
 
 
+
 **今天重读了 Machine Payment 章节（~2500 字，8 个节点），用 explain-back 挖了一遍。** 之前读第一遍的时候 8 个节点当独立概念看，这次跟 Agent 过了 6 道题，把 Budget/Policy 分工、Payment Intent 生命周期、MPP 托管模型、x402 协议本质都重新捋了一遍。  
   
 2\. **修正了 Guard 在支付链路里的位置。** 第一遍理解是 Budget → Quote → Payment Intent → Guard（Guard 当最后一道闸）。这次理清楚应该是 Quote → Guard → Payment Intent——Guard 在用户签字之前就拦截不该看的报价，保护的不只是钱，还有注意力。
@@ -181,6 +217,7 @@ Agent: 数据已验证，正在生成报告...
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -205,6 +242,7 @@ Agent: 数据已验证，正在生成报告...
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -256,6 +294,7 @@ Agent: 数据已验证，正在生成报告...
 
 
 
+
 **今日学习总结**
 
 **Stablecoin Payment** 最基础的稳定币支付，USDC/USDT 转账，没啥说的。
@@ -285,6 +324,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -327,11 +367,13 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日完成了一个任务；设计一个受限 Web3 助手 workflow（40 pts）— 以「用稳定币订阅 X Premium」为场景，设计了基于智能账户（Smart Account）+ Session Key 的受限支付助手。核心设计：Session Key 四维限制（金额 ≤10U、每日 ≤3 笔、收款地址白名单、30 天有效期），规则由人来定、执行交给 Agent。重点搞清楚了白名单地址为什么必须人工核实（Agent 可能获取被篡改的地址），以及 Session Key 和 EOA 体验差异的本质——不是「不需要确认」，而是「授权范围内提前确认过了」。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -387,6 +429,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日学习
 
 用 Excalidraw 画了一张从 用户发起任务 到 链上执行验证 的完整流程图，把 Week 1 学的 LLM、Prompt、Context、RAG、Agent、钱包、合约串成了一条链路。
@@ -424,6 +467,7 @@ RPC 广播 → mempool →
 
 
 
+
 Day 5 打卡｜概念卡片整理：AI 6 个 + Web3 8 个  
   
 前两天把 Handbook 四章读完了，今天没读新东西，把读过的概念用自己的话整理成了卡片，方便以后翻。  
@@ -447,6 +491,7 @@ ERC-4337 是新东西，看了 UserOperation → Bundler → EntryPoint → Paym
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -598,6 +643,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 ## 单笔交易流转流程
 
 钱包签名→节点网络传播→内存池排队→构建者排序→验证者打包出块→区块上链可查询
@@ -660,6 +706,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 今日的学习笔记作结
 
 ```markdown
@@ -692,6 +739,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
