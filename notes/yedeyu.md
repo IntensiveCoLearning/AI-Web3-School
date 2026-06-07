@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+-   观看回放 [第三周例会：优秀笔记分享、答疑、下周课程预告](https://x.com/i/broadcasts/1dKrPPkZQkXJX)
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 -   观看回放 [AI Agent 时代，重新审视区块链这项技术选择&AI Agent深度参与下的区块链应用开发实战](https://x.com/i/broadcasts/1RJjppdrAPBKw)
     
     -   [governance-demo](https://github.com/darwintree/governance-demo)
@@ -32,11 +38,13 @@ AI x Web3 School
 
 
 
+
 -   观看回放 [支付场景的探索和思考](https://www.youtube.com/watch?v=XYqgHOQjMDY)
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -53,11 +61,13 @@ AI x Web3 School
 
 
 
+
 -   观看回放 [Hackathon Openday](https://x.com/i/broadcasts/1kKzDDaVzZRJv)
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -78,11 +88,13 @@ AI x Web3 School
 
 
 
+
 -   观看回放 [Women Builders in AI × Web3](https://www.youtube.com/watch?v=Trtnfo_QQmo)
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -107,11 +119,13 @@ AI x Web3 School
 
 
 
+
 -   观看回放 [Long term Memory for AI Agents](https://www.youtube.com/watch?v=zZLPTtBKQaQ)
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -142,6 +156,7 @@ AI x Web3 School
 
 
 
+
 -   观看回放 [Open Agentic Economy:From ERC-8004/ERC-8183 to Builder Path](https://www.youtube.com/watch?v=M_Ps8OyKwAw)
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
@@ -160,11 +175,13 @@ AI x Web3 School
 
 
 
+
 -   观看回放 [AI x Web3 School 例会 #1](https://www.youtube.com/watch?v=4rTRXtXQo2Y)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -205,11 +222,13 @@ AI x Web3 School
 
 
 
+
 -   观看 [60分钟全面掌握Claude Code～](https://www.bilibili.com/video/BV1NvRyBzEhq/)
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -250,11 +269,13 @@ AI x Web3 School
 
 
 
+
 -   观看回放 [Web3 运行原理](https://www.youtube.com/watch?v=amblYDPZqQ0)
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -299,11 +320,13 @@ AI x Web3 School
 
 
 
+
 -   观看回放 [AI 时代，Web3 开发者需要具备的基础知识和架构能力](https://x.com/i/broadcasts/1RKjpzPzVzZJw)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
