@@ -557,7 +557,7 @@ more information
 | [AmberTreelet](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/AmberTreelet.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Cocoydt](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Cocoydt.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [hanyangwang417-svg](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hanyangwang417-svg.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [yuriswj12-bit](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yuriswj12-bit.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ |   | | | | | | | |
+| [yuriswj12-bit](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yuriswj12-bit.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | | | | | | | |
 | [web3yaso](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/web3yaso.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | | | | |
 | [yrdgjuddgj](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yrdgjuddgj.md) | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | |
 | [lake0090](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lake0090.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ |   | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
