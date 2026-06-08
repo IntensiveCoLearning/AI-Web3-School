@@ -36,6 +36,23 @@ AI x Web3 School
 
 
 <!-- Content_START -->
+# 2026-06-08
+<!-- DAILY_CHECKIN_2026-06-08_START -->
+今日學習：Week 4 Hackathon Build Day 3 | Scope Freeze + MVP 主流程推進 + Co-learning & Moven 分享會
+
+核心主題：Week 4 第三天，進行 Hackathon 項目 Scope Freeze，鎖定 AI Security Demo 最小可驗證主流程，並參加 Co-learning 答疑與 Moven 支付場景分享會。
+
+Scope Freeze 決策：根據 Week 4 最低完成路徑要求，將 AI Security Demo 範圍收斂為一條核心鏈路：惡意 Prompt Injection 輸入 → 多層防禦攔截 → Pact 範圍驗證 → 審計日誌記錄 → 鏈上 attestation 存證。確認 Must-have（Prompt Injection 檢測 + Tool Call 白名單 + 審計 JSON）、Should-have（鏈上 attestation 接入）、Nice-to-have（前端 Dashboard 展示）、Cut/Mock（完整 DeFi 場景模擬）。
+
+MVP 主流程架構確認：整體流程為「用戶輸入 → 指令層隔離檢查 → 工具調用白名單驗證 → Pact 範圍確認 → 執行或拒絕 → 審計日誌輸出」。關鍵驗證指標：Prompt Injection 攔截率（測試 10 種攻擊向量）、合規工具調用通過率、完整審計記錄可追溯性。
+
+Co-learning 答疑重點：本週 Co-learning session 重點圍繞 Hackathon 衝刺答疑，討論了 AI Security 賽道中「攻擊模擬 vs 防禦展示」的 Demo 敘事策略——評委更關注防禦機制的可解釋性而非攻擊的複雜性。建議 Demo 故事線：展示攻擊 → 展示被攔截的防禦 → 展示審計記錄 → 解釋為什麼鏈上記錄不可篡改。
+
+Moven 分享會學習筆記：Moven 在支付場景的探索和思考分享了 AI Agent 如何在不需要用戶每次確認的情況下完成微支付閉環。核心洞察是「預算授權 + 條件執行」模式——用戶提前設定支付條件（金額上限、收款方白名單、有效期），Agent 在條件範圍內自動執行，超出範圍必須暫停請求人工確認。這與 AI Security 賽道的 Pact 機制高度相似，兩者共同構成 Agentic Commerce 的基礎設施層。
+
+明日計畫：完成 MVP 核心代碼實作（Prompt Injection 檢測器 + Tool Call Validator），整理 README 初稿，確保驗證材料（測試日誌 + 攔截記錄）可復現。
+<!-- DAILY_CHECKIN_2026-06-08_END -->
+
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
 今日學習：Week 4 Hackathon Build Day 2 | AI Privacy 核心概念 + Hackathon Demo 實作進展
