@@ -14,6 +14,276 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-08
+<!-- DAILY_CHECKIN_2026-06-08_START -->
+# AI x Web3 School | Day 22 技术报告：Agent Wallet 权限矩阵与会话密钥设计
+
+> **报告日期：** 2026-06-08  
+> **学习周期：** Day 22 / 28  
+> **主题：** Agent Wallet 权限分级机制与 Session Key 时序安全设计  
+> **报告等级：** 学术级技术报告（Technical Report）  
+> **输出状态：** 草稿 → 已提交 WCB 打卡平台  
+
+---
+
+## 1. 摘要（Abstract）
+
+进入第四周的第一天，本报告聚焦于 AI Agent 在 Web3 场景中最核心的安全基础设施之一：**Agent Wallet 权限矩阵**与**Session Key（会话密钥）**的形式化设计。经过前三周对 LLM Prompt、Tool Use、交易生命周期的积累，今日正式进入权限边界的精密建模阶段。
+
+**核心技术挑战**：
+- 定义 Agent 对链上资产操作的分级权限模型（Read / Simulate / Sign / Submit）
+- 设计 Session Key 的生命周期管理与时序约束
+- 形式化验证 Human-in-the-Loop（HITL）确认机制的安全边界
+
+**预期贡献**：
+- 一套可复用的 Agent 权限矩阵（Permission Matrix）标准表
+- Session Key 状态机的完整 Mermaid 时序图
+- 基于不变量（Invariant）的安全约束公式
+
+---
+
+## 2. 系统架构与拓扑（System Architecture & Topology）
+
+### 2.1 Agent 权限体系概念脑图
+
+```mermaid
+mindmap
+  root((Agent Wallet Permission))
+    Level 0 · Read-Only
+      query balance
+      read contract state
+      fetch gas price
+      list token holdings
+    Level 1 · Simulate
+      dry-run transaction
+      estimate gas
+      decode calldata
+      preview outcome
+    Level 2 · Sign with Approval
+      request user confirmation
+      generate signature
+      session key bounded
+      time-locked
+    Level 3 · Submit
+      broadcast to network
+      on-chain state mutation
+      irreversible action
+      requires dual-confirm
+    Cross-cutting
+      Audit Trail
+      Rate Limiting
+      Anomaly Detection
+      Emergency Kill Switch
+```
+
+### 2.2 权限流转拓扑图
+
+```mermaid
+graph TD
+    subgraph 用户授权层["User Authorization"]
+        U[User] -->|创建| SK[Session Key]
+        U -->|设置| P[Policy Config]
+        U -->|审批| AC[Approval Channel]
+    end
+
+    subgraph Agent 执行层["Agent Execution"]
+        A[AI Agent] -->|持有| AW[Agent Wallet]
+        AW -->|绑定| SK
+        A -->|请求| TR[Tool Registry]
+    end
+
+    subgraph 权限矩阵["Permission Matrix"]
+        TR -->|Level 0| R[Read Ops]
+        TR -->|Level 1| S[Simulate Ops]
+        TR -->|Level 2| SG[Sign Ops]
+        TR -->|Level 3| SB[Submit Ops]
+    end
+
+    subgraph 安全层["Security Layer"]
+        SG -->|require| HITL[Human-in-the-Loop]
+        SB -->|require| DC[Dual Confirmation]
+        HITL -->|timeout| FAIL[Operation Rejected]
+        DC -->|timeout| FAIL
+    end
+
+    R -->|direct| RPC[RPC Node]
+    S -->|direct| RPC
+    SG -->|after approval| TX[Transaction Builder]
+    TX --> SB
+    SB -->|broadcast| NET[Network]
+```
+
+---
+
+## 3. 理论框架与形式分类（Theoretical Framework & Formal Taxonomy）
+
+### 3.1 权限矩阵标准表
+
+| Level | 权限等级 | 操作类别 | 是否需要 Session Key | 是否需要用户确认 | 是否可逆 | 风险评级 |
+|---|---|---|---|---|---|---|
+| L0 | Read-Only | `eth_getBalance`, `eth_call` | ❌ | ❌ | N/A | 🟢 无风险 |
+| L1 | Simulate | `eth_estimateGas`, `debug_traceCall` | ❌ | ❌ | N/A | 🟢 低风险 |
+| L2 | Sign | `personal_sign`, `eth_signTransaction` | ✅ | ✅ HITL | ✅ 可撤回 | 🟡 中风险 |
+| L3 | Submit | `eth_sendRawTransaction` | ✅ | ✅ 双重确认 | ❌ 不可逆 | 🔴 高风险 |
+
+### 3.2 系统不变量（Invariant）
+
+定义安全约束公式：
+
+$$\forall op \in AgentOps: level(op) \geq 2 \Rightarrow \exists sk \in SessionKeys: valid(sk) \land bound(sk, agent) \land \neg expired(sk)$$
+
+$$\forall tx \in SubmitOps: broadcast(tx) \Rightarrow confirmed_{user}(tx) \land confirmed_{agent}(tx) \land gasFee(tx) \leq maxFee(sk)$$
+
+$$\forall sk \in SessionKeys: lifetime(sk) \leq T_{max} \land txCount(sk) \leq N_{max} \land totalValue(sk) \leq V_{max}$$
+
+其中：
+- $T_{max}$：会话密钥最大存活时间（建议 ≤ 24h）
+- $N_{max}$：单次会话最大交易次数（建议 ≤ 10）
+- $V_{max}$：单次会话最大累计转账价值（建议 ≤ 0.1 ETH）
+
+---
+
+## 4. 状态机与协议演练（State Machine & Protocol Walkthrough）
+
+### 4.1 Session Key 生命周期时序图
+
+```mermaid
+sequenceDiagram
+    participant User as 用户
+    participant Agent as AI Agent
+    participant SK as Session Key Manager
+    participant Chain as 区块链
+
+    User->>SK: 1. createSessionKey(policy)
+    SK-->>User: 2. sessionKeyId + expiry
+    User->>Agent: 3. bindSessionKey(keyId)
+    
+    Note over Agent: Agent 开始自主操作
+
+    Agent->>SK: 4. requestPermission(L0: readBalance)
+    SK-->>Agent: 5. GRANTED (no key needed)
+    Agent->>Chain: 6. eth_getBalance()
+    Chain-->>Agent: 7. balance = 2.5 ETH
+
+    Agent->>SK: 8. requestPermission(L2: signTx)
+    SK->>SK: 9. validate(keyId, policy, txValue)
+    SK->>User: 10. HITL confirmation request
+    User-->>SK: 11. APPROVED
+    SK-->>Agent: 12. GRANTED + one-time token
+    Agent->>Chain: 13. eth_sendRawTransaction(signedTx)
+    Chain-->>Agent: 14. txHash = 0x3f2a...
+
+    Note over SK: 累计操作计数 +1
+
+    Agent->>SK: 15. requestPermission(L3: submitBatch)
+    SK->>SK: 16. check txCount <= N_max
+    SK-->>Agent: 17. DENIED (quota exceeded)
+    
+    Note over Agent: Session Key 配额用尽，通知用户
+```
+
+### 4.2 异常熔断时序
+
+```mermaid
+sequenceDiagram
+    participant Agent as AI Agent
+    participant Guard as Security Guard
+    participant User as 用户
+
+    Agent->>Guard: submitTx(value=5 ETH)
+    Guard->>Guard: check: value > V_max(0.1 ETH)
+    Guard-->>Agent: BLOCKED (value exceeds limit)
+    Guard->>User: ALERT: 异常大额操作被拦截
+    
+    Agent->>Guard: submitTx(gasPrice=500 gwei)
+    Guard->>Guard: check: gasPrice > maxGasPrice
+    Guard-->>Agent: BLOCKED (gas price anomaly)
+    Guard->>User: ALERT: Gas 价格异常波动
+```
+
+---
+
+## 5. Agent 自主集成与优化（Agent Autonomous Integration & Optimization）
+
+### 5.1 Agent 架构设计
+
+基于前三周的学习，Agent 权限系统的工程落地需要以下组件协同：
+
+| 组件 | 职责 | 输入 | 输出 | 关键约束 |
+|---|---|---|---|---|
+| Policy Engine | 解析权限策略 | JSON Policy Config | Permission Decision | 策略不可被 Agent 自行修改 |
+| Session Key Store | 管理密钥生命周期 | Create/Revoke/Query | Key Status | 加密存储 + 定时清理 |
+| HITL Gateway | 转发确认请求 | Pending Approval | User Decision | 超时自动拒绝（30s） |
+| Audit Logger | 记录所有操作 | Agent Action | Immutable Log | Append-Only + 哈希链 |
+| Circuit Breaker | 异常熔断 | Action Stream | Block/Allow | 滑动窗口异常检测 |
+
+### 5.2 反馈闭环设计
+
+```mermaid
+graph LR
+    A[Agent Action] --> B[Permission Check]
+    B --> C{Allowed?}
+    C -->|Yes| D[Execute]
+    C -->|No| E[Log & Alert]
+    D --> F[Audit Trail]
+    E --> F
+    F --> G[Analytics]
+    G --> H[Policy Update Suggestion]
+    H --> I[User Review]
+    I -->|Approve| B
+```
+
+---
+
+## 6. 漏洞向量与边界场景验证（Vulnerability Vector & Edge Case Verification）
+
+### 6.1 安全漏洞分析
+
+| 漏洞类型 | 缺陷源头 | 攻击/失效向量 | 防御策略 |
+|---|---|---|---|
+| Session Key 窃取 | 密钥明文存储于内存 | 内存 Dump 攻击提取密钥 | 使用 HSM 或 TEE 隔离密钥材料 |
+| HITL 绕过 | Agent Prompt 注入伪造确认 | 恶意 Prompt 模拟用户批准 | 确认通道与 Agent 上下文物理隔离 |
+| 配额耗尽攻击 | 高频小额交易 | 大量 L2 操作消耗 Session 配额 | 滑动窗口速率限制 + 金额累计阈值 |
+| 过期密钥重放 | 密钥吊销延迟 | 已过期 Session Key 在窗口期内重放 | 链上 nonce 验证 + 即时吊销广播 |
+| Gas Price 操纵 | Agent 未校验 Gas 合理性 | 矿工/验证者诱导超高 Gas 消费 | 设置 `maxFeePerGas` 硬上限 |
+
+### 6.2 边界场景清单
+
+- [ ] 用户在 HITL 确认超时（30s）后 Agent 的降级行为验证
+- [ ] Session Key 在交易执行中途过期时的回滚机制
+- [ ] 网络分叉场景下 Agent 已提交交易的状态追踪
+- [ ] 多 Agent 共享同一 Session Key 时的并发安全
+
+---
+
+## 7. 今日核心收获与反思
+
+### 7.1 关键认知突破
+
+1. **权限不是二元的**：从 Day 1 到 Day 22，我对 Agent 权限的理解从简单的「有/无」进化到了四级分层模型。每一层都有其独特的安全约束和用户体验设计考量。
+
+2. **Session Key 是 Agent 自主性的钥匙**：它在保证用户主权的前提下，赋予 Agent 有限但明确的操作空间。时间窗口 + 操作配额 + 金额上限的三重约束是平衡安全与效率的关键。
+
+3. **HITL 不是万能的**：过度依赖用户确认会导致「确认疲劳」，最终用户会盲目点击「确认」。分级权限让低风险操作自动执行，高风险操作才需要人工介入。
+
+### 7.2 明日计划
+
+- [ ] 实现 Session Key 状态机的 TypeScript 原型代码
+- [ ] 对接 ERC-4337 Account Abstraction 的 Session Key 标准
+- [ ] 编写 Permission Matrix 的单元测试用例
+- [ ] 研究 Safe{Wallet} 的 Module 架构作为参考实现
+
+---
+
+## 8. 学术标签
+
+`Agent Wallet` · `Session Key` · `Permission Matrix` · `HITL` · `ERC-4337` · `Account Abstraction` · `Smart Contract Security` · `Multi-Agent Coordination`
+
+---
+
+**报告生成时间**：2026-06-08
+<!-- DAILY_CHECKIN_2026-06-08_END -->
+
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
 # Day 21 · 公开总结与 21 天学习复盘
