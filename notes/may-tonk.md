@@ -15,19 +15,44 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-08
+<!-- DAILY_CHECKIN_2026-06-08_START -->
+第 5 阶段已经完成并推送到 GitHub。
+
+本阶段主要做了三件事：
+
+1.  **Phase 5A：Markdown 报告生成**  
+    新增 generate\_token\_report()，可以把 snapshot + analysis 转成稳定的证据型 Markdown 报告，并在 analyze\_dune\_[token.py](http://token.py) 增加：
+    
+    `--report-output PATH`
+    
+2.  **Phase 5B：token\_profile 解释边界**  
+    新增 meme\_candidate / mainstream\_control / infrastructure 上下文，避免把 USDT、WBNB、CAKE 这类主流/基础设施 token 当成 BNB meme 候选解读。这个只影响解释，不改评分。
+    
+3.  **Phase 5C：AI 解释提示包**  
+    新增 generate\_ai\_explanation\_prompt() 和 config/prompts.yaml，可以输出 AI-ready prompt JSON，并在 CLI 增加：
+    
+    `--ai-prompt-output PATH`
+    
+    目前只是生成提示包，不调用模型，不让 AI 编造事实或替代规则引擎。
+<!-- DAILY_CHECKIN_2026-06-08_END -->
+
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
+
 今天AI额度烧完了，人工总结，今天主要是在第四阶段对钱包进行分析，筛选优秀钱包地址，来进行相关的分析判断是否可以进行相应的跟踪交易
 <!-- DAILY_CHECKIN_2026-06-07_END -->
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
 
+
 先打卡，今天学习有点晚，防止搞忘了
 <!-- DAILY_CHECKIN_2026-06-06_END -->
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 ## **1\. Current Phase 4 Status**
@@ -404,6 +429,7 @@ The current system should now move from implementation to calibration and contex
 
 
 
+
 请假一天，遇到创作瓶颈了
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
@@ -413,11 +439,13 @@ The current system should now move from implementation to calibration and contex
 
 
 
+
 明天考试，今天复习和确认比赛项目的方向
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -641,6 +669,7 @@ Observation: liquidity is not the weakest in the batch, but 24h volume is low an
 
 
 
+
 今天阶段三的核心开发基本完成了，已经不只是计划层面，而是把主要代码骨架和评分能力都接上了。
 
 **今天已完成**
@@ -794,6 +823,7 @@ Observation: liquidity is not the weakest in the batch, but 24h volume is low an
 
 
 
+
 快考试了，今天继续复习，再请假一天，明天全部补上；
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
@@ -808,11 +838,13 @@ Observation: liquidity is not the weakest in the batch, but 24h volume is low an
 
 
 
+
 这两天快考试了，明天会继续补上学习内容
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -1199,6 +1231,7 @@ ORDER BY 1;
 
 
 
+
 ## 继续学习AI+链上数据分析
 
 ## **如何 像数据分析师一样处理链上数据**
@@ -1291,6 +1324,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 
 
+
 **今天手动打卡，总结一下最近学习的内容和研究的方向**
 
 对于meme币，我一直都是充满幻想和喜欢的，但是市场上太多的币种是没有然后对成长价值，就连最基本的安全和信任也没有，找到一个短期或是是长期潜力比较大的一个币是比较不容易的，我们不仅要去详细了解代币的安全性和代币的分配，还要去看链上的数据，是否是真实玩家买入，狗庄的格局，是否存在大量的机器人刷单，叙事和用户情绪怎么样，判断当前是否值得去投资，什么时候该撤退；所以现在我在做一个链上数据分析（识别bot，是否大量代币来至同一个钱包，是否大量钱包时最近在进行创建，是否是左手倒右手等等），通过接入各家相应平台的API来进行相应的筛选BNB链上的meme，筛选出值得研究的，在进行下一步的数据补充和分析，然后AI进行相应的报告的产生，这期间AI是可以对我们处理的数据结果根据相应的规则进行解释和分析建议和需要数据的补充进行下一步的分析；然后因为meme的短暂性，所以我们推荐值得研究的4个等级的meme会进行相应的AI复盘，AI可以参与到我们规则的相应的调整；
@@ -1298,6 +1332,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -1457,6 +1492,7 @@ AI 适合解释和总结，不适合凭空生成链上事实。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -2037,6 +2073,7 @@ AI 的输出应该回答：
 
 
 
+
 ### 1\. 基本概念概述
 
 -   **EOA（Externally Owned Account，外部拥有账户）** 传统钱包账户，由私钥直接控制。最常见的 MetaMask 默认账户。
@@ -2130,6 +2167,7 @@ AI 的输出应该回答：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -2536,6 +2574,7 @@ Holder 汇总中观察到：
 
 
 
+
 几天继续了链上数据分析，AI+Defi投研报告自动项目的学习详细链接[链接](https://github.com/may-tonk/ai-web3-school-cohort-0/tree/codex/chainmind-foundation)
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -2559,11 +2598,13 @@ Holder 汇总中观察到：
 
 
 
+
 **今天和AI探讨了链上数据分析，AI+Defi的想法，简单的建立了一个工作项目计划，内容太多了，上传到了AI x Web3school的GitHub了；详细请查看**[**链接**](https://github.com/may-tonk/ai-web3-school-cohort-0/blob/master/daily/2026-05-19/AI_DeFi_Meme_Workflow_%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93.md)
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
