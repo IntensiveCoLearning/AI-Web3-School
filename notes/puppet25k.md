@@ -15,8 +15,39 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+## **Handbook 学习 - Evaluation**
+
+-   Evaluation 是针对 AI 大模型特化的测试流程
+    
+-   概念和常规软件测试流程有一定相似性
+    
+-   但大模型输出有随机性，需要保证下限，因此特化了一系列手段：
+    
+    -   Golden Set：精心标注的测试样本（30-100 条高质量 > 一堆随便收集）
+        
+    -   LLM-as-Judge：用模型评模型（适合开放答案，但不能被神化）
+        
+    -   Regression：防止"修 A 坏 B"，每修一个 bug 就加一条 regression 样本
+        
+    -   Harness：可重复运行的评测框架
+        
+    -   Observability：线上观测，补充 golden set 覆盖不到的真实失败
+        
+
+## **随堂笔记**
+
+> Evaluation 是针对 AI 大模型特化的测试流程，其中的概念和常规软件测试流程有一定的相似性。而因为大模型本身的输出的随机性，需要保证下限，所以需要特化一部分随机性问题，比如用 golden set 这种参照，还有一系列回顾和各种评估手段来确保这一点。
+
+> 不能被重复测量的 AI 行为，就不能被稳定改进。
+
+> LLM-as-Judge 是评估工具，不是最终真相。
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 ## **Handbook 学习 - MCP**
 
 -   MCP 是给 AI Agent 使用的 API 标准协议
@@ -44,6 +75,7 @@ AI x Web3 School
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
 
+
 ## **Handbook 学习 - AI 基础篇（二）**
 
 -   阅读 Agent / Frameworks / Vibe Coding 三个章节
@@ -66,6 +98,7 @@ AI x Web3 School
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 ## **Handbook 学习 - AI 基础篇**
@@ -101,6 +134,7 @@ AI x Web3 School
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -151,6 +185,7 @@ AI x Web3 School
 
 
 
+
 ## **分享会 - Harness Engineering for Financial Intelligence**
 
 -   主讲人 Skyl，FluxA 的 AI 原生支付基础设施
@@ -197,6 +232,7 @@ AI x Web3 School
 
 
 
+
 # **2026-06-03 周三**
 
 ## **Co-Learning：**
@@ -234,6 +270,7 @@ AI x Web3 School
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -300,6 +337,7 @@ AI x Web3 School
 
 
 
+
 ### **Co-Learning | 任务推进与答疑**
 
 1.  参加了 19:00 的 Co-Learning 答疑交流
@@ -335,6 +373,7 @@ AI x Web3 School
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -385,6 +424,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -446,6 +486,7 @@ AI x Web3 School
 
 
 
+
 2026-05-29
 
 Dev3pack Builder 成长路径分享
@@ -477,6 +518,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -522,6 +564,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -590,6 +633,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Cobo Agentic Wallet 分享**
 
 1.  参加了 Cobo Agentic Wallet 分享会 — AI Agent 链上安全架构
@@ -626,6 +670,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -697,6 +742,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -810,6 +856,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Open Agentic Economy**
 
 1.  参加了 Sophia ([Z.AI](http://Z.AI)) 的 "Open Agentic Economy" 分享会
@@ -832,6 +879,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -909,6 +957,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
 
 2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
@@ -924,6 +973,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -1018,11 +1068,13 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
