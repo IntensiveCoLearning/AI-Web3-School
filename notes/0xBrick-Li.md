@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+打卡喽
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
+
 周日也要记得打卡哦
 <!-- DAILY_CHECKIN_2026-06-07_END -->
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 今天休息，买了好多衣服，耶
 <!-- DAILY_CHECKIN_2026-06-06_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-05_START -->
 
 
+
 今天晚上上传了论文终稿，耶
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 答辩结束的第二天，奔赴广州，继续下一段工作和学习喽
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -68,11 +79,13 @@ AI x Web3 School
 
 
 
+
 打卡都记录着我的每一天，这几天总觉得忘了打卡，这几天感觉度日如年。
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -93,11 +106,13 @@ AI x Web3 School
 
 
 
+
 打卡喽，今天突然有一个好想法，现在的agent或者AI工具或者对话llm都是单人的。能不能做一个多人使用的agent，这个agent可以扮演多人中协调者、主持人的角色。用作信息不对等场景的沟通交流。
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -124,12 +139,14 @@ AI x Web3 School
 
 
 
+
 今天稍微休息一个上午，转眼回学校半个月了，忙论文忙论文。希望顺利毕业。  
 今天在L站看到，过去20年，程序员都在注重写代码，但是在AI时代，代码变得廉价，更重要的是架构能力。说实话，我的机构能力是不够，在做一个全栈项目或者复杂项目的时候我确实不足，我不懂如何让AI一个模块一个模块的来。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -160,11 +177,13 @@ AI x Web3 School
 
 
 
+
 今天又是忙论文的一天，先欠着，等我论文搞完了再学
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -201,6 +220,7 @@ AI x Web3 School
 
 
 
+
 打卡 ，真的事情很多，很痛苦草
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -222,11 +242,13 @@ AI x Web3 School
 
 
 
+
 希望我能一直保持自信，充满探索欲，做自己，做自己喜欢做的事。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
