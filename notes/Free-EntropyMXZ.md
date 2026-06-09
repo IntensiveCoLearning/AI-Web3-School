@@ -15,8 +15,24 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+### 合规博弈、模型责任法与全链 AI 游戏
+
+-   **核心概念：** 随着技术演进，监管开始动真格。**欧盟《AI法案》（EU AI Act）** 等法规正逐步落地，监管机构开始将“具有资产支配权的自主 Agent”视为“无牌照的金融顾问”，这也导致了市场的分化：
+    
+    -   **合规 AI (Compliant AI)：** 受机构欢迎，但由于强力审查，无法寻找“非对称机会”。
+        
+    -   **去中心化/无审查 AI (Uncensored AI)：** 运行在 DePIN 上，虽然合规风险极高，但能捕捉最激进的链上阿尔法（Alpha）收益。
+        
+-   **实战终点站 —— 全链 AI 游戏（Fully On-chain Game）：** Agent 做矿工、做玩家、做反派。人类编写策略策略，Agent 24小时在链上进行博弈套利，成为真正的“全自动数码丛林”。
+    
+-   **今日心得：** AI + Web3 的核心价值，就是创造出那些“在传统 Web2 规则下根本无法出生、无法开户、无法绕过审查”的数字原生生命体。
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 ### DeFAI 安全边界 —— 内存投毒与间接提示词注入
 
 -   **核心概念：** 当 AI Agent 掌控了真金白银的加密钱包，针对 AI 的黑客攻击就从“好玩”变成了“灾难”。
@@ -33,6 +49,7 @@ AI x Web3 School
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
 
+
 ### Intent-centric（意图导向）与机器原生钱包
 
 -   **核心概念：** 传统的 Web3 交互需要用户理解“签名、授权、跨链”。但对 AI 来说，直接编写并执行底层的 EVM 字节码太容易出错。因此，**Intent-centric（意图导向）** 架构成为主流。AI 只需要声明“终点意图”，剩下的路径寻找由链下的 Solver（寻找者）去竞争完成。
@@ -48,6 +65,7 @@ AI x Web3 School
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 ### Agentic GDP（智能体经济）与 A2A 通信
@@ -68,6 +86,7 @@ AI x Web3 School
 
 
 
+
 ### Agentic GDP（智能体经济）与 A2A 通信
 
 -   **核心概念：** AI Agent 不再是孤立的聊天框，它们已经开始相互买卖数据、协同完成任务，形成了 **A2A (Agent-to-Agent) 商务**。由此诞生了一个新指标：**aGDP（智能体国内生产总值）**，用来衡量链上 AI 实体创造的总经济产值。
@@ -83,6 +102,7 @@ AI x Web3 School
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -107,6 +127,7 @@ AI x Web3 School
 
 
 
+
 ### 前沿项目拆解与黑客松思考
 
 -   **明星项目拆解：**
@@ -126,6 +147,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -158,6 +180,7 @@ AI x Web3 School
 
 
 
+
 ### Day 4：AI + Web3 的代币经济学（Tokenomics）
 
 -   **核心概念：** 如何用 Token 驱动 AI 生态的飞轮？Web3 为 AI 引入了全新的数据贡献与标注激励机制。
@@ -175,6 +198,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -209,11 +233,13 @@ AI x Web3 School
 
 
 
+
 学习agent eco治理
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -240,11 +266,13 @@ AI x Web3 School
 
 
 
+
 学习ai智能体相关内容
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -354,11 +382,13 @@ AI x Web3 School
 
 
 
+
 阅读了一些ai-web3交叉方向的文档，但有待深入学习
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
