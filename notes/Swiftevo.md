@@ -15,8 +15,174 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+目前情況很清楚：repo 是乾淨的，最新狀態已同步到 GitHub。
+
+最新 commit：
+
+\`\`\`text
+
+1f30e42 Add archived run audit trail task
+
+\`\`\`
+
+`HEAD == origin/main`，沒有未提交修改。
+
+**已完成**
+
+M1 到 M3 基本完成：
+
+\- Spark DeSci 49 個項目已匯入
+
+\- GLM-5.1 agent loop 已完成
+
+\- agent 可 tool calling：
+
+\- `get_project_detail`
+
+\- `search_projects`
+
+\- `compare_projects`
+
+\- `search_academic_context` placeholder
+
+\- 可產生 structured review JSON
+
+\- 可產生 execution trace
+
+\- 可產生 reviewer brief
+
+\- 已加入 retry 機制
+
+\- 已改善 prompt：
+
+\- 區分可驗證 claim / 願景 claim
+
+\- 加入 novelty / duplication / gap assessment
+
+\- 強化 cross-project comparison
+
+\- 清楚標示 academic context 仍是 placeholder
+
+M4 大部分也完成：
+
+\- README 已更新
+
+\- `PROPOSAL.md` 已完成
+
+\- `SAFETY_COST_BOUNDARIES.md` 已完成
+
+\- `DEMO_REMARKS.md` 已完成
+
+\- `HACKATHON_ALIGNMENT.md` 已完成
+
+\- 6 份 reviewer brief 已放到 GitHub：
+
+\- `docs/reviewer-briefs/DSPJ-0003-reviewer-brief.md`
+
+\- `DSPJ-0006`
+
+\- `DSPJ-0007`
+
+\- `DSPJ-0018`
+
+\- `DSPJ-0020`
+
+\- `DSPJ-0038`
+
+**目前 agent 能做到甚麼**
+
+它已經可以用 GLM-5.1 讀取 Spark DeSci 項目，進行多步驟審查：
+
+\`\`\`text
+
+Project ID
+
+\-> 讀項目資料
+
+\-> 搜尋相近項目
+
+\-> 同輪比較
+
+\-> 產生 academic context query
+
+\-> 找出 claims / evidence / missing evidence / risks
+
+\-> 產生 reviewer questions
+
+\-> 輸出 reviewer brief
+
+\`\`\`
+
+核心定位是：
+
+\`\`\`text
+
+Funding Intelligence Agent
+
+\`\`\`
+
+不是 final decision maker。它幫人類評審節省前置分析時間，但不替人類決定資助結果。
+
+**重要限制**
+
+AMiner 尚未真正接上。
+
+現在的 academic context 是 placeholder。Demo 時一定要說清楚：
+
+\`\`\`text
+
+Academic context is placeholder scaffolding.
+
+It is not verified AMiner or literature evidence yet.
+
+\`\`\`
+
+已經在 README、DEMO\_REMARKS、SAFETY 文件和 reviewer brief 裡標明。
+
+**今天 / 下一步 M5**
+
+現在要進入最後 demo package：
+
+\- 建立 `DEMO_SCRIPT.md`
+
+\- 建立 one-command demo path
+
+\- 加入 timestamped run archive：
+
+\`\`\`text
+
+outputs/runs/YYYY-MM-DD-HHMM-ProjectId/
+
+\`\`\`
+
+\- 每次保存：
+
+\- agent review JSON
+
+\- trace JSON
+
+\- reviewer brief
+
+\- 文件化 archive 是 audit trail，用來追蹤 prompt/model/tool 改進
+
+\- GLM quota 恢復後，重跑 primary demo project
+
+\- 錄 3 分鐘 demo video
+
+\- final README pass
+
+\- final secret scan
+
+**一句話總結**
+
+我們已經有一個可跑、可展示、已上 GitHub 的 GLM-5.1 DeSci funding review agent。現在剩下的是把它包裝成評審容易理解的 final demo：腳本、錄影、一鍵 demo、可審計 run archive。
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 可以。這是目前項目的「簡介會版本」。
 
 **一句話**
@@ -369,6 +535,7 @@ The current prototype uses 49 real Spark DeSci projects as its data layer. GLM-5
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
 
+
 \# 2026-06-07 開發日記
 
 \## 今日進展
@@ -460,6 +627,7 @@ The current prototype uses 49 real Spark DeSci projects as its data layer. GLM-5
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 非常好。
@@ -1138,6 +1306,7 @@ Tool Use
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -1832,6 +2001,7 @@ ReAct 只是：
 
 
 
+
 很好。
 
 如果說前幾天你學的是：
@@ -2448,6 +2618,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 我認為你這個方向其實非常符合 [Z.AI](http://Z.AI) 賽道，而且比一般「Web3 Agent」更有特色。
 
 因為大部分參賽者可能做：
@@ -2989,6 +3160,7 @@ AI summarize proposal
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -3613,6 +3785,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 # Day 7 學習總結 — Memory、Fine-tuning 與人類認知模型
 
 今天最大的收穫其實不是新技術。
@@ -4141,6 +4314,7 @@ AI 怎樣決定做甚麼
 
 
 
+
 這兩者之中，**Cobo Agentic Wallet (CAW)** 以及其背後的技術架構，與 **Public Goods（公共物品）** 的發展有著直接且明確的關聯；而 [**Z.AI**](http://Z.AI) 則是從開源（Open Source）與學術工具的角度切入，間接回饋了 Public Goods 的生態。
 
 以下為兩者在 DeSci 或 Public Goods 發展上的交集與關聯分析：
@@ -4180,6 +4354,7 @@ AI 怎樣決定做甚麼
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -4802,6 +4977,7 @@ Reasoning + Actions
 
 
 
+
 Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
 
 今天你開始進入：
@@ -5391,6 +5567,7 @@ Context Engineering 組織知識
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -6059,6 +6236,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -6670,6 +6848,7 @@ LLM 會忽略中間資訊。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -7298,6 +7477,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -7892,6 +8072,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -8415,11 +8596,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -8862,6 +9045,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -8956,6 +9140,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
