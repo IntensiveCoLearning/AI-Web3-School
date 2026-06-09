@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+今天是自学的一天，巩固前面学到的概念
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 今天是AI创业，黑客松项目的相关介绍，讲了一些x现在AI创业所需要的和所看重的特质
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Twinstars526/images/2026-06-08-1780925305214-image.png)
@@ -24,6 +30,7 @@ AI x Web3 School
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 AI agent在区块链相关领域也有比较重要的作用，而且显著降低了开发的难度。所以个人更有能力进行区块链相关开发了，是一个利好之处。
 
@@ -34,6 +41,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 <!-- DAILY_CHECKIN_2026-06-04_START -->
 
 
+
 今天讲的是支付场景的知识，讲了Agent的一些必须的功能项，还讲了一些外部链接的服务项。丰富了一些关于支付端的一些了解。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Twinstars526/images/2026-06-04-1780579452837-image.png)
@@ -41,6 +49,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -55,11 +64,13 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 
 
+
 今天是黑客松openday，看起来大家都挺有干劲的。但是我好像还没有开立自己的题目。
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -78,6 +89,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 
 
+
 这场关于 AI 与 Web3 女性建设者的探讨有一种不一样的视角的感觉。讲了很多角色上的关联，发现女性也在这个领域有独属于自己的贡献。前沿技术迭代飞快，所有人都要一起合作才能达成最快的进步。很庆幸越来越多女性投身 AI 与 Web3 领域，一起抓住属于我们的全球机会。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Twinstars526/images/2026-05-29-1780070017625-image.png)
@@ -85,6 +97,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -107,6 +120,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 
 
+
 今天听完关于新密码朋克与隐私文化的分享，了解了隐私对于加密生态的重要性。对于行业建设者来说，隐私不止是加分项，有不少入门级 Web3 应用只追求交互体验，完全忽略链上数据防护，用户只是简单转账、参与活动，钱包地址就会被全网追踪、精准画像，甚至关联到现实身份。而一些主打隐私生态的项目，从开发初期就把匿名、数据保护融入底层架构，比如隐私钱包、基于零知识证明的应用，不仅解决了安全问题，更营造出自由、安心的使用氛围。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Twinstars526/images/2026-05-27-1779897091520-image.png)
@@ -114,6 +128,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -140,6 +155,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 
 
+
 今天听了关于大模型agent保持长期记忆性的重要性，老师花了很长篇幅讲述了有记忆的agent对用户的体验是很有拔高作用的，还举例了chatgpt，claude code和openclaw的例子。agent回复所经过的链条越长，记忆就越容易丢失。所以单纯聊天的大模型是比较擅长记忆的，而像openclaw这样的要有交付件的agent就会出现记忆扁平化的问题。下一步可能要探索一下hermes是不是更好用一些，在记忆的表现上会不会更好一些。
 
 ![72da73aa0b637f20f4343af7e0bdddb8.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Twinstars526/images/2026-05-25-1779717797914-72da73aa0b637f20f4343af7e0bdddb8.png)
@@ -147,6 +163,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -178,6 +195,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 
 
+
 今日深耕 AI 与 Web3 融合相关知识，熟悉了两类典型落地应用：一是利用 AI 技术排查智能合约漏洞、自动优化合约逻辑，降低安全风险；二是通过 AI 解析链上用户行为，甄别违规操作行为。同时也了解到行业前沿痛点，AI 模型在区块链网络中运行消耗极大，落地规模化应用难度颇高。此外收获了老师的暖心勉励，谈及普遍存在的 AI 焦虑心态，老师表示焦虑是常态，只要一直走在持续学习的路上，就能从容应对各类未知考验。
 
 ![6c223e28c46b0850d553b4425f0f0ba6.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Twinstars526/images/2026-05-21-1779377587158-6c223e28c46b0850d553b4425f0f0ba6.png)
@@ -185,6 +203,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -221,6 +240,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 
 
+
 今天听了关于Hermes的安装和应用课程，了解了一些本地AI agent能帮人做到的事情，还有一些安装方法。不过agent的选择是不约束的，我选择了qclaw作为本地学习助手，命令输入和安装更简单。今天用学习助手开始基于handbook进行深入的概念学习，正式开始了学习之旅。以下是学习的截图。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/Twinstars526/images/2026-05-19-1779204342095-image.png)
@@ -228,6 +248,7 @@ AI agent在区块链相关领域也有比较重要的作用，而且显著降低
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
