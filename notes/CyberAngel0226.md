@@ -15,8 +15,82 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+\# 今日日报｜2026-06-09
+
+\## 项目
+
+ColdRead：预测市场 Agent 审计决策系统
+
+\## 今日完成
+
+1\. 梳理并收敛了 ColdRead MVP 的核心定位：
+
+使用 Polymarket 数据筛出一边倒预测盘口，用 Tavily 背景信息确认风险，再由多个 Analysis Agent 给出建议，Decision Scorer 选择最终决策，并将 Decision Dossier 锚定到测试网。
+
+2\. 建立了项目领域词汇表：
+
+已在 `CONTEXT.md` 中定义 Decision Run、Market Screener、Screened Market、Evidence Snapshot、Agent Recommendation、Final Decision、Audit Anchor、Decision Timeline 等核心概念。
+
+3\. 明确了 MVP 范围边界：
+
+MVP 使用真实 Polymarket 数据、Tavily 背景信息和测试网 Audit Anchor，但不做真实 Polymarket 下单，也不做无人值守自动下注。
+
+4\. 记录了关键架构决策：
+
+已创建 6 条 ADR，覆盖链下档案与链上锚点、先选择建议不合成、先跟随市场共识、不做反向下注、MVP 要求用户确认、测试网锚定、真实执行后置等决策。
+
+5\. 生成了中文 PRD：
+
+已完成 `docs/prd.md`，包含问题背景、解决方案、用户故事、实现决策、测试决策、范围边界和后续说明。
+
+6\. 生成了 MVP 摘要文档：
+
+已完成 `docs/mvp.md`，用于快速对齐产品目标、核心流程、Agent 设计、评分器、审计模型、执行边界和 V2 延后项。
+
+7\. 拆分了 GitHub 多人协作 issues：
+
+已完成 `docs/issues.md`，共拆成 14 个 issue，并按 milestone、依赖关系、AFK/HITL、验收标准组织。
+
+\## 关键产出文件
+
+\- `CONTEXT.md`
+
+\- `docs/mvp.md`
+
+\- `docs/prd.md`
+
+\- `docs/issues.md`
+
+\- `docs/adr/0001-0006`
+
+\## 待确认事项
+
+1\. GitHub 仓库的 issue tracker、labels、milestones 是否需要我继续初始化。
+
+2\. 测试网 Audit Anchor 具体使用哪条测试网。
+
+3\. Polymarket 粗筛阈值：价格极端、流动性、截止时间等具体数值。
+
+4\. Tavily 搜索结果的摘要、引用和反证判断标准。
+
+5\. 前端技术栈和项目脚手架选择。
+
+\## 明日建议计划
+
+1\. 初始化 GitHub milestones 和 labels。
+
+2\. 将 `docs/issues.md` 中的 14 个 issue 发布到 GitHub。
+
+3\. 启动 Issue 1：定义 ColdRead domain contracts 和 Decision Timeline states。
+
+4\. 搭建最小项目骨架，为 Polymarket、Tavily、Agent、Scorer、Audit Anchor 预留接口。
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 今天完成了一个较清晰的 AI × Web3 项目方向设计：  
 **Agent 决策上链浏览器。**
 
@@ -37,6 +111,7 @@ AI x Web3 School
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
 
+
 ```
 1. 在 Remix VM 中重新部署 ETHTransfer
 2. 部署时确认 Value = 0，Gas limit = auto
@@ -54,6 +129,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-05_START -->
 
 
+
 今天最大的收获是：已经从“只看交易和钱包余额”，进入到“理解合约如何控制链上状态和资金流转”的阶段。
 
 ```
@@ -68,6 +144,7 @@ Value、_amount、Gas limit 是三个不同概念
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -107,6 +184,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 
 
+
 今天最大的收获是：**VC 视角看项目，重点不是技术有多复杂，而是商业逻辑是否清晰。**
 
 一个好的 AI Agent × Web3 项目，需要同时具备以下几个特点：
@@ -124,6 +202,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -149,6 +228,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 
 
+
 今天主要完成了 AI × Web3 方向的整体学习梳理，重点了解了 AI Agent 与 Web3 结合后的几个核心应用方向，包括机器支付、Agent 身份、能力声明、互操作协议、钱包权限管理和安全执行等内容。
 
 在学习过程中，我对 AI Agent 未来如何进入 Web3 体系有了更清晰的认识。Agent 不只是一个对话工具，它未来可能会成为能够调用 API、购买服务、持有身份、完成支付、执行链上操作的独立执行单元。因此，Web3 可以为 Agent 提供身份、资产、权限、结算和可信验证等基础设施。
@@ -160,6 +240,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -200,6 +281,7 @@ AI × Web3 并不是单一方向，而是可以分为支付、身份、钱包权
 
 
 
+
 -   明确了 AI Agent 的核心价值：从“被动回答”转向“主动执行任务”。
     
 -   理解了 Agent 的基本运行流程：理解目标、拆解任务、调用工具、执行任务、反馈优化。
@@ -213,6 +295,7 @@ AI × Web3 并不是单一方向，而是可以分为支付、身份、钱包权
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -254,6 +337,7 @@ ERC-8004 和 ERC-8183 分别从 **信任层** 和 **交易层** 支撑 Agentic E
 
 
 
+
 今天完成了 Open Agentic Economy 后续学习计划的整理，明确了从概念学习到项目实践的路径。
 
 后续学习将按照：
@@ -281,6 +365,7 @@ AI Agent 与链上任务结合
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -387,6 +472,7 @@ ERC-8183 主要解决 Agent 之间的商业交易流程问题。它通过 Job、
 
 
 
+
 今天完成了对 AI-Agent 和 Web3 结合方向的系统分析。整体来看，AI-Agent 解决的是“自动理解和执行任务”的问题，Web3 解决的是“资产、身份、支付和可信记录”的问题。两者未来最可能在钱包助手、链上支付、DeFi 自动化、智能合约交互和链上数据分析等方向融合。  
   
 AI-Agent 和 Web3 的结合不是简单地“AI + 区块链”概念叠加，而是存在明确的互补关系：
@@ -418,6 +504,7 @@ AI-Agent 操作 Web3 时存在明显风险，尤其是：
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -530,6 +617,7 @@ AI-Agent 操作 Web3 时存在明显风险，尤其是：
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -696,6 +784,7 @@ AI-Agent 操作 Web3 时存在明显风险，尤其是：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
