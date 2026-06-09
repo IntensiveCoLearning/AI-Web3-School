@@ -15,14 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+最近在企业 AI 转型这一块探索很多，尤其是在线下聊了非常多的客户，深入沟通了一些业务需求。
+
+我觉得我最大的一个感受就是：不要先入为主，非要让人家接受 AI，或者非要告诉人家 AI 有多么牛。很多时候，我们并没有去用心领会或理解对方真实的业务。
+
+这些业务包括每一个看起来很小、很细节，甚至你觉得没那么容易理解的部分。只有当你俯下身子来仔细观察、在做好这些工作的基础之上，才谈得上 AI 转型。
+
+我觉得用心做事情，用利他的思维去做事情，往往决定 business 能走多远。这是我很深的一个领会。
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
+
 hermes agent token问题的第三集：  
 [https://x.com/SwenChan/status/2063238644497035329?s=20](https://x.com/SwenChan/status/2063238644497035329?s=20)
 <!-- DAILY_CHECKIN_2026-06-07_END -->
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 [https://x.com/SwenChan/status/2062579295344881868?s=20](https://x.com/SwenChan/status/2062579295344881868?s=20)
 
@@ -35,12 +48,14 @@ hermes agent token问题的第三集：
 <!-- DAILY_CHECKIN_2026-06-03_START -->
 
 
+
 写了一篇文章，分析黑客松模型未来的革命：  
 [https://x.com/SwenChan/status/2062044439057768863?s=20](https://x.com/SwenChan/status/2062044439057768863?s=20)
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -57,12 +72,14 @@ hermes agent token问题的第三集：
 
 
 
+
 写了份hermes喂饭搭建指南，虽然大家还在学的应该都会了，但是这个技能值得更大的价值：  
 [https://x.com/SwenChan/status/2061019216338460768?s=20](https://x.com/SwenChan/status/2061019216338460768?s=20)
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -81,11 +98,13 @@ hermes agent token问题的第三集：
 
 
 
+
 我正在打造自己的独一无二的 Hermes Agent，非常期待
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -118,6 +137,7 @@ pointed to a different answer: LLM Wiki. Don't make the agent remember everythin
 
 
 
+
 今日笔记：EOA、智能账户和多签账户的权限差异  
 [https://x.com/SwenChan/status/2058823951531593904?s=20](https://x.com/SwenChan/status/2058823951531593904?s=20)
 
@@ -127,6 +147,7 @@ pointed to a different answer: LLM Wiki. Don't make the agent remember everythin
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -155,11 +176,13 @@ pointed to a different answer: LLM Wiki. Don't make the agent remember everythin
 
 
 
+
 帮大家审批任务中！！
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -192,6 +215,7 @@ pointed to a different answer: LLM Wiki. Don't make the agent remember everythin
 
 
 
+
 写了篇文章，用于整理最近很多新学员关于 API key的共同问题，快速入门 AI 开发：
 
 [https://x.com/SwenChan/status/2057349592296075285?s=20](https://x.com/SwenChan/status/2057349592296075285?s=20)
@@ -207,6 +231,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -280,6 +305,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 
 
+
 今日开始学习，先发了一个prompt作为post，给大家需要用hermes agent来学习的同学
 
 然后跟着做做任务 收集问题
@@ -287,6 +313,7 @@ web3基础概念小卡片：[https://x.com/SwenChan/status/2057108610321363258?s
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
