@@ -15,8 +15,42 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+### 今日完成
+
+1.  **后端字段补齐**：发现 `CardResponse` Pydantic 模型缺失 5 个字段（`agent_id` / `owner` / `cooldown_hours` / `time_window` / `api_key`），导致前端类型不匹配。全部补齐后 FastAPI 返回的 JSON 与前端 `CardPact` 接口完全一致。
+    
+2.  **前端 API 层**：新建 `web/src/api/caw.ts`，用 typed `fetch` 封装了 `listCards` / `createCard` / `approveCard` / `revokeCard` / `submitPayment` / `auditSummary` 等全部后端接口，组件层零直接 fetch。
+    
+3.  **Cards 页面重构**：从本地 `useState` mock 数据切换到 `useEffect` + API 驱动。新增离线提示 + 重试按钮。开卡表单扩展为支持供应商白名单多选（9 个供应商）、冷却期输入、有效期输入。
+    
+4.  **端到端验证**：
+    
+    -   后端 `CAW_MODE=mock` 启动，全部 API 通过 `curl` 测试
+        
+    -   前端 `npm run build` 零 TypeScript 错误
+        
+    -   浏览器访问 `/cards`，成功创建卡片 → 选择 OpenAI / Vercel → 审批 → 状态变为 ACTIVE
+        
+
+### 今日收获
+
+-   **Pydantic response\_model 是隐形过滤器**：如果模型字段少于实际返回的数据，FastAPI 会静默过滤。前后端联调的第一步永远是对 JSON 做 diff，而不是写 UI。
+    
+-   **API Client 层是前后端的翻译官**：把 fetch、错误处理、类型转换封装在 `api/caw.ts` 里，组件层只关心业务逻辑，不关心 HTTP 细节。
+    
+-   **React 状态刷新必须串行**：`await apiCall()` → `await refreshData()` → `setLoading(false)`，三步缺一不可。
+    
+-   **Browser 自动化在 React 下有局限**：refs 过期后点击不生效，用 `browser_console` 执行 `fetch()` 是可靠的兜底验证手段。
+    
+
+[https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/master/daily/2026-06-09.md](https://github.com/NeoWeb3Nova/neo-ai-web3-school-cohort-0/blob/master/daily/2026-06-09.md)
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 ### 今日完成
 
 1.  **Cobo CAW 真实 SDK 集成**：创建 `caw_factory.py` 工厂模式，实现 `CAW_MODE=mock/real` 一键切换。Mock 模式零依赖启动（评委友好），Real 模式一行切换对接真实链上资金。封装 `real_caw_client.py` 完整支持 create\_card / approve\_card / transfer\_tokens / list\_transactions。
@@ -50,6 +84,7 @@ AI x Web3 School
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 **训练营**：AI × Web3 School Cohort-0  
 **日期**：2026-06-06 (周六)  
@@ -98,6 +133,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-05_START -->
 
 
+
 ### 6/5 今日完成 ✅
 
 -   **Fallback Mock 方案固化**：确认 `x402_client.py` 中 `CoboCAWWallet` 类为模拟实现，已添加类文档字符串说明 `"实际生产环境中将是 Cobo 提供的 SDK 客户端"`
@@ -111,6 +147,7 @@ AI x Web3 School
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -140,6 +177,7 @@ AI x Web3 School
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -184,6 +222,7 @@ AI x Web3 School
 
 
 
+
 ### 今日完成
 
 1.  **完整抓取黑客松页面信息**：提取了 Cobo 赛道 5 个方向 + Z.AI 赛道 3 个方向的完整规则、提交要求、评审侧重点。
@@ -220,6 +259,7 @@ AI x Web3 School
 
 
 
+
 ### 今日完成
 
 1.  **Week 2 交付物整理**：全部 6 个模块（A/B/C/D/F/G）已完成，从问题地图到威胁建模到治理流程，覆盖 AI×Web3 交叉全链路。
@@ -240,6 +280,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -296,6 +337,7 @@ AI x Web3 School
 
 
 
+
 今日核心动作：完成模块 C（Agent Identity）交付 + Week 2 三个模块全部收尾。
 
 模块 C 交付：
@@ -323,6 +365,7 @@ Week 2 整体交付：
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -375,6 +418,7 @@ Week 2 整体交付：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -451,6 +495,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
 > 关键动作：
@@ -471,6 +516,7 @@ Week 2 整体交付：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -535,6 +581,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -563,6 +610,7 @@ Week 2 整体交付：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -616,6 +664,7 @@ Week 2 整体交付：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -708,6 +757,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -736,6 +786,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -801,6 +852,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
