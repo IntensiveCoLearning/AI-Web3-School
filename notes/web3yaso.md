@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+今日总结
+
+-   观看ZK分享会[https://x.com/AgentEconCN/status/2064185832144298351](https://x.com/AgentEconCN/status/2064185832144298351)
+    
+-   上传agnet代码库，[https://github.com/web3yaso/cobo-agent-wallet](https://github.com/web3yaso/cobo-agent-wallet)
+    
+-   准备PPT
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 今日总结
 
 -   完成了reading agent的第一版本 [https://github.com/web3yaso/cobo-agent-wallet](https://github.com/web3yaso/cobo-agent-wallet)
@@ -27,6 +39,7 @@ AI x Web3 School
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
 
+
 今日总结
 
 -   今天主要补齐了week3剩余任务
@@ -36,6 +49,7 @@ AI x Web3 School
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 今日总结
@@ -49,6 +63,7 @@ AI x Web3 School
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -85,6 +100,7 @@ AI x Web3 School
 
 
 
+
 今日任务总结
 
 -   完成了week2遗留任务，设计了agent的安全地区；复盘了AI如何帮助AAVE DAO更好的应对生存危机
@@ -99,6 +115,7 @@ AI x Web3 School
 
 
 
+
 -   确定了黑客松主题和框架 [https://web3yaso.github.io/x402write/](https://web3yaso.github.io/x402write/)
     
 -   完成了week2的遗留任务： agent access control研究
@@ -106,6 +123,7 @@ AI x Web3 School
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -128,6 +146,7 @@ AI x Web3 School
 
 
 
+
 今日完成
 
 -   Agent支付商业流程拆解
@@ -139,6 +158,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -181,6 +201,7 @@ AI x Web3 School
 
 
 
+
 今天完成了 AI × Web3 School 的两项补充任务，主要围绕 Week 1 学习总结和行业案例拆解做复盘。
 
 1.  发布了一份 AI × Web3 学习总结，整理了这一阶段对 agent memory、长期上下文、AI 工具协作、Web3 权限边界和可验证记录的理解。  
@@ -204,6 +225,7 @@ AI x Web3 School
 
 
 
+
 -   完成了week 1 的任务：设计AI & Web3的最小边界
     
 -   观看了Neo-Cypherpunk / Privacy分享的回放
@@ -213,6 +235,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -245,11 +268,13 @@ AI x Web3 School
 
 
 
+
 回看《**Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性**》
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -286,6 +311,7 @@ AI x Web3 School
 
 
 
+
 观看了英文分享：这次分享的主题围绕 Open Agentic Economy，也就是在 AI Agent 逐渐成为互联网新参与者之后，Ethereum 如何为人类和 Agent 共同参与的开放经济提供基础设施。
 
 [https://x.com/i/broadcasts/1qxvvkQkVXQxB](https://x.com/i/broadcasts/1qxvvkQkVXQxB)
@@ -308,6 +334,7 @@ AI x Web3 School
 
 
 
+
 观看老师的分享：**AI 下乡计划｜AI 在 Web3 的应用**
 
 [https://x.com/AgentEconCN/status/2057711778466083149](https://x.com/AgentEconCN/status/2057711778466083149)
@@ -315,6 +342,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -357,11 +385,13 @@ AI x Web3 School
 
 
 
+
 今天主要观看了Hermes Agent分享，收获满满
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -397,6 +427,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
