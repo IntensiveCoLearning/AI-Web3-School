@@ -770,7 +770,7 @@ more information
 | [tnt11003](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tnt11003.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [brislor](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/brislor.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Fisher-one](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Fisher-one.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | |
-| [pillowtalk-Qy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/pillowtalk-Qy.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | | | | | |
+| [pillowtalk-Qy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/pillowtalk-Qy.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   | | | | |
 | [Chris56684](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Chris56684.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [QingQiuGeek](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/QingQiuGeek.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ❌ | | | | | | | |
 | [natureloved](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/natureloved.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1088,7 +1088,7 @@ more information
 | [SimpleMatrixZero](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SimpleMatrixZero.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [hanabanana91526-creator](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/hanabanana91526-creator.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Morganlau110](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Morganlau110.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
-| [gaharietzhang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gaharietzhang.md) | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ |   | | | | |
+| [gaharietzhang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/gaharietzhang.md) | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | | | | |
 | [Jianghan77](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Jianghan77.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Miraitowa325](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Miraitowa325.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [HongfeiRichardZhang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/HongfeiRichardZhang.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -1234,6 +1234,7 @@ more information
 | [yisueh163](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yisueh163.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [SamCheebuild](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/SamCheebuild.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ❌ | | | | | | | |
 <!-- END_COMMIT_TABLE -->
+
 
 
 
