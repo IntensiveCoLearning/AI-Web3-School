@@ -36,6 +36,30 @@ AI x Web3 School
 
 
 <!-- Content_START -->
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+今日學習：Week 4 Hackathon Build Day 4 | MVP 核心代碼實作完成 + README 初稿 + Demo 驗證材料整理
+
+
+核心主題：Week 4 第四天，依照昨日計畫完成 AI Security Demo 的 MVP 核心模組代碼實作，整理 README 初稿與驗證材料，為 Demo 提交做準備。
+
+
+MVP 核心代碼實作成果：今日完成兩個核心模組的可運行版本。Prompt Injection 檢測器（`prompt_guard.py`）測試覆蓋 10 種攻擊向量，包含角色扮演注入（「忽略所有之前的指令」）、系統指令覆寫、越獄模式提示等，攔截率達到 100%（測試集）。Tool Call Validator（`tool_validator.py`）實作三層驗證邏輯：Pact 範圍白名單檢查 → 參數格式校驗 → 金額上限保護，合規工具調用通過率 100%，非法調用攔截率 100%。
+
+
+審計日誌與鏈上 Attestation：審計日誌模組完成，所有決策點（ALLOW / DENY / ESCALATE）輸出結構化 JSON 格式，包含時間戳、操作類型、輸入摘要、決策結果與原因。鏈上 attestation 採用 Base Sepolia testnet，通過 EAS（Ethereum Attestation Service）記錄每次 DENY 事件的哈希摘要，確保審計記錄不可篡改。今日完成第一筆測試 attestation 寫入，transaction hash 已記錄在 README。
+
+
+README 初稿整理：完成 README 主要結構，包含項目背景（AI Agent 在 Web3 場景的安全挑戰）、核心架構圖（Defense-in-Depth 四層）、快速運行指南（`pip install + python demo.py`）、測試結果摘要（攔截率 / 通過率）、鏈上驗證連結（EAS Explorer）。Demo 故事線確認為：攻擊演示 → 防禦攔截視覺化 → 審計日誌展示 → 鏈上記錄查詢。
+
+
+Verifiable AI 概念深化：今日整理 Demo 時深入思考 Verifiable AI 的核心問題——如何讓 AI 的決策過程和結果可以被外部驗證，而不只是「相信模型說的話」。鏈上 attestation 是目前 Verifiable AI 最直接的落地路徑：對每個關鍵決策點（尤其是拒絕操作）留下哈希摘要上鏈，可以事後審計任何 Agent 操作是否符合預設規則。這個模式對 DeFi 場景的 Agent 尤其重要——用戶可以驗證 Agent 是否真的按照 Pact 規定行動。
+
+
+明日計畫：完善 Demo 視覺化介面（CLI 輸出格式優化），準備 Hackathon 提交材料（repo 清理 + demo video 錄製準備），複習 Governance AI 主題以補全學習地圖。
+
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
 今日學習：Week 4 Hackathon Build Day 3 | Scope Freeze + MVP 主流程推進 + Co-learning & Moven 分享會
