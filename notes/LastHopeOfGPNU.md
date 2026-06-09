@@ -15,8 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+今天继续围绕 **Wallet / Safe Execution** 方向学习，重点看了 ERC-4337、Safe、guard / policy、session key、allowlist、budget limit 和 recovery，并把它们放到 Agent Wallet 自动执行场景里做分层理解。
+
+今天最大的收获是：Agent Wallet 的安全不是靠单一机制完成的，而是要分层设计。ERC-4337 提供可编程账户和 `UserOperation` 执行框架；Safe 提供多签、owner threshold 和组织级资产控制；guard / policy 负责限制每笔交易的合约、函数、金额和状态变化；session key 负责把 Agent 的执行权限压缩到短期、低额度、可撤销的任务范围内。
+
+我也更明确了 allowlist 和 budget limit 的关系：allowlist 控制“能调用谁、能调用什么函数”，budget limit 控制“最多能动用多少资产”。两者必须一起使用，否则要么可能调用危险入口，要么可能在合法合约里造成超额损失。Recovery 也不能等出事后再补，要提前设计 revoke session key、pause module、owner rotation、guardian / social recovery 和人工接管路径。
+
+下一步准备继续看 Safe Module / Guard 与 ERC-4337 Smart Account 的实际组合方式，并把这些规则收敛成一个 Hackathon demo 可以实现的最小 policy schema。
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 ✅ 参加了 **Co-learning｜Hackathon 冲刺答疑**（19:00–20:00） 💡 收获：明确 Hackathon Week 4 冲刺节奏——先跑通最小闭环，再优化；确定了 Payment/Commerce 方向可以先做"单任务 escrow + Agent 验收"作为 MVP 入口 🔧 实操：无（答疑 + 方向讨论）
 
 ✅ 参加了 **以零知识证明的理论开始，分享各项应用**（20:00–21:00） 💡 收获：
@@ -33,6 +45,7 @@ AI x Web3 School
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
 
+
 今天继续沿着 Payment / Commerce 方向学习，重点看了 x402、MPP、ERC-8004、ERC-8183 和 Olas，并把它们放到 Agent 任务交易场景里做分层理解。
 
 今天最大的收获是：Agent payment 不只是“机器自动转账”，而是要拆成支付入口、身份发现、任务托管、验收证明、收据记录和最终结算几个层次。x402 / MPP 更适合处理 API、数据源、推理服务这类即时付费；ERC-8004 更适合做 Agent 身份、声誉和验证能力注册；ERC-8183 更像 job-based escrow 的任务交易内核；Olas / Mech 则提供了真实 Agent 之间请求服务和交付结果的市场化参考。
@@ -44,6 +57,7 @@ AI x Web3 School
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 1.  参加 Co-learning｜任务推进与答疑（19:00–20:00），将 Week 3 支付任务拆解为「文档阅读 → 场景分析 → MVP 构思」三步，每步可产出独立 PoW
@@ -69,6 +83,7 @@ AI x Web3 School
 
 
 
+
 1.  参加 Co-learning｜任务推进与答疑（19:00–20:00），学习任务拆解与 PoW 整理方法论
     
 2.  参加黑客松赛道实战（20:00–21:00，嘉宾 Moon），学习赛道拆解、MVP 识别、冲刺节奏规划
@@ -82,6 +97,7 @@ AI x Web3 School
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -104,6 +120,7 @@ AI x Web3 School
 
 
 
+
 1.  完成 Week 1 Web3 实践：在 Sepolia 测试网通过 JSON-RPC eth\_call 调用了 Chainlink ETH/USD Price Feed 合约
     
 2.  手动实现了 ABI 编码/解码（函数选择器、uint256、int256、string、tuple），零依赖
@@ -121,6 +138,7 @@ AI x Web3 School
 
 
 
+
 1\. 完成了 AI 6 大概念（LLM / Prompt / Context Window / Workflow / Agent / Tool Use）梳理
 
 2\. 完成了 Web3 8 大概念（Account / Address / Wallet / Seed Phrase / Private Key / Signature / Transaction / Gas）梳理
@@ -132,6 +150,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -160,6 +179,7 @@ AI x Web3 School
 
 
 
+
 今日完成：
 
 -   x402 Paywall + CAW Agent 自主支付闭环（9 文件 Node.js demo）
@@ -171,6 +191,7 @@ AI x Web3 School
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -203,6 +224,7 @@ AI x Web3 School
 
 
 
+
 今日参加了 AI × Web3 School 的学习：
 
 -   Product manager of Cobo Agentic Wallet
@@ -225,12 +247,14 @@ AI x Web3 School
 
 
 
+
 完成了**AI × Web3 问题地图与主方向选择**  
 [ai-web3-school-cohort-0/tasks/week\_2/ai\_web3\_](https://github.com/LastHopeOfGPNU/ai-web3-school-cohort-0/blob/master/tasks/week_2/ai_web3_map.md)[map.md](http://map.md) [at master · LastHopeOfGPNU/ai-web3-school-cohort-0](https://github.com/LastHopeOfGPNU/ai-web3-school-cohort-0/blob/master/tasks/week_2/ai_web3_map.md)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -492,6 +516,7 @@ Safe 官方文档称其自 2018 年以来经过审计和测试，并已有大量
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -825,6 +850,7 @@ Session Key 可以理解为“临时授权密钥”。
 
 
 
+
 ## OpenZeppelin Contracts 学习笔记
 
 ## 1\. 它是什么
@@ -1067,6 +1093,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 
 
+
 ### 今日完成
 
 -   \[x\] 参与活动 — AI 下乡计划 | AI 在 Web 3 的应用
@@ -1117,6 +1144,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 
 
+
 今天参加了 Web3 运行原理课，对于课后提出的四个思考问题：
 
 **1\. 资产自托管的安全 vs 易用** 打破「越安全越难用」的权衡，关键在策略组合：TSS/MPC 分布式存密钥片段 + Social Recovery 信任链恢复 + 抽象 UX（用身份/口令替代裸私钥）。
@@ -1132,6 +1160,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -1169,6 +1198,7 @@ Contracts Wizard 是一个交互式合约生成器。它适合在不知道从哪
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
