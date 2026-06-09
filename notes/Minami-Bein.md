@@ -14,6 +14,399 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+# Day 23 学习报告：Sprint 2 进阶实践 —— AI Agent x Web3 系统架构与安全集成
+
+---
+
+## 目录（Table of Contents）
+
+1. [摘要与问题空间](#1-摘要与问题空间)
+2. [系统架构与拓扑](#2-系统架构与拓扑)
+3. [理论框架与形式分类](#3-理论框架与形式分类)
+4. [状态机与协议演练](#4-状态机与协议演练)
+5. [Agent 自主集成与优化](#5-agent-自主集成与优化)
+6. [漏洞向量与边界场景验证](#6-漏洞向量与边界场景验证)
+7. [学术标签](#7-学术标签)
+
+---
+
+## 1. 摘要与问题空间
+
+### 摘要（Abstract）
+
+本报告为 **AI x Web3 School 第 23 天（Sprint 2 Day 2）** 学习成果，系统化梳理 AI Agent 与 Web3 系统集成的核心架构、安全边界与工程落地方案。报告基于前 21 天 Web3 基础直觉（钱包、签名、交易、智能合约）与 Agent Workflow 连接（Tool Use、Agent Wallet）的学习积累，进一步深化 **可验证 AI（Verifiable AI）** 与 **链上权限边界（Permission Boundary）** 的形式化建模，为后续 Hackathon Prototype 提供理论支撑。
+
+**核心技术挑战：**
+
+- 如何在不暴露私钥的前提下，实现 Agent 对链上操作的有限授权（Limited Delegation）
+- 如何确保 AI Agent 的决策路径可审计、可回放（Audit & Replay）
+- 如何在 Web3 Tool Use 场景下防御 Prompt Injection 与恶意授权攻击
+
+### In-Scope / Out-of-Scope
+
+| 维度 | In-Scope | Out-of-Scope |
+|------|----------|--------------|
+| **功能范围** | Agent Wallet 权限矩阵设计、链上操作确认流程、Evaluation checklist | 链上数据预言机（Oracle）开发、DeFi 策略执行 |
+| **安全范围** | 私钥保护、授权边界、prompt injection 防御 | 智能合约漏洞审计、RPC 节点安全 |
+| **技术栈** | AI Agent、Smart Account、Session Key、MCP | Layer 2 扩容、跨链桥接 |
+
+---
+
+## 2. 系统架构与拓扑
+
+### 概念脑图（Conceptual Mind Map）
+
+```mermaid
+mindmap
+  root((AI Agent x Web3 System))
+    Web3 Foundation
+      Wallet
+        EOA
+        Smart Account
+      Signature
+        Message Signing
+        Transaction Signing
+      Transaction
+        Gas Estimation
+        Nonce Management
+      Smart Contract
+        ABI Interface
+        State Mutation
+    Agent Workflow
+      Observe
+        Chain-aware Context
+      Decide
+        RAG Knowledge
+      Act
+        Web3 Tool Use
+      Verify
+        Transaction Simulation
+      Report
+        Execution Log
+    Permission Boundary
+      Read-only Tools
+      User Confirmation Required
+      Prohibited Actions
+    Security Layer
+      Guard Policies
+      Session Key TTL
+      Rate Limiting
+```
+
+### 组件拓扑图（Component Topology）
+
+```mermaid
+graph TD
+    subgraph "User Layer"
+        U[User / 终端用户]
+    end
+    
+    subgraph "AI Agent Core"
+        LLM[LLM<br/>大语言模型]
+        WM[Workflow Manager<br/>工作流管理器]
+        EC[Execution Context<br/>执行上下文]
+    end
+    
+    subgraph "Web3 Tool Layer"
+        RT[Read Tools<br/>读取工具]
+        ST[Simulation Tools<br/>模拟工具]
+        GT[Gas Estimation<br/>Gas 估算]
+        SR[Signature Request<br/>签名请求]
+        TS[Transaction Submit<br/>交易提交]
+    end
+    
+    subgraph "Wallet & Auth Layer"
+        SW[Smart Wallet<br/>智能钱包]
+        SA[Smart Account<br/>智能账户]
+        SK[Session Key<br/>会话密钥]
+        GP[Guard Policies<br/>守卫策略]
+    end
+    
+    subgraph "Blockchain Layer"
+        RPC[RPC Node<br/>RPC 节点]
+        BC[Blockchain<br/>区块链]
+    end
+    
+    U --> LLM
+    LLM --> WM
+    WM --> EC
+    EC --> RT
+    EC --> ST
+    EC --> GT
+    EC --> SR
+    EC --> TS
+    
+    RT --> RPC
+    ST --> RPC
+    GT --> RPC
+    TS --> SW
+    
+    SW --> SA
+    SA --> SK
+    SA --> GP
+    SK --> BC
+    GP --> BC
+```
+
+---
+
+## 3. 理论框架与形式分类
+
+### 核心组件术语表（Core Component Glossary）
+
+| 组件 | 功能定义 | 输入类型 | 输出类型 | 约束条件 |
+|------|----------|----------|----------|----------|
+| **LLM**（大语言模型） | 决策中枢，解析自然语言指令 | Prompt + Context | Action Decision | 不可直接访问私钥 |
+| **Workflow Manager** | 协调 Agent 五步循环 | Task Spec | Step Sequence | 必须记录每步执行日志 |
+| **Smart Account**（智能账户） | 支持合约逻辑的钱包账户 | User Op + Policy | Validated Op | 需满足 Guard Policies |
+| **Session Key**（会话密钥） | 临时授权的操作密钥 | TTL + Permissions | Key Pair | 有时效性，需定期轮换 |
+| **Guard Policy**（守卫策略） | 规则引擎，控制操作权限 | Op Context | Allow/Deny | 不可被 LLM 直接修改 |
+| **Read Tool**（读取工具） | 只读链上数据 | Address/ABI | State Query | 不产生状态变更 |
+| **Simulation Tool**（模拟工具） | 预执行交易验证 | Tx Params | Simulation Result | 仅用于验证，不上链 |
+| **Signature Request**（签名请求） | 触发用户确认 | Message | User Signature | 必须 human-in-the-loop |
+
+### 类型系统（Type System）
+
+```typescript
+// Agent 操作权限类型
+type Permission = 
+  | 'read-only'        // 只读，无状态变更
+  | 'simulation'       // 可模拟，需验证
+  | 'user-confirm'     // 需用户确认后执行
+  | 'prohibited';      // 禁止自动执行
+
+// Web3 Tool 定义
+interface Web3Tool {
+  name: string;
+  permission: Permission;
+  inputSchema: object;
+  outputSchema: object;
+  requiresConfirmation: boolean;
+  gasEstimate?: boolean;
+}
+
+// Agent Decision 类型
+interface AgentDecision {
+  taskId: string;
+  selectedTool: Web3Tool;
+  inputParams: object;
+  reasoning: string;
+  confirmationRequired: boolean;
+}
+```
+
+### 系统不变量（System Invariants）
+
+**不变量 1：权限守恒**
+$$\forall op \in Operations, Permission(op) \neq 'prohibited' \implies Verify(op, UserPolicy) = true$$
+
+**不变量 2：私钥不可达**
+$$\nexists state \in SystemState: LLM \rightarrow PrivateKey$$
+
+**不变量 3：操作可追溯**
+$$\forall decision \in AgentDecisions: \exists log \in ExecutionLog: log.reasoning = decision.reasoning$$
+
+---
+
+## 4. 状态机与协议演练
+
+### Agent x Web3 操作时序图
+
+```mermaid
+sequenceDiagram
+    participant U as User<br/>用户
+    participant LLM as LLM<br/>大语言模型
+    participant WM as Workflow Manager<br/>工作流管理器
+    participant RT as Read Tool<br/>读取工具
+    participant ST as Simulation Tool<br/>模拟工具
+    participant SW as Smart Wallet<br/>智能钱包
+    participant BC as Blockchain<br/>区块链
+
+    Note over U,BC: Phase 1: Observe & Context Retrieval
+    U->>LLM: 自然语言任务请求
+    LLM->>RT: 查询链上状态
+    RT-->>LLM: 返回上下文数据
+    LLM->>LLM: 更新执行上下文
+
+    Note over U,BC: Phase 2: Decide & Tool Selection
+    LLM->>WM: 请求决策建议
+    WM-->>LLM: 推荐操作序列
+    LLM->>ST: 请求交易模拟
+    ST-->>LLM: 模拟结果验证
+
+    Note over U,BC: Phase 3: User Confirmation Gate
+    alt 需用户确认
+        LLM->>U: 请求签名确认
+        U->>SW: 用户本地签名
+        SW-->>LLM: 签名凭证
+    else 无需确认
+        Note over LLM: Session Key 已在有效期
+    end
+
+    Note over U,BC: Phase 4: Execution & Verification
+    LLM->>SW: 提交交易请求
+    SW->>BC: 广播交易
+    BC-->>SW: 交易回执
+    SW-->>LLM: 执行结果
+
+    Note over U,BC: Phase 5: Report & Logging
+    LLM->>WM: 生成执行报告
+    WM-->>U: 状态更新通知
+```
+
+### 状态阶段细化（State Stage Breakdown）
+
+| 阶段 | 名称 | 核心动作 | 安全检查点 |
+|------|------|----------|------------|
+| **Initiation** | 初始化 | 解析任务、加载上下文 | 任务权限预校验 |
+| **Verification** | 验证 | 链上状态查询、交易模拟 | Gas 估算、非活跃检查 |
+| **Commitment** | 提交 | 签名收集、交易广播 | 私钥不可达确认 |
+| **Confirmation** | 确认 | 链上回执、状态同步 | 交易状态最终性验证 |
+| **Report** | 报告 | 执行日志、结果通知 | 操作可追溯性确认 |
+
+---
+
+## 5. Agent 自主集成与优化
+
+### AI Agent 自动化架构设计
+
+基于 **Agent Workflow** 与 **Web3 Tool Use** 的集成框架，设计如下自主执行架构：
+
+```mermaid
+graph LR
+    subgraph "Input Layer"
+        T[Task Input<br/>任务输入]
+    end
+    
+    subgraph "Agent Core"
+        P[Prompt Engineering<br/>提示词工程]
+        C[Context Builder<br/>上下文构建]
+        D[Decision Engine<br/>决策引擎]
+    end
+    
+    subgraph "Tool Integration"
+        subgraph "Permission Matrix"
+            RO[Read-only<br/>只读]
+            SC[Simulation<br/>模拟]
+            UC[User Confirm<br/>需确认]
+            PX[Prohibited<br/>禁止]
+        end
+    end
+    
+    subgraph "Output Layer"
+        L[Execution Log<br/>执行日志]
+        R[Result Report<br/>结果报告]
+    end
+    
+    T --> P
+    P --> C
+    C --> D
+    D --> RO
+    D --> SC
+    D --> UC
+    
+    RO --> L
+    SC --> L
+    UC --> L
+    
+    L --> R
+```
+
+### 任务调度与优化策略
+
+| 优化维度 | 策略 | 实现方式 |
+|----------|------|----------|
+| **上下文压缩** | 链上数据选择性加载 | 仅保留与当前任务相关的状态切片 |
+| **工具缓存** | 预热高频读取操作 | Redis/Memory 缓存 10 分钟内有效数据 |
+| **Gas 优化** | 批量交易聚合 | EIP-2718 Typed Transaction 批处理 |
+| **失败重试** | 指数退避 + 非ce检测 | max_retries=3, base_delay=1s |
+
+---
+
+## 6. 漏洞向量与边界场景验证
+
+### 安全漏洞报告块（Security Vulnerability Report）
+
+#### 漏洞 1：Prompt Injection 攻击
+
+| 字段 | 内容 |
+|------|------|
+| **漏洞类型（Type）** | Prompt Injection / 提示词注入 |
+| **缺陷源头（Root Cause）** | LLM 对外部输入的解析缺乏严格沙箱隔离 |
+| **攻击向量（Attack Vector）** | 恶意构造的任务描述诱导 Agent 绕过权限检查 |
+| **防御策略（Mitigation）** | 1. 权限边界在系统层硬编码，不依赖 LLM 判断<br/>2. 关键操作（签名、授权）强制 human-in-the-loop<br/>3. 输入长度限制 + 语法校验 |
+
+#### 漏洞 2：会话密钥滥用
+
+| 字段 | 内容 |
+|------|------|
+| **漏洞类型（Type）** | Session Key Abuse / 会话密钥滥用 |
+| **缺陷源头（Root Cause）** | Session Key TTL 设置过长或权限范围过宽 |
+| **攻击向量（Attack Vector）** | 攻击者通过 XSS/CSRF 窃取有效 Session Key |
+| **防御策略（Mitigation）** | 1. Session Key 仅授权特定合约地址<br/>2. 设置单次交易最大 Gas 上限<br/>3. 自动过期机制（TTL ≤ 1 小时） |
+
+#### 漏洞 3：恶意授权钓鱼
+
+| 字段 | 内容 |
+|------|------|
+| **漏洞类型（Type）** | Malicious Approval Phishing / 恶意授权钓鱼 |
+| **缺陷源头（Root Cause）** | Agent 未校验授权目标的合约可信度 |
+| **攻击向量（Attack Vector）** | 诱导 Agent 授权恶意合约转移资产 |
+| **防御策略（Mitigation）** | 1. 建立白名单合约库<br/>2. 授权前强制显示合约摘要<br/>3. 权限范围限制（仅限指定代币） |
+
+#### 漏洞 4：链上数据源不可信
+
+| 字段 | 内容 |
+|------|------|
+| **漏洞类型（Type）** | Data Source Manipulation / 数据源操纵 |
+| **缺陷源头（Root Cause）** | 使用单一 RPC 节点，无冗余校验 |
+| **攻击向量（Attack Vector）** | RPC 节点返回伪造状态，诱导错误决策 |
+| **防御策略（Mitigation）** | 1. 多 RPC 节点共识校验<br/>2. 引入预言机（Oracle）数据交叉验证<br/>3. 关键决策需链上最终确认 |
+
+---
+
+## 7. 学术标签
+
+| 标签 | 英文全称 | 领域归属 |
+|------|----------|----------|
+| **AI Agent** | Artificial Intelligence Agent | 人工智能 |
+| **Web3 Tool Use** | Web3 Tool Use | 区块链交互 |
+| **Agent Wallet** | Agent Wallet | 权限与授权 |
+| **Verifiable AI** | Verifiable AI | 可验证人工智能 |
+| **Permission Boundary** | Permission Boundary | 安全架构 |
+| **Smart Account** | Smart Account | 账户抽象 |
+| **Session Key** | Session Key | 会话管理 |
+| **Human-in-the-loop** | Human-in-the-loop | 人机协同 |
+
+---
+
+## 今日学习总结
+
+**Day 23（Sprint 2 Day 2）核心进展：**
+
+1. **系统架构建模**：完成 AI Agent x Web3 集成的完整拓扑设计，明确从用户层到区块链层的全链路组件关系
+2. **安全边界形式化**：定义 Permission 类型系统（read-only / simulation / user-confirm / prohibited），建立 Guard Policy 规则引擎
+3. **协议流程标准化**：设计五阶段状态机（Initiation → Verification → Commitment → Confirmation → Report），实现操作可追溯闭环
+4. **漏洞向量识别**：梳理 4 类高危安全场景（Prompt Injection、Session Key 滥用、恶意授权、RPC 数据操纵），制定对应防御策略
+
+**关键术语（双语）：**
+
+- 智能体钱包（Agent Wallet）
+- 智能账户（Smart Account）
+- 会话密钥（Session Key）
+- 守卫策略（Guard Policy）
+- 人类在回路（Human-in-the-loop）
+- 可验证人工智能（Verifiable AI）
+
+**下一步计划：**
+
+- 基于本报告架构，实现 Agent Wallet 权限矩阵的代码原型
+- 完善 Hackathon Prototype 的安全审计 checklist
+- 准备 Sprint 2 Week 1 复盘文档
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
 # AI x Web3 School | Day 22 技术报告：Agent Wallet 权限矩阵与会话密钥设计
