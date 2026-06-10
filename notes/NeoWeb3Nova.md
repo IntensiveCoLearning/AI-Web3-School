@@ -15,8 +15,56 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-10
+<!-- DAILY_CHECKIN_2026-06-10_START -->
+### 今日完成
+
+1.  **x402 支付协议 + ERC-8004 元数据落地**：新增 `service_registry.py` 作为 provider 注册中心，实现 x402 协议握手流程。后端新增 `/marketplace/providers` 和 `/marketplace/quote` 端点，返回标准化的 ERC-8004 元数据（name / version / supportedChains / paymentMethods）。前端 AgentConsole 调用支付时自动携带 x402 协议头。
+    
+2.  **AgentConsole 全面重构（442 行）**：从静态 mock 切换为 Live API 驱动。新增卡片选择器、支付请求表单、状态流转实时反馈。支付请求提交后自动关联已授权的卡片，走完整审批链路。
+    
+3.  **多链 CAW Treasury 余额展示**：统一 `TreasuryBalance` 模型，Dashboard 支持多链聚合显示（ETH / BSC / Polygon 等）。mock 和 real 客户端返回格式统一，前端用 `reduce` 聚合展示。
+    
+4.  **后端稳定性修复**：
+    
+    -   修复 CAW cards read path 事件循环问题（async endpoint + async SDK 冲突）
+        
+    -   规范化 nullable transaction 字段（防止数据库 NULL 导致 Pydantic 校验失败）
+        
+    -   修复卡片 expiry null 处理（未设置过期时间的卡片不再 crash）
+        
+    -   新增 `cardStatus.tsx` 工具函数，未知状态降级渲染不白屏
+        
+5.  **前端工程化**：Dashboard + AuditReport 图表 sizing warnings 全清，12 个 commit 全部 push。
+    
+
+### 今日收获
+
+-   **x402 是 Agent 支付的 HTTP 中间件**：服务端返回 402 → Agent 自动从卡片扣款 → 无需人工。ERC-8004 元数据让 Agent 知道该找哪个 provider 报价。
+    
+-   **AgentConsole 接入 Live 后状态管理复杂度陡增**：需要同时管理 `selectedCard`、`paymentRequest`、`loadingStates`，骨架屏是防止 null crash 的必要防御。
+    
+-   **FastAPI async + 第三方 async SDK = 事件循环陷阱**：read path 应统一用 sync HTTP 请求，write path 做 session 隔离，避免 `Event loop is closed`。
+    
+-   **Recharts sizing warning 是渲染时序问题**：给容器加 `min-h-[200px]` 确保 mount 时有确定尺寸，而非数据问题。
+    
+-   **多链数据格式必须前后端统一**：mock 和 real 返回结构不一致会导致前端聚合逻辑崩溃，Pydantic 模型是唯一的真理来源。
+    
+
+### 链接
+
+-   x402 Provider 注册中心：`hackathon/project/src/service_registry.py`
+    
+-   AgentConsole 页面：`hackathon/project/web/src/pages/AgentConsole.tsx`
+    
+-   卡片状态工具：`hackathon/project/web/src/utils/cardStatus.tsx`
+    
+-   多链余额 API：`hackathon/project/web/src/api/client.ts`
+<!-- DAILY_CHECKIN_2026-06-10_END -->
+
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 ### 今日完成
 
 1.  **后端字段补齐**：发现 `CardResponse` Pydantic 模型缺失 5 个字段（`agent_id` / `owner` / `cooldown_hours` / `time_window` / `api_key`），导致前端类型不匹配。全部补齐后 FastAPI 返回的 JSON 与前端 `CardPact` 接口完全一致。
@@ -51,6 +99,7 @@ AI x Web3 School
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
 
+
 ### 今日完成
 
 1.  **Cobo CAW 真实 SDK 集成**：创建 `caw_factory.py` 工厂模式，实现 `CAW_MODE=mock/real` 一键切换。Mock 模式零依赖启动（评委友好），Real 模式一行切换对接真实链上资金。封装 `real_caw_client.py` 完整支持 create\_card / approve\_card / transfer\_tokens / list\_transactions。
@@ -84,6 +133,7 @@ AI x Web3 School
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 **训练营**：AI × Web3 School Cohort-0  
@@ -134,6 +184,7 @@ AI x Web3 School
 
 
 
+
 ### 6/5 今日完成 ✅
 
 -   **Fallback Mock 方案固化**：确认 `x402_client.py` 中 `CoboCAWWallet` 类为模拟实现，已添加类文档字符串说明 `"实际生产环境中将是 Cobo 提供的 SDK 客户端"`
@@ -147,6 +198,7 @@ AI x Web3 School
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -177,6 +229,7 @@ AI x Web3 School
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -223,6 +276,7 @@ AI x Web3 School
 
 
 
+
 ### 今日完成
 
 1.  **完整抓取黑客松页面信息**：提取了 Cobo 赛道 5 个方向 + Z.AI 赛道 3 个方向的完整规则、提交要求、评审侧重点。
@@ -260,6 +314,7 @@ AI x Web3 School
 
 
 
+
 ### 今日完成
 
 1.  **Week 2 交付物整理**：全部 6 个模块（A/B/C/D/F/G）已完成，从问题地图到威胁建模到治理流程，覆盖 AI×Web3 交叉全链路。
@@ -280,6 +335,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -338,6 +394,7 @@ AI x Web3 School
 
 
 
+
 今日核心动作：完成模块 C（Agent Identity）交付 + Week 2 三个模块全部收尾。
 
 模块 C 交付：
@@ -365,6 +422,7 @@ Week 2 整体交付：
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -418,6 +476,7 @@ Week 2 整体交付：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -496,6 +555,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
 > 关键动作：
@@ -516,6 +576,7 @@ Week 2 整体交付：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -582,6 +643,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -610,6 +672,7 @@ Week 2 整体交付：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -664,6 +727,7 @@ Week 2 整体交付：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -758,6 +822,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -786,6 +851,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -852,6 +918,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
