@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-10
+<!-- DAILY_CHECKIN_2026-06-10_START -->
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-06-10-1781105727705-image.png)
+<!-- DAILY_CHECKIN_2026-06-10_END -->
+
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 ![1000017534.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-06-08-1780929045260-1000017534.png)
 <!-- DAILY_CHECKIN_2026-06-08_END -->
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
 
+
 ![1000017485.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-06-06-1780760299181-1000017485.jpg)
 <!-- DAILY_CHECKIN_2026-06-06_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 ![a9acebea37db15e4cc78b486713ad1a9.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-06-04-1780584695417-a9acebea37db15e4cc78b486713ad1a9.png)
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 ![1000017410.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-06-03-1780501734316-1000017410.jpg)
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -57,11 +67,13 @@ AI x Web3 School
 
 
 
+
 ![1000017316.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-06-01-1780318680911-1000017316.jpg)
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -92,6 +104,7 @@ AI x Web3 School
 
 
 
+
 这是你本人吗，哈哈之前在忙没注意，现在有空了，还能聊吗
 
 ![1000017134.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-05-29-1780054225368-1000017134.jpg)
@@ -99,6 +112,7 @@ AI x Web3 School
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -123,11 +137,13 @@ AI x Web3 School
 
 
 
+
 ![f9de32570cdaf9813cdcf74dca09e190.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-05-27-1779887189090-f9de32570cdaf9813cdcf74dca09e190.jpg)
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -154,11 +170,13 @@ AI x Web3 School
 
 
 
+
 ![dd5fb0a70503d88ad0f61701f042ced2.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-05-25-1779714656687-dd5fb0a70503d88ad0f61701f042ced2.jpg)
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -189,11 +207,13 @@ AI x Web3 School
 
 
 
+
 ![02aa8b627f1a73fc22d3e4c014795933.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-05-22-1779455463731-02aa8b627f1a73fc22d3e4c014795933.jpg)
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -228,11 +248,13 @@ AI x Web3 School
 
 
 
+
 ![dd70bb171412dad2f309381de3c079e5.jpg](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/kcalll/images/2026-05-20-1779281698513-dd70bb171412dad2f309381de3c079e5.jpg)
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
