@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-10
+<!-- DAILY_CHECKIN_2026-06-10_START -->
+报名黑客松，欣赏别人的笔记
+<!-- DAILY_CHECKIN_2026-06-10_END -->
+
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 今天我用codex接入api，然后继续学习web3&ai相关内容，了解了密码学
 <!-- DAILY_CHECKIN_2026-06-09_END -->
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 学了一些密码学的内容，可是好难，继续学
 <!-- DAILY_CHECKIN_2026-06-08_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-07_START -->
 
 
+
 根据codex持续学习任务，补交任务
 <!-- DAILY_CHECKIN_2026-06-07_END -->
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 明天开始思考黑客松项目
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -68,11 +79,13 @@ AI x Web3 School
 
 
 
+
 openday找到搭子
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -93,11 +106,13 @@ openday找到搭子
 
 
 
+
 继续补习web3，codex
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -122,11 +137,13 @@ openday找到搭子
 
 
 
+
 听英语builder，继续研究ai和web3的结合点
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -155,11 +172,13 @@ openday找到搭子
 
 
 
+
 开始狂学模式，然后今天colearning听了小海老师讲l2，可以自学以太坊层，同时继续加油
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -192,11 +211,13 @@ openday找到搭子
 
 
 
+
 听了马铃薯老师讲解web3的前沿知识，以及李老师讲解基础memory，好好复习！
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -233,11 +254,13 @@ openday找到搭子
 
 
 
+
 今天听了ef大佬的分享，意识到英语是个很重要的听力，以及skill和web3的具体融合方式
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -278,11 +301,13 @@ openday找到搭子
 
 
 
+
 晚上跟着elon老师了解了合约以及ai和web3如何具体操作实践的方面，对于钱包安全这块可以自己尝试动手做个小插件
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -329,6 +354,7 @@ openday找到搭子
 
 
 
+
 结合之前了解的manus，到后来的cc，还有codex，再到部署小龙虾和现在的harmess，每一次技术的进步，带来我对ai不一样的视野
 
 关于首周的行动计划，我希望能先脚踏实地完成环境配置，并争取稳妥地拿到基础积分。接下来，我会尝试通过 Telegram 或者lark接入 Harmers Agent 学习助手，按照官网提供的助记词模板认真完成初始化；同时，我也会授权助手检查本地 Git 环境，建立一个专属的 GitHub 仓库，用来记录后续的打卡与思考。同时思考此次配置对于日常生活中的应用，以及之前所学过的知识的融合
@@ -336,6 +362,7 @@ openday找到搭子
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
