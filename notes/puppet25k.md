@@ -15,8 +15,37 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-10
+<!-- DAILY_CHECKIN_2026-06-10_START -->
+## **Handbook 学习 - Fine-tuning**
+
+-   Fine-tuning 不是"效果不好就训练一下"，改的是行为分布而非系统边界
+    
+-   先问清楚：是 prompt 问题？上下文缺失？检索没拿到？输出格式没 schema？——往往不是微调能解决的
+    
+-   SFT：监督微调，适合固定格式/风格/术语/工具调用样式，对数据质量极度敏感
+    
+-   LoRA：参数高效微调，降低训练成本和显存需求，但不是魔法
+    
+-   PEFT：参数高效微调统称，适合大模型 + 明确任务 + 中等数据量场景
+    
+-   Dataset 是核心资产：训练/验证/测试/回归四组缺一不可
+    
+-   Overfitting：样本太少、风格单一、轮数太多都会导致真实用户一问就崩
+    
+
+## **随堂笔记**
+
+> Fine-tuning 改的是模型行为分布，不是产品系统边界。先有 eval，再谈 fine-tuning；先修数据，再修模型。
+
+> 别用微调存实时知识。实时状态、价格、文档更新和用户数据更适合放在检索或工具里。
+
+> 不要把测试集拿去训练。这会让评估失去意义。
+<!-- DAILY_CHECKIN_2026-06-10_END -->
+
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 ## **Handbook 学习 - Evaluation**
 
 -   Evaluation 是针对 AI 大模型特化的测试流程
@@ -48,6 +77,7 @@ AI x Web3 School
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
 
+
 ## **Handbook 学习 - MCP**
 
 -   MCP 是给 AI Agent 使用的 API 标准协议
@@ -76,6 +106,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-07_START -->
 
 
+
 ## **Handbook 学习 - AI 基础篇（二）**
 
 -   阅读 Agent / Frameworks / Vibe Coding 三个章节
@@ -98,6 +129,7 @@ AI x Web3 School
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -134,6 +166,7 @@ AI x Web3 School
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -186,6 +219,7 @@ AI x Web3 School
 
 
 
+
 ## **分享会 - Harness Engineering for Financial Intelligence**
 
 -   主讲人 Skyl，FluxA 的 AI 原生支付基础设施
@@ -233,6 +267,7 @@ AI x Web3 School
 
 
 
+
 # **2026-06-03 周三**
 
 ## **Co-Learning：**
@@ -270,6 +305,7 @@ AI x Web3 School
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -338,6 +374,7 @@ AI x Web3 School
 
 
 
+
 ### **Co-Learning | 任务推进与答疑**
 
 1.  参加了 19:00 的 Co-Learning 答疑交流
@@ -373,6 +410,7 @@ AI x Web3 School
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -424,6 +462,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -487,6 +526,7 @@ AI x Web3 School
 
 
 
+
 2026-05-29
 
 Dev3pack Builder 成长路径分享
@@ -518,6 +558,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -564,6 +605,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -634,6 +676,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Cobo Agentic Wallet 分享**
 
 1.  参加了 Cobo Agentic Wallet 分享会 — AI Agent 链上安全架构
@@ -670,6 +713,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -742,6 +786,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -857,6 +902,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Open Agentic Economy**
 
 1.  参加了 Sophia ([Z.AI](http://Z.AI)) 的 "Open Agentic Economy" 分享会
@@ -879,6 +925,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -958,6 +1005,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
 
 2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
@@ -973,6 +1021,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -1069,11 +1118,13 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
