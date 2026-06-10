@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-10
+<!-- DAILY_CHECKIN_2026-06-10_START -->
+**Co-learning ｜ Hackathon 冲刺答疑**
+<!-- DAILY_CHECKIN_2026-06-10_END -->
+
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
+
 ### **Week 4｜Weekly Review Sharing｜6.12 Live Reflection or Hackathon Idea**
 <!-- DAILY_CHECKIN_2026-06-07_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
 
+
 ### **支付场景的探索和思考**
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 **黑客松赛道实战**
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 ### **Hackathon Openday**
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -57,11 +67,13 @@ AI x Web3 School
 
 
 
+
 ### **Women Builders in AI × Web3: Learning Paths, Collaboration Networks & Global Op**
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -80,11 +92,13 @@ AI x Web3 School
 
 
 
+
 **Co-learning｜任务推进与答疑**
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -107,11 +121,13 @@ AI x Web3 School
 
 
 
+
 ### **Long-term Memory for AI Agents：如何让 Agent 拥有持续上下文与长期一致性 听讲学习**
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -375,6 +391,7 @@ binance-bot/
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -817,6 +834,7 @@ LLM 是概率模型
 
 
 
+
 ## 1-hermes下载
 
 步骤：更新win10-下载wsl-下载Ubuntu-脚本下载hermes
@@ -849,6 +867,7 @@ api接口： [算龙头平台ai.bayesdl.com](http://算龙头平台ai.bayesdl.co
 
 
 
+
 20260519AI x Web3 School - AI Agent 入门 —— Hermes 从 0 到 1
 
 AI进化历程：从问答交互到任务执行（以提示词为命令）
@@ -858,6 +877,7 @@ AI进化历程：从问答交互到任务执行（以提示词为命令）
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
