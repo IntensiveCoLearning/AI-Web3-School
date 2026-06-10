@@ -15,8 +15,120 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-10
+<!-- DAILY_CHECKIN_2026-06-10_START -->
+# **2026-06-10 Progress Log (Part 3)**
+
+## **Completed: OpenAlex Fallback Repair**
+
+### **Context**
+
+Semantic Scholar is now the primary academic context source, but it can return rate limit errors. OpenAlex is the fallback provider for keeping the demo and agent workflow usable when Semantic Scholar is unavailable.
+
+Today we found that the first OpenAlex fallback implementation could connect to the API, but some important AI-related queries incorrectly returned zero results.
+
+### **Issues Found**
+
+-   scripts/search-openalex.ps1 could connect to OpenAlex, but queries such as LLM bias evaluation, artificial intelligence, and language model returned 0 works.
+    
+-   Windows PowerShell 5 can fail to parse some OpenAlex responses when abstract\_inverted\_index contains case-variant duplicate keys such as The and the.
+    
+-   scripts/run-agent-review.ps1 had its own embedded OpenAlex fallback path, so fixing only the standalone script would not fully protect the agent demo path.
+    
+-   A temporary local file, scripts/test-openalex.ps1, was left untracked and was not committed.
+    
+
+### **Fixes Applied**
+
+-   Updated scripts/search-openalex.ps1 to:
+    
+    -   encode query spaces with + via \[[System.Net](http://System.Net).WebUtility\]::UrlEncode
+        
+    -   use OpenAlex select= to request only stable metadata fields
+        
+    -   avoid requesting/parsing abstract\_inverted\_index
+        
+    -   keep abstract\_preview as null for OpenAlex results for now
+        
+    -   avoid printing API keys in terminal output
+        
+    -   keep empty top\_topics as an array instead of {} in JSON
+        
+-   Updated scripts/run-agent-review.ps1 with the same OpenAlex fallback behavior so the full agent workflow uses the repaired path.
+    
+-   Updated [todo.md](http://todo.md) to add a lightweight local demo dashboard idea under M5 and clarify the longer-term web UI item.
+    
+
+### **Test Results**
+
+Standalone OpenAlex test:
+
+`powershell -ExecutionPolicy Bypass -File .\scripts\search-openalex.ps1 -Query "LLM bias evaluation" -Limit 3`
+
+Observed output:
+
+-   mode: openalex
+    
+-   total\_works\_found: 110308
+    
+-   works\_returned: 3
+    
+-   field\_maturity: established\_research\_area
+    
+-   recent\_paper\_ratio: 100
+    
+
+Additional queries verified:
+
+-   machine learning: 4055439 works
+    
+-   artificial intelligence: 2695357 works
+    
+-   language model: 5261224 works
+    
+
+PowerShell syntax checks passed for:
+
+-   scripts/run-agent-review.ps1
+    
+-   scripts/search-openalex.ps1
+    
+
+### **GitHub Status**
+
+Committed and pushed:
+
+`1b3999b Fix OpenAlex fallback query handling`
+
+Remote status:
+
+`HEAD == origin/main`
+
+### **Current Notes**
+
+-   OpenAlex is live and usable as a fallback academic context provider.
+    
+-   OpenAlex metadata is useful for literature orientation but is not exhaustive validation.
+    
+-   AMiner integration remains planned when access becomes available.
+    
+-   The local untracked file scripts/test-openalex.ps1 remains uncommitted and should either be removed later or converted into a formal test script.
+    
+
+## **Next Steps**
+
+1.  Re-run the primary demo path when GLM/[Z.AI](http://Z.AI) quota is available.
+    
+2.  Add timestamped run archives under outputs/runs/YYYY-MM-DD-HHMM-ProjectId/.
+    
+3.  Decide whether to keep or remove scripts/test-openalex.ps1.
+    
+4.  Prepare the demo recording and final README pass.
+<!-- DAILY_CHECKIN_2026-06-10_END -->
+
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 目前情況很清楚：repo 是乾淨的，最新狀態已同步到 GitHub。
 
 最新 commit：
@@ -182,6 +294,7 @@ outputs/runs/YYYY-MM-DD-HHMM-ProjectId/
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 可以。這是目前項目的「簡介會版本」。
 
@@ -536,6 +649,7 @@ The current prototype uses 49 real Spark DeSci projects as its data layer. GLM-5
 <!-- DAILY_CHECKIN_2026-06-07_START -->
 
 
+
 \# 2026-06-07 開發日記
 
 \## 今日進展
@@ -627,6 +741,7 @@ The current prototype uses 49 real Spark DeSci projects as its data layer. GLM-5
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -1306,6 +1421,7 @@ Tool Use
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -2002,6 +2118,7 @@ ReAct 只是：
 
 
 
+
 很好。
 
 如果說前幾天你學的是：
@@ -2619,6 +2736,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 我認為你這個方向其實非常符合 [Z.AI](http://Z.AI) 賽道，而且比一般「Web3 Agent」更有特色。
 
 因為大部分參賽者可能做：
@@ -3160,6 +3278,7 @@ AI summarize proposal
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -3786,6 +3905,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 # Day 7 學習總結 — Memory、Fine-tuning 與人類認知模型
 
 今天最大的收穫其實不是新技術。
@@ -4315,6 +4435,7 @@ AI 怎樣決定做甚麼
 
 
 
+
 這兩者之中，**Cobo Agentic Wallet (CAW)** 以及其背後的技術架構，與 **Public Goods（公共物品）** 的發展有著直接且明確的關聯；而 [**Z.AI**](http://Z.AI) 則是從開源（Open Source）與學術工具的角度切入，間接回饋了 Public Goods 的生態。
 
 以下為兩者在 DeSci 或 Public Goods 發展上的交集與關聯分析：
@@ -4354,6 +4475,7 @@ AI 怎樣決定做甚麼
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -4978,6 +5100,7 @@ Reasoning + Actions
 
 
 
+
 Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
 
 今天你開始進入：
@@ -5567,6 +5690,7 @@ Context Engineering 組織知識
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -6237,6 +6361,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -6848,6 +6973,7 @@ LLM 會忽略中間資訊。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -7478,6 +7604,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -8073,6 +8200,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -8597,11 +8725,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -9046,6 +9176,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -9140,6 +9271,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
