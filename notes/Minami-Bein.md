@@ -14,6 +14,432 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-10
+<!-- DAILY_CHECKIN_2026-06-10_START -->
+# Day 24 | AI x Web3 School 技术报告
+
+## 🔍 目录
+
+- [Executive Summary](#1-executive-summary--problem-space)
+- [系统架构与拓扑](#2-系统架构与拓扑)
+- [理论框架与术语定义](#3-理论框架与形式分类)
+- [状态机与协议演练](#4-状态机与协议演练)
+- [Agent 自主集成与优化](#5-agent-自主集成与优化)
+- [漏洞向量与边界场景](#6-漏洞向量与边界场景验证)
+- [学术标签](#7-学术标签)
+
+---
+
+## 1. Executive Summary & Problem Space
+
+### 摘要（Abstract）
+
+**今天是第 24 天打卡**。在完成 21 天基础学习周期后，本阶段进入 **Sprint 2：Web3 开发工具深度探索与 Agent Workflow 实战**。今日核心任务聚焦于 **Web3 Tool Use（Web3 工具调用）与 MCP（Model Context Protocol）** 的深度实践，设计一组 mock tools 并建立完整的工具权限矩阵（Tool Permission Matrix）。
+
+**核心技术挑战：**
+- AI Agent 在 Web3 场景中的工具调用边界定义
+- 只读操作与高危操作的权限分级
+- 链上数据读取与交易提交的可验证性闭环
+
+**预期贡献：**
+- 一套可直接复用的 Web3 Agent 工具权限分类体系
+- mock tools 设计文档与可执行代码片段
+- 今日打卡草稿与公开学习记录
+
+### In-Scope / Out-of-Scope
+
+| 维度 | 包含（In-Scope） | 排除（Out-of-Scope） |
+|------|------------------|---------------------|
+| 工具类型 | 只读类、模拟类、估算类 | 需真实私钥签名的危险操作 |
+| 权限级别 | 只读、需用户确认、禁止自动执行 | 生产环境私钥管理 |
+| 输出形式 | mock tools 设计 + 权限矩阵 | 生产级合约部署 |
+
+---
+
+## 2. 系统架构与拓扑
+
+### 概念脑图（Conceptual Mindmap）
+
+```mermaid
+mindmap
+  root((Day 24
+    Web3 Tool Use
+    & MCP))
+    AI Agent
+      Prompt Engineering
+      Tool Selection Logic
+      Verification Loop
+    Web3 Tool Ecosystem
+      Read-only Tools
+        read_balance
+        get_transaction_history
+        query_token_price
+      Simulation Tools
+        simulate_transaction
+        dry_run_contract
+      Estimation Tools
+        estimate_gas
+        calculate_slippages
+      Action Tools
+        request_signature
+        submit_transaction
+    Permission Matrix
+      Tool Category
+      Confirmation Required
+      Risk Level
+      Audit Trail
+    MCP Protocol
+      Context Injection
+      Tool Schema Definition
+      Response Format
+```
+
+### 组件拓扑图（Component Topology）
+
+```mermaid
+graph TD
+    subgraph "User Layer"
+        U[User / Human]
+        U确认[Human-in-the-Loop Confirmation]
+    end
+    
+    subgraph "AI Agent Core"
+        P[Prompt Engine]
+        TS[Tool Selector]
+        VR[Verification Reporter]
+    end
+    
+    subgraph "MCP Protocol Layer"
+        CM[Context Manager]
+        TSchema[Tool Schema Registry]
+        TDiscovery[Tool Discovery]
+    end
+    
+    subgraph "Web3 Tool Layer"
+        RT[Read Tools<br/>只读类]
+        ST[Simulation Tools<br/>模拟类]
+        ET[Estimation Tools<br/>估算类]
+        AT[Action Tools<br/>行动类]
+    end
+    
+    subgraph "Blockchain Layer"
+        RPC[RPC Node / 节点]
+        SC[Smart Contract<br/>智能合约]
+        Chain[On-chain State<br/>链上状态]
+    end
+    
+    U --> P
+    U --> U确认
+    P --> TS
+    TS --> TDiscovery
+    TDiscovery --> TSchema
+    TSchema --> CM
+    CM --> RT
+    CM --> ST
+    CM --> ET
+    CM --> AT
+    
+    RT --> RPC
+    ST --> RPC
+    ET --> RPC
+    AT --> U确认
+    U确认 --> AT
+    
+    RPC --> SC
+    SC --> Chain
+    
+    VR --> TS
+    AT -.->|audit trail| VR
+```
+
+---
+
+## 3. 理论框架与形式分类
+
+### 核心术语表（Core Terminology Table）
+
+| 术语 | 中文 | 英文全称 | 分类 | 风险等级 |
+|------|------|----------|------|----------|
+| Tool Call | 工具调用 | Tool Invocation | Agent 行为 | 中 |
+| MCP | 模型上下文协议 | Model Context Protocol | 接口协议 | 低 |
+| read_balance | 读取余额 | Read Balance | 只读类 | 低 |
+| simulate_transaction | 模拟交易 | Transaction Simulation | 模拟类 | 中 |
+| estimate_gas | 估算 Gas | Gas Estimation | 估算类 | 中 |
+| request_signature | 请求签名 | Signature Request | 行动类 | 高 |
+| submit_transaction | 提交交易 | Transaction Submission | 行动类 | 极高 |
+| human-in-the-loop | 人在回路 | HITL | 安全机制 | - |
+
+### 工具权限矩阵（Tool Permission Matrix）
+
+| 工具名称 | 功能描述 | 输入类型 | 输出类型 | 用户确认 | 风险等级 | 自动执行 |
+|----------|----------|----------|----------|----------|----------|----------|
+| `read_balance` | 查询指定地址的 Token 余额 | wallet_address, token_address | balance (uint256) | ❌ 不需要 | 低 | ✅ 允许 |
+| `simulate_transaction` | 模拟交易执行（不上链） | transaction_params | simulation_result, gas_used, success_flag | ❌ 不需要 | 中 | ✅ 允许 |
+| `estimate_gas` | 估算交易 Gas 消耗 | transaction_params | gas_limit, gas_price | ❌ 不需要 | 中 | ✅ 允许 |
+| `request_signature` | 请求用户对消息/交易进行签名 | message, chain_id | pending_signature | ✅ **必须** | 高 | ❌ 禁止 |
+| `submit_transaction` | 提交已签名交易上链 | signed_transaction | transaction_hash | ✅ **必须** | 极高 | ❌ 禁止 |
+
+### 类型系统（Type System）
+
+```
+// 工具权限等级枚举
+enum PermissionLevel {
+    READONLY,      // 只读：无需确认
+    SIMULATE,      // 模拟：无需确认，但需记录
+    ESTIMATE,      // 估算：无需确认
+    CONFIRM_REQUIRED,  // 需要用户确认
+    FORBIDDEN      // 禁止自动执行
+}
+
+// 工具调用请求结构
+interface ToolCallRequest {
+    tool_name: string,
+    params: Record<string, any>,
+    permission_level: PermissionLevel,
+    caller: string,       // Agent ID 或 User ID
+    timestamp: uint64,
+    context_hash: string  // 用于审计追溯
+}
+
+// 工具调用响应结构
+interface ToolCallResponse {
+    tool_name: string,
+    result: any,
+    gas_used: uint256,
+    success: boolean,
+    error_message?: string,
+    audit_hash: string
+}
+```
+
+### 系统不变量（System Invariants）
+
+**不变量 1：权限守恒**
+$$\forall tool \in ToolSet, tool.permission \neq FORBIDDEN \Rightarrow tool.auto_execute = true$$
+
+**不变量 2：确认必达**
+$$\forall call \in ToolCalls, call.risk \geq HIGH \Rightarrow call.user_confirmed = true$$
+
+**不变量 3：审计追溯**
+$$\forall call \in ToolCalls, \exists audit\_hash : H(call) = audit\_hash$$
+
+---
+
+## 4. 状态机与协议演练
+
+### 时序图（Sequence Diagram）
+
+```mermaid
+sequenceDiagram
+    participant User as 用户
+    participant Agent as AI Agent
+    participant MCP as MCP Protocol
+    participant ToolRegistry as 工具注册表
+    participant ReadTool as 只读工具<br/>read_balance
+    participant SimTool as 模拟工具<br/>simulate_tx
+    participant EstTool as 估算工具<br/>estimate_gas
+    participant SignTool as 签名工具<br/>request_signature
+    participant BC as 区块链节点
+
+    Note over User,BC: Day 24 场景：AI Agent 执行完整的 DeFi 操作工作流
+
+    User->>Agent: "帮我查询钱包余额并模拟一笔 Swap 交易"
+    
+    Agent->>MCP: 解析意图，识别需要的工具集
+    
+    MCP->>ToolRegistry: 查询可用工具列表
+    
+    ToolRegistry-->>MCP: 返回工具元数据
+    
+    MCP-->>Agent: 返回工具 schema + 权限级别
+    
+    Note over Agent: 权限检查：read_balance = READONLY<br/>simulate_transaction = SIMULATE<br/>estimate_gas = ESTIMATE
+    
+    Agent->>ReadTool: 调用 read_balance(wallet, token)
+    ReadTool->>BC: RPC call: eth_getBalance
+    BC-->>ReadTool: balance: 1000000...
+    ReadTool-->>Agent: 返回余额结果
+    
+    Agent->>SimTool: 调用 simulate_transaction(params)
+    SimTool->>BC: eth_call (模拟执行)
+    BC-->>SimTool: simulation_result: success
+    SimTool-->>Agent: 返回模拟结果
+    
+    Agent->>EstTool: 调用 estimate_gas(params)
+    EstTool->>BC: eth_estimateGas
+    BC-->>EstTool: gas_limit: 200000
+    EstTool-->>Agent: 返回 Gas 估算
+    
+    Note over Agent: 风险评估：Swap 操作需要用户签名
+    
+    Agent->>SignTool: 调用 request_signature(message)
+    SignTool-->>User: 弹出签名确认框
+    
+    User->>SignTool: 用户确认签名
+    
+    SignTool-->>Agent: 返回用户签名数据
+    
+    Agent->>BC: submit_transaction(signed_tx)
+    BC-->>Agent: tx_hash: 0x...
+    
+    Agent-->>User: 返回交易结果和链上链接
+```
+
+### 状态机细化（State Machine Details）
+
+| 状态阶段 | 英文 | 入口条件 | 出口条件 | 关键动作 |
+|----------|------|----------|----------|----------|
+| **Initiation** | 初始化 | 用户发起请求 | Agent 解析完成 | 加载上下文、识别工具集 |
+| **Tool Discovery** | 工具发现 | 初始化完成 | 工具 schema 加载 | 查询 MCP 注册表、获取权限级别 |
+| **Permission Check** | 权限检查 | 工具发现完成 | 权限判定通过 | 遍历工具列表、标记确认需求 |
+| **Execution** | 执行 | 权限检查通过 | 所有只读/模拟操作完成 | 按序调用工具、记录响应 |
+| **Confirmation Gate** | 确认门 | 执行完成 + 存在高危操作 | 用户确认或拒绝 | 等待用户 HITL 确认 |
+| **Submission** | 提交 | 确认通过 | 链上确认完成 | 提交签名交易、获取 tx_hash |
+| **Verification** | 验证 | 交易已提交 | 验证成功或失败 | 检查链上状态、更新审计日志 |
+
+---
+
+## 5. Agent 自主集成与优化
+
+### AI Agent 自动化视角
+
+**Tool Selection Logic（工具选择逻辑）：**
+
+```
+Function select_tools(task: UserRequest) -> ToolCallSequence:
+    
+    // Step 1: 意图解析
+    intent = parse_intent(task)
+    
+    // Step 2: 工具匹配
+    required_tools = match_tools(intent)
+    
+    // Step 3: 权限拓扑构建
+    permission_graph = build_permission_graph(required_tools)
+    
+    // Step 4: 风险聚合评估
+    total_risk = aggregate_risk(permission_graph)
+    
+    // Step 5: 执行计划生成
+    if total_risk >= HIGH:
+        plan = insert_confirmation_gates(permission_graph)
+    else:
+        plan = permission_graph  // 直接执行
+    
+    // Step 6: 审计追踪注册
+    register_audit_trail(plan)
+    
+    return plan
+```
+
+### 优化策略（Optimization Strategies）
+
+| 优化维度 | 策略 | 预期收益 |
+|----------|------|----------|
+| **并发调用** | 只读工具可并行执行 | 降低延迟 40-60% |
+| **缓存机制** | 余额、Gas Price 等数据缓存 30s | 减少 RPC 调用次数 |
+| **预测性预取** | 基于用户历史提前加载工具 schema | 提升响应速度 |
+| **优雅降级** | 单个工具失败不影响整体流程 | 提高鲁棒性 |
+
+---
+
+## 6. 漏洞向量与边界场景验证
+
+### 漏洞报告（Vulnerability Report）
+
+#### 漏洞 1：权限逃逸（Permission Escalation）
+
+| 字段 | 描述 |
+|------|------|
+| **漏洞类型（Type）** | 权限绕过 / Privilege Escalation |
+| **缺陷源头（Root Cause）** | Agent 误判工具权限级别，将高危操作标记为可自动执行 |
+| **攻击向量（Attack Vector）** | 恶意 Prompt 诱导 Agent 调用 `submit_transaction` 而不请求用户确认 |
+| **防御策略（Mitigation）** | 工具权限级别硬编码于 MCP Schema，Agent 无权修改；高危操作强制 HITL |
+
+```python
+# 防御代码示例
+def execute_tool(tool_name: str, params: dict, ctx: AgentContext):
+    tool_meta = get_tool_metadata(tool_name)
+    
+    # 硬编码权限检查
+    if tool_meta.permission == FORBIDDEN:
+        raise PermissionError(f"Tool {tool_name} is forbidden for autonomous execution")
+    
+    if tool_meta.permission == CONFIRM_REQUIRED:
+        if not ctx.user_confirmed:
+            raise ConfirmationRequired(f"HITL confirmation required for {tool_name}")
+    
+    return _execute_with_audit(tool_name, params, ctx)
+```
+
+#### 漏洞 2：链上数据不可信（On-chain Data Trust）
+
+| 字段 | 描述 |
+|------|------|
+| **漏洞类型（Type）** | 数据源欺骗 / Data Source Manipulation |
+| **缺陷源头（Root Cause）** | 仅依赖 RPC 返回数据，未做多源交叉验证 |
+| **失效向量（Failure Vector）** | RPC 节点被攻击或返回过期状态，导致 Agent 基于错误数据决策 |
+| **防御策略（Mitigation）** | 关键数据需多 RPC 节点验证 + 时间戳校验 + 来源标注 |
+
+#### 漏洞 3：Prompt Injection via Tool Result
+
+| 字段 | 描述 |
+|------|------|
+| **漏洞类型（Type）** | 提示词注入 / Prompt Injection |
+| **缺陷源头（Root Cause）** | 工具返回数据未做内容净化，直接拼接至 Agent 后续 Prompt |
+| **攻击向量（Attack Vector）** | 恶意合约返回包含指令注入片段的数据，Agent 误执行 |
+| **防御策略（Mitigation）** | 工具返回数据强制 JSON Schema 校验 + 指令片段过滤 |
+
+---
+
+## 7. 学术标签
+
+```
+#AI-Agent #Web3-Tool-Use #MCP-Protocol #Permission-Matrix #Smart-Contract
+#Security-By-Design #Human-in-the-Loop #Technical-Report #Day24打卡
+```
+
+---
+
+## 📋 今日打卡总结
+
+**今天我学习了：**
+
+Web3 Tool Use 与 MCP 协议的核心设计理念，重点掌握 AI Agent 在 Web3 场景中的工具调用边界划分方法。通过建立完整的工具权限矩阵，将工具分为只读类（read_balance）、模拟类（simulate_transaction）、估算类（estimate_gas）和行动类（request_signature / submit_transaction），明确每类工具的权限级别、确认要求和风险系数。
+
+**我完成的实践是：**
+
+设计了 5 个 mock tools 的功能定义和权限分级，构建了 Tool Permission Matrix；完成了 Mermaid 格式的系统拓扑图和时序图；针对权限逃逸、链上数据不可信、Prompt Injection 三个核心漏洞制定了防御策略和代码示例。
+
+**我沉淀的公开记录是：**
+
+- 工具权限矩阵表格
+- AI Agent 工具选择逻辑伪代码
+- 系统不变量公式（LaTeX）
+- 漏洞报告与防御策略文档
+
+**关键术语：**
+
+- 工具调用（Tool Call / Tool Invocation）
+- 模型上下文协议（Model Context Protocol, MCP）
+- 人在回路（Human-in-the-Loop, HITL）
+- 权限矩阵（Permission Matrix）
+- 交易模拟（Transaction Simulation）
+- Gas 估算（Gas Estimation）
+
+**我仍然不清楚的问题是：**
+
+- MCP 协议在实际生产环境中的最佳实践配置方式
+- 多链场景下工具权限的一致性管理方案
+- 如何在不暴露私钥的情况下实现 Agent 对钱包的委托控制
+
+**下一步：**
+
+- 深入研究 Agent Wallet 的会话密钥（Session Key）与策略（Policy）设计
+- 探索 4337 账户抽象与 Agent 钱包的结合方式
+- 尝试用代码实现一个简单的 MCP Tool Server 原型
+<!-- DAILY_CHECKIN_2026-06-10_END -->
+
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
 # Day 23 学习报告：Sprint 2 进阶实践 —— AI Agent x Web3 系统架构与安全集成
