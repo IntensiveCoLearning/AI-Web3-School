@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-10
+<!-- DAILY_CHECKIN_2026-06-10_START -->
+打卡
+<!-- DAILY_CHECKIN_2026-06-10_END -->
+
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 打卡
 <!-- DAILY_CHECKIN_2026-06-09_END -->
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 打卡
 <!-- DAILY_CHECKIN_2026-06-08_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-05_START -->
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -49,11 +58,13 @@ AI x Web3 School
 
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -73,11 +84,13 @@ AI x Web3 School
 
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -104,11 +117,13 @@ AI x Web3 School
 
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -141,11 +156,13 @@ AI x Web3 School
 
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -182,11 +199,13 @@ AI x Web3 School
 
 
 
+
 **打卡**
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -227,11 +246,13 @@ AI x Web3 School
 
 
 
+
 _da ka_
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -281,11 +302,13 @@ _da ka_
 
 
 
+
 打卡
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
