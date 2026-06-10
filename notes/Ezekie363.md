@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-11
+<!-- DAILY_CHECKIN_2026-06-11_START -->
+完成黑客松项目提交和demo视频制作
+<!-- DAILY_CHECKIN_2026-06-11_END -->
+
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 # **LiquidityValueCalculator**
 
 ## **今天学到哪里**
@@ -332,6 +338,7 @@ pairFor(factory, tokenA, tokenB)
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
 
+
 学习uniswap v2 concepts 打磨demo
 <!-- DAILY_CHECKIN_2026-06-09_END -->
 
@@ -339,11 +346,13 @@ pairFor(factory, tokenA, tokenB)
 <!-- DAILY_CHECKIN_2026-06-08_START -->
 
 
+
 今天完成了hackathon的ppt制作和项目demo打磨
 <!-- DAILY_CHECKIN_2026-06-08_END -->
 
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
+
 
 
 
@@ -360,6 +369,7 @@ pairFor(factory, tokenA, tokenB)
 
 
 
+
 今日学习：Day 20 学习完成（Hackathon 实战）。AI 方向：x402 协议实战——完整跑通了「402 Payment Required → CawSigner EIP-712 MPC 签名 → Facilitator 链上结算 → tx hash 验证」的 Agent 自主支付全链路；理解了 Cobo Agentic Wallet 的双 Key 架构（onboarding key 提交 Pact，pact-scoped key 执行操作）以及 Pact 策略的参数级约束机制。Web3 方向：EIP-3009 TransferWithAuthorization——理解了链下授权与链上执行分离的设计，Facilitator 代执行、调用方无需持有 ETH 的工程优势，以及 nonce 机制防重放的安全保证。
 
 收获 / 思考：今天最深的认知是 **Pact = 链上最小权限原则**——不只是「允许某类操作」，而是精确到参数级约束，超出范围在 MPC 节点层面就被拒绝。另一个收获是亲手踩坑验证了 onboarding key 和 pact-scoped key 的完全分离——让 Pact 撤销机制真正有效，而不是形式上的权限控制。
@@ -367,6 +377,7 @@ pairFor(factory, tokenA, tokenB)
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -383,11 +394,13 @@ pairFor(factory, tokenA, tokenB)
 
 
 
+
 黑客松项目设想和头脑风暴的一天，以及写一些方案策划
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -408,6 +421,7 @@ pairFor(factory, tokenA, tokenB)
 
 
 
+
 今日学习：Hackathon 技术预备 Day 1 完成。学习了 HTTP 基础（Request/Response/状态码/JSON）、FastAPI 入门（安装/路由/返回 JSON）、以及 x402 协议的本质——它是建立在 HTTP 402 状态码上的 API 付费协议，服务器未收到付款时返回 402，客户端完成支付后带着付款证明重试请求。
 
 收获 / 思考：今天最大的收获是理解了 x402 不是一个复杂的新协议，而是对现有 HTTP 语义的扩展——402 状态码在 HTTP 规范里早就存在，x402 只是规范了「付款要求」该放在哪个 Header 里、该包含哪些字段。这让 Agent 可以像处理任何 HTTP 错误一样处理付款，整个流程对代码来说非常自然。
@@ -417,6 +431,7 @@ pairFor(factory, tokenA, tokenB)
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -445,6 +460,7 @@ pairFor(factory, tokenA, tokenB)
 
 
 
+
 今日学习： Day 14 学习完成。AI × Web3 Bridge：机器支付（Machine Payment）——理解了「把付款意图和实际结算拆开、每一步都有凭证」的核心设计，学习了 Stablecoin Payment、Budget、Quote、Payment Intent、x402、MPP、Subscription、Micropayment 八个知识节点，以及 Machine Payment 作为 Agentic Commerce 基础的完整支付链路。
 
 收获 / 思考： 今天最重要的认知是「聊天里的预算」和「Policy/账本里的预算」是完全不同的两件事——前者是给模型看的参考信息（软约束），后者是系统执行的约束条件（硬约束），被 context compact 截断或 Prompt Injection 覆盖后前者会失效，后者不会。Budget 多层设计的必要性也很清楚：只有总预算没有频率/服务方范围限制，攻击者可以通过小额高频调用或 Prompt Injection 诱导 Agent 把全部预算消耗在恶意服务上，每次单独看都「在预算内」。
@@ -454,6 +470,7 @@ pairFor(factory, tokenA, tokenB)
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -486,6 +503,7 @@ pairFor(factory, tokenA, tokenB)
 
 
 
+
 今日学习： Day 12 学习完成。AI × Web3 Bridge：Web3 工具调用（Web3 Tool Use）——理解了 Web3 工具调用的核心原则是读写分离、参数结构化、模拟确认和日志可审计，学习了 RPC Tool、Contract Read、Contract Write、Wallet Tool、Explorer Tool、DeFi Tool、Tool Permission、Tool Log 八个知识节点及各自的风险等级和关键要素；AI × Web3 Bridge：智能体工作流（Agent Workflow）——建立了「把概率模型放进确定性流程」的核心直觉，学习了 Task Graph、State Machine、Human-in-the-loop、Retry/Fallback、Trace、Evaluation Harness、Regression Set 七个知识节点，以及 Workflow 作为 Bridge 层流程骨架的位置。
 
 收获 / 思考： 今天最重要的认知是读写分离不只是降低风险，而是**权限边界的系统层保证**——只读工具在代码层就没有签名和广播能力，即使模型产生幻觉也无法发出交易，这是硬约束而非参数检查的软约束。State Machine 的价值也是同一个逻辑：没有显式状态，Agent 重启后不知道交易已经 pending，可能重复提交同一笔交易造成双倍损失。Tool Permission 的分层设计本质上是「代价不对称」——过度宽松的代价是永久资产损失，过度严格的代价是用户体验差，两者不在同一量级。
@@ -495,6 +513,7 @@ pairFor(factory, tokenA, tokenB)
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -531,6 +550,7 @@ pairFor(factory, tokenA, tokenB)
 
 
 
+
 今日学习： Day 10 学习完成。AI 基础：微调（Fine-tuning）——理解了 fine-tuning 解决的是行为问题而非知识问题，学习了 SFT、LoRA、PEFT、Dataset、Overfitting 五个知识节点，以及微调前必须先有 eval 的正确顺序；Web3 基础：安全（Security）——建立了「链上系统默认暴露在公开对抗环境」的安全直觉，学习了 Reentrancy、Access Control、Audit、Simulation、Monitoring 五个核心概念，以及安全工程流程的分层设计。
 
 收获 / 思考： 今天最重要的认知是 Fine-tuning 和 RAG 解决的是不同维度的问题——RAG 解决「模型不知道什么」，Fine-tuning 解决「模型怎么回答」，很多产品需要两者同时用。安全章节让我意识到「安全不属于某一个角色」这句话有多深——前端的无限 approve 按钮、Agent 的不受限工具、运营的 EOA 管理员私钥，每一层都是攻击入口，而不只是合约代码本身。
@@ -540,6 +560,7 @@ pairFor(factory, tokenA, tokenB)
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -580,6 +601,7 @@ pairFor(factory, tokenA, tokenB)
 
 
 
+
 今日学习： Day 8 学习完成。AI 基础：模型上下文协议（MCP）——理解了 MCP 解决的是工具连接标准化问题而非模型能力问题，学习了 Server、Client、Tool Schema、Permission 四个知识节点及各自的设计重点和风险点，梳理了 MCP 和 Web3 账户系统的分工边界；Web3 基础：预言机（Oracle）——建立了「外部数据进入链上就变成协议规则」的底层直觉，学习了 Price Feed、Data Feed、Oracle Risk、AI Oracle 四个核心概念，以及 AI Agent 使用 Oracle 的合理架构。
 
 收获 / 思考： 今天最有意思的收获是搞清楚了 MCP 和 Skill 的本质区别——MCP 是工具层（给模型「手」），Skill 是指令层（给模型「方法论」），两者在不同层级工作，可以组合使用。Oracle 这边则让我意识到「数据源是信任边界」有多深：一个被操纵的价格 feed 可以通过闪电贷攻击，让攻击者用虚高抵押品套走协议流动性，存款人承担损失——链上系统对外部数据的信任，和对合约代码的信任同等重要。
@@ -589,6 +611,7 @@ pairFor(factory, tokenA, tokenB)
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -633,6 +656,7 @@ pairFor(factory, tokenA, tokenB)
 
 
 
+
 今日学习： Day 6 学习完成。AI 基础：框架（Frameworks）——理解了框架是系统边界的表达而非智能本身，学习了 LangChain、LangGraph、OpenAI Agents SDK、DSPy、Hermes、Learning Agent 六个知识节点及其适用场景，梳理了 AI Framework / Web3 基础设施 / 产品层的三层分工；Web3 基础：账户抽象（Account Abstraction）——理解了 EOA 的局限性和账户抽象的核心思路，学习了 ERC-4337 执行流程及 Smart Account、Bundler、Paymaster、Session Key 五个核心概念，以及 Session Key 对 AI Agent 权限控制的意义。
 
 收获 / 思考： 今天两个章节有一个共同主题：权限和边界。框架章节让我意识到 AI Framework 本质上是软件工程的关注点分离——把基础设施问题从业务逻辑里剥离出来，和后端框架解决的是同一类问题。账户抽象章节让我理解了 Session Key 不只是「过渡方案」，而是最小权限原则在链上的实现——给 Agent 的权限越精确，爆炸半径就越小，Prompt Injection 或上下文污染能造成的最坏损失就越有限。
@@ -642,6 +666,7 @@ pairFor(factory, tokenA, tokenB)
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -690,6 +715,7 @@ pairFor(factory, tokenA, tokenB)
 
 
 
+
 今日学习： Day 4 学习完成。AI 基础：检索增强生成（RAG）——理解了 RAG 解决 LLM 知识截止和上下文成本问题的思路，学习了 Embedding、向量数据库、Chunk、相关性分数四个核心概念，梳理了离线建库和在线检索的完整流程，以及 RAG Poisoning 这一新攻击面；Web3 基础：开发栈（Dev Stack）——建立了 Solidity → Foundry/Hardhat → Anvil → ethers.js 四层工具链的整体印象，理解了本地链和测试网在开发工作流中的不同定位。
 
 收获 / 思考： 今天最大的认知升级是理解了 RAG 的本质：它不是「把更多东西塞进去」，而是把知识管理和语言生成分开——知识库是 Agent 的外部长期记忆，Context Window 是工作记忆，每次只按需取用相关片段。这也让我意识到 RAG Poisoning 的危险之处：攻击者不需要直接攻击 Prompt，只要在知识库里植入一块恶意文档，等它被检索进上下文就能影响 Agent 行为。Web3 这边建立了一个直觉：本地链是可以随意折腾的沙盒，合约有 Bug 直接重置重来；而测试网和主网一样受不可变性约束，部署前必须在本地把所有边界情况测透。
@@ -699,6 +725,7 @@ pairFor(factory, tokenA, tokenB)
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -751,6 +778,7 @@ pairFor(factory, tokenA, tokenB)
 
 
 
+
 今日学习： Day 2 学习完成。AI 基础：提示词（Prompt）——理解了 Prompt 是软约束而非安全边界，学习了 Instruction/Few-shot/Structured Output/Prompt Injection 四个核心概念，以及完整的 AI×Web3 安全链路；Web3 基础：钱包（Wallet）——建立了连接钱包/签名/发送交易三类操作的风险直觉，理解了 EOA、助记词、Gas 等基础概念。
 
 收获 / 思考： 今天最大的收获是理解了 Prompt 的本质边界——它只是软约束，不是安全护栏，真正的拦截要靠代码层和人工确认。Prompt Injection 的 DeepSeek think 注入案例让我意识到，只要模型能执行动作，恶意输入就可能绕过规则产生真实危害。钱包部分建立了一个重要直觉：连接钱包只是「亮身份证」，发送交易才是「动用资产」，两者风险天差地别。
@@ -760,6 +788,7 @@ pairFor(factory, tokenA, tokenB)
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
