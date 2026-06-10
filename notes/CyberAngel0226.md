@@ -15,8 +15,74 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-10
+<!-- DAILY_CHECKIN_2026-06-10_START -->
+今天主要推进了 Issue 7 的 Python Agent 接入基础。
+
+完成内容：
+
+-   创建并切换到分支  
+    `feat/Issue-7-Generate-Marke-Structure-Lens-recommendations`
+    
+-   重新分析远程 `dev` 合并后的代码，确认已存在 TS 侧 Market Structure adapter：
+    
+    -   `adaptMarketStructureDraft()`
+        
+    -   负责把 Python draft 包装成正式 `AgentRecommendation`
+        
+-   按 TDD 补了 Python Reader + TS subprocess bridge：
+    
+    -   新增 `agents/market_structure_lens.py`
+        
+    -   TS 可调用 Python 生成 `MarketStructureRecommendationDraft`
+        
+    -   TS 可继续包装成正式 `AgentRecommendation`
+        
+    -   支持弱市场结构输出 `HOLD`
+        
+-   新增 Python Reader 的 LLM request 产物：
+    
+    -   `--mode llm-request`
+        
+    -   可把 `EvidenceSnapshot` 转成后续 LLM 可消费的结构化输入
+        
+-   新增 fixture：
+    
+    -   `tests/fixtures/evidence-snapshot.market-structure.json`
+        
+    -   方便本地直接查看 Python Reader 产物
+        
+-   修复直接运行 Python 测试时报 `No module named 'agents'` 的问题。
+    
+-   更新测试：
+    
+    -   TS Market Structure Lens bridge 测试
+        
+    -   Python reader/CLI 测试
+        
+    -   `npm test` 已包含 Python 测试
+        
+
+验证结果：
+
+```
+npm test
+```
+
+已通过。
+
+当前说明：
+
+-   现在还没有真实调用 LLM。
+    
+-   当前默认 draft 是本地规则生成。
+    
+-   已预留真实 LLM 接入点：后续可以在 Python 中新增 `--mode llm-draft`，让 LLM 输出同样的 draft JSON，再交给 TS adapter 校验并包装。
+<!-- DAILY_CHECKIN_2026-06-10_END -->
+
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 \# 今日日报｜2026-06-09
 
 \## 项目
@@ -91,6 +157,7 @@ MVP 使用真实 Polymarket 数据、Tavily 背景信息和测试网 Audit Ancho
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
 
+
 今天完成了一个较清晰的 AI × Web3 项目方向设计：  
 **Agent 决策上链浏览器。**
 
@@ -112,6 +179,7 @@ MVP 使用真实 Polymarket 数据、Tavily 背景信息和测试网 Audit Ancho
 <!-- DAILY_CHECKIN_2026-06-07_START -->
 
 
+
 ```
 1. 在 Remix VM 中重新部署 ETHTransfer
 2. 部署时确认 Value = 0，Gas limit = auto
@@ -130,6 +198,7 @@ MVP 使用真实 Polymarket 数据、Tavily 背景信息和测试网 Audit Ancho
 
 
 
+
 今天最大的收获是：已经从“只看交易和钱包余额”，进入到“理解合约如何控制链上状态和资金流转”的阶段。
 
 ```
@@ -144,6 +213,7 @@ Value、_amount、Gas limit 是三个不同概念
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -185,6 +255,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 
 
+
 今天最大的收获是：**VC 视角看项目，重点不是技术有多复杂，而是商业逻辑是否清晰。**
 
 一个好的 AI Agent × Web3 项目，需要同时具备以下几个特点：
@@ -202,6 +273,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -229,6 +301,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 
 
+
 今天主要完成了 AI × Web3 方向的整体学习梳理，重点了解了 AI Agent 与 Web3 结合后的几个核心应用方向，包括机器支付、Agent 身份、能力声明、互操作协议、钱包权限管理和安全执行等内容。
 
 在学习过程中，我对 AI Agent 未来如何进入 Web3 体系有了更清晰的认识。Agent 不只是一个对话工具，它未来可能会成为能够调用 API、购买服务、持有身份、完成支付、执行链上操作的独立执行单元。因此，Web3 可以为 Agent 提供身份、资产、权限、结算和可信验证等基础设施。
@@ -240,6 +313,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -282,6 +356,7 @@ AI × Web3 并不是单一方向，而是可以分为支付、身份、钱包权
 
 
 
+
 -   明确了 AI Agent 的核心价值：从“被动回答”转向“主动执行任务”。
     
 -   理解了 Agent 的基本运行流程：理解目标、拆解任务、调用工具、执行任务、反馈优化。
@@ -295,6 +370,7 @@ AI × Web3 并不是单一方向，而是可以分为支付、身份、钱包权
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -338,6 +414,7 @@ ERC-8004 和 ERC-8183 分别从 **信任层** 和 **交易层** 支撑 Agentic E
 
 
 
+
 今天完成了 Open Agentic Economy 后续学习计划的整理，明确了从概念学习到项目实践的路径。
 
 后续学习将按照：
@@ -365,6 +442,7 @@ AI Agent 与链上任务结合
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -473,6 +551,7 @@ ERC-8183 主要解决 Agent 之间的商业交易流程问题。它通过 Job、
 
 
 
+
 今天完成了对 AI-Agent 和 Web3 结合方向的系统分析。整体来看，AI-Agent 解决的是“自动理解和执行任务”的问题，Web3 解决的是“资产、身份、支付和可信记录”的问题。两者未来最可能在钱包助手、链上支付、DeFi 自动化、智能合约交互和链上数据分析等方向融合。  
   
 AI-Agent 和 Web3 的结合不是简单地“AI + 区块链”概念叠加，而是存在明确的互补关系：
@@ -504,6 +583,7 @@ AI-Agent 操作 Web3 时存在明显风险，尤其是：
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -617,6 +697,7 @@ AI-Agent 操作 Web3 时存在明显风险，尤其是：
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -784,6 +865,7 @@ AI-Agent 操作 Web3 时存在明显风险，尤其是：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
