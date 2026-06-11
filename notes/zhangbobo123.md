@@ -17,11 +17,22 @@ timezone: UTC+8
 <!-- Content_START -->
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
-1
+已完成并上线：[Oracle Capital](https://oracle-capital.vercel.app)
+
+-   首页新增“历史对话”，可直接继续最近会话。
+    
+-   恢复历史时同步恢复原大师组合、消息、投票和最终方案。
+    
+-   大师选择、语言、日夜模式均会自动保存。
+    
+-   点击右上角头像展开菜单：个人中心、历史对话、产品文档、语言、夜间模式。
+    
+-   新增[产品文档页](https://oracle-capital.vercel.app/docs)，包含 PRD、网站功能、安全边界和路线图。
 <!-- DAILY_CHECKIN_2026-06-11_END -->
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 
 第一版 MVP 已完成，项目位于 oracle-capital。
 
@@ -47,11 +58,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-06-09_END -->
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 
@@ -66,11 +79,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-06-06_END -->
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -89,11 +104,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -116,11 +133,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -147,11 +166,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -217,11 +238,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -263,11 +286,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -312,11 +337,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -367,6 +394,7 @@ timezone: UTC+8
 
 
 
+
 ```
 链上数据存在哪？全球几万个全节点硬盘里，Etherscan只是索引层。数据越来越大怎么办：状态过期、无状态客户端、历史数据修剪、数据可用性采样、Layer 2 + 数据压缩、专门存储链。核心思路不是让每个节点存所有，而是分工。
 ```
@@ -374,6 +402,7 @@ timezone: UTC+8
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -466,6 +495,7 @@ timezone: UTC+8
 
 
 
+
 理解Web3底层原理：
 
 成功安装Hermes：将任务和AIxWEB3学习网站发送了
@@ -507,6 +537,7 @@ hermes gateway
 
 
 
+
 [先安装wsl，安装好了之后会输入账号密码，打开wsl环境进行配置](https://hermes-agent.nousresearch.com/docs/zh-Hans/getting-started/installation)
 
 具体网站Hermes：
@@ -518,6 +549,7 @@ hermes gateway
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
