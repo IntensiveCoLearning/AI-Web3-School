@@ -14,6 +14,183 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-11
+<!-- DAILY_CHECKIN_2026-06-11_START -->
+# AI x Web3 School 学习进度报告
+
+## Day 25 | 2026-06-11
+
+---
+
+## 1. 执行摘要（Executive Summary）
+
+**问题空间（Problem Space）**
+
+经过 21 天基础学习周期的系统构建，本阶段已进入第二轮深化实践期（Day 22-28）。核心任务聚焦于将已建立的 AI x Web3 概念框架进行工程化落地验证，重点推进 Agent Workflow 与 Web3 Tool Use 的深度整合，同时完成第一轮学习成果的原型化输出。
+
+**核心技术挑战**
+
+| 挑战维度 | 具体问题 | 当前状态 |
+|---------|---------|---------|
+| 概念深化 | Web3 工具调用的权限边界建模 | 🔄 进行中 |
+| 工程落地 | Agent 与链上状态的一致性同步 | ⚠️ 待验证 |
+| 安全闭环 | Prompt Injection 与恶意授权的防御机制 | 🔍 调研阶段 |
+| 原型产出 | 可公开展示的 Mini Project 设计 | 📋 规划中 |
+
+---
+
+## 2. 今日学习内容（Daily Learning Content）
+
+### 2.1 官方任务确认
+
+按照每日固定流程，首先完成 WCB Learning 页面任务确认，记录当日课程链接与打卡入口。
+
+### 2.2 Handbook 主题阅读
+
+本日聚焦于第一轮学习中的薄弱环节进行查漏补缺，同时引入以下扩展主题：
+
+- **Tool Permission Matrix（工具权限矩阵）**：定义 AI Agent 可调用工具的权限等级划分
+- **Session Key（会话密钥）**：短期授权场景下的密钥管理机制
+- **Guard Condition（守卫条件）**：智能合约层面的自动化风控触发条件
+
+### 2.3 核心概念笔记
+
+```mermaid
+mindmap
+  root((AI x Web3))
+    AI Agent
+      LLM
+        Prompt Engineering
+        Context Window
+      Tool Use
+        MCP Protocol
+        Permission Boundary
+    Web3 Stack
+      Wallet
+        EOA
+        Smart Account
+      Smart Contract
+        Function
+        Event
+        Gas
+      Network
+        RPC
+        Chain State
+    Integration Layer
+      Session Key
+        Expiry
+        Scope Limitation
+      Guard
+        Condition Check
+        Emergency Halt
+```
+
+---
+
+## 3. 实践输出（Practice Output）
+
+### 3.1 工具权限矩阵定义
+
+| 工具类型 | 操作权限 | 用户确认要求 | 自动执行边界 |
+|---------|---------|-------------|-------------|
+| read_balance | 只读 | ❌ 无需确认 | ✅ 允许 |
+| estimate_gas | 只读 | ❌ 无需确认 | ✅ 允许 |
+| simulate_transaction | 模拟 | ⚠️ 建议确认 | ⚠️ 受限执行 |
+| request_signature | 签名 | ✅ 必须确认 | ❌ 禁止自动执行 |
+| submit_transaction | 写入 | ✅ 必须确认 | ❌ 禁止自动执行 |
+
+### 3.2 Agent Workflow 状态机
+
+```mermaid
+stateDiagram-v2
+    [*] --> Observe: 触发条件
+    Observe --> Decide: 数据收集完成
+    Decide --> ToolSelect: 决策生成
+    ToolSelect --> PermissionCheck: 工具选择
+    PermissionCheck --> UserConfirmation: 需授权操作
+    PermissionCheck --> Execute: 只读操作
+    UserConfirmation --> Execute: 用户确认
+    Execute --> Verify: 执行完成
+    Verify --> Report: 验证通过
+    Verify --> Rollback: 验证失败
+    Report --> [*]: 任务完成
+    Rollback --> [*]: 状态回滚
+```
+
+---
+
+## 4. 内容草稿（Content Draft）
+
+### 标题：《为什么 AI Agent 不能绕过钱包签名确认？》
+
+**关键术语双语标注：**
+
+| 中文术语 | English Term | 简写 |
+|---------|-------------|-----|
+| 钱包签名 | Wallet Signature | - |
+| 人在回路 | Human-in-the-Loop | HITL |
+| 会话密钥 | Session Key | - |
+| 权限边界 | Permission Boundary | - |
+| 守卫条件 | Guard Condition | - |
+
+**核心论点：**
+
+AI Agent 在执行 Web3 操作时，钱包签名（Wallet Signature）作为身份验证的最后一道防线，绝不可被绕过。Agent 钱包（Agent Wallet）的设计目标是实现精细化授权（Fine-grained Authorization），而非消除用户确认。Session Key 的引入提供了短期、受限的权限下沉机制，但必须配合 Guard Condition 实现自动化风控。
+
+---
+
+## 5. 安全边界分析（Security Boundary Analysis）
+
+### 5.1 漏洞向量报告
+
+| 漏洞类型 | 缺陷源头 | 攻击向量 | 防御策略 |
+|---------|---------|---------|---------|
+| Prompt Injection | 用户输入未过滤 | 恶意指令注入 Agent 决策链 | 输入 sanitization + 指令白名单 |
+| Session Key 滥用 | 权限范围过宽 | 密钥过期后仍被执行操作 | 时间戳验证 + 作用域锁定 |
+| RPC 数据篡改 | 数据源不可信 | 返回伪造的链上状态 | 多源交叉验证 + 置信度阈值 |
+| 恶意授权 | 未经用户确认 | Agent 擅自发起授权操作 | 强制 HITL 确认机制 |
+
+### 5.2 系统不变量（Invariant）
+
+$$\forall tx \in TransactionSet, requiresSignature(tx) \Rightarrow userConfirmation(tx) = true$$
+
+**形式化说明：** 所有需要签名的交易必须经过用户确认，任何绕过此条件的操作均视为安全违规。
+
+---
+
+## 6. 公开 Proof-of-Work 清单
+
+| 类型 | 文件路径 | 状态 |
+|-----|---------|-----|
+| Daily Note | `daily/2026-06-11.md` | ✅ 已创建 |
+| Tool Permission Matrix | `notes/tool-permission-matrix.md` | ✅ 已沉淀 |
+| Content Draft | `drafts/agent-wallet-boundary.md` | ✅ 草稿完成 |
+| Security Checklist | `notes/security-checklist.md` | 🔄 更新中 |
+
+---
+
+## 7. 待澄清问题（Open Questions）
+
+- Session Key 的过期时间如何与 Agent Task 的预估完成时间匹配？
+- Guard Condition 在链下和链上两处的实现一致性如何保证？
+- 多 Agent 场景下的权限协调是否需要引入新的协议层？
+
+---
+
+## 8. 下一步行动（Next Steps）
+
+1. 完成 Mini Project 的技术选型，聚焦交易解释器或钱包权限顾问方向
+2. 设计 Session Key 的生命周期管理方案
+3. 编写 Guard Condition 的形式化验证规格
+4. 准备 Day 28 第二次 Sprint 复盘的素材积累
+
+---
+
+## 9. 学术标签（Academic Tags）
+
+`#AI-Agent` `#Web3-Tool-Use` `#Wallet-Permission` `#Human-in-the-Loop` `#Security-Invariant` `#MCP-Protocol` `#Session-Key` `#Agent-Workflow`
+<!-- DAILY_CHECKIN_2026-06-11_END -->
+
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
 # Day 24 | AI x Web3 School 技术报告
