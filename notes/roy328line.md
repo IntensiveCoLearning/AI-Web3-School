@@ -36,6 +36,21 @@ AI x Web3 School
 
 
 <!-- Content_START -->
+# 2026-06-11
+<!-- DAILY_CHECKIN_2026-06-11_START -->
+今日學習：Week 5 學習成果整合 | Hackathon Demo 反思 + Dev Tooling 探索 + 學習地圖完整回顧
+
+核心主題：Hackathon 提交後的第一天，聚焦三件事：反思 AI Security Demo 的完成情況與可改進空間、探索 Dev Tooling 賽道的實踐方向，以及對整個 AI × Web3 學習地圖進行完整回顧，確認知識點的連接與缺口。
+
+Hackathon Demo 反思：AI Security Demo 完成了 Defense-in-Depth 四層架構的最小可驗證原型，覆蓋 Prompt Injection 檢測、Tool Call 白名單驗證、Pact 範圍約束與鏈上 attestation 審計。反思三個可改進點：第一，攻擊向量測試集過於簡單，真實攻擊的語義多樣性遠超測試集；第二，鏈上 attestation 目前只記錄 DENY 事件，未來應擴展到所有決策點的摘要；第三，CLI 視覺化雖然直觀，但缺少 API 介面讓其他系統能整合這個安全層。這三個方向是 Demo 演進為真實系統的核心路徑。
+
+Dev Tooling 賽道探索：Dev Tooling 指面向合約理解、測試、文檔、代碼審查和開發工作流的 AI 輔助工具。這個賽道和 AI Security 的交叉點是：AI 輔助的代碼審查工具本身也需要防止 Prompt Injection——開發者可能在代碼注釋中嵌入惡意指令，讓 AI 審查工具產生錯誤的安全評估。這是 AI Security 在 Dev Tooling 場景的具體應用，也是 Hackathon 項目後續演進的一個自然方向：從「執行時安全防護」擴展到「開發時安全審查」。
+
+學習地圖完整回顧：回顧 AI × Web3 School 四週學習路徑的知識結構。AI 基礎部分涵蓋了 LLM 能力邊界、Prompt 設計、Context 管理、RAG 架構、Agent 工作流、Frameworks 編排層與 MCP 協議。Web3 基礎部分涵蓋了 Network 環境、Cryptography 基礎、Wallet 身份入口、Smart Contract 鏈上規則、Account Abstraction 智能帳戶、DeFi 協議結構、Oracle 數據橋接與 Indexing 數據層。AI × Web3 Bridge 部分涵蓋了 Chain-aware Context、Web3 Tool Use、Agent Workflow、Agent Wallet、Machine Payment、Settlement & Escrow、Agent Identity、Agent Trust、Verifiable AI、AI Security、AI Privacy 與 Governance AI。前沿探索部分完成了 AI Security 賽道的 Hackathon Demo，並在今日補充了 Dev Tooling 方向的初步探索。
+
+下一步計畫：在剩餘三天（6/12-6/14）繼續完善 Hackathon Demo 的說明文件，補充 Dev Tooling 場景下 AI Security 的具體應用案例，並整理 WCB 個人頁面的學習記錄與技能標籤。
+
+<!-- DAILY_CHECKIN_2026-06-11_END -->
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
 今日學習：Week 4 Hackathon Build Day 5 | Governance AI 概念補全 + Hackathon Demo 最終整備
