@@ -15,8 +15,26 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-11
+<!-- DAILY_CHECKIN_2026-06-11_START -->
+### 数据 DAO（Data DAO）与去中心化数据市场
+
+-   **核心概念：** 传统 AI 的训练数据被大厂无偿爬取，用户毫无收益。**数据 DAO（Data DAO）** 利用 Web3 的组织形式，允许成千上万的用户将自己的私有数据（如浏览记录、运动数据、交易账单）进行脱敏并打包，通过智能合约共同对 AI 公司进行集体谈判和授权。
+    
+-   **运作机制：**
+    
+    -   **贡献证明（Proof of Contribution）：** 用户上传优质数据，ZK 证明验证数据的真实性与独特性。
+        
+    -   **代币化所有权：** 用户获得该数据 DAO 的治理代币。当该数据集被 AI 公司购买用于训练时，收益全自动、按比例分发给代币持有者。
+        
+-   **代表项目：** Vana, Masa Network。
+    
+-   **今日心得：** 数据是 AI 时代的石油。数据 DAO 把原本属于个人的隐式资产显性化，利用 Web3 的激励机制完成了最大规模的 AI 生产资料重构。
+<!-- DAILY_CHECKIN_2026-06-11_END -->
+
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 ### 链上计算瓶颈 —— TEE 硬件隐私与 AI 共处理器
 
 -   **核心概念：** 纯密码学（zkML / FHE）虽然优雅，但由于算力开销过大（ZK 证明生成慢、FHE 运算慢），目前无法运行大规模的 LLM（如 70B 以上参数的模型）。因此，产业界引入了 **TEE（Trusted Execution Environment，可信执行环境，如 Intel SGX, AMD SEV）** 作为 AI 共处理器（Coprocressor）。
@@ -35,6 +53,7 @@ AI x Web3 School
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
 
+
 ### 合规博弈、模型责任法与全链 AI 游戏
 
 -   **核心概念：** 随着技术演进，监管开始动真格。**欧盟《AI法案》（EU AI Act）** 等法规正逐步落地，监管机构开始将“具有资产支配权的自主 Agent”视为“无牌照的金融顾问”，这也导致了市场的分化：
@@ -50,6 +69,7 @@ AI x Web3 School
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 ### DeFAI 安全边界 —— 内存投毒与间接提示词注入
@@ -70,6 +90,7 @@ AI x Web3 School
 
 
 
+
 ### Intent-centric（意图导向）与机器原生钱包
 
 -   **核心概念：** 传统的 Web3 交互需要用户理解“签名、授权、跨链”。但对 AI 来说，直接编写并执行底层的 EVM 字节码太容易出错。因此，**Intent-centric（意图导向）** 架构成为主流。AI 只需要声明“终点意图”，剩下的路径寻找由链下的 Solver（寻找者）去竞争完成。
@@ -85,6 +106,7 @@ AI x Web3 School
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -109,6 +131,7 @@ AI x Web3 School
 
 
 
+
 ### Agentic GDP（智能体经济）与 A2A 通信
 
 -   **核心概念：** AI Agent 不再是孤立的聊天框，它们已经开始相互买卖数据、协同完成任务，形成了 **A2A (Agent-to-Agent) 商务**。由此诞生了一个新指标：**aGDP（智能体国内生产总值）**，用来衡量链上 AI 实体创造的总经济产值。
@@ -124,6 +147,7 @@ AI x Web3 School
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -152,6 +176,7 @@ AI x Web3 School
 
 
 
+
 ### 前沿项目拆解与黑客松思考
 
 -   **明星项目拆解：**
@@ -171,6 +196,7 @@ AI x Web3 School
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -207,6 +233,7 @@ AI x Web3 School
 
 
 
+
 ### Day 4：AI + Web3 的代币经济学（Tokenomics）
 
 -   **核心概念：** 如何用 Token 驱动 AI 生态的飞轮？Web3 为 AI 引入了全新的数据贡献与标注激励机制。
@@ -224,6 +251,7 @@ AI x Web3 School
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -262,11 +290,13 @@ AI x Web3 School
 
 
 
+
 学习agent eco治理
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -297,11 +327,13 @@ AI x Web3 School
 
 
 
+
 学习ai智能体相关内容
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -415,11 +447,13 @@ AI x Web3 School
 
 
 
+
 阅读了一些ai-web3交叉方向的文档，但有待深入学习
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
