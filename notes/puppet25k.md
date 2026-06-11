@@ -17,31 +17,33 @@ AI x Web3 School
 <!-- Content_START -->
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
-收官分享会 - Z.AI Workshop：用 Agent Mode 发现本地商业机会
+## **收官分享会 -** [**Z.AI**](http://Z.AI) **Workshop：用 Agent Mode 发现本地商业机会**
 
-Roman（Z.AI/GLM）演示 Agent Mode + one Master Prompt 自动完成商业计划全流程
+-   Roman（Z.AI/GLM）演示 Agent Mode + one Master Prompt 自动完成商业计划全流程
+    
+-   核心：Chat Mode（一次回答）vs Agent Mode（多步骤目标执行）
+    
+-   Demo：Pattaya 空调维修服务——从调研到 Google Ads 全自动
+    
+-   关键工具：last30days skill（多源检索+品质验证）
+    
+-   Q&A 精华：proof of work/code 防幻觉、JSON 导出续会话、模型间 fallback
+    
+-   共学营正式收官
+    
 
-核心：Chat Mode（一次回答）vs Agent Mode（多步骤目标执行）
+## **随堂笔记**
 
-Demo：Pattaya 空调维修服务——从调研到 Google Ads 全自动
+> Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomous execution）。给 Agent 一个目标，它帮你一步步走完。
 
-关键工具：last30days skill（多源检索+品质验证）
+> 要求 proof of work 和 proof of code，让 Agent 自我验证，很多时候它会发现"哦我忘了这个"然后自行修正。
 
-Q&A 精华：proof of work/code 防幻觉、JSON 导出续会话、模型间 fallback
-
-共学营正式收官
-
-随堂笔记
-
-Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomous execution）。给 Agent 一个目标，它帮你一步步走完。
-
-要求 proof of work 和 proof of code，让 Agent 自我验证，很多时候它会发现"哦我忘了这个"然后自行修正。
-
-长会话丢失上下文？把整个对话导出为 JSON，在新会话中导入，让 Agent 重理解进度。
+> 长会话丢失上下文？把整个对话导出为 JSON，在新会话中导入，让 Agent 重理解进度。
 <!-- DAILY_CHECKIN_2026-06-11_END -->
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 
 ## **Handbook 学习 - Fine-tuning**
 
@@ -71,6 +73,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 
 ## **Handbook 学习 - Evaluation**
@@ -106,6 +109,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 
 
+
 ## **Handbook 学习 - MCP**
 
 -   MCP 是给 AI Agent 使用的 API 标准协议
@@ -136,6 +140,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 
 
+
 ## **Handbook 学习 - AI 基础篇（二）**
 
 -   阅读 Agent / Frameworks / Vibe Coding 三个章节
@@ -158,6 +163,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -196,6 +202,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -252,6 +259,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 
 
+
 ## **分享会 - Harness Engineering for Financial Intelligence**
 
 -   主讲人 Skyl，FluxA 的 AI 原生支付基础设施
@@ -301,6 +309,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 
 
+
 # **2026-06-03 周三**
 
 ## **Co-Learning：**
@@ -338,6 +347,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -410,6 +420,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 
 
+
 ### **Co-Learning | 任务推进与答疑**
 
 1.  参加了 19:00 的 Co-Learning 答疑交流
@@ -445,6 +456,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -498,6 +510,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -565,6 +578,7 @@ Agent Mode 的转变：从"辅助"到"执行"（From chat assistance to autonomo
 
 
 
+
 2026-05-29
 
 Dev3pack Builder 成长路径分享
@@ -596,6 +610,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -644,6 +659,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -718,6 +734,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Cobo Agentic Wallet 分享**
 
 1.  参加了 Cobo Agentic Wallet 分享会 — AI Agent 链上安全架构
@@ -754,6 +771,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -828,6 +846,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -947,6 +966,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 ### **Open Agentic Economy**
 
 1.  参加了 Sophia ([Z.AI](http://Z.AI)) 的 "Open Agentic Economy" 分享会
@@ -969,6 +989,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -1052,6 +1073,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 1\. 参加了 "AI 下乡计划｜在 Web3 的应用" 分享会（ELON）
 
 2\. 理解了 AI + Web3 的核心框架：AI 负责理解与决策，Web3 负责身份、支付、结算和审计
@@ -1067,6 +1089,7 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -1167,11 +1190,13 @@ Learning + Building + Network + Giving Back = Web3 Builder 的完整闭环。
 
 
 
+
 我今天在分享会过程中，把hermes和openclaw迁移到云服务器并且成功使用，也把和飞书的连接，以及日历的每日提醒完成了，明天会继续学习ai x web3指导文档中的内容。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
