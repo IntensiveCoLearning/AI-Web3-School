@@ -15,8 +15,80 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-11
+<!-- DAILY_CHECKIN_2026-06-11_START -->
+今天主要完成的是「交付前收口」和 README / demo 文件可信度整理。
+
+我們做了幾件重要事：
+
+1\. **README 改成繁中優先**
+
+\- 上半部是繁體中文，方便華語評審快速理解。
+
+\- 下半部保留英文，方便國際評審或主辦方閱讀。
+
+\- 已推上 GitHub。
+
+2\. **修正 reviewer brief 的過時說明**
+
+\- 原本 brief 裡還寫著「Semantic Scholar 整合前產生、placeholder adapter」。
+
+\- 已改成目前正確版本：
+
+`Semantic Scholar -> OpenAlex fallback -> local academic metadata cache`
+
+\- 也清楚標示 academic context 是 reviewer support，不是完整或決定性的文獻驗證。
+
+\- 根本原因確認：是舊版 tracked demo artifact 留下的文字，不是現在 generator 還在產生舊文字。
+
+\- 已推上 GitHub。
+
+3\. **加強 README 的專案敘事**
+
+\- 補充 Spark DeSci funding round 來源：
+
+Artizen 上正在進行的 Spark DeSci Fund for Radical Researchers。
+
+\- 說明 agent 解決的真實問題：
+
+人類評審時間投入高、學術知識短板、同輪項目橫向比較困難。
+
+\- 說明 49 個 Spark projects 不是爬 Artizen，而是來自 `Swiftevo/desci-funding-data-layer` 的清洗 Markdown data layer。
+
+\- 加上對 Swen 導師和冬天的馬鈴薯老師的致謝。
+
+\- 已推上 GitHub。
+
+4\. **保持 repo 乾淨**
+
+\- 沒有把本地測試痕跡推上去：
+
+`data/projects.json`
+
+`scripts/test-dry-run.ps1`
+
+`scripts/test-openalex.ps1`
+
+\- 我們確認這些比較像本地 debug / 換行狀態，不適合混入正式提交。
+
+5\. **影片後期方向**
+
+\- 我建議你用 CapCut Desktop 做 demo 後期。
+
+\- 重點是剪掉等待時間、加章節標題、放大重點畫面、加中英字幕或中文字幕。
+
+今天推了兩個 commit：
+
+\- `7253837`：加入繁中 README，更新 reviewer brief 說明。
+
+\- `e9a5cc6`：加強 Spark DeSci round 背景、data source 說明與致謝。
+
+目前狀態：GitHub 上的主要交付文件已經更適合評審閱讀了。接下來最重要的是把 demo 影片剪到清楚、有節奏，然後對照 hackathon submission checklist 做最後提交。
+<!-- DAILY_CHECKIN_2026-06-11_END -->
+
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 # **2026-06-10 Progress Log (Part 3)**
 
 ## **Completed: OpenAlex Fallback Repair**
@@ -128,6 +200,7 @@ Remote status:
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 目前情況很清楚：repo 是乾淨的，最新狀態已同步到 GitHub。
 
@@ -294,6 +367,7 @@ outputs/runs/YYYY-MM-DD-HHMM-ProjectId/
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 可以。這是目前項目的「簡介會版本」。
@@ -650,6 +724,7 @@ The current prototype uses 49 real Spark DeSci projects as its data layer. GLM-5
 
 
 
+
 \# 2026-06-07 開發日記
 
 \## 今日進展
@@ -741,6 +816,7 @@ The current prototype uses 49 real Spark DeSci projects as its data layer. GLM-5
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -1421,6 +1497,7 @@ Tool Use
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -2119,6 +2196,7 @@ ReAct 只是：
 
 
 
+
 很好。
 
 如果說前幾天你學的是：
@@ -2737,6 +2815,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 我認為你這個方向其實非常符合 [Z.AI](http://Z.AI) 賽道，而且比一般「Web3 Agent」更有特色。
 
 因為大部分參賽者可能做：
@@ -3278,6 +3357,7 @@ AI summarize proposal
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -3906,6 +3986,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 # Day 7 學習總結 — Memory、Fine-tuning 與人類認知模型
 
 今天最大的收穫其實不是新技術。
@@ -4436,6 +4517,7 @@ AI 怎樣決定做甚麼
 
 
 
+
 這兩者之中，**Cobo Agentic Wallet (CAW)** 以及其背後的技術架構，與 **Public Goods（公共物品）** 的發展有著直接且明確的關聯；而 [**Z.AI**](http://Z.AI) 則是從開源（Open Source）與學術工具的角度切入，間接回饋了 Public Goods 的生態。
 
 以下為兩者在 DeSci 或 Public Goods 發展上的交集與關聯分析：
@@ -4475,6 +4557,7 @@ AI 怎樣決定做甚麼
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -5101,6 +5184,7 @@ Reasoning + Actions
 
 
 
+
 Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
 
 今天你開始進入：
@@ -5690,6 +5774,7 @@ Context Engineering 組織知識
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -6362,6 +6447,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -6973,6 +7059,7 @@ LLM 會忽略中間資訊。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -7605,6 +7692,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -8201,6 +8289,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -8726,11 +8815,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -9177,6 +9268,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -9271,6 +9363,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
