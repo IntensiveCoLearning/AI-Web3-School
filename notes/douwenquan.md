@@ -15,8 +15,77 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-11
+<!-- DAILY_CHECKIN_2026-06-11_START -->
+# Daily: 2026-06-11
+
+> Week 4 Sprint Day 4 — ZAI 商业机会实战分享 🎯
+
+* * *
+
+## 今日学习内容
+
+### ZAI 分享会：AI Agent 挖掘商业机会实战
+
+参加了 ZAI 的分享会，了解了如何使用 AI Agent 发现和验证商业机会。
+
+**实战演练：空调服务细分赛道**
+
+在 ZAI 平台上，以**泰国芭提雅**为目标市场，选择**空调服务**作为细分赛道，设置的基础指令包括：
+
+| 参数 | 设定 |
+| --- | --- |
+| 目标城市 | 泰国芭提雅（Pattaya） |
+| 使用语言 | 泰语 / 英语 |
+| 细分赛道 | 空调安装与维修服务 |
+| 供应商对接 | AI Agent 自动匹配当地供应商 |
+| Google Ads 预算 | 设定广告投放预算 |
+| 单笔销售佣金 | 设定佣金比例 |
+
+**输出结果**
+
+-   AI Agent 生成了完整的商业方案
+    
+-   包含市场分析、竞争对手、目标客群、获客策略
+    
+
+### 收获
+
+-   理解了 AI Agent 如何从零到一挖掘线下服务业的商业机会
+    
+-   ZAI 平台的实际操作流程：设定参数 → Agent 自动调研 → 输出商业方案
+    
+-   为后续类似商业探索提供了可复用的方法论
+    
+
+* * *
+
+## Week 4 Sprint 进度
+
+| 日期 | 目标 | 状态 |
+| --- | --- | --- |
+| 6/8（一） | Claude Code 架构设计 | ✅ |
+| 6/9（二） | 架构文档完善 | ✅ |
+| 6/10（三） | 核心代码编写 | ✅ |
+| 6/11（四） | 🔴 ZAI 分享会 | ✅ |
+| 6/12（五） | Demo 准备 + 提交材料 | ⬜ |
+
+* * *
+
+## 明日计划
+
+6/12 Demo Day 准备：
+
+-   DCA Agent 代码整理
+    
+-   Demo 流程梳理
+    
+-   提交材料准备
+<!-- DAILY_CHECKIN_2026-06-11_END -->
+
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 # Daily: 2026-06-10
 
 > Week 4 Sprint Day 3 — 核心代码编写完成 💻
@@ -93,6 +162,7 @@ AI x Web3 School
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
 
+
 # Daily: 2026-06-09
 
 > Week 4 Sprint Day 2 — 架构技术文档完善
@@ -150,6 +220,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-08_START -->
 
 
+
 # Daily: 2026-06-07
 
 * * *
@@ -183,6 +254,7 @@ AI x Web3 School
 
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
+
 
 
 
@@ -286,6 +358,7 @@ AI x Web3 School
 
 
 
+
 # Daily: 2026-06-06
 
 > Week 3 周末冲刺 — Sponsor Workshop 任务全部完成
@@ -382,6 +455,7 @@ AI x Web3 School
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -488,6 +562,7 @@ AI x Web3 School
 
 
 
+
 # Daily: 2026-06-04
 
 > 支付场景的探索和思考 + Co-learning
@@ -528,6 +603,7 @@ AI x Web3 School
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -584,6 +660,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -649,6 +726,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -731,6 +809,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -863,6 +942,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 # 2026-05-30 每日学习笔记
 
 ## 学习内容
@@ -940,6 +1020,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 # 2026-05-29 每日学习笔记
 
 ## 学习内容
@@ -967,6 +1048,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -1061,6 +1143,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 **第一部分：学习总结**
 
 > 今天完成了 AI × Web3 Bridge 剩余 8 个章节的全面速览：
@@ -1086,6 +1169,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -1134,6 +1218,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 **第一部分：Web3 基础学习总结**
 
 > 今天完成了 Web3 基础 Phase 1 的全部剩余 6 个章节学习：Network（区块/共识/PoS/L2/Rollup）、Account Abstraction（ERC-4337/Smart Account/Bundler/Paymaster/Session Key）、DeFi（Token/AMM/滑点/无常损失/Lending/Stablecoin/Liquidity）、Oracle（Price Feed/Oracle Risk/AI Oracle）、Indexing（Event Indexing/Subgraph/Data Pipeline）、Security（Reentrancy/Access Control/Audit/Simulation/Monitoring）。共产出 7 份结构化学习笔记沉淀到 GitHub 仓库。
@@ -1164,11 +1249,13 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 今天主要学习和了解web3的相关文档和知识。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -1248,6 +1335,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 今天完成了两部分学习：  
   
 一、AI 基础概念深化  
@@ -1287,6 +1375,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -1368,6 +1457,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -1510,6 +1600,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 
 
+
 今日学习总结：  
 今天系统阅读了 AI 基础文档，对已有知识进行了梳理和补充：  
 已熟悉的概念（复习巩固）：
@@ -1536,6 +1627,7 @@ Cobo 老师讲了 Cobo 的使用方法、注意事项以及 API 调用方式。
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
