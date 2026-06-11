@@ -15,8 +15,38 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-11
+<!-- DAILY_CHECKIN_2026-06-11_START -->
+**项目状态：** `M2: 筛选+证据 ✅ → M3: Agents+评分 🔄`
+
+**✅ 今日合入 dev**
+
+PR 内容
+
+#46 **Issue 9A: TS Decision Scorer** — 评分入口 + 7种Veto降级
+
+#48 **Issue 10: Dossier 审计哈希** — 确定性SHA-256分层hash
+
+**📌 关掉的 Issue**
+
+\- `#12` Issue 8（外部风险透镜）— 8A/8B 都合了，父 Issue 收掉
+
+\- `#36` Issue 9A — 合入 dev 没自动关，手动关
+
+**💡 产品决策**
+
+\- v2 规划：用户自定义投资策略配置窗口（Veto开关、Lens权重、风险偏好）— 当前记录到 memory
+
+**🚧 下一步**
+
+\- **Issue 9B**（Python 评分引擎）— 你哥们的任务
+
+\- **Blocked by:** 9B 完成后 TS 才能接 **Issue 11（链上锚定）**
+<!-- DAILY_CHECKIN_2026-06-11_END -->
+
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 **项目：ColdRead — 可审计 AI 预测市场决策系统**
 
 \> 早上是机器在跑，下午是人+机器双引擎
@@ -81,6 +111,7 @@ PR：8 个合入 + 2 个待审
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
 
+
 \*\*创建了 `cold_read` 仓库 — 可审计 AI 预测市场决策系统\*\*
 
 \*\*产出物：\*\*
@@ -118,6 +149,7 @@ PR：8 个合入 + 2 个待审
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 ## **当前进展**
@@ -264,6 +296,7 @@ npm run build
 
 
 
+
 \## 🎯 核心论点：AI Agent 正在移动 Web3 选型的临界点
 
 分享者提出了一套 **「成本-收益天平」** 框架：
@@ -345,6 +378,7 @@ npm run build
 
 
 
+
 **今日完成：**
 
 **1\. 深度调研 Cobo CAW + 方向复盘**
@@ -395,6 +429,7 @@ npm run build
 
 
 
+
 \### ✅ 今天做了什么
 
 **1\. 参加 Cobo Agentic Wallet 专项 Workshop** 🎯
@@ -434,6 +469,7 @@ npm run build
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -524,6 +560,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 
 
 
+
 **今日完成：**
 
 **1\. AGW MVP 技术规格书（609行）✅**
@@ -573,6 +610,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 
 
 
+
 **1\. Week 3 开发排期确认 ✅**
 
 \- 完整 7 天开发排期已落地`hackathon/week3-dev-plan.md`）
@@ -614,6 +652,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -924,6 +963,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 ## 今日完成
 
 ### 1\. 项目初步 Proposal ✅
@@ -990,6 +1030,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 **问题地图** 扫了全部 6 个方向
 
 **主方向选择** Wallet / Permission，写了为什么不是纯 AI / 不是纯 Web3
@@ -1003,6 +1044,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -1032,6 +1074,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -1096,6 +1139,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 \### Web3 基础 — 过了一遍
 
 章节 核心收获
@@ -1136,6 +1180,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 🧭 2026 核心趋势 Agents with Wallets — Agent 自己管钱自己花
 
 📦 项目全景表 基础设施层 / 钱包支付层 / 应用层，每个都有简介
@@ -1153,6 +1198,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -1209,6 +1255,7 @@ Web3 底层原理
 
 
 
+
 \## 📋 5月19日学习总结
 
 \### ✅ 已完成
@@ -1230,6 +1277,7 @@ Web3 底层原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
