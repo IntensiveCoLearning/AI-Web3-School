@@ -15,8 +15,39 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-12
+<!-- DAILY_CHECKIN_2026-06-12_START -->
+### 今日内容：Demo 视频录制完成，项目正式提交
+
+今天完成了黑客松最后一块——Demo 视频录制，并完成了项目提交。
+
+**修了两个 Bug：**
+
+1.  `agent/main.py`：`list_data_workers()` 返回 list，但代码对所有工具结果都调用 `.get("tx_hash")`，导致 `AttributeError`。修复：加 `isinstance(result, dict)` 判断
+    
+2.  `agent/demo_guard.py` + `tools.py`：CAW Pact 的地址白名单字段写错了——`dst_address_in` 改为 `destination_address_in`，格式改为 `[{"chain_id": "SETH", "address": "0x..."}]`，补上 `--original-intent` flag
+    
+
+修完之后 `demo_guard.py` 全部三个场景真实运行：
+
+-   场景 1：Pact 激活 + 链上转账成功，产生新 tx
+    
+-   场景 2：超额攻击，CAW 合约层拒绝「Transaction Rejected」
+    
+-   场景 3：地址替换攻击，CAW 合约层拒绝「Transaction Rejected」
+    
+
+**今日新增链上记录（Sepolia）：** `0x77412c3d1da75edd398a59d617b5c867805b2a9d771f6220a549e59bf174ca09`
+
+项目所有功能（三 Worker 发现 → CAW 支付 → x402 数据交付 → 安全边界演示）均已完整验证可运行。
+
+🔗 项目仓库：https://github.com/Fisher-one/chain-research-agent  
+⛓️ 链上 tx（新）：https://sepolia.etherscan.io/tx/0x77412c3d1da75edd398a59d617b5c867805b2a9d771f6220a549e59bf174ca09
+<!-- DAILY_CHECKIN_2026-06-12_END -->
+
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 ### 今日主题：修复 Agent 工具调用崩溃 Bug，项目进入可录制状态
 
 今天修了一个让 `python agent/main.py` 直接崩溃的 bug：`list_data_workers()` 返回的是 Python list，但 agent 循环里对所有工具结果都调用了 `.get("tx_hash")`，触发 `AttributeError: 'list' object has no attribute 'get'`。
@@ -40,6 +71,7 @@ if isinstance(result, dict) and result.get("tx_hash"):
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 
 ### **今日进度：Demo 录制前的最后验证 + 修复真实 Bug**
 
@@ -75,6 +107,7 @@ if isinstance(result, dict) and result.get("tx_hash"):
 <!-- DAILY_CHECKIN_2026-06-09_START -->
 
 
+
 今日主要是继续完成黑客松的项目；
 
 目前我的项目进度，基本流程差不多了，已经发给了ai帮我测试，目前赛道偏向01，03相结合。
@@ -93,6 +126,7 @@ if isinstance(result, dict) and result.get("tx_hash"):
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 
@@ -145,6 +179,7 @@ if isinstance(result, dict) and result.get("tx_hash"):
 
 
 
+
 今天做了两件事：把 Week 3 所有 WCB 任务赶在截止前提交完，然后给黑客松项目补了本次 review 里价值最高的改动——用代码展示 CAW Pact 真正阻止了什么。
 
 **WCB 任务方面**，今天一口气写完并提交了 14 个 Week 3 文档（355pts），涵盖 Sprint Plan、Proposal Memo、Scope Review、Risk Memo、Cobo 赛道对齐、技术验证计划、项目流程图、深度研究包、SDK 接入计划、Workshop 笔记、Sponsor 问题清单等，全部推到学习仓库。
@@ -175,6 +210,7 @@ if isinstance(result, dict) and result.get("tx_hash"):
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -217,6 +253,7 @@ if isinstance(result, dict) and result.get("tx_hash"):
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -281,6 +318,7 @@ Agent: 数据已验证，正在生成报告...
 
 
 
+
 ### **今天产出**
 
 1.  **确定了单人参赛** — 组队找了一圈没合适的，Cobo 赛道单人能做，直接定。
@@ -313,6 +351,7 @@ Agent: 数据已验证，正在生成报告...
 
 
 
+
 今日学习前两周的内容
 
 8 种攻击，两句话总结规律：
@@ -326,6 +365,7 @@ Agent: 数据已验证，正在生成报告...
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -362,6 +402,7 @@ Agent: 数据已验证，正在生成报告...
 
 
 
+
 **今天重读了 Machine Payment 章节（~2500 字，8 个节点），用 explain-back 挖了一遍。** 之前读第一遍的时候 8 个节点当独立概念看，这次跟 Agent 过了 6 道题，把 Budget/Policy 分工、Payment Intent 生命周期、MPP 托管模型、x402 协议本质都重新捋了一遍。  
   
 2\. **修正了 Guard 在支付链路里的位置。** 第一遍理解是 Budget → Quote → Payment Intent → Guard（Guard 当最后一道闸）。这次理清楚应该是 Quote → Guard → Payment Intent——Guard 在用户签字之前就拦截不该看的报价，保护的不只是钱，还有注意力。
@@ -369,6 +410,7 @@ Agent: 数据已验证，正在生成报告...
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -398,6 +440,7 @@ Agent: 数据已验证，正在生成报告...
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -459,6 +502,7 @@ Agent: 数据已验证，正在生成报告...
 
 
 
+
 **今日学习总结**
 
 **Stablecoin Payment** 最基础的稳定币支付，USDC/USDT 转账，没啥说的。
@@ -488,6 +532,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -540,11 +585,13 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日完成了一个任务；设计一个受限 Web3 助手 workflow（40 pts）— 以「用稳定币订阅 X Premium」为场景，设计了基于智能账户（Smart Account）+ Session Key 的受限支付助手。核心设计：Session Key 四维限制（金额 ≤10U、每日 ≤3 笔、收款地址白名单、30 天有效期），规则由人来定、执行交给 Agent。重点搞清楚了白名单地址为什么必须人工核实（Agent 可能获取被篡改的地址），以及 Session Key 和 EOA 体验差异的本质——不是「不需要确认」，而是「授权范围内提前确认过了」。
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -610,6 +657,7 @@ x402 之前完全理解错了，Subscription 和 Micropayment 也搞混了。但
 
 
 
+
 今日学习
 
 用 Excalidraw 画了一张从 用户发起任务 到 链上执行验证 的完整流程图，把 Week 1 学的 LLM、Prompt、Context、RAG、Agent、钱包、合约串成了一条链路。
@@ -652,6 +700,7 @@ RPC 广播 → mempool →
 
 
 
+
 Day 5 打卡｜概念卡片整理：AI 6 个 + Web3 8 个  
   
 前两天把 Handbook 四章读完了，今天没读新东西，把读过的概念用自己的话整理成了卡片，方便以后翻。  
@@ -675,6 +724,7 @@ ERC-4337 是新东西，看了 UserOperation → Bundler → EntryPoint → Paym
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -836,6 +886,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 ## 单笔交易流转流程
 
 钱包签名→节点网络传播→内存池排队→构建者排序→验证者打包出块→区块上链可查询
@@ -903,6 +954,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 
 
+
 今日的学习笔记作结
 
 ```markdown
@@ -935,6 +987,7 @@ EOA（外部账户）= 裸数据库连接，私钥就是连接串，丢了全完
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
