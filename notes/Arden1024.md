@@ -1,5 +1,5 @@
 ---
-timezone: UTC+8
+timezone: UTC+6
 ---
 
 # Arden1024
@@ -11,6 +11,7 @@ timezone: UTC+8
 ## Self-introduction
 
 AI x Web3 School
+為金融行業，希望透過AI x Web3課程學習，運用在金融行業中。
 為金融行業，希望透過AI x Web3課程學習，運用在金融行業中。
 
 ## Notes
