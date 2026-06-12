@@ -15,8 +15,277 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-12
+<!-- DAILY_CHECKIN_2026-06-12_START -->
+當然。這段可以幫你自己理解，也可以轉化成 PPT / demo 旁白。
+
+**Long-Horizon 是甚麼**  
+Long-horizon task 指的是 AI 不只是回答一個問題，而是能完成一段較長、較複雜、需要多步驟推進的任務。
+
+簡單說：
+
+```
+Short task:
+讀一份 proposal -> 摘要
+
+Long-horizon task:
+讀 proposal -> 規劃審查步驟 -> 查資料 -> 比較項目 -> 驗證 evidence -> 處理 API fallback -> 找出風險 -> 產生 reviewer brief
+```
+
+重點不是「答案很長」，而是 **任務過程很長**。
+
+**一般 Long-Horizon Agent 流程**  
+常見流程大概是：
+
+```
+1. Goal
+   明確任務目標
+
+2. Plan
+   拆解成多個子任務
+
+3. Act
+   調用工具、查資料、讀檔、搜尋、執行程式
+
+4. Observe
+   讀取工具結果
+
+5. Reflect / Revise
+   判斷結果是否足夠，是否需要補查、改查、fallback
+
+6. Continue
+   進入下一步
+
+7. Final Output
+   產生結構化交付物
+```
+
+這和 ReAct 很接近：
+
+```
+Reason -> Act -> Observe -> Reason -> Act -> Observe -> Final
+```
+
+如果更工程化一點，可以理解成：
+
+```
+Planner
+↓
+Tool Router
+↓
+Retriever
+↓
+Verifier
+↓
+Synthesizer
+↓
+Final Report
+```
+
+**爭論點在哪裡**  
+Long-horizon agent 有幾個常見爭論點。
+
+第一個爭論是：  
+**Batch processing 算不算 long-horizon？**
+
+如果只是：
+
+```
+for each project:
+  summarize(project)
+```
+
+這比較像批次自動化，不一定是 long-horizon。
+
+但如果每個項目都包含：
+
+```
+plan
+tool calls
+retrieval
+comparison
+fallback
+risk reasoning
+structured output
+```
+
+然後再把多個項目串成一個 funding round review workflow，那就更接近 long-horizon。
+
+所以我們要強調：
+
+> We are not running 49 summaries. We are running 49 multi-step review workflows.
+
+第二個爭論是：  
+**工具調用是不是 agent？**
+
+單純固定 pipeline：
+
+```
+step 1 always call A
+step 2 always call B
+step 3 always call C
+```
+
+比較像 workflow automation。
+
+更 agentic 的版本是：
+
+```
+GLM 根據當前項目內容決定：
+- 要查哪些學術 query
+- 要比較哪些相近項目
+- 要追問哪些 evidence
+- 哪些 claims 是可驗證，哪些只是願景
+```
+
+我們目前介於兩者之間：  
+有固定工具集合，但 GLM 會在 loop 中決定查詢內容、比較方向、風險與 reviewer questions。
+
+這是可以誠實說的：
+
+> The current system is a constrained long-horizon agent: the tool space is bounded, but GLM-5.1 performs multi-turn planning, query generation, evidence interpretation, and final synthesis.
+
+第三個爭論是：  
+**有沒有 self-correction？**
+
+Long-horizon 很重視：
+
+```
+工具失敗 -> 換方法
+資料不足 -> 標記 missing evidence
+API rate limit -> fallback
+```
+
+我們這裡有一個很好的例子：
+
+```
+Semantic Scholar rate limited
+↓
+Fallback to OpenAlex
+↓
+Fallback to local academic cache
+↓
+If still insufficient, mark as not definitive
+```
+
+這就是比一般 summary 更強的地方。
+
+**我們的 Long-Horizon 如何達成**  
+我們的 agent 目前是這樣：
+
+```
+Input:
+Project ID
+
+Step 1:
+get_project_detail
+讀 Spark 49-project database 中的項目資料
+
+Step 2:
+GLM-5.1 extract claims
+分辨可驗證聲明與願景型聲明
+
+Step 3:
+search_projects
+尋找同輪相似項目
+
+Step 4:
+compare_projects
+做橫向比較
+
+Step 5:
+search_academic_context
+查 Semantic Scholar / OpenAlex / local cache
+
+Step 6:
+fetch_web_resource
+檢查網站或 GitHub evidence signal
+
+Step 7:
+synthesize
+產生 reviewer brief
+```
+
+如果跑 batch：
+
+```
+Project 1 workflow
+Project 2 workflow
+Project 3 workflow
+...
+Project 49 workflow
+```
+
+每個項目都不是單次摘要，而是一個多步 review cycle。
+
+**可以怎樣向評審說**  
+我會這樣說：
+
+> This project demonstrates long-horizon capability at two levels.  
+> First, each project review is a multi-step workflow: GLM-5.1 reads the proposal, extracts claims, retrieves related projects, searches academic context, checks external evidence, handles fallback, and generates a reviewer brief.  
+> Second, the same workflow can scale across the full Spark DeSci funding round, from a 5-project demo batch to all 49 structured projects.
+
+中文版本：
+
+> 本專案的 long-horizon 能力有兩層。第一，每個項目的 review 都不是一次性摘要，而是包含資料讀取、claim 抽取、同輪比較、學術檢索、外部 evidence check、fallback 與 brief 生成的多步流程。第二，同一套流程可以從單一項目擴展到整個 Spark DeSci funding round，demo 預設批次 review 5 個項目，理論上可擴展至 49 個已結構化項目。
+
+**PPT 可用短版**  
+如果要放到 Gamma，可以用：
+
+* * *
+
+# Long-Horizon Capability
+
+不是單次 summary。
+
+每個項目都是多步 review workflow：
+
+-   讀取 proposal
+    
+-   抽取 claims
+    
+-   查學術 context
+    
+-   同輪比較
+    
+-   evidence check
+    
+-   fallback
+    
+-   brief 生成
+    
+
+Demo batch：5 個項目  
+可擴展至 49 個 Spark projects
+
+* * *
+
+**最精準的定位**  
+我建議你不要說：
+
+> Fully autonomous agent
+
+而說：
+
+> Constrained long-horizon review agent
+
+這樣更準確，也更可信。
+
+因為我們有清楚邊界：
+
+```
+bounded tools
+human oversight
+structured outputs
+fallback-aware academic retrieval
+```
+
+這種說法比誇大「全自動」更容易被技術評審接受。
+<!-- DAILY_CHECKIN_2026-06-12_END -->
+
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 今天主要完成的是「交付前收口」和 README / demo 文件可信度整理。
 
 我們做了幾件重要事：
@@ -88,6 +357,7 @@ Artizen 上正在進行的 Spark DeSci Fund for Radical Researchers。
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 
 # **2026-06-10 Progress Log (Part 3)**
 
@@ -200,6 +470,7 @@ Remote status:
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 
 目前情況很清楚：repo 是乾淨的，最新狀態已同步到 GitHub。
@@ -367,6 +638,7 @@ outputs/runs/YYYY-MM-DD-HHMM-ProjectId/
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 
@@ -725,6 +997,7 @@ The current prototype uses 49 real Spark DeSci projects as its data layer. GLM-5
 
 
 
+
 \# 2026-06-07 開發日記
 
 \## 今日進展
@@ -816,6 +1089,7 @@ The current prototype uses 49 real Spark DeSci projects as its data layer. GLM-5
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -1497,6 +1771,7 @@ Tool Use
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -2197,6 +2472,7 @@ ReAct 只是：
 
 
 
+
 很好。
 
 如果說前幾天你學的是：
@@ -2816,6 +3092,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 我認為你這個方向其實非常符合 [Z.AI](http://Z.AI) 賽道，而且比一般「Web3 Agent」更有特色。
 
 因為大部分參賽者可能做：
@@ -3357,6 +3634,7 @@ AI summarize proposal
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -3987,6 +4265,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 # Day 7 學習總結 — Memory、Fine-tuning 與人類認知模型
 
 今天最大的收穫其實不是新技術。
@@ -4518,6 +4797,7 @@ AI 怎樣決定做甚麼
 
 
 
+
 這兩者之中，**Cobo Agentic Wallet (CAW)** 以及其背後的技術架構，與 **Public Goods（公共物品）** 的發展有著直接且明確的關聯；而 [**Z.AI**](http://Z.AI) 則是從開源（Open Source）與學術工具的角度切入，間接回饋了 Public Goods 的生態。
 
 以下為兩者在 DeSci 或 Public Goods 發展上的交集與關聯分析：
@@ -4557,6 +4837,7 @@ AI 怎樣決定做甚麼
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -5185,6 +5466,7 @@ Reasoning + Actions
 
 
 
+
 Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
 
 今天你開始進入：
@@ -5774,6 +6056,7 @@ Context Engineering 組織知識
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -6448,6 +6731,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -7059,6 +7343,7 @@ LLM 會忽略中間資訊。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -7693,6 +7978,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -8290,6 +8576,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -8816,11 +9103,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -9269,6 +9558,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -9363,6 +9653,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
