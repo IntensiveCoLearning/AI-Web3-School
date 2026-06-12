@@ -15,8 +15,313 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-12
+<!-- DAILY_CHECKIN_2026-06-12_START -->
+## 今日主题
+
+今天主要围绕 **AI Agent 钱包决策与链上审计系统** 的需求设计，以及 **GitHub 项目创建、上传和协作流程** 进行了学习和实践。
+
+* * *
+
+## 一、项目需求梳理
+
+今天重新梳理了当前项目方向，明确项目不需要一开始强绑定 DAO，而是先做一个更清晰、更容易落地的版本：
+
+> **多 Agent 钱包决策与链上审计系统。**
+
+核心逻辑是：
+
+```text
+Polymarket 官方 API 获取预测市场数据
+↓
+Tavily Search API 搜索相关新闻和事件背景
+↓
+两个不同 Agent 分别分析
+↓
+输出建议、理由、置信度、风险等级
+↓
+评分器对比两个 Agent 的方案
+↓
+选择更优方案
+↓
+必要时通过 cawPact / caw 操作钱包
+↓
+将决策和执行过程上链存证
+↓
+前端展示完整决策时间线和执行历史
+```
+
+* * *
+
+## 二、明确 DAO 与当前项目的关系
+
+今天重点理解了 **DAO** 的概念。
+
+DAO 是去中心化自治组织，通常代表一群人共同管理一个链上国库，通过提案、投票和智能合约执行决策。
+
+但当前项目并不一定需要 DAO。
+
+当前更准确的定位是：
+
+> 先做个人钱包或测试钱包场景下的 Agent 决策系统，后续再扩展到 DAO 国库管理。
+
+因此，DAO 可以作为未来应用场景，而不是当前 MVP 的必要条件。
+
+* * *
+
+## 三、数据源设计
+
+今天确定了项目的数据来源分工：
+
+### 1\. Polymarket 官方 API
+
+用于获取结构化预测市场数据，包括：
+
+```text
+市场标题
+Yes / No 价格
+成交量
+流动性
+市场状态
+截止时间
+市场概率变化
+```
+
+它的作用是给 Agent 提供 **市场概率和市场共识数据**。
+
+### 2\. Tavily Search API
+
+用于搜索相关新闻、事件背景和舆情信息，包括：
+
+```text
+最新新闻
+政策变化
+宏观背景
+事件解释
+风险因素
+市场情绪
+```
+
+它的作用是给 Agent 提供 **外部事件背景和风险信息**。
+
+最终形成：
+
+> Polymarket 给市场概率，Tavily 给新闻背景，Agent 综合分析。
+
+* * *
+
+## 四、Agent 分析流程设计
+
+今天设计了两个 Agent 的初步分工：
+
+### Agent A：市场概率型 Agent
+
+主要分析：
+
+```text
+Polymarket 概率变化
+Yes / No 价格
+成交量
+流动性
+市场预期
+```
+
+偏向从预测市场和数据角度判断。
+
+### Agent B：新闻风险型 Agent
+
+主要分析：
+
+```text
+Tavily 新闻内容
+宏观风险
+政策风险
+舆情变化
+事件背景
+```
+
+偏向从新闻和风险控制角度判断。
+
+两个 Agent 都需要输出结构化建议，包括：
+
+```text
+建议动作
+分析理由
+置信度
+风险等级
+是否需要钱包操作
+```
+
+* * *
+
+## 五、MVP 概念理解
+
+今天理解了 **MVP** 的含义。
+
+MVP 是 Minimum Viable Product，中文叫 **最小可行产品**。
+
+意思是：
+
+> 先做一个功能最少，但能跑通核心逻辑、可以演示项目价值的版本。
+
+当前项目的 MVP 可以先做：
+
+```text
+1. 输入一个主题，例如 ETH
+2. 拉取 Polymarket 市场数据
+3. 用 Tavily 搜索相关新闻
+4. 两个 Agent 分别生成建议
+5. 评分器选择最终方案
+6. 前端展示两个 Agent 的建议对比和最终选择
+```
+
+第一阶段可以先不接真钱包、不做复杂 DAO 治理，先把核心决策链路跑通。
+
+* * *
+
+## 六、cawPact / caw 执行逻辑
+
+今天明确了 cawPact 和 caw 的作用：
+
+```text
+cawPact = 线上钱包操作网关
+caw = 实际操作钱包的能力层
+```
+
+当评分器选择了需要执行的钱包操作方案后，流程为：
+
+```text
+最终方案
+↓
+提交给 cawPact
+↓
+cawPact 检查权限、金额、Token、滑点、风险
+↓
+检查通过
+↓
+调用 caw 操作钱包
+↓
+返回交易结果
+```
+
+cawPact 的核心价值是避免 Agent 直接接触钱包，降低风险。
+
+* * *
+
+## 七、链上存证设计
+
+今天明确了链上存证的意义：
+
+> 不是为了炫技，而是为了证明 Agent 的决策过程不可篡改、可回放、可审计。
+
+需要存证的内容包括：
+
+```text
+Polymarket 数据 Hash
+Tavily 新闻摘要 Hash
+Agent A 建议 Hash
+Agent B 建议 Hash
+评分器最终选择 Hash
+cawPact 检查结果 Hash
+钱包执行交易 Hash
+```
+
+完整内容可以存在数据库或 IPFS，链上只保存 Hash / CID / 时间戳 / Agent ID。
+
+* * *
+
+## 八、GitHub 使用学习
+
+今天还学习了 GitHub 项目管理相关操作。
+
+包括：
+
+### 1\. 创建 GitHub 仓库
+
+学习了如何在 GitHub 创建新的 repository，并将本地项目上传到远程仓库。
+
+核心命令包括：
+
+```bash
+git init
+git add .
+git commit -m "init project"
+git branch -M main
+git remote add origin 仓库地址
+git push -u origin main
+```
+
+### 2\. 解决 GitHub 登录问题
+
+遇到了 GitHub 报错：
+
+```text
+Invalid username or token. Password authentication is not supported for Git operations.
+```
+
+理解了原因：
+
+> GitHub 已不支持账号密码方式进行 Git 操作，需要使用 Personal Access Token 或 SSH。
+
+后续可以通过 Token 或 SSH Key 解决认证问题。
+
+### 3\. commit 后回滚
+
+学习了 commit 后不同场景的回滚方式：
+
+```bash
+git reset --soft HEAD~1
+```
+
+用于撤销 commit，但保留代码修改。
+
+```bash
+git reset --hard HEAD~1
+```
+
+用于撤销 commit 并删除修改，需谨慎使用。
+
+如果已经 push 到远程，则推荐使用：
+
+```bash
+git revert commit_id
+```
+
+### 4\. 邀请协作者
+
+学习了如何在 GitHub 仓库中邀请别人一起开发：
+
+```text
+仓库页面
+→ Settings
+→ Collaborators
+→ Add people
+```
+
+对方接受邀请后，就可以参与代码协作。
+
+* * *
+
+## 九、今日收获
+
+今天主要完成了三方面的推进：
+
+```text
+1. 明确了项目不必一开始做 DAO，而是先做多 Agent 钱包决策系统
+2. 确定了 Polymarket API + Tavily Search API 的数据源组合
+3. 学习了 GitHub 仓库创建、上传、认证、回滚和协作者邀请流程
+```
+
+当前项目已经从一个比较模糊的 “AI Agent 管理 DAO 国库” 想法，逐步收敛成了更可执行的 MVP：
+
+> **输入市场主题 → 获取 Polymarket 数据和新闻背景 → 两个 Agent 分析 → 评分器择优 → 决策上链存证 → 必要时通过 caw 操作钱包。**
+
+今日整体进度良好，已经完成了项目方向收敛、核心流程设计和基础开发协作准备。
+<!-- DAILY_CHECKIN_2026-06-12_END -->
+
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 今天主要推进了 Issue 7 的 Python Agent 接入基础。
 
 完成内容：
@@ -82,6 +387,7 @@ npm test
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 \# 今日日报｜2026-06-09
 
@@ -158,6 +464,7 @@ MVP 使用真实 Polymarket 数据、Tavily 背景信息和测试网 Audit Ancho
 <!-- DAILY_CHECKIN_2026-06-08_START -->
 
 
+
 今天完成了一个较清晰的 AI × Web3 项目方向设计：  
 **Agent 决策上链浏览器。**
 
@@ -180,6 +487,7 @@ MVP 使用真实 Polymarket 数据、Tavily 背景信息和测试网 Audit Ancho
 
 
 
+
 ```
 1. 在 Remix VM 中重新部署 ETHTransfer
 2. 部署时确认 Value = 0，Gas limit = auto
@@ -199,6 +507,7 @@ MVP 使用真实 Polymarket 数据、Tavily 背景信息和测试网 Audit Ancho
 
 
 
+
 今天最大的收获是：已经从“只看交易和钱包余额”，进入到“理解合约如何控制链上状态和资金流转”的阶段。
 
 ```
@@ -213,6 +522,7 @@ Value、_amount、Gas limit 是三个不同概念
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -256,6 +566,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 
 
+
 今天最大的收获是：**VC 视角看项目，重点不是技术有多复杂，而是商业逻辑是否清晰。**
 
 一个好的 AI Agent × Web3 项目，需要同时具备以下几个特点：
@@ -273,6 +584,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -302,6 +614,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 
 
+
 今天主要完成了 AI × Web3 方向的整体学习梳理，重点了解了 AI Agent 与 Web3 结合后的几个核心应用方向，包括机器支付、Agent 身份、能力声明、互操作协议、钱包权限管理和安全执行等内容。
 
 在学习过程中，我对 AI Agent 未来如何进入 Web3 体系有了更清晰的认识。Agent 不只是一个对话工具，它未来可能会成为能够调用 API、购买服务、持有身份、完成支付、执行链上操作的独立执行单元。因此，Web3 可以为 Agent 提供身份、资产、权限、结算和可信验证等基础设施。
@@ -313,6 +626,7 @@ Nginx 反向代理 + Basic Auth + 防火墙限制
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -357,6 +671,7 @@ AI × Web3 并不是单一方向，而是可以分为支付、身份、钱包权
 
 
 
+
 -   明确了 AI Agent 的核心价值：从“被动回答”转向“主动执行任务”。
     
 -   理解了 Agent 的基本运行流程：理解目标、拆解任务、调用工具、执行任务、反馈优化。
@@ -370,6 +685,7 @@ AI × Web3 并不是单一方向，而是可以分为支付、身份、钱包权
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -415,6 +731,7 @@ ERC-8004 和 ERC-8183 分别从 **信任层** 和 **交易层** 支撑 Agentic E
 
 
 
+
 今天完成了 Open Agentic Economy 后续学习计划的整理，明确了从概念学习到项目实践的路径。
 
 后续学习将按照：
@@ -442,6 +759,7 @@ AI Agent 与链上任务结合
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -552,6 +870,7 @@ ERC-8183 主要解决 Agent 之间的商业交易流程问题。它通过 Job、
 
 
 
+
 今天完成了对 AI-Agent 和 Web3 结合方向的系统分析。整体来看，AI-Agent 解决的是“自动理解和执行任务”的问题，Web3 解决的是“资产、身份、支付和可信记录”的问题。两者未来最可能在钱包助手、链上支付、DeFi 自动化、智能合约交互和链上数据分析等方向融合。  
   
 AI-Agent 和 Web3 的结合不是简单地“AI + 区块链”概念叠加，而是存在明确的互补关系：
@@ -583,6 +902,7 @@ AI-Agent 操作 Web3 时存在明显风险，尤其是：
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -697,6 +1017,7 @@ AI-Agent 操作 Web3 时存在明显风险，尤其是：
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -865,6 +1186,7 @@ AI-Agent 操作 Web3 时存在明显风险，尤其是：
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
