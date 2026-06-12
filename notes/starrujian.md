@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-12
+<!-- DAILY_CHECKIN_2026-06-12_START -->
+学习进阶知识
+<!-- DAILY_CHECKIN_2026-06-12_END -->
+
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 观看分享会
 <!-- DAILY_CHECKIN_2026-06-11_END -->
 
@@ -24,11 +30,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-10_START -->
 
 
+
 观看分享会回放
 <!-- DAILY_CHECKIN_2026-06-10_END -->
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 
 
@@ -41,11 +49,13 @@ AI x Web3 School
 
 
 
+
 观看分享会
 <!-- DAILY_CHECKIN_2026-06-08_END -->
 
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
+
 
 
 
@@ -62,11 +72,13 @@ AI x Web3 School
 
 
 
+
 学习基础知识
 <!-- DAILY_CHECKIN_2026-06-06_END -->
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -87,11 +99,13 @@ AI x Web3 School
 
 
 
+
 复习
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -116,11 +130,13 @@ AI x Web3 School
 
 
 
+
 AI辅助完成后端项目
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -149,11 +165,13 @@ AI辅助完成后端项目
 
 
 
+
 学习Web3后端知识
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -186,11 +204,13 @@ AI辅助完成后端项目
 
 
 
+
 hermes辅助写项目
 <!-- DAILY_CHECKIN_2026-05-29_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -227,11 +247,13 @@ hermes辅助写项目
 
 
 
+
 深入学习使用codex
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -272,11 +294,13 @@ hermes辅助写项目
 
 
 
+
 观看分享会
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -321,11 +345,13 @@ hermes辅助写项目
 
 
 
+
 看回放
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -374,11 +400,13 @@ hermes辅助写项目
 
 
 
+
 Go力扣刷题
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -431,6 +459,7 @@ Go力扣刷题
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/starrujian/images/2026-05-19-1779197526757-image.png)
 
 hermes
@@ -438,6 +467,7 @@ hermes
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
