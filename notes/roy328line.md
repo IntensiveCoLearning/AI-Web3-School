@@ -36,6 +36,21 @@ AI x Web3 School
 
 
 <!-- Content_START -->
+# 2026-06-12
+<!-- DAILY_CHECKIN_2026-06-12_START -->
+今日學習：Week 4 最終衝刺 | Hackathon 最終提交答疑 + 例會 + Final Submission Pack 整備
+
+核心主題：Week 4 最後衝刺日（6/12），參加 Co-learning Hackathon 最終提交答疑和 Week 4 例會，完成 Final Submission Pack 的最後整備，確認 Demo Day 準備就緒。
+
+Co-learning 最終提交答疑重點：本次 Co-learning 聚焦 Hackathon 最終提交的技術細節和常見問題。核心討論圍繞三個問題：Demo 跑通標準（評委關注的是可觀察的鏈路，而非功能完整性）、驗證材料標準（鏈上 tx hash、agent trace 日誌、截圖三種驗證方式的優先順序）、README 呈現方式（Why AI + Why Web3 兩個問題必須有獨立段落，不能混淆在技術描述中）。學習到的關鍵點：Demo 敘事的核心是「問題 → 為什麼舊方法不夠 → 解法 → 可驗證證明」，而不是功能列表。
+
+Final Submission Pack 最終整備：確認提交材料完整性。GitHub repo 結構確認（README + demos/ + notes/ + logs/ 目錄齊全）；Demo 可運行性確認（prompt_guard.py + tool_validator.py + audit_logger.py 三個核心模組在 clean environment 下可一鍵運行）；鏈上驗證材料確認（Base Sepolia testnet EAS attestation 記錄，tx hash 和 EAS Explorer 連結均寫入 README）；Demo 影片腳本確認（攻擊演示 30 秒 → 防禦攔截 30 秒 → 審計日誌 20 秒 → 鏈上驗證 20 秒，總時長 2 分鐘以內）。
+
+例會學習筆記：Week 4 例會討論了三個主題。第一是 Hackathon 項目總覽與 Demo Day 格式說明：Demo Day 在 6/14 舉行，每個項目 3 分鐘展示 + 2 分鐘 Q&A，評委關注可驗證性和 AI × Web3 結合點的清晰度。第二是優秀項目分享：分享了幾個完成度高的項目，共同特點是「問題清晰 + 主流程跑通 + 驗證材料充分」，而不是功能多。第三是下週課程預告：Week 5 聚焦整體學習成果回顧和職涯路徑探索，完整學習地圖的最後一塊拼圖。
+
+Week 4 整體回顧：回顧整個 Week 4 的學習旅程——從 Scope Freeze 鎖定 AI Security 主流程、到 MVP 核心代碼實作、到 README 與驗證材料整備、到今日的最終提交確認。最重要的學習不是技術本身，而是「如何在有限時間內做出可驗證的最小有意義成果」：先凍結範圍、再執行主流程、再收集驗證材料、最後包裝敘事。這個方法論適用於 Hackathon，也適用於任何 AI × Web3 的早期產品驗證場景。
+
+<!-- DAILY_CHECKIN_2026-06-12_END -->
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
 今日學習：Week 5 學習成果整合 | Hackathon Demo 反思 + Dev Tooling 探索 + 學習地圖完整回顧
