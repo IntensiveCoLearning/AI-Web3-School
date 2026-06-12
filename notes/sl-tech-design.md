@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-12
+<!-- DAILY_CHECKIN_2026-06-12_START -->
+代码开发
+<!-- DAILY_CHECKIN_2026-06-12_END -->
+
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 代码开发
 <!-- DAILY_CHECKIN_2026-06-11_END -->
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
 
+
 代码开发
 <!-- DAILY_CHECKIN_2026-06-10_END -->
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 划分模块；并开始基础模块开发
@@ -38,11 +46,13 @@ AI x Web3 School
 
 
 
+
 继续开发任务。但是，在开发过程中，发现方案还存在不完善的地方，针对有问题的内容进一步修改。
 <!-- DAILY_CHECKIN_2026-06-06_END -->
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -57,11 +67,13 @@ AI x Web3 School
 
 
 
+
 梳理设计方案内容，基于最小MVP考虑，优化部分设计
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -80,11 +92,13 @@ AI x Web3 School
 
 
 
+
 今天加班了，就参加了线上会议，另外初步接触ERC-8183协议
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -143,6 +157,7 @@ ERC-8004引入三个标准的Registry：
 
 
 
+
 基于最小MVP考虑实现Agent API支付，大致规划以下几个模块：
 
 -   Provider（API 服务方）
@@ -165,6 +180,7 @@ ERC-8004引入三个标准的Registry：
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -207,11 +223,13 @@ ERC-8004引入三个标准的Registry：
 
 
 
+
 在考虑智能体商业（Agentic Commerce）方向时，考虑实现后面的实践，即Agent API支付。我在结合AI工具在学习过程中，发现针对AI设计相关的内容，我这边还是缺少深入的理解。Agent需要做什么，应该要做什么，如何做等，还不是很明白。后续还需要补充AI相关的知识。
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -231,6 +249,7 @@ ERC-8004引入三个标准的Registry：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -275,6 +294,7 @@ x402有4个核心角色：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -349,6 +369,7 @@ contract EvidenceRepository {
 
 
 
+
 今天任务：  
 ①在[https://aiweb3.school/zh/handbook/ai/](https://aiweb3.school/zh/handbook/ai) 网站上复习AI的概念
 
@@ -361,6 +382,7 @@ contract EvidenceRepository {
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -544,6 +566,7 @@ https://github.com/NousResearch/hermes-agent/blob/main/README.zh-CN.md
 
 
 
+
 主要在自己本地部署hermes。但是遇到一些问题，现在卡在网络上，下载hermes到约99%就会失败，目前正在排查（放弃使用http clone，改为使用ssh了，不知道会不会成功）。后面也会把整个部署过程记录，上传到打卡点。
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/sl-tech-design/images/2026-05-19-1779196495368-image.png)
@@ -551,6 +574,7 @@ https://github.com/NousResearch/hermes-agent/blob/main/README.zh-CN.md
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
