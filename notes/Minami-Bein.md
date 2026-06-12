@@ -14,6 +14,244 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-13
+<!-- DAILY_CHECKIN_2026-06-13_START -->
+# Day 27 学习打卡 | AI x Web3 School
+
+## 今日学习摘要
+
+今天是第 27 天打卡，已完成 21 天核心计划的学习，正式进入 **Sprint 2 深化阶段**。根据前 21 天建立的 AI x Web3 知识基础，今日重点聚焦以下三大方向的**系统复盘与概念深化**：
+
+---
+
+## 一、今日学习内容
+
+### 1. 第一周核心概念强化：Web3 基础直觉体系
+
+**主题：** 区块链网络（Network）、密码学（Cryptography）、钱包（Wallet）、智能合约（Smart Contract）与安全边界（Security）
+
+| 概念 | 中文定义 | 英文术语 | 关键理解点 |
+|------|----------|----------|------------|
+| 哈希函数 | 单向数学变换，输出固定长度指纹 | Hash Function | 不可逆、确定性、抗碰撞 |
+| 公钥密码学 | 非对称加密体系，公钥可公开 | Public Key Cryptography | 私钥签名、公钥验签 |
+| 智能合约 | 部署在链上的自动执行代码 | Smart Contract | 状态（State）、函数（Function）、事件（Event）、Gas |
+| 钱包权限 | 身份验证与操作授权的边界 | Wallet Permission | 只读 vs. 需确认 vs. 禁止自动执行 |
+
+**学习产出：** 完成了 Web3 基础概念的双语术语表构建，形成可公开展示的 `terminology/web3-baseline.md`。
+
+---
+
+### 2. 第二周核心框架：Agent Workflow 与 Web3 Tool Use
+
+**主题：** 大语言模型（LLM）、智能体（Agent）、工具调用（Tool Use）、模型上下文协议（MCP）与 Agent Wallet
+
+**Agent Workflow 五步循环：**
+
+```mermaid
+sequenceDiagram
+    participant User as 用户
+    participant Agent as AI Agent
+    participant Tools as Web3 Tools
+    participant Chain as 链上状态
+    
+    User->>Agent: 任务指令 (Task Instruction)
+    Agent->>Agent: 上下文理解 (Context Parsing)
+    Agent->>Tools: 工具调用 (Tool Invocation)
+    Tools->>Chain: 链上操作请求
+    Chain-->>Tools: 状态响应 (State Response)
+    Tools-->>Agent: 执行结果 (Execution Result)
+    Agent->>Agent: 验证与决策 (Verify & Decide)
+    Agent-->>User: 结果报告 (Result Report)
+```
+
+**Web3 工具权限矩阵：**
+
+| 工具类型 | 权限等级 | 用户确认要求 | 自动执行风险 |
+|----------|----------|--------------|--------------|
+| 读取余额 (Read Balance) | 只读 | ❌ 不需要 | 低 |
+| 模拟交易 (Simulate Transaction) | 只读 | ❌ 不需要 | 低 |
+| 估算 Gas (Estimate Gas) | 只读 | ❌ 不需要 | 低 |
+| 请求签名 (Request Signature) | 高风险 | ✅ **强制确认** | **高** |
+| 提交交易 (Submit Transaction) | 高风险 | ✅ **强制确认** | **极高** |
+
+**学习产出：** 建立了 Agent Wallet 的权限等级体系，核心认知为 **"Agent Wallet 不是把私钥交给 AI"**，而是使用会话密钥（Session Key）、策略（Policy）和守卫（Guard）构建多层防护。
+
+---
+
+### 3. 第三周项目方向：交易解释器 (Transaction Interpreter)
+
+**项目定位：** 为普通用户解释链上交易语义，降低 Web3 操作门槛
+
+**Demo 设计规格：**
+
+| 维度 | 内容 |
+|------|------|
+| 输入 | 一笔交易哈希（Transaction Hash）或交易数据 |
+| 输出 | 人类可读的语义描述 + 风险提示 |
+| 工具 | RPC 读取、ABI 解析、Gas 估算 |
+| 确认点 | 显示解析结果，用户确认后才执行下一步 |
+| 失败场景 | RPC 超时、ABI 不匹配、数据源不可信 |
+
+---
+
+## 二、今日实践产出
+
+### 2.1 概念图：AI Agent 与 Web3 组件交互拓扑
+
+```mermaid
+graph TD
+    subgraph UserLayer["用户层 (User Layer)"]
+        U[用户 User]
+    end
+    
+    subgraph AgentLayer["AI Agent 层"]
+        LLM[大语言模型 LLM]
+        Prompt[Prompt 模板]
+        Context[上下文 Context]
+        Workflow[工作流 Workflow]
+    end
+    
+    subgraph ToolLayer["工具层 (Tool Layer)"]
+        ReadBalance[读取余额]
+        Simulate[模拟交易]
+        EstimateGas[估算 Gas]
+        RequestSig[请求签名]
+        SubmitTx[提交交易]
+    end
+    
+    subgraph Web3Layer["Web3 层"]
+        RPC[RPC Provider]
+        Wallet[钱包 Wallet]
+        Contract[智能合约 Smart Contract]
+        Chain[链上状态 Chain State]
+    end
+    
+    U --> LLM
+    LLM --> Prompt
+    Prompt --> Context
+    Context --> Workflow
+    Workflow --> ReadBalance
+    Workflow --> Simulate
+    Workflow --> EstimateGas
+    Workflow --> RequestSig
+    Workflow --> SubmitTx
+    
+    ReadBalance --> RPC
+    Simulate --> RPC
+    EstimateGas --> RPC
+    
+    RequestSig --> Wallet
+    SubmitTx --> Wallet
+    
+    RPC --> Chain
+    Wallet --> Contract
+    Contract --> Chain
+    
+    style RequestSig fill:#ff6b6b
+    style SubmitTx fill:#ff6b6b
+    style Wallet fill:#ffd93d
+```
+
+---
+
+### 2.2 安全边界清单 (Security Boundary Checklist)
+
+**五维安全检查模型：**
+
+| 安全维度 | 威胁类型 | 防御策略 | 验证方法 |
+|----------|----------|----------|----------|
+| 私钥安全 | 私钥泄露、恶意访问 | 不暴露私钥、使用钱包隔离 | Agent 无权读取原始私钥 |
+| 授权安全 | 恶意授权、无限额度 | 明确授权上限、设置过期时间 | 每次授权需用户确认 |
+| 数据可信度 | RPC 欺骗、假数据 | 多源交叉验证、白名单 RPC | 交易模拟 + 状态校验 |
+| Prompt 安全 | Prompt Injection | 输入清理、指令隔离 | 禁止执行来源不明的指令 |
+| 操作边界 | 错误地址、错误参数 | 双重确认、预览执行结果 | 模拟交易先行 |
+
+---
+
+## 三、系统架构与理论框架
+
+### 3.1 核心不变量 (System Invariant)
+
+$$\forall Agent \in System, \forall Op \in HighRiskOps: confirm(Agent, Op) = true \Rightarrow User.approved(Op)$$
+
+**解读：** 对于系统中的任意 Agent，任意高风险操作（High Risk Operations）的执行必须满足用户已明确批准（User Approved）这一不变量。
+
+### 3.2 类型系统约束 (Type System Constraints)
+
+```
+ToolResult = ReadOnly | Simulation | GasEstimate | SignatureRequested | TransactionSubmitted
+Permission = ReadOnly | RequiresConfirmation | Forbidden
+AgentCapability = { tools: Tool[], policies: Policy[], guards: Guard[] }
+```
+
+---
+
+## 四、漏洞向量与边界场景分析
+
+### 4.1 高危漏洞报告
+
+| 漏洞类型 | 缺陷源头 | 攻击向量 | 缓解策略 |
+|----------|----------|----------|----------|
+| 私钥直接暴露 | 开发阶段测试代码残留 | Agent 读取并转发私钥 | 使用钱包签名，禁止明文传输私钥 |
+| 无限授权钓鱼 | 用户未理解授权范围 | 恶意合约请求无限额度 | 强制显示授权上限与过期时间 |
+| RPC 数据欺骗 | 单点 RPC 依赖 | 恶意节点返回假数据 | 多源验证 + 已知区块哈希校验 |
+| Prompt 注入 | 用户输入未清理 | 恶意指令覆盖 Agent 行为 | 输入隔离层 + 指令白名单 |
+| 交易参数篡改 | 模拟与实际执行参数不一致 | Gas 或接收地址被修改 | 实际提交前再次确认参数 |
+
+---
+
+## 五、公开 Proof-of-Work
+
+| 类型 | 文件路径 | 说明 |
+|------|----------|------|
+| Daily Note | `daily/2026-06-13.md` | 第 27 天学习记录 |
+| 术语表 | `terminology/web3-baseline.md` | Web3 基础双语术语表 |
+| 工具权限矩阵 | `notes/tool-permission-matrix.md` | Web3 工具分类与权限定义 |
+| 概念图 | `notes/concept-topology.md` | Agent-Web3 交互拓扑图 |
+| 安全清单 | `notes/security-checklist.md` | 五维安全检查模型 |
+| 项目草稿 | `hackathon/transaction-interpreter.md` | 第三周项目方向定义 |
+
+---
+
+## 六、关键术语表
+
+| 中文术语 | 英文术语 | 缩写 | 定义摘要 |
+|----------|----------|------|----------|
+| 大语言模型 | Large Language Model | LLM | 基于 Transformer 架构的生成式 AI 模型 |
+| 智能体 | AI Agent | Agent | 能够自主感知、决策、执行和验证的 AI 系统 |
+| 工具调用 | Tool Use / Tool Invocation | - | Agent 调用外部函数或 API 执行特定任务 |
+| 模型上下文协议 | Model Context Protocol | MCP | 连接 AI 模型与外部数据源/工具的标准化协议 |
+| 会话密钥 | Session Key | - | 临时授权的密钥，具有有限权限和有效期 |
+| 策略 | Policy | - | 定义 Agent 可执行操作范围和条件的规则集 |
+| 守卫 | Guard | - | 在交易执行前进行安全检查的验证机制 |
+| 人在回路 | Human-in-the-Loop | HITL | 关键决策必须由人类确认的控制模式 |
+
+---
+
+## 七、仍未清晰的问题
+
+1. **MCP 协议的具体实现细节**：Handbook 中对 MCP 的描述较为概念化，缺乏可操作的代码级示例。
+2. **Agent Wallet 的实际部署方案**：会话密钥的生成、管理和销毁流程尚未明确。
+3. **多 Agent 协作场景下的权限边界**：当多个 Agent 同时操作同一钱包时，如何避免权限冲突？
+
+---
+
+## 八、下一步计划
+
+| 优先级 | 行动项 | 目标产出 |
+|--------|--------|----------|
+| P0 | 补充 MCP 协议实现细节研究 | 完善 `notes/mcp-implementation.md` |
+| P1 | 设计 Agent Wallet 权限管理原型 | 完成 `experiments/day-27-wallet-prototype/` |
+| P2 | 深化交易解释器 Demo 实现 | 产出一个可运行的 MVP 脚本 |
+| P3 | 提交第 27 天打卡 | 完成 WCB 平台手动打卡 |
+
+---
+
+**打卡时间：** 2026-06-13  
+**学习天数：** Day 27  
+**累计投入：** 约 216 小时（8 小时 × 27 天）
+<!-- DAILY_CHECKIN_2026-06-13_END -->
+
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
 # AI x Web3 School 每日打卡文档
