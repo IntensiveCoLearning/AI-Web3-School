@@ -15,19 +15,27 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-12
+<!-- DAILY_CHECKIN_2026-06-12_START -->
+准备面试
+<!-- DAILY_CHECKIN_2026-06-12_END -->
+
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 复习ai...在找工作中...
 <!-- DAILY_CHECKIN_2026-06-11_END -->
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
 
+
 复习ai部分并准备面试
 <!-- DAILY_CHECKIN_2026-06-10_END -->
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 参加今晚的答疑
@@ -38,11 +46,13 @@ timezone: UTC+8
 
 
 
+
 最近在准备面试...还没怎么学...
 <!-- DAILY_CHECKIN_2026-06-07_END -->
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -57,11 +67,13 @@ timezone: UTC+8
 
 
 
+
 工作繁忙...没来得及学习...今晚准时参加线上会议
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -80,6 +92,7 @@ timezone: UTC+8
 
 
 
+
 今日完成：
 
 1.  向量库 vs 传统数据库选型分析——查语义用向量库（RAG/相似推荐），查精确用传统数据库（用户/订单），混合架构各司其职
@@ -91,6 +104,7 @@ timezone: UTC+8
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -120,6 +134,7 @@ Phase 1 进度：10/26（Fine-tuning 知识节点讲解完成，待完成 Infere
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -160,11 +175,13 @@ Phase 1 进度：10/26（Fine-tuning 知识节点讲解完成，待完成 Infere
 
 
 
+
 今日学习handbook剩余的内容
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -196,6 +213,7 @@ Phase 1 进度：9/26（还差 Evaluation / Fine-tuning / Inference）
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -262,11 +280,13 @@ Phase 1 进度：9/26
 
 
 
+
 今日计划加深java cli的理解，然后继续学习handbook剩下的内容
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -332,6 +352,7 @@ Day 8 | AI × Web3 School
 
 
 
+
 Day 8 | AI × Web3 School
 
 今日完成：
@@ -362,6 +383,7 @@ Day 8 | AI × Web3 School
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -527,6 +549,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 
 
 
+
 ## **Day 6 | AI × Web3 School**
 
 ### **今日完成**
@@ -549,6 +572,7 @@ Sophia 老师分享了 eth.skills 网站，并谈及自己对 AI 在即时支付
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -634,6 +658,7 @@ Day 5 | AI × Web3 School
 
 
 
+
 Day 4 | AI × Web3 School
 
 今日完成：
@@ -662,6 +687,7 @@ Day 4 | AI × Web3 School
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -722,11 +748,13 @@ Day 4 | AI × Web3 School
 
 
 
+
 今日将handbook中ai部分学完，然后开始web3部分的学习，并回顾昨晚tc老师的课
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
