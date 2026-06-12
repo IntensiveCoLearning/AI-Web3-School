@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-12
+<!-- DAILY_CHECKIN_2026-06-12_START -->
+qiandao
+<!-- DAILY_CHECKIN_2026-06-12_END -->
+
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 签到
 <!-- DAILY_CHECKIN_2026-06-11_END -->
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 
 签到
 <!-- DAILY_CHECKIN_2026-06-10_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-09_START -->
 
 
+
 签个到。。。
 <!-- DAILY_CHECKIN_2026-06-09_END -->
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 
@@ -317,6 +326,7 @@ ZK 可以：
 
 
 
+
 # **AI Agent 时代，重新审视区块链这项技术选择**
 
 ## **——兼 AI Agent 深度参与下的区块链应用开发实战**
@@ -398,11 +408,13 @@ ZK 可以：
 
 
 
+
 ![屏幕截图 2026-06-05 202614.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/czxzazsbb/images/2026-06-05-1780672824615-_____2026-06-05_202614.png)
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -420,6 +432,7 @@ ZK 可以：
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -460,11 +473,13 @@ ZK 可以：
 
 
 
+
 补前几天的学习视频
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -598,6 +613,7 @@ ZK 可以：
 
 
 
+
 ### 1\. **Account（账户）**
 
 -   **一句话解释**：区块链上的身份，可以用来接收、发送资产或调用智能合约。
@@ -697,6 +713,7 @@ ZK 可以：
 
 
 
+
 1\. agent是智能体或者代理。
 
 2\. LLM（大语言模型）：输入--LLM--输出(无法自己调用工具)
@@ -739,6 +756,7 @@ ZK 可以：
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
