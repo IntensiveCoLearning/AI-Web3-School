@@ -14,6 +14,164 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-12
+<!-- DAILY_CHECKIN_2026-06-12_START -->
+# AI x Web3 School 每日打卡文档
+
+**学习进度：** Day 26 | **日期：** 2026-06-12 | **累计学习时长：** 26 天
+
+---
+
+## 今日学习主题
+
+**Web3 安全底线 + AI Agent 安全边界深化实践**
+
+**今日目标：** 深入理解 AI Agent 在 Web3 环境中的安全风险，建立完整的安全防护框架，完成安全复盘与 Agent 权限边界梳理。
+
+---
+
+## 今日学习内容
+
+### 上午时段（09:00-12:00）
+
+**1. 阅读与概念梳理**
+
+- 重读 Handbook「Security（安全）」章节
+- 精读「AI Security（AI 安全）」章节
+- 复习「Wallet / Permission（钱包与权限）」相关权限模型
+
+**2. 核心安全风险图谱构建**
+
+针对 AI Agent 在 Web3 操作场景中的高危风险进行系统梳理：
+
+| 风险类型 | 描述 | 典型场景 | 防御优先级 |
+|---------|------|---------|-----------|
+| 私钥泄露（Private Key Leakage） | Agent 获取或暴露用户私钥 | 日志输出、错误提示、存储不安全 | 🔴 极高 |
+| 钓鱼攻击（Phishing Attack） | 恶意链接或签名请求诱导 | 伪造的合约交互、恶意 DApp | 🔴 极高 |
+| 恶意授权（Malicious Approval） | 过度授权代币转账权限 | approve 无限额度、permit 签名滥用 | 🔴 极高 |
+| Prompt Injection | 用户输入或外部数据注入恶意指令 | RAG 数据污染、用户消息伪装系统指令 | 🟠 高 |
+| 数据源不可信（Untrusted Data Source） | RPC 或预言机数据被篡改 | 虚假余额、错误价格、延迟数据 | 🟡 中 |
+| 合约漏洞利用（Contract Vulnerability） | 调用有漏洞的智能合约 | 重入攻击、闪电贷操纵 | 🟡 中 |
+
+---
+
+### 下午时段（14:00-18:00）
+
+**3. Agent 权限边界梳理**
+
+基于「Agent Wallet（智能体钱包）」章节，建立 AI Agent 操作权限分级模型：
+
+```
+权限等级划分（Permission Levels）：
+
+L0 - 禁止执行（Prohibited）
+├── 直接访问私钥（Private Key Access）
+├── 未经确认发起交易（Unsigned Transaction）
+└── 修改权限策略（Permission Policy Modification）
+
+L1 - 只读操作（Read-Only）
+├── 读取链上余额（Read Balance）
+├── 查询交易历史（Query Transaction History）
+├── 获取 Gas 估算（Estimate Gas）
+└── 读取合约状态（Read Contract State）
+
+L2 - 需要用户确认（Human-in-the-Loop Confirmation Required）
+├── 模拟交易（Simulate Transaction）
+├── 生成签名请求（Generate Signature Request）
+└── 创建交易草稿（Create Transaction Draft）
+
+L3 - 自动执行（Auto-Execution）
+├── 白名单地址小额转账（Whitelist Address Micro-transfer）
+└── 预批准策略内的操作（Pre-approved Policy Operations）
+```
+
+**4. 安全实践：AI Agent Web3 操作安全检查清单**
+
+完成一份可复用的安全检查清单（Security Checklist）：
+
+- [ ] 私钥永不离开钱包/硬件安全模块（HSM）
+- [ ] 所有交易发起前必须展示目标地址、Gas 估算和调用数据
+- [ ] 拒绝来源不明的合约调用请求
+- [ ] 对外部输入进行严格的 prompt injection 过滤
+- [ ] 关键操作强制 human-in-the-loop 确认
+- [ ] 定期审计 Agent 权限策略（Policy）配置
+- [ ] 验证 RPC 端点可信度，优先使用官方或知名节点
+- [ ] 对授权操作设置金额上限和有效期
+
+---
+
+### 晚间时段（19:00-21:00）
+
+**5. 项目安全复审**
+
+基于前两周设计的 Hackathon 项目（钱包权限顾问 / 交易解释器），从以下五个维度进行安全复审：
+
+| 复审维度 | 检查项 | 状态 |
+|---------|--------|------|
+| 私钥管理 | 是否涉及私钥存储或传输？ | ✅ 已规避 |
+| 授权风险 | 用户授权流程是否有金额限制和时效控制？ | ⚠️ 待完善 |
+| 数据可信度 | RPC 数据源是否多重验证？ | ✅ 已采用官方节点 |
+| Prompt Injection | 用户输入是否经过严格过滤和隔离？ | ⚠️ 待添加防护层 |
+| 错误动作处理 | 失败场景是否有回滚或确认机制？ | ⚠️ 待设计 |
+
+**6. Handbook Feedback 整理**
+
+记录对 Handbook 内容的反馈：
+
+- 建议补充 AI Security 章节中的 Prompt Injection 防御示例
+- 建议在 Agent Wallet 章节增加真实的安全事故案例分析
+- 建议增加 L2 和 L3 权限之间的边界条件说明
+
+---
+
+## 今日输出
+
+### 1. 安全检查清单
+
+`checklists/agent-web3-security-checklist.md`
+
+### 2. 项目安全复审文档
+
+`hackathon/project-security-review.md`
+
+### 3. 权限边界梳理图
+
+`diagrams/agent-permission-levels.mmd`
+
+### 4. Handbook Feedback
+
+`handbook-feedback/ai-security-gap.md`
+
+---
+
+## 关键术语（中英对照）
+
+| 中文术语 | English Term | 缩写/备注 |
+|---------|--------------|----------|
+| 私钥泄露 | Private Key Leakage | Web3 安全头号威胁 |
+| 钓鱼攻击 | Phishing Attack | 社会工程学攻击 |
+| 恶意授权 | Malicious Approval | Token Approval 滥用 |
+| 智能注入攻击 | Prompt Injection | AI 系统特有漏洞 |
+| 预言机 | Oracle | 数据源可信度核心 |
+| 人在回路 | Human-in-the-Loop | HITL，权限确认机制 |
+| 智能体钱包 | Agent Wallet | 授权策略执行载体 |
+| 守卫 | Guard | 权限边界防护组件 |
+
+---
+
+## 今日学习总结
+
+今天是 **Day 26**，系统性地完成了 Web3 安全底线的深度梳理与 AI Agent 安全边界建模。通过建立「权限等级划分模型」和「安全检查清单」，对 Agent 在 Web3 环境中的操作边界有了更清晰的认识。项目安全复审发现仍有三处待完善项，将在后续迭代中逐一加固。
+
+---
+
+## 明日计划
+
+- 完成项目安全复审的三个待完善项
+- 推进 Hackathon 项目原型开发
+- 准备 Day 27 公开学习总结
+<!-- DAILY_CHECKIN_2026-06-12_END -->
+
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
 # AI x Web3 School 学习进度报告
