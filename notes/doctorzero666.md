@@ -1,5 +1,5 @@
 ---
-timezone: UTC+13
+timezone: UTC+7
 ---
 
 # Kevin Jiang
