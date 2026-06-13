@@ -14,6 +14,11 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-14
+<!-- DAILY_CHECKIN_2026-06-14_START -->
+黑客松决赛完结撒花！🎉🎉
+<!-- DAILY_CHECKIN_2026-06-14_END -->
+
 # 2026-06-13
 <!-- DAILY_CHECKIN_2026-06-13_START -->
 # Day 27 学习打卡 | AI x Web3 School
