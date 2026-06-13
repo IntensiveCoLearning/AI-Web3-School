@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-13
+<!-- DAILY_CHECKIN_2026-06-13_START -->
+签到
+<!-- DAILY_CHECKIN_2026-06-13_END -->
+
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
+
 写前端
 <!-- DAILY_CHECKIN_2026-06-12_END -->
 
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 
 继续研究使用更好的模型
 <!-- DAILY_CHECKIN_2026-06-11_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-10_START -->
 
 
+
 继续把UI写的清楚明白一点
 <!-- DAILY_CHECKIN_2026-06-10_END -->
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 学习typescript和前端
 <!-- DAILY_CHECKIN_2026-06-07_END -->
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -72,11 +83,13 @@ AI x Web3 School
 
 
 
+
 今天继续用Claude Code和Code Whale完成Agent开发项目的写作，提炼了几个哲学，并且Demo跑通了我对想法的验证
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -98,11 +111,13 @@ AI x Web3 School
 
 
 
+
 今天在设计层面上打通了Memory的闭环
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -133,11 +148,13 @@ MCP Client（客户端）和MCP Server（服务端）连接成功——Server向
 
 
 
+
 今天跑通了一个基于MCP的天气查询Demo，可以通过对话框的形式，让AI获取到MCP Server的工具列表并获取某地的当前的气温、天气等信息。
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -172,6 +189,7 @@ MCP Server：MCP 的服务端，为Agent提供工具
 
 
 
+
 今天注意到MCP在各个文档中出现，一次两次出现可能是特定术语，几乎动不动就出现或许就是行业共识了，必须得了解一下。
 
 结果，AI返回的结果完全不是人话，不知所云。
@@ -183,6 +201,7 @@ MCP Server：MCP 的服务端，为Agent提供工具
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -1487,6 +1506,7 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 
 
 
+
 # claude code项目结构分析
 
 文件夹 PATH 列表
@@ -1611,6 +1631,7 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 
 
 
+
 今天几乎完整写完了我的Agent的顶层设计文档，参考了当前各种主流Agent的范式，做了很多关于个性化的调整和认为更合理的处理，也希望经过去敏感处理后开源出来有更多人看到，提提意见，一起完成技术实现。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
@@ -1633,11 +1654,13 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 
 
 
+
 今天继续写项目文件，同时做了少量关于日历日程的Debug
 <!-- DAILY_CHECKIN_2026-05-23_END -->
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -1680,6 +1703,7 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 
 
 
+
 ## 今日成果：
 
 1.  思考科研方向，已经有了初步的想法
@@ -1691,6 +1715,7 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -1819,6 +1844,7 @@ EOA (私钥控制)
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
