@@ -15,19 +15,27 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-13
+<!-- DAILY_CHECKIN_2026-06-13_START -->
+再修改修改明天就答辩了
+<!-- DAILY_CHECKIN_2026-06-13_END -->
+
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 昨天终于已经交作业了，很水很水，但是交了，参与奖。
 <!-- DAILY_CHECKIN_2026-06-11_END -->
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
 
+
 使用上了codex 也报名了，继续完成作业
 <!-- DAILY_CHECKIN_2026-06-10_END -->
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 
 已经完成：[README.md](http://README.md)
@@ -48,11 +56,13 @@ docs/demo\_[script.md](http://script.md)
 
 
 
+
 自动复盘已经完成了雏形，就是怎么形成长期自我更新
 <!-- DAILY_CHECKIN_2026-06-08_END -->
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -64,6 +74,7 @@ docs/demo\_[script.md](http://script.md)
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -100,6 +111,7 @@ docs/demo\_[script.md](http://script.md)
 
 
 
+
 今天继续打卡，但是黑客松没进展，主要看大家作品
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
@@ -112,11 +124,13 @@ docs/demo\_[script.md](http://script.md)
 
 
 
+
 黑客松开始了，不好找组队，参与不了这期就当体验
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -139,11 +153,13 @@ docs/demo\_[script.md](http://script.md)
 
 
 
+
 今天打卡主要是复习之前的内容，黑客松要组队了，什么都不会
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -174,11 +190,13 @@ docs/demo\_[script.md](http://script.md)
 
 
 
+
 昨天忘打卡了，最近太忙，今天看了coLearning，其他都是回放为主
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -202,6 +220,7 @@ docs/demo\_[script.md](http://script.md)
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -247,11 +266,13 @@ docs/demo\_[script.md](http://script.md)
 
 
 
+
 今天主要是休息，还要回放周六上午的**Open Agentic**
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -275,6 +296,7 @@ docs/demo\_[script.md](http://script.md)
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -323,6 +345,7 @@ docs/demo\_[script.md](http://script.md)
 
 
 
+
 学完了Hermes的从0到1，自己也成功安装了Hermes，而且是在云服务器安装的。以前安装小龙虾开电脑麻烦。现在准备进一步连上飞书。希望能长期使用Hermes。
 
 ![207f68c0-8876-4247-b613-c36d7c27e41e.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/cainiao0924/images/2026-05-20-1779291495586-207f68c0-8876-4247-b613-c36d7c27e41e.png)
@@ -350,11 +373,13 @@ docs/demo\_[script.md](http://script.md)
 
 
 
+
 昨天学习了Web3的内容，老师说Web2其实很重要。钱包重要性也说了，我有meta mask，准备在自己的chrome里浏览器扩展。老师讲了抢特朗普儿子币的案例，永远都得注意安全，自己交易安全和链上DAPP的安全。关于栈等其他内容还需要深入学习。
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
