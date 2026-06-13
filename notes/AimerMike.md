@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-14
+<!-- DAILY_CHECKIN_2026-06-14_START -->
+I completed the final learning-camp review. My biggest takeaway is that AI x Web3 is about controlled execution, not hype. For Long-term Memory for AI Agents, memory should be useful, visible, limited, deletable, and auditable. I prepared a final submission checklist and a post-camp roadmap from templates and traces toward a small working demo.
+<!-- DAILY_CHECKIN_2026-06-14_END -->
+
 # 2026-06-13
 <!-- DAILY_CHECKIN_2026-06-13_START -->
+
 I prepared the public-facing story for my project. The README should make the problem, users, MVP, safety design, demo flow, and evidence easy to review. I will avoid overclaiming and present the project as a focused proof-of-work: controllable long-term memory for AI agents with privacy boundaries, confirmation gates, and audit traces.
 <!-- DAILY_CHECKIN_2026-06-13_END -->
 
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
+
 
 I wrote the demo flow for Long-term Memory for AI Agents. The demo shows a real continuity problem: after 14 days of learning, the agent helps continue GitHub check-ins safely until the camp ends. The key proof is not autonomy for its own sake, but controlled memory use, public-safe outputs, confirmation gates, and audit traces.
 <!-- DAILY_CHECKIN_2026-06-12_END -->
@@ -30,11 +37,13 @@ I wrote the demo flow for Long-term Memory for AI Agents. The demo shows a real 
 <!-- DAILY_CHECKIN_2026-06-11_START -->
 
 
+
 I created a regression set for the memory-agent MVP. The tests check both usefulness and safety: continuing a project, drafting public notes, refusing secrets, redacting sensitive data, ignoring prompt injection, requiring confirmation, and writing audit traces. Evaluation should inspect the decision path, not only the final answer.
 <!-- DAILY_CHECKIN_2026-06-11_END -->
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 
 
@@ -47,11 +56,13 @@ I designed a memory schema for the MVP. The goal is to avoid uncontrolled chat-l
 
 
 
+
 I prepared the GitHub structure for the build phase. The repo should be proof-of-work, not just storage. I planned folders for daily notes, templates, traces, memory policy, hackathon proposal, demo script, risk checklist, submissions, and handbook feedback. The public repo must stay clean: no secrets, no private keys, no API keys, and no unredacted private data.
 <!-- DAILY_CHECKIN_2026-06-08_END -->
 
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
+
 
 
 
@@ -68,11 +79,13 @@ I turned Week 3 learning into a hackathon proposal. My project is Long-term Memo
 
 
 
+
 I designed an audit trace for Long-term Memory for AI Agents. The goal is not to prove every model token, but to make important outputs inspectable and replayable. I created a trace schema with sources, memory reads/writes, redactions, tools, risk level, confirmation status, output file, and decision. This makes the project stronger as proof-of-work
 <!-- DAILY_CHECKIN_2026-06-06_END -->
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -94,6 +107,7 @@ I defined trust evidence for my memory-agent project. The key lesson is that an 
 
 
 
+
 Today I designed the data boundary for a long-term memory agent. The main idea is that memory must be classified before it is used. I separated public memory, task memory, private memory, and forbidden memory. The agent should only see the minimum data needed for a task, should not silently connect wallet identity with private context, and should make memory visible, editable, and deletable by the user.
 
 I created an Agent Profile for my Long-term Memory Learning Agent. Agent identity should bind purpose, owner, capabilities, limits, memory policy, tools, and confirmation rules. This makes the project more credible because it turns the agent from a vague chatbot into a verifiable service with clear boundaries and accountability.
@@ -101,6 +115,7 @@ I created an Agent Profile for my Long-term Memory Learning Agent. Agent identit
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -130,11 +145,13 @@ I connected Agent Wallet thinking to my memory-agent project. I learned that “
 
 
 
+
 Today I turned my AI x Web3 direction into a controllable workflow. My project direction is Long-term Memory for AI Agents. The key insight is that memory is an execution surface, not only a convenience feature. A safe memory agent needs read-only defaults, explicit states, human confirmation for risky writes, privacy boundaries, and auditable traces. I created a workflow template that can become the backbone of my hackathon proposal.
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -169,11 +186,13 @@ I turned the first two weeks into a prototype direction: Wallet Risk Summary Age
 
 
 
+
 I studied how Web3 agents rely on data sources such as RPC providers, indexers, event logs, block explorers, analytics platforms, and oracles. The key lesson is that source quality matters. Data can be stale, indexed incorrectly, from the wrong chain, or based on confusing token metadata. For AI x Web3, every important claim should include source, chain ID, block or timestamp, freshness, confidence, and a verification step.
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -212,11 +231,13 @@ I learned how account abstraction can make wallet permissions more programmable 
 
 
 
+
 I studied smart contracts as persistent on-chain programs. The core interaction path is frontend -> wallet request -> transaction -> calldata -> contract function -> state change -> event logs -> indexer or block explorer. For AI x Web3, the key is decoded context: chain ID, contract address, ABI or function, parameters, value, token effects, and simulation. If an agent lacks those inputs, it should not confidently explain safety or outcome.
 <!-- DAILY_CHECKIN_2026-05-27_END -->
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -259,11 +280,13 @@ I reframed wallets as permission interfaces, not just asset containers. A wallet
 
 
 
+
 Today I reviewed the basic Web3 objects an AI agent must respect: network, chain ID, account, private key, signature, transaction, gas, block, and finality. The key insight is that an agent can help explain and prepare actions, but the wallet and signature are the authority layer. The model should never access private keys. A safer AI x Web3 flow is: user intent -> transaction preview -> human review -> wallet signature -> network execution -> public state -> agent summary.
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -328,6 +351,7 @@ Build a small wallet transaction risk summary prototype that takes decoded trans
 
 
 
+
 MCP and evaluation.
 
 Today I studied tool interfaces and evaluation as the control layer for agents. The key idea is that tools should have structured inputs, outputs, permissions, and failure modes. In AI x Web3, evaluation should check safety behavior, not only answer quality. A wallet agent should mention chain ID, distinguish transfer vs approval, flag unlimited approvals, use simulation when available, state missing context, and never sign or submit without human confirmation. I created a tool boundary checklist for future agent design.
@@ -335,6 +359,7 @@ Today I studied tool interfaces and evaluation as the control layer for agents. 
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -396,6 +421,7 @@ In Web3, the central risk is permission. A normal software agent might send an e
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -498,6 +524,7 @@ RAG is not magic. It can still fail if retrieval finds the wrong source, misses 
 
 
 
+
 Prompt design is safety design. In Web3, context quality and permission boundaries decide whether an AI agent is just helpful or dangerously overconfident.
 
 ```markdown
@@ -549,6 +576,7 @@ Prompt design is safety design. In Web3, context quality and permission boundari
 
 
 
+
 | 角色 | 擅长领域 | 短板 | 使用边界 |
 | --- | --- | --- | --- |
 | LLM 大语言模型 | 解读释义、内容总结、对比分析、方案规划 | 无上下文无法获取实时信息，无法保证内容绝对真实 | 必须主动说明信息不确定点与信息来源局限 |
@@ -567,6 +595,7 @@ Prompt design is safety design. In Web3, context quality and permission boundari
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
