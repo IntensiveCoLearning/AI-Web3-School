@@ -15,8 +15,316 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-14
+<!-- DAILY_CHECKIN_2026-06-14_START -->
+我有以下的想法，你先計劃怎樣最不會打亂目前的架構及安排。 1. ENS, 我希望能獲取鏈上 ethereum name service 的資料，讓每一個擁有 ENS 的錢包，都可以顯示出來。例如當中是否有 vitalik 的錢包？或者其他名人的錢包支持某些項目？ 2. 以我所知 gitcoin grant 填寫的 payout wallet 往往是 safe 多簽錢包。深入一層了解鏈上多簽錢包背後管理多簽錢包的究竟是哪些 wallets？這些 wallet 有否進行 self donation 的行為？但由於 payout 是使用多簽錢包，而無法被發現？ 3. gitcoin grant 23 與 Spark funding round 的項目有重叠嗎？如何得知項目有否參與這兩個輪次？ 4. 後續，我手上還有以往四輪 gitcoin grant round 的資料。需要預留擴展的空間
+
+上午12:28
+
+你的 4 個想法都很好，而且可以加進來，但我建議**不要直接塞進現在 M2 腳本**。否則 `analyze-gr23-integrity.ps1` 會變成一個巨大的混合怪：又做 redaction、又查 ENS、又查 Safe owners、又做跨輪比對、又做 graph。後面會很難維護。
+
+最穩的做法是：保留目前架構，把它升級成「多層 enrichment」。
+
+**目前架構不要動**  
+現在已經很清楚：
+
+```
+M1 import-gr23-data.ps1
+raw TXT -> redacted JSON
+
+M2 analyze-gr23-integrity.ps1
+redacted JSON -> deterministic risk report
+```
+
+我建議新增三個獨立 enrichment layer：
+
+```
+M2a ENS Enrichment
+M2b Safe Wallet Enrichment
+M2c Cross-Round / Cross-Database Matching
+```
+
+它們都只讀 M1/M2 的資料，產生額外 metadata，不改原本 M1/M2 的核心邏輯。
+
+* * *
+
+## 1\. ENS Enrichment
+
+目標：
+
+```
+wallet_redacted_id -> ENS name if available
+```
+
+但這裡有一個 privacy tension：
+
+如果公開顯示 ENS，例如：
+
+```
+vitalik.eth
+```
+
+其實等於重新識別錢包身份。
+
+所以我建議分兩層：
+
+```
+private ENS map:
+wallet_raw -> vitalik.eth
+
+public ENS summary:
+wallet_abc123 has ENS: yes
+ens_category: public_named_wallet
+```
+
+如果你要展示名人支持某些項目，可以做成 operator-only report，不一定公開 commit。
+
+新增腳本可以是：
+
+```
+scripts/enrich-gr23-ens.ps1
+```
+
+輸入：
+
+```
+outputs/gr23-integrity/gr23-redaction-map.private.json
+```
+
+輸出：
+
+```
+outputs/gr23-integrity/gr23-ens-enrichment.private.json
+outputs/gr23-integrity/gr23-ens-summary.json
+```
+
+技術路線：
+
+-   用 Etherscan / Alchemy / Cloudflare Ethereum RPC / ENS public resolver 查 reverse ENS
+    
+-   需要 API key 的話走 env var
+    
+-   查不到就留空
+    
+-   永遠不要讓 GLM 直接猜 ENS
+    
+
+* * *
+
+## 2\. Safe Multisig Owner Enrichment
+
+你這點非常重要。很多 grant payout wallet 是 Safe，多簽地址本身不會直接捐款，但 owner wallets 可能會捐。
+
+所以 self-donation 應該升級成三層：
+
+```
+Level 1:
+voter == grantAddress
+
+Level 2:
+voter == payoutAddress
+
+Level 3:
+voter in Safe owners of payoutAddress
+```
+
+這是很有價值的改進。
+
+新增腳本：
+
+```
+scripts/enrich-gr23-safe-owners.ps1
+```
+
+輸入：
+
+```
+project payout wallets
+private redaction map
+```
+
+查詢：
+
+-   Safe Transaction Service
+    
+-   chain: Ethereum / Optimism / Arbitrum / Base，視資料而定
+    
+-   如果不知道 chain，先嘗試常見 chains
+    
+
+輸出：
+
+```
+outputs/gr23-integrity/gr23-safe-owners.private.json
+outputs/gr23-integrity/gr23-safe-owner-summary.json
+```
+
+然後 M2 可以新增一個 optional input：
+
+```
+.\scripts\analyze-gr23-integrity.ps1 `
+  -SafeOwnerSummaryPath .\outputs\gr23-integrity\gr23-safe-owner-summary.json
+```
+
+這樣不會打亂主流程。
+
+新的 risk signal：
+
+```
+safe_owner_self_donation
+```
+
+定義：
+
+```
+donation.voter in project.safe_owner_wallets
+```
+
+severity：
+
+```
+high / medium-high
+```
+
+但措辭仍要小心：
+
+```
+A signer/owner wallet of the payout Safe appears as donor.
+Requires manual verification.
+```
+
+* * *
+
+## 3\. Gitcoin GR23 與 Spark Round 重疊
+
+這個最好做成 entity matching module，而不是硬寫死。
+
+新增腳本：
+
+```
+scripts/match-cross-round-projects.ps1
+```
+
+輸入：
+
+```
+Spark projects: data/projects.json
+Gitcoin GR23 projects: outputs/gr23-integrity/gr23-redacted-data.json
+```
+
+但問題是 redacted GR23 data 目前保留 title，但不保留完整 description、socials。M1 目前有 title、project\_key、website\_present、github\_present，但沒有 website / github 文字本身，因為我們為了 privacy 縮減了。
+
+所以我建議 M1 輸出多一份 **operator-local entity matching data**：
+
+```
+outputs/gr23-integrity/gr23-entity-matching.local.json
+```
+
+可包含：
+
+-   project title
+    
+-   website domain
+    
+-   github org/repo
+    
+-   twitter handle
+    
+-   redacted project key
+    
+
+這份可以留本地，不公開。
+
+Matching 方法分三層：
+
+```
+Exact:
+same GitHub repo
+same website domain
+same Twitter handle
+
+Strong fuzzy:
+very similar title
+same team GitHub/userGithub
+
+Weak fuzzy:
+similar description keywords
+same payout / historical wallet relation
+```
+
+輸出：
+
+```
+gr23-spark-overlap-report.json
+```
+
+結果分類：
+
+```
+confirmed_overlap
+likely_overlap
+possible_overlap
+no_match
+```
+
+這可以回答：
+
+> 哪些項目參與過 Gitcoin GR23，也參與 Spark funding round？
+
+而且日後能擴展到更多 round。
+
+* * *
+
+## 4\. 預留四輪 Gitcoin Grant Round 擴展
+
+這點要從資料模型先做好。
+
+不要把現在的設計叫死成 GR23-only。可以保留 `gr23` script，但內部 schema 應該走 round abstraction：
+
+```
+round_id
+round_name
+source
+project_id
+application_id
+project_key
+wallet_key
+donation_id
+```
+
+未來資料夾可以是：
+
+```
+outputs/qf-integrity/
+  rounds/
+    gitcoin-gr20-desci/
+    gitcoin-gr21-desci/
+    gitcoin-gr23-desci/
+    gitcoin-beta-desci/
+```
+
+之後 scripts 可逐步泛化：
+
+```
+import-qf-round-data.ps1
+analyze-qf-integrity.ps1
+match-cross-round-projects.ps1
+```
+
+但現在不需要立刻重構。現在最穩是：
+
+```
+先保留 import-gr23-data.ps1
+但在 docs 裡標記這是第一個 round adapter
+未來抽象成 qf round importer
+```
+
+這樣不會拖慢目前進度。
+<!-- DAILY_CHECKIN_2026-06-14_END -->
+
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
+
 當然。這段可以幫你自己理解，也可以轉化成 PPT / demo 旁白。
 
 **Long-Horizon 是甚麼**  
@@ -286,6 +594,7 @@ fallback-aware academic retrieval
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
 
+
 今天主要完成的是「交付前收口」和 README / demo 文件可信度整理。
 
 我們做了幾件重要事：
@@ -357,6 +666,7 @@ Artizen 上正在進行的 Spark DeSci Fund for Radical Researchers。
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 
 
 # **2026-06-10 Progress Log (Part 3)**
@@ -470,6 +780,7 @@ Remote status:
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 
 
@@ -638,6 +949,7 @@ outputs/runs/YYYY-MM-DD-HHMM-ProjectId/
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 
@@ -998,6 +1310,7 @@ The current prototype uses 49 real Spark DeSci projects as its data layer. GLM-5
 
 
 
+
 \# 2026-06-07 開發日記
 
 \## 今日進展
@@ -1089,6 +1402,7 @@ The current prototype uses 49 real Spark DeSci projects as its data layer. GLM-5
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -1771,6 +2085,7 @@ Tool Use
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -2473,6 +2788,7 @@ ReAct 只是：
 
 
 
+
 很好。
 
 如果說前幾天你學的是：
@@ -3093,6 +3409,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 我認為你這個方向其實非常符合 [Z.AI](http://Z.AI) 賽道，而且比一般「Web3 Agent」更有特色。
 
 因為大部分參賽者可能做：
@@ -3634,6 +3951,7 @@ AI summarize proposal
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -4266,6 +4584,7 @@ AI 怎樣決定下一步做甚麼
 
 
 
+
 # Day 7 學習總結 — Memory、Fine-tuning 與人類認知模型
 
 今天最大的收穫其實不是新技術。
@@ -4798,6 +5117,7 @@ AI 怎樣決定做甚麼
 
 
 
+
 這兩者之中，**Cobo Agentic Wallet (CAW)** 以及其背後的技術架構，與 **Public Goods（公共物品）** 的發展有著直接且明確的關聯；而 [**Z.AI**](http://Z.AI) 則是從開源（Open Source）與學術工具的角度切入，間接回饋了 Public Goods 的生態。
 
 以下為兩者在 DeSci 或 Public Goods 發展上的交集與關聯分析：
@@ -4837,6 +5157,7 @@ AI 怎樣決定做甚麼
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -5467,6 +5788,7 @@ Reasoning + Actions
 
 
 
+
 Day 5 學習總結 — Context Engineering、Compression 與 Agent Cognition
 
 今天你開始進入：
@@ -6056,6 +6378,7 @@ Context Engineering 組織知識
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -6732,6 +7055,7 @@ LLM 會忽略中間資訊。
 
 
 
+
 Day 4 學習總結 — Long-term Memory、Knowledge Infrastructure 與 AI-native Architecture
 
 今天你開始真正進入：
@@ -7343,6 +7667,7 @@ LLM 會忽略中間資訊。
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -7979,6 +8304,7 @@ retrieved chunks 太大怎辦？
 
 
 
+
 Day 3 學習總結 — Retrieval Architecture 與 RAG Pipeline
 
 今天你正式進入：
@@ -8577,6 +8903,7 @@ Retrieval 系統真正目標：
 
 
 
+
 學習總結 — Retrieval 與 RAG Architecture
 
 今天你已經正式進入：
@@ -9104,11 +9431,13 @@ AI-native database：
 
 
 
+
 今天聽了Elon 老師的 AI x web3 課，感覺目前很多的例子都是大集團或者大公司的成功案例。暫時很少看到有個人開發者的應用例子。目前最集中的都是在 AI 如何協助 web3 錢包安全或者交易上的分析。
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -9559,6 +9888,7 @@ workflow + tools + actions。
 
 
 
+
 # **Daily Note: 2026-05-19**
 
 ## **Today**
@@ -9653,6 +9983,7 @@ Proof link: [**https://github.com/Swiftevo/ai-web3-school-cohort-0**](https://gi
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
