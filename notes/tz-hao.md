@@ -15,19 +15,27 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-13
+<!-- DAILY_CHECKIN_2026-06-13_START -->
+准备汇报中
+<!-- DAILY_CHECKIN_2026-06-13_END -->
+
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
+
 项目准备中
 <!-- DAILY_CHECKIN_2026-06-12_END -->
 
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
 
+
 准备项目中
 <!-- DAILY_CHECKIN_2026-06-11_END -->
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 
 
 准备项目中
@@ -38,11 +46,13 @@ timezone: UTC+8
 
 
 
+
 准备项目中
 <!-- DAILY_CHECKIN_2026-06-09_END -->
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 
@@ -57,11 +67,13 @@ timezone: UTC+8
 
 
 
+
 准备比赛中
 <!-- DAILY_CHECKIN_2026-06-07_END -->
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -80,11 +92,13 @@ timezone: UTC+8
 
 
 
+
 准备黑客松ing
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -107,11 +121,13 @@ timezone: UTC+8
 
 
 
+
 准备黑客松。
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -270,6 +286,7 @@ User intent → Agent proposal → SafePay normalize → Policy check
 
 
 
+
 Cobo 赛道的核心要求是：项目必须围绕 **Agent 与资金操作场景** 展开，并且资金相关操作需要通过 **Cobo Agentic Wallet (CAW)** 完成。
 
 根据今天的判断，当前项目状态如下：
@@ -317,6 +334,7 @@ Cobo 赛道的核心要求是：项目必须围绕 **Agent 与资金操作场景
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -378,6 +396,7 @@ Audit records.
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -468,6 +487,7 @@ Week 3 下一步：
 
 
 
+
 ```
 传统以太坊的痛点：
 
@@ -503,6 +523,7 @@ Week 3 下一步：
 
 
 
+
 ```
 线 1：Agent 怎么做事？
   ├── MCP  → Agent ↔ 工具（发现 + 调用）
@@ -519,6 +540,7 @@ Week 3 下一步：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -578,6 +600,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 ## **提示工程（让Agent从“靠运气”到“稳定可控”）**
 
 ### **1\. 系统提示符与用户提示符**
@@ -607,6 +630,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -693,11 +717,13 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天学习了一下web3xai有一些大概的总结：从 Agent Workflow 的 human-in-the-loop，到 Escrow 的多签仲裁，到 Sovereignty 的一键 kill switch，到 Governance AI 的「AI 不替你做投票建议」——**自动化程度越高，撤回机制必须越强**。
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -759,6 +785,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 **1\. Web3 Tool Use（学完）**  
 \- 工具分层：只读（RPC/Contract Read）↔️ 写交易（Contract Write/Wallet）必须硬分离  
 \- 写交易前 7 步检查链：chain id → 合约地址 → ABI → value → gas → simulation → policy+确认  
@@ -772,6 +799,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -826,6 +854,7 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天听了一下web3的课，这些概念都懂算是巩固一下基础了
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
@@ -855,11 +884,13 @@ Claude Desktop 默认     Lambda/SaaS 首选           2024-11 提出，2025-03 
 
 
 
+
 今天终于把hermes弄好，也学习了一些ai的知识
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
