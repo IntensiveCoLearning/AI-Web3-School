@@ -15,8 +15,48 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-13
+<!-- DAILY_CHECKIN_2026-06-13_START -->
+### 今日完成
+
+1.  **In-App 审批功能**：前端直接支持卡片审批，无需跳转到 Cobo App。点击审批 → 确认弹窗 → 状态变更 ACTIVE。审批时间从分钟级压缩到秒级。同时支持浏览器端端到端验证。
+    
+2.  **RealCAWClient 增强 EIP-712 Policy 支持**：新增 344 行代码实现 ERC-8004 EIP-712 结构化签名。支付时自动生成 EIP-712 哈希，确保 policy 不被篡改。本地状态管理增强，降低远程 API 调用频率。
+    
+3.  **支付失败报告增强**：前端新增 `PaymentFailureAlert` 组件，显示具体失败原因（白名单不符 / 余额不足 / 过期 / 签名失败）和建议操作。后端每个检查点返回结构化错误码。
+    
+4.  **Vendor 白名单实时校验**：支付处理流程增加实时校验，目标 vendor 必须在当前卡片白名单内才能继续。校验在签名之前执行，避免无意义 gas 消耗。
+    
+5.  **测试覆盖大幅提升**：测试代码 +404 行，覆盖 vendor validation、failure reporting、in-app approval 联合流程。
+    
+6.  **国际化补齐**：中/英新增 9 条翻译，覆盖失败原因、审批操作、安全提示。
+    
+
+### 今日收获
+
+-   **In-App Approval 是 UX 的质量飞跃**：每一次页面跳转都是用户流失点，将审批放在应用内是提升留存率的关键。
+    
+-   **EIP-712 是用户安全感的基础**：结构化签名让用户看到签什么，不是盲签。在金融场景下这是必须项。
+    
+-   **失败报告要具体到操作级**："支付失败"无法指导用户，必须告诉他是白名单问题还是余额问题，以及下一步怎么做。
+    
+-   **白名单校验应该在最早可能的阶段**：在签名前拒绝，比签名后流转失败更省成本，也更安全。
+    
+
+### 链接
+
+-   RealCAWClient：`hackathon/project/src/real_caw_client.py`
+    
+-   AgentConsole 页面：`hackathon/project/web/src/pages/AgentConsole.tsx`
+    
+-   Cards 页面：`hackathon/project/web/src/pages/Cards.tsx`
+    
+-   测试用例：`hackathon/project/tests/test_cards_api.py`
+<!-- DAILY_CHECKIN_2026-06-13_END -->
+
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 ### 今日完成
 
 1.  **x402 支付协议 + ERC-8004 元数据落地**：新增 `service_registry.py` 作为 provider 注册中心，实现 x402 协议握手流程。后端新增 `/marketplace/providers` 和 `/marketplace/quote` 端点，返回标准化的 ERC-8004 元数据（name / version / supportedChains / paymentMethods）。前端 AgentConsole 调用支付时自动携带 x402 协议头。
@@ -65,6 +105,7 @@ AI x Web3 School
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
 
+
 ### 今日完成
 
 1.  **后端字段补齐**：发现 `CardResponse` Pydantic 模型缺失 5 个字段（`agent_id` / `owner` / `cooldown_hours` / `time_window` / `api_key`），导致前端类型不匹配。全部补齐后 FastAPI 返回的 JSON 与前端 `CardPact` 接口完全一致。
@@ -100,6 +141,7 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-08_START -->
 
 
+
 ### 今日完成
 
 1.  **Cobo CAW 真实 SDK 集成**：创建 `caw_factory.py` 工厂模式，实现 `CAW_MODE=mock/real` 一键切换。Mock 模式零依赖启动（评委友好），Real 模式一行切换对接真实链上资金。封装 `real_caw_client.py` 完整支持 create\_card / approve\_card / transfer\_tokens / list\_transactions。
@@ -133,6 +175,7 @@ AI x Web3 School
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -185,6 +228,7 @@ AI x Web3 School
 
 
 
+
 ### 6/5 今日完成 ✅
 
 -   **Fallback Mock 方案固化**：确认 `x402_client.py` 中 `CoboCAWWallet` 类为模拟实现，已添加类文档字符串说明 `"实际生产环境中将是 Cobo 提供的 SDK 客户端"`
@@ -198,6 +242,7 @@ AI x Web3 School
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -229,6 +274,7 @@ AI x Web3 School
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -277,6 +323,7 @@ AI x Web3 School
 
 
 
+
 ### 今日完成
 
 1.  **完整抓取黑客松页面信息**：提取了 Cobo 赛道 5 个方向 + Z.AI 赛道 3 个方向的完整规则、提交要求、评审侧重点。
@@ -315,6 +362,7 @@ AI x Web3 School
 
 
 
+
 ### 今日完成
 
 1.  **Week 2 交付物整理**：全部 6 个模块（A/B/C/D/F/G）已完成，从问题地图到威胁建模到治理流程，覆盖 AI×Web3 交叉全链路。
@@ -335,6 +383,7 @@ AI x Web3 School
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -395,6 +444,7 @@ AI x Web3 School
 
 
 
+
 今日核心动作：完成模块 C（Agent Identity）交付 + Week 2 三个模块全部收尾。
 
 模块 C 交付：
@@ -422,6 +472,7 @@ Week 2 整体交付：
 
 # 2026-05-28
 <!-- DAILY_CHECKIN_2026-05-28_START -->
+
 
 
 
@@ -476,6 +527,7 @@ Week 2 整体交付：
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -556,6 +608,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日核心任务是 Hackathon 方向最终决策与 5W 技术拆解。
 > 
 > 关键动作：
@@ -576,6 +629,7 @@ Week 2 整体交付：
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -644,6 +698,7 @@ Week 2 整体交付：
 
 
 
+
 > 今日完成 Week 1 遗留扫尾，推进模块 C 原型到可演示状态，并初筛 Week 2 方向。
 
 > 关键动作：
@@ -672,6 +727,7 @@ Week 2 整体交付：
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -727,6 +783,7 @@ Week 2 整体交付：
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -823,6 +880,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 
 
+
 > 今日完成模块 B 收尾：测试钱包创建、测试网交易、合约部署与验证。
 > 
 > 关键收获：
@@ -851,6 +909,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
@@ -918,6 +977,7 @@ EVM 执行合约逻辑，成功则更新状态并发出 event，失败则 revert
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
