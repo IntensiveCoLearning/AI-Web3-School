@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-13
+<!-- DAILY_CHECKIN_2026-06-13_START -->
+![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-13-1781359583385-image.png)
+<!-- DAILY_CHECKIN_2026-06-13_END -->
+
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-12-1781267423532-image.png)
 <!-- DAILY_CHECKIN_2026-06-12_END -->
 
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-11-1781157456936-image.png)
 <!-- DAILY_CHECKIN_2026-06-11_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-10_START -->
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-10-1781102407579-image.png)
 <!-- DAILY_CHECKIN_2026-06-10_END -->
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-08-1780930291859-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-08-1780930321331-image.png)
 <!-- DAILY_CHECKIN_2026-06-08_END -->
 
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
+
 
 
 
@@ -68,11 +79,13 @@ AI x Web3 School
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-05-1780635300821-image.png)![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-05-1780635319877-image.png)
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -93,11 +106,13 @@ AI x Web3 School
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-03-1780501911963-image.png)
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -225,6 +240,7 @@ VC投资的是未来。
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-06-01-1780278788327-image.png)
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
@@ -241,11 +257,13 @@ VC投资的是未来。
 
 
 
+
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-05-31-1780207428353-image.png)
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -345,6 +363,7 @@ VC投资的是未来。
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -483,6 +502,7 @@ VC投资的是未来。
 
 
 
+
 # **Cypherpunk & the Cultural Layers of Privacy: Why Privacy Matters for Builders**
 
 ## Cypherpunk
@@ -518,6 +538,7 @@ VC投资的是未来。
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -586,6 +607,7 @@ VC投资的是未来。
 
 
 
+
 # MetaMask
 
 -   metamask is a app tht allows you to manage ethereum,solana,bitcoin and private keys.
@@ -624,6 +646,7 @@ VC投资的是未来。
 
 
 
+
 # **Long-term Memory for AI Agents**
 
 ## restart VS resume
@@ -639,6 +662,7 @@ VC投资的是未来。
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -760,6 +784,7 @@ VC投资的是未来。
 
 
 
+
 # **Open Agentic Economy: From ERC-8004 / ERC-8183 to Builder Path**
 
 ![image.png](https://raw.githubusercontent.com/IntensiveCoLearning/AI-Web3-School/main/assets/SelinaAnn/images/2026-05-23-1779524951056-image.png)
@@ -782,6 +807,7 @@ VC投资的是未来。
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -832,6 +858,7 @@ AI驱动链上分析工具
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -946,6 +973,7 @@ AI驱动链上分析工具
 
 
 
+
 Hermes Agent学习
 
 ```
@@ -1000,6 +1028,7 @@ API 文档：https://web3career.build/llms.txt
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
+
 
 
 
