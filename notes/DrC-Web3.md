@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-13
+<!-- DAILY_CHECKIN_2026-06-13_START -->
+期待demo day
+<!-- DAILY_CHECKIN_2026-06-13_END -->
+
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
+
 周例会 一如既往 卧虎藏龙
 <!-- DAILY_CHECKIN_2026-06-12_END -->
 
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 
 今天最后的分享会吧
 
@@ -34,11 +41,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-10_START -->
 
 
+
 那么静 有点不可思议啊
 <!-- DAILY_CHECKIN_2026-06-10_END -->
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 
 
@@ -53,6 +62,7 @@ AI x Web3 School
 
 
 
+
 交易机器人做起来了
 <!-- DAILY_CHECKIN_2026-06-07_END -->
 
@@ -63,11 +73,13 @@ AI x Web3 School
 
 
 
+
 参与度是不是有点少
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -89,11 +101,13 @@ AI x Web3 School
 
 
 
+
 手机页面不好操作呀
 <!-- DAILY_CHECKIN_2026-06-03_END -->
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -111,6 +125,7 @@ Open day
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -161,11 +176,13 @@ VC投后服务 我觉得也是很多人可以考虑就职的方向
 
 
 
+
 我英国做个监控交易市场的agent
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -202,11 +219,13 @@ VC投后服务 我觉得也是很多人可以考虑就职的方向
 
 
 
+
 今天请假一天 需要梳理生活节奏
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -233,6 +252,7 @@ Cypherpunk
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -297,6 +317,7 @@ Cobo 老熟人了 神鱼老师起初做加密货币理财的
 
 
 
+
 今天co learning 马铃薯讲的隐私
 
 Railgun
@@ -330,6 +351,7 @@ Tornado cash
 
 
 
+
 周末好好复习肖老师的区块链原理
 
 YouTube是好东西
@@ -339,6 +361,7 @@ Web 3 career 也是行业明灯
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
+
 
 
 
@@ -397,6 +420,7 @@ Web 3 career 也是行业明灯
 
 
 
+
 今晚八点Elon 老师 讲解的AI in Web 3 application
 
 这是刚需 也是大方向
@@ -404,6 +428,7 @@ Web 3 career 也是行业明灯
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -457,6 +482,7 @@ Web 3的运行原理
 
 
 
+
 为什么用爱马仕
 
 因为更beginner friendly
@@ -464,6 +490,7 @@ Web 3的运行原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
