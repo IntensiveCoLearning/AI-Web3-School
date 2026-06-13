@@ -15,13 +15,20 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-13
+<!-- DAILY_CHECKIN_2026-06-13_START -->
+[https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-13.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-13.md)
+<!-- DAILY_CHECKIN_2026-06-13_END -->
+
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
+
 [https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-12.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-12.md)
 <!-- DAILY_CHECKIN_2026-06-12_END -->
 
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 
 [https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-09.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-09.md)
 <!-- DAILY_CHECKIN_2026-06-11_END -->
@@ -30,11 +37,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-09_START -->
 
 
+
 [https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-09.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-09.md)
 <!-- DAILY_CHECKIN_2026-06-09_END -->
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 
@@ -47,11 +56,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-07.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-07.md)
 <!-- DAILY_CHECKIN_2026-06-07_END -->
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -68,11 +79,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-04.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-04.md)
 <!-- DAILY_CHECKIN_2026-06-05_END -->
 
 # 2026-06-04
 <!-- DAILY_CHECKIN_2026-06-04_START -->
+
 
 
 
@@ -93,11 +106,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-01.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-06-01.md)
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -122,11 +137,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-05-30.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-05-30.md)
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -155,11 +172,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-05-28.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-05-28.md)
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -192,11 +211,13 @@ AI x Web3 School
 
 
 
+
 暂时打卡，笔记后补
 <!-- DAILY_CHECKIN_2026-05-25_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -235,6 +256,7 @@ AI x Web3 School
 
 
 
+
 今日学习内容简单记录, 正文内容参考5.23提交内容
 
 [https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-05-22.md](https://github.com/Calciux/ai-web3-learning/blob/main/daily/2026-05-22.md)
@@ -242,6 +264,7 @@ AI x Web3 School
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -284,6 +307,7 @@ AI x Web3 School
 
 
 
+
 第一天学习记录
 
 [https://github.com/Calciux/ai-web3-learning](https://github.com/Calciux/ai-web3-learning)
@@ -291,6 +315,7 @@ AI x Web3 School
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
