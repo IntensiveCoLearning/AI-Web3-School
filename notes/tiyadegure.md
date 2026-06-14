@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-14
+<!-- DAILY_CHECKIN_2026-06-14_START -->
+[https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-14.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-14.md)
+<!-- DAILY_CHECKIN_2026-06-14_END -->
+
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
+
 [https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-12.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-12.md)
 <!-- DAILY_CHECKIN_2026-06-12_END -->
 
@@ -24,11 +30,13 @@ AI x Web3 School
 <!-- DAILY_CHECKIN_2026-06-11_START -->
 
 
+
 [https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/main/daily/2026-06-11.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/main/daily/2026-06-11.md)
 <!-- DAILY_CHECKIN_2026-06-11_END -->
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 
 
@@ -41,11 +49,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-08.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-07.md)
 <!-- DAILY_CHECKIN_2026-06-08_END -->
 
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
+
 
 
 
@@ -62,11 +72,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-06.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-06.md)
 <!-- DAILY_CHECKIN_2026-06-06_END -->
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -87,11 +99,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-04.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-04.md)
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -116,11 +130,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-01.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-06-01.md)
 <!-- DAILY_CHECKIN_2026-06-01_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -150,11 +166,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-05-30.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-05-30.md)
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -187,11 +205,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-05-28.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-05-28.md)
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -232,11 +252,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-05-26.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-05-26.md)
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -277,11 +299,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-05-24.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-05-24.md)
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -326,11 +350,13 @@ AI x Web3 School
 
 
 
+
 [https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-05-22.md](https://github.com/tiyadegure/ai-web3-school-cohort-0/blob/master/daily/2026-05-22.md)
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -535,6 +561,7 @@ Chain-aware Context 是所有链上 Agent 的输入层。没有这层，Web3 Too
 
 
 
+
 # Daily Note – 2026-05-20
 
 ## Today’s Focus
@@ -653,6 +680,7 @@ Day 3 – Web3 practical tasks (testnet transaction, smart contract deployment),
 
 
 
+
 # Daily Note — 2026-05-19
 
 ## Today’s Focus
@@ -720,6 +748,7 @@ Day 2 — AI/Web3 concept cards, interactive demo, Hermes event.
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
