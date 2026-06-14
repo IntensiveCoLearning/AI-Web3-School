@@ -36,6 +36,37 @@ AI x Web3 School
 
 
 <!-- Content_START -->
+# 2026-06-14
+<!-- DAILY_CHECKIN_2026-06-14_START -->
+今日學習：Demo Day | Hackathon 項目展示 + 四週學習總回顧
+
+核心主題：AI × Web3 School 最終日——Demo Day 正式展示 AI Security 項目，並完成整個四週課程的學習回顧與個人成長總結。
+
+Demo Day 展示準備與執行：今日下午1:00舉行 Demo Day，每個 Hackathon 項目進行 3 分鐘展示 + 2 分鐘 Q&A。我的 AI Security Demo 聚焦於「AI Agent 在 Web3 執行場景中的 Defense-in-Depth 安全架構」，主要展示四層防禦機制的實際攔截效果。Demo 故事線依照計畫執行：首先展示無防禦狀態下 Prompt Injection 攻擊如何讓 Agent 執行非授權的 transfer() 調用；接著展示部署防禦後，相同攻擊被指令層隔離檢查攔截並記錄到審計日誌；最後展示 Base Sepolia EAS Explorer 上的不可篡改鏈上記錄，證明整個防禦決策過程可被外部驗證。
+
+Q&A 重點問答：評委提問集中在三個方向——攻擊向量的覆蓋完整性（說明當前 10 種向量是最常見類型，真實部署需要持續更新測試集）、鏈上 attestation 的 gas 成本（說明 Base Sepolia 成本極低，正式部署可選擇批次上鏈降低成本）、與現有 Web2 安全工具的差異（說明 Web3 場景中 Agent 操作不可逆性更高，因此需要在執行層前置攔截而非事後修復）。
+
+其他項目觀摩與學習：觀摩了其他學員的 Demo 展示，印象最深的三個方向是：基於 Cobo CAW 的 Agent Commerce 自主支付閉環（展示了 Pact 機制在真實 DeFi 場景的預算控制能力）、GLM-5.1 驅動的合約代碼審查助手（將 AI Security 應用於開發時審查而非執行時防禦，是很好的方向補充）、以及多簽治理輔助工具（讓 AI 生成提案摘要和行動項，保留最終決策給人類）。
+
+四週學習成果總回顧：回顧整個 AI × Web3 School 的學習旅程。Week 1 建立了 LLM 能力邊界、Agent Workflow 和 Web3 基礎的共同語言；Week 2 深入研究 AI × Web3 六大交叉方向並選定 AI Security 主線；Week 3 完成從方向研究到 Hackathon 題目收斂的轉換；Week 4 完成從架構設計到可運行 Demo 的全程。最核心的學習是一個判斷框架：哪些 Agent 動作可以自動化執行，哪些必須保留人工確認，以及如何通過可驗證記錄讓整個執行過程具備外部可審計性。
+<!-- DAILY_CHECKIN_2026-06-14_END -->
+
+# 2026-06-13
+<!-- DAILY_CHECKIN_2026-06-13_START -->
+今日學習：Demo Day 前最終準備 | 提交包完善 + Demo 演練 + 跨方向學習整合
+
+核心主題：Hackathon Demo Day 前最後一天，聚焦三件事：完善最終提交材料包、進行 Demo 完整演練，以及整合其他賽道的學習，補全 AI × Web3 全景視野。
+
+最終提交包完善：今日完成 Final Submission Pack 所有材料的最後確認與補充。GitHub Repo 完整性確認（README 包含 Project Overview、Problem、Why AI + Why Web3 雙問題、Demo 截圖、Validation 材料、Risks 與 Next Steps）；核心代碼三個模組（prompt_guard.py、tool_validator.py、audit_logger.py）在 clean environment 下完成最終一鍵運行測試；鏈上驗證材料確認（Base Sepolia testnet EAS attestation 的 tx hash 和 EAS Explorer 連結均寫入 README）；Demo 影片腳本最終版（攻擊演示 30 秒 → 防禦攔截 30 秒 → 審計日誌 20 秒 → 鏈上驗證 20 秒）。
+
+Demo 完整演練與問題排查：進行兩輪完整 Demo 演練。第一輪發現 CLI 輸出顏色在截圖中對比度不夠明顯，調整了 DENY 事件的紅色高亮方式；第二輪發現 EAS Explorer 頁面載入速度較慢，在 Demo 腳本中加入替代方案（預先截圖 + 提前開啟 Tab），避免 Demo 現場網路問題影響展示效果。演練過程也強化了對自己項目邊界的清晰理解——哪些攻擊向量已被覆蓋、哪些尚未覆蓋、哪些是 Mock 而非真實調用。
+
+Cobo CAW Agentic Commerce 深度研究：補充研究 Cobo CAW 的 Pact 機制在 Agentic Commerce 場景的具體實現。Pact 的核心設計邏輯是「任務粒度的臨時授權」——每個 Agent 執行任務都需要用戶預先批准一個包含預算、合約白名單、操作類型和時間窗口的 Pact；任務完成後 Pact 自動失效，Agent 無法保留持久性的廣泛權限。這個設計和 AI Security 的 Scope Freeze 原則高度相似：越具體的授權邊界，越難被 Prompt Injection 或 Tool Abuse 繞過。
+
+Agent Identity 與 ERC-8004 補充學習：補充學習 ERC-8004 的 agent trust 框架，理解 agent profile、capability declaration、job、escrow 和 evaluator 的協議層設計。Agent Identity 方向最有意思的問題不是「如何給 Agent 起名字」，而是「如何讓調用方在執行任務前驗證 Agent 的能力邊界、歷史記錄和失敗責任歸屬」。一個可信的 Agent Identity 系統必須包含鏈上可驗證的執行記錄，而不只是靜態的能力聲明。
+<!-- DAILY_CHECKIN_2026-06-13_END -->
+
+
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
 今日學習：Week 4 最終衝刺 | Hackathon 最終提交答疑 + 例會 + Final Submission Pack 整備
