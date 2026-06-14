@@ -15,8 +15,50 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-14
+<!-- DAILY_CHECKIN_2026-06-14_START -->
+\## 📍 ColdRead × [Z.AI](http://Z.AI) Track — 冲刺总结
+
+**时间**：6/10 ~ 6/14（AI×Web3 Agentic Builders Hackathon Demo Day）
+
+\### 🎯 做什么
+
+**ColdRead** — 一个 AI × Web3 的\*\*可审计 AI Agent 决策追踪系统\*\*。用 GLM-5.1 做多轮链式推理，每一步都上链锚定，保证可审计、可复现。
+
+\### 🚀 冲刺成果（这5天）
+
+维度 做了什么
+
+**PR 数量** 合入 **15+ 个 PR**（#26~#30, #46, #48, #64, #75, #84~#92）
+
+**核心功能** 6 步 GLM-5.1 长程 Agent 链式推理 → Audit Hash → Sepolia 链上锚定
+
+**Issue 清理** 关闭/整理了 20+ 个 issue，MVP 聚焦 hackathon
+
+**链上交易** ✅ 真实 Sepolia tx: `0x6ce6da94...`，第一笔锚定交�
+
+**Git Tag** v0.2.0-hac
+
+\### 🧠 技术亮点
+
+\- **受约束的链式调用**：不是纯黑盒自主 Agent，而是「8 步骨架管道 + GLM 在关键节点推理」——每一步可审计、可回放
+
+\- **离线演示模式**：支持 cached replay，没 API key 也能跑完整 demo
+
+\- **Polymarket 实时数据** + Sepolia 链上锚定，演示真实端到端链路
+
+\### 🛠 我的角色
+
+\- **我（小段）**：Codex CLI 实现全部功能代码，TS + Vue Dashboard
+
+\- **哥们（CyberAngel0226）**：Python Agent 服务、评分引擎
+
+\- **Hermes（AI 助手）**：审 PR、管 issue、维护项目 hygiene、出文档
+<!-- DAILY_CHECKIN_2026-06-14_END -->
+
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 **项目状态：** `M2: 筛选+证据 ✅ → M3: Agents+评分 🔄`
 
 **✅ 今日合入 dev**
@@ -46,6 +88,7 @@ PR 内容
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 
 **项目：ColdRead — 可审计 AI 预测市场决策系统**
 
@@ -112,6 +155,7 @@ PR：8 个合入 + 2 个待审
 <!-- DAILY_CHECKIN_2026-06-09_START -->
 
 
+
 \*\*创建了 `cold_read` 仓库 — 可审计 AI 预测市场决策系统\*\*
 
 \*\*产出物：\*\*
@@ -149,6 +193,7 @@ PR：8 个合入 + 2 个待审
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 
@@ -297,6 +342,7 @@ npm run build
 
 
 
+
 \## 🎯 核心论点：AI Agent 正在移动 Web3 选型的临界点
 
 分享者提出了一套 **「成本-收益天平」** 框架：
@@ -379,6 +425,7 @@ npm run build
 
 
 
+
 **今日完成：**
 
 **1\. 深度调研 Cobo CAW + 方向复盘**
@@ -430,6 +477,7 @@ npm run build
 
 
 
+
 \### ✅ 今天做了什么
 
 **1\. 参加 Cobo Agentic Wallet 专项 Workshop** 🎯
@@ -469,6 +517,7 @@ npm run build
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -561,6 +610,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 
 
 
+
 **今日完成：**
 
 **1\. AGW MVP 技术规格书（609行）✅**
@@ -611,6 +661,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 
 
 
+
 **1\. Week 3 开发排期确认 ✅**
 
 \- 完整 7 天开发排期已落地`hackathon/week3-dev-plan.md`）
@@ -652,6 +703,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -964,6 +1016,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 ## 今日完成
 
 ### 1\. 项目初步 Proposal ✅
@@ -1031,6 +1084,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 **问题地图** 扫了全部 6 个方向
 
 **主方向选择** Wallet / Permission，写了为什么不是纯 AI / 不是纯 Web3
@@ -1044,6 +1098,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -1074,6 +1129,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -1140,6 +1196,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 \### Web3 基础 — 过了一遍
 
 章节 核心收获
@@ -1181,6 +1238,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 🧭 2026 核心趋势 Agents with Wallets — Agent 自己管钱自己花
 
 📦 项目全景表 基础设施层 / 钱包支付层 / 应用层，每个都有简介
@@ -1198,6 +1256,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -1256,6 +1315,7 @@ Web3 底层原理
 
 
 
+
 \## 📋 5月19日学习总结
 
 \### ✅ 已完成
@@ -1277,6 +1337,7 @@ Web3 底层原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
