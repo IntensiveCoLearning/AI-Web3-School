@@ -15,8 +15,14 @@ AI x Web3 School
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-14
+<!-- DAILY_CHECKIN_2026-06-14_START -->
+Today I spent some time debugging the CAW x Moloch Agent integration. Applied some fixes to the Pact definition
+<!-- DAILY_CHECKIN_2026-06-14_END -->
+
 # 2026-06-13
 <!-- DAILY_CHECKIN_2026-06-13_START -->
+
 Spent the day exploring other LLM providers options: a) Tested Venice.ai limit quota by staking VVV tokens. Free monthly credits are now enough for using frontier open-source models. b) Explored different models using OpenRouter to check token budget expenditure.  
   
 Finally setup my Hermes instance with three providers: GLM (main), [Venice.ai](http://Venice.ai) and OpenRouter as fallback using Minimax M3 preview model as it is currently on discount.  
@@ -26,6 +32,7 @@ Going to explore mixing ClaudeCode for ful task decomposition per-feature, and t
 
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
+
 
 **What I did today:**
 
@@ -42,6 +49,7 @@ Quota exhaustion on ClaudeCode and [Z.AI](http://Z.AI) plans was the final block
 
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
+
 
 
 **What I did today:**
@@ -62,6 +70,7 @@ None blocking — Day 10 coding is in flight. Will confirm g0n3zbot’s first PR
 
 
 
+
 **What I did today:**
 
 Completed all integration validation for the GuildOS hackathon build. AgentFightClub full flow is working — `experiments/agent-fight-club/moloch_agent_test.py` executes the complete sequence (launch → commit → propose → vote → settle); the proposal sponsorship timing issue from Day 8 is resolved. A2A coordination loop validated — all 5 message gates passing (agent card, send, quote, deliver, accept) with no schema issues. Reviewed [Z.AI](http://Z.AI) track alignment, deployed a Hermes agent instance as the Specialist, and built + locked a long-horizon task prompt for the demo. All three critical integration stacks are now confirmed. Project development starts tomorrow (Day 10).
@@ -77,6 +86,7 @@ None — all integrations cleared. Day 10 opens with ERC-8004 agent registration
 
 # 2026-06-09
 <!-- DAILY_CHECKIN_2026-06-09_START -->
+
 
 
 
@@ -101,6 +111,7 @@ AFC proposal sponsorship timing issue — the `moloch_agent_test.py` probe hits 
 
 
 
+
 **What I did today:**
 
 Completed all Week 3 deliverables: 14 WCB tasks submitted (~350 pts) including 6 Must Submit, 3 Sponsor Workshop, 3 Bonus. Updated GuildOS Project Proposal to v1.2 — added full A2A commerce protocol (5 message types, 7 stages), ERC-8004 6-field on-chain reputation write via `recordDelivery()`, 4 human confirmation gates, hybrid harness architecture, finalized tech stack (Cobo CAW, Base Sepolia, GLM-5.1, A2A SDK v1.0.0). Wrote 395-line Week 3 PoW covering 8 pre-research component analyses and a complete Week 4 ready pack. Set up guild-os repo skeleton with full directory structure and docs. Submitted Casual Hackathon registration.
@@ -112,6 +123,7 @@ Harness independence via A2A as coordination bus enables heterogeneous agent sta
 
 # 2026-06-07
 <!-- DAILY_CHECKIN_2026-06-07_START -->
+
 
 
 
@@ -142,6 +154,7 @@ Completed the x402 × Cobo Agentic Wallet payment loop prototype (`experiments/c
 
 # 2026-06-06
 <!-- DAILY_CHECKIN_2026-06-06_START -->
+
 
 
 
@@ -181,6 +194,7 @@ Tough day — limited new progress. Continued with the A2A protocol deep-dive (a
 
 
 
+
 **What I did today:**
 
 Continued GuildOS hackathon preparation with a focus on Cobo Agentic Wallet architecture and AI security concepts. Researched the Cobo Agentkit Wallet integration paths in depth — reviewed the Skill-based wallet creation flow, the MCP server option, and the Pact policies and completion conditions reference. Drafted a frontier research prompt for the AgentFightClub tech stack component (`prompts/AGENTFIGHTCLUB_RESEARCH.md`) and a reusable research prompt template (`prompts/FRONTIER_RESEARCH_TEMPLATE.md`) for the remaining GuildOS components (A2A, ERC-8004, GLM-5.1, Cobo CAW). Continued reviewing OWASP AI security material on Excessive Agency and its root causes and mitigations. Read about context window strategies (retrieval, summarization, structured data) and dispute resolution design for escrow/settlement in AI × Web3 scenarios.
@@ -209,6 +223,7 @@ Four things stood out today. First, on Cobo Agentkit: there’s a meaningful arc
 
 
 
+
 **What I did today:**
 
 Read AI Coding and AI Security handbook chapters and noted the key principles around agent role boundaries and untrusted-context safety. Built a working x402 + Cobo Agentkit Wallet payment loop prototype (`experiments/caw-payment-loop`) — hit a concrete Cobo testnet blocker in the process (see below). Finalized Week 2 repo housekeeping: updated `AGENTS.md` with a full generated-resources index (Section 15), added README index files to `tasks/`, `submissions/`, `prompts/`, and `experiments/`, and wrote the `hackathon/PROTOTYPING_RESOURCES.md` annotated resource list for the hackathon build week. Updated the main repo README with a Direction & Hackathon section summarizing direction choices, rationale, GuildOS project status, and relevant document links. Turned the direction analysis into a one-page proposal memo (`tasks/directions/DIRECTION_MEMO.md`) for team formation and mentor/sponsor discussions, including a solo-human + two-agent fallback plan that mirrors the GuildOS coordination model.
@@ -228,6 +243,7 @@ Two things stood out from the AI Coding and AI Security reading. In AI Coding, t
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -268,6 +284,7 @@ Two things from today’s review conversation stood out. First, the four core ev
 
 
 
+
 **What I did today:** Wrapped up Week 2 by completing the GuildOS project proposal — a programmable agent coordination studio using A2A, AgentFightClub (Moloch treasury), and ERC-8004 on-chain reputation. Also reviewed key Handbook concepts around Prompt Design and On-chain Data handling as context for the proposal.
 
 **What I learned:**
@@ -284,6 +301,7 @@ Two things from today’s review conversation stood out. First, the four core ev
 
 # 2026-06-01
 <!-- DAILY_CHECKIN_2026-06-01_START -->
+
 
 
 
@@ -316,11 +334,13 @@ Two things from today’s review conversation stood out. First, the four core ev
 
 
 
+
 **What I did today:** Light study day — spent the time on ambient research rather than structured handbook reading. Listened to podcasts on recent AI agent developments and frontier model news to gather inspiration and directional signal for the hackathon project. This is part of the ideation phase: scanning what’s being built in the space, what problems practitioners are actually hitting, and where the gaps are that my chosen track (Identity / Reputation / Capability / Interoperability) might address.
 <!-- DAILY_CHECKIN_2026-05-31_END -->
 
 # 2026-05-30
 <!-- DAILY_CHECKIN_2026-05-30_START -->
+
 
 
 
@@ -344,6 +364,7 @@ Two things from today’s review conversation stood out. First, the four core ev
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -384,6 +405,7 @@ Two things from today’s review conversation stood out. First, the four core ev
 
 
 
+
 **What I did today:** Completed Week 1 closure. Designed and published two AI × Web3 workflow diagrams: an Agentic Commerce swimlane (Human Operator → Requester Agent → Data Provider Agent → On-chain/L2, 9 steps with full risk annotations and a 6-layer verification chain) and a Restricted Web3 Assistant workflow (read-only chain access with human confirmation gate before any write action). Ran a comparative analysis report on two AI × Web3 projects (Bankr and [Venice.AI](http://Venice.AI)) covering problem space, solution design, and developer tools. Wrote the Week 1 Proof-of-Work Pack (`submissions/Week1-PoW.md`) and Week 1 Learning Summary (`submissions/Week1-Learning-Summary.md`) as formal Week 1 wrap-up deliverables. Submitted workflow and project analysis tasks via WCB.
 
 **What I learned:** From building the workflow diagrams: mapping an AI × Web3 system to a concrete swimlane forces you to identify every trust boundary. The six-layer verification model (prompt → context → model → code → guard → human) emerged from that exercise — it’s more useful than any individual framework because it tells you _which_ layers need automation vs. human confirmation vs. on-chain enforcement. Most demos only implement layers 1 and 3; production systems need all six. From the project analysis: Bankr and [Venice.AI](http://Venice.AI) both address agent execution in Web3 contexts but from very different angles — one optimizing for consumer UX (natural language → intent execution) and the other for privacy-preserving inference at the infrastructure level.
@@ -391,6 +413,7 @@ Two things from today’s review conversation stood out. First, the four core ev
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -435,6 +458,7 @@ Two things from today’s review conversation stood out. First, the four core ev
 
 
 
+
 **What I did today:** Completed the remaining AI Foundations chapters: read Evaluation, Fine-tuning, and Inference in full and saved structured notes to the knowledge base. Skimmed all 9 Web3 Foundations chapters (Cryptography, Wallet, Smart Contract, Dev Stack, Network, Account Abstraction, DeFi, Oracle, Indexing, Security) — used the Handbook as source material to update the wiki and regenerate the concept cards deck. Completed and submitted proof-of-work for testnet interaction and smart contract deployment/execution exercises on WCB.
 
 **What I learned:** From Evaluation: evaluation is a first-class engineering concern in AI × Web3 — errors can affect assets, permissions, and on-chain execution. A golden set of real tasks and regression tests, combined with online observability, is what makes a system improvable over time. From Fine-tuning: fine-tuning improves consistency on a class of tasks, not factual knowledge — the dataset is the core asset, and goal, data, and evaluation must all be defined before starting. From Inference: inference is a tradeoff across latency, cost, context, quality, privacy, and operational complexity; in AI × Web3 systems specifically, the inference layer must leave auditable records since on-chain actions are hard to reverse.
@@ -444,6 +468,7 @@ Two things from today’s review conversation stood out. First, the four core ev
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -492,6 +517,7 @@ Two things from today’s review conversation stood out. First, the four core ev
 
 
 
+
 **What I did today:** Watched three live session recordings: “How Web3 Works” (May 20), “Week 1 Review Meeting” (May 22), and “Open Agentic Economy” (May 23). Read the Agent chapter from the Handbook. Also began building knowledge-base notes and concept card tooling for the wiki. Submitted check-ins for all three recordings on WCB. Hands-on coding experiments remain pending and are carried to tomorrow.
 
 **What I learned:** From the recordings: full Ethereum transaction flow (mnemonic → private/public key → address derivation → digital signature → EIP-1559 gas → PoS consensus); how Ethereum provides neutral coordination and property rights for both humans and agents; ERC-8004 as an emerging trust layer for agent identity and reputation; CROPS as a design principle for agent infrastructure (Censorship-resistant, OSS, Privacy, Security). From the Agent chapter: an agent is a constrained execution loop, not autonomy itself — it must know what it can do, how to verify completion, how to stop on failure, and how to be audited. In Web3 contexts, agents sit between model capability and on-chain execution. Key personal insight from the Week 1 review: treat learning as an executable workflow, not a tools survey — I want to explore deploying a fork of my learning agent to an open framework like Hermes or OpenClaw.
@@ -499,6 +525,7 @@ Two things from today’s review conversation stood out. First, the four core ev
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -553,6 +580,7 @@ Also built an Obsidian vault as a wiki-like knowledge base for my notes with its
 
 
 
+
 **What I did today:** Read the AI × Web3 School Handbook intro page to get a first overview of how both domains connect. Then read the LLM chapter and the Prompt chapter in full, taking structured notes in the repo knowledge base. Also completed the three setup tasks on WCB: “Set Up the Course Tools”, “Create Your Course GitHub”, and “Complete Learning Agent Setup”. Deferred hands-on coding experiments to Day 2.
 
 **What I learned:** LLMs generate probabilistically reasonable output — not trustworthy facts by default. The closer an LLM gets to the execution layer in an AI × Web3 system, the more its natural-language output must be converted into verifiable, deterministic objects. On the prompting side: a prompt is interface design, not just a question. A good prompt lets the model know when to stop rather than pushing it to be more confident. Critically, prompts should not be the sole security layer — guardrails and human handoffs are required for high-risk actions. Prompt injection is a first-class security risk, especially in agent scenarios with access to internal systems.
@@ -562,6 +590,7 @@ Also built an Obsidian vault as a wiki-like knowledge base for my notes with its
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -628,6 +657,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 
 
 
+
 -   Reviewed the handbook's recommended startup prompt to create a learning agent
     
 
@@ -667,6 +697,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 
 
 
+
 -   Attended the first co-learning session. Even if it was mostly for the Chinese audience, I noticed there was a walkthrough on setting up a Hermes agent. It should be worth exploring Hermes vs my current Openclaw instance for this bootcamp
     
 -   Watched the replay session about web3 fundamentals with a focus on how blockchain txs work, wallets and private keys.
@@ -678,6 +709,7 @@ Completed full learning environment setup for AI × Web3 School Cohort 0. Bootst
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
