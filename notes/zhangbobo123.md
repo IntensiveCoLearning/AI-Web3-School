@@ -15,8 +15,33 @@ timezone: UTC+8
 ## Notes
 
 <!-- Content_START -->
+# 2026-06-14
+<!-- DAILY_CHECKIN_2026-06-14_START -->
+已修改并部署：
+
+-   加载文案改为“大师们正在讨论…”
+    
+-   6 个市场币使用对应原画圆形头像
+    
+-   市场分析按钮恢复最近委员会，并预填分析问题
+    
+-   六币按钮改为“交给 AI 委员会分析”
+    
+-   投资方案卡新增“真实交易”
+    
+-   真实钱包补齐充值、提现、AI 策略、持仓、资金流水面板
+    
+-   GitHub 提交：`31726b3`
+    
+-   [正式网站](https://oracle-capital.vercel.app) 已更新
+    
+
+Lint、TypeScript、生产构建及页面交互验证均通过。
+<!-- DAILY_CHECKIN_2026-06-14_END -->
+
 # 2026-06-13
 <!-- DAILY_CHECKIN_2026-06-13_START -->
+
 已完成合并、提交、推送和网站更新。
 
 -   队友后端：`75f301c`，大师改为第一人称回答
@@ -36,6 +61,7 @@ timezone: UTC+8
 
 # 2026-06-12
 <!-- DAILY_CHECKIN_2026-06-12_START -->
+
 
 已完成并上线：[Oracle Capital](https://oracle-capital.vercel.app)
 
@@ -105,6 +131,7 @@ timezone: UTC+8
 
 
 
+
 已完成并上线：[Oracle Capital](https://oracle-capital.vercel.app)
 
 -   首页新增“历史对话”，可直接继续最近会话。
@@ -120,6 +147,7 @@ timezone: UTC+8
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 
 
 
@@ -155,11 +183,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-06-09_END -->
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 
@@ -184,11 +214,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-06-06_END -->
 
 # 2026-06-05
 <!-- DAILY_CHECKIN_2026-06-05_START -->
+
 
 
 
@@ -217,11 +249,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-06-04_END -->
 
 # 2026-06-03
 <!-- DAILY_CHECKIN_2026-06-03_START -->
+
 
 
 
@@ -254,11 +288,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-06-02_END -->
 
 # 2026-05-31
 <!-- DAILY_CHECKIN_2026-05-31_START -->
+
 
 
 
@@ -295,11 +331,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-30_END -->
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -375,11 +413,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-28_END -->
 
 # 2026-05-27
 <!-- DAILY_CHECKIN_2026-05-27_START -->
+
 
 
 
@@ -431,11 +471,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-26_END -->
 
 # 2026-05-25
 <!-- DAILY_CHECKIN_2026-05-25_START -->
+
 
 
 
@@ -490,11 +532,13 @@ timezone: UTC+8
 
 
 
+
 1
 <!-- DAILY_CHECKIN_2026-05-24_END -->
 
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
+
 
 
 
@@ -555,6 +599,7 @@ timezone: UTC+8
 
 
 
+
 ```
 链上数据存在哪？全球几万个全节点硬盘里，Etherscan只是索引层。数据越来越大怎么办：状态过期、无状态客户端、历史数据修剪、数据可用性采样、Layer 2 + 数据压缩、专门存储链。核心思路不是让每个节点存所有，而是分工。
 ```
@@ -562,6 +607,7 @@ timezone: UTC+8
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
+
 
 
 
@@ -664,6 +710,7 @@ timezone: UTC+8
 
 
 
+
 理解Web3底层原理：
 
 成功安装Hermes：将任务和AIxWEB3学习网站发送了
@@ -710,6 +757,7 @@ hermes gateway
 
 
 
+
 [先安装wsl，安装好了之后会输入账号密码，打开wsl环境进行配置](https://hermes-agent.nousresearch.com/docs/zh-Hans/getting-started/installation)
 
 具体网站Hermes：
@@ -721,6 +769,7 @@ hermes gateway
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
