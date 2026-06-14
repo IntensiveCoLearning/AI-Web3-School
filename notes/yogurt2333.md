@@ -59,6 +59,7 @@ AI x Web3 School
 # 2026-06-11
 <!-- DAILY_CHECKIN_2026-06-11_START -->
 
+
 **项目状态：** `M2: 筛选+证据 ✅ → M3: Agents+评分 🔄`
 
 **✅ 今日合入 dev**
@@ -88,6 +89,7 @@ PR 内容
 
 # 2026-06-10
 <!-- DAILY_CHECKIN_2026-06-10_START -->
+
 
 
 **项目：ColdRead — 可审计 AI 预测市场决策系统**
@@ -156,6 +158,7 @@ PR：8 个合入 + 2 个待审
 
 
 
+
 \*\*创建了 `cold_read` 仓库 — 可审计 AI 预测市场决策系统\*\*
 
 \*\*产出物：\*\*
@@ -193,6 +196,7 @@ PR：8 个合入 + 2 个待审
 
 # 2026-06-08
 <!-- DAILY_CHECKIN_2026-06-08_START -->
+
 
 
 
@@ -343,6 +347,7 @@ npm run build
 
 
 
+
 \## 🎯 核心论点：AI Agent 正在移动 Web3 选型的临界点
 
 分享者提出了一套 **「成本-收益天平」** 框架：
@@ -426,6 +431,7 @@ npm run build
 
 
 
+
 **今日完成：**
 
 **1\. 深度调研 Cobo CAW + 方向复盘**
@@ -478,6 +484,7 @@ npm run build
 
 
 
+
 \### ✅ 今天做了什么
 
 **1\. 参加 Cobo Agentic Wallet 专项 Workshop** 🎯
@@ -517,6 +524,7 @@ npm run build
 
 # 2026-06-02
 <!-- DAILY_CHECKIN_2026-06-02_START -->
+
 
 
 
@@ -611,6 +619,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 
 
 
+
 **今日完成：**
 
 **1\. AGW MVP 技术规格书（609行）✅**
@@ -662,6 +671,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 
 
 
+
 **1\. Week 3 开发排期确认 ✅**
 
 \- 完整 7 天开发排期已落地`hackathon/week3-dev-plan.md`）
@@ -703,6 +713,7 @@ Codex 生成的 AGW MVP 代码推到了 GitHub： 👉 [https://github.com/yogur
 
 # 2026-05-29
 <!-- DAILY_CHECKIN_2026-05-29_START -->
+
 
 
 
@@ -1017,6 +1028,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 ## 今日完成
 
 ### 1\. 项目初步 Proposal ✅
@@ -1085,6 +1097,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 **问题地图** 扫了全部 6 个方向
 
 **主方向选择** Wallet / Permission，写了为什么不是纯 AI / 不是纯 Web3
@@ -1098,6 +1111,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-26
 <!-- DAILY_CHECKIN_2026-05-26_START -->
+
 
 
 
@@ -1129,6 +1143,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-24
 <!-- DAILY_CHECKIN_2026-05-24_START -->
+
 
 
 
@@ -1197,6 +1212,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 \### Web3 基础 — 过了一遍
 
 章节 核心收获
@@ -1239,6 +1255,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 
 
+
 🧭 2026 核心趋势 Agents with Wallets — Agent 自己管钱自己花
 
 📦 项目全景表 基础设施层 / 钱包支付层 / 应用层，每个都有简介
@@ -1256,6 +1273,7 @@ Week 3（5.31-6.6） MVP 开发：NL → 转账流程跑通
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
+
 
 
 
@@ -1316,6 +1334,7 @@ Web3 底层原理
 
 
 
+
 \## 📋 5月19日学习总结
 
 \### ✅ 已完成
@@ -1337,6 +1356,7 @@ Web3 底层原理
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
+
 
 
 
