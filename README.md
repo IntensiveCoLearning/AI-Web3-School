@@ -220,7 +220,7 @@ more information
 | [HirongVSuen](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/HirongVSuen.md) | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | |
 | [lucasa](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/lucasa.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [ZeeYakChan09](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ZeeYakChan09.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [Daishunying](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Daishunying.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |   |
+| [Daishunying](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Daishunying.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |
 | [maoxiana222](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/maoxiana222.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [Kevinkwok-hub](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Kevinkwok-hub.md) | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | |
 | [tasilymeng](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/tasilymeng.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | |
@@ -432,7 +432,7 @@ more information
 | [Chichuzxy](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Chichuzxy.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | [peanuut98](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/peanuut98.md) | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ⭕️ | ✅ | ⭕️ | ✅ | ❌ | | |
 | [Bowenzeng-6](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Bowenzeng-6.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
-| [drinkingmorewater](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/drinkingmorewater.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ |   |
+| [drinkingmorewater](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/drinkingmorewater.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ |
 | [yuansir](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/yuansir.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [St-Raf](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/St-Raf.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [YUu-8](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/YUu-8.md) | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ❌ | | | | | | | | | |
@@ -1058,7 +1058,7 @@ more information
 | [Xiaonan2020](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/Xiaonan2020.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [TangSong-st](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/TangSong-st.md) | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | | |
 | [JadeTwinkle](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/JadeTwinkle.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ✅ |
-| [beautifulrem](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/beautifulrem.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ |   |
+| [beautifulrem](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/beautifulrem.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ⭕️ | ❌ |
 | [ci-yang](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/ci-yang.md) | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ | ❌ | | | | | | | | | | | | | | |
 | [dl4987638](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/dl4987638.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ⭕️ | ✅ | ⭕️ | ✅ |
 | [teasec4](https://github.com/IntensiveCoLearning/AI-Web3-School/blob/main/notes/teasec4.md) | ✅ | ⭕️ | ⭕️ | ❌ | | | | | | | | | | | | | | | | | | | | | | | | |
@@ -5195,13 +5195,14 @@ more information
 
 
 
+
 <!-- STATISTICALDATA_START -->
 ## Statistics
 
-- Total Participants: 0
-- Completed Participants: 0
-- Completed Users: 
-- Perfect Attendance Users: 
-- Failed Participants: 0
-- Failed Rate: 0.00%
+- Total Participants: 1076
+- Completed Participants: 82
+- Completed Users: USDHGwang, SomenW, Daishunying, DrC-Web3, ytxiaohao1111-dot, starrujian, gitgdut, may-tonk, Swiftevo, Jizhixing-Kieran, XGe711, Calciux, Free-EntropyMXZ, ytianspob, baikingrio, LierMi, azolonev-debug, santteegt, Laren123-ops, Chichuzxy, drinkingmorewater, alishamclaughlingejof-tech, AAAwy, RicardoXu2, fenixIves, huahuahua1223, Rainwggw, chxii, wusrichard, yuriswj12-bit, web3yaso, Twinstars526, zane199109, JessicaLin2000, leopc999, beetroot42, NeoWeb3Nova, Flower-jie, Ezekie363, liwanan777, Salieri-128, raye2333-1, Monica06161127, yogurt2333, puppet25k, Ray798666, helenediu-dotcom, Moxan1st, tiyadegure, pwp041, luo1141, Fisher-one, pillowtalk-Qy, AimerMike, SelinaAnn, BBBINGW, alexfanzong, vmn30, midi-zhuanjia, Thomas-Novato, hankligoing, silver-bullet0210, roy328line, yoona333, ftrding, Aafff623, Chic7777, zoo100130, bubu0711, dodinhanhquyen-ui, JadeTwinkle, dl4987638, douwenquan, gaharietzhang, hwish39-byte, tz-hao, SeeMoon357, HeliosLz, yedeyu, cainiao0924, zhangbobo123, 10yu7ian
+- Perfect Attendance Users: USDHGwang, starrujian, XGe711, santteegt, Chichuzxy, Ray798666, helenediu-dotcom, pillowtalk-Qy, silver-bullet0210, tz-hao
+- Failed Participants: 995
+- Failed Rate: 92.47%
 <!-- STATISTICALDATA_END -->
