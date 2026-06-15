@@ -14,6 +14,337 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-15
+<!-- DAILY_CHECKIN_2026-06-15_START -->
+# AI x Web3 School 第 29 天打卡技术报告
+
+## Table of Contents
+- [摘要与问题空间](#1-摘要与问题空间)
+- [系统架构与拓扑](#2-系统架构与拓扑)
+- [理论框架与形式分类](#3-理论框架与形式分类)
+- [状态机与协议演练](#4-状态机与协议演练)
+- [Agent 自主集成与优化](#5-agent-自主集成与优化)
+- [漏洞向量与边界场景验证](#6-漏洞向量与边界场景验证)
+- [学术标签](#7-学术标签)
+
+---
+
+## 1. 摘要与问题空间
+
+### 摘要（Abstract）
+
+**日期：** 2026-06-15 | **打卡序号：** Day 29 | **学习阶段：** 第二轮 Sprint 收尾与第三轮启动预备
+
+本报告记录第 29 天学习成果，核心任务是完成第二轮 7 天 Sprint 的收尾工作，并为第三轮学习周期的方向选择与执行框架进行系统性规划。根据学习架构设计，第二轮 Sprint 聚焦于 **Agent Workflow 与 Web3 Tool Use 的深度集成**，涵盖智能体钱包（Agent Wallet）、可验证 AI（Verifiable AI）、评估机制（Evaluation）等核心概念，并通过 Mini Project 实现工程落地。
+
+**核心技术挑战：**
+1. **跨周期知识迁移**：将前 21 天积累的 Web3 基础直觉与 Agent Workflow 设计模式进行融合
+2. **工具权限矩阵的精细化**：在读取余额（read balance）、模拟交易（simulate transaction）、估算 gas（estimate gas）等工具调用场景中明确权限边界
+3. **可验证性闭环构建**：确保 Agent 的每一步操作具备可追溯、可审计的记录机制
+
+**预期贡献：**
+- 完成第二轮 Sprint 复盘文档
+- 确立第三轮 Mini Project 方向（交易解释器 / 钱包权限顾问 / DAO 提案总结器 / 智能合约学习助手）
+- 沉淀可供公开复用的术语表、流程图与代码片段
+
+### In-Scope / Out-of-Scope
+
+| 维度 | In-Scope | Out-of-Scope |
+|------|----------|--------------|
+| **技术范围** | Agent Workflow、Web3 Tool Use、Agent Wallet、Verifiable AI | 智能合约开发、DApp 前端实现 |
+| **输出形式** | Daily Note、Task Note、Experiment Note、Content Draft | 完整 Hackathon 提交物 |
+| **安全边界** | 权限矩阵设计、human-in-the-loop 确认机制 | 私钥管理、密钥分片方案 |
+| **时间窗口** | 第二轮 Sprint 收尾（Day 22-28）、第三轮启动预备（Day 29） | 第三轮具体执行细节 |
+
+---
+
+## 2. 系统架构与拓扑
+
+### 概念脑图（Conceptual Mind Map）
+
+```mermaid
+mindmap
+  root((AI x Web3 School Day 29))
+    Sprint Management
+      Round 2 Completion
+        Week 1-3 Review
+        Gap Analysis
+      Round 3 Planning
+        Direction Selection
+        Resource Allocation
+    Agent Workflow
+      Observe
+      Decide
+      Act
+      Verify
+      Report
+    Web3 Tool Use
+      Read Balance
+      Simulate Transaction
+      Estimate Gas
+      Request Signature
+      Submit Transaction
+    Security Boundary
+      Human-in-the-loop
+      Permission Matrix
+      Risk Checklist
+    Output Artifacts
+      Daily Note
+      Experiment Note
+      Content Draft
+      Handbook Feedback
+```
+
+### 组件拓扑图（Component Topology）
+
+```mermaid
+graph TD
+    subgraph External["外部系统"]
+        WCB["WCB Learning Platform"]
+        Handbook["AI x Web3 Handbook"]
+        GitHub["GitHub Repository"]
+    end
+    
+    subgraph Core["核心学习循环"]
+        Confirm["任务确认"]
+        Read["阅读理解"]
+        Practice["实践执行"]
+        Write["笔记沉淀"]
+        Publish["公开输出"]
+    end
+    
+    subgraph Outputs["产出物"]
+        Daily["Daily Note"]
+        Task["Task Note"]
+        Exp["Experiment Note"]
+        Draft["Content Draft"]
+        Feedback["Handbook Feedback"]
+    end
+    
+    subgraph Agent["Agent 组件"]
+        Observer["Observer"]
+        Decider["Decider"]
+        Actor["Actor"]
+        Verifier["Verifier"]
+    end
+    
+    WCB --> Confirm
+    Handbook --> Read
+    Confirm --> Read
+    Read --> Practice
+    Practice --> Write
+    Write --> Publish
+    Publish --> Daily
+    Publish --> Task
+    Publish --> Exp
+    Publish --> Draft
+    Publish --> Feedback
+    
+    Practice --> Agent
+    Agent --> Verify
+    Verify --> Write
+    
+    Daily --> GitHub
+    Task --> GitHub
+    Exp --> GitHub
+    Draft --> GitHub
+    Feedback --> GitHub
+```
+
+---
+
+## 3. 理论框架与形式分类
+
+### 核心组件术语表
+
+| 字段 | 组件名称 | 功能描述 | 输入类型 | 输出类型 | 约束条件 |
+|------|----------|----------|----------|----------|----------|
+| **C1** | Agent Wallet | 智能体钱包，用于存储和管理与 Agent 交互所需的密钥材料，但私钥本身不直接暴露给 AI | Agent ID、策略配置（Policy） | 会话密钥（Session Key）、授权令牌 | 必须保留 human-in-the-loop 确认机制 |
+| **C2** | Tool Permission Matrix | 工具权限矩阵，定义每种工具的调用权限等级 | 工具列表、用户角色 | 权限映射表 | 只读工具无需确认；写入工具必须用户授权 |
+| **C3** | Verifiable AI | 可验证 AI，确保 Agent 操作具备可追溯性 | 操作序列、时间戳 | 验证报告、审计日志 | 所有链上操作必须记录完整上下文 |
+| **C4** | Evaluation Framework | 评估框架，用于评估 Agent 输出的准确性和安全性 | 测试用例、执行结果 | 评分报告、改进建议 | 覆盖正常场景与边界场景 |
+| **C5** | Smart Account | 智能账户，基于账户抽象（Account Abstraction）实现的合约钱包 | 用户地址、策略配置 | 合约地址、钱包实例 | 支持自定义验证逻辑 |
+
+### 类型系统定义（Type System）
+
+```
+ToolType ::= "read_only" | "user_confirmation_required" | "prohibited"
+PermissionLevel ::= "none" | "read" | "write" | "admin"
+AgentState ::= "idle" | "observing" | "deciding" | "acting" | "verifying" | "reporting"
+VerificationStatus ::= "pending" | "passed" | "failed" | "unknown"
+```
+
+### 系统不变量（Invariant）
+
+$$\forall \text{transaction} \in \text{AgentActions}, \text{requiresConfirmation}(\text{transaction}) = \text{true} \Rightarrow \text{humanApproved} = \text{true}$$
+
+**解释：** 所有需要用户确认的交易（requiresConfirmation 为 true），其 humanApproved 标志必须为 true，确保 Agent 不会绕过用户自主执行高风险操作。
+
+---
+
+## 4. 状态机与协议演练
+
+### Agent Workflow 状态机
+
+```mermaid
+stateDiagram-v2
+    [*] --> Idle : System Init
+    Idle --> Observing : Task Received
+    Observing --> Deciding : Data Collected
+    Deciding --> Acting : Decision Made
+    Acting --> Verifying : Action Executed
+    Verifying --> Reporting : Verification Complete
+    Reporting --> Idle : Report Delivered
+    Verifying --> Deciding : Verification Failed
+    Acting --> Idle : Action Blocked (No Permission)
+```
+
+### 工具调用时序图（Tool Invocation Sequence）
+
+```mermaid
+sequenceDiagram
+    participant User as 用户
+    participant Agent as AI Agent
+    participant Wallet as Agent Wallet
+    participant Chain as 区块链网络
+    
+    User->>Agent: 发起任务请求
+    Agent->>Agent: Observe - 收集上下文
+    Agent->>Wallet: 校验权限（Check Permission）
+    Wallet-->>Agent: 权限验证结果
+    
+    alt 只读工具
+        Agent->>Chain: 读取余额（Read Balance）
+        Chain-->>Agent: 返回链上数据
+    else 需要模拟
+        Agent->>Chain: 模拟交易（Simulate Transaction）
+        Chain-->>Agent: 模拟结果
+    else 需要估算
+        Agent->>Chain: 估算 Gas（Estimate Gas）
+        Chain-->>Agent: Gas 估算值
+    else 需要用户确认
+        Agent->>User: 请求签名（Request Signature）
+        User-->>Agent: 用户签名授权
+        Agent->>Chain: 提交交易（Submit Transaction）
+        Chain-->>Agent: 交易哈希
+    end
+    
+    Agent->>Agent: Verify - 验证执行结果
+    Agent->>User: Report - 生成执行报告
+```
+
+### 状态阶段细化（State Stage Breakdown）
+
+| 阶段 | 阶段名称 | 核心动作 | 输入 | 输出 | 失败处理 |
+|------|----------|----------|------|------|----------|
+| **S1** | Initiation | 系统初始化、资源分配、上下文加载 | 任务描述、用户角色 | 初始化状态、可用工具列表 | 返回错误码 E_INIT_FAILED |
+| **S2** | Verification | 权限校验、工具可用性检查、上下文完整性验证 | Agent ID、工具请求 | 权限矩阵、执行计划 | 拒绝执行，返回 E_PERMISSION_DENIED |
+| **S3** | Commitment | 交易提交、状态更新、结果记录 | 交易参数、签名 | 交易哈希、执行日志 | 回滚状态，触发人工介入 |
+
+---
+
+## 5. Agent 自主集成与优化
+
+### AI Agent 自动化视角
+
+在第二轮 Sprint 中，我重点探索了 **Agent 与 Web3 工具的自动化集成方案**，核心目标是让 AI Agent 能够自主完成链上数据分析任务，同时确保每一步操作都在用户可控范围内。
+
+**关键设计决策：**
+
+1. **权限分级策略（Permission Tiering）**
+   - **Tier 0（只读）**：读取余额（read balance）、获取历史交易记录——Agent 可自主执行，无需确认
+   - **Tier 1（模拟）**：模拟交易（simulate transaction）、估算 gas（estimate gas）——Agent 可执行，但需展示模拟结果
+   - **Tier 2（操作）**：请求签名（request signature）、提交交易（submit transaction）——必须用户显式授权
+
+2. **上下文保持机制（Context Preservation）**
+   - 使用链感知上下文（Chain-aware Context）维护最近 10 笔交易的上下文窗口
+   - 每次工具调用前，Agent 自动加载相关上下文以避免重复请求
+
+3. **反馈闭环设计（Feedback Loop）**
+   - Evaluation 框架记录每次操作的输入、输出、执行时间、用户反馈
+   - 失败操作触发 Replay Checklist，支持事后复盘与改进
+
+### 工程落地蓝图
+
+| 模块 | 描述 | 技术选型 | 状态 |
+|------|------|----------|------|
+| **上下文管理** | 维护链上状态与用户意图的上下文窗口 | In-context Learning、Memory Module | ✅ 已验证 |
+| **工具编排** | 统一调度 Web3 工具调用链 | MCP（Model Context Protocol） | 🔄 设计中 |
+| **权限校验** | 运行时权限检查与用户确认路由 | Smart Account + Policy Guard | 🔄 设计中 |
+| **可验证记录** | 操作日志、审计追踪、失败回放 | Verifiable AI、Event Log | 🔄 设计中 |
+
+---
+
+## 6. 漏洞向量与边界场景验证
+
+### 安全漏洞报告块
+
+| 漏洞类型 | 缺陷源头 | 攻击/失效向量 | 防御策略 |
+|----------|----------|---------------|----------|
+| **私钥泄露** | Agent Wallet 权限配置不当 | 攻击者通过 prompt injection 诱导 Agent 输出密钥材料 | 私钥永不离开钱包合约；Agent 仅持有会话密钥（Session Key） |
+| **权限升级** | 权限矩阵定义不完整 | 攻击者利用未定义工具绕过用户确认 | 明确禁止列表（Prohibited List）；默认拒绝策略 |
+| **Prompt Injection** | 用户输入未做过滤 | 恶意指令嵌入用户消息，导致 Agent 执行非预期操作 | 输入校验、指令白名单、human-in-the-loop 确认 |
+| **数据源不可信** | 依赖单一 RPC 节点 | RPC 节点返回错误数据或服务不可用 | 多数据源交叉验证；链上数据与链下数据对比 |
+| **交易重放** | Nonce 管理不当 | 同一交易被重复提交导致资产损失 | 使用唯一交易标识符（Transaction ID）；nonce 校验机制 |
+| **Gas 估算偏差** | 链上状态动态变化 | Gas 估算基于陈旧状态，实际执行时 gas 不足 | 添加安全缓冲系数（Safety Buffer）；失败重试机制 |
+
+### 边界场景 Checklist
+
+- [ ] **边界场景 1**：用户拒绝签名授权时，Agent 是否优雅降级并报告？
+- [ ] **边界场景 2**：RPC 节点超时或返回错误时，Agent 是否触发备用节点切换？
+- [ ] **边界场景 3**：交易模拟通过但实际执行失败时，Agent 是否记录失败原因并通知用户？
+- [ ] **边界场景 4**：链上状态在 Agent 决策过程中发生变更时，Agent 是否检测并重新评估？
+- [ ] **边界场景 5**：用户短时间内多次发起冲突操作时，Agent 是否识别并请求澄清？
+
+---
+
+## 7. 学术标签
+
+```
+#AI-Agent #Web3-Tool-Use #Agent-Wallet #Verifiable-AI #Smart-Account #MCP #Human-in-the-Loop #Security-Invariant #Permission-Matrix #Sprint-Management
+```
+
+---
+
+## 附录：第二轮 Sprint 收尾总结
+
+### 我学到了什么
+
+- **Agent Wallet 的本质是权限代理**，而非将私钥交给 AI。智能账户（Smart Account）、会话密钥（Session Key）、策略（Policy）、守卫（Guard）构成了完整的权限控制体系。
+- **工具权限矩阵是安全底线**：每个工具必须明确标注为只读、需要用户确认、或禁止自动执行。
+- **可验证性是信任的基础**：Evaluation 和 Replay 机制让 Agent 的每一步操作都可追溯、可审计。
+
+### 我实践了什么
+
+- 设计了完整的工具权限矩阵（Tool Permission Matrix）
+- 完成了一个 Mini Project 的原型设计（交易解释器 / 钱包权限顾问方向）
+- 编写了失败操作 Replay Checklist
+
+### 公开 Proof-of-Work
+
+| 类型 | 路径 |
+|------|------|
+| Daily Notes | `daily/2026-06-09.md` ~ `daily/2026-06-15.md` |
+| Experiments | `experiments/day-22-prototype/` |
+| Content Drafts | `content-drafts/tool-permission-matrix.md` |
+| Handbook Feedback | `handbook-feedback/agent-wallet-clarity.md` |
+
+### 仍然不清楚的问题
+
+- 如何在大规模交易场景中平衡实时性与安全性？
+- Session Key 的生命周期管理最佳实践是什么？
+- 多链环境下 Agent Wallet 的统一抽象方案？
+
+### 第三轮重点方向
+
+**主方向：钱包权限顾问（Wallet Permission Advisor）**
+- 帮助用户理解并管理 AI Agent 的操作权限
+- 提供权限配置建议、风险提示、异常检测
+
+**备选方向：智能合约学习助手**
+- 基于 RAG 架构，为用户提供智能合约代码解读与安全审计
+<!-- DAILY_CHECKIN_2026-06-15_END -->
+
 # 2026-06-14
 <!-- DAILY_CHECKIN_2026-06-14_START -->
 黑客松决赛完结撒花！🎉🎉
