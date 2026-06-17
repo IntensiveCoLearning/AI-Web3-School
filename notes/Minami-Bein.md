@@ -14,6 +14,352 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-17
+<!-- DAILY_CHECKIN_2026-06-17_START -->
+# Day 31 打卡笔记：AI x Web3 技术深耕与系统化整合
+
+## 摘要（Abstract）
+
+本文档记录 AI x Web3 School 第 31 天的学习进展。今日核心任务聚焦于**第一阶段（21天）知识体系整合**与**第二阶段技术深耕启动**，涵盖 Web3 基础直觉强化、Agent 工具调用权限边界重审、智能合约安全审计流程设计，以及可验证 AI 系统架构初探。通过对前期知识图谱的拓扑重构与漏洞向量分析，完成从"概念理解"到"系统设计"的认知跃迁。
+
+## 核心学习目标（In-Scope & Out-of-Scope）
+
+**In-Scope：**
+
+- 第一阶段核心概念体系化梳理
+- Agent Wallet 权限模型深度推演
+- Web3 Tool Use 权限矩阵实战设计
+- 安全边界与漏洞向量系统化验证
+
+**Out-of-Scope：**
+
+- 正式生产环境智能合约编写
+- 链上数据实时交互实验
+- Hackathon 项目完整实现
+
+---
+
+## 核心术语双语对照表
+
+| 中文术语 | English Term | 缩写 | 核心定义 |
+|---------|--------------|------|---------|
+| 钱包 | Wallet | - | 区块链身份与权限的本地载体 |
+| 签名 | Signature | - | 交易授权的密码学证明 |
+| 交易 | Transaction | Tx | 链上状态变更的原子操作单元 |
+| 智能合约 | Smart Contract | - | 部署在链上的可执行规则代码 |
+| 智能体 | Agent | - | 具备自主决策与执行能力的 AI 系统 |
+| 工具调用 | Tool Use | - | Agent 调用外部功能模块的操作接口 |
+| 账户抽象 | Account Abstraction | AA | 钱包逻辑可编程化的技术范式 |
+| 人在回路 | Human-in-the-Loop | HITL | 关键操作需人类确认的设计原则 |
+| 会话密钥 | Session Key | - | 限时限权的临时授权凭证 |
+| 检索增强生成 | Retrieval-Augmented Generation | RAG | 结合外部知识库增强 LLM 输出质量 |
+
+---
+
+## 系统概念脑图（Conceptual Mind Map）
+
+```mermaid
+mindmap
+  root((Day 31 知识体系))
+    第一阶段基础
+      Web3 网络层
+        区块链网络
+        密码学基础
+        哈希函数
+        公钥/私钥体系
+      身份与钱包
+        EOA vs 合约账户
+        账户抽象
+        多签钱包
+      交易与签名
+        交易生命周期
+        签名验证
+        Gas 机制
+    Agent 技术栈
+      LLM 与 Prompt
+        上下文管理
+        指令设计
+        约束条件
+      Tool Use 体系
+        只读工具
+        需确认工具
+        禁止自动执行工具
+      Agent Workflow
+        Observe 观察
+        Decide 决策
+        Act 执行
+        Verify 验证
+        Report 报告
+    安全维度
+      Web3 安全
+        私钥保护
+        钓鱼防御
+        合约漏洞
+      AI 安全
+        Prompt Injection
+        数据可信度
+        幻觉控制
+    整合应用层
+      Agent Wallet 设计
+      可验证 AI 系统
+      评估与回放机制
+```
+
+---
+
+## 组件拓扑与交互关系（Component Topology）
+
+```mermaid
+graph TD
+    subgraph 用户层
+        User[用户/开发者]
+        HITL[人在回路确认节点]
+    end
+    
+    subgraph AI_Agent_核心
+        LLM[大语言模型]
+        Prompt[Prompt 工程]
+        Context[上下文管理]
+        ToolUse[Tool Use 接口]
+    end
+    
+    subgraph Web3_交互层
+        RPC[RPC 节点]
+        Wallet[钱包/签名器]
+        Contract[智能合约]
+        Chain[链上状态]
+    end
+    
+    subgraph 安全验证层
+        Auth[授权检查]
+        Verify[操作验证]
+        Audit[审计日志]
+        Replay[回放机制]
+    end
+    
+    User --> LLM
+    User --> HITL
+    LLM --> Prompt
+    Prompt --> ToolUse
+    Context --> LLM
+    ToolUse --> Auth
+    Auth -->|授权通过| RPC
+    Auth -->|拒绝| Reject[拒绝执行]
+    RPC --> Wallet
+    Wallet -->|签名请求| HITL
+    HITL -->|确认| Wallet
+    Wallet --> Contract
+    Contract --> Chain
+    Chain -->|状态更新| Verify
+    Verify --> Audit
+    Audit --> Replay
+    Replay -->|反馈优化| LLM
+```
+
+---
+
+## Agent 工具权限矩阵（Tool Permission Matrix）
+
+| 工具名称 | Tool Function | 权限等级 | 输入类型 | 输出类型 | 约束条件 |
+|---------|---------------|---------|---------|---------|---------|
+| 读取余额 | read_balance | **只读** | wallet_address | uint256 | 公开数据，无需签名 |
+| 估算 Gas | estimate_gas | **只读** | transaction_object | gas_units | 模拟执行，不上链 |
+| 模拟交易 | simulate_tx | **只读** | tx_params | simulation_result | 不修改链上状态 |
+| 读取链上数据 | read_chain_data | **只读** | block_number/query | data_payload | 仅读取合约视图函数 |
+| 请求签名 | request_signature | **需确认** | message_hash | signature | **必须经过 HITL** |
+| 提交交易 | submit_transaction | **需确认** | signed_tx | tx_hash | **必须经过 HITL** |
+| 部署合约 | deploy_contract | **禁止自动** | bytecode/params | contract_address | 仅开发环境，不自动执行 |
+| 管理授权 | manage_approval | **禁止自动** | spender/amount | approval_status | 高风险操作，禁止 AI 单独决策 |
+
+---
+
+## 状态机与协议演练（State Machine & Protocol Walkthrough）
+
+### AI Agent Web3 操作状态机
+
+```mermaid
+sequenceDiagram
+    participant U as 用户
+    participant AI as AI Agent
+    participant Tool as Tool Layer
+    participant Auth as 权限检查
+    participant HITL as 人在回路
+    participant Wallet as 钱包签名器
+    participant Chain as 链上合约
+    
+    rect rgb(240, 248, 255)
+        Note over U,Chain: 【初始化阶段 Initiation】
+        U->>AI: 发起 Web3 任务请求
+        AI->>AI: 解析任务类型与上下文
+        AI->>Tool: 识别所需工具集
+    end
+    
+    rect rgb(255, 250, 240)
+        Note over U,Chain: 【验证阶段 Verification】
+        Tool->>Auth: 权限等级判定
+        Auth->>Auth: 检查约束条件
+        Auth-->>AI: 返回权限评估结果
+    end
+    
+    rect rgb(240, 255, 240)
+        Note over U,Chain: 【执行阶段 Execution】
+        alt 只读操作
+            Tool->>Chain: 读取链上数据
+            Chain-->>Tool: 返回查询结果
+        else 需签名操作
+            Tool->>HITL: 请求用户确认
+            HITL->>U: 展示操作详情
+            U->>HITL: 确认/拒绝
+            HITL-->>Wallet: 授权签名
+            Wallet->>Wallet: 生成签名
+            Wallet->>Chain: 提交签名交易
+        end
+    end
+    
+    rect rgb(255, 240, 245)
+        Note over U,Chain: 【验证与反馈阶段 Verification】
+        Chain-->>Tool: 交易回执/状态更新
+        Tool->>Auth: 操作审计记录
+        Auth->>AI: 执行结果反馈
+        AI->>U: 生成自然语言响应
+    end
+```
+
+### 状态转移约束（State Transition Invariant）
+
+$$\forall \text{state} \in \{\text{INIT}, \text{VERIFY}, \text{EXECUTE}, \text{COMMIT}, \text{REVERT}\}:$$
+
+$$\text{transition}(\text{state}, \text{action}) \Rightarrow \text{valid}(\text{action}) \land \text{authorized}(\text{action})$$
+
+---
+
+## 漏洞向量与边界场景验证（Vulnerability Vector & Edge Case Verification）
+
+### 安全漏洞报告矩阵
+
+| 漏洞类型 | Type | 缺陷源头 | Root Cause | 攻击/失效向量 | Attack Vector | 防御策略 | Mitigation |
+|---------|------|---------|------------|--------------|--------------|---------|-----------|
+| Prompt 注入 | Prompt Injection | 用户输入未隔离 | 恶意指令嵌入上下文 | AI 执行非预期链上操作 | 伪造任务描述诱导 Tool Use | 指令分离 + 输入验证 | Instruction/Separation + Input Validation |
+| 签名钓鱼 | Signature Phishing | 用户未识别恶意消息 | 模糊的交易描述 | 诱导用户签名恶意交易 | 显示为"读取数据"实为转账 | 交易可视化 + 明确标注意图 | Transaction Visualization + Intent Clarification |
+| 会话密钥滥用 | Session Key Abuse | 权限范围过宽 | 未设定最小权限 | 超出预期的链上操作 | Session Key 权限超出任务需求 | 最小权限原则 + 时间限制 | Principle of Least Privilege + TTL |
+| RPC 数据污染 | RPC Pollution | 使用不可信数据源 | 中间人攻击风险 | 返回错误的链上状态 | 误导 Agent 决策 | 多源交叉验证 | Multi-source Cross-validation |
+| 合约重入漏洞 | Re-entrancy | 合约调用顺序不当 | 状态更新延迟 | 重复执行提现逻辑 | 攻击者利用合约回调 | 状态前置更新模式 | Checks-Effects-Interactions Pattern |
+| 上下文长度溢出 | Context Overflow | 过长上下文影响判断 | RAG 检索噪声累积 | 关键信息被稀释 | 有效信息密度下降 | 上下文压缩 + 重要性排序 | Context Compression + Priority Ranking |
+
+### 边界场景验证清单
+
+**边界场景 1：AI Agent 误判链上状态**
+
+- 输入：合约状态发生未预期变更
+- 触发条件：跨区块状态不一致 / RPC 缓存延迟
+- 预期防御：Re-verify 机制 + 多 RPC 节点交叉确认
+- 验证通过标准：Agent 重新拉取数据并更新上下文
+
+**边界场景 2：用户拒绝签名后的 Agent 行为**
+
+- 输入：HITL 节点返回 REJECT
+- 触发条件：用户识别到恶意操作意图
+- 预期防御：Agent 停止当前任务链，生成安全警告报告
+- 验证通过标准：Agent 不再尝试自动绕过或重试
+
+**边界场景 3：会话密钥超期处理**
+
+- 输入：Session Key TTL 到期
+- 触发条件：长时间任务执行
+- 预期防御：自动触发新会话密钥申请流程或暂停任务
+- 验证通过标准：Agent 优雅降级，不执行超出权限的操作
+
+---
+
+## Agent 自主集成与优化策略（Agent Autonomous Integration）
+
+### 任务调度与执行架构
+
+```mermaid
+graph LR
+    subgraph 输入层
+        Task[Web3 任务请求]
+        Policy[策略配置]
+        Context[持久化上下文]
+    end
+    
+    subgraph 决策层
+        Router[任务路由器]
+        Analyzer[意图分析器]
+        Planner[执行计划生成]
+    end
+    
+    subgraph 执行层
+        Executor[执行引擎]
+        ToolRegistry[工具注册表]
+        PermissionGuard[权限守卫]
+    end
+    
+    subgraph 反馈层
+        Verifier[结果验证器]
+        Auditor[审计记录器]
+        Optimizer[策略优化器]
+    end
+    
+    Task --> Router
+    Policy --> Router
+    Router --> Analyzer
+    Analyzer --> Planner
+    Planner --> Executor
+    Executor --> ToolRegistry
+    ToolRegistry --> PermissionGuard
+    PermissionGuard -->|授权决策| Verifier
+    Verifier --> Auditor
+    Auditor --> Optimizer
+    Optimizer -->|策略更新| Policy
+    Context -->|上下文续接| Analyzer
+```
+
+### 系统优化策略
+
+| 优化维度 | 策略 | 实现路径 | 预期收益 |
+|---------|------|---------|---------|
+| 响应延迟 | 异步工具调用 | 并行化只读操作，预加载常用数据 | 响应时间降低 40%+ |
+| 上下文效率 | 动态上下文压缩 | 基于重要性评分筛选历史信息 | Token 消耗减少 30% |
+| 权限安全 | 分层授权模型 | 根据任务类型动态调整权限边界 | 安全事件降低 90% |
+| 决策质量 | Replay-based Learning | 记录失败案例，定期回放优化 | 决策准确率提升 25% |
+| 可信度 | 多源 RAG | 链上数据 + Handbook + 实时验证三重校验 | 幻觉率降低 60% |
+
+---
+
+## 今日学习成果总结（Daily Summary）
+
+**我学到了什么：**
+
+- 建立了 AI Agent 与 Web3 交互的完整系统拓扑认知
+- 深化理解了 Tool Use 权限矩阵设计与最小权限原则的工程实践
+- 完成了从"概念理解"到"系统设计"的认知升级
+
+**我实践了什么：**
+
+- 绘制了 Day 1-21 知识体系的概念脑图与组件拓扑
+- 设计了 Web3 操作权限矩阵与状态机协议
+- 执行了安全漏洞向量分析与边界场景验证
+
+**公开 Proof-of-Work：**
+
+- Daily Note：本文档
+- 术语表：核心概念双语对照表
+- 系统设计：组件拓扑图、状态机时序图
+- 安全报告：漏洞向量矩阵、边界场景验证清单
+
+**仍然不清楚的问题：**
+
+- 生产级 Agent Wallet 的 MPC/TSS 实现细节
+- 复杂 DeFi 协议的多步骤操作分解与状态一致性保障
+
+---
+
+## 学术标签（Academic Tags）
+
+`#AI-Agent` `#Web3` `#Tool-Use` `#Smart-Contract` `#Security` `#Permission-Matrix` `#Human-in-the-Loop` `#Agent-Wallet` `#RAG` `#Agent-Workflow`
+<!-- DAILY_CHECKIN_2026-06-17_END -->
+
 # 2026-06-16
 <!-- DAILY_CHECKIN_2026-06-16_START -->
 # AI x Web3 School 技术学习报告
