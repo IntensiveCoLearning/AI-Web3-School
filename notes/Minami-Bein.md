@@ -106,7 +106,350 @@ I am‘s Bein.
 
 # 2026-06-18
 <!-- DAILY_CHECKIN_2026-06-18_START -->
-你好啊
+# AI x Web3 School 第33天打卡笔记
+
+## 📅 基本信息
+
+| 字段 | 内容 |
+|------|------|
+| **日期** | 2026-06-18 |
+| **打卡天数** | Day 33 |
+| **学习阶段** | 21天计划完成后的持续深化阶段 |
+| **今日投入** | 8小时 |
+
+---
+
+## 今日学习摘要
+
+**核心主题：** Web3 工具调用中的 Agent 权限边界与安全设计
+
+**Abstract：** 本次学习聚焦于 AI Agent 与 Web3 系统交互时的权限边界问题。系统梳理了工具调用（Tool Use）的分类体系，提出了「只读-需确认-禁止执行」三级权限矩阵，设计了模拟交易执行器（Mock Transaction Executor）原型，验证了 AI Agent 在链上操作中的安全边界条件。贡献在于为开发者提供了一套可复用的权限边界设计框架，降低 AI x Web3 应用的安全风险。
+
+---
+
+## 1️⃣ 问题空间定义
+
+### 1.1 核心挑战
+
+AI Agent 参与 Web3 操作时面临三个核心矛盾：
+
+1. **自主性与安全性的张力**：Agent 越自主，效率越高，但风险越大
+2. **上下文新鲜度 vs 验证成本**：实时链上数据可信，但每次调用都有 gas 成本
+3. **工具能力膨胀 vs 权限边界模糊**：随着 MCP（Model Context Protocol）生态扩展，Agent 可调用的工具越来越多，权限边界定义不清
+
+### 1.2 系统边界
+
+| 范围 | 明确边界 |
+|------|----------|
+| **In-Scope** | EVM 兼容链上的钱包操作、签名请求、交易模拟、余额查询 |
+| **Out-of-Scope** | 跨链桥接、Cosmos/IBC 生态、非 EVM L2 特定接口 |
+
+---
+
+## 2️⃣ 理论框架：Web3 工具调用权限分类体系
+
+### 2.1 核心术语表
+
+| 术语 | 中文 | 类型 | 功能描述 | 输入类型 | 输出类型 | 约束条件 |
+|------|------|------|----------|----------|----------|----------|
+| `read_balance` | 读取余额 | 只读 | 查询指定地址的 ERC-20 / ETH 余额 | `address: string` | `balance: bigint` | 无需签名，可缓存 |
+| `simulate_tx` | 模拟交易 | 只读 | 在本地 VM 执行交易，返回结果但不广播 | `tx: Transaction` | `result: SimulationResult` | 只读操作，无状态变更 |
+| `estimate_gas` | 估算 Gas | 只读 | 计算交易执行所需的 gas 上限 | `tx: Transaction` | `gasLimit: uint256` | 估算值，实际消耗可能不同 |
+| `request_signature` | 请求签名 | 需确认 | 生成待签消息，提交给钱包等待用户授权 | `message: bytes` | `signature: bytes` | **必须 human-in-the-loop** |
+| `submit_transaction` | 提交交易 | 需确认 | 签名后广播交易到网络 | `signedTx: bytes` | `txHash: bytes32` | **不可撤销，必须用户最终确认** |
+| `read_approval` | 读取授权 | 只读 | 查询某 spender 对某 token 的授权额度 | `owner, spender, token` | `allowance: bigint` | 只读 |
+| `revoke_approval` | 撤销授权 | 需确认 | 撤销 ERC-20 token 对某地址的授权 | `token, spender` | `txHash: bytes32` | **高危操作，必须用户确认** |
+| `deploy_contract` | 部署合约 | 需确认 | 部署新合约到链上 | `bytecode, args` | `contractAddress: address` | **不可逆操作，gas 成本高** |
+
+### 2.2 权限等级形式化定义
+
+定义权限等级函数 $P: \text{Tool} \rightarrow \{L0, L1, L2\}$，其中：
+
+$$
+P(t) = \begin{cases}
+L0 & \text{只读，Agent 可自主执行} \\
+L1 & \text{写入，Agent 发起请求，必须 human-in-the-loop 确认} \\
+L2 & \text{高危，禁止 Agent 发起，强制用户主动授权} \\
+\end{cases}
+$$
+
+---
+
+## 3️⃣ 系统架构与拓扑
+
+### 3.1 概念脑图
+
+```mermaid
+mindmap
+  root((AI Agent
+  Web3 Tool Use))
+    工具分类
+      只读工具
+        读取余额
+        模拟交易
+        估算 Gas
+        查询授权
+      需确认工具
+        请求签名
+        提交交易
+        撤销授权
+      禁止工具
+        直接动用私钥
+        绕过用户确认
+    权限边界
+      human-in-the-loop
+      最小权限原则
+      权限时效控制
+    安全机制
+      模拟优先
+      Gas 上限检查
+      地址白名单
+    输出格式
+      交易解释
+      风险提示
+      确认序列帧
+```
+
+### 3.2 组件拓扑图
+
+```mermaid
+graph TD
+    A["🤖 AI Agent"] --> B["工具调用层<br/>(Tool Orchestrator)"]
+    B --> C["权限校验器<br/>(Permission Validator)"]
+    C --> D{"权限等级?"}
+    
+    D -->|L0 只读| E["直接执行<br/>(只读工具池)"]
+    D -->|L1 需确认| F["生成确认请求<br/>(Pending Confirmation)"]
+    D -->|L2 禁止| G["拒绝执行<br/>(Block & Log)"]
+    
+    E --> H["链上数据源<br/>(RPC / 索引器)"]
+    F --> I["用户确认界面<br/>(Wallet / DApp)"]
+    I -->|用户批准| J["签名服务<br/>(Signer)"]
+    I -->|用户拒绝| K["操作终止"]
+    
+    J --> L["交易广播<br/>(Mempool)"]
+    L --> M["链上确认<br/>(Block Inclusion)"]
+    
+    G --> N["安全日志<br/>(Audit Trail)"]
+    
+    style F fill:#f9d71c
+    style G fill:#ff6b6b
+    style L fill:#4ecdc4
+    style N fill:#ff6b6b
+```
+
+---
+
+## 4️⃣ 协议演练：模拟交易执行器工作流
+
+### 4.1 时序图
+
+```mermaid
+sequenceDiagram
+    participant U as 👤 用户
+    participant A as 🤖 AI Agent
+    participant T as 工具调度器
+    participant P as 权限校验器
+    participant S as 签名服务
+    participant C as 链上合约
+    participant BC as 区块链网络
+
+    rect rgb(240, 248, 255)
+        Note over A,BC: 只读路径（L0 权限）
+        A->>T: 发送 "查询余额" 请求
+        T->>P: 校验权限等级
+        P-->>T: L0: 允许执行
+        T->>BC: RPC call: eth_getBalance
+        BC-->>T: 返回余额数据
+        T-->>A: 返回 { balance: "1.5 ETH" }
+    end
+
+    rect rgb(255, 250, 205)
+        Note over A,BC: 需确认路径（L1 权限）
+        A->>T: 发送 "转移 0.1 ETH" 请求
+        T->>P: 校验权限等级
+        P-->>T: L1: 需用户确认
+        T->>A: 请求用户授权
+        A->>U: 显示操作摘要 + 风险提示
+        U->>A: 点击 "确认"
+        A->>S: 发起签名请求
+        S->>U: 钱包弹出签名确认
+        U->>S: 输入密码 + 确认
+        S-->>A: 返回签名数据
+        A->>T: 提交签名交易
+        T->>BC: eth_sendRawTransaction
+        BC-->>T: 返回 txHash
+        T-->>A: 交易已广播
+    end
+
+    rect rgb(255, 228, 225)
+        Note over A,BC: 禁止路径（L2 权限）
+        A->>T: 发送 "直接动用私钥签名" 请求
+        T->>P: 校验权限等级
+        P-->>T: L2: 禁止执行
+        P-->>T: 记录安全日志
+        T-->>A: 返回错误: PERMISSION_DENIED
+        A->>U: 显示安全警告
+    end
+```
+
+### 4.2 状态机定义
+
+$$
+\text{State} = \{\text{Idle}, \text{ToolSelected}, \text{PermissionChecked}, \text{PendingConfirmation}, \text{Signed}, \text{Broadcasted}, \text{Confirmed}, \text{Rejected}, \text{Blocked}\}
+$$
+
+$$
+\delta: \text{State} \times \text{Event} \rightarrow \text{State}
+$$
+
+---
+
+## 5️⃣ 实践产出：Mock Transaction Executor
+
+### 5.1 核心代码逻辑
+
+```typescript
+// 权限等级枚举
+enum PermissionLevel {
+  L0_READONLY = "L0",   // Agent 可自主执行
+  L1_CONFIRM  = "L1",   // 需用户确认
+  L2_FORBIDDEN = "L2"   // 禁止执行
+}
+
+// 工具定义
+interface Web3Tool {
+  name: string;
+  permission: PermissionLevel;
+  description: string;
+  execute(params: any): Promise<any>;
+}
+
+// 工具权限矩阵（部分）
+const toolRegistry: Record<string, Web3Tool> = {
+  "read_balance": {
+    name: "read_balance",
+    permission: PermissionLevel.L0_READONLY,
+    description: "读取钱包余额",
+    execute: async (params) => {
+      const { address } = params;
+      // 直接调用 RPC，无需确认
+      return await provider.getBalance(address);
+    }
+  },
+  
+  "simulate_transaction": {
+    name: "simulate_transaction",
+    permission: PermissionLevel.L0_READONLY,
+    description: "模拟交易执行（不上链）",
+    execute: async (params) => {
+      const { from, to, value, data } = params;
+      // 在本地 VM 执行
+      return await provider.send("eth_call", [{ from, to, value, data }]);
+    }
+  },
+  
+  "request_signature": {
+    name: "request_signature",
+    permission: PermissionLevel.L1_CONFIRM,
+    description: "请求用户签名消息",
+    execute: async (params) => {
+      // 抛出异常，必须走确认流程
+      throw new Error("L1_PERMISSION_REQUIRED: 需通过 confirm_flow() 获取用户授权");
+    }
+  },
+  
+  "submit_transaction": {
+    name: "submit_transaction",
+    permission: PermissionLevel.L1_CONFIRM,
+    description: "广播签名交易",
+    execute: async (params) => {
+      throw new Error("L1_PERMISSION_REQUIRED: 需通过 confirm_flow() 获取用户授权");
+    }
+  },
+  
+  "direct_sign_with_private_key": {
+    name: "direct_sign_with_private_key",
+    permission: PermissionLevel.L2_FORBIDDEN,
+    description: "直接使用私钥签名（禁止）",
+    execute: async (params) => {
+      // 触发安全告警
+      securityLogger.alert({
+        type: "L2_VIOLATION",
+        attempted_tool: "direct_sign_with_private_key",
+        severity: "CRITICAL",
+        message: "Agent 试图绕过用户确认直接使用私钥"
+      });
+      throw new Error("L2_FORBIDDEN: 此操作被系统禁止");
+    }
+  }
+};
+
+// 工具调用入口（带权限校验）
+async function callTool(toolName: string, params: any): Promise<any> {
+  const tool = toolRegistry[toolName];
+  if (!tool) throw new Error(`TOOL_NOT_FOUND: ${toolName}`);
+  
+  // 权限等级检查
+  switch (tool.permission) {
+    case PermissionLevel.L0_READONLY:
+      return await tool.execute(params);  // 直接执行
+      
+    case PermissionLevel.L1_CONFIRM:
+      return await confirmFlow(toolName, params);  // 走确认流程
+      
+    case PermissionLevel.L2_FORBIDDEN:
+      return await tool.execute(params);  // 执行会抛出异常并记录日志
+  }
+}
+
+// 确认流程（human-in-the-loop）
+async function confirmFlow(toolName: string, params: any): Promise<any> {
+  const tool = toolRegistry[toolName];
+  
+  // 1. 生成操作摘要
+  const summary = generateOperationSummary(toolName, params);
+  
+  // 2. 展示给用户并等待确认
+  const userConfirmed = await walletUI.requestConfirmation({
+    title: `操作确认: ${tool.name}`,
+    summary: summary,
+    riskLevel: assessRiskLevel(toolName, params)
+  });
+  
+  if (!userConfirmed) {
+    throw new Error("USER_REJECTED: 用户拒绝了操作");
+  }
+  
+  // 3. 用户确认后，执行工具
+  return await tool.execute(params);
+}
+```
+
+### 5.2 模拟执行日志
+
+```
+[09:15:23] 🤖 Agent: 用户询问我的 ETH 余额
+[09:15:24] 📞 callTool("read_balance", { address: "0x742d35Cc6634C0532..." })
+[09:15:24] ✅ 权限校验通过: L0 只读
+[09:15:24] 📡 RPC call: eth_getBalance
+[09:15:24] ✅ 响应: { balance: "1.5823 ETH" }
+[09:15:25] 🤖 Agent: 您的 ETH 余额约为 1.58 ETH
+
+[09:32:10] 🤖 Agent: 用户请求转账 0.1 ETH 给朋友
+[09:32:11] 📞 callTool("submit_transaction", { to: "0xAbC...", value: "0.1 ETH" })
+[09:32:11] ⚠️ 权限校验: L1 需确认
+[09:32:11] 📋 生成操作摘要:
+  - 操作: 转账 ETH
+  - 金额: 0.1 ETH
+  - 收款人: 0xAbCd...EfGh
+  - 预估 gas: ~21,000
+  - ⚠️ 注意: 此操作不可撤销
+[09:32:11] 👤 等待用户确认...
+[09:35:42] 👤 用户点击「确认」
+[09:35:43] 📝 钱包签名请求已发送
+[09:35:48] ✅ 签名完成: 0x7f2e...
+[09:35:48] 📡 广播交易
 <!-- DAILY_CHECKIN_2026-06-18_END -->
 
 # 2026-06-17
