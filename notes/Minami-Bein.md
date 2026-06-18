@@ -14,6 +14,16 @@ I am‘s Bein.
 
 ## Notes
 
+# 2026-06-24
+<!-- DAILY_CHECKIN_2026-06-24_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-24_END -->
+
+# 2026-06-23
+<!-- DAILY_CHECKIN_2026-06-23_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-23_END -->
+
 # 2026-06-22
 <!-- DAILY_CHECKIN_2026-06-22_START -->
 Hackathon ing...
