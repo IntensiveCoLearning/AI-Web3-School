@@ -14,6 +14,11 @@ AI x Web3 School
 
 ## Notes
 
+# 2026-05-23
+<!-- DAILY_CHECKIN_2026-05-23_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-05-23_END -->
+
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
 Day 21
