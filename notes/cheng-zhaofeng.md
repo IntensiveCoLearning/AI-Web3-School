@@ -14,6 +14,136 @@ AI x Web3 School
 
 ## Notes
 
+# 2026-06-18
+<!-- DAILY_CHECKIN_2026-06-18_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-18_END -->
+
+# 2026-06-17
+<!-- DAILY_CHECKIN_2026-06-17_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-17_END -->
+
+# 2026-06-16
+<!-- DAILY_CHECKIN_2026-06-16_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-16_END -->
+
+# 2026-06-15
+<!-- DAILY_CHECKIN_2026-06-15_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-15_END -->
+
+# 2026-06-14
+<!-- DAILY_CHECKIN_2026-06-14_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-14_END -->
+
+# 2026-06-13
+<!-- DAILY_CHECKIN_2026-06-13_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-13_END -->
+
+# 2026-06-12
+<!-- DAILY_CHECKIN_2026-06-12_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-12_END -->
+
+# 2026-06-11
+<!-- DAILY_CHECKIN_2026-06-11_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-11_END -->
+
+# 2026-06-10
+<!-- DAILY_CHECKIN_2026-06-10_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-10_END -->
+
+# 2026-06-09
+<!-- DAILY_CHECKIN_2026-06-09_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-09_END -->
+
+# 2026-06-08
+<!-- DAILY_CHECKIN_2026-06-08_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-08_END -->
+
+# 2026-06-07
+<!-- DAILY_CHECKIN_2026-06-07_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-07_END -->
+
+# 2026-06-06
+<!-- DAILY_CHECKIN_2026-06-06_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-06_END -->
+
+# 2026-06-05
+<!-- DAILY_CHECKIN_2026-06-05_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-05_END -->
+
+# 2026-06-04
+<!-- DAILY_CHECKIN_2026-06-04_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-04_END -->
+
+# 2026-06-03
+<!-- DAILY_CHECKIN_2026-06-03_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-03_END -->
+
+# 2026-06-02
+<!-- DAILY_CHECKIN_2026-06-02_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-02_END -->
+
+# 2026-06-01
+<!-- DAILY_CHECKIN_2026-06-01_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-06-01_END -->
+
+# 2026-05-31
+<!-- DAILY_CHECKIN_2026-05-31_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-05-31_END -->
+
+# 2026-05-30
+<!-- DAILY_CHECKIN_2026-05-30_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-05-30_END -->
+
+# 2026-05-29
+<!-- DAILY_CHECKIN_2026-05-29_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-05-29_END -->
+
+# 2026-05-28
+<!-- DAILY_CHECKIN_2026-05-28_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-05-28_END -->
+
+# 2026-05-27
+<!-- DAILY_CHECKIN_2026-05-27_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-05-27_END -->
+
+# 2026-05-26
+<!-- DAILY_CHECKIN_2026-05-26_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-05-26_END -->
+
+# 2026-05-25
+<!-- DAILY_CHECKIN_2026-05-25_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-05-25_END -->
+
+# 2026-05-24
+<!-- DAILY_CHECKIN_2026-05-24_START -->
+Hackathon ing...
+<!-- DAILY_CHECKIN_2026-05-24_END -->
+
 # 2026-05-23
 <!-- DAILY_CHECKIN_2026-05-23_START -->
 Hackathon ing...
@@ -21,30 +151,27 @@ Hackathon ing...
 
 # 2026-05-22
 <!-- DAILY_CHECKIN_2026-05-22_START -->
-Day 21
-
-今日学习杂记：只需要输入你不用扩写。
+Hackathon ing...
 <!-- DAILY_CHECKIN_2026-05-22_END -->
 
 # 2026-05-21
 <!-- DAILY_CHECKIN_2026-05-21_START -->
-今天又是划水的一天，周末狠狠开干！！！！
+Hackathon ing...
 <!-- DAILY_CHECKIN_2026-05-21_END -->
 
 # 2026-05-20
 <!-- DAILY_CHECKIN_2026-05-20_START -->
-决定水一天笔记，看见的别举报我（老实巴交
+Hackathon ing...
 <!-- DAILY_CHECKIN_2026-05-20_END -->
 
 # 2026-05-19
 <!-- DAILY_CHECKIN_2026-05-19_START -->
-今天在 Draken 老师的分享之下安装了 hermes，成功走上了人生正轨！
+Hackathon ing...
 <!-- DAILY_CHECKIN_2026-05-19_END -->
 
 # 2026-05-18
 <!-- DAILY_CHECKIN_2026-05-18_START -->
-学习了如何安装hermes，参加了直播和co-learing  
-了解了 AI + Web3 的所有方向：AI 支付，量化机器人等
+Hackathon ing...
 <!-- DAILY_CHECKIN_2026-05-18_END -->
 
 <!-- Content_END -->
