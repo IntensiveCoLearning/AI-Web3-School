@@ -36,7 +36,302 @@ Hackathon ing...
 
 # 2026-06-20
 <!-- DAILY_CHECKIN_2026-06-20_START -->
-Hackathon ing...
+# AI x Web3 School 第 38 天学习报告
+
+**日期：** 2026-06-20
+**学习周期：** Day 38/∞
+**主题：** Web3 Tool Use 深入实践 · Agent Workflow 权限边界验证
+
+---
+
+## 今日学习摘要
+
+**摘要：** 第 38 天的学习聚焦于 Web3 工具调用（Web3 Tool Use）体系的深度理解与 Agent 工作流（Agent Workflow）中的权限边界验证。通过对链上交互工具集的分类拆解、权限矩阵的形式化定义，以及 AI Agent 在 Web3 执行场景中的边界条件分析，初步建立了"工具调用 → 用户确认 → 交易提交"的闭环认知框架。核心挑战在于如何在保持 Agent 自主性的同时，确保 human-in-the-loop（人在回路）机制的有效性，以及在去中心化环境中实现可验证的操作记录。
+
+**系统边界定义：**
+- **In-Scope（纳入范围）：** 链上只读操作（read balance、query transaction history）、Gas 估算、交易模拟、签名请求流程、用户确认机制。
+- **Out-of-Scope（排除范围）：** 私钥管理、合约部署、跨链桥接、非 EVM 兼容链交互。
+
+---
+
+## 一、系统架构与拓扑
+
+### 1.1 概念脑图：Web3 Agent Tool Use 架构
+
+```mermaid
+mindmap
+  root((Web3 Agent Tool Use))
+    核心组件
+      工具层
+        只读工具
+          查询余额 read_balance
+          历史记录 query_history
+          Gas 估算 estimate_gas
+        执行工具
+          模拟交易 simulate_tx
+          签名请求 request_signature
+          提交交易 submit_transaction
+      权限层
+        Permission Level
+        Human-in-the-Loop
+        Policy Guard
+      数据层
+        Chain-aware Context
+        RAG Knowledge Base
+        On-chain State
+    交互流程
+      Observe
+        读取链上状态
+        获取用户意图
+      Decide
+        工具选择
+        参数构造
+      Act
+        权限检查
+        用户确认
+      Verify
+        交易验证
+        结果回传
+      Report
+        操作日志
+        状态同步
+    安全边界
+      禁止自动执行
+      只读优先原则
+      签名前确认
+      失败重试策略
+```
+
+### 1.2 组件拓扑图：Agent ↔ Web3 交互架构
+
+```mermaid
+graph TD
+    subgraph User["用户层 User Layer"]
+        U[用户 User]
+        WA[钱包适配器 Wallet Adapter]
+    end
+
+    subgraph Agent["Agent 层 Agent Layer"]
+        BM[行为模型 Behavior Model]
+        TM[工具管理器 Tool Manager]
+        PC[权限控制器 Permission Controller]
+        CL[上下文管理器 Context Manager]
+    end
+
+    subgraph Web3["Web3 层 Web3 Layer"]
+        RPC[RPC 节点 RPC Node]
+        SC[智能合约 Smart Contract]
+        BS[区块浏览器 Block Explorer]
+    end
+
+    U -->|意图输入 Intent| BM
+    BM -->|工具调用 Tool Call| TM
+    TM -->|权限检查 Permission Check| PC
+    PC -->|用户确认 User Confirmation| WA
+    WA -->|签名请求 Signature Request| U
+    TM -->|链上查询 On-chain Query| RPC
+    RPC -->|状态响应 State Response| CL
+    TM -->|交易提交 Transaction Submit| RPC
+    RPC -->|交易回执 Transaction Receipt| BM
+    BM -->|结果输出 Result Output| U
+
+    style U fill:#f9f,color:#000
+    style PC fill:#ff9,color:#000
+    style RPC fill:#9ff,color:#000
+```
+
+---
+
+## 二、理论框架与形式分类
+
+### 2.1 Web3 工具集类型系统
+
+| 工具类型 | 功能描述 | 输入类型 | 输出类型 | 权限要求 | 约束条件 |
+|---------|---------|---------|---------|---------|---------|
+| `read_balance` | 读取指定地址的代币余额 | `address: string` | `balance: bigint` | **只读**（无需确认） | 仅支持已部署代币合约 |
+| `query_history` | 查询地址的交易历史 | `address: string, opts: QueryOptions` | `transactions: Tx[]` | **只读**（无需确认） | 受 RPC 节点限制 |
+| `estimate_gas` | 估算交易 Gas 消耗 | `tx: TransactionRequest` | `gas: bigint` | **只读**（无需确认） | 估算值可能偏差 |
+| `simulate_tx` | 模拟交易执行 | `tx: TransactionRequest` | `result: SimulationResult` | **只读**（无需确认） | 不改变链上状态 |
+| `request_signature` | 请求用户签名 | `message: string, domain: Domain` | `signature: string` | **需用户确认** | 用户可拒绝 |
+| `submit_transaction` | 提交链上交易 | `tx: SignedTransaction` | `tx_hash: string` | **需用户确认** | 不可逆操作 |
+
+### 2.2 权限等级形式化定义
+
+**权限等级体系（Permission Level Taxonomy）：**
+
+| 等级 | 标识 | 描述 | 执行条件 | 示例场景 |
+|-----|------|-----|---------|---------|
+| L0 | `READ_ONLY` | 只读操作，不产生链上变更 | 无需确认，直接执行 | `read_balance`、`estimate_gas` |
+| L1 | `SIMULATION` | 模拟操作，验证可行性但不提交 | 无需确认，仅模拟 | `simulate_tx` |
+| L2 | `SIGNATURE_REQUIRED` | 需要用户签名确认 | 用户主动授权 | `request_signature` |
+| L3 | `TRANSACTION_SUBMIT` | 提交链上交易 | 用户签名 + 链上确认 | `submit_transaction` |
+| L4 | `FORBIDDEN` | 禁止 AI Agent 独立执行 | 无论任何条件均不可执行 | 私钥管理、合约部署 |
+
+**系统不变量（System Invariant）：**
+
+$$
+\forall tool \in ToolSet, permission(tool) \geq L2 \Rightarrow confirmed(user) = true
+$$
+
+即：对于任意权限等级 ≥ L2 的工具调用，必须在获得用户确认后才能执行。
+
+---
+
+## 三、状态机与协议演练
+
+### 3.1 Agent Web3 操作完整时序图
+
+```mermaid
+sequenceDiagram
+    participant U as 用户 User
+    participant A as Agent
+    participant TM as 工具管理器 Tool Manager
+    participant PC as 权限控制器 Permission Controller
+    participant WA as 钱包适配器 Wallet Adapter
+    participant RPC as RPC 节点 RPC Node
+
+    U->>A: 输入任务目标 "查询钱包余额并解释"
+
+    A->>TM: 解析任务，调用工具 `read_balance`
+
+    TM->>PC: 检查权限等级
+
+    PC-->>TM: 权限等级：L0（只读）
+
+    TM->>RPC: 发起链上查询请求
+
+    RPC-->>TM: 返回余额数据 `balance: 1.5 ETH`
+
+    TM-->>A: 返回原始数据
+
+    A->>A: 格式化响应，生成解释
+
+    A-->>U: 输出余额 + 资产解释
+
+    Note over U,A: 如果任务需要交易提交
+
+    U->>A: 输入任务目标 "转账 0.1 ETH 给 Alice"
+
+    A->>TM: 解析任务，调用工具 `submit_transaction`
+
+    TM->>PC: 检查权限等级
+
+    PC-->>TM: 权限等级：L3（需用户确认）
+
+    TM->>A: 返回 `CONFIRMATION_REQUIRED`
+
+    A->>U: 生成确认请求，显示交易详情
+
+    U->>WA: 确认交易，触发签名
+
+    WA->>U: 签名请求弹窗
+
+    U->>WA: 输入密码，确认签名
+
+    WA-->>TM: 返回签名数据 `signature`
+
+    TM->>RPC: 提交签名交易
+
+    RPC-->>TM: 返回交易哈希 `tx_hash`
+
+    TM-->>A: 返回交易回执
+
+    A-->>U: 通知交易成功，打印 tx_hash
+```
+
+### 3.2 状态机定义：工具调用状态转换
+
+```mermaid
+stateDiagram-v2
+    [*] --> IDLE: 系统初始化
+    IDLE --> PARSING: 接收用户任务
+    PARSING --> PERMISSION_CHECK: 工具选择完成
+    PERMISSION_CHECK --> READY_TO_EXECUTE: L0/L1 权限
+    PERMISSION_CHECK --> AWAIT_CONFIRMATION: L2/L3 权限
+    PERMISSION_CHECK --> REJECTED: L4 权限
+    READY_TO_EXECUTE --> EXECUTING: 调用链上接口
+    EXECUTING --> SUCCESS: 返回结果
+    EXECUTING --> FAILED: 链上错误
+    FAILED --> RETRY: 可重试错误
+    RETRY --> EXECUTING: 重试执行
+    AWAIT_CONFIRMATION --> EXECUTING: 用户确认
+    AWAIT_CONFIRMATION --> CANCELLED: 用户拒绝
+    SUCCESS --> [*]: 任务完成
+    FAILED --> [*]: 任务失败
+    CANCELLED --> [*]: 任务取消
+    REJECTED --> [*]: 权限不足
+```
+
+---
+
+## 四、Agent 自主集成与优化
+
+### 4.1 工具调用决策树
+
+```
+输入：用户任务描述 T
+输出：工具调用序列或确认请求
+
+流程：
+1. 解析 T，提取目标地址、金额、操作类型
+2. 匹配工具集，确定候选工具集合 C
+3. 对每个 c ∈ C，确定权限等级 P(c)
+4. IF P(c) ∈ {L0, L1}:
+       直接执行，记录日志
+   ELSE IF P(c) ∈ {L2, L3}:
+       生成确认请求，等待用户响应
+   ELSE:
+       返回权限不足错误，终止流程
+5. 执行完成后，更新上下文状态
+6. 生成自然语言响应，返回给用户
+```
+
+### 4.2 上下文管理策略
+
+**Chain-aware Context 注入机制：**
+
+| 上下文类型 | 来源 | 更新频率 | 用途 |
+|-----------|------|---------|------|
+| 钱包状态 | RPC 查询 | 每次调用前 | 余额验证、Gas 计算 |
+| 历史交易 | 链上索引 | 按需 | 交易历史解释 |
+| 合约 ABI | 知识库/RAG | 静态缓存 | 函数调用编码 |
+| 市场数据 | 外部 API | 定时更新 | 价值换算、费率估算 |
+
+**优化策略：**
+
+1. **缓存复用：** 对相同地址的余额查询结果缓存 30 秒，减少 RPC 调用。
+2. **批量预取：** 用户表达多地址意图时，并行发起所有只读查询。
+3. **优雅降级：** RPC 节点不可用时，尝试备用节点或返回"数据不可用"而非错误。
+
+---
+
+## 五、漏洞向量与边界场景验证
+
+### 5.1 安全漏洞报告
+
+| 漏洞类型 | 标识 | 缺陷源头 | 攻击/失效向量 | 防御策略 |
+|---------|-----|---------|-------------|---------|
+| 权限提升 | VULN-001 | Agent 绕过用户确认直接调用 L3 工具 | 恶意 prompt injection 诱导交易 | 所有 L3 调用必须经过 human-in-the-loop 确认 |
+| 签名钓鱼 | VULN-002 | 用户误签恶意交易数据 | Agent 显示的签名内容与实际交易不符 | 使用 EIP-712 结构化签名，展示哈希摘要 |
+| RPC 数据污染 | VULN-003 | 恶意 RPC 节点返回假余额/假状态 | 中间人攻击或 RPC 提供商作恶 | 交叉验证多个 RPC 节点，关键操作需多源确认 |
+| Gas 估算偏差 | VULN-004 | estimate_gas 返回值与实际消耗差距过大 | 合约状态变更导致 Gas 消耗增加 | 预留 20% Gas 缓冲，设置 Gas 上限 |
+| 交易重放 | VULN-005 | nonce 管理不当导致交易重复提交 | 网络延迟导致的超时重试 | 维护本地 nonce 计数器，实现幂等操作 |
+| Prompt Injection | VULN-006 | 用户输入包含恶意指令覆盖 Agent 行为 | 社会工程学攻击诱导 Agent 执行未授权操作 | 输入清洗 + 操作白名单 + 关键操作二次确认 |
+
+### 5.2 边界条件测试矩阵
+
+| 测试场景 | 输入条件 | 预期行为 | 实际行为 | 状态 |
+|---------|---------|---------|---------|------|
+| 只读工具无网络 | RPC 节点离线 | 返回"网络不可用"提示 | 待验证 | ⚠️ |
+| 用户拒绝签名 | 签名弹窗中点击拒绝 | Agent 返回"用户取消" | 待验证 | ⚠️ |
+| 余额不足时转账 | balance < amount | 阻止交易，提示余额不足 | 待验证 | ⚠️ |
+| 高 Gas 费用警告 | estimated_gas > 阈值 | 展示 Gas 费用警告 | 待验证 | ⚠️ |
+| 合约调用失败 | 合约 revert | 解析 revert 原因并告知用户 | 待验证 | ⚠️ |
+| 并发交易冲突 | 两个交易使用相同 nonce | 第二个交易失败或排队等待 | 待验证 | ⚠️ |
+
+---
+
+## 六、关键术语（
 <!-- DAILY_CHECKIN_2026-06-20_END -->
 
 # 2026-06-19
