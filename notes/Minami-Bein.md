@@ -31,7 +31,288 @@ Hackathon ing...
 
 # 2026-06-21
 <!-- DAILY_CHECKIN_2026-06-21_START -->
-Hackathon ing...
+# AI x Web3 School 第 38 天技术打卡报告
+
+**日期**：2026-06-21
+**学习周期**：Day 38 / 深化实践期（第三周期）
+**学员画像**：Web3 新手 × AI 开发者 × 内容运营
+
+---
+
+## 摘要（Abstract）
+
+本日聚焦于 **AI Agent 与 Web3 系统集成的安全边界验证**，在前期 21 天基础框架上，进一步探索 **智能体钱包权限矩阵（Agent Wallet Permission Matrix）** 与 **链上操作可验证性（On-chain Verifiability）** 的工程实践。通过 mock transaction simulation、gas estimation 与 signature request 的全链路演练，建立 AI Agent 执行 Web3 操作的**安全不变量（Security Invariant）** 体系，形成可复用的权限边界 checklist，为后续 agentic DeFi 操作 prototype 奠定理论与工程基础。
+
+**核心贡献**：
+- 定义 AI Agent Web3 操作的四层权限模型
+- 验证链上操作不可逆性（irreversibility）与 AI Agent 决策可审计性（auditability）之间的张力
+- 产出一套可直接嵌入 Agent Workflow 的安全约束清单
+
+---
+
+## 系统架构与拓扑（System Architecture & Topology）
+
+### 概念脑图：AI Agent × Web3 权限边界
+
+```mermaid
+mindmap
+  root((AI Agent Web3 操作))
+    感知层 Observe
+      Chain State Read
+      Wallet Balance Query
+      Transaction Simulation
+    决策层 Decide
+      Prompt Context Injection
+      Tool Selection Logic
+      Risk Assessment Engine
+    执行层 Act
+      Transaction Construction
+      Gas Estimation
+      Signature Request
+    验证层 Verify
+      Execution Receipt Validation
+      State Consistency Check
+      Error Recovery Protocol
+    权限边界 Permission Boundary
+      Read Only Tools
+      User Confirmation Required
+      Forbidden Auto-Execute
+```
+
+### 组件拓扑：Agent ↔ Web3 交互架构
+
+```mermaid
+graph TD
+    subgraph User["用户层 User Layer"]
+        U[User 人类操作者]
+        K[Key Material 密钥材料]
+    end
+
+    subgraph Agent["Agent 智能体层"]
+        L[LLM 大语言模型]
+        WM[Workflow Manager 工作流管理器]
+        PS[Permission Sentinel 权限哨兵]
+    end
+
+    subgraph Tool["Tool Layer 工具层"]
+        BR[Balance Reader 余额读取]
+        TS[Transaction Simulator 交易模拟器]
+        GE[Gas Estimator Gas 估算器]
+        SR[Signature Request 签名请求器]
+        ST[Transaction Submitter 交易提交器]
+    end
+
+    subgraph Blockchain["链上层 Blockchain Layer"]
+        RPC[RPC Node RPC 节点]
+        BC[Smart Contract 智能合约]
+        NET[Network 区块链网络]
+    end
+
+    U --> WM
+    L --> WM
+    WM --> PS
+    PS -->|权限校验| Tool
+    K -.->|隔离存储| SR
+    Tool --> RPC
+    RPC --> BC
+    BC --> NET
+
+    style PS fill:#ff6b6b,color:#fff
+    style K fill:#feca57,color:#000
+    style Tool fill:#54a0ff,color:#fff
+```
+
+---
+
+## 理论框架与形式分类（Theoretical Framework & Formal Taxonomy）
+
+### 核心组件定义表
+
+| 组件 | 功能 | 输入类型 | 输出类型 | 约束条件 |
+|------|------|----------|----------|----------|
+| Balance Reader | 读取链上余额 | wallet address, block number | uint256 balance | 只读，无状态变更 |
+| Transaction Simulator | 模拟交易执行 | from, to, value, data, gas | simulated result, revert reason | 只读，估算 gas 消耗 |
+| Gas Estimator | 估算 Gas 费用 | transaction params | gas limit, gas price, total cost | 返回估算值，存在误差 |
+| Signature Request | 请求用户签名 | unsigned transaction, dApp metadata | user signature or rejection | 必须用户主动确认 |
+| Transaction Submitter | 提交链上交易 | signed transaction | tx hash, block confirmation | 不可逆，消耗真实资产 |
+
+### 类型系统约束
+
+```typescript
+// TypeScript 风格类型约束
+type WalletPermission = "read_only" | "confirm_required" | "forbidden";
+type ToolCategory = "observer" | "actor" | "verifier";
+
+interface Web3Tool {
+  name: string;
+  category: ToolCategory;
+  permission: WalletPermission;
+  requiresUserConfirmation: boolean;
+  canAutoExecute: boolean;
+  sideEffect: "none" | "state_change" | "asset_transfer";
+}
+
+// 核心不变量定义
+$$\forall tool \in Web3ToolSet, tool.canAutoExecute = true \Rightarrow tool.permission \neq "forbidden"$$
+$$\forall action \in AssetTransfer, action.requiresUserConfirmation = true$$
+$$\exists log \in ExecutionLog \mid log.tool = action \land log.timestamp = now$$
+```
+
+---
+
+## 状态机与协议演练（State Machine & Protocol Walkthrough）
+
+### AI Agent Web3 操作完整时序
+
+```mermaid
+sequenceDiagram
+    participant U as User 用户
+    participant A as Agent 智能体
+    participant PS as Permission Sentinel 权限哨兵
+    participant TOOL as Tool 工具层
+    participant BC as Blockchain 区块链
+
+    rect rgb(200, 220, 240)
+        Note over U,A: Phase 1: 任务初始化与权限预检
+        U->>A: Define task: "查询钱包余额"
+        A->>PS: Check permission("balance_read")
+        PS-->>A: PermissionGranted(read_only)
+    end
+
+    rect rgb(220, 240, 200)
+        Note over A,BC: Phase 2: 观察与决策
+        A->>TOOL: Call balanceReader(wallet)
+        TOOL->>BC: eth_getBalance(wallet)
+        BC-->>TOOL: Return uint256 balance
+        TOOL-->>A: Return {balance, blockNumber}
+        A->>A: Analyze context & decide next action
+    end
+
+    rect rgb(240, 220, 200)
+        Note over U,A: Phase 3: 签名请求（关键确认节点）
+        A->>PS: Check permission("transaction_submit")
+        PS-->>A: PermissionDenied(confirm_required)
+        A->>U: Request signature: unsignedTx + dApp info
+        U->>A: User signs or rejects
+        alt User approves
+            U-->>A: Return signature
+            A->>TOOL: Call transactionSubmitter(signedTx)
+            TOOL->>BC: eth_sendRawTransaction
+            BC-->>TOOL: Return txHash
+            TOOL-->>A: Return {txHash, status: pending}
+        else User rejects
+            U-->>A: UserRejected
+            A->>A: Log rejection & terminate workflow
+        end
+    end
+
+    rect rgb(240, 240, 220)
+        Note over A,BC: Phase 4: 验证与归档
+        A->>BC: eth_getTransactionReceipt(txHash)
+        BC-->>A: Return {status, blockNumber, gasUsed}
+        A->>A: Update execution log & report to user
+    end
+```
+
+---
+
+## Agent 自主集成与优化（Agent Autonomous Integration & Optimization）
+
+### 安全约束清单（Security Checklist）
+
+| 序号 | 检查项 | 约束类型 | 失败后果 | 优先级 |
+|------|--------|----------|----------|--------|
+| 1 | 私钥永不离开钱包 | 硬性约束 | 资产永久损失 | Critical |
+| 2 | 大额转账必须人工确认 | 金额阈值 | 意外资产转移 | Critical |
+| 3 | 合约交互前执行模拟 | 前置验证 | 资金锁定 / 合约漏洞 | High |
+| 4 | Gas 上限合理性校验 | 范围约束 | 过度 Gas 消耗 | High |
+| 5 | 交易 nonce 同步检查 | 状态一致性 | 交易覆盖 / 失败 | Medium |
+| 6 | 来源数据新鲜度验证 | 时效性 | 过期信息决策 | Medium |
+| 7 | Prompt Injection 防御 | 输入过滤 | 指令劫持 | High |
+| 8 | 失败操作可回放 | 可审计性 | 问题难追溯 | Low |
+
+### 今日实践产出：Gas Estimation 工具演练
+
+```python
+# Mock Gas Estimator 实现片段
+def estimate_gas(transaction: UnsignedTransaction) -> GasEstimation:
+    """
+    估算交易 Gas 消耗，返回结构化结果
+    """
+    try:
+        # Step 1: 模拟执行
+        simulation_result = simulate_transaction(transaction)
+        
+        # Step 2: 计算 Gas 限制（加 20% buffer）
+        estimated_gas = int(simulation_result.gas_used * 1.2)
+        
+        # Step 3: 获取当前 Gas Price
+        current_gas_price = get_gas_price()
+        
+        # Step 4: 计算总成本
+        total_cost_wei = estimated_gas * current_gas_price
+        
+        return GasEstimation(
+            gas_limit=estimated_gas,
+            gas_price_wei=current_gas_price,
+            total_cost_wei=total_cost_wei,
+            total_cost_usd=wei_to_usd(total_cost_wei),
+            confidence="medium",  # 实际值可能偏差 ±10%
+            warnings=[
+                "High gas price detected",
+                "Complex contract execution"
+            ] if current_gas_price > HIGH_GAS_THRESHOLD else []
+        )
+    except SimulationRevert as e:
+        return GasEstimation(error=str(e), can_revert=True)
+```
+
+---
+
+## 漏洞向量与边界场景验证（Vulnerability Vector & Edge Case Verification）
+
+### 今日重点漏洞分析
+
+| 漏洞类型 | 缺陷源头 | 攻击/失效向量 | 防御策略 |
+|----------|----------|---------------|----------|
+| 签名诱导攻击 | 用户未验证交易详情 | 伪造 dApp 信息诱导签名恶意交易 | 强制显示交易摘要 + 合约地址白名单 |
+| Gas 估算偏差导致失败 | 复杂合约状态依赖 | 估算值与实际消耗差距过大 | 动态调整 buffer 比例 + 失败重试机制 |
+| 非幂等操作重复执行 | 网络延迟 + Agent 重试 | 同一交易可能被提交多次 | 交易 nonce 锁定 + 已提交追踪 |
+| Prompt Injection | 用户输入未过滤 | 恶意指令注入影响 Agent 行为 | 输入 sanitization + 权限边界强化 |
+| 过期数据决策 | RAG 检索非实时链上数据 | 基于陈旧余额/价格执行错误操作 | 强制刷新机制 + 数据新鲜度标注 |
+
+---
+
+## 公开 Proof-of-Work 归档
+
+**今日产出清单**：
+
+- `daily/2026-06-21.md` — 完整 daily note 记录
+- `experiments/day-38-gas-estimator/` — Mock Gas Estimation 脚本与测试用例
+- `content-drafts/agent-web3-permission-matrix.md` — 权限矩阵中文草稿
+- `security-checklist/day-38.md` — 安全约束清单迭代版本
+
+**关键术语（中英对照）**：
+
+| 中文术语 | English Term | 缩写/备注 |
+|----------|--------------|-----------|
+| 智能体钱包 | Agent Wallet | 特指 AI Agent 使用的钱包抽象层 |
+| 权限哨兵 | Permission Sentinel | 权限校验中间件 |
+| 交易模拟器 | Transaction Simulator | 链上执行预测工具 |
+| Gas 估算 | Gas Estimation | 以太坊执行成本计算 |
+| 签名请求 | Signature Request | 用户授权环节 |
+| 人在回路 | Human-in-the-Loop | HITL，确认机制 |
+
+---
+
+## 学术标签
+
+`#AI-Agent` `#Web3` `#Smart-Contract` `#Permission-System` `#Gas-Estimation` `#Security-Invariant` `#Agentic-DeFi` `#On-chain-Verifiability`
+
+---
+
+**下一步计划**：
+基于今日权限矩阵设计，向 **DeFi 操作原型** 方向推进，重点验证 AI Agent 在 swap、lending 等场景下的完整操作链路与安全边界。
 <!-- DAILY_CHECKIN_2026-06-21_END -->
 
 # 2026-06-20
