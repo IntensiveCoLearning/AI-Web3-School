@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>签还是不签 — Web3 安全训练</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, sans-serif; background: #0f172a; color: #e2e8f0; min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+  .app { width: 520px; padding: 24px; }
+  h1 { text-align: center; font-size: 22px; margin-bottom: 4px; }
+  .sub { text-align: center; color: #64748b; font-size: 13px; margin-bottom: 24px; }
+  .card { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 24px; margin-bottom: 16px; }
+  .card .label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+  .card .value { font-size: 15px; color: #f1f5f9; margin-bottom: 14px; word-break: break-all; font-family: 'SF Mono', monospace; }
+  .card .value.domain { font-family: -apple-system, sans-serif; color: #facc15; }
+  .card .desc { font-size: 14px; color: #94a3b8; background: #0f172a; padding: 10px 14px; border-radius: 8px; margin-top: 6px; }
+  .risk-tag { display: inline-block; padding: 2px 10px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+  .risk-safe { background: #065f46; color: #6ee7b7; }
+  .risk-medium { background: #78350f; color: #fbbf24; }
+  .risk-high { background: #7f1d1d; color: #fca5a5; }
+  .risk-critical { background: #4c0519; color: #f87171; }
+  .round { color: #64748b; font-size: 12px; margin-bottom: 8px; }
+  .buttons { display: flex; gap: 12px; }
+  .btn { flex: 1; padding: 14px; border: none; border-radius: 10px; font-size: 18px; font-weight: 700; cursor: pointer; transition: all .15s; }
+  .btn-sign { background: #16a34a; color: #fff; } .btn-sign:hover { background: #22c55e; }
+  .btn-reject { background: #dc2626; color: #fff; } .btn-reject:hover { background: #ef4444; }
+  .btn:disabled { opacity: .4; cursor: not-allowed; }
+  .analysis { background: #1e293b; border: 1px solid #334155; border-radius: 12px; padding: 20px; margin-bottom: 16px; display: none; }
+  .analysis.show { display: block; }
+  .analysis h3 { font-size: 14px; color: #64748b; margin-bottom: 10px; }
+  .analysis p { font-size: 14px; line-height: 1.7; color: #cbd5e1; }
+  .result { text-align: center; padding: 12px; border-radius: 8px; margin-bottom: 12px; font-weight: 700; }
+  .result.correct { background: #065f46; color: #6ee7b7; }
+  .result.wrong { background: #7f1d1d; color: #fca5a5; }
+  .progress { display: flex; gap: 6px; margin-bottom: 24px; }
+  .dot { width: 10px; height: 10px; border-radius: 50%; background: #334155; }
+  .dot.done { background: #64748b; }
+  .dot.current { background: #facc15; }
+  .next-btn { width: 100%; padding: 12px; border: 1px solid #334155; border-radius: 10px; background: transparent; color: #e2e8f0; font-size: 14px; cursor: pointer; display: none; }
+  .next-btn.show { display: block; }
+  .next-btn:hover { background: #1e293b; }
+  .footer { text-align: center; margin-top: 20px; font-size: 12px; color: #475569; }
+  .done-card { text-align: center; padding: 40px 20px; }
+  .done-card h2 { font-size: 28px; margin-bottom: 8px; }
+  .done-card p { color: #64748b; margin-bottom: 20px; }
+  .tips { text-align: left; background: #0f172a; padding: 16px 20px; border-radius: 8px; font-size: 13px; color: #94a3b8; line-height: 2; }
+  .thinking { text-align: center; padding: 20px; color: #64748b; }
+  .thinking::after { content: '...'; animation: dots 1.5s infinite; }
+  @keyframes dots { 0%,20% { content: '.'; } 40% { content: '..'; } 60%,100% { content: '...'; } }
+</style>
+</head>
+<body>
+<div class="app">
+  <h1>🔐 签还是不签</h1>
+  <p class="sub">Web3 合约授权安全训练</p>
+  <div class="progress" id="progress"></div>
+  <div id="main"></div>
+  <p class="footer">5 个案例，随机顺序 · 训练你的安全直觉</p>
+</div>
+<script>
+const sid = Math.random().toString(36).slice(2);
+let waiting = false;
+
+function dots(n) { return Array.from({length: n}, (_, i) => `<span class="dot${i === 0 ? ' current' : ''}"></span>`).join(''); }
+
+async function loadCase() {
+  const r = await fetch(`/api/case?sid=${sid}`);
+  const data = await r.json();
+  if (data.done) {
+    document.getElementById('main').innerHTML = `
+      <div class="card done-card">
+        <h2>🎉</h2>
+        <p>全部 5 个案例完成！</p>
+        <div class="tips">
+          💡 记住：签名前一定要检查三点<br>
+          1. 网站域名对不对？<br>
+          2. 合约地址验证过吗？<br>
+          3. 授权额度合理吗？
+        </div>
+      </div>`;
+    updateDots(data.total, data.total);
+    return;
+  }
+  updateDots(data.total, data.round - 1);
+  const riskClass = { '安全': 'risk-safe', '中风险': 'risk-medium', '高风险': 'risk-high', '极高风险': 'risk-critical' }[data.riskLevel] || '';
+  document.getElementById('main').innerHTML = `
+    <div class="card">
+      <div class="round">第 ${data.round} / ${data.total} 个案例 <span class="risk-tag ${riskClass}">${data.riskLevel}</span></div>
+      <div class="label">合约地址</div><div class="value">${data.contract}</div>
+      <div class="label">请求权限</div><div class="value">${data.permission}</div>
+      <div class="label">来源网站</div><div class="value domain">${data.origin}</div>
+      <div class="desc">📋 ${data.description}</div>
+    </div>
+    <div class="buttons">
+      <button class="btn btn-sign" onclick="judge('sign')">✅ 签</button>
+      <button class="btn btn-reject" onclick="judge('reject')">❌ 不签</button>
+    </div>
+    <div class="analysis" id="analysis"></div>
+    <button class="next-btn" id="nextBtn" onclick="loadCase()">继续下一个 →</button>`;
+  waiting = false;
+}
+
+function updateDots(total, current) {
+  let html = '';
+  for (let i = 0; i < total; i++) {
+    html += `<span class="dot${i < current ? ' done' : ''}${i === current ? ' current' : ''}"></span>`;
+  }
+  document.getElementById('progress').innerHTML = html;
+}
+
+async function judge(choice) {
+  if (waiting) return; waiting = true;
+  document.querySelectorAll('.btn').forEach(b => b.disabled = true);
+  const el = document.getElementById('analysis');
+  el.className = 'analysis show';
+  el.innerHTML = '<div class="thinking">🤖 DeepSeek 分析中</div>';
+
+  const r = await fetch('/api/judge', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ sid, choice })
+  });
+  const data = await r.json();
+
+  const resultClass = data.correct ? 'correct' : 'wrong';
+  const resultText = data.correct ? '✅ 判断正确！' : '❌ 判断有误！';
+  el.innerHTML = `
+    <div class="result ${resultClass}">${resultText}</div>
+    <h3>📊 DeepSeek 分析</h3>
+    <p>${data.analysis.replace(/\n/g, '<br>')}</p>
+    <p style="margin-top:10px;color:#64748b">🏷️ 内置风险标记：${data.riskLevel}</p>`;
+
+  if (data.remaining > 0) document.getElementById('nextBtn').className = 'next-btn show';
+  else document.getElementById('nextBtn').className = 'next-btn';
+}
+
+loadCase();
+</script>
+</body>
+</html>
