@@ -13,6 +13,7 @@ timezone: UTC+8
 AI x Web3 School
 
 ## Notes
+打卡第一次
 
 <!-- Content_START -->
 # 2026-05-18
