@@ -6,7 +6,6 @@ timezone: UTC+8
 
 **GitHub ID:** zuochengzhangzju-byte
 
-**Telegram:** @zuochengzhang
 
 ## Self-introduction
 
